@@ -3,7 +3,7 @@ from itertools import chain
 from math import sqrt
 
 from loguru import logger
-from trueskill import quality_1vs1, Rating, BETA, global_env
+from trueskill import quality_1vs1, Rating, BETA, global_env, rate_1vs1
 
 from data import DATA
 
@@ -64,6 +64,8 @@ def main():
 
             logger.info(f'[{win1_prob * 100:.0f}%/{draw_prob * 100:.0f}%] {fw} [{ratings[fw].mu:.2f}] {fight["winner"]["by"]} {fl} [{ratings[fl].mu:.2f}] ==> {payout:.0f} bal:{balance:.0f}')
 
+            # update ratings
+            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl])
 
 
 def to_decimal_odds(us_odds):

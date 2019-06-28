@@ -2,6 +2,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-05-04',
+        'name': 'UFC Fight Night',
+        'location': 'Ottawa, Ontario',
+        'venue': 'Canadian Tire Centre',
+        'fights': [
+            {
+                'time': '18:05',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': COLE_SMITH,
+                        'stats': '6-0-0',
+                    },
+                    {
+                        'name': MITCH_GAGNON,
+                        'stats': '12-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': COLE_SMITH,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    COLE_SMITH: 115,
+                    MITCH_GAGNON: -129,
+                },
+            },
+            {
+                'time': '18:05',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NORDINE_TALEB,
+                        'stats': '14-6-0',
+                    },
+                    {
+                        'name': KYLE_PREPOLEC,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': NORDINE_TALEB,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    NORDINE_TALEB: -519,
+                    KYLE_PREPOLEC: 400,
+                },
+            },
+            {
+                'time': '18:40',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUAN_ADAMS,
+                        'stats': '5-0-0',
+                    },
+                    {
+                        'name': ARJAN_BHULLAR,
+                        'stats': '8-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ARJAN_BHULLAR,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ARJAN_BHULLAR: 120,
+                    JUAN_ADAMS: -135,
+                },
+            },
+            {
+                'time': '19:05',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MATT_SAYLES,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': KYLE_NELSON,
+                        'stats': '12-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MATT_SAYLES,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '3:16',
+                },
+                'odds': {
+                    MATT_SAYLES: -187,
+                    KYLE_NELSON: 165,
+                },
+            },
+            {
+                'time': '20:05',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': VINCE_MORALES,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': AIEMANN_ZAHABI,
+                        'stats': '7-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': VINCE_MORALES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    VINCE_MORALES: 160,
+                    AIEMANN_ZAHABI: -181,
+                },
+            },
+            {
+                'time': '21:05',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANDREW_SANCHEZ,
+                        'stats': '11-4-0',
+                    },
+                    {
+                        'name': MARC_ANDRE_BARRIAULT,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter':ANDREW_SANCHEZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ANDREW_SANCHEZ: -153,
+                    MARC_ANDRE_BARRIAULT: 136,
+                },
+            },
+            {
+                'time': '21:30',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': SERGEY_SPIVAK,
+                        'stats': '9-0-0',
+                    },
+                    {
+                        'name': WALT_HARRIS,
+                        'stats': '11-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': WALT_HARRIS,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:50',
+                },
+                'odds': {
+                    WALT_HARRIS: -170,
+                    SERGEY_SPIVAK: 150,
+                },
+            },
+            {
+                'time': '22:05',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SHANE_BURGOS,
+                        'stats': '11-1-0',
+                    },
+                    {
+                        'name': CUB_SWANSON,
+                        'stats': '25-10-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SHANE_BURGOS,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    SHANE_BURGOS: -181,
+                    CUB_SWANSON: 160,
+                },
+            },
+            {
+                'time': '22:05',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MERAB_DVALISHVILI,
+                        'stats': '8-4-0',
+                    },
+                    {
+                        'name': BRAD_KATONA,
+                        'stats': '9-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MERAB_DVALISHVILI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MERAB_DVALISHVILI: -152,
+                    BRAD_KATONA: 135,
+                },
+            },
+            {
+                'time': '22:30',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DONALD_CERRONE,
+                        'stats': '35-11-0',
+                    },
+                    {
+                        'name': AL_IAQUINTA,
+                        'stats': '14-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': DONALD_CERRONE,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'odds': {
+                    DONALD_CERRONE: 115,
+                    AL_IAQUINTA: -129,
+                },
+            },
+            {
+                'time': '22:30',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ELIAS_THEODOROU,
+                        'stats': '17-2-0',
+                    },
+                    {
+                        'name': DEREK_BRUNSON,
+                        'stats': '18-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DEREK_BRUNSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    DEREK_BRUNSON: 102,
+                    ELIAS_THEODOROU: -115,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-05-11',
         'name': 'UFC 237',
         'location': 'Rio de Janeiro, Brazil',
