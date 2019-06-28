@@ -33,8 +33,8 @@ def main():
     for scene in DATA:
         logger.info(f'{scene["date"]} {scene["name"]}')
         for fight in scene['fights']:
-            f1 = fight['fighters'][0]['surname']
-            f2 = fight['fighters'][1]['surname']
+            f1 = fight['fighters'][0]['name']
+            f2 = fight['fighters'][1]['name']
 
             draw_prob = round(quality_1vs1(ratings[f1], ratings[f2]), 2)
             win1_prob = round(win_probability([ratings[f1]], [ratings[f2]]), 2)
