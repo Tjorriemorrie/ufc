@@ -2,6 +2,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-04-20',
+        'name': 'UFC Fight Night',
+        'location': 'Saint Petersburg, Russia',
+        'venue': 'Yubileyny Sports Palace',
+        'fights': [
+            {
+                'time': '10:22',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': RAFAEL_FIZIEV,
+                        'stats': '6-1-0',
+                    },
+                    {
+                        'name': MAGOMED_MUSTAFAEV,
+                        'stats': '13-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MAGOMED_MUSTAFAEV,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:26',
+                },
+                'odds': {
+                    MAGOMED_MUSTAFAEV: 115,
+                    RAFAEL_FIZIEV: -129,
+                },
+            },
+            {
+                'time': '10:40',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICHAL_OLEKSIEJCZUK,
+                        'stats': '13-2-0',
+                    },
+                    {
+                        'name': GADZHIMURAD_ANTIGULOV,
+                        'stats': '20-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MICHAL_OLEKSIEJCZUK,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:44',
+                },
+                'odds': {
+                    MICHAL_OLEKSIEJCZUK: -201,
+                    GADZHIMURAD_ANTIGULOV: 177,
+                },
+            },
+            {
+                'time': '10:55',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': SHAMIL_ABDURAKHIMOV,
+                        'stats': '19-4-0',
+                    },
+                    {
+                        'name': MARCIN_TYBURA,
+                        'stats': '17-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SHAMIL_ABDURAKHIMOV,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:15',
+                },
+                'odds': {
+                    SHAMIL_ABDURAKHIMOV: 115,
+                    MARCIN_TYBURA: -129,
+                },
+            },
+            {
+                'time': '11:15',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_DA_SILVA,
+                        'stats': '20-1-0',
+                    },
+                    {
+                        'name': ALEXANDER_YAKOVLEV,
+                        'stats': '23-8-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDER_YAKOVLEV,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:10',
+                },
+                'odds': {
+                    ALEXANDER_YAKOVLEV: -153,
+                    ALEX_DA_SILVA: 136,
+                },
+            },
+            {
+                'time': '11:35',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': KEITA_NAKAMURA,
+                        'stats': '34-9-2',
+                    },
+                    {
+                        'name': SULTAN_ALIEV,
+                        'stats': '14-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SULTAN_ALIEV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    SULTAN_ALIEV: -114,
+                    KEITA_NAKAMURA: 101,
+                },
+            },
+            {
+                'time': '11:55',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SEUNGWOO_CHOI,
+                        'stats': '7-1-0',
+                    },
+                    {
+                        'name': MOVSAR_EVLOEV,
+                        'stats': '10-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MOVSAR_EVLOEV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MOVSAR_EVLOEV: -480,
+                    SEUNGWOO_CHOI: 396,
+                },
+            },
+            {
+                'time': '13:00',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEN_AMEDOVSKI,
+                        'stats': '8-0-0',
+                    },
+                    {
+                        'name': KRZYSZTOF_JOTKO,
+                        'stats': '19-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KRZYSZTOF_JOTKO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    KRZYSZTOF_JOTKO: -225,
+                    ALEN_AMEDOVSKI: 197,
+                },
+            },
+            {
+                'time': '13:20',
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANTONINA_SHEVCHENKO,
+                        'stats': '7-0-0',
+                    },
+                    {
+                        'name': ROXANNE_MODAFFERI,
+                        'stats': '3-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ROXANNE_MODAFFERI,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ROXANNE_MODAFFERI: 254,
+                    ANTONINA_SHEVCHENKO: -295
+                },
+            },
+            {
+                'time': '14:00',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARCELO_GOLM,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': SERGEI_PAVLOVICH,
+                        'stats': '12-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SERGEI_PAVLOVICH,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:06',
+                },
+                'odds': {
+                    SERGEI_PAVLOVICH: -282,
+                    MARCELO_GOLM: 244,
+                },
+            },
+            {
+                'time': '14:20',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': ARMAN_TSARUKYAN,
+                        'stats': '12-1-0',
+                    },
+                    {
+                        'name': ISLAM_MAKHACHEV,
+                        'stats': '16-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ISLAM_MAKHACHEV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ISLAM_MAKHACHEV: -359,
+                    ARMAN_TSARUKYAN: 305,
+                },
+            },
+            {
+                'time': '14:40',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEKSEI_OLEINIK,
+                        'stats': '57-11-1',
+                    },
+                    {
+                        'name': ALISTAIR_OVEREEM,
+                        'stats': '44-17-0,'
+                    },
+                ],
+                'winner': {
+                    'fighter': ALISTAIR_OVEREEM,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:45',
+                },
+                'odds': {
+                    ALISTAIR_OVEREEM: -250,
+                    ALEKSEI_OLEINIK: 218,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-04-27',
         'name': 'UFC Fight Night',
         'location': 'Sunrise, Florida',
