@@ -5,7 +5,357 @@ DATA = [
         'location': 'Rochester, Michigan',
         'venue': 'Blue Cross Arena',
         'fights': [
-
+            {
+                'time': '17:35',
+                'gender': 'mens',
+                'weight_class': 'middleweight',
+                'fighters': [
+                    {
+                        'name': 'Trevin',
+                        'surname': 'GILES',
+                        'stats': '11-0-0',
+                    },
+                    {
+                        'name': 'Zak',
+                        'surname': 'CUMMINGS',
+                        'stats': '22-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'CUMMINGS',
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '4:01',
+                },
+                'odds': {
+                    'GILES': -193,
+                    'CUMMINGS': 170,
+                },
+            },
+            {
+                'time': '18:05',
+                'gender': 'mens',
+                'weight_class': 'light heavyweight',
+                'fighters': [
+                    {
+                        'name': 'Ed',
+                        'surname': 'HERMAN',
+                        'stats': '24-14-0',
+                    },
+                    {
+                        'name': 'Patrick',
+                        'surname': 'CUMMINS',
+                        'stats': '10-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'HERMAN',
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:39',
+                },
+                'odds': {
+                    'HERMAN': 230,
+                    'CUMMINS': -265,
+                },
+            },
+            {
+                'time': '18:05',
+                'gender': 'mens',
+                'weight_class': 'featherweight',
+                'fighters': [
+                    {
+                        'name': 'Julian',
+                        'surname': 'EROSA',
+                        'stats': '22-8-0',
+                    },
+                    {
+                        'name': 'Julio',
+                        'surname': 'ARCE',
+                        'stats': '15-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'ARCE',
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '1:49',
+                },
+                'odds': {
+                    'EROSA': 560,
+                    'ARCE': -822,
+                },
+            },
+            {
+                'time': '18:24',
+                'gender': 'mens',
+                'weight_class': 'featherweight',
+                'fighters': [
+                    {
+                        'name': 'Grant',
+                        'surname': 'DAWSON',
+                        'stats': '13-1-0',
+                    },
+                    {
+                        'name': 'Michael',
+                        'surname': 'TRIZANO',
+                        'stats': '9-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'DAWSON',
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '2:27',
+                },
+                'odds': {
+                    'DAWSON': -158,
+                    'TRIZANO': 140,
+                },
+            },
+            {
+                'time': '18:45',
+                'gender': 'mens',
+                'weight_class': 'welterweight',
+                'fighters': [
+                    {
+                        'name': 'Michel',
+                        'surname': 'PEREIRA',
+                        'stats': '22-9-0',
+                    },
+                    {
+                        'name': 'Danny',
+                        'surname': 'ROBERTS',
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'PEREIRA',
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:47',
+                },
+                'odds': {
+                    'PEREIRA': 200,
+                    'ROBERTS': -229,
+                },
+            },
+            {
+                'time': '19:12',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Charles',
+                        'surname': 'JOURDAIN',
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': 'Desmond',
+                        'surname': 'GREEN',
+                        'stats': '22-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'GREEN',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'JOURDAIN': 550,
+                    'GREEN': -803,
+                },
+            },
+            {
+                'time': '19:45',
+                'gender': 'womans',
+                'weight_class': 'bantamweight',
+                'fighters': [
+                    {
+                        'name': 'Sijara',
+                        'surname': 'EUBANKS',
+                        'stats': '5-2-0',
+                    },
+                    {
+                        'name': 'Aspen',
+                        'surname': 'LADD',
+                        'stats': '7-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'LADD',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'EUBANKS': 220,
+                    'LADD': -253,
+                },
+            },
+            {
+                'time': '20:45',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Nik',
+                        'surname': 'LENTZ',
+                        'stats': '30-9-2',
+                    },
+                    {
+                        'name': 'Charles',
+                        'surname': 'OLIVEIRA',
+                        'stats': '26-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'OLIVEIRA',
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:11',
+                },
+                'odds': {
+                    'LENTZ': 320,
+                    'OLIVEIRA': -401,
+                },
+            },
+            {
+                'time': '21:35',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Austin',
+                        'surname': 'HUBBARD',
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': 'Davi',
+                        'surname': 'RAMOS',
+                        'stats': '9-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'RAMOS',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'HUBBARD': 390,
+                    'RAMOS': -504,
+                },
+            },
+            {
+                'time': '21:35',
+                'gender': 'mens',
+                'weight_class': 'welterweight',
+                'fighters': [
+                    {
+                        'name': 'Derrick',
+                        'surname': 'KRANTZ',
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': 'Vicente',
+                        'surname': 'LUQUE',
+                        'stats': '15-6-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'LUQUE',
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:52',
+                },
+                'odds': {
+                    'KRANTZ': 700,
+                    'LUQUE': -1120,
+                },
+            },
+            {
+                'time': '21:59',
+                'gender': 'mens',
+                'weight_class': 'middleweight',
+                'fighters': [
+                    {
+                        'name': 'Ian',
+                        'surname': 'HEINISCH',
+                        'stats': '12-1-0',
+                    },
+                    {
+                        'name': 'Antonio Carlos',
+                        'surname': 'JUNIOR',
+                        'stats': '11-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'HEINISCH',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'HEINISCH': 145,
+                    'JUNIOR': -164,
+                },
+            },
+            {
+                'time': '22:15',
+                'gender': 'mens',
+                'weight_class': 'welterweight',
+                'fighters': [
+                    {
+                        'name': 'Kevin',
+                        'surname': 'LEE',
+                        'stats': '17-4-0',
+                    },
+                    {
+                        'name': 'Rafael',
+                        'surname': 'DOS ANJOS',
+                        'stats': '28-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'DOS ANJOS',
+                    'by': 'submission',
+                    'round': 4,
+                    'time': '3;47',
+                },
+                'odds': {
+                    'LEE': -144,
+                    'DOS ANJOS': 128,
+                },
+            },
+            {
+                'time': '23:05',
+                'gender': 'womans',
+                'weight_class': 'featherweight',
+                'fighters': [
+                    {
+                        'name': 'Felicia',
+                        'surname': 'SPENCER',
+                        'stats': '6-0-0',
+                    },
+                    {
+                        'name': 'Megan',
+                        'surname': 'ANDERSON',
+                        'stats': '9-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'SPENCER',
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '3:24',
+                },
+                'odds': {
+                    'SPENCER': 180,
+                    'ANDERSON': -205,
+                },
+            },
         ]
     },
 
@@ -365,7 +715,7 @@ DATA = [
                     }
                 ],
                 'winner': {
-                    'fighter': 'CHOOKIGAN',
+                    'fighter': 'CHOOKAGIAN',
                     'by': 'u.dec',
                     'round': 3,
                     'time': '5:00',
@@ -440,8 +790,8 @@ DATA = [
                         'stats': '8-6-0',
                     },
                     {
-                        'name': 'Yan',
-                        'surname': 'XIAONAN',
+                        'name': 'Xiaonan',
+                        'surname': 'YAN',
                         'stats': '0-0-0',
                     },
                 ],
@@ -453,7 +803,7 @@ DATA = [
                 },
                 'odds': {
                     'HILL': 205,
-                    'XIAONAN': -235,
+                    'YAN': -235,
                 },
             },
             {

@@ -43,6 +43,8 @@ def main():
             fw = fight['winner']['fighter']
             is_win_1 = fw == f1
             fl = f2 if is_win_1 else f1
+            if not is_win_1 and fw != f2:
+                raise ValueError(f'unknown winner {fw}')
 
             # absolute betting
             payout = -BET_AMT
