@@ -7,6 +7,8 @@ from trueskill import quality_1vs1, Rating, BETA, global_env
 
 from data import DATA
 
+BET_AMT = 10
+
 
 def win_probability(team1, team2):
     delta_mu = sum(r.mu for r in team1) - sum(r.mu for r in team2)
@@ -34,7 +36,7 @@ def main():
             f1 = fight['fighters'][0]['surname']
             f2 = fight['fighters'][1]['surname']
 
-            draw_prob = quality_1vs1(ratings[f1], ratings[f2])
+            draw_prob = round(quality_1vs1(ratings[f1], ratings[f2]), 2)
             win1_prob = round(win_probability([ratings[f1]], [ratings[f2]]), 2)
 
             # get winner
@@ -43,7 +45,6 @@ def main():
             fl = f2 if is_win_1 else f1
 
             # absolute betting
-            BET_AMT = 10
             payout = -BET_AMT
             f1_odds = fight['odds'][f1]
             f2_odds = fight['odds'][f2]

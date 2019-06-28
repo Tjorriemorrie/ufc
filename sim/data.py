@@ -1,5 +1,365 @@
 DATA = [
     {
+        'date': '2019-06-08',
+        'name': 'UFC 238',
+        'location': 'Chicago, Illinois',
+        'venue': 'United Center',
+        'fights': [
+            {
+                'time': '18:30',
+                'gender': 'womans',
+                'weight_class': 'flyweight',
+                'fighters': [
+                    {
+                        'name': 'Joanne',
+                        'surname': 'CALDERWOOD',
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': 'Katlyn',
+                        'surname': 'CHOOKAGIAN',
+                        'stats': '11-2-0',
+                    }
+                ],
+                'winner': {
+                    'fighter': 'CHOOKIGAN',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'CALDERWOOD': -102,
+                    'CHOOKAGIAN': -110,
+                },
+            },
+            {
+                'time': '18:48',
+                'gender': 'mens',
+                'weight_class': 'bantamweight',
+                'fighters': [
+                    {
+                        'name': 'Grigory',
+                        'surname': 'POPOV',
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': 'Eddie',
+                        'surname': 'WINELAND',
+                        'stats': '23-13-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'WINELAND',
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:47',
+                },
+                'odds': {
+                    'POPOV': 142,
+                    'WINELAND': -160,
+                },
+            },
+            {
+                'time': '19:15',
+                'gender': 'mens',
+                'class_weight': 'middleweight',
+                'fighters': [
+                    {
+                        'name': 'Darren',
+                        'surname': 'STEWART',
+                        'stats': '9-4-0',
+                    },
+                    {
+                        'name': 'Bevon',
+                        'surname': 'LEWIS',
+                        'stats': '5-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'STEWART',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'STEWART': 158,
+                    'LEWIS': -179,
+                },
+            },
+            {
+                'time': '19:35',
+                'gender': 'womans',
+                'weight_class': 'strawweight',
+                'fighters': [
+                    {
+                        'name': 'Angela',
+                        'surname': 'HILL',
+                        'stats': '8-6-0',
+                    },
+                    {
+                        'name': 'Yan',
+                        'surname': 'XIAONAN',
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'YAN',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'HILL': 205,
+                    'XIAONAN': -235,
+                },
+            },
+            {
+                'time': '20:05',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Calvin',
+                        'surname': 'KATTAR',
+                        'stats': '19-3-0',
+                    },
+                    {
+                        'name': 'Ricardo',
+                        'surname': 'LAMAS',
+                        'stats': '19-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'KATTAR',
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:06',
+                },
+                'odds': {
+                    'KATTAR': -164,
+                    'LAMAS': 145,
+                },
+            },
+            {
+                'time': '20:30',
+                'gender': 'womans',
+                'weight_class': 'strawweight',
+                'fighters': [
+                    {
+                        'name': 'Alexa',
+                        'surname': 'GRASSO',
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': 'Karolina',
+                        'surname': 'KOWALKIEWICZ',
+                        'stats': '13-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'GRASSO',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'GRASSO': -121,
+                    'KOWALKIEWICZ': 108,
+                },
+            },
+            {
+                'time': '21:12',
+                'gender': 'mens',
+                'weight_class': 'bantamweight',
+                'fighters': [
+                    {
+                        'name': 'Pedro',
+                        'surname': 'MUNHOZ',
+                        'stats': '18-3-0',
+                    },
+                    {
+                        'name': 'Aljamain',
+                        'surname': 'STERLING',
+                        'stats': '17-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'STERLING',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'MUNHOZ': 145,
+                    'STERLING': -164,
+                },
+            },
+            {
+                'time': '21:30',
+                'gender': 'womans',
+                'weight_class': 'strawweight',
+                'fighters': [
+                    {
+                        'name': 'Nina',
+                        'surname': 'ANSAROFF',
+                        'stats': '10-5-0',
+                    },
+                    {
+                        'name': 'Tatiana',
+                        'surname': 'SUAREZ',
+                        'stats': '7-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'SUAREZ',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'ANSAROFF': 525,
+                    'SUAREZ': -755,
+                },
+            },
+            {
+                'time': '22:05',
+                'gender': 'mens',
+                'weight_class': 'heavyweight',
+                'fighters': [
+                    {
+                        'name': 'Blagoy',
+                        'surname': 'IVANOV',
+                        'stats': '17-2-0',
+                    },
+                    {
+                        'name': 'Tai',
+                        'surname': 'TUIVASA',
+                        'stats': '10-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'IVANOV',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'IVANOV': 140,
+                    'TUIVASA': -158,
+                },
+            },
+            {
+                'time': '22:30',
+                'gender': 'mens',
+                'weight_class': 'bantamweight',
+                'fighters': [
+                    {
+                        'name': 'Petr',
+                        'surname': 'YAN',
+                        'stats': '12-1-0',
+                    },
+                    {
+                        'name': 'Jimmie',
+                        'surname': 'RIVERA',
+                        'stats': '22-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'YAN',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'YAN': -334,
+                    'RIVERA': 285,
+                },
+            },
+            {
+                'time': '23:05',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Donald',
+                        'surname': 'CERRONE',
+                        'stats': '35-11-0',
+                    },
+                    {
+                        'name': 'Tony',
+                        'surname': 'FERGUSON',
+                        'stats': '25-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'FERGUSON',
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'CERRONE': 193,
+                    'FERGUSON': -220,
+                },
+            },
+            {
+                'time': '23:30',
+                'gender': 'womans',
+                'weight_class': 'flyweight',
+                'fighters': [
+                    {
+                        'name': 'Jessica',
+                        'surname': 'EYE',
+                        'stats': '14-6-0',
+                    },
+                    {
+                        'name': 'Valentina',
+                        'surname': 'SHEVCHENKO',
+                        'stats': '16-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'SHEVCHENKO',
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '0:26',
+                },
+                'odds': {
+                    'EYE': 775,
+                    'SHEVCHENKO': -1305,
+                },
+            },
+            {
+                'time': '23:57',
+                'gender': 'mens',
+                'weight_class': 'bantamweight',
+                'fighters': [
+                    {
+                        'name': 'Henry',
+                        'surname': 'CEJUDO',
+                        'stats': '14-2-0',
+                    },
+                    {
+                        'name': 'Marlon',
+                        'surname': 'MORAES',
+                        'stats': '22-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'CEJUDO',
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '4:51',
+                },
+                'odds': {
+                    'CEJUDO': 137,
+                    'MORAES': -155,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-06-22',
         'name': 'UFC Fight Night',
         'location': 'Greenville, South Carolina',
