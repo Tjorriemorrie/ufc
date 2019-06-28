@@ -1,5 +1,348 @@
 DATA = [
     {
+        'date': '2019-05-18',
+        'name': 'UFC Fight Night',
+        'location': 'Rochester, Michigan',
+        'venue': 'Blue Cross Arena',
+        'fights': [
+
+        ]
+    },
+
+    {
+        'date': '2019-06-01',
+        'name': 'UFC Fight Night',
+        'location': 'Stockholm, Sweden',
+        'venue': 'Ericsson Globe',
+        'fights': [
+            {
+                'time': '10:10',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Danilo',
+                        'surname': 'BELLUARDO',
+                        'stats': '12-3-0',
+                    },
+                    {
+                        'name': 'Joel',
+                        'surname': 'ALVAREZ',
+                        'stats': '15-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'ALVAREZ',
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:22',
+                },
+                'odds': {
+                    'BELLUARDO': -103,
+                    'ALVAREZ': -109,
+                },
+            },
+            {
+                'time': '10:35',
+                'gender': 'mens',
+                'weight_class': 'light heavyweight',
+                'fighters': [
+                    {
+                        'name': 'Devin',
+                        'surname': 'CLARK',
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': 'Darko',
+                        'surname': 'STOSIC',
+                        'stats': '13-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'CLARK',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'CLARK': -115,
+                    'STOSIC': 102,
+                },
+            },
+            {
+                'time': '11:05',
+                'gender': 'mens',
+                'weight_class': 'bantamweight',
+                'fighters': [
+                    {
+                        'name': 'Eduarda',
+                        'surname': 'SANTANA',
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': 'Bea',
+                        'surname': 'MALECKI',
+                        'stats': '2-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'MALECKI',
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '1:59',
+                },
+                'odds': {
+                    'SANTANA': 108,
+                    'MALECKI': -121,
+                },
+            },
+            {
+                'time': '11:35',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Frank',
+                        'surname': 'CAMACHO',
+                        'stats': '21-7-0',
+                    },
+                    {
+                        'name': 'Nick',
+                        'surname': 'HEIN',
+                        'stats': '14-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'CAMACHO',
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:56',
+                },
+                'odds': {
+                    'CAMACHO': -138,
+                    'HEIN': 123,
+                },
+            },
+            {
+                'time': '12:05',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Leonardo',
+                        'surname': 'SANTOS',
+                        'stats': '16-4-1',
+                    },
+                    {
+                        'name': 'Stevie',
+                        'surname': 'RAY',
+                        'stats': '22-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'SANTOS',
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:17',
+                },
+                'odds': {
+                    'SANTOS': -150,
+                    'RAY': 133,
+                },
+            },
+            {
+                'time': '12:35',
+                'gender': 'womans',
+                'weight_class': 'bantamweight',
+                'fighters': [
+                    {
+                        'name': 'Lina',
+                        'surname': 'LANSBERG',
+                        'stats': '8-4-0',
+                    },
+                    {
+                        'name': 'Tonya',
+                        'surname': 'EVINGER',
+                        'stats': '19-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'LANSBERG',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'LANSBERG': 323,
+                    'EVINGER': -382,
+                },
+            },
+            {
+                'time': '13:05',
+                'gender': 'mens',
+                'weight_class': 'welterweight',
+                'fighters': [
+                    {
+                        'name': 'Sergey',
+                        'surname': 'KHANDOZHKO',
+                        'stats': '25-5-0',
+                    },
+                    {
+                        'name': 'Rostem',
+                        'surname': 'AKMAN',
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'KHANDOZHKO',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'KHANDOZHKO': -155,
+                    'AKMAN': 137,
+                },
+            },
+            {
+                'time': '13:35',
+                'gender': 'mens',
+                'weight_class': 'featherweight',
+                'fighters': [
+                    {
+                        'name': 'Jo',
+                        'surname': 'SUNG BIN',
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': 'Daniel',
+                        'surname': 'TEYMUR',
+                        'stats': '6-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'TEYMUR',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'SUNG BIN': -118,
+                    'TEYMUR': 105,
+                },
+            },
+            {
+                'time': '14:05',
+                'gender': 'mens',
+                'weight_class': 'lightweight',
+                'fighters': [
+                    {
+                        'name': 'Christos',
+                        'surname': 'GIAGOS',
+                        'stats': '16-7-0',
+                    },
+                    {
+                        'name': 'Damir',
+                        'surname': 'HADZOVIC',
+                        'stats': '13-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'GIAGOS',
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    'GIAGOS': 133,
+                    'HADZOVIC': -150,
+                },
+            },
+            {
+                'time': '14:35',
+                'gender': 'mens',
+                'weight_class': 'featherweight',
+                'fighters': [
+                    {
+                        'name': 'Chris',
+                        'surname': 'FISHGOLD',
+                        'stats': '18-2-1',
+                    },
+                    {
+                        'name': 'Makwan',
+                        'surname': 'AMIRKHANI',
+                        'stats': '14-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'AMIRKHANI',
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '4:25',
+                },
+                'odds': {
+                    'FISHGOLD': 112,
+                    'AMIRKHANI': -126,
+                },
+            },
+            {
+                'time': '15:05',
+                'gender': 'mens',
+                'weight_class': 'light heavyweight',
+                'fighters': [
+                    {
+                        'name': 'Aleksandar',
+                        'surname': 'RAKIC',
+                        'stats': '1-1-0',
+                    },
+                    {
+                        'name': 'JIMI',
+                        'surname': 'MANUWA',
+                        'stats': '17-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'RAKIC',
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:42',
+                },
+                'odds': {
+                    'RAKIC': -270,
+                    'MANUWA': 234,
+                },
+            },
+            {
+                'time': '15:35',
+                'gender': 'mens',
+                'weight_class': 'light heavyweight',
+                'fighters': [
+                    {
+                        'name': 'Anthony',
+                        'surname': 'SMITH',
+                        'stats': '31-14-0',
+                    },
+                    {
+                        'name': 'Alexander',
+                        'surname': 'GUSTAFSSON',
+                        'stats': '18-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': 'SMITH',
+                    'by': 'submission',
+                    'round': 4,
+                    'time': '2:38',
+                },
+                'odds': {
+                    'SMITH': 277,
+                    'GUSTAFSSON': -324,
+                },
+            },
+        ],
+    },
+
+    {
         'date': '2019-06-08',
         'name': 'UFC 238',
         'location': 'Chicago, Illinois',
