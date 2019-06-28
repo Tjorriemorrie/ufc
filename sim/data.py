@@ -2,6 +2,255 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-04-27',
+        'name': 'UFC Fight Night',
+        'location': 'Sunrise, Florida',
+        'venue': 'Bb&t Center',
+        'fights': [
+            {
+                'time': '19:00',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DHIEGO_LIMA,
+                        'stats': '15-7-0',
+                    },
+                    {
+                        'name': COURT_MCGEE,
+                        'stats': '20-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DHIEGO_LIMA,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    DHIEGO_LIMA: 140,
+                    COURT_MCGEE: -158,
+                },
+            },
+            {
+                'time': '20:00',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JASON_GONZALEZ,
+                        'stats': '11-4-0',
+                    },
+                    {
+                        'name': JIM_MILLER,
+                        'stats': '29-13-0,'
+                    },
+                ],
+                'winner': {
+                    'fighter': JIM_MILLER,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:12',
+                },
+                'odds': {
+                    JIM_MILLER: -124,
+                    JASON_GONZALEZ: 110,
+                },
+            },
+            {
+                'time': '21:05',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': AUGUSTO_SAKAI,
+                        'stats': '12-1-1',
+                    },
+                    {
+                        'name': ANDREI_ARLOVSKI,
+                        'stats': '27-17-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': AUGUSTO_SAKAI,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    AUGUSTO_SAKAI: -173,
+                    ANDREI_ARLOVSKI: 153,
+                },
+            },
+            {
+                'time': '21:30',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': TAKASHI_SATO,
+                        'stats': '14-2-0',
+                    },
+                    {
+                        'name': BEN_SAUNDERS,
+                        'stats': '22-11-2',
+                    },
+                ],
+                'winner': {
+                    'fighter': TAKASHI_SATO,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '1:18',
+                },
+                'odds': {
+                    TAKASHI_SATO: -235,
+                    BEN_SAUNDERS: 205,
+                },
+            },
+            {
+                'time': '22:05',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': THOMAS_GIFFORD,
+                        'stats': '17-7-0',
+                    },
+                    {
+                        'name': ROOSEVELT_ROBERTS,
+                        'stats': '7-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ROOSEVELT_ROBERTS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ROOSEVELT_ROBERTS: -438,
+                    THOMAS_GIFFORD: 365,
+                },
+            },
+            {
+                'time': '22:30',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': CORY_SANDHAGEN,
+                        'stats': '10-1-0',
+                    },
+                    {
+                        'name': JOHN_LINEKER,
+                        'stats': '31-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CORY_SANDHAGEN,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    CORY_SANDHAGEN: 140,
+                    JOHN_LINEKER: -158,
+                },
+            },
+            {
+                'time': '23:00',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MIKE_PERRY,
+                        'stats': '12-4-0',
+                    },
+                    {
+                        'name': ALEX_OLIVEIRA,
+                        'stats': '19-6-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': MIKE_PERRY,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MIKE_PERRY: 145,
+                    ALEX_OLIVEIRA: -164,
+                },
+            },
+            {
+                'time': '23:00',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ION_CUTELABA,
+                        'stats': '14-3-0',
+                    },
+                    {
+                        'name': GLOVER_TEIXEIRA,
+                        'stats': '28-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GLOVER_TEIXEIRA,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:37',
+                },
+                'odds': {
+                    GLOVER_TEIXEIRA: -115,
+                    ION_CUTELABA: 102,
+                },
+            },
+            {
+                'time': '23:30',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JACK_HERMANSSON,
+                        'stats': '19-4-0',
+                    },
+                    {
+                        'name': RONALDO_SOUZA,
+                        'stats': '26-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JACK_HERMANSSON,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'odds': {
+                    JACK_HERMANSSON: 174,
+                    RONALDO_SOUZA: -198,
+                },
+            },
+            {
+                'time': '23:30',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DMITRY_SMOLYAKOV,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': GREG_HARDY,
+                        'stats': '3-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GREG_HARDY,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:15',
+                },
+                'odds': {
+                    GREG_HARDY: -315,
+                    DMITRY_SMOLYAKOV: 270,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-05-04',
         'name': 'UFC Fight Night',
         'location': 'Ottawa, Ontario',
