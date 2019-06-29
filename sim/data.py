@@ -2,6 +2,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-03-16',
+        'name': 'UFC Fight Night',
+        'location': 'United Kingdom',
+        'venue': 'The O2 Arena',
+        'fights': [
+            {
+                'time': '13:20',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NAD_NARIMANI,
+                        'stats': '12-3-0',
+                    },
+                    {
+                        'name': MIKE_GRUNDY,
+                        'stats': '11-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MIKE_GRUNDY,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:42',
+                },
+                'odds': {
+                    MIKE_GRUNDY: 115,
+                    NAD_NARIMANI: -129,
+                },
+            },
+            {
+                'time': '13:50',
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': PRISCILA_CACHOEIRA,
+                        'stats': '8-2-0',
+                    },
+                    {
+                        'name': MOLLY_MCCANN,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MOLLY_MCCANN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MOLLY_MCCANN: -193,
+                    PRISCILA_CACHOEIRA: 170,
+                },
+            },
+            {
+                'time': '14:20',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAN_IGE,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': DANNY_HENRY,
+                        'stats': '12-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DAN_IGE,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '1:17',
+                },
+                'odds': {
+                    DAN_IGE: -133,
+                    DANNY_HENRY: 118,
+                },
+            },
+            {
+                'time': '14:50',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': SAPARBEG_SAFAROV,
+                        'stats': '8-2-0',
+                    },
+                    {
+                        'name': NICK_NEGUMEREANU,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SAPARBEG_SAFAROV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    SAPARBEG_SAFAROV: 155,
+                    NICK_NEGUMEREANU: -176,
+                },
+            },
+            {
+                'time': '15:10',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOE_DUFFY,
+                        'stats': '16-4-0',
+                    },
+                    {
+                        'name': MARC_DIAKIESE,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARC_DIAKIESE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MARC_DIAKIESE: 150,
+                    JOE_DUFFY: -170,
+                },
+            },
+            {
+                'time': '15:40',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JORDAN_RINALDI,
+                        'stats': '14-7-0',
+                    },
+                    {
+                        'name': ARNOLD_ALLEN,
+                        'stats': '14-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ARNOLD_ALLEN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ARNOLD_ALLEN: -152,
+                    JORDAN_RINALDI: 135,
+                },
+            },
+            {
+                'time': '16:15',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOHN_PHILLIPS,
+                        'stats': '21-9-0',
+                    },
+                    {
+                        'name': JACK_MARSHMAN,
+                        'stats': '23-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JACK_MARSHMAN,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    JACK_MARSHMAN: -133,
+                    JOHN_PHILLIPS: 118,
+                },
+            },
+            {
+                'time': '16:40',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': CLAUDIO_DA_SILVA,
+                        'stats': '13-1-0',
+                    },
+                    {
+                        'name': DANNY_ROBERTS,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CLAUDIO_DA_SILVA,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '2:37',
+                },
+                'odds': {
+                    CLAUDIO_DA_SILVA: -150,
+                    DANNY_ROBERTS: 133,
+                },
+            },
+            {
+                'time': '17:15',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOSE_QUINONEZ,
+                        'stats': '8-3-0',
+                    },
+                    {
+                        'name': NATHANIEL_WOOD,
+                        'stats': '16-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': NATHANIEL_WOOD,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '2:46',
+                },
+                'odds': {
+                    NATHANIEL_WOOD: -340,
+                    JOSE_QUINONEZ: 290,
+                },
+            },
+            {
+                'time': '17:42',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DOMINICK_REYES,
+                        'stats': '11-0-0',
+                    },
+                    {
+                        'name': VOLKAN_OEZDEMIR,
+                        'stats': '15-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DOMINICK_REYES,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    DOMINICK_REYES: -253,
+                    VOLKAN_OEZDEMIR: 220,
+                },
+            },
+            {
+                'time': '18:21',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': GUNNAR_NELSON,
+                        'stats': '17-4-1',
+                    },
+                    {
+                        'name': LEON_EDWARDS,
+                        'stats': '17-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LEON_EDWARDS,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    LEON_EDWARDS: -141,
+                    GUNNAR_NELSON: 125,
+                },
+            },
+            {
+                'time': '18:45',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JORGE_MASVIDAL,
+                        'stats': '33-13-0',
+                    },
+                    {
+                        'name': DARREN_TILL,
+                        'stats': '17-2-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': JORGE_MASVIDAL,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:05',
+                },
+                'odds': {
+                    JORGE_MASVIDAL: 190,
+                    DARREN_TILL: -217,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-03-23',
         'name': 'UFC Fight Night',
         'location': 'Nashville, Tennessee',

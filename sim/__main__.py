@@ -55,13 +55,13 @@ def main():
             if is_win_1 and (win1_prob > 0.5 or win1_prob == 0.5 and f1_odds < f2_odds):
                 correct = 1
                 if f1_odds > 0:
-                    payout += f1_odds + BET_AMT
+                    payout += f1_odds / BET_AMT + BET_AMT
                 else:
                     payout += 100 * BET_AMT / abs(f1_odds) + BET_AMT
             elif not is_win_1 and (win1_prob < 0.5 or win1_prob == 0.5 and f2_odds < f1_odds):
                 correct = 1
                 if f2_odds > 0:
-                    payout += f2_odds + BET_AMT
+                    payout += f2_odds / BET_AMT + BET_AMT
                 else:
                     payout += 100 * BET_AMT / abs(f2_odds) + BET_AMT
             balance += payout
