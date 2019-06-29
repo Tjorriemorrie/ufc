@@ -2,6 +2,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-03-23',
+        'name': 'UFC Fight Night',
+        'location': 'Nashville, Tennessee',
+        'venue': 'Bridgestone Arena',
+        'fights': [
+            {
+                'time': '19:05',
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JORDAN_ESPINOSA,
+                        'stats': '13-5-0',
+                    },
+                    {
+                        'name': ERIC_SHELTON,
+                        'stats': '12-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JORDAN_ESPINOSA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    JORDAN_ESPINOSA: 125,
+                    ERIC_SHELTON: -141,
+                },
+            },
+            {
+                'time': '19:15',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': FRANKIE_SAENZ,
+                        'stats': '13-6-0',
+                    },
+                    {
+                        'name': MARLON_VERA,
+                        'stats': '13-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARLON_VERA,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:25',
+                },
+                'odds': {
+                    MARLON_VERA: -170,
+                    FRANKIE_SAENZ: 150,
+                },
+            },
+            {
+                'time': '19:30',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': CHRIS_GUTIERREZ,
+                        'stats': '12-3-0',
+                    },
+                    {
+                        'name': RYAN_MACDONALD,
+                        'stats': '10-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CHRIS_GUTIERREZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    CHRIS_GUTIERREZ: -297,
+                    RYAN_MACDONALD: 256,
+                },
+            },
+            {
+                'time': '19:45',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BOBBY_MOFFETT,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': BRYCE_MITCHELL,
+                        'stats': '11-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRYCE_MITCHELL,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    BRYCE_MITCHELL: 130,
+                    BOBBY_MOFFETT: -147,
+                },
+            },
+            {
+                'time': '20:00',
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANGELA_HILL,
+                        'stats': '8-6-0',
+                    },
+                    {
+                        'name': RANDA_MARKOS,
+                        'stats': '9-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': RANDA_MARKOS,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:24',
+                },
+                'odds': {
+                    RANDA_MARKOS: 125,
+                    ANGELA_HILL: -141,
+                },
+            },
+            {
+                'time': '20:06',
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': JJ_ALDRICH,
+                        'stats': '7-3-0',
+                    },
+                    {
+                        'name': MAYCEE_BARBER,
+                        'stats': '5-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MAYCEE_BARBER,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:01',
+                },
+                'odds': {
+                    MAYCEE_BARBER: -260,
+                    JJ_ALDRICH: 226,
+                },
+            },
+            {
+                'time': '20:33',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': STEVEN_PETERSON,
+                        'stats': '17-8-0',
+                    },
+                    {
+                        'name': LUIS_PENA,
+                        'stats': '6-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LUIS_PENA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    LUIS_PENA: -229,
+                    STEVEN_PETERSON: 200,
+                },
+            },
+            {
+                'time': '21:00',
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JENNIFER_MAIA,
+                        'stats': '16-5-1',
+                    },
+                    {
+                        'name': ALEXIS_DAVIS,
+                        'stats': '19-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JENNIFER_MAIA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    JENNIFER_MAIA: 129,
+                    ALEXIS_DAVIS: -145,
+                },
+            },
+            {
+                'time': '21:06',
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DEIVESON_FIGUEIREDO,
+                        'stats': '15-1-0',
+                    },
+                    {
+                        'name': JUSSIER_FORMIGA,
+                        'stats': '23-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSSIER_FORMIGA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    JUSSIER_FORMIGA: 155,
+                    DEIVESON_FIGUEIREDO: -176,
+                },
+            },
+            {
+                'time': '21:36',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JESUS_PINEDO,
+                        'stats': '16-5-1',
+                    },
+                    {
+                        'name': JOHN_MAKDESSI,
+                        'stats': '17-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOHN_MAKDESSI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    JOHN_MAKDESSI: -309,
+                    JESUS_PINEDO: 265,
+                },
+            },
+            {
+                'time': '22:06',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUSTIN_WILLIS,
+                        'stats': '8-2-0',
+                    },
+                    {
+                        'name': CURTIS_BLAYDES,
+                        'stats': '11-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CURTIS_BLAYDES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    CURTIS_BLAYDES: -265,
+                    JUSTIN_WILLIS: 230,
+                },
+            },
+            {
+                'time': '22:30',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': STEPHEN_THOMPSON,
+                        'stats': '14-4-1',
+                    },
+                    {
+                        'name': ANTHONY_PETTIS,
+                        'stats': '22-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTHONY_PETTIS,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:55',
+                },
+                'odds': {
+                    ANTHONY_PETTIS: 340,
+                    STEPHEN_THOMPSON: -405,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-03-30',
         'name': 'UFC Fight Night',
         'location': 'Philadelphia, Pennsylvania',
