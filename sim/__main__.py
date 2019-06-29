@@ -28,6 +28,7 @@ def get_implied_odds(american):
 def main():
     ratings = defaultdict(lambda: Rating())
     balance = 0
+    accuracy = (0, 0)
     logger.info(f'Balance is {balance}. good luck!')
 
     for scene in DATA:
@@ -47,15 +48,18 @@ def main():
                 raise ValueError(f'unknown winner {fw}')
 
             # absolute betting
+            correct = 0
             payout = -BET_AMT
             f1_odds = fight['odds'][f1]
             f2_odds = fight['odds'][f2]
             if is_win_1 and (win1_prob > 0.5 or win1_prob == 0.5 and f1_odds < f2_odds):
+                correct = 1
                 if f1_odds > 0:
                     payout += f1_odds + BET_AMT
                 else:
                     payout += 100 * BET_AMT / abs(f1_odds) + BET_AMT
             elif not is_win_1 and (win1_prob < 0.5 or win1_prob == 0.5 and f2_odds < f1_odds):
+                correct = 1
                 if f2_odds > 0:
                     payout += f2_odds + BET_AMT
                 else:
@@ -64,8 +68,15 @@ def main():
 
             logger.info(f'[{win1_prob * 100:.0f}%/{draw_prob * 100:.0f}%] {fw} [{ratings[fw].mu:.2f}] {fight["winner"]["by"]} {fl} [{ratings[fl].mu:.2f}] ==> {payout:.0f} bal:{balance:.0f}')
 
+            # accuracy
+            if round(ratings[fw].mu, 2) != 25 and round(ratings[fl].mu, 2) != 25:
+                accuracy = (accuracy[0] + correct, accuracy[1] + 1)
+
             # update ratings
             ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl])
+
+    if accuracy[1]:
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
 
 
 def to_decimal_odds(us_odds):

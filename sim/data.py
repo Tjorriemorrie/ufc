@@ -2,6 +2,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-04-13',
+        'name': 'UFC 236',
+        'location': 'Atlanta, Georgia',
+        'venue': 'State Farm Arena',
+        'fights': [
+            {
+                'time': '18:15',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': RANDY_COSTA,
+                        'stats': '4-0-0',
+                    },
+                    {
+                        'name': BRANDON_DAVIS,
+                        'stats': '9-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRANDON_DAVIS,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '1:13',
+                },
+                'odds': {
+                    BRANDON_DAVIS: -178,
+                    RANDY_COSTA: 157,
+                },
+            },
+            {
+                'time': '18:45',
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': POLIANA_BOTELHO,
+                        'stats': '7-2-0',
+                    },
+                    {
+                        'name': LAUREN_MUELLER,
+                        'stats': '5-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': POLIANA_BOTELHO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    POLIANA_BOTELHO: -159,
+                    LAUREN_MUELLER: 141,
+                },
+            },
+            {
+                'time': '19:15',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANDRE_SOUKHAMTHATH,
+                        'stats': '13-6-0',
+                    },
+                    {
+                        'name': MONTEL_JACKSON,
+                        'stats': '7-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MONTEL_JACKSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MONTEL_JACKSON: -555,
+                    ANDRE_SOUKHAMTHATH: 436,
+                },
+            },
+            {
+                'time': '19:45',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BELAL_MUHAMMAD,
+                        'stats': '14-3-0',
+                    },
+                    {
+                        'name': CURTIS_MILLENDER,
+                        'stats': '17-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BELAL_MUHAMMAD,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    BELAL_MUHAMMAD: -150,
+                    CURTIS_MILLENDER: 133,
+                },
+            },
+            {
+                'time': '20:10',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': KHALID_TAHA,
+                        'stats': '12-2-0',
+                    },
+                    {
+                        'name': BOSTON_SALMON,
+                        'stats': '6-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KHALID_TAHA,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:26',
+                },
+                'odds': {
+                    KHALID_TAHA: 150,
+                    BOSTON_SALMON: -170,
+                },
+            },
+            {
+                'time': '20:40',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ZELIM_IMADAEV,
+                        'stats': '8-0-0',
+                    },
+                    {
+                        'name': MAX_GRIFFIN,
+                        'stats': '14-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MAX_GRIFFIN,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MAX_GRIFFIN: 113,
+                    ZELIM_IMADAEV: -127,
+                },
+            },
+            {
+                'time': '21:10',
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXANDRE_PANTOJA,
+                        'stats': '20-3-0',
+                    },
+                    {
+                        'name': WILSON_REIS,
+                        'stats': '23-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDRE_PANTOJA,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:57',
+                },
+                'odds': {
+                    ALEXANDRE_PANTOJA: -165,
+                    WILSON_REIS: 146,
+                },
+            },
+            {
+                'time': '21:40',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': MATT_FREVOLA,
+                        'stats': '6-1-1',
+                    },
+                    {
+                        'name': JALIN_TURNER,
+                        'stats': '8-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MATT_FREVOLA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MATT_FREVOLA: 141,
+                    JALIN_TURNER: -159,
+                },
+            },
+            {
+                'time': '22:10',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': NIKITA_KRYLOV,
+                        'stats': '6-1-1',
+                    },
+                    {
+                        'name': OVINCE_SAINT_PREUX,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': NIKITA_KRYLOV,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '2:29',
+                },
+                'odds': {
+                    NIKITA_KRYLOV: -129,
+                    OVINCE_SAINT_PREUX: 115,
+                },
+            },
+            {
+                'time': '20:40',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DWIGHT_GRANT,
+                        'stats': '9-2-0',
+                    },
+                    {
+                        'name': ALAN_JOUBAN,
+                        'stats': '16-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DWIGHT_GRANT,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    DWIGHT_GRANT: -113,
+                    ALAN_JOUBAN: 101,
+                },
+            },
+            {
+                'time': '23:10',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': KHALIL_ROUNTREE,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': ERYK_ANDERS,
+                        'stats': '11-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KHALIL_ROUNTREE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    KHALIL_ROUNTREE: 150,
+                    ERYK_ANDERS: -170,
+                },
+            },
+            {
+                'time': '23:40',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ISRAEL_ADESANYA,
+                        'stats': '16-0-0',
+                    },
+                    {
+                        'name': KELVIN_GASTELUM,
+                        'stats': '16-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ISRAEL_ADESANYA,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ISRAEL_ADESANYA: -184,
+                    KELVIN_GASTELUM: 162,
+                },
+            },
+            {
+                'time': '23:59',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DUSTIN_POIRIER,
+                        'stats': '24-5-0',
+                    },
+                    {
+                        'name': MAX_HOLLOWAY,
+                        'stats': '20-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DUSTIN_POIRIER,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'odds': {
+                    DUSTIN_POIRIER: 201,
+                    MAX_HOLLOWAY: -230,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-04-20',
         'name': 'UFC Fight Night',
         'location': 'Saint Petersburg, Russia',
