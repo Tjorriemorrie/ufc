@@ -29,6 +29,7 @@ def main():
     ratings = defaultdict(lambda: Rating())
     balance = 0
     accuracy = (0, 0)
+    ac_msgs = []
     logger.info(f'Balance is {balance}. good luck!')
 
     for scene in DATA:
@@ -66,16 +67,19 @@ def main():
                     payout += 100 * BET_AMT / abs(f2_odds) + BET_AMT
             balance += payout
 
-            logger.info(f'[{win1_prob * 100:.0f}%/{draw_prob * 100:.0f}%] {fw} [{ratings[fw].mu:.2f}] {fight["winner"]["by"]} {fl} [{ratings[fl].mu:.2f}] ==> {payout:.0f} bal:{balance:.0f}')
+            logger.info(f'[{ratings[fw].mu:.2f} : {ratings[fl].mu:.2f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
 
             # accuracy
             if round(ratings[fw].mu, 2) != 25 and round(ratings[fl].mu, 2) != 25:
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
+                ac_msgs.append(f'{fw} [{ratings[fw].mu:.2f}] bt {fl} [{ratings[fl].mu:.2f}]')
 
             # update ratings
             ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl])
 
     if accuracy[1]:
+        for msg in ac_msgs:
+            logger.info(msg)
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
 
 

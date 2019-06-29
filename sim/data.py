@@ -2,6 +2,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-03-09',
+        'name': 'UFC Fight Night',
+        'location': 'Wichita, Kansas',
+        'venue': 'Intrust Bank Arena',
+        'fights': [
+            {
+                'time': '17:00',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAN_MORET,
+                        'stats': '13-5-0',
+                    },
+                    {
+                        'name': ALEX_WHITE,
+                        'stats': '13-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_WHITE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ALEX_WHITE: -135,
+                    DAN_MORET: 120,
+                },
+            },
+            {
+                'time': '17:30',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ZAK_OTTOW,
+                        'stats': '17-7-0',
+                    },
+                    {
+                        'name': ALEX_MORONO,
+                        'stats': '16-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_MORONO,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:34',
+                },
+                'odds': {
+                    ALEX_MORONO: -179,
+                    ZAK_OTTOW: 158,
+                },
+            },
+            {
+                'time': '18:00',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MATT_SCHNELL,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': LOUIS_SMOLKA,
+                        'stats': '15-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MATT_SCHNELL,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '3:18',
+                },
+                'odds': {
+                    MATT_SCHNELL: 110,
+                    LOUIS_SMOLKA: -124,
+                },
+            },
+            {
+                'time': '18:36',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JEFF_HUGHES,
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': MAURICE_GREEN,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MAURICE_GREEN,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MAURICE_GREEN: 225,
+                    JEFF_HUGHES: -259,
+                },
+            },
+            {
+                'time': '19:06',
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': YANA_KUNITSKAYA,
+                        'stats': '12-4-0',
+                    },
+                    {
+                        'name': MARION_RENEAU,
+                        'stats': '9-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': YANA_KUNITSKAYA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    YANA_KUNITSKAYA: -229,
+                    MARION_RENEAU: 200,
+                },
+            },
+            {
+                'time': '19:30',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SERGIO_MORAES,
+                        'stats': '14-5-1',
+                    },
+                    {
+                        'name': ANTHONY_ROCCO_MARTIN,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTHONY_ROCCO_MARTIN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ANTHONY_ROCCO_MARTIN: -220,
+                    SERGIO_MORAES: 193,
+                },
+            },
+            {
+                'time': '20:03',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JULIAN_EROSA,
+                        'stats': '22-8-0',
+                    },
+                    {
+                        'name': GRANT_DAWSON,
+                        'stats': '13-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GRANT_DAWSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    GRANT_DAWSON: -190,
+                    JULIAN_EROSA: 167,
+                },
+            },
+            {
+                'time': '20:33',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': OMARI_AKHMEDOV,
+                        'stats': '18-4-1',
+                    },
+                    {
+                        'name': TIM_BOETSCH,
+                        'stats': '21-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': OMARI_AKHMEDOV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    OMARI_AKHMEDOV: -152,
+                    TIM_BOETSCH: 135,
+                },
+            },
+            {
+                'time': '21:06',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DREW_DOBER,
+                        'stats': '20-9-0',
+                    },
+                    {
+                        'name': BENEIL_DARIUSH,
+                        'stats': '16-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': BENEIL_DARIUSH,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '4:42',
+                },
+                'odds': {
+                    BENEIL_DARIUSH: -211,
+                    DREW_DOBER: 185,
+                },
+            },
+            {
+                'time': '21:35',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': BEN_ROTHWELL,
+                        'stats': '36-11-0',
+                    },
+                    {
+                        'name': BLAGOY_IVANOV,
+                        'stats': '17-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BLAGOY_IVANOV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    BLAGOY_IVANOV: 100,
+                    BEN_ROTHWELL: -112,
+                },
+            },
+            {
+                'time': '22:00',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NIKO_PRICE,
+                        'stats': '13-2-0',
+                    },
+                    {
+                        'name': TIM_MEANS,
+                        'stats': '28-11-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': NIKO_PRICE,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:50',
+                },
+                'odds': {
+                    NIKO_PRICE: 175,
+                    TIM_MEANS: -199,
+                },
+            },
+            {
+                'time': '22:35',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': CURTIS_MILLENDER,
+                        'stats': '17-4-0',
+                    },
+                    {
+                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'stats': '20-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:35',
+                },
+                'odds': {
+                    ELIZEU_ZALESKI_DOS_SANTOS: 105,
+                    CURTIS_MILLENDER: -118,
+                },
+            },
+            {
+                'time': '23:03',
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUNIOR_DOS_SANTOS,
+                        'stats': '21-5-0',
+                    },
+                    {
+                        'name': DERRICK_LEWIS,
+                        'stats': '21-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUNIOR_DOS_SANTOS,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '1:58',
+                },
+                'odds': {
+                    JUNIOR_DOS_SANTOS: -240,
+                    DERRICK_LEWIS: 209,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-03-16',
         'name': 'UFC Fight Night',
         'location': 'United Kingdom',
