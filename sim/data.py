@@ -2,6 +2,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-03-30',
+        'name': 'UFC Fight Night',
+        'location': 'Philadelphia, Pennsylvania',
+        'venue': 'Wells Fargo Center',
+        'fights': [
+            {
+                'time': '16:10',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARK_DE_LA_ROSA,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': ALEX_PEREZ,
+                        'stats': '22-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_PEREZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ALEX_PEREZ: -384,
+                    MARK_DE_LA_ROSA: 308,
+                },
+            },
+            {
+                'time': '16:35',
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARYNA_MOROZ,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': SABINA_MAZO_ISAZA,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARYNA_MOROZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MARYNA_MOROZ: 155,
+                    SABINA_MAZO_ISAZA: -176,
+                },
+            },
+            {
+                'time': '17:35',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': GERALD_MEERSCHAERT,
+                        'stats': '28-11-0',
+                    },
+                    {
+                        'name': KEVIN_HOLLAND,
+                        'stats': '15-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KEVIN_HOLLAND,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    KEVIN_HOLLAND: -223,
+                    GERALD_MEERSCHAERT: 195,
+                },
+            },
+            {
+                'time': '18:05',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': KEVIN_AGUILAR,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': ENRIQUE_BARZOLA,
+                        'stats': '16-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': KEVIN_AGUILAR,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    KEVIN_AGUILAR: 119,
+                    ENRIQUE_BARZOLA: -134,
+                },
+            },
+            {
+                'time': '18:35',
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARINA_RODRIGUEZ,
+                        'stats': '11-0-1',
+                    },
+                    {
+                        'name': JESSICA_AGUILAR,
+                        'stats': '20-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARINA_RODRIGUEZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'tme': '5:00',
+                },
+                'odds': {
+                    MARINA_RODRIGUEZ: -380,
+                    JESSICA_AGUILAR: 305,
+                },
+            },
+            {
+                'time': '19:35',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SHEYMON_DA_SILVA_MORAES,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': SODIQ_YUSUFF,
+                        'stats': '9-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SODIQ_YUSUFF,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    SODIQ_YUSUFF: -148,
+                    SHEYMON_DA_SILVA_MORAES: 131,
+                },
+            },
+            {
+                'time': '20:05',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': PAUL_CRAIG,
+                        'stats': '11-3-0',
+                    },
+                    {
+                        'name': KENNEDY_NZECHUKWU,
+                        'stats': '6-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PAUL_CRAIG,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '4:20',
+                },
+                'odds': {
+                    PAUL_CRAIG: 172,
+                    KENNEDY_NZECHUKWU: -195,
+                },
+            },
+            {
+                'time': '20:35',
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICHELLE_WATERSON,
+                        'stats': '17-6-0',
+                    },
+                    {
+                        'name': KAROLINA_KOWALKIEWICZ,
+                        'stats': '13-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter':MICHELLE_WATERSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    MICHELLE_WATERSON: 146,
+                    KAROLINA_KOWALKIEWICZ: -165,
+                },
+            },
+            {
+                'time': '21:05',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICHAEL_JOHNSON,
+                        'stats': '20-14-0',
+                    },
+                    {
+                        'name': JOSH_EMMETT,
+                        'stats': '14-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOSH_EMMETT,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '4:14',
+                },
+                'odds': {
+                    JOSH_EMMETT: 133,
+                    MICHAEL_JOHNSON: -150,
+                },
+            },
+            {
+                'time': '21:35',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JACK_HERMANSSON,
+                        'stats': '19-4-0',
+                    },
+                    {
+                        'name': DAVID_BRANCH,
+                        'stats': '22-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JACK_HERMANSSON,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '0:49',
+                },
+                'odds': {
+                    JACK_HERMANSSON: -147,
+                    DAVID_BRANCH: 130,
+                },
+            },
+            {
+                'time': '22:05',
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUSTIN_GAETHJE,
+                        'stats': '20-2-0',
+                    },
+                    {
+                        'name': EDSON_BARBOZA,
+                        'stats': '20-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSTIN_GAETHJE,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:30',
+                },
+                'odds': {
+                    JUSTIN_GAETHJE: -100,
+                    EDSON_BARBOZA: -112,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-04-13',
         'name': 'UFC 236',
         'location': 'Atlanta, Georgia',
