@@ -48,6 +48,10 @@ def main():
             if not is_win_1 and fw != f2:
                 raise ValueError(f'unknown winner {fw}')
 
+            # skip if no odds:
+            if not 'odds' in fight:
+                continue
+
             # absolute betting
             correct = 0
             payout = -BET_AMT
