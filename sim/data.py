@@ -2,6 +2,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2019-03-02',
+        'name': 'UFC 235',
+        'location': 'Las Vegas, Nevada',
+        'venue': 'T-Mobile Arena',
+        'fights': [
+            {
+                'time': '18:00',
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': HANNA_CIFERS,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': POLYANA_VIANA,
+                        'stats': '10-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': HANNA_CIFERS,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    HANNA_CIFERS: 240,
+                    POLYANA_VIANA: -277,
+                },
+            },
+            {
+                'time': '19:05',
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MACY_CHIASSON,
+                        'stats': '5-0-0',
+                    },
+                    {
+                        'name': GINA_MAZANY,
+                        'stats': '5-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MACY_CHIASSON,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:49',
+                },
+                'odds': {
+                    MACY_CHIASSON: -485,
+                    GINA_MAZANY: 400,
+                },
+            },
+            {
+                'time': '19:30',
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': CHARLES_BYRD,
+                        'stats': '10-6-0',
+                    },
+                    {
+                        'name': EDMEN_SHAHBAZYAN,
+                        'stats': '9-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': EDMEN_SHAHBAZYAN,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:38',
+                },
+                'odds': {
+                    EDMEN_SHAHBAZYAN: -141,
+                    CHARLES_BYRD: 125,
+                },
+            },
+            {
+                'time': '20:00',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICKEY_GALL,
+                        'stats': '5-2-0',
+                    },
+                    {
+                        'name': DIEGO_SANCHEZ,
+                        'stats': '31-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DIEGO_SANCHEZ,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:14',
+                },
+                'odds': {
+                    DIEGO_SANCHEZ: 218,
+                    MICKEY_GALL: -250,
+                },
+            },
+            {
+                'time': '20:30',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEJANDRO_PEREZ,
+                        'stats': '22-7-1',
+                    },
+                    {
+                        'name': CODY_STAMANN,
+                        'stats': '18-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CODY_STAMANN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    CODY_STAMANN: -187,
+                    ALEJANDRO_PEREZ: 165,
+                },
+            },
+            {
+                'time': '21:00',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOHNNY_WALKER,
+                        'stats': '17-3-0',
+                    },
+                    {
+                        'name': MISHA_CIRKUNOV,
+                        'stats': '14-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOHNNY_WALKER,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:37',
+                },
+                'odds': {
+                    JOHNNY_WALKER: -164,
+                    MISHA_CIRKUNOV: 145,
+                },
+            },
+            {
+                'time': '21:30',
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ZABIT_MAGOMEDSHARIPOV,
+                        'stats': '17-1-0',
+                    },
+                    {
+                        'name': JEREMY_STEPHENS,
+                        'stats': '28-16-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ZABIT_MAGOMEDSHARIPOV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    ZABIT_MAGOMEDSHARIPOV: -296,
+                    JEREMY_STEPHENS: 255,
+                },
+            },
+            {
+                'time': '22:00',
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': PEDRO_MUNHOZ,
+                        'stats': '18-3-0',
+                    },
+                    {
+                        'name': CODY_GARBRANDT,
+                        'stats': '11-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PEDRO_MUNHOZ,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:54',
+                },
+                'odds': {
+                    PEDRO_MUNHOZ: 150,
+                    CODY_GARBRANDT: -170,
+                },
+            },
+            {
+                'time': '22:30',
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': WEILI_ZHANG,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': TECIA_TORRES,
+                        'stats': '10-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': WEILI_ZHANG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'odds': {
+                    WEILI_ZHANG: -150,
+                    TECIA_TORRES: 133,
+                },
+            },
+            {
+                'time': '23:00',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BEN_ASKREN,
+                        'stats': '18-0-0',
+                    },
+                    {
+                        'name': ROBBIE_LAWLER,
+                        'stats': '28-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BEN_ASKREN,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '3:21',
+                },
+                'odds': {
+                    BEN_ASKREN: -280,
+                    ROBBIE_LAWLER: 242,
+                },
+            },
+            {
+                'time': '23:30',
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': KAMARU_USMAN,
+                        'stats': '15-1-0',
+                    },
+                    {
+                        'name': TYRON_WOODLEY,
+                        'stats': '19-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': KAMARU_USMAN,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'odds': {
+                    KAMARU_USMAN: 176,
+                    TYRON_WOODLEY: -200,
+                },
+            },
+            {
+                'time': '23:59',
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANTHONY_SMITH,
+                        'stats': '31-14-0',
+                    },
+                    {
+                        'name': JON_JONES,
+                        'stats': '24-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JON_JONES,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'odds': {
+                    JON_JONES: -830,
+                    ANTHONY_SMITH: 585,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2019-03-09',
         'name': 'UFC Fight Night',
         'location': 'Wichita, Kansas',
