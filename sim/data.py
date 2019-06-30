@@ -2,6 +2,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2018-11-17',
+        'name': 'UFC Fight Night',
+        'location': 'Beunos Aires, Argentina',
+        'venue': 'Parque Roca Arena',
+        'fights': [
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NAD_NARIMANI,
+                        'stats': '12-3-0',
+                    },
+                    {
+                        'name': ANDERSON_DOS_SANTOS,
+                        'stats': '19-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': NAD_NARIMANI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:00',
+                'odds': {
+                    NAD_NARIMANI: -398,
+                    ANDERSON_DOS_SANTOS: 335,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JESUS_PINEDO,
+                        'stats': '16-5-1',
+                    },
+                    {
+                        'name': DEVIN_POWELL,
+                        'stats': '9-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JESUS_PINEDO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    JESUS_PINEDO: -241,
+                    DEVIN_POWELL: 210,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': LAUREANO_STAROPOLI,
+                        'stats': '8-1-0',
+                    },
+                    {
+                        'name': HECTOR_ALDANA,
+                        'stats': '4-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LAUREANO_STAROPOLI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    LAUREANO_STAROPOLI: 111,
+                    HECTOR_ALDANA: -125,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': AUSTIN_ARNETT,
+                        'stats': '16-6-0',
+                    },
+                    {
+                        'name': HUMBERTO_BANDENAY,
+                        'stats': '14-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': AUSTIN_ARNETT,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    AUSTIN_ARNETT: 199,
+                    HUMBERTO_BANDENAY: -228,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXANDRE_PANTOJA,
+                        'stats': '20-3-0',
+                    },
+                    {
+                        'name': ULKA_SASAKI,
+                        'stats': '21-6-2',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDRE_PANTOJA,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:18',
+                },
+                'time': '20:30',
+                'odds': {
+                    ALEXANDRE_PANTOJA: -302,
+                    ULKA_SASAKI: 260,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BARTOSZ_FABINSKI,
+                        'stats': '14-3-0',
+                    },
+                    {
+                        'name': MICHEL_PRAZERES,
+                        'stats': '26-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MICHEL_PRAZERES,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '1:02',
+                },
+                'time': '21:00',
+                'odds': {
+                    MICHEL_PRAZERES: -156,
+                    BARTOSZ_FABINSKI: 138,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': CYNTHIA_CALVILLO,
+                        'stats': '8-1-0',
+                    },
+                    {
+                        'name': POLIANA_BOTELHO,
+                        'stats': '7-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CYNTHIA_CALVILLO,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:48',
+                },
+                'time': '22:00',
+                'odds': {
+                    CYNTHIA_CALVILLO: 165,
+                    POLIANA_BOTELHO: -187,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARLON_VERA,
+                        'stats': '13-5-1',
+                    },
+                    {
+                        'name': GUIDO_CANNETTI,
+                        'stats': '8-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARLON_VERA,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '1:31',
+                },
+                'time': '22:30',
+                'odds': {
+                    MARLON_VERA: -315,
+                    GUIDO_CANNETTI: 270,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': IAN_HEINISCH,
+                        'stats': '12-1-0',
+                    },
+                    {
+                        'name': CEZAR_FERREIRA,
+                        'stats': '14-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': IAN_HEINISCH,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:00',
+                'odds': {
+                    IAN_HEINISCH: 167,
+                    CEZAR_FERREIRA: -190,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOHNNY_WALKER,
+                        'stats': '17-3-0',
+                    },
+                    {
+                        'name': KHALIL_ROUNTREE,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOHNNY_WALKER,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:57',
+                },
+                'time': '23:31',
+                'odds': {
+                    JOHNNY_WALKER: 130,
+                    KHALIL_ROUNTREE: -147,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': RICARDO_LAMAS,
+                        'stats': '19-7-0',
+                    },
+                    {
+                        'name': DARREN_ELKINS,
+                        'stats': '25-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RICARDO_LAMAS,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '4:09',
+                },
+                'time': '23:55',
+                'odds': {
+                    RICARDO_LAMAS: -190,
+                    DARREN_ELKINS: 167,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SANTIAGO_PONZINIBBIO,
+                        'stats': '28-3-0',
+                    },
+                    {
+                        'name': NEIL_MAGNY,
+                        'stats': '21-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SANTIAGO_PONZINIBBIO,
+                    'by': 'ko/tko',
+                    'round': 4,
+                    'time': '2:36',
+                },
+                'time': '23:59',
+                'odds': {
+                    SANTIAGO_PONZINIBBIO: -217,
+                    NEIL_MAGNY: 190,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2018-11-24',
         'name': 'UFC Fight Night',
         'location': 'Beijing, China',
