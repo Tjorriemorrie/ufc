@@ -27,6 +27,7 @@ def get_implied_odds(american):
 
 def main():
     ratings = defaultdict(lambda: Rating())
+    bet_cnt = 0
     balance = 0
     accuracy = (0, 0)
     ac_msgs = []
@@ -70,6 +71,7 @@ def main():
                 else:
                     payout += 100 * BET_AMT / abs(f2_odds) + BET_AMT
             balance += payout
+            bet_cnt += 1
 
             logger.info(f'[{ratings[fw].mu:.2f} : {ratings[fl].mu:.2f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
 
@@ -85,6 +87,9 @@ def main():
         for msg in ac_msgs:
             logger.info(msg)
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+
+    if bet_cnt:
+        logger.info(f'Profit per bet: {balance/bet_cnt:.2f}')
 
 
 def to_decimal_odds(us_odds):
