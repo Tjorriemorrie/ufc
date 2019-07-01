@@ -46,8 +46,9 @@ def main():
             fw = fight['winner']['fighter']
             is_win_1 = fw == f1
             fl = f2 if is_win_1 else f1
-            if not is_win_1 and fw != f2:
+            if not is_win_1 and fw != f2 and fw is not None:
                 raise ValueError(f'unknown winner {fw}')
+            drawn = fw is None
 
             # skip if no odds:
             if not 'odds' in fight:
@@ -76,12 +77,14 @@ def main():
             logger.info(f'[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
 
             # accuracy
-            if round(ratings[fw].mu, 2) != 25 and round(ratings[fl].mu, 2) != 25:
+            fwr = round(ratings[fw].mu, 1)
+            flr = round(ratings[fl].mu, 1)
+            if fwr != 25 and flr != 25 and fwr != flr:
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
-                ac_msgs.append(f'{fw} [{ratings[fw].mu:.1f}] bt {fl} [{ratings[fl].mu:.1f}]')
+                ac_msgs.append(f'[{ratings[fw].mu:.1f} - {ratings[fl].mu:.1f}]: {fw} bt {fl}')
 
             # update ratings
-            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl])
+            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
 
     if accuracy[1]:
         for msg in ac_msgs:
