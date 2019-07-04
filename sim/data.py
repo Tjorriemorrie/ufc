@@ -2,6 +2,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2018-05-19',
+        'name': 'UFC Fight Night: Maia vs Usman',
+        'location': 'Santiago, Chile',
+        'venue': 'Movistar Arena',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': CLAUDIO_PUELLES,
+                        'stats': '9-2-0',
+                    },
+                    {
+                        'name': FELIPE_SILVA,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CLAUDIO_PUELLES,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '2:23',
+                },
+                'time': '18:30',
+                'odds': {
+                    CLAUDIO_PUELLES: 260,
+                    FELIPE_SILVA: -302,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': HENRY_BRIONES,
+                        'stats': '19-8-1',
+                    },
+                    {
+                        'name': FRANKIE_SAENZ,
+                        'stats': '13-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': FRANKIE_SAENZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:00',
+                'odds': {
+                    FRANKIE_SAENZ: -327,
+                    HENRY_BRIONES: 280,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRANDON_DAVIS,
+                        'stats': '9-5-0',
+                    },
+                    {
+                        'name': ENRIQUE_BARZOLA,
+                        'stats': '16-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ENRIQUE_BARZOLA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'round': {
+                    ENRIQUE_BARZOLA: -235,
+                    BRANDON_DAVIS: 205,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': HUMBERTO_BANDENAY,
+                        'stats': '14-6-0',
+                    },
+                    {
+                        'name': GABRIEL_BENITEZ,
+                        'stats': '21-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GABRIEL_BENITEZ,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:39',
+                },
+                'time': '20:00',
+                'odds': {
+                    GABRIEL_BENITEZ: -152,
+                    HUMBERTO_BANDENAY: 135,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': SYURI_KONDO,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': POLIANA_BOTELHO,
+                        'stats': '7-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': POLIANA_BOTELHO,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:33',
+                },
+                'time': '20:30',
+                'odds': {
+                    POLIANA_BOTELHO: -181,
+                    SYURI_KONDO: 160,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXANDRE_PANTOJA,
+                        'stats': '20-3-0',
+                    },
+                    {
+                        'name': BRANDON_MORENO,
+                        'stats': '14-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDRE_PANTOJA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:00',
+                'odds': {
+                    ALEXANDRE_PANTOJA: -106,
+                    BRANDON_MORENO: -106,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICHEL_PRAZERES,
+                        'stats': '26-3-0',
+                    },
+                    {
+                        'name': ZAK_CUMMINGS,
+                        'stats': '22-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MICHEL_PRAZERES,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:30',
+                'odds': {
+                    MICHEL_PRAZERES: 160,
+                    ZAK_CUMMINGS: -181,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': VICENTE_LUQUE,
+                        'stats': '15-6-1',
+                    },
+                    {
+                        'name': CHAD_LAPRISE,
+                        'stats': '14-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': VICENTE_LUQUE,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:16',
+                },
+                'time': '22:00',
+                'odds': {
+                    VICENTE_LUQUE: -223,
+                    CHAD_LAPRISE: 195,
+                },
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANDREA_LEE,
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': VERONICA_MACEDO,
+                        'stats': '5-3-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANDREA_LEE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    ANDREA_LEE: -353,
+                    VERONICA_MACEDO: 300,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': GUIDO_CANNETTI,
+                        'stats': '8-5-0',
+                    },
+                    {
+                        'name': DIEGO_RIVAS,
+                        'stats': '7-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GUIDO_CANNETTI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:00',
+                'odds': {
+                    GUIDO_CANNETTI: 151,
+                    DIEGO_RIVAS: -171,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DOMINICK_REYES,
+                        'stats': '11-0-0',
+                    },
+                    {
+                        'name': JARED_CANNONIER,
+                        'stats': '11-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DOMINICK_REYES,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:55',
+                },
+                'time': '23:30',
+                'odds': {
+                    DOMINICK_REYES: -204,
+                    JARED_CANNONIER: 179,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXA_GRASSO,
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': TATIANA_SUAREZ,
+                        'stats': '7-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TATIANA_SUAREZ,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:44',
+                },
+                'time': '23:59',
+                'odds': {
+                    TATIANA_SUAREZ: -511,
+                    ALEXA_GRASSO: 400,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': KAMARU_USMAN,
+                        'stats': '15-1-0',
+                    },
+                    {
+                        'name': DEMIAN_MAIA,
+                        'stats': '26-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KAMARU_USMAN,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'time': '23:59',
+                'odds': {
+                    KAMARU_USMAN: -488,
+                    DEMIAN_MAIA: 385,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2018-05-27',
         'name': 'UFC Fight Night',
         'location': 'Liverpool, United Kingdom',
@@ -7225,18 +7546,18 @@ DATA = [
                         'stats': '20-5-0',
                     },
                     {
-                        'name': DAMIAN_MAIA,
+                        'name': DEMIAN_MAIA,
                         'stats': '26-9-0',
                     },
                 ],
                 'winner': {
-                    'fighter': DAMIAN_MAIA,
+                    'fighter': DEMIAN_MAIA,
                     'by': 'submission',
                     'round': 1,
                     'time': '2:38',
                 },
                 'odds': {
-                    DAMIAN_MAIA: -205,
+                    DEMIAN_MAIA: -205,
                     LYMAN_GOOD: 180,
                 },
             },
