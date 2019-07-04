@@ -2,6 +2,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2018-04-21',
+        'name': 'UFC Fight Night: Barboza vs Lee',
+        'location': 'Atlantic City, New Jersey',
+        'venue': 'Boardwalk Hall',
+        'fights': [
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': KEITA_NAKAMURA,
+                        'stats': '34-9-2',
+                    },
+                    {
+                        'name': ANTHONY_ROCCO_MARTIN,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTHONY_ROCCO_MARTIN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    ANTHONY_ROCCO_MARTIN: -205,
+                    KEITA_NAKAMURA: 180,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': COREY_ANDERSON,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': PATRICK_CUMMINS,
+                        'stats': '10-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': COREY_ANDERSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    COREY_ANDERSON: -164,
+                    PATRICK_CUMMINS: 145,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': LUAN_CHAGAS,
+                        'stats': '15-3-1',
+                    },
+                    {
+                        'name': SIYAR_BAHADURZADA,
+                        'stats': '24-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': SIYAR_BAHADURZADA,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:40',
+                },
+                'time': '20:30',
+                'odds': {
+                    SIYAR_BAHADURZADA: 152,
+                    LUAN_CHAGAS: -172,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MERAB_DVALISHVILI,
+                        'stats': '8-4-0',
+                    },
+                    {
+                        'name': RICKY_SIMON,
+                        'stats': '11-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RICKY_SIMON,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:00',
+                'odds': {
+                    RICKY_SIMON: -102,
+                    MERAB_DVALISHVILI: -110,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': RYAN_LAFLARE,
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': ALEX_GARCIA,
+                        'stats': '15-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RYAN_LAFLARE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:30',
+                'odds': {
+                    RYAN_LAFLARE: -149,
+                    ALEX_GARCIA: 132,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAN_HOOKER,
+                        'stats': '18-8-0',
+                    },
+                    {
+                        'name': JIM_MILLER,
+                        'stats': '29-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DAN_HOOKER,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    DAN_HOOKER: -284,
+                    JIM_MILLER: 245,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRETT_JOHNS,
+                        'stats': '15-2-0',
+                    },
+                    {
+                        'name': ALJAMAIN_STERLING,
+                        'stats': '17-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALJAMAIN_STERLING,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    ALJAMAIN_STERLING: -107,
+                    BRETT_JOHNS: -105,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAVID_BRANCH,
+                        'stats': '22-6-0',
+                    },
+                    {
+                        'name': THIAGO_SANTOS,
+                        'stats': '21-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DAVID_BRANCH,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:30',
+                },
+                'time': '23:00',
+                'odds': {
+                    DAVID_BRANCH: 140,
+                    THIAGO_SANTOS: -158,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUSTIN_WILLIS,
+                        'stats': '8-2-0',
+                    },
+                    {
+                        'name': CHASE_SHERMAN,
+                        'stats': '11-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSTIN_WILLIS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:30',
+                'odds': {
+                    JUSTIN_WILLIS: -290,
+                    CHASE_SHERMAN: 250,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': CUB_SWANSON,
+                        'stats': '25-10-0',
+                    },
+                    {
+                        'name': FRANKIE_EDGAR,
+                        'stats': '22-6-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': FRANKIE_EDGAR,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:58',
+                'odds': {
+                    FRANKIE_EDGAR: -284,
+                    CUB_SWANSON: 245,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': KEVIN_LEE,
+                        'stats': '17-4-0',
+                    },
+                    {
+                        'name': EDSON_BARBOZA,
+                        'stats': '20-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KEVIN_LEE,
+                    'by': 'tko',
+                    'round': 5,
+                    'time': '2:18',
+                },
+                'time': '23:59',
+                'odds': {
+                    KEVIN_LEE: -171,
+                    EDSON_BARBOZA: 151,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2018-05-12',
         'name': 'UFC 224',
         'location': 'Rio de Janeiro, Brazil',
@@ -207,7 +480,7 @@ DATA = [
                         'stats': '24-8-0',
                     },
                     {
-                        'name': VITOR_BELFORT
+                        'name': VITOR_BELFORT,
                         'stats': '26-14-0',
                     },
                 ],
