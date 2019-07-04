@@ -74,21 +74,21 @@ def main():
             balance += payout
             bet_cnt += 1
 
-            logger.info(f'[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
-
             # accuracy
+            upset = False
             fwr = round(ratings[fw].mu, 1)
             flr = round(ratings[fl].mu, 1)
             if fwr != 25 and flr != 25 and fwr != flr:
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
-                ac_msgs.append(f'[{ratings[fw].mu:.1f} - {ratings[fl].mu:.1f}]: {fw} bt {fl}')
+                if fwr < flr:
+                    upset = True
+
+            logger.info(f'{">>>>> " if upset else ""}[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
 
             # update ratings
             ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
 
     if accuracy[1]:
-        for msg in ac_msgs:
-            logger.info(msg)
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
 
     if bet_cnt:

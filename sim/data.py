@@ -2,6 +2,351 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2018-04-14',
+        'name': 'UFC Fight Night: Poirier vs Gaethje',
+        'location': 'Glendale, Arizona',
+        'venue': 'Gila River Arena',
+        'fights': [
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': PATRICK_WILLIAMS,
+                        'stats': '8-6-0',
+                    },
+                    {
+                        'name': LUKE_SANDERS,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LUKE_SANDERS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '15:30',
+                'odds': {
+                    LUKE_SANDERS: -410,
+                    PATRICK_WILLIAMS: 335,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MATTHEW_LOPEZ,
+                        'stats': '10-5-0',
+                    },
+                    {
+                        'name': ALEJANDRO_PEREZ,
+                        'stats': '22-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEJANDRO_PEREZ,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:42',
+                },
+                'time': '16:05',
+                'odds': {
+                    ALEJANDRO_PEREZ: -112,
+                    MATTHEW_LOPEZ: -100,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ARJAN_BHULLAR,
+                        'stats': '8-1-0',
+                    },
+                    {
+                        'name': ADAM_WIECZOREK,
+                        'stats': '10-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ADAM_WIECZOREK,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '1:59',
+                },
+                'time': '16:25',
+                'odds': {
+                    ADAM_WIECZOREK: 280,
+                    ARJAN_BHULLAR: -327,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DHIEGO_LIMA,
+                        'stats': '15-7-0',
+                    },
+                    {
+                        'name': YUSHIN_OKAMI,
+                        'stats': '34-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': YUSHIN_OKAMI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:45',
+                'odds': {
+                    YUSHIN_OKAMI: -127,
+                    DHIEGO_LIMA: 113,
+                },
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': SHANA_DOBSON,
+                        'stats': '3-2-0',
+                    },
+                    {
+                        'name': LAUREN_MUELLER,
+                        'stats': '5-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LAUREN_MUELLER,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:01',
+                'odds': {
+                    LAUREN_MUELLER: -158,
+                    SHANA_DOBSON: 140,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAN_MORET,
+                        'stats': '13-5-0',
+                    },
+                    {
+                        'name': GILBERT_BURNS,
+                        'stats': '14-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GILBERT_BURNS,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '0:59',
+                },
+                'time': '17:30',
+                'odds': {
+                    GILBERT_BURNS: -591,
+                    DAN_MORET: 460,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRAD_TAVARES,
+                        'stats': '17-5-0',
+                    },
+                    {
+                        'name': KRZYSZTOF_JOTKO,
+                        'stats': '19-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRAD_TAVARES,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '2:16',
+                },
+                'time': '19:01',
+                'odds': {
+                    BRAD_TAVARES: 105,
+                    KRZYSZTOF_JOTKO: -118,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': WILSON_REIS,
+                        'stats': '23-9-0',
+                    },
+                    {
+                        'name': JOHN_MORAGA,
+                        'stats': '19-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOHN_MORAGA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:31',
+                'odds': {
+                    JOHN_MORAGA: 107,
+                    WILSON_REIS: -120,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': RICKEY_RAINEY,
+                        'stats': '13-6-0',
+                    },
+                    {
+                        'name': MUSLIM_SALIKHOV,
+                        'stats': '14-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MUSLIM_SALIKHOV,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:12',
+                },
+                'time': '19:00',
+                'odds': {
+                    MUSLIM_SALIKHOV: -199,
+                    RICKEY_RAINEY: 175,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANTONIO_CARLOS_JUNIOR,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': TIM_BOETSCH,
+                        'stats': '21-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTONIO_CARLOS_JUNIOR,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:28',
+                },
+                'time': '19:40',
+                'odds': {
+                    TIM_BOETSCH: 220,
+                    ANTONIO_CARLOS_JUNIOR: -253,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': CORTNEY_CASEY_SANCHEZ,
+                        'stats': '8-6-0',
+                    },
+                    {
+                        'name': MICHELLE_WATERSON,
+                        'stats': '17-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MICHELLE_WATERSON,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:15',
+                'odds': {
+                    MICHELLE_WATERSON: 140,
+                    CORTNEY_CASEY_SANCHEZ: -158,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ISRAEL_ADESANYA,
+                        'stats': '16-0-0',
+                    },
+                    {
+                        'name': MARVIN_VETTORI,
+                        'stats': '12-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ISRAEL_ADESANYA,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:35',
+                'odds': {
+                    ISRAEL_ADESANYA: -235,
+                    MARVIN_VETTORI: 205,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_OLIVEIRA,
+                        'stats': '19-6-1',
+                    },
+                    {
+                        'name': CARLOS_CONDIT,
+                        'stats': '30-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_OLIVEIRA,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:17',
+                },
+                'time': '21:15',
+                'odds': {
+                    ALEX_OLIVEIRA: -177,
+                    CARLOS_CONDIT: 156,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUSTIN_GAETHJE,
+                        'stats': '20-2-0',
+                    },
+                    {
+                        'name': DUSTIN_POIRIER,
+                        'stats': '24-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DUSTIN_POIRIER,
+                    'by': 'ko/tko',
+                    'round': 4,
+                    'time': '0:33',
+                },
+                'time': '21:40',
+                'odds': {
+                    DUSTIN_POIRIER: -124,
+                    JUSTIN_GAETHJE: 110,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2018-04-21',
         'name': 'UFC Fight Night: Barboza vs Lee',
         'location': 'Atlantic City, New Jersey',
