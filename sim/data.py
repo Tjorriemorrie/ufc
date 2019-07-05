@@ -2,6 +2,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-12-09',
+        'name': 'UFC Fight Night: Swanson vs Ortega',
+        'location': 'Fresno, California',
+        'venue': 'Save Mart Center',
+        'fights': [
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': TREVIN_GILES,
+                        'stats': '11-0-0',
+                    },
+                    {
+                        'name': ANTONIO_BRAGA_NETO,
+                        'stats': '9-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TREVIN_GILES,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '2:27',
+                },
+                'time': '18:30',
+                'odds': {
+                    TREVIN_GILES: -271,
+                    ANTONIO_BRAGA_NETO: 235,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAVI_RAMOS,
+                        'stats': '9-2-0',
+                    },
+                    {
+                        'name': CHRIS_GRUETZEMACHER,
+                        'stats': '14-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DAVI_RAMOS,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '0:50',
+                },
+                'time': '19:00',
+                'odds': {
+                    DAVI_RAMOS: -385,
+                    CHRIS_GRUETZEMACHER: 325,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEJANDRO_PEREZ,
+                        'stats': '22-7-1',
+                    },
+                    {
+                        'name': IURI_ALCANTARA,
+                        'stats': '35-10-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEJANDRO_PEREZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    ALEJANDRO_PEREZ: 150,
+                    IURI_ALCANTARA: -170,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MERAB_DVALISHVILI,
+                        'stats': '8-4-0',
+                    },
+                    {
+                        'name': FRANKIE_SAENZ,
+                        'stats': '13-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': FRANKIE_SAENZ,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    FRANKIE_SAENZ: 165,
+                    MERAB_DVALISHVILI: -187,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_PEREZ,
+                        'stats': '22-5-0',
+                    },
+                    {
+                        'name': CARLS_JOHN_DE_TOMAS,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_PEREZ,
+                    'by': 'u.dec',
+                    'round': 2,
+                    'time': '1:54',
+                },
+                'time': '20:30',
+                'odds': {
+                    ALEX_PEREZ: -405,
+                    CARLS_JOHN_DE_TOMAS: 340,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANDRE_SOUKHAMTHATH,
+                        'stats': '13-6-0',
+                    },
+                    {
+                        'name': LUKE_SANDERS,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANDRE_SOUKHAMTHATH,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '1:06',
+                },
+                'time': '21:00',
+                'odds': {
+                    ANDRE_SOUKHAMTHATH: 280,
+                    LUKE_SANDERS: -327,
+                },
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXIS_DAVIS,
+                        'stats': '19-9-0',
+                    },
+                    {
+                        'name': LIZ_CARMOUCHE,
+                        'stats': '13-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXIS_DAVIS,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:30',
+                'odds': {
+                    ALEXIS_DAVIS: 118,
+                    LIZ_CARMOUCHE: -133,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': BENITO_LOPEZ,
+                        'stats': '9-1-0',
+                    },
+                    {
+                        'name': ALBERT_MORALES,
+                        'stats': '7-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': BENITO_LOPEZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    BENITO_LOPEZ: -123,
+                    ALBERT_MORALES: 109,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARKUS_PEREZ,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': ERYK_ANDERS,
+                        'stats': '11-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ERYK_ANDERS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    ERYK_ANDERS: -458,
+                    MARKUS_PEREZ: 380,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DARRELL_HORCHER,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': SCOTT_HOLTZMAN,
+                        'stats': '12-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SCOTT_HOLTZMAN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:00',
+                'odds': {
+                    SCOTT_HOLTZMAN: -148,
+                    DARRELL_HORCHER: 131,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARLON_MORAES,
+                        'stats': '2-5-1',
+                    },
+                    {
+                        'name': ALJAMAIN_STERLING,
+                        'stats': '17-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARLON_MORAES,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:07',
+                },
+                'time': '23:30',
+                'odds': {
+                    MARLON_MORAES: -142,
+                    ALJAMAIN_STERLING: 126,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JASON_KNIGHT,
+                        'stats': '20-6-0',
+                    },
+                    {
+                        'name': GABRIEL_BENITEZ,
+                        'stats': '21-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GABRIEL_BENITEZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:59',
+                'odds': {
+                    GABRIEL_BENITEZ: 280,
+                    JASON_KNIGHT: -327,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRIAN_ORTEGA,
+                        'stats': '14-1-0',
+                    },
+                    {
+                        'name': CUB_SWANSON,
+                        'stats': '25-10-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRIAN_ORTEGA,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:22',
+                },
+                'time': '23:59',
+                'odds': {
+                    BRIAN_ORTEGA: -107,
+                    CUB_SWANSON: -105,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-12-16',
         'name': 'UFC Fight Night: Lawler vs Dos Anjos',
         'location': 'Winnipeg, Manitoba',
