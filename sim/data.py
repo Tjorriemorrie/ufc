@@ -2,6 +2,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-12-02',
+        'name': 'UFC 218: Holloway vs Aldo 2',
+        'location': 'Detroit, Michigan',
+        'venue': 'Little Caesars Arena',
+        'fights': [
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALLEN_CROWDER,
+                        'stats': '10-3-0',
+                    },
+                    {
+                        'name': JUSTIN_WILLIS,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSTIN_WILLIS,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:33',
+                },
+                'time': '18:15',
+                'odds': {
+                    JUSTIN_WILLIS: -217,
+                    ALLEN_CROWDER: 190,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DOMINICK_REYES,
+                        'stats': '11-0-0',
+                    },
+                    {
+                        'name': JEREMY_KIMBALL,
+                        'stats': '15-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DOMINICK_REYES,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '3:39',
+                },
+                'time': '18:45',
+                'odds': {
+                    DOMINICK_REYES: -479,
+                    JEREMY_KIMBALL: 395,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ABDUL_RAZAK_ALHASSAN,
+                        'stats': '10-1-0',
+                    },
+                    {
+                        'name': SABAH_HOMASI,
+                        'stats': '11-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ABDUL_RAZAK_ALHASSAN,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:21',
+                },
+                'time': '19:15',
+                'odds': {
+                    ABDUL_RAZAK_ALHASSAN: -271,
+                    SABAH_HOMASI: 235,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': AMANDA_COOPER,
+                        'stats': '4-5-0',
+                    },
+                    {
+                        'name': ANGELA_MAGANA,
+                        'stats': '11-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': AMANDA_COOPER,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:34',
+                },
+                'time': '19:45',
+                'odds': {
+                    AMANDA_COOPER: -485,
+                    ANGELA_MAGANA: 400,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': CORTNEY_CASEY_SANCHEZ,
+                        'stats': '8-6-0',
+                    },
+                    {
+                        'name': FELICE_HERRIG,
+                        'stats': '14-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': FELICE_HERRIG,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    FELICE_HERRIG: -106,
+                    CORTNEY_CASEY_SANCHEZ: -106,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DRAKKAR_KLOSE,
+                        'stats': '10-1-1',
+                    },
+                    {
+                        'name': DAVID_TEYMUR,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DAVID_TEYMUR,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:30',
+                'odds': {
+                    DAVID_TEYMUR: -135,
+                    DRAKKAR_KLOSE: 120,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_OLIVEIRA,
+                        'stats': '19-6-1',
+                    },
+                    {
+                        'name': YANCY_MEDEIROS,
+                        'stats': '15-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': YANCY_MEDEIROS,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '2:02',
+                },
+                'time': '21:00',
+                'odds': {
+                    YANCY_MEDEIROS: 319,
+                    ALEX_OLIVEIRA: -377,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': PAUL_FELDER,
+                        'stats': '16-4-0',
+                    },
+                    {
+                        'name': CHARLES_OLIVEIRA,
+                        'stats': '26-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PAUL_FELDER,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:06',
+                },
+                'time': '21:30',
+                'odds': {
+                    PAUL_FELDER: 110,
+                    CHARLES_OLIVEIRA: -124,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': TECIA_TORRES,
+                        'stats': '10-4-0',
+                    },
+                    {
+                        'name': MICHELLE_WATERSON,
+                        'stats': '17-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TECIA_TORRES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    TECIA_TORRES: -229,
+                    MICHELLE_WATERSON: 200,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUSTIN_GAETHJE,
+                        'stats': '20-2-0',
+                    },
+                    {
+                        'name': EDDIE_ALVAREZ,
+                        'stats': '29-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': EDDIE_ALVAREZ,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '3:59',
+                },
+                'time': '22:30',
+                'odds': {
+                    EDDIE_ALVAREZ: 158,
+                    JUSTIN_GAETHJE: -179,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': HENRY_CEJUDO,
+                        'stats': '14-2-0',
+                    },
+                    {
+                        'name': SERGIO_PETTIS,
+                        'stats': '17-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': HENRY_CEJUDO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:00',
+                'odds': {
+                    HENRY_CEJUDO: -340,
+                    SERGIO_PETTIS: 290,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': FRANCIS_NGANNOU,
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': ALISTAIR_OVEREEM,
+                        'stats': '44-17-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': FRANCIS_NGANNOU,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:42',
+                },
+                'time': '23:30',
+                'odds': {
+                    FRANCIS_NGANNOU: -211,
+                    ALISTAIR_OVEREEM: 185,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MAX_HOLLOWAY,
+                        'stats': '20-3-0',
+                    },
+                    {
+                        'name': JOSE_ALDO,
+                        'stats': '28-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MAX_HOLLOWAY,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '4:51',
+                },
+                'time': '23:59',
+                'odds': {
+                    MAX_HOLLOWAY: -277,
+                    JOSE_ALDO: 240,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-12-09',
         'name': 'UFC Fight Night: Swanson vs Ortega',
         'location': 'Fresno, California',
