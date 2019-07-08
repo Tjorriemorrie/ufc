@@ -3,6 +3,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-11-04',
+        'name': 'UFC 217: Bisping vs St-Pierre',
+        'location': 'New York City, New York',
+        'venue': 'Madison Square Garden',
+        'fights': [
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': RICARDO_RAMOS,
+                        'stats': '12-1-0',
+                    },
+                    {
+                        'name': AIEMANN_ZAHABI,
+                        'stats': '7-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RICARDO_RAMOS,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '1:58',
+                },
+                'time': '19:00',
+                'odds': {
+                    RICARDO_RAMOS: -181,
+                    AIEMANN_ZAHABI: 160,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': CURTIS_BLAYDES,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': ALEKSEI_OLEINIK,
+                        'stats': '57-11-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': CURTIS_BLAYDES,
+                    'by': 'tko',
+                    'round': 2,
+                    'time': '1:56',
+                },
+                'time': '19:30',
+                'odds': {
+                    CURTIS_BLAYDES: -302,
+                    ALEKSEI_OLEINIK: 260,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICKEY_GALL,
+                        'stats': '5-2-0',
+                    },
+                    {
+                        'name': RANDY_BROWN,
+                        'stats': '10-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RANDY_BROWN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    RANDY_BROWN: 111,
+                    MICKEY_GALL: -125,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': COREY_ANDERSON,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': OVINCE_SAINT_PREUX,
+                        'stats': '57-11-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': OVINCE_SAINT_PREUX,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '1:25',
+                },
+                'time': '20:30',
+                'odds': {
+                    OVINCE_SAINT_PREUX: -176,
+                    COREY_ANDERSON: 155,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARK_GODBEER,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': WALT_HARRIS,
+                        'stats': '11-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARK_GODBEER,
+                    'by': 'dq',
+                    'round': 1,
+                    'time': '4:29',
+                },
+                'time': '21:00',
+                'odds': {
+                    MARK_GODBEER: 325,
+                    WALT_HARRIS: -385,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOE_DUFFY,
+                        'stats': '16-4-0',
+                    },
+                    {
+                        'name': JAMES_VICK,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JAMES_VICK,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:59',
+                },
+                'time': '21:30',
+                'odds': {
+                    JAMES_VICK: 145,
+                    JOE_DUFFY: -164,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': PAULO_COSTA,
+                        'stats': '12-0-0',
+                    },
+                    {
+                        'name': JOHNY_HENDRICKS,
+                        'stats': '18-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PAULO_COSTA,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '1:23',
+                },
+                'time': '22:00',
+                'odds': {
+                    PAULO_COSTA: -346,
+                    JOHNY_HENDRICKS: 295,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': STEPHEN_THOMPSON,
+                        'stats': '14-4-1',
+                    },
+                    {
+                        'name': JORGE_MASVIDAL,
+                        'stats': '33-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': STEPHEN_THOMPSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    STEPHEN_THOMPSON: -192,
+                    JORGE_MASVIDAL: 169,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROSE_NAMAJUNAS,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': JOANNA_JEDRZEJCZYK,
+                        'stats': '15-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ROSE_NAMAJUNAS,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:03',
+                },
+                'time': '23:00',
+                'odds': {
+                    ROSE_NAMAJUNAS: 526,
+                    JOANNA_JEDRZEJCZYK: -666,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': CODY_GARBRANDT,
+                        'stats': '11-3-0',
+                    },
+                    {
+                        'name': TJ_DILLASHAW,
+                        'stats': '17-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TJ_DILLASHAW,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:41',
+                },
+                'time': '23:30',
+                'odds': {
+                    TJ_DILLASHAW: 183,
+                    CODY_GARBRANDT: -209,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': GEORGES_ST_PIERRE,
+                        'stats': '26-2-0',
+                    },
+                    {
+                        'name': MICHAEL_BISPING,
+                        'stats': '31-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GEORGES_ST_PIERRE,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '4:23',
+                },
+                'time': '23:59',
+                'odds': {
+                    GEORGES_ST_PIERRE: 109,
+                    MICHAEL_BISPING: -123,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-11-11',
         'name': 'UFC Fight Night: Poirier vs Pettis',
         'location': 'Norfolk, Virginia',
