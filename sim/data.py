@@ -3,6 +3,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-11-11',
+        'name': 'UFC Fight Night: Poirier vs Pettis',
+        'location': 'Norfolk, Virginia',
+        'venue': 'Ted Constant Convocation Center',
+        'fights': [
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': KARL_ROBERSON,
+                        'stats': '7-2-0',
+                    },
+                    {
+                        'name': DARREN_STEWART,
+                        'stats': '9-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KARL_ROBERSON,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '3:41',
+                },
+                'time': '18:30',
+                'odds': {
+                    KARL_ROBERSON: -217,
+                    DARREN_STEWART: 190,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARCEL_FORTUNA,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': JAKE_COLLIER,
+                        'stats': '11-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JAKE_COLLIER,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:00',
+                'odds': {
+                    JAKE_COLLIER: 205,
+                    MARCEL_FORTUNA: -235,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SEAN_STRICKLAND,
+                        'stats': '20-3-0',
+                    },
+                    {
+                        'name': COURT_MCGEE,
+                        'stats': '20-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SEAN_STRICKLAND,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    SEAN_STRICKLAND: -259,
+                    COURT_MCGEE: 225,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANGELA_HILL,
+                        'stats': '8-6-0',
+                    },
+                    {
+                        'name': NINA_ANSAROFF,
+                        'stats': '10-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': NINA_ANSAROFF,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    NINA_ANSAROFF: 150,
+                    ANGELA_HILL: -170,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICHEL_QUINONES,
+                        'stats': '8-3-0',
+                    },
+                    {
+                        'name': SAGE_NORTHCUTT,
+                        'stats': '11-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SAGE_NORTHCUTT,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:30',
+                'odds': {
+                    SAGE_NORTHCUTT: -193,
+                    MICHEL_QUINONES: 170,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': VIVIANE_PEREIRA,
+                        'stats': '13-2-0',
+                    },
+                    {
+                        'name': TATIANA_SUAREZ,
+                        'stats': '7-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TATIANA_SUAREZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:00',
+                'odds': {
+                    TATIANA_SUAREZ: -259,
+                    VIVIANE_PEREIRA: 225,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARLON_MORAES,
+                        'stats': '22-5-1',
+                    },
+                    {
+                        'name': JOHN_DODSON,
+                        'stats': '21-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARLON_MORAES,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:30',
+                'odds': {
+                    MARLON_MORAES: 110,
+                    JOHN_DODSON: -124,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOE_LAUZON,
+                        'stats': '27-16-0',
+                    },
+                    {
+                        'name': CLAY_GUIDA,
+                        'stats': '34-15-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CLAY_GUIDA,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:07',
+                },
+                'time': '22:00',
+                'odds': {
+                    CLAY_GUIDA: -127,
+                    JOE_LAUZON: 113,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MATTHEW_LOPEZ,
+                        'stats': '10-5-0',
+                    },
+                    {
+                        'name': RAPHAEL_ASSUNCAO,
+                        'stats': '27-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RAPHAEL_ASSUNCAO,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '1:50',
+                },
+                'time': '22:30',
+                'odds': {
+                    RAPHAEL_ASSUNCAO: -340,
+                    MATTHEW_LOPEZ: 290,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': NATE_MARQUARDT,
+                        'stats': '38-19-2',
+                    },
+                    {
+                        'name': CEZAR_FERREIRA,
+                        'stats': '14-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CEZAR_FERREIRA,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:00',
+                'odds': {
+                    CEZAR_FERREIRA: -253,
+                    NATE_MARQUARDT: 220,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUNIOR_ALBINI,
+                        'stats': '14-5-0',
+                    },
+                    {
+                        'name': ANDREI_ARLOVSKI,
+                        'stats': '27-17-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANDREI_ARLOVSKI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:30',
+                'odds': {
+                    ANDREI_ARLOVSKI: 275,
+                    JUNIOR_ALBINI: -321,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DIEGO_SANCHEZ,
+                        'stats': '31-11-0',
+                    },
+                    {
+                        'name': MATT_BROWN,
+                        'stats': '23-16-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MATT_BROWN,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:44',
+                },
+                'time': '23:59',
+                'odds': {
+                    MATT_BROWN: -315,
+                    DIEGO_SANCHEZ: 270,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DUSTIN_POIRIER,
+                        'stats': '24-5-0',
+                    },
+                    {
+                        'name': ANTHONY_PETTIS,
+                        'stats': '22-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DUSTIN_POIRIER,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '2:08',
+                },
+                'time': '23:59',
+                'odds': {
+                    DUSTIN_POIRIER: -110,
+                    ANTHONY_PETTIS: -102,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-11-18',
         'name': 'UFC Fight Night: Werdum vs Tybura',
         'location': 'Sydney, Australia',
