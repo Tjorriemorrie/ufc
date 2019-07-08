@@ -3,6 +3,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-10-28',
+        'name': 'UFC Fight Night: Brunson vs Machida',
+        'location': 'Sao Paulo, Brazil',
+        'venue': 'Ginasio do Ibirpuera',
+        'fights': [
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARCELO_GOLM,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': CHRISTIAN_COLOMBO,
+                        'stats': '8-3-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARCELO_GOLM,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:08',
+                },
+                'time': '19:00',
+                'odds': {
+                    MARCELO_GOLM: -253,
+                    CHRISTIAN_COLOMBO: 220,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DEIVESON_FIGUEIREDO,
+                        'stats': '15-1-0',
+                    },
+                    {
+                        'name': JARRED_BROOKS,
+                        'stats': '14-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DEIVESON_FIGUEIREDO,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    DEIVESON_FIGUEIREDO: 125,
+                    JARRED_BROOKS: -141,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MAX_GRIFFIN,
+                        'stats': '14-6-0',
+                    },
+                    {
+                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'stats': '20-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    ELIZEU_ZALESKI_DOS_SANTOS: -211,
+                    MAX_GRIFFIN: 185,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JARED_GORDON,
+                        'stats': '14-3-0',
+                    },
+                    {
+                        'name': HACRAN_DIAS,
+                        'stats': '23-6-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': JARED_GORDON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:30',
+                'odds': {
+                    JARED_GORDON: -152,
+                    HACRAN_DIAS: 135,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JACK_MARSHMAN,
+                        'stats': '23-8-0',
+                    },
+                    {
+                        'name': ANTONIO_CARLOS_JUNIOR,
+                        'stats': '11-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTONIO_CARLOS_JUNIOR,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:30',
+                },
+                'time': '21:00',
+                'odds': {
+                    ANTONIO_CARLOS_JUNIOR: -431,
+                    JACK_MARSHMAN: 360,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NIKO_PRICE,
+                        'stats': '13-2-0',
+                    },
+                    {
+                        'name': VICENTE_LUQUE,
+                        'stats': '15-6-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': VICENTE_LUQUE,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '4:08',
+                },
+                'time': '21:30',
+                'odds': {
+                    VICENTE_LUQUE: -124,
+                    NIKO_PRICE: 110,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARLON_VERA,
+                        'stats': '13-5-1',
+                    },
+                    {
+                        'name': JOHN_LINEKER,
+                        'stats': '31-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOHN_LINEKER,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    JOHN_LINEKER: -506,
+                    MARLON_VERA: 415,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JACK_HERMANSSON,
+                        'stats': '19-4-0',
+                    },
+                    {
+                        'name': THIAGO_SANTOS,
+                        'stats': '21-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': THIAGO_SANTOS,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:59',
+                },
+                'time': '22:30',
+                'odds': {
+                    THIAGO_SANTOS: -106,
+                    JACK_HERMANSSON: -106,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': FRANCISCO_TRINALDO,
+                        'stats': '23-6-0',
+                    },
+                    {
+                        'name': JIM_MILLER,
+                        'stats': '29-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': FRANCISCO_TRINALDO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:00',
+                'odds': {
+                    FRANCISCO_TRINALDO: -209,
+                    JIM_MILLER: 183,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROB_FONT,
+                        'stats': '16-4-0',
+                    },
+                    {
+                        'name': PEDRO_MUNHOZ,
+                        'stats': '18-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PEDRO_MUNHOZ,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:03',
+                },
+                'time': '23:30',
+                'odds': {
+                    PEDRO_MUNHOZ: 155,
+                    ROB_FONT: -176,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': COLBY_COVINGTON,
+                        'stats': '14-1-0',
+                    },
+                    {
+                        'name': DEMIAN_MAIA,
+                        'stats': '26-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': COLBY_COVINGTON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:50',
+                'odds': {
+                    COLBY_COVINGTON: -101,
+                    DEMIAN_MAIA: -111,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': LYOTO_MACHIDA,
+                        'stats': '24-8-0',
+                    },
+                    {
+                        'name': DEREK_BRUNSON,
+                        'stats': '18-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DEREK_BRUNSON,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:30',
+                },
+                'time': '23:59',
+                'odds': {
+                    DEREK_BRUNSON: -150,
+                    LYOTO_MACHIDA: 133,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-11-04',
         'name': 'UFC 217: Bisping vs St-Pierre',
         'location': 'New York City, New York',
