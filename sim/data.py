@@ -3,6 +3,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-10-07',
+        'name': 'UFC 216: Ferguson vs Lee',
+        'location': 'Las Vegas, Nevada',
+        'venue': 'T-Mobile Arena',
+        'fights': [
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRAD_TAVARES,
+                        'stats': '17-5-0',
+                    },
+                    {
+                        'name': THALES_LEITES,
+                        'stats': '28-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRAD_TAVARES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:30',
+                'odds': {
+                    BRAD_TAVARES: -170,
+                    THALES_LEITES: 150,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MAGOMED_BIBULATOV,
+                        'stats': '14-1-0',
+                    },
+                    {
+                        'name': JOHN_MORAGA,
+                        'stats': '19-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOHN_MORAGA,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:38',
+                },
+                'time': '19:00',
+                'odds': {
+                    JOHN_MORAGA: 375,
+                    MAGOMED_BIBULATOV: -451,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MATT_SCHNELL,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': MARCO_BELTRAN,
+                        'stats': '8-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MATT_SCHNELL,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:00',
+                'odds': {
+                    MATT_SCHNELL: -129,
+                    MARCO_BELTRAN: 115,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': PEARL_GONZALEZ,
+                        'stats': '6-3-0',
+                    },
+                    {
+                        'name': POLIANA_BOTELHO,
+                        'stats': '7-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': POLIANA_BOTELHO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    POLIANA_BOTELHO: -152,
+                    PEARL_GONZALEZ: 135,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': LANDO_VANNATA,
+                        'stats': '10-3-2',
+                    },
+                    {
+                        'name': BOBBY_GREEN,
+                        'stats': '24-9-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': None,
+                    'by': 'm.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:30',
+                'odds': {
+                    BOBBY_GREEN: 160,
+                    LANDO_VANNATA: -181,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': CODY_STAMANN,
+                        'stats': '18-2-0',
+                    },
+                    {
+                        'name': TOM_DUQUESNOY,
+                        'stats': '16-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CODY_STAMANN,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:30',
+                'odds': {
+                    CODY_STAMANN: 135,
+                    TOM_DUQUESNOY: -152,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': EVAN_DUNHAM,
+                        'stats': '18-7-1',
+                    },
+                    {
+                        'name': BENEIL_DARIUSH,
+                        'stats': '16-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': None,
+                    'by': 'm.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    BENEIL_DARIUSH: -215,
+                    EVAN_DUNHAM: 189,
+                },
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': KALINDRA_FARIA,
+                        'stats': '18-8-1',
+                    },
+                    {
+                        'name': MARA_ROMERO_BORELLA,
+                        'stats': '13-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARA_ROMERO_BORELLA,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:54',
+                },
+                'time': '22:30',
+                'odds': {
+                    MARA_ROMERO_BORELLA: 212,
+                    KALINDRA_FARIA: -243,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': FABRICIO_WERDUM,
+                        'stats': '23-8-1',
+                    },
+                    {
+                        'name': WALT_HARRIS,
+                        'stats': '11-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': FABRICIO_WERDUM,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '1:05',
+                },
+                'time': '23:00',
+                'odds': {
+                    FABRICIO_WERDUM: -247,
+                    WALT_HARRIS: -315,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': RAY_BORG,
+                        'stats': '11-4-0',
+                    },
+                    {
+                        'name': DEMETRIOUS_JOHNSON,
+                        'stats': '27-3-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': DEMETRIOUS_JOHNSON,
+                    'by': 'submission',
+                    'round': 5,
+                    'time': '3:15',
+                },
+                'time': '23:30',
+                'odds': {
+                    DEMETRIOUS_JOHNSON: -900,
+                    RAY_BORG: 647,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': KEVIN_LEE,
+                        'stats': '17-4-0',
+                    },
+                    {
+                        'name': TONY_FERGUSON,
+                        'stats': '25-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TONY_FERGUSON,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '4:02',
+                },
+                'time': '23:55',
+                'odds': {
+                    TONY_FERGUSON: -276,
+                    KEVIN_LEE: 239,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-10-21',
         'name': 'UFC Fight Night: Cerrone vs Till',
         'location': 'Gdansk, Poland',
