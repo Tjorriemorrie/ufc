@@ -3,6 +3,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-10-21',
+        'name': 'UFC Fight Night: Cerrone vs Till',
+        'location': 'Gdansk, Poland',
+        'venue': 'Ergo Arena',
+        'fights': [
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOSH_EMMETT,
+                        'stats': '14-2-0',
+                    },
+                    {
+                        'name': FELIPE_ARANTES,
+                        'stats': '18-10-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOSH_EMMETT,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '11:45',
+                'odds': {
+                    JOSH_EMMETT: -229,
+                    FELIPE_ARANTES: 200,
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ASPEN_LADD,
+                        'stats': '7-0-0',
+                    },
+                    {
+                        'name': LINA_LANSBERG,
+                        'stats': '8-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ASPEN_LADD,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:33',
+                },
+                'time': '12:00',
+                'odds': {
+                    ASPEN_LADD: -229,
+                    LINA_LANSBERG: 200,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SALIM_TOUAHRI,
+                        'stats': '10-3-0',
+                    },
+                    {
+                        'name': WARLLEY_ALVES,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': WARLLEY_ALVES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '12:15',
+                'odds': {
+                    WARLLEY_ALVES: -284,
+                    SALIM_TOUAHRI: 245,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ARTEM_LOBOV,
+                        'stats': '14-15-1',
+                    },
+                    {
+                        'name': ANDRE_FILI,
+                        'stats': '19-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANDRE_FILI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '13:30',
+                'odds': {
+                    ANDRE_FILI: -176,
+                    ARTEM_LOBOV: 155,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': RAMAZAN_EMEEV,
+                        'stats': '18-3-0',
+                    },
+                    {
+                        'name': SAM_ALVEY,
+                        'stats': '33-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RAMAZAN_EMEEV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '13:55',
+                'odds': {
+                    RAMAZAN_EMEEV: -152,
+                    SAM_ALVEY: 135,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRIAN_KELLEHER,
+                        'stats': '19-10-0',
+                    },
+                    {
+                        'name': DAMIAN_STASIAK,
+                        'stats': '10-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRIAN_KELLEHER,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '3:39',
+                },
+                'time': '14:20',
+                'odds': {
+                    BRIAN_KELLEHER: 102,
+                    DAMIAN_STASIAK: -115,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': NASRAT_HAQPARAST,
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': MARCIN_HELD,
+                        'stats': '23-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARCIN_HELD,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '14:45',
+                'odds': {
+                    MARCIN_HELD: -327,
+                    NASRAT_HAQPARAST: 280,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': OSKAR_PIECHOTA,
+                        'stats': '11-1-1',
+                    },
+                    {
+                        'name': JONATHAN_WILSON,
+                        'stats': '7-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': OSKAR_PIECHOTA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '15:24',
+                'odds': {
+                    OSKAR_PIECHOTA: -213,
+                    JONATHAN_WILSON: 187,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DEVIN_CLARK,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': JAN_BLACHOWICZ,
+                        'stats': '23-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JAN_BLACHOWICZ,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:02',
+                },
+                'time': '15:50',
+                'odds': {
+                    JAN_BLACHOWICZ: 130,
+                    DEVIN_CLARK: -147,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': JODIE_ESQUIBEL,
+                        'stats': '6-4-0',
+                    },
+                    {
+                        'name': KAROLINA_KOWALKIEWICZ,
+                        'stats': '13-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KAROLINA_KOWALKIEWICZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:21',
+                'odds': {
+                    KAROLINA_KOWALKIEWICZ: -555,
+                    JODIE_ESQUIBEL: 450,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DARREN_TILL,
+                        'stats': '17-2-1',
+                    },
+                    {
+                        'name': DONALD_CERRONE,
+                        'stats': '35-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DARREN_TILL,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:20',
+                },
+                'time': '16:50',
+                'odds': {
+                    DARREN_TILL: 124,
+                    DONALD_CERRONE: -140,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-10-28',
         'name': 'UFC Fight Night: Brunson vs Machida',
         'location': 'Sao Paulo, Brazil',
