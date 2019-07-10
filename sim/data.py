@@ -3,6 +3,504 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-09-16',
+        'name': 'UFC Fight Night: Rockhold vs Branch',
+        'location': 'Pittsburgh, Pennsylvania',
+        'venue': 'PPG Paints Arena',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': GILBERT_BURNS,
+                        'stats': '14-3-0',
+                    },
+                    {
+                        'name': JASON_SAGGO,
+                        'stats': '12-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GILBERT_BURNS,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:55',
+                },
+                'time': '20:00',
+                'odds': {
+                    GILBERT_BURNS: -147,
+                    JASON_SAGGO: 130,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': KRZYSZTOF_JOTKO,
+                        'stats': '19-4-0',
+                    },
+                    {
+                        'name': URIAH_HALL,
+                        'stats': '15-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': URIAH_HALL,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:25',
+                },
+                'time': '20:15',
+                'odds': {
+                    URIAH_HALL: 167,
+                    KRZYSZTOF_JOTKO: -190,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DANIEL_SPITZ,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': ANTHONY_HAMILTON,
+                        'stats': '15-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DANIEL_SPITZ,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:24',
+                },
+                'time': '20:30',
+                'odds': {
+                    DANIEL_SPITZ: 170,
+                    ANTHONY_HAMILTON: -193,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': OLIVIER_AUBIN_MERCIER,
+                        'stats': '12-4-0',
+                    },
+                    {
+                        'name': ANTHONY_ROCCO_MARTIN,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': OLIVIER_AUBIN_MERCIER,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:36',
+                'odds': {
+                    OLIVIER_AUBIN_MERCIER: 105,
+                    ANTHONY_ROCCO_MARTIN: -118,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ZU_ANYANWU,
+                        'stats': '14-5-0',
+                    },
+                    {
+                        'name': JUSTIN_LEDET,
+                        'stats': '9-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSTIN_LEDET,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    JUSTIN_LEDET: -451,
+                    ZU_ANYANWU: 375,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': KAMARU_USMAN,
+                        'stats': '15-1-0',
+                    },
+                    {
+                        'name': SERGIO_MORAES,
+                        'stats': '14-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': KAMARU_USMAN,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:48',
+                },
+                'time': '22:15',
+                'odds': {
+                    KAMARU_USMAN: -860,
+                    SERGIO_MORAES: 650,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JASON_GONZALEZ,
+                        'stats': '11-4-0',
+                    },
+                    {
+                        'name': GREGOR_GILLESPIE,
+                        'stats': '13-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GREGOR_GILLESPIE,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '2:11',
+                },
+                'time': '22:30',
+                'odds': {
+                    GREGOR_GILLESPIE: -389,
+                    JASON_GONZALEZ: 328,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANTHONY_SMITH,
+                        'stats': '31-14-0',
+                    },
+                    {
+                        'name': HECTOR_LOMBARD,
+                        'stats': '34-9-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTHONY_SMITH,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '2:33',
+                },
+                'time': '23:40',
+                'odds': {
+                    ANTHONY_SMITH: -155,
+                    HECTOR_LOMBARD: 137,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_REYES,
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': MIKE_PERRY,
+                        'stats': '12-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MIKE_PERRY,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:19',
+                },
+                'time': '23:00',
+                'odds': {
+                    MIKE_PERRY: -398,
+                    ALEX_REYES: 335,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAVID_BRANCH,
+                        'stats': '22-6-0',
+                    },
+                    {
+                        'name': LUKE_ROCKHOLD,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LUKE_ROCKHOLD,
+                    'by': 'koo/tko',
+                    'round': 2,
+                    'time': '4:05',
+                },
+                'time': '23:15',
+                'odds': {
+                    LUKE_ROCKHOLD: -555,
+                    DAVID_BRANCH: 450,
+                },
+            },
+        ]
+    },
+
+    {
+        'date': '2017-09-22',
+        'name': 'UFC Fight Night: Saint Preux vs Okami',
+        'location': 'Saitama, Japan',
+        'venue': 'Saitama Super Arena',
+        'fights': [
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAICHI_ABE,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': HYUN_GYU_KIM,
+                        'stats': '13-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': DAICHI_ABE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:05',
+                'odds': {
+                    DAICHI_ABE: 110,
+                    HYUN_GYU_KIM: -124,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': LUKE_JUMEAU,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': SHINSHO_ANZAI,
+                        'stats': '10-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SHINSHO_ANZAI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:40',
+                'odds': {
+                    SHINSHO_ANZAI: 209,
+                    LUKE_JUMEAU: -240,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': SYURI_KONDO,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': CHANMI_JEON,
+                        'stats': '5-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SYURI_KONDO,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:11',
+                'odds': {
+                    SYURI_KONDO: -164,
+                    CHANMI_JEON: 145,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_MORONO,
+                        'stats': '16-5-0',
+                    },
+                    {
+                        'name': KEITA_NAKAMURA,
+                        'STATS': '34-9-2',
+                    },
+                ],
+                'winner': {
+                    'fighter': KEITA_NAKAMURA,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:39',
+                'odds': {
+                    KEITA_NAKAMURA: -114,
+                    ALEX_MORONO: 101,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ULKA_SASAKI,
+                        'stats': '21-6-2',
+                    },
+                    {
+                        'name': JUSSIER_FORMIGA,
+                        'stats': '23-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSSIER_FORMIGA,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:30',
+                },
+                'time': '22:14',
+                'odds': {
+                    JUSSIER_FORMIGA: -405,
+                    ULKA_SASAKI: 340,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROLANDO_DY,
+                        'stats': '9-7-1',
+                    },
+                    {
+                        'name': TERUTO_ISHIHARA,
+                        'stats': '11-6-2',
+                    },
+                ],
+                'winner': {
+                    'fighter': TERUTO_ISHIHARA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:35',
+                'odds': {
+                    TERUTO_ISHIHARA: -158,
+                    ROLANDO_DY: 140,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': GOKHAN_SAKI,
+                        'stats': '1-2-0',
+                    },
+                    {
+                        'name': HENRIQUE_DA_SILVA,
+                        'stats': '14-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GOKHAN_SAKI,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:45',
+                },
+                'time': '23:00',
+                'odds': {
+                    GOKHAN_SAKI: -212,
+                    HENRIQUE_DA_SILVA: 186,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DONG_HYUN_KIM,
+                        'stats': '16-8-3',
+                    },
+                    {
+                        'name': TAKANORI_GOMI,
+                        'stats': '35-14-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DONG_HYUN_KIM,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:30',
+                },
+                'time': '23:30',
+                'odds': {
+                    DONG_HYUN_KIM: -366,
+                    TAKANORI_GOMI: 310,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': CLAUDIA_GADELHA,
+                        'stats': '16-4-0',
+                    },
+                    {
+                        'name': JESSICA_ANDRADE,
+                        'stats': '19-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JESSICA_ANDRADE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:45',
+                'odds': {
+                    JESSICA_ANDRADE: 250,
+                    CLAUDIA_GADELHA: -290,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': YUSHIN_OKAMI,
+                        'stats': '34-13-0',
+                    },
+                    {
+                        'name': OVINCE_SAINT_PREUX,
+                        'stats': '23-12-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': OVINCE_SAINT_PREUX,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '1:50',
+                },
+                'time': '23:59',
+                'odds': {
+                    OVINCE_SAINT_PREUX: -405,
+                    YUSHIN_OKAMI: 340,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-10-07',
         'name': 'UFC 216: Ferguson vs Lee',
         'location': 'Las Vegas, Nevada',
