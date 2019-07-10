@@ -10,6 +10,7 @@ trueskill = "*"
 loguru = "*"
 cma = "*"
 numpy = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.6"

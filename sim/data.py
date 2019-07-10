@@ -3,6 +3,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-09-02',
+        'name': 'UFC Fight Night: Volkov vs Struve',
+        'location': 'Rotterdam, Netherlands',
+        'venue': 'Ahoy Rotterdam',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': THIBAULT_GOUTI,
+                        'stats': '12-5-0',
+                    },
+                    {
+                        'name': ANDREW_HOLBROOK,
+                        'stats': '12-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': THIBAULT_GOUTI,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:28',
+                },
+                'time': '11:30',
+                'odds': {
+                    THIBAULT_GOUTI: 144,
+                    ANDREW_HOLBROOK: -163,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': BOJAN_MIHAJLOVIC,
+                        'stats': '10-6-0',
+                    },
+                    {
+                        'name': ABDUL_KERIM_EDILOV,
+                        'stats': '17-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ABDUL_KERIM_EDILOV,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:32',
+                },
+                'time': '12:00',
+                'odds': {
+                    ABDUL_KERIM_EDILOV: -605,
+                    BOJAN_MIHAJLOVIC: 485,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MIKE_SANTIAGO,
+                        'stats': '21-12-0',
+                    },
+                    {
+                        'name': ZABIT_MAGOMEDSHARIPOV,
+                        'stats': '17-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ZABIT_MAGOMEDSHARIPOV,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '4:22',
+                },
+                'time': '11:49',
+                'odds': {
+                    ZABIT_MAGOMEDSHARIPOV: -366,
+                    MIKE_SANTIAGO: 310,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEKSANDAR_RAKIC,
+                        'stats': '1-1-0',
+                    },
+                    {
+                        'name': FRANCIMAR_BARROSO,
+                        'stats': '19-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEKSANDAR_RAKIC,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '13:00',
+                'odds': {
+                    ALEKSANDAR_RAKIC: -147,
+                    FRANCIMAR_BARROSO: 130,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DESMOND_GREEN,
+                        'stats': '22-8-0',
+                    },
+                    {
+                        'name': RUSTAM_KHABILOV,
+                        'stats': '23-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RUSTAM_KHABILOV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '13:30',
+                'odds': {
+                    RUSTAM_KHABILOV: -253,
+                    DESMOND_GREEN: 220,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': MADS_BURNELL,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': MICHEL_PRAZERES,
+                        'stats': '26-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MICHEL_PRAZERES,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '1:26',
+                },
+                'time': '14:00',
+                'odds': {
+                    MICHEL_PRAZERES: -385,
+                    MADS_BURNELL: 325,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': FELIPE_SILVA,
+                        'stats': '8-2-0',
+                    },
+                    {
+                        'name': MAIRBEK_TAISUMOV,
+                        'stats': '27-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MAIRBEK_TAISUMOV,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:24',
+                },
+                'time': '14:00',
+                'odds': {
+                    MAIRBEK_TAISUMOV: -527,
+                    FELIPE_SILVA: 430,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BOJAN_VELICKOVIC,
+                        'stats': '15-6-1',
+                    },
+                    {
+                        'name': DARREN_TILL,
+                        'stats': '17-2-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': DARREN_TILL,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '14:45',
+                'odds': {
+                    DARREN_TILL: -181,
+                    BOJAN_VELICKOVIC: 160,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': LEON_EDWARDS,
+                        'stats': '17-3-0',
+                    },
+                    {
+                        'name': BRYAN_BARBERENA,
+                        'stats': '14-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LEON_EDWARDS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '15:00',
+                'odds': {
+                    LEON_EDWARDS: -241,
+                    BRYAN_BARBERENA: 210,
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': TALITA_BERNARDO,
+                        'stats': '6-3-0',
+                    },
+                    {
+                        'name': MARION_RENEAU,
+                        'stats': '9-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARION_RENEAU,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '4:54',
+                },
+                'time': '16:00',
+                'odds': {
+                    MARION_RENEAU: -302,
+                    TALITA_BERNARDO: 260,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROB_WILKINSON,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': SIYAR_BAHADURZADA,
+                        'stats': '24-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': SIYAR_BAHADURZADA,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:10',
+                },
+                'time': '16:10',
+                'odds': {
+                    SIYAR_BAHADURZADA: -124,
+                    ROB_WILKINSON: 110,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXANDER_VOLKOV,
+                        'stats': '30-7-0',
+                    },
+                    {
+                        'name': STEFAN_STRUVE,
+                        'stats': '33-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDER_VOLKOV,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '3:30',
+                },
+                'time': '16:00',
+                'odds': {
+                    ALEXANDER_VOLKOV: -139,
+                    STEFAN_STRUVE: 123,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-09-09',
         'name': 'UFC 215: Nunes vs Shevchenko 2',
         'location': 'Edmonton, Alberta',
