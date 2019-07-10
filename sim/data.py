@@ -3,6 +3,274 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-09-09',
+        'name': 'UFC 215: Nunes vs Shevchenko 2',
+        'location': 'Edmonton, Alberta',
+        'venue': 'Rogers Place',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': KAJAN_JOHNSON,
+                        'stats': '23-14-1',
+                    },
+                    {
+                        'name': ADRIANO_MARTINS,
+                        'stats': '28-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KAJAN_JOHNSON,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '0:49',
+                },
+                'time': '18:15',
+                'odds': {
+                    KAJAN_JOHNSON: 450,
+                    ADRIANO_MARTINS: -555,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ARJAN_BHULLAR,
+                        'stats': '8-1-0',
+                    },
+                    {
+                        'name': LUIS_HENRIQUE,
+                        'stats': '10-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ARJAN_BHULLAR,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:45',
+                'odds': {
+                    ARJAN_BHULLAR: -199,
+                    LUIS_HENRIQUE: 175,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_WHITE,
+                        'stats': '13-5-0',
+                    },
+                    {
+                        'name': MITCH_CLARKE,
+                        'stats': '11-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_WHITE,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:36',
+                },
+                'time': '19:15',
+                'odds': {
+                    ALEX_WHITE: -205,
+                    MITCH_CLARKE: 180,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': GAVIN_TUCKER,
+                        'stats': '10-1-0',
+                    },
+                    {
+                        'name': RICK_GLENN,
+                        'stats': '21-6-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': RICK_GLENN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ASHLEE_EVANS_SMITH,
+                        'stats': '6-4-0',
+                    },
+                    {
+                        'name': SARAH_MORAS,
+                        'stats': '11-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SARAH_MORAS,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:36',
+                },
+                'time': '20:30',
+                'odds': {
+                    SARAH_MORAS: 255,
+                    ASHLEE_EVANS_SMITH: -296,
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': KETLEN_VIEIRA,
+                        'stats': '10-0-0',
+                    },
+                    {
+                        'name': SARA_MCMANN,
+                        'stats': '11-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KETLEN_VIEIRA,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '4:16',
+                },
+                'time': '21:30',
+                'odds': {
+                    KETLEN_VIEIRA: 180,
+                    SARA_MCMANN: -205,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JEREMY_STEPHENS,
+                        'stats': '28-16-0',
+                    },
+                    {
+                        'name': GILBERT_MELENDEZ,
+                        'stats': '22-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JEREMY_STEPHENS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    JEREMY_STEPHENS: -115,
+                    GILBERT_MELENDEZ: 102,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': TYSON_PEDRO,
+                        'stats': '7-2-0',
+                    },
+                    {
+                        'name': ILIR_LATIFI,
+                        'stats': '15-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ILIR_LATIFI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    ILIR_LATIFI: 127,
+                    TYSON_PEDRO: -143,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': HENRY_CEJUDO,
+                        'stats': '14-2-0',
+                    },
+                    {
+                        'name': WILSON_REIS,
+                        'stats': '23-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': HENRY_CEJUDO,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '0:25',
+                },
+                'time': '21:00',
+                'odds': {
+                    HENRY_CEJUDO: -405,
+                    WILSON_REIS: 340,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NEIL_MAGNY,
+                        'stats': '21-8-0',
+                    },
+                    {
+                        'name': RAFAEL_DOS_ANJOS,
+                        'stats': '28-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RAFAEL_DOS_ANJOS,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '3:43',
+                },
+                'time': '23:00',
+                'odds': {
+                    RAFAEL_DOS_ANJOS: -199,
+                    NEIL_MAGNY: 175,
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': VALENTINA_SHEVCHENKO,
+                        'stats': '16-3-0',
+                    },
+                    {
+                        'name': AMANDA_NUNES,
+                        'stats': '17-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': AMANDA_NUNES,
+                    'by': 's.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'time': '23:30',
+                'odds': {
+                    AMANDA_NUNES: 123,
+                    VALENTINA_SHEVCHENKO: -139,
+                },
+            },
+        ]
+    },
+    
+    {
         'date': '2017-09-16',
         'name': 'UFC Fight Night: Rockhold vs Branch',
         'location': 'Pittsburgh, Pennsylvania',
