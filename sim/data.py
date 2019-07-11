@@ -3,6 +3,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-08-05',
+        'name': 'UFC Fight Night: Pettis vs Moreno',
+        'location': 'Mexico City, Mexico',
+        'venue': 'Mexico City Arena',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JORDAN_RINALDI,
+                        'stats': '14-7-0',
+                    },
+                    {
+                        'name': ALVARO_HERRERA,
+                        'stats': '9-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JORDAN_RINALDI,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:01',
+                },
+                'time': '19:00',
+                'odds': {
+                    ALVARO_HERRERA: 191,
+                    JORDAN_RINALDI: -218,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROBERTO_SANCHEZ,
+                        'stats': '8-2-0',
+                    },
+                    {
+                        'name': JOSEPH_MORALES,
+                        'stats': '9-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOSEPH_MORALES,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '3:56',
+                },
+                'time': '19:30',
+                'odds': {
+                    JOSEPH_MORALES: 102,
+                    ROBERTO_SANCHEZ: -115,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOSE_QUINONEZ,
+                        'stats': '8-3-0',
+                    },
+                    {
+                        'name': DIEGO_RIVAS,
+                        'stats': '7-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOSE_QUINONEZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    JOSE_QUINONEZ: -230,
+                    DIEGO_RIVAS: 201,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': HENRY_BRIONES,
+                        'stats': '19-8-1',
+                    },
+                    {
+                        'name': RANI_YAHYA,
+                        'stats': '26-10-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RANI_YAHYA,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:01',
+                },
+                'time': '20:30',
+                'odds': {
+                    RANI_YAHYA: -205,
+                    HENRY_BRIONES: 180,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': HECTOR_SANDOVAL,
+                        'stats': '14-4-0',
+                    },
+                    {
+                        'name': DUSTIN_ORTIZ,
+                        'stats': '19-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DUSTIN_ORTIZ,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:15',
+                },
+                'time': '21:00',
+                'odds': {
+                    DUSTIN_ORTIZ: -192,
+                    HECTOR_SANDOVAL: 169,
+                },
+            },
+            {
+                'wiehgt_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JACK_HERMANSSON,
+                        'stats': '19-4-0',
+                    },
+                    {
+                        'name': BRADLEY_SCOTT,
+                        'stats': '12-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JACK_HERMANSSON,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:50',
+                },
+                'time': '21:30',
+                'odds': {
+                    JACK_HERMANSSON: -280,
+                    BRADLEY_SCOTT: 242,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANDRE_SOUKHAMTHATH,
+                        'stats': '13-6-0',
+                    },
+                    {
+                        'name': ALEJANDRO_PEREZ,
+                        'stats': '22-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEJANDRO_PEREZ,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    ALEJANDRO_PEREZ: -167,
+                    ANDRE_SOUKHAMTHATH: 148,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': SAM_ALVEY,
+                        'stats': '33-11-0',
+                    },
+                    {
+                        'name': RASHAD_EVANS,
+                        'stats': '24-8-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': SAM_ALVEY,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    SAM_ALVEY: -133,
+                    RASHAD_EVANS: 118,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': HUMBERTO_BANDENAY,
+                        'stats': '14-6-0',
+                    },
+                    {
+                        'name': MARTIN_BRAVO,
+                        'stats': '12-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': HUMBERTO_BANDENAY,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:26',
+                },
+                'time': '23:00',
+                'odds': {
+                    HUMBERTO_BANDENAY: 242,
+                    MARTIN_BRAVO: -280,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NIKO_PRICE,
+                        'stats': '13-2-0',
+                    },
+                    {
+                        'name': ALAN_JOUBAN,
+                        'stats': '16-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': NIKO_PRICE,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:44',
+                },
+                'time': '23:30',
+                'odds': {
+                    NIKO_PRICE: 148,
+                    ALAN_JOUBAN: -167,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXA_GRASSO,
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': RANDA_MARKOS,
+                        'stats': '9-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXA_GRASSO,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:45',
+                'odds': {
+                    ALEXA_GRASSO: -208,
+                    RANDA_MARKOS: 183,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRANDON_MORENO,
+                        'stats': '14-5-0',
+                    },
+                    {
+                        'name': SERGIO_PETTIS,
+                        'stats': '17-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SERGIO_PETTIS,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'time': '23:58',
+                'odds': {
+                    SERGIO_PETTIS: 145,
+                    BRANDON_MORENO: -164,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-09-02',
         'name': 'UFC Fight Night: Volkov vs Struve',
         'location': 'Rotterdam, Netherlands',
@@ -10635,7 +10932,7 @@ DATA = [
                         'stats': '9-4-0',
                     },
                     {
-                        'name': ALVARA_HERRERA,
+                        'name': ALVARO_HERRERA,
                         'stats': '9-6-0',
                     },
                 ],
@@ -10648,7 +10945,7 @@ DATA = [
                 'time': '16:00',
                 'odds': {
                     DEVIN_POWELL: -101,
-                    ALVARA_HERRERA: -111,
+                    ALVARO_HERRERA: -111,
                 },
             },
             {

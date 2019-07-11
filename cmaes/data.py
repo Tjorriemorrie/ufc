@@ -7813,7 +7813,7 @@ DATA = [
                         'stats': '9-4-0',
                     },
                     {
-                        'name': ALVARA_HERRERA,
+                        'name': ALVARO_HERRERA,
                         'stats': '9-6-0',
                     },
                 ],
@@ -7826,7 +7826,7 @@ DATA = [
                 'time': '16:00',
                 'odds': {
                     DEVIN_POWELL: -101,
-                    ALVARA_HERRERA: -111,
+                    ALVARO_HERRERA: -111,
                 },
             },
             {
