@@ -3,6 +3,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-07-08',
+        'name': 'UFC 213: Romero vs Whittaker',
+        'location': 'Las Vegas, Nevada',
+        'venue': 'T-Mobile Arena',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JAMES_BOCHNOVIC,
+                        'stats': '8-3-0',
+                    },
+                    {
+                        'name': TREVIN_GILES,
+                        'stats': '11-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TREVIN_GILES,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:54',
+                },
+                'time': '18:30',
+                'odds': {
+                    TREVIN_GILES: -253,
+                    JAMES_BOCHNOVIC: 220,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': TERRION_WARE,
+                        'stats': '17-8-0',
+                    },
+                    {
+                        'name': CODY_STAMANN,
+                        'stats': '18-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CODY_STAMANN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:55',
+                'odds': {
+                    CODY_STAMANN: -235,
+                    TERRION_WARE: 205,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BELAL_MUHAMMAD,
+                        'stats': '14-3-0',
+                    },
+                    {
+                        'name': JORDAN_MEIN,
+                        'stats': '31-12-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BELAL_MUHAMMAD,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    BELAL_MUHAMMAD: -129,
+                    JORDAN_MEIN: 115,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': GERALD_MEERSCHAERT,
+                        'stats': '28-11-0',
+                    },
+                    {
+                        'name': THIAGO_SANTOS,
+                        'stats': '21-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': THIAGO_SANTOS,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:04',
+                },
+                'time': '20:30',
+                'odds': {
+                    THIAGO_SANTOS: -155,
+                    GERALD_MEERSCHAERT: 137,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRIAN_CAMOZZI,
+                        'stats': '7-5-0',
+                    },
+                    {
+                        'name': CHAD_LAPRISE,
+                        'stats': '14-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CHAD_LAPRISE,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '1:27',
+                },
+                'time': '21:00',
+                'odds': {
+                    CHAD_LAPRISE: -562,
+                    BRIAN_CAMOZZI: 455,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEKSEI_OLEINIK,
+                        'stats': '57-11-1',
+                    },
+                    {
+                        'name': TRAVIS_BROWNE,
+                        'stats': '18-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter':ALEKSEI_OLEINIK,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:44',
+                },
+                'time': '21:30',
+                'odds': {
+                    ALEKSEI_OLEINIK: 240,
+                    TRAVIS_BROWNE: -277,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROB_FONT,
+                        'stats': '16-4-0',
+                    },
+                    {
+                        'name': DOUGLAS_SILVA_DE_ANDRADE,
+                        'stats': '25-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ROB_FONT,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '4:36',
+                },
+                'time': '19:30',
+                'odds': {
+                    ROB_FONT: -265,
+                    DOUGLAS_SILVA_DE_ANDRADE: 230,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANTHONY_PETTIS,
+                        'stats': '22-8-0',
+                    },
+                    {
+                        'name': JIM_MILLER,
+                        'stats': '29-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTHONY_PETTIS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    ANTHONY_PETTIS: -235,
+                    JIM_MILLER: 205,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': CURTIS_BLAYDES,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': DANIEL_OMIELANCZUK,
+                        'stats': '19-8-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': CURTIS_BLAYDES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:00',
+                'odds': {
+                    CURTIS_BLAYDES: -506,
+                    DANIEL_OMIELANCZUK: 415,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': FABRICIO_WERDUM,
+                        'stats': '23-8-1',
+                    },
+                    {
+                        'name': ALISTAIR_OVEREEM,
+                        'stats': '44-17-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALISTAIR_OVEREEM,
+                    'by': 'm.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    ALISTAIR_OVEREEM: -135,
+                    FABRICIO_WERDUM: 120,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROBERT_WHITTAKER,
+                        'stats': '21-4-0',
+                    },
+                    {
+                        'name': YOEL_ROMERO,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ROBERT_WHITTAKER,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'time': '23:30',
+                'odds': {
+                    ROBERT_WHITTAKER: -125,
+                    YOEL_ROMERO: 111,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-07-16',
         'name': 'UFC Fight Night: Nelson vs Ponzinibbio',
         'location': 'Glasgow, United Kingdom',
