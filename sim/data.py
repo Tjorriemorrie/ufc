@@ -3,6 +3,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-07-22',
+        'name': 'UFC Fight Night: Weidman vs Gastelum',
+        'location': 'Uniondale, New York',
+        'venue': 'Nassau Veterans Memorial Coliseum',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': FRANKIE_PEREZ,
+                        'stats': '10-4-0',
+                    },
+                    {
+                        'name': CHRIS_WADE,
+                        'stats': '12-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CHRIS_WADE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:00',
+                'odds': {
+                    CHRIS_WADE: -340,
+                    FRANKIE_PEREZ: 290,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SHANE_BURGOS,
+                        'stats': '11-1-0',
+                    },
+                    {
+                        'name': GODOFREDO_PEPEY,
+                        'stats': '14-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': SHANE_BURGOS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:30',
+                'odds': {
+                    SHANE_BURGOS: -627,
+                    GODOFREDO_PEPEY: 500,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUNIOR_ALBINI,
+                        'stats': '14-5-0',
+                    },
+                    {
+                        'name': TIM_JOHNSON,
+                        'stats': '12-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUNIOR_ALBINI,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:51',
+                },
+                'time': '17:00',
+                'odds': {
+                    JUNIOR_ALBINI: 245,
+                    TIM_JOHNSON: -284,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRIAN_KELLEHER,
+                        'stats': '19-10-0',
+                    },
+                    {
+                        'name': MARLON_VERA,
+                        'stats': '13-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARLON_VERA,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '2:18',
+                },
+                'time': '17:12',
+                'odds': {
+                    MARLON_VERA: 190,
+                    BRIAN_KELLEHER: -217,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JEREMY_KENNEDY,
+                        'stats': '11-1-0',
+                    },
+                    {
+                        'name': KYLE_BOCHNIAK,
+                        'stats': '8-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JEREMY_KENNEDY,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:06',
+                'odds': {
+                    JEREMY_KENNEDY: -302,
+                    KYLE_BOCHNIAK: 260,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': CHASE_SHERMAN,
+                        'stats': '11-5-0',
+                    },
+                    {
+                        'name': DAMIAN_GRABOWSKI,
+                        'stats': '20-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CHASE_SHERMAN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:06',
+                'odds': {
+                    CHASE_SHERMAN: -229,
+                    DAMIAN_GRABOWSKI: 200,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_OLIVEIRA,
+                        'stats': '19-6-1',
+                    },
+                    {
+                        'name': RYAN_LAFLARE,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_OLIVEIRA,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '1:50',
+                },
+                'time': '18:39',
+                'odds': {
+                    ALEX_OLIVEIRA: 145,
+                    RYAN_LAFLARE: -164,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ERYK_ANDERS,
+                        'stats': '11-3-0',
+                    },
+                    {
+                        'name': RAFAEL_NATAL,
+                        'stats': '21-9-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ERYK_ANDERS,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:54',
+                },
+                'time': '19:06',
+                'odds': {
+                    ERYK_ANDERS: -115,
+                    RAFAEL_NATAL: 102,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': LYMAN_GOOD,
+                        'stats': '20-5-0',
+                    },
+                    {
+                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'stats': '20-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    ELIZEU_ZALESKI_DOS_SANTOS: 127,
+                    LYMAN_GOOD: -143,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': JIMMIE_RIVERA,
+                        'stats': '22-3-0',
+                    },
+                    {
+                        'name': THOMAS_ALMEIDA,
+                        'stats': '21-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JIMMIE_RIVERA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:15',
+                'odds': {
+                    JIMMIE_RIVERA: -193,
+                    THOMAS_ALMEIDA: 170,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': GIAN_VILLANTE,
+                        'stats': '17-11-0',
+                    },
+                    {
+                        'name': PATRICK_CUMMINS,
+                        'stats': '10-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PATRICK_CUMMINS,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:54',
+                'odds': {
+                    PATRICK_CUMMINS: 172,
+                    GIAN_VILLANTE: -195,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DARREN_ELKINS,
+                        'stats': '25-7-0',
+                    },
+                    {
+                        'name': DENNIS_BERMUDEZ,
+                        'stats': '18-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DARREN_ELKINS,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:27',
+                'odds': {
+                    DARREN_ELKINS: 173,
+                    DENNIS_BERMUDEZ: -196,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': CHRIS_WEIDMAN,
+                        'stats': '14-4-0',
+                    },
+                    {
+                        'name': KELVIN_GASTELUM,
+                        'stats': '16-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CHRIS_WEIDMAN,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    CHRIS_WEIDMAN: 137,
+                    KELVIN_GASTELUM: -155,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-07-29',
         'name': 'UFC 214: Cormier vs Jones 2',
         'location': 'Anaheim, California',
