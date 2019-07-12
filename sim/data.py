@@ -3,6 +3,303 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-07-16',
+        'name': 'UFC Fight Night: Nelson vs Ponzinibbio',
+        'location': 'Glasgow, United Kingdom',
+        'venue': 'The SSE Hydro',
+        'fights': [
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': AMANDA_LEMOS,
+                        'stats': '6-1-1',
+                    },
+                    {
+                        'name': LESLIE_SMITH,
+                        'stats': '10-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': LESLIE_SMITH,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:53',
+                },
+                'time': '12:00',
+                'odds': {
+                    LESLIE_SMITH: -214,
+                    AMANDA_LEMOS: 188,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRETT_JOHNS,
+                        'stats': '15-2-0',
+                    },
+                    {
+                        'name': ALBERT_MORALES,
+                        'stats': '7-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRETT_JOHNS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '12:30',
+                'odds': {
+                    BRETT_JOHNS: -327,
+                    ALBERT_MORALES: 280,
+                }
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DANIEL_TEYMUR,
+                        'stats': '6-3-0',
+                    },
+                    {
+                        'name': DANNY_HENRY,
+                        'stats': '12-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DANNY_HENRY,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '13:00',
+                'odds': {
+                    DANNY_HENRY: 140,
+                    DANIEL_TEYMUR: -158,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': GALORE_BOFANDO,
+                        'stats': '5-3-0',
+                    },
+                    {
+                        'name': CHARLIE_WARD,
+                        'stats': '3-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': GALORE_BOFANDO,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:10',
+                },
+                'time': '13:30',
+                'odds': {
+                    GALORE_BOFANDO: -200,
+                    CHARLIE_WARD: 176,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXANDRE_PANTOJA,
+                        'stats': '20-3-0',
+                    },
+                    {
+                        'name': NEIL_SEERY,
+                        'stats': '16-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDRE_PANTOJA,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '2:31',
+                },
+                'time': '14:00',
+                'odds': {
+                    ALEXANDRE_PANTOJA: -340,
+                    NEIL_SEERY: 290,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BOBBY_NASH,
+                        'stats': '8-4-0',
+                    },
+                    {
+                        'name': DANNY_ROBERTS,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DANNY_ROBERTS,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:59',
+                },
+                'time': '14:30',
+                'odds': {
+                    DANNY_ROBERTS: -193,
+                    BOBBY_NASH: 170,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JAMES_MULHERON,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': JUSTIN_WILLIS,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSTIN_WILLIS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '15:00',
+                'odds': {
+                    JUSTIN_WILLIS: -170,
+                    JAMES_MULHERON: 150,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': PAUL_CRAIG,
+                        'stats': '11-3-0',
+                    },
+                    {
+                        'name': KHALIL_ROUNTREE,
+                        'stats': '8-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KHALIL_ROUNTREE,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:56',
+                },
+                'time': '15:30',
+                'odds': {
+                    KHALIL_ROUNTREE: -151,
+                    PAUL_CRAIG: 134,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JACK_MARSHMAN,
+                        'stats': '23-8-0',
+                    },
+                    {
+                        'name': RYAN_JANES,
+                        'stats': '10-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JACK_MARSHMAN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:00',
+                'odds': {
+                    JACK_MARSHMAN: -520,
+                    RYAN_JANES: 425,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': STEVIE_RAY,
+                        'stats': '22-7-0',
+                    },
+                    {
+                        'name': PAUL_FELDER,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PAUL_FELDER,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:57',
+                },
+                'time': '16:30',
+                'odds': {
+                    PAUL_FELDER: 165,
+                    STEVIE_RAY: -187,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': CYNTHIA_CALVILLO,
+                        'stats': '8-1-0',
+                    },
+                    {
+                        'name': JOANNE_CALDERWOOD,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CYNTHIA_CALVILLO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '17:00',
+                'odds': {
+                    CYNTHIA_CALVILLO: -200,
+                    JOANNE_CALDERWOOD: 176,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [ 
+                    {
+                        'name': SANTIAGO_PONZINIBBIO,
+                        'stats': '28-3-0',
+                    },
+                    {
+                        'name': GUNNAR_NELSON,
+                        'stats': '17-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': SANTIAGO_PONZINIBBIO,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:22',
+                },
+                'time': '17:30',
+                'odds': {
+                    SANTIAGO_PONZINIBBIO: 158,
+                    GUNNAR_NELSON: -179,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-07-22',
         'name': 'UFC Fight Night: Weidman vs Gastelum',
         'location': 'Uniondale, New York',
