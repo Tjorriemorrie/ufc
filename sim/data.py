@@ -3,6 +3,279 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-07-07',
+        'name': 'The Ultimate Fighter 25',
+        'location': 'Las Vegas, Nevada',
+        'venue': 'T-Mobile Arena',
+        'fights': [
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': TERUTO_ISHIHARA,
+                        'stats': '11-6-2',
+                    },
+                    {
+                        'name': GRAY_MAYNARD,
+                        'stats': '14-8-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': GRAY_MAYNARD,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:30',
+                'odds': {
+                    GRAY_MAYNARD: 275,
+                    TERUTO_ISHIHARA: -321,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': TECIA_TORRES,
+                        'stats': '10-4-0',
+                    },
+                    {
+                        'name': JULIANA_LIMA,
+                        'stats': '9-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TECIA_TORRES,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '0:53',
+                },
+                'time': '18:00',
+                'odds': {
+                    TECIA_TORRES: -444,
+                    JULIANA_LIMA: 370,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ED_HERMAN,
+                        'stats': '24-14-0',
+                    },
+                    {
+                        'name': CB_DOLLAWAY,
+                        'stats': '18-10-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CB_DOLLAWAY,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    CB_DOLLAWAY: -153,
+                    ED_HERMAN: 136,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': TOM_GALLICCHIO,
+                        'stats': '19-11-0',
+                    },
+                    {
+                        'name': JAMES_KRAUSE,
+                        'stats': '25-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JAMES_KRAUSE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:20',
+                'odds': {
+                    JAMES_KRAUSE: -485,
+                    TOM_GALLICCHIO: 400,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': ASHLEY_YODER,
+                        'stats': '6-4-0',
+                    },
+                    {
+                        'name': ANGELA_HILL,
+                        'stats': '8-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANGELA_HILL,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    ANGELA_HILL: -340,
+                    ASHLEY_YODER: 290,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARCEL_FORTUNA,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': JORDAN_JOHNSON,
+                        'stats': '10-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JORDAN_JOHNSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:00',
+                'odds': {
+                    JORDAN_JOHNSON: -211,
+                    MARCEL_FORTUNA: 185,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ELIAS_THEODOROU,
+                        'stats': '17-2-0',
+                    },
+                    {
+                        'name': BRAD_TAVARES,
+                        'stats': '17-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': BRAD_TAVARES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:30',
+                'odds': {
+                    BRAD_TAVARES: -115,
+                    ELIAS_THEODOROU: 102,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': NICK_ROEHRICK,
+                        'stats': '7-1-0',
+                    },
+                    {
+                        'name': JARED_CANNONIER,
+                        'stats': '11-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JARED_CANNONIER,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '2:08',
+                },
+                'time': '21:00',
+                'odds': {
+                    JARED_CANNONIER: -321,
+                    NICK_ROEHRICK: 275,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DRAKKAR_KLOSE,
+                        'stats': '10-1-1',
+                    },
+                    {
+                        'name': MARC_DIAKIESE,
+                        'stats': '13-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DRAKKAR_KLOSE,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    DRAKKAR_KLOSE: 215,
+                    MARC_DIAKIESE: -247,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DHIEGO_LIMA,
+                        'stats': '15-7-0',
+                    },
+                    {
+                        'name': JESSE_TAYLOR,
+                        'stats': '33-15-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JESSE_TAYLOR,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '0:43',
+                },
+                'time': '23:00',
+                'odds': {
+                    JESSE_TAYLOR: -164,
+                    DHIEGO_LIMA: 145,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUSTIN_GAETHJE,
+                        'stats': '20-2-0',
+                    },
+                    {
+                        'name': MICHAEL_JOHNSON,
+                        'stats': '20-14-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JUSTIN_GAETHJE,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:48',
+                },
+                'time': '23:30',
+                'odds': {
+                    JUSTIN_GAETHJE: 143,
+                    MICHAEL_JOHNSON: -162,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-07-08',
         'name': 'UFC 213: Romero vs Whittaker',
         'location': 'Las Vegas, Nevada',
