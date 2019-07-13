@@ -11,6 +11,7 @@ loguru = "*"
 cma = "*"
 numpy = "*"
 pandas = "*"
+scikit-learn = "*"
 
 [requires]
 python_version = "3.6"

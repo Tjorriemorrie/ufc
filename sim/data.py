@@ -3,6 +3,624 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-06-17',
+        'name': 'UFC Fight Night: Holm vs Correia',
+        'location': 'Kallang, Singapore',
+        'venue': 'Singapore Indoor Stadium',
+        'fights': [
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': JI_YEON_KIM,
+                        'stats': '7-2-2',
+                    },
+                    {
+                        'name': LUCIE_PUDILOVA,
+                        'stats': '8-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LUCIE_PUDILOVA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:30',
+                'odds': {
+                    LUCIE_PUDILOVA: -116,
+                    JI_YEON_KIM: 103,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': CARLS_JOHN_DE_TOMAS,
+                        'stats': '8-2-0',
+                    },
+                    {
+                        'name': NAOKI_INOUE,
+                        'stats': '11-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': NAOKI_INOUE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:55',
+                'odds': {
+                    NAOKI_INOUE: -274,
+                    CARLS_JOHN_DE_TOMAS: 237,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': KWAN_HO_KWAK,
+                        'stats': '9-2-0',
+                    },
+                    {
+                        'name': RUSSEL_DOANE,
+                        'stats': '15-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RUSSEL_DOANE,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:09',
+                },
+                'time': '17:15',
+                'odds': {
+                    RUSSEL_DOANE: 109,
+                    KWAN_HO_KWAK: -123,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': FRANK_CAMACHO,
+                        'stats': '21-7-0',
+                    },
+                    {
+                        'name': LI_JINGLIANG,
+                        'stats': '15-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LI_JINGLIANG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '17:45',
+                'odds': {
+                    LI_JINGLIANG: -485,
+                    FRANK_CAMACHO: 400,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ULKA_SASAKI,
+                        'stats': '21-6-2',
+                    },
+                    {
+                        'name': JUSTIN_SCOGGINS,
+                        'stats': '11-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ULKA_SASAKI,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:19',
+                },
+                'time': '18:15',
+                'odds': {
+                    ULKA_SASAKI: 393,
+                    JUSTIN_SCOGGINS: -475,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROLANDO_DY,
+                        'stats': '9-7-1',
+                    },
+                    {
+                        'name': ALEX_CACERES,
+                        'stats': '14-12-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_CACERES,
+                    'by': 'tko',
+                    'round': 2,
+                    'time': '5:00',
+                },
+                'time': '18:45',
+                'odds': {
+                    ALEX_CACERES: -290,
+                    ROLANDO_DY: 250,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': CYRIL_ASKER,
+                        'stats': '9-4-0',
+                    },
+                    {
+                        'name': WALT_HARRIS,
+                        'stats': '11-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': WALT_HARRIS,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:44',
+                },
+                'time': '19:15',
+                'odds': {
+                    WALT_HARRIS: -330,
+                    CYRIL_ASKER: 282,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JON_TUCK,
+                        'stats': '10-5-0',
+                    },
+                    {
+                        'name': TAKANORI_GOMI,
+                        'stats': '35-14-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JON_TUCK,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '1:12',
+                },
+                'time': '19:45',
+                'odds': {
+                    JON_TUCK: -344,
+                    TAKANORI_GOMI: 293,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': TAREC_SAFFIEDINE,
+                        'stats': '16-7-0',
+                    },
+                    {
+                        'name': RAFAEL_DOS_ANJOS,
+                        'stats': '28-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RAFAEL_DOS_ANJOS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:15',
+                'odds': {
+                    RAFAEL_DOS_ANJOS: -199,
+                    TAREC_SAFFIEDINE: 175,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': COLBY_COVINGTON,
+                        'stats': '14-1-0',
+                    },
+                    {
+                        'name': DONG_HYUN_KIM,
+                        'stats': '22-4-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': COLBY_COVINGTON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:45',
+                'odds': {
+                    COLBY_COVINGTON: -223,
+                    DONG_HYUN_KIM: 195,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARCIN_TYBURA,
+                        'stats': '17-4-0',
+                    },
+                    {
+                        'name': ANDREI_ARLOVSKI,
+                        'stats': '27-17-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARCIN_TYBURA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:15',
+                'odds': {
+                    MARCIN_TYBURA: -225,
+                    ANDREI_ARLOVSKI: 197,
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': HOLLY_HOLM,
+                        'stats': '12-4-0',
+                    },
+                    {
+                        'name': BETHE_CORREIA,
+                        'stats': '10-3-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': HOLLY_HOLM,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '1:09',
+                },
+                'time': '21:45',
+                'odds': {
+                    HOLLY_HOLM: -466,
+                    BETHE_CORREIA: 386,
+                },
+            },
+        ]
+    },
+
+    {
+        'date': '2017-06-25',
+        'name': 'UFC Fight Night: Chiesa vs Lee',
+        'location': 'Oklahoma City, Oklahoma',
+        'venue': 'Chesapeake Energy Arena',
+        'fights': [
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JEREMY_KIMBALL,
+                        'stats': '15-8-0',
+                    },
+                    {
+                        'name': JOSH_STANSBURY,
+                        'stats': '8-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JEREMY_KIMBALL,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:21',
+                },
+                'time': '18:00',
+                'odds': {
+                    JEREMY_KIMBALL: 139,
+                    JOSH_STANSBURY: -157,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOHNNY_CASE,
+                        'stats': '22-6-0',
+                    },
+                    {
+                        'name': ANTHONY_ROCCO_MARTIN,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTHONY_ROCCO_MARTIN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '17:30',
+                'odds': {
+                    ANTHONY_ROCCO_MARTIN: -127,
+                    JOHNNY_CASE: 113,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JARED_GORDON,
+                        'stats': '14-3-0',
+                    },
+                    {
+                        'name': MICHEL_QUINONES,
+                        'stats': '8-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JARED_GORDON,
+                    'by': 'ko/tkko',
+                    'round': 2,
+                    'time': '4:24',
+                },
+                'time': '18:30',
+                'odds': {
+                    JARED_GORDON: -132,
+                    MICHEL_QUINONES: 117,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DEVIN_POWELL,
+                        'stats': '9-4-0',
+                    },
+                    {
+                        'name': DARRELL_HORCHER,
+                        'stats': '13-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DARRELL_HORCHER,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:00',
+                'odds': {
+                    DARRELL_HORCHER: -397,
+                    DEVIN_POWELL: 334,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARYNA_MOROZ,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': CARLA_ESPARZA,
+                        'stats': '14-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CARLA_ESPARZA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    CARLA_ESPARZA: -185,
+                    MARYNA_MOROZ: 163,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARVIN_VETTORI,
+                        'stats': '12-4-1',
+                    },
+                    {
+                        'name': VITOR_MIRANDA,
+                        'stats': '13-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARVIN_VETTORI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '17:30',
+                'odds': {
+                    MARVIN_VETTORI: -360,
+                    VITOR_MIRANDA: 306,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': ERIK_KOCH,
+                        'stats': '15-6-0',
+                    },
+                    {
+                        'name': CLAY_GUIDA,
+                        'stats': '34-15-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CLAY_GUIDA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    CLAY_GUIDA: 279,
+                    ERIK_KOCH: -326,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DENNIS_SIVER,
+                        'stats': '23-11-0',
+                    },
+                    {
+                        'name': BJ_PENN,
+                        'stats': '16-13-2',
+                    },
+                ],
+                'winner': {
+                    'fighter': DENNIS_SIVER,
+                    'by': 'm.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:00',
+                'odds': {
+                    DENNIS_SIVER: -133,
+                    BJ_PENN: 118,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': TIM_MEANS,
+                        'stats': '28-11-1',
+                    },
+                    {
+                        'name': ALEX_GARCIA,
+                        'stats': '15-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TIM_MEANS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:30',
+                'odds': {
+                    TIM_MEANS: -270,
+                    ALEX_GARCIA: 234,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DOMINICK_REYES,
+                        'stats': '11-0-0',
+                    },
+                    {
+                        'name': JOACHIM_CHRISTENSEN,
+                        'stats': '14-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DOMINICK_REYES,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:29',
+                },
+                'time': '22:00',
+                'odds': {
+                    DOMINICK_REYES: -321,
+                    JOACHIM_CHRISTENSEN: 275,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUSTINE_KISH,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': FELICE_HERRIG,
+                        'stats': '14-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': FELICE_HERRIG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:30',
+                'odds': {
+                    FELICE_HERRIG: 143,
+                    JUSTINE_KISH: -161,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOHNY_HENDRICKS,
+                        'stats': '18-8-0',
+                    },
+                    {
+                        'name': TIM_BOETSCH,
+                        'stats': '21-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TIM_BOETSCH,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '0:46',
+                },
+                'time': '23:00',
+                'odds': {
+                    TIM_BOETSCH: 130,
+                    JOHNY_HENDRICKS: -147,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': KEVIN_LEE,
+                        'stats': '17-4-0',
+                    },
+                    {
+                        'name': MICHAEL_CHIESA,
+                        'stats': '15-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KEVIN_LEE,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:37',
+                },
+                'time': '23:30',
+                'odds': {
+                    KEVIN_LEE: -150,
+                    MICHAEL_CHIESA: 133,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-07-07',
         'name': 'The Ultimate Fighter 25',
         'location': 'Las Vegas, Nevada',

@@ -1,8 +1,14 @@
+from time import sleep
+
+import pandas as pd
 from collections import defaultdict
 from itertools import chain
 from math import sqrt
+from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
 
 from loguru import logger
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import MinMaxScaler
 from trueskill import quality_1vs1, Rating, BETA, global_env, rate_1vs1
 
 from data import DATA
@@ -102,8 +108,378 @@ def to_decimal_odds(us_odds):
         return 100 / us_odds + 1
 
 
+def to_implied_odds(us_odds: float) -> float:
+    decimal_odds = to_decimal_odds(us_odds)
+    try:
+        return 1 / decimal_odds
+    except ZeroDivisionError:
+        return 1
+
+
+def two_trees():
+    logger.info('Starting tree training')
+
+    # build data
+    training_data = []
+    label_data = []
+    ratings = defaultdict(lambda: Rating())
+    for scene in DATA:
+        logger.info(f'{scene["date"]} {scene["name"]}')
+        for fight in scene['fights']:
+            # skip if no odds:
+            if 'odds' not in fight:
+                continue
+
+            f1 = fight['fighters'][0]['name']
+            f2 = fight['fighters'][1]['name']
+
+            # win1_prob = round(win_probability([ratings[f1]], [ratings[f2]]), 2)
+
+            # get winner
+            fw = fight['winner']['fighter']
+            is_win_1 = fw == f1
+            fl = f2 if is_win_1 else f1
+            if not is_win_1 and fw != f2 and fw is not None:
+                raise ValueError(f'unknown winner {fw}')
+            drawn = fw is None
+
+            fight_data = [
+                [
+                    to_decimal_odds(fight['odds'][f1]),
+                    to_decimal_odds(fight['odds'][f2]),
+                    ratings[f1].mu,
+                    ratings[f2].mu,
+                    ratings[f1].sigma,
+                    ratings[f2].sigma,
+                ],
+                [
+                    to_decimal_odds(fight['odds'][f2]),
+                    to_decimal_odds(fight['odds'][f1]),
+                    ratings[f2].mu,
+                    ratings[f1].mu,
+                    ratings[f2].sigma,
+                    ratings[f1].sigma,
+                ]
+            ]
+            training_data.extend(fight_data)
+            label_data.extend([is_win_1, not is_win_1])
+            # logger.info(f'[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl}')
+
+            # update ratings
+            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+
+    # scale
+    scaler = MinMaxScaler()
+    scaler.partial_fit(training_data)
+    scaled = scaler.transform(training_data)
+
+    # prepare data
+    cutoff = int(len(scaled) * 0.80)
+    X_train, X_test = scaled[:cutoff], scaled[cutoff:]
+    y_train, y_test = label_data[:cutoff], label_data[cutoff:]
+
+    # train
+    reg = GradientBoostingRegressor()
+    reg = reg.fit(X_train, y_train)
+    mse = mean_squared_error(y_test, reg.predict(X_test))
+    logger.info(f'MSE: {mse}')
+
+    #########################################################################
+    # calculate profit
+
+    ratings = defaultdict(lambda: Rating())
+    bet_cnt = 0
+    balance = 0
+    accuracy = (0, 0)
+    logger.info(f'Balance is {balance}. good luck!')
+
+    betting_data = []
+    betting_labels = []
+
+    for scene in DATA:
+        logger.info(f'{scene["date"]} {scene["name"]}')
+        for fight in scene['fights']:
+            f1 = fight['fighters'][0]['name']
+            f2 = fight['fighters'][1]['name']
+
+            # draw_prob = round(quality_1vs1(ratings[f1], ratings[f2]), 2)
+            # win1_prob = round(win_probability([ratings[f1]], [ratings[f2]]), 2)
+
+            # get winner
+            fw = fight['winner']['fighter']
+            is_win_1 = fw == f1
+            fl = f2 if is_win_1 else f1
+            if not is_win_1 and fw != f2 and fw is not None:
+                raise ValueError(f'unknown winner {fw}')
+            drawn = fw is None
+
+            # skip if no odds:
+            if not 'odds' in fight:
+                continue
+            f1_odds = fight['odds'][f1]
+            f2_odds = fight['odds'][f2]
+
+            # clf betting
+            scaled_data = scaler.transform([
+                [
+                    to_decimal_odds(fight['odds'][f1]),
+                    to_decimal_odds(fight['odds'][f2]),
+                    ratings[f1].mu,
+                    ratings[f2].mu,
+                    ratings[f1].sigma,
+                    ratings[f2].sigma,
+                ],
+                [
+                    to_decimal_odds(fight['odds'][f2]),
+                    to_decimal_odds(fight['odds'][f1]),
+                    ratings[f2].mu,
+                    ratings[f1].mu,
+                    ratings[f2].sigma,
+                    ratings[f1].sigma,
+                ]
+            ])
+            pred1, pred2 = reg.predict(scaled_data)
+
+            # get bet recommendation
+            bet_data = [pred1, pred2]
+            try:
+                clf = GradientBoostingClassifier().fit(betting_data, betting_labels)
+                bet_pred = clf.predict([bet_data])[0]
+            except ValueError as exc:
+                if len(betting_data):
+                    raise
+                betting_data.append(bet_data)
+                betting_labels.append(0)
+                betting_data.append(bet_data)
+                betting_labels.append(1)
+                betting_data.append(bet_data)
+                betting_labels.append(2)
+                continue
+
+            if bet_pred:
+                correct = 0
+                payout = -BET_AMT
+                if is_win_1 and pred1 > pred2:
+                    correct = 1
+                    if f1_odds > 0:
+                        payout += f1_odds / BET_AMT + BET_AMT
+                    else:
+                        payout += 100 * BET_AMT / abs(f1_odds) + BET_AMT
+                elif not is_win_1 and pred2 > pred1:
+                    correct = 1
+                    if f2_odds > 0:
+                        payout += f2_odds / BET_AMT + BET_AMT
+                    else:
+                        payout += 100 * BET_AMT / abs(f2_odds) + BET_AMT
+                balance += payout
+                bet_cnt += 1
+
+                # accuracy
+                upset = False
+                accuracy = (accuracy[0] + correct, accuracy[1] + 1)
+                if (is_win_1 and pred2 > pred1) or (not is_win_1 and pred1 > pred2):
+                    upset = True
+
+                logger.info(f'{">>>>> " if upset else ""}[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
+
+            # update betting data
+            betting_data.append(bet_data)
+            if is_win_1 and pred1 > pred2:
+                betting_label = 1
+            elif not is_win_1 and pred2 > pred1:
+                betting_label = 2
+            else:
+                betting_label = 0
+            betting_labels.append(betting_label)
+
+            # update ratings
+            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+
+    if accuracy[1]:
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+
+    if bet_cnt:
+        logger.info(f'Profit per bet: {balance/bet_cnt:.2f}')
+
+    logger.info('Done')
+
+
+def tree():
+    logger.info('Starting tree training')
+
+    # build data
+    training_data = []
+    label_data = []
+    ratings = defaultdict(lambda: Rating())
+    for scene in DATA:
+        # logger.info(f'{scene["date"]} {scene["name"]}')
+        for fight in scene['fights']:
+            # skip if no odds:
+            if 'odds' not in fight:
+                continue
+
+            f1 = fight['fighters'][0]['name']
+            f2 = fight['fighters'][1]['name']
+
+            win1_prob = win_probability([ratings[f1]], [ratings[f2]])
+            win2_prob = win_probability([ratings[f2]], [ratings[f1]])
+
+            # get winner
+            fw = fight['winner']['fighter']
+            is_win_1 = fw == f1
+            fl = f2 if is_win_1 else f1
+            if not is_win_1 and fw != f2 and fw is not None:
+                raise ValueError(f'unknown winner {fw}')
+            drawn = fw is None
+
+            fight_data = [
+                [
+                    win1_prob,
+                    win2_prob,
+                    to_implied_odds(fight['odds'][f1]),
+                    to_implied_odds(fight['odds'][f2]),
+                    ratings[f1].mu,
+                    ratings[f2].mu,
+                    ratings[f1].sigma,
+                    ratings[f2].sigma,
+                ],
+                [
+                    win2_prob,
+                    win1_prob,
+                    to_implied_odds(fight['odds'][f2]),
+                    to_implied_odds(fight['odds'][f1]),
+                    ratings[f2].mu,
+                    ratings[f1].mu,
+                    ratings[f2].sigma,
+                    ratings[f1].sigma,
+                ]
+            ]
+            training_data.extend(fight_data)
+            label_data.extend([is_win_1, not is_win_1])
+            # logger.info(f'[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl}')
+
+            # update ratings
+            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+
+    # scale
+    scaler = MinMaxScaler()
+    scaler.partial_fit(training_data)
+    scaled_training_data = scaler.transform(training_data)
+
+    # prepare data
+    cutoff = int(len(scaled_training_data) * 0.90)
+    X_train, X_test = scaled_training_data[:cutoff], scaled_training_data[cutoff:]
+    y_train, y_test = label_data[:cutoff], label_data[cutoff:]
+
+    # train
+    reg = GradientBoostingRegressor()
+    reg = reg.fit(X_train, y_train)
+    mse = mean_squared_error(y_test, reg.predict(X_test))
+    logger.info(f'MSE: {mse:.2f}')
+    sleep(2)
+
+    #########################################################################
+    # calculate profit
+
+    ratings = defaultdict(lambda: Rating())
+    bet_cnt = 0
+    balance = 0
+    accuracy = (0, 0)
+    logger.info(f'Balance is {balance}. good luck!')
+
+    betting_data = []
+    betting_labels = []
+
+    for scene in DATA:
+        logger.info(f'{scene["date"]} {scene["name"]}')
+        for fight in scene['fights']:
+            # skip if no odds:
+            if not 'odds' in fight:
+                continue
+
+            f1 = fight['fighters'][0]['name']
+            f2 = fight['fighters'][1]['name']
+
+            win1_prob = win_probability([ratings[f1]], [ratings[f2]])
+            win2_prob = win_probability([ratings[f2]], [ratings[f1]])
+
+            # get winner
+            fw = fight['winner']['fighter']
+            is_win_1 = fw == f1
+            fl = f2 if is_win_1 else f1
+            if not is_win_1 and fw != f2 and fw is not None:
+                raise ValueError(f'unknown winner {fw}')
+            drawn = fw is None
+
+            f1_odds = fight['odds'][f1]
+            f2_odds = fight['odds'][f2]
+
+            # regressor betting
+            scaled_data = scaler.transform([
+                [
+                    win1_prob,
+                    win2_prob,
+                    to_implied_odds(fight['odds'][f1]),
+                    to_implied_odds(fight['odds'][f2]),
+                    ratings[f1].mu,
+                    ratings[f2].mu,
+                    ratings[f1].sigma,
+                    ratings[f2].sigma,
+                ],
+                [
+                    win2_prob,
+                    win1_prob,
+                    to_implied_odds(fight['odds'][f2]),
+                    to_implied_odds(fight['odds'][f1]),
+                    ratings[f2].mu,
+                    ratings[f1].mu,
+                    ratings[f2].sigma,
+                    ratings[f1].sigma,
+                ]
+            ])
+            pred1, pred2 = reg.predict(scaled_data)
+
+            correct = 0
+            payout = -BET_AMT
+            if is_win_1 and pred1 > pred2:
+                correct = 1
+                if f1_odds > 0:
+                    payout += f1_odds / BET_AMT + BET_AMT
+                else:
+                    payout += 100 * BET_AMT / abs(f1_odds) + BET_AMT
+            elif not is_win_1 and pred2 > pred1:
+                correct = 1
+                if f2_odds > 0:
+                    payout += f2_odds / BET_AMT + BET_AMT
+                else:
+                    payout += 100 * BET_AMT / abs(f2_odds) + BET_AMT
+            balance += payout
+            bet_cnt += 1
+
+            # accuracy
+            upset = False
+            accuracy = (accuracy[0] + correct, accuracy[1] + 1)
+            if (is_win_1 and pred2 > pred1) or (not is_win_1 and pred1 > pred2):
+                upset = True
+
+            logger.info(f'{">>>>> " if upset else ""}[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
+
+            # update ratings
+            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+
+    if accuracy[1]:
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+
+    if bet_cnt:
+        logger.info(f'Profit per bet: {balance/bet_cnt:.2f}')
+
+    logger.info('Done')
+
+
 if __name__ == '__main__':
-    main()
+    # main()
+    # two_trees()
+    tree()
 
 
 # from trueskill import Rating, quality_1vs1, rate_1vs1
