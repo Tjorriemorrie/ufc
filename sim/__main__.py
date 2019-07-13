@@ -1,7 +1,8 @@
 from time import sleep
 
+import numpy as np
 import pandas as pd
-from collections import defaultdict
+from collections import defaultdict, Counter
 from itertools import chain
 from math import sqrt
 from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
@@ -11,7 +12,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 from trueskill import quality_1vs1, Rating, BETA, global_env, rate_1vs1
 
-from data import DATA
+from data import DATA, PREDICTIONS
 
 BET_AMT = 10
 
@@ -381,16 +382,15 @@ def tree():
     #########################################################################
     # calculate profit
 
+    payouts = []
     ratings = defaultdict(lambda: Rating())
     bet_cnt = 0
     balance = 0
     accuracy = (0, 0)
     logger.info(f'Balance is {balance}. good luck!')
 
-    betting_data = []
-    betting_labels = []
-
     for scene in DATA:
+        logger.info('')
         logger.info(f'{scene["date"]} {scene["name"]}')
         for fight in scene['fights']:
             # skip if no odds:
@@ -455,6 +455,7 @@ def tree():
                     payout += 100 * BET_AMT / abs(f2_odds) + BET_AMT
             balance += payout
             bet_cnt += 1
+            payouts.append(payout)
 
             # accuracy
             upset = False
@@ -472,6 +473,55 @@ def tree():
 
     if bet_cnt:
         logger.info(f'Profit per bet: {balance/bet_cnt:.2f}')
+
+    counter = Counter(payouts)
+    payouts = np.array(payouts)
+    logger.info(f'Payouts: max={payouts.max()} min={payouts.min()} mean={payouts.mean()}')
+    logger.info(f'Most common: {counter.most_common()[:10]}')
+
+    # do predictions
+    for scene in PREDICTIONS:
+        logger.info('')
+        logger.info(f'{scene["date"]} {scene["name"]}')
+        for fight in scene['fights']:
+            # skip if no odds:
+            if 'odds' not in fight or not fight['odds']:
+                continue
+
+            f1 = fight['fighters'][0]['name']
+            f2 = fight['fighters'][1]['name']
+
+            win1_prob = win_probability([ratings[f1]], [ratings[f2]])
+            win2_prob = win_probability([ratings[f2]], [ratings[f1]])
+
+            # regressor betting
+            scaled_data = scaler.transform([
+                [
+                    win1_prob,
+                    win2_prob,
+                    to_implied_odds(fight['odds'][f1]),
+                    to_implied_odds(fight['odds'][f2]),
+                    ratings[f1].mu,
+                    ratings[f2].mu,
+                    ratings[f1].sigma,
+                    ratings[f2].sigma,
+                ],
+                [
+                    win2_prob,
+                    win1_prob,
+                    to_implied_odds(fight['odds'][f2]),
+                    to_implied_odds(fight['odds'][f1]),
+                    ratings[f2].mu,
+                    ratings[f1].mu,
+                    ratings[f2].sigma,
+                    ratings[f1].sigma,
+                ]
+            ])
+            pred1, pred2 = reg.predict(scaled_data)
+            if pred1 > pred2:
+                logger.info(f'Bet on {f1} (against {f2})')
+            else:
+                logger.info(f'Bet on {f2} (against {f1})')
 
     logger.info('Done')
 
