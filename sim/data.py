@@ -23520,5 +23520,302 @@ DATA = [
                 },
             },
         ]
-    }
+    },
+
+    {
+        'date': '2019-07-06',
+        'name': 'UFC 239: Las Vegas 2019',
+        'location': 'Las Vegas, Nevada',
+        'venue': 'T-Mobile Arena',
+        'fights': [
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': PANNIE_KIANZAD,
+                        'stats': '11-3-0',
+                    },
+                    {
+                        'name': JULIA_AVILA,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JULIA_AVILA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:30',
+                'odds': {
+                    JULIA_AVILA: -238,
+                    PANNIE_KIANZAD: 208,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': CHANCE_RENCOUNTRE,
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': ISMAIL_NAURDIEV,
+                        'stats': '15-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CHANCE_RENCOUNTRE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:05',
+                'odds': {
+                    CHANCE_RENCOUNTRE: 449,
+                    ISMAIL_NAURDIEV: -554,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JACK_MARSHMAN,
+                        'stats': '23-8-0',
+                    },
+                    {
+                        'name': EDMEN_SHAHBAZYAN,
+                        'stats': '9-0-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': EDMEN_SHAHBAZYAN,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '1:12',
+                },
+                'time': '19:35',
+                'odds': {
+                    EDMEN_SHAHBAZYAN: -712,
+                    JACK_MARSHMAN: 557,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': SONG_YADONG,
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': ALEJANDRO_PEREZ,
+                        'stats': '22-7-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': SONG_YADONG,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:04',
+                },
+                'time': '20:05',
+                'odds': {
+                    SONG_YADONG: -216,
+                    ALEJANDRO_PEREZ: 189,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': RANDA_MARKOS,
+                        'stats': '9-7-1',
+                    },
+                    {
+                        'name': CLAUDIA_GADELHA,
+                        'stats': '16-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': CLAUDIA_GADELHA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:35',
+                'odds': {
+                    CLAUDIA_GADELHA: -196,
+                    RANDA_MARKOS: 173,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': NOHELN_HERNANDEZ,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': MARLON_VERA,
+                        'stats': '13-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARLON_VERA,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:25',
+                },
+                'time': '21:00',
+                'odds': {
+                    MARLON_VERA: -451,
+                    NOHELN_HERNANDEZ: 375,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ARNOLD_ALLEN,
+                        'stats': '14-1-0',
+                    },
+                    {
+                        'name': GILBERT_MELENDEZ,
+                        'stats': '22-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ARNOLD_ALLEN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:35',
+                'odds': {
+                    ARNOLD_ALLEN: -329,
+                    GILBERT_MELENDEZ: 281,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICHAEL_CHIESA,
+                        'stats': '15-4-0',
+                    },
+                    {
+                        'name': DIEGO_SANCHEZ,
+                        'stats': '31-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MICHAEL_CHIESA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:05',
+                'odds': {
+                    MICHAEL_CHIESA: -396,
+                    DIEGO_SANCHEZ: 333,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': LUKE_ROCKHOLD,
+                        'stats': '16-4-0',
+                    },
+                    {
+                        'name': JAN_BLACHOWICZ,
+                        'stats': '23-8-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JAN_BLACHOWICZ,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '1:39',
+                },
+                'time': '22:35',
+                'odds': {
+                    JAN_BLACHOWICZ: 205,
+                    LUKE_ROCKHOLD: -235,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': BEN_ASKREN,
+                        'stats': '18-0-0',
+                    },
+                    {
+                        'name': JORGE_MASVIDAL,
+                        'stats': '33-13-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JORGE_MASVIDAL,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:05',
+                },
+                'time': '23:00',
+                'odds': {
+                    JORGE_MASVIDAL: 178,
+                    BEN_ASKREN: -202,
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': HOLLY_HOLM,
+                        'stats': '12-4-0',
+                    },
+                    {
+                        'name': AMANDA_NUNES,
+                        'stats': '17-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': AMANDA_NUNES,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '4:10',
+                },
+                'time': '23:35',
+                'odds': {
+                    AMANDA_NUNES: -395,
+                    HOLLY_HOLM: 333,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': THIAGO_SANTOS,
+                        'stats': '21-6-0',
+                    },
+                    {
+                        'name': JON_JONES,
+                        'stats': '24-1-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JON_JONES,
+                    'by': 's.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
+                'time': '23:55',
+                'odds': {
+                    JON_JONES: -540,
+                    THIAGO_SANTOS: 414,
+                },
+            },
+        ]
+    },
 ]
