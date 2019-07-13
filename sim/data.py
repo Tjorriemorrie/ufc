@@ -8,9 +8,270 @@ DATA = [
         'location': 'Auckland, New Zealand',
         'venue': 'Spark Arena',
         'fights': [
-            # {
-                # 'weight_class':
-            # }
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': CHANMI_JEON,
+                        'stats': '5-2-0',
+                    },
+                    {
+                        'name': JJ_ALDRICH,
+                        'stats': '7-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JJ_ALDRICH,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    JJ_ALDRICH: -211,
+                    CHANMI_JEON: 185,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ZAK_OTTOW,
+                        'stats': '17-7-0',
+                    },
+                    {
+                        'name': KIICHI_KUNIMOTO,
+                        'stats': '18-7-2',
+                    },
+                ],
+                'winner': {
+                    'fighter': ZAK_OTTOW,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:00',
+                'odds': {
+                    ZAK_OTTOW: -366,
+                    KIICHI_KUNIMOTO: 310,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ASHKAN_MOKHTARIAN,
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': JOHN_MORAGA,
+                        'stats': '19-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOHN_MORAGA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:30',
+                'odds': {
+                    JOHN_MORAGA: -205,
+                    ASHKAN_MOKHTARIAN: 180,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': LUKE_JUMEAU,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': DOMINIQUE_STEELE,
+                        'stats': '14-9-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': LUKE_JUMEAU,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '21:00',
+                'odds': {
+                    LUKE_JUMEAU: 175,
+                    DOMINIQUE_STEELE: 199,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAMIEN_BROWN,
+                        'stats': '17-12-0',
+                    },
+                    {
+                        'name': VINC_PICHEL,
+                        'stats': '11-2-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': VINC_PICHEL,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:37',
+                },
+                'time': '21:30',
+                'odds': {
+                    VINC_PICHEL: -125,
+                    DAMIEN_BROWN: 111,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXANDER_VOLKANOVSKI,
+                        'stats': '19-1-0',
+                    },
+                    {
+                        'name': MIZUTO_HIROTA,
+                        'stats': '19-10-2',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDER_VOLKANOVSKI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '22:00',
+                'odds': {
+                    ALEXANDER_VOLKANOVSKI: -767,
+                    MIZUTO_HIROTA: 440,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': BEN_NGUYEN,
+                        'stats': '17-8-0',
+                    },
+                    {
+                        'name': TIM_ELLIOTT,
+                        'stats': '16-8-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': BEN_NGUYEN,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '0:49',
+                },
+                'time': '22:30',
+                'odds': {
+                    BEN_NGUYEN: 154,
+                    TIM_ELLIOTT: -174,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': HENRIQUE_DA_SILVA,
+                        'stats': '14-5-0',
+                    },
+                    {
+                        'name': ION_CUTELABA,
+                        'stats': '14-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ION_CUTELABA,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:22',
+                },
+                'time': '23:00',
+                'odds': {
+                    ION_CUTELABA: -302,
+                    HENRIQUE_DA_SILVA: 260,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAN_HOOKER,
+                        'stats': '18-8-0',
+                    },
+                    {
+                        'name': ROSS_PEARSON,
+                        'stats': '22-16-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DAN_HOOKER,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:02',
+                },
+                'time': '23:30',
+                'odds': {
+                    DAN_HOOKER: -145,
+                    ROSS_PEARSON: 129,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': DANIEL_KELLY,
+                        'stats': '13-4-0',
+                    },
+                    {
+                        'name': DEREK_BRUNSON,
+                        'stats': '18-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DEREK_BRUNSON,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:16',
+                },
+                'time': '23:45',
+                'odds': {
+                    DEREK_BRUNSON: -253,
+                    DANIEL_KELLY: 220,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DERRICK_LEWIS,
+                        'stats': '21-7-0',
+                    },
+                    {
+                        'name': MARK_HUNT,
+                        'stats': '13-14-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': MARK_HUNT,
+                    'by': 'ko/tko',
+                    'round': 4,
+                    'time': '3:51',
+                },
+                'time': '23:59',
+                'odds': {
+                    MARK_HUNT: 130,
+                    DERRICK_LEWIS: -147,
+                },
+            },
         ]
     },
 
