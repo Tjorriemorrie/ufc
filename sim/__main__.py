@@ -438,6 +438,12 @@ def tree():
                 ]
             ])
             pred1, pred2 = reg.predict(scaled_data)
+            if is_win_1:
+                predw = pred1
+                predl = pred2
+            else:
+                predw = pred2
+                predl = pred1
 
             correct = 0
             payout = -BET_AMT
@@ -463,7 +469,7 @@ def tree():
             if (is_win_1 and pred2 > pred1) or (not is_win_1 and pred1 > pred2):
                 upset = True
 
-            logger.info(f'{">>>>> " if upset else ""}[{ratings[fw].mu:.1f} : {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
+            logger.info(f'{">>>>> " if upset else ""}[{predw*100:.0f}% {ratings[fw].mu:.1f} : {predl*100:.0f}% {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
 
             # update ratings
             ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)

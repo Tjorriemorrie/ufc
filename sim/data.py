@@ -3,6 +3,299 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-03-11',
+        'name': 'UFC Fight Night: Belfort vs Gastelum',
+        'location': 'Fortaleza, Brazil',
+        'venue': 'Centro de Formacao',
+        'fights': [
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': PAULO_COSTA,
+                        'stats': '12-0-0',
+                    },
+                    {
+                        'name': GARRETH_MCLELLAN,
+                        'stats': '13-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': PAULO_COSTA,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '1:17',
+                },
+                'time': '19:05',
+                'odds': {
+                    PAULO_COSTA: -309,
+                    GARRETH_MCLELLAN: 265,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': JEREMY_KENNEDY,
+                        'stats': '11-1-0',
+                    },
+                    {
+                        'name': RONY_JASON,
+                        'stats': '15-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JEREMY_KENNEDY,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:30',
+                'odds': {
+                    JEREMY_KENNEDY: -125,
+                    RONY_JASON: 111,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOSHUA_BURKMAN,
+                        'stats': '29-17-0',
+                    },
+                    {
+                        'name': MICHEL_PRAZERES,
+                        'stats': '26-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MICHEL_PRAZERES,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '1:42',
+                },
+                'time': '19:05',
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOE_SOTO,
+                        'stats': '18-7-0',
+                    },
+                    {
+                        'name': RANI_YAHYA,
+                        'stats': '26-10-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': JOE_SOTO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:30',
+                'odds': {
+                    JOE_SOTO: 195,
+                    RANI_YAHYA: -223,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAVI_RAMOS,
+                        'stats': '9-2-0',
+                    },
+                    {
+                        'name': SERGIO_MORAES,
+                        'stats': '14-5-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': SERGIO_MORAES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:05',
+                'odds': {
+                    SERGIO_MORAES: -190,
+                    DAVI_RAMOS: 160,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': FRANCISCO_TRINALDO,
+                        'stats': '23-6-0',
+                    },
+                    {
+                        'name': KEVIN_LEE,
+                        'stats': '17-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KEVIN_LEE,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '3:12',
+                },
+                'time': '21:35',
+                'odds': {
+                    KEVIN_LEE: -170,
+                    FRANCISCO_TRINALDO: 150,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_OLIVEIRA,
+                        'stats': '19-6-1',
+                    },
+                    {
+                        'name': TIM_MEANS,
+                        'stats': '28-11-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEX_OLIVEIRA,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '2:38',
+                },
+                'time': '22:10',
+                'odds': {
+                    ALEX_OLIVEIRA: 180,
+                    TIM_MEANS: -205,
+                },
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MARION_RENEAU,
+                        'stats': '9-5-1',
+                    },
+                    {
+                        'name': BETHE_CORREIA,
+                        'stats': '10-3-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': None,
+                    'by': 'm.dec',
+                    'round': 3,
+                    'tme': '5:00',
+                },
+                'time': '22:35',
+                'odds': {
+                    BETHE_CORREIA: -112,
+                    MARION_RENEAU: 100,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': RAY_BORG,
+                        'stats': '11-4-0',
+                    },
+                    {
+                        'name': JUSSIER_FORMIGA,
+                        'stats': '23-5-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RAY_BORG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '23:05',
+                'odds': {
+                    RAY_BORG: -133,
+                    JUSSIER_FORMIGA: 118,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': BENEIL_DARIUSH,
+                        'stats': '16-4-1',
+                    },
+                    {
+                        'name': EDSON_BARBOZA,
+                        'stats': '20-7-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': EDSON_BARBOZA,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:35',
+                },
+                'time': '23:36',
+                'odds': {
+                    EDSON_BARBOZA: -162,
+                    BENEIL_DARIUSH: 143,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': GIAN_VILLANTE,
+                        'stats': '17-11-0',
+                    },
+                    {
+                        'name': MAURICIO_RUA,
+                        'stats': '26-11-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': MAURICIO_RUA,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '0:59',
+                },
+                'time': '23:59',
+                'odds': {
+                    MAURICIO_RUA: -160,
+                    GIAN_VILLANTE: 142,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': KELVIN_GASTELUM,
+                        'stats': '16-3-0',
+                    },
+                    {
+                        'name': VITOR_BELFORT,
+                        'stats': '26-14-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KELVIN_GASTELUM,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '3:52',
+                },
+                'time': '23:59',
+                'odds': {
+                    KELVIN_GASTELUM: -385,
+                    VITOR_BELFORT: 325,
+                },
+            },
+        ]
+    },
+    
+    {
         'date': '2017-03-18',
         'name': 'UFC Fight Night: Manuwa vs Anderson',
         'location': 'London, United Kingdom',
