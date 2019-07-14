@@ -473,6 +473,7 @@ def tree():
 
     if bet_cnt:
         logger.info(f'Profit per bet: {balance/bet_cnt:.2f}')
+        # logger.info(f'ROI: {balance/bet_cnt/BET_AMT*100:.0f}%')
 
     counter = Counter(payouts)
     payouts = np.array(payouts)
