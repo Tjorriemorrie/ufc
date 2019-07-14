@@ -494,13 +494,16 @@ def tree():
             win1_prob = win_probability([ratings[f1]], [ratings[f2]])
             win2_prob = win_probability([ratings[f2]], [ratings[f1]])
 
+            f1_odds = fight['odds'][f1]
+            f2_odds = fight['odds'][f2]
+
             # regressor betting
             scaled_data = scaler.transform([
                 [
                     win1_prob,
                     win2_prob,
-                    to_implied_odds(fight['odds'][f1]),
-                    to_implied_odds(fight['odds'][f2]),
+                    to_implied_odds(f1_odds),
+                    to_implied_odds(f2_odds),
                     ratings[f1].mu,
                     ratings[f2].mu,
                     ratings[f1].sigma,
@@ -509,8 +512,8 @@ def tree():
                 [
                     win2_prob,
                     win1_prob,
-                    to_implied_odds(fight['odds'][f2]),
-                    to_implied_odds(fight['odds'][f1]),
+                    to_implied_odds(f2_odds),
+                    to_implied_odds(f1_odds),
                     ratings[f2].mu,
                     ratings[f1].mu,
                     ratings[f2].sigma,
@@ -519,9 +522,9 @@ def tree():
             ])
             pred1, pred2 = reg.predict(scaled_data)
             if pred1 > pred2:
-                logger.info(f'Bet on {f1} (against {f2})')
+                logger.info(f'Bet on {f1} [{pred1*100:.0f}% {f1_odds}] (against {f2} [{pred2*100:.0f}% {f2_odds}])')
             else:
-                logger.info(f'Bet on {f2} (against {f1})')
+                logger.info(f'Bet on {f2} [{pred2*100:.0f}% {f2_odds}] (against {f1} [{pred1*100:.0f}% {f1_odds}])')
 
     logger.info('Done')
 
