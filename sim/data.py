@@ -3,6 +3,327 @@ from fighters import *
 
 DATA = [
     {
+        'date': '2017-04-15',
+        'name': 'UFC Fight Night: Johnson vs Reis',
+        'location': 'Kansas City, Missouri',
+        'venue': 'Sprint Center',
+        'fights': [
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': KETLEN_VIEIRA,
+                        'stats': '10-0-0',
+                    },
+                    {
+                        'name': ASHLEE_EVANS_SMITH,
+                        'stats': '6-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': KETLEN_VIEIRA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:00',
+                'odds': {
+                    KETLEN_VIEIRA: 155,
+                    ASHLEE_EVANS_SMITH: -176,
+                },
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NATHAN_COY,
+                        'stats': '15-7-0',
+                    },
+                    {
+                        'name': ZAK_CUMMINGS,
+                        'stats': '22-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ZAK_CUMMINGS,
+                    'by': 'submission',
+                    'round': 1,
+                    'time': '4:21',
+                },
+                'time': '16:25',
+                'odds': {
+                    ZAK_CUMMINGS: -555,
+                    NATHAN_COY: 450,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANDREW_SANCHEZ,
+                        'stats': '11-4-0',
+                    },
+                    {
+                        'name': ANTHONY_SMITH,
+                        'stats': '31-14-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ANTHONY_SMITH,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '3:52',
+                },
+                'time': '17:15',
+                'odds': {
+                    ANTHONY_SMITH: 290,
+                    ANDREW_SANCHEZ: -340,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DEVIN_CLARK,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': JAKE_COLLIER,
+                        'stats': '11-4-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': DEVIN_CLARK,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '17:40',
+                'odds': {
+                    DEVIN_CLARK: -141,
+                    JAKE_COLLIER: 125,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': AUGUSTO_MENDES,
+                        'stats': '6-2-0',
+                    },
+                    {
+                        'name': ALJAMAIN_STERLING,
+                        'stats': '17-3-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALJAMAIN_STERLING,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '16:50',
+                'odds': {
+                    ALJAMAIN_STERLING: -346,
+                    AUGUSTO_MENDES: 295,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': LOUIS_SMOLKA,
+                        'stats': '15-6-0',
+                    },
+                    {
+                        'name': TIM_ELLIOTT,
+                        'stats': '16-8-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': TIM_ELLIOTT,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:05',
+                'odds': {
+                    TIM_ELLIOTT: -170,
+                    LOUIS_SMOLKA: 150,
+                },
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': RASHID_MAGOMEDOV,
+                        'stats': '20-2-0',
+                    },
+                    {
+                        'name': BOBBY_GREEN,
+                        'stats': '24-9-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': RASHID_MAGOMEDOV,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:40',
+                'odds': {
+                    RASHID_MAGOMEDOV: -353,
+                    BOBBY_GREEN: 300,
+                },
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': TOM_DUQUESNOY,
+                        'stats': '16-2-0',
+                    },
+                    {
+                        'name': PATRICK_WILLIAMS,
+                        'stats': '8-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': TOM_DUQUESNOY,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '0:28',
+                },
+                'time': '19:15',
+                'odds': {
+                    TOM_DUQUESNOY: -1000,
+                    PATRICK_WILLIAMS: 733,
+                },
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEXANDER_VOLKOV,
+                        'stats': '30-7-0',
+                    },
+                    {
+                        'name': ROY_NELSON,
+                        'stats': '23-14-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ALEXANDER_VOLKOV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:45',
+                'odds': {
+                    ALEXANDER_VOLKOV: -155,
+                    ROY_NELSON: 137,
+                },
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': RENATO_MOICANO,
+                        'stats': '13-2-1',
+                    },
+                    {
+                        'name': JEREMY_STEPHENS,
+                        'stats': '28-16-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': RENATO_MOICANO,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '20:15',
+                'odds': {
+                    RENATO_MOICANO: 145,
+                    JEREMY_STEPHENS: -164,
+                },
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROBERT_WHITTAKER,
+                        'stats': '21-4-0',
+                    },
+                    {
+                        'name': JACARE_SOUZA,
+                        'stats': '26-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ROBERT_WHITTAKER,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '3:28',
+                },
+                'time': '20:45',
+                'odds': {
+                    ROBERT_WHITTAKER: 234,
+                    JACARE_SOUZA: -270,
+                },
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': ROSE_NAMAJUNAS,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': MICHELLE_WATERSON,
+                        'stats': '17-6-0',
+                    },
+                ],
+                'winner': {
+                    'fighter': ROSE_NAMAJUNAS,
+                    'by': 'submission',
+                    'round': 2,
+                    'time': '2:47',
+                },
+                'time': '21:15',
+                'odds': {
+                    ROSE_NAMAJUNAS: 111,
+                    MICHELLE_WATERSON: -125,
+                },
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': WILSON_REIS,
+                        'stats': '23-9-0',
+                    },
+                    {
+                        'name': DEMETRIOUS_JOHNSON,
+                        'stats': '27-3-1',
+                    },
+                ],
+                'winner': {
+                    'fighter': DEMETRIOUS_JOHNSON,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '4:49',
+                },
+                'time': '21:45',
+                'odds': {
+                    DEMETRIOUS_JOHNSON: -902,
+                    WILSON_REIS: 676,
+                },
+            },
+        ]
+    },
+
+    {
         'date': '2017-04-22',
         'name': 'UFC Fight Night: Swanson vs Lobov',
         'location': 'Nashville, Tennessee',
