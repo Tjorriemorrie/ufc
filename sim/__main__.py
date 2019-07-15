@@ -382,6 +382,7 @@ def tree():
     #########################################################################
     # calculate profit
 
+    actual = (0, 0)
     payouts = []
     ratings = defaultdict(lambda: Rating())
     bet_cnt = 0
@@ -469,10 +470,22 @@ def tree():
             if (is_win_1 and pred2 > pred1) or (not is_win_1 and pred1 > pred2):
                 upset = True
 
+            # actual
+            if 'prediction' in fight:
+                is_actual_correct = fight['prediction'] == fw
+                actual = (actual[0] + is_actual_correct, actual[1] + 1)
+
             logger.info(f'{">>>>> " if upset else ""}[{predw*100:.0f}% {ratings[fw].mu:.1f} : {predl*100:.0f}% {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
 
             # update ratings
             ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+
+    logger.info('')
+
+    counter = Counter(payouts)
+    payouts = np.array(payouts)
+    logger.info(f'Payouts: max={payouts.max()} min={payouts.min()} mean={payouts.mean()}')
+    logger.info(f'Most common: {counter.most_common()[:10]}')
 
     if accuracy[1]:
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
@@ -481,10 +494,8 @@ def tree():
         logger.info(f'Profit per bet: {balance/bet_cnt:.2f}')
         # logger.info(f'ROI: {balance/bet_cnt/BET_AMT*100:.0f}%')
 
-    counter = Counter(payouts)
-    payouts = np.array(payouts)
-    logger.info(f'Payouts: max={payouts.max()} min={payouts.min()} mean={payouts.mean()}')
-    logger.info(f'Most common: {counter.most_common()[:10]}')
+    if actual[1]:
+        logger.info(f'Actual {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
 
     # do predictions
     for scene in PREDICTIONS:
