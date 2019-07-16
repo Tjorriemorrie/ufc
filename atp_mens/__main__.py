@@ -54,47 +54,41 @@ def main():
     ratings = defaultdict(lambda: Rating())
     for event in DATA:
         for match in event['matches']:
-            f1, f2 = match['players']
-            win1_prob = win_probability([ratings[f1]], [ratings[f2]])
-            win2_prob = win_probability([ratings[f2]], [ratings[f1]])
-            f1_io = 1 / match['odds'][f1]
-            f2_io = 1 / match['odds'][f2]
+            p1, p2 = match['players']
+            win1_prob = win_probability([ratings[p1]], [ratings[p2]])
+            win2_prob = win_probability([ratings[p2]], [ratings[p1]])
+            p1_odds = match['odds'][p1]
+            p2_odds = match['odds'][p2]
 
-            # get winner
-            fw = match['winner']
-            is_win_1 = fw == f1
-            fl = f2 if is_win_1 else f1
-            if not is_win_1 and fw != f2 and fw is not None:
-                raise ValueError(f'unknown winner {fw}')
-            drawn = fw is None
+            drawn = None
 
             player_data = [
                 [
                     win1_prob,
                     win2_prob,
-                    f1_io,
-                    f2_io,
-                    ratings[f1].mu,
-                    ratings[f2].mu,
-                    ratings[f1].sigma,
-                    ratings[f2].sigma,
+                    1 / p1_odds,
+                    1 / p2_odds,
+                    ratings[p1].mu,
+                    ratings[p2].mu,
+                    ratings[p1].sigma,
+                    ratings[p2].sigma,
                 ],
                 [
                     win2_prob,
                     win1_prob,
-                    f2_io,
-                    f1_io,
-                    ratings[f2].mu,
-                    ratings[f1].mu,
-                    ratings[f2].sigma,
-                    ratings[f1].sigma,
+                    1 / p2_odds,
+                    1 / p1_odds,
+                    ratings[p2].mu,
+                    ratings[p1].mu,
+                    ratings[p2].sigma,
+                    ratings[p1].sigma,
                 ]
             ]
             training_data.extend(player_data)
-            label_data.extend([is_win_1, not is_win_1])
+            label_data.extend([1, 0])
 
             # update ratings
-            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+            ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2], drawn=drawn)
 
     # scale
     scaler = MinMaxScaler()
@@ -111,7 +105,7 @@ def main():
     reg = reg.fit(X_train, y_train)
     mse = mean_squared_error(y_test, reg.predict(X_test))
     logger.info(f'MSE: {mse:.2f}')
-    sleep(1)
+    sleep(2)
 
     #########################################################################
     # calculate profit
@@ -128,71 +122,63 @@ def main():
         logger.info('')
         logger.info(f'{event["date"]} {event["name"]}')
         for match in event['matches']:
-            f1, f2 = match['players']
-            win1_prob = win_probability([ratings[f1]], [ratings[f2]])
-            win2_prob = win_probability([ratings[f2]], [ratings[f1]])
-            f1_odds = match['odds'][f1]
-            f2_odds = match['odds'][f2]
+            p1, p2 = match['players']
+            win1_prob = win_probability([ratings[p1]], [ratings[p2]])
+            win2_prob = win_probability([ratings[p2]], [ratings[p1]])
+            p1_odds = match['odds'][p1]
+            p2_odds = match['odds'][p2]
 
-            # get winner
-            fw = match['winner']
-            is_win_1 = fw == f1
-            fl = f2 if is_win_1 else f1
-            if not is_win_1 and fw != f2 and fw is not None:
-                raise ValueError(f'unknown winner {fw}')
-            drawn = fw is None
+            drawn = None
 
             player_data = [
                 [
                     win1_prob,
                     win2_prob,
-                    1 / f1_odds,
-                    1 / f2_odds,
-                    ratings[f1].mu,
-                    ratings[f2].mu,
-                    ratings[f1].sigma,
-                    ratings[f2].sigma,
+                    1 / p1_odds,
+                    1 / p2_odds,
+                    ratings[p1].mu,
+                    ratings[p2].mu,
+                    ratings[p1].sigma,
+                    ratings[p2].sigma,
                 ],
                 [
                     win2_prob,
                     win1_prob,
-                    1 / f2_odds,
-                    1 / f1_odds,
-                    ratings[f2].mu,
-                    ratings[f1].mu,
-                    ratings[f2].sigma,
-                    ratings[f1].sigma,
+                    1 / p2_odds,
+                    1 / p1_odds,
+                    ratings[p2].mu,
+                    ratings[p1].mu,
+                    ratings[p2].sigma,
+                    ratings[p1].sigma,
                 ]
             ]
             pred1, pred2 = reg.predict(player_data)
 
+            upset = False
             correct = 0
             payout = -BET_AMT
-            if is_win_1 and pred1 > pred2:
+            if pred1 > pred2:
                 correct = 1
-                payout += f1_odds * BET_AMT
-            elif not is_win_1 and pred2 > pred1:
-                correct = 1
-                payout += f2_odds * BET_AMT
+                payout += p1_odds * BET_AMT
+            else:
+                upset = True
+            payout = round(payout, 2)
             balance += payout
             bet_cnt += 1
             payouts.append(payout)
 
             # accuracy
-            upset = False
             accuracy = (accuracy[0] + correct, accuracy[1] + 1)
-            if (is_win_1 and pred2 > pred1) or (not is_win_1 and pred1 > pred2):
-                upset = True
 
             # actual
             if 'prediction' in match:
                 is_actual_correct = match['prediction'] == fw
                 actual = (actual[0] + is_actual_correct, actual[1] + 1)
 
-            logger.info(f'[{balance:.0f}::{payout:.0f}]{" !!" if upset else ""} [{pred1*100:.0f}%  vs {pred2*100:.0f}%] {fw} {match["score"]} {fl} [{ratings[f1].mu:.0f} vs {ratings[f2].mu:.0f}]')
+            logger.info(f'[{balance:.0f}::{payout:.0f}]{" !!" if upset else ""} [{pred1*100:.0f}% vs {pred2*100:.0f}%] {p1} {match["score"]} {p2} [{ratings[p1].mu:.0f} vs {ratings[p2].mu:.0f}]')
 
             # update ratings
-            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+            ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2], drawn=drawn)
 
     logger.info('')
 
@@ -220,43 +206,43 @@ def main():
             if 'odds' not in match or not match['odds']:
                 continue
 
-            f1 = match['fighters'][0]['name']
-            f2 = match['fighters'][1]['name']
+            p1 = match['fighters'][0]['name']
+            p2 = match['fighters'][1]['name']
 
-            win1_prob = win_probability([ratings[f1]], [ratings[f2]])
-            win2_prob = win_probability([ratings[f2]], [ratings[f1]])
+            win1_prob = win_probability([ratings[p1]], [ratings[p2]])
+            win2_prob = win_probability([ratings[p2]], [ratings[p1]])
 
-            f1_odds = match['odds'][f1]
-            f2_odds = match['odds'][f2]
+            p1_odds = match['odds'][p1]
+            p2_odds = match['odds'][p2]
 
             # regressor betting
             scaled_data = scaler.transform([
                 [
                     win1_prob,
                     win2_prob,
-                    to_implied_odds(f1_odds),
-                    to_implied_odds(f2_odds),
-                    ratings[f1].mu,
-                    ratings[f2].mu,
-                    ratings[f1].sigma,
-                    ratings[f2].sigma,
+                    to_implied_odds(p1_odds),
+                    to_implied_odds(p2_odds),
+                    ratings[p1].mu,
+                    ratings[p2].mu,
+                    ratings[p1].sigma,
+                    ratings[p2].sigma,
                 ],
                 [
                     win2_prob,
                     win1_prob,
-                    to_implied_odds(f2_odds),
-                    to_implied_odds(f1_odds),
-                    ratings[f2].mu,
-                    ratings[f1].mu,
-                    ratings[f2].sigma,
-                    ratings[f1].sigma,
+                    to_implied_odds(p2_odds),
+                    to_implied_odds(p1_odds),
+                    ratings[p2].mu,
+                    ratings[p1].mu,
+                    ratings[p2].sigma,
+                    ratings[p1].sigma,
                 ]
             ])
             pred1, pred2 = reg.predict(scaled_data)
             if pred1 > pred2:
-                logger.info(f'Bet on {f1} [{pred1*100:.0f}% {f1_odds}] (against {f2} [{pred2*100:.0f}% {f2_odds}])')
+                logger.info(f'Bet on {p1} [{pred1*100:.0f}% {p1_odds}] (against {p2} [{pred2*100:.0f}% {p2_odds}])')
             else:
-                logger.info(f'Bet on {f2} [{pred2*100:.0f}% {f2_odds}] (against {f1} [{pred1*100:.0f}% {f1_odds}])')
+                logger.info(f'Bet on {p2} [{pred2*100:.0f}% {p2_odds}] (against {p1} [{pred1*100:.0f}% {p1_odds}])')
 
     logger.info('Done')
 
