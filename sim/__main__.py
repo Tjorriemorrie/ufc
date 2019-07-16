@@ -118,7 +118,7 @@ def to_implied_odds(us_odds: float) -> float:
 
 
 def two_trees():
-    logger.info('Starting tree training')
+    logger.info('Starting main training')
 
     # build data
     training_data = []
@@ -306,7 +306,7 @@ def two_trees():
 
 
 def tree():
-    logger.info('Starting tree training')
+    logger.info('Starting main training')
 
     # build data
     training_data = []
