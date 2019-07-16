@@ -333,12 +333,15 @@ def tree():
                 raise ValueError(f'unknown winner {fw}')
             drawn = fw is None
 
+            f1_odds = fight['odds'][f1]
+            f2_odds = fight['odds'][f2]
+
             fight_data = [
                 [
                     win1_prob,
                     win2_prob,
-                    to_implied_odds(fight['odds'][f1]),
-                    to_implied_odds(fight['odds'][f2]),
+                    1 / f1_odds,
+                    1 / f2_odds,
                     ratings[f1].mu,
                     ratings[f2].mu,
                     ratings[f1].sigma,
@@ -347,8 +350,8 @@ def tree():
                 [
                     win2_prob,
                     win1_prob,
-                    to_implied_odds(fight['odds'][f2]),
-                    to_implied_odds(fight['odds'][f1]),
+                    1 / f2_odds,
+                    1 / f1_odds,
                     ratings[f2].mu,
                     ratings[f1].mu,
                     ratings[f2].sigma,
@@ -420,8 +423,8 @@ def tree():
                 [
                     win1_prob,
                     win2_prob,
-                    to_implied_odds(fight['odds'][f1]),
-                    to_implied_odds(fight['odds'][f2]),
+                    1 / f1_odds,
+                    1 / f2_odds,
                     ratings[f1].mu,
                     ratings[f2].mu,
                     ratings[f1].sigma,
@@ -430,8 +433,8 @@ def tree():
                 [
                     win2_prob,
                     win1_prob,
-                    to_implied_odds(fight['odds'][f2]),
-                    to_implied_odds(fight['odds'][f1]),
+                    1 / f2_odds,
+                    1 / f1_odds,
                     ratings[f2].mu,
                     ratings[f1].mu,
                     ratings[f2].sigma,
@@ -450,16 +453,11 @@ def tree():
             payout = -BET_AMT
             if is_win_1 and pred1 > pred2:
                 correct = 1
-                if f1_odds > 0:
-                    payout += f1_odds / BET_AMT + BET_AMT
-                else:
-                    payout += 100 * BET_AMT / abs(f1_odds) + BET_AMT
+                payout += f1_odds * BET_AMT
             elif not is_win_1 and pred2 > pred1:
                 correct = 1
-                if f2_odds > 0:
-                    payout += f2_odds / BET_AMT + BET_AMT
-                else:
-                    payout += 100 * BET_AMT / abs(f2_odds) + BET_AMT
+                payout += f2_odds * BET_AMT
+            payout = round(payout, 2)
             balance += payout
             bet_cnt += 1
             payouts.append(payout)
@@ -475,7 +473,7 @@ def tree():
                 is_actual_correct = fight['prediction'] == fw
                 actual = (actual[0] + is_actual_correct, actual[1] + 1)
 
-            logger.info(f'{">>>>> " if upset else ""}[{predw*100:.0f}% {ratings[fw].mu:.1f} : {predl*100:.0f}% {ratings[fl].mu:.1f}] {fw} {fight["winner"]["by"]} {fl} ==> {payout:.0f} bal:{balance:.0f}')
+            logger.info(f'[{balance:.0f}::{payout:.0f}]{" !!" if upset else ""} [{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} {fight["winner"]["by"]} {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
 
             # update ratings
             ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
