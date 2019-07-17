@@ -8,9 +8,10 @@ from math import sqrt
 from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
 
 from loguru import logger
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, accuracy_score
 from sklearn.preprocessing import MinMaxScaler
 from trueskill import quality_1vs1, Rating, BETA, global_env, rate_1vs1
+from xgboost import XGBRegressor
 
 from data import DATA, PREDICTIONS
 
@@ -376,11 +377,28 @@ def tree():
     y_train, y_test = label_data[:cutoff], label_data[cutoff:]
 
     # train
-    reg = GradientBoostingRegressor(n_estimators=1000)
+    # reg = GradientBoostingRegressor(n_estimators=1000)
+    # reg = reg.fit(X_train, y_train)
+    # # mse = mean_squared_error(y_test, reg.predict(X_test))
+    # # logger.info(f'MSE: {mse:.2f}')
+    # y_pred = reg.predict(X_test)
+    # y_pred_bin = [round(value) for value in y_pred]
+    # accuracy = accuracy_score(y_test, y_pred_bin)
+    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    # sleep(2)
+    reg = XGBRegressor(n_estimators=3000, objective='reg:squarederror', n_jobs=4)
     reg = reg.fit(X_train, y_train)
-    mse = mean_squared_error(y_test, reg.predict(X_test))
+    y_pred = reg.predict(X_test)
+    y_pred_bin = [round(value) for value in y_pred]
+    accuracy = accuracy_score(y_test, y_pred_bin)
+    logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    mse = mean_squared_error(y_test, y_pred)
     logger.info(f'MSE: {mse:.2f}')
-    sleep(2)
+    sleep(3)
+    # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
+    # pyplot.show()
+    # logger.info(reg.feature_importances_)
+    # return
 
     #########################################################################
     # calculate profit
@@ -391,7 +409,6 @@ def tree():
     bet_cnt = 0
     balance = 0
     accuracy = (0, 0)
-    logger.info(f'Balance is {balance}. good luck!')
 
     for scene in DATA:
         logger.info('')
@@ -485,7 +502,7 @@ def tree():
     logger.info(f'Most common: {counter.most_common()[:10]}')
 
     if accuracy[1]:
-        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%')
 
     if bet_cnt:
         logger.info(f'Profit per bet: {balance/bet_cnt:.2f}')
