@@ -12,6 +12,7 @@ cma = "*"
 numpy = "*"
 pandas = "*"
 scikit-learn = "*"
+xgboost = "*"
 
 [requires]
 python_version = "3.6"

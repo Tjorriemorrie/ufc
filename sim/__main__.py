@@ -376,7 +376,7 @@ def tree():
     y_train, y_test = label_data[:cutoff], label_data[cutoff:]
 
     # train
-    reg = GradientBoostingRegressor()
+    reg = GradientBoostingRegressor(n_estimators=1000)
     reg = reg.fit(X_train, y_train)
     mse = mean_squared_error(y_test, reg.predict(X_test))
     logger.info(f'MSE: {mse:.2f}')
@@ -417,6 +417,8 @@ def tree():
 
             f1_odds = fight['odds'][f1]
             f2_odds = fight['odds'][f2]
+            if not -50 < f1_odds < 50 or not -50 < f2_odds < 50:
+                raise ValueError(f'surely these odds are wrong? {f1_odds} {f2_odds}')
 
             # regressor betting
             scaled_data = scaler.transform([
@@ -463,17 +465,14 @@ def tree():
             payouts.append(payout)
 
             # accuracy
-            upset = False
             accuracy = (accuracy[0] + correct, accuracy[1] + 1)
-            if (is_win_1 and pred2 > pred1) or (not is_win_1 and pred1 > pred2):
-                upset = True
 
             # actual
             if 'prediction' in fight:
                 is_actual_correct = fight['prediction'] == fw
                 actual = (actual[0] + is_actual_correct, actual[1] + 1)
 
-            logger.info(f'[{balance:.0f}::{payout:.0f}]{" !!" if upset else ""} [{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} {fight["winner"]["by"]} {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+            logger.info(f'[{balance:.0f}|{payout:.0f}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} {fight["winner"]["by"]} {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
 
             # update ratings
             ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
