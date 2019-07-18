@@ -1,5 +1,6 @@
 from fighters import *
 
+# 63 7.44 <- scaling bets on diff?
 # 68 0.60 <- changed bet size to dynamic
 # 70 0.83 <- xgb50
 # 63 0.60 <- xgb3k

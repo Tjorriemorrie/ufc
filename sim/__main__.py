@@ -1,4 +1,4 @@
-from collections import Counter, defaultdict
+from collections import Counter, defaultdict, OrderedDict
 from itertools import chain
 
 import numpy as np
@@ -53,7 +53,7 @@ def get_regressor(training_data, label_data, scaler):
     # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
-    reg = XGBRegressor(n_estimators=100, objective='reg:squarederror', n_jobs=4)
+    reg = XGBRegressor(n_estimators=1000, objective='reg:squarederror', n_jobs=4)
     reg = reg.fit(X_train, y_train)
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
@@ -64,7 +64,14 @@ def get_regressor(training_data, label_data, scaler):
     # sleep(3)
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
-    logger.info(reg.feature_importances_)
+    feature_names = [
+        'win%', '~win%', 'odds', '~odds',
+        'mu', '~mu', 'sigma', '~sigma',
+        'last', '~last', 'early', '~early',
+        'wins', '~wins', 'losses', '~losses',
+        'track', '~track']
+    for name, val in zip(feature_names, reg.feature_importances_):
+        logger.info(f'{name}: {val}')
 
     return reg
 
@@ -73,9 +80,13 @@ def main():
     logger.info('Starting main training')
 
     # init
+    out_to_preds = {
+        0: [],
+        1: [],
+    }
     reg = None
     scaler = MinMaxScaler()
-    cutoff = int(len(DATA) * 0.70)
+    cutoff = int(len(DATA) * 0.7)
     ratings = defaultdict(lambda: Rating())
     early_fights = defaultdict(lambda: 0.5)
     last_fights = defaultdict(lambda: 0.5)
@@ -178,19 +189,23 @@ def main():
                 if is_win_1:
                     predw = pred1
                     predl = pred2
+                    out_to_preds[1].append(round(pred1 - pred2, 2))
                 else:
                     predw = pred2
                     predl = pred1
+                    out_to_preds[0].append(round(pred2 - pred1, 2))
 
                 # testing outcome
                 correct = 0
-                payout = -bet_size
+                multi = 2 if pred1 - pred2 > 0.25 else 1
+                multi *= 2 if pred1 - pred2 > 0.4 else 1
+                payout = -bet_size * multi
                 if is_win_1 and pred1 > pred2:
                     correct = 1
-                    payout += f1_odds * bet_size
+                    payout += f1_odds * bet_size * multi
                 elif not is_win_1 and pred2 > pred1:
                     correct = 1
-                    payout += f2_odds * bet_size
+                    payout += f2_odds * bet_size * multi
                 payouts.append(round(payout, 2))
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
@@ -230,11 +245,28 @@ def main():
     if actual[1]:
         logger.info('')
         logger.info('Actual:')
-        logger.info(f'Actual {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
+        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
         tab = np.array(tab)
         logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
         logger.info(f'tab: max={tab.max()} min={tab.min()}')
         logger.info(f'Most common: {Counter(tab).most_common(5)}')
+
+    # out_wins = np.array([round(w, 1) for w in out_to_preds[1]])
+    # out_loss = np.array([round(l, 1) for l in out_to_preds[0]])
+    # outcomes = OrderedDict()
+    # for w in out_wins:
+    #     if w not in outcomes:
+    #         outcomes[w] = 0
+    #     outcomes[w] += 1
+    # for l in out_loss:
+    #     if l not in outcomes:
+    #         outcomes[l] = 0
+    #     outcomes[l] -= 1
+    # for o, v in outcomes.items():
+    #     logger.info(f'{o} => {v}')
+    logger.info(f'correct mean {out_wins.mean()} upset mean {out_loss.mean()}')
+    logger.info(f'correct percentiles: {np.percentile(out_wins, [10, 30, 50, 70, 90])}')
+    logger.info(f'upset percentiles: {np.percentile(out_loss, [10, 30, 50, 70, 90])}')
 
     # # do predictions
     # for scene in PREDICTIONS:
