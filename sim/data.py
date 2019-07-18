@@ -1,6 +1,8 @@
 from fighters import *
 
-# 63 0.60
+# 68 0.60 <- changed bet size to dynamic
+# 70 0.83 <- xgb50
+# 63 0.60 <- xgb3k
 # 67 1.08 <- xgb1k
 # 65 1.02 <- xgb3k
 # 66 1.17 <- xgb2k
@@ -9,25 +11,21 @@ from fighters import *
 # 71 1.04
 # 61 -0.81
 # 63 -0.31
-# 63 -0.48
-# 62 -0.59
-# 60 -0.91
-# 62 -0.55
 
+# 63 -0.48
+# 60 -0.91
 # 59 -1.16
 # 61 -0.85 <- fixed prediction on trained data
 # 92.0 6.53
 # 92.2 6.57
-# 92 6.49
-# 92 6.35 <- xgb2500
 
+# 92 6.49
 # 90 5.83 <- xgb1500
 # 88 5.37 <- 1000 estimators
 # 74 1.68
 # 71 1.13
 # 67 0.41
 # 72 1.57
-# 73 1.67
 
 DATA = [
     {
@@ -28462,7 +28460,6 @@ DATA = [
                     BRIANNA_VAN_BUREN: 1.85,  # 1.87
                     LIVINHA_SOUZA: 1.95,  # 1.80
                 },
-                'prediction': BRIANNA_VAN_BUREN,
             },
             {
                 'weight_class': MENS_BANTAMWEIGHT,
@@ -28487,7 +28484,6 @@ DATA = [
                     JONATHAN_MARTINEZ: 2.20,  # 2.55
                     LIU_PINGYUAN: 1.65,  # 1.44
                 },
-                'prediction': LIU_PINGYUAN,
             },
             {
                 'weight_class': MENS_FEATHERWEIGHT,
@@ -28512,7 +28508,6 @@ DATA = [
                     DARREN_ELKINS: 1.90,  # 1.80
                     RYAN_HALL: 1.90,  # 1.89
                 },
-                'prediction': RYAN_HALL,
             },
             {
                 'weight_class': WOMANS_BANTAMWEIGHT,
@@ -28537,7 +28532,6 @@ DATA = [
                     NICCO_MONTANO: 2.25,  # 2.95
                     JULIANNA_PENA: 1.60,  # 1.40
                 },
-                'prediction': JULIANNA_PENA,
             },
             {
                 'weight_class': MENS_FEATHERWEIGHT,
@@ -28562,7 +28556,6 @@ DATA = [
                     ANDRE_FILI: 1.85,  # 1.55
                     SHEYMON_DA_SILVA_MORAES: 1.95,  # 2.33
                 },
-                'prediction': SHEYMON_DA_SILVA_MORAES,
             },
             {
                 'weight_class': MENS_LIGHT_HEAVYWEIGHT,
@@ -28587,7 +28580,6 @@ DATA = [
                     JOHN_ALLAN: 4.20,  # 3.75
                     MIKE_RODRIGUEZ: 1.22,  # 1.22
                 },
-                'prediction': JOHN_ALLAN,
             },
             {
                 'weight_class': MENS_MIDDLEWEIGHT,
@@ -28613,6 +28605,7 @@ DATA = [
                     MARVIN_VETTORI: 1.62,  # 1.44
                 },
                 'prediction': CEZAR_FERREIRA,
+                'bet': 10,
             },
             {
                 'weight_class': MENS_MIDDLEWEIGHT,
@@ -28638,6 +28631,7 @@ DATA = [
                     WELLINGTON_TURMAN: 2.60,  # 2.70
                 },
                 'prediction': WELLINGTON_TURMAN,
+                'bet': 10,
             },
             {
                 'weight_class': MENS_FEATHERWEIGHT,
@@ -28659,10 +28653,11 @@ DATA = [
                 },
                 'time': '21:35',
                 'odds': {
-                    JOSH_EMMETT: 2.10,  # 2.40
+                    JOSH_EMMETT: 2.25,  # 2.40
                     MIRSAD_BEKTIC: 1.70,  # 1.54
                 },
-                'prediction': MIRSAD_BEKTIC,
+                'prediction': JOSH_EMMETT,
+                'bet': 10,
             },
             {
                 'weight_class': MENS_BANTAMWEIGHT,
@@ -28688,6 +28683,7 @@ DATA = [
                     URIJAH_FABER: 3.50,  # 3.80
                 },
                 'prediction': RICKY_SIMON,
+                'bet': 10,
             },
             {
                 'weight_class': WOMANS_BANTAMWEIGHT,
@@ -28713,6 +28709,7 @@ DATA = [
                     ASPEN_LADD: 1.85,  # 1.74
                 },
                 'prediction': GERMAINE_DE_RANDAMIE,
+                'bet': 10,
             },
         ]
     }
