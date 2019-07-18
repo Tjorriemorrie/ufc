@@ -264,9 +264,9 @@ def main():
     #     outcomes[l] -= 1
     # for o, v in outcomes.items():
     #     logger.info(f'{o} => {v}')
-    logger.info(f'correct mean {out_wins.mean()} upset mean {out_loss.mean()}')
-    logger.info(f'correct percentiles: {np.percentile(out_wins, [10, 30, 50, 70, 90])}')
-    logger.info(f'upset percentiles: {np.percentile(out_loss, [10, 30, 50, 70, 90])}')
+    # logger.info(f'correct mean {out_wins.mean()} upset mean {out_loss.mean()}')
+    # logger.info(f'correct percentiles: {np.percentile(out_wins, [10, 30, 50, 70, 90])}')
+    # logger.info(f'upset percentiles: {np.percentile(out_loss, [10, 30, 50, 70, 90])}')
 
     # # do predictions
     # for scene in PREDICTIONS:
