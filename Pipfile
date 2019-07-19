@@ -6,15 +6,12 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-trueskill = "*"
 loguru = "*"
-cma = "*"
-numpy = "*"
-pandas = "*"
 scikit-learn = "*"
+trueskill = "*"
 xgboost = "*"
 keras-rl = "*"
 tensorflow = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
