@@ -2,6 +2,941 @@ from men import *
 
 DATA = [
     {
+        'name': 'Internazionali BNL d\'Italia',
+        'date': '2019-05-12',
+        'location': 'Rome, Italy',
+        'matches': [
+
+            # 2019-05-11
+            {
+                'round': 512,
+                'players': [
+                    BERNARD_TOMIC,
+                    RICCARDO_BALZERANI
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    BERNARD_TOMIC: 1.19,
+                    RICCARDO_BALZERANI: 4.43
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    NICOLAS_JARRY,
+                    MARIUS_COPIL
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    NICOLAS_JARRY: 1.33,
+                    MARIUS_COPIL: 3.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CASPER_RUUD,
+                    LORENZO_MUSETTI
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    CASPER_RUUD: 1.15,
+                    LORENZO_MUSETTI: 5.18
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    DENIS_KUDLA
+                ],
+                'score': [(7, 6), (4, 6), (6, 3)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.31,
+                    DENIS_KUDLA: 3.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_EVANS,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    DANIEL_EVANS: 2.63,
+                    ROBIN_HAASE: 1.37
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FILLIPPO_BALDI,
+                    MARTIN_KLIZAN
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    FILLIPPO_BALDI: 3.94,
+                    MARTIN_KLIZAN: 1.22
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    REILLY_OPELKA,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    REILLY_OPELKA: 1.71,
+                    ERNESTS_GULBIS: 1.90
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TAYLOR_FRITZ,
+                    JACOPO_BERRETTINI
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.09,
+                    JACOPO_BERRETTINI: 6.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    JAUME_MUNAR
+                ],
+                'score': [(6, 7), (6, 3), (7, 6)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 2.15,
+                    JAUME_MUNAR: 1.61
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 0), (6, 3)],
+                'odds': {
+                    DAMIR_DZUMHUR: 2.40,
+                    TARO_DANIEL: 1.56
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(6, 3), (1, 6), (6, 4)],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 2.70,
+                    HUBERT_HURKACZ: 1.43
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CAMERON_NORRIE,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 7), (7, 5), (6, 3)],
+                'odds': {
+                    CAMERON_NORRIE: 1.51,
+                    PETER_GOJOWCZYK: 2.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BENOIT_PAIRE,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    BENOIT_PAIRE: 1.15,
+                    BRADLEY_KLAHN: 5.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    ALJAZ_BEDENE
+                ],
+                'score': [(7, 6), (6, 7), (6, 1)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.56,
+                    ALJAZ_BEDENE: 2.15
+                }
+            },
+
+            # 2019-05-12
+            {
+                'round': 256,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    BERNARD_TOMIC
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.25,
+                    BERNARD_TOMIC: 3.34
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    CASPER_RUUD,
+                    MIOMIR_KECMANOVIC
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    CASPER_RUUD: 1.36,
+                    MIOMIR_KECMANOVIC: 2.52
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    TAYLOR_FRITZ,
+                    FILLIPPO_BALDI
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.41,
+                    FILLIPPO_BALDI: 2.75
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 4), (4, 6), (6, 3)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.91,
+                    DAMIR_DZUMHUR: 1.71
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    CAMERON_NORRIE,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 3), (4, 6), (7, 6)],
+                'odds': {
+                    CAMERON_NORRIE: 2.60,
+                    NICOLAS_JARRY: 1.39
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    BENOIT_PAIRE,
+                    REILLY_OPELKA
+                ],
+                'score': [(5, 7), (6, 2), (7, 6)],
+                'odds': {
+                    BENOIT_PAIRE: 1.54,
+                    REILLY_OPELKA: 2.29
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DANIEL_EVANS,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    DANIEL_EVANS: 2.90,
+                    DUSAN_LAJOVIC: 1.27
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    JANNIK_SINNER,
+                    STEVE_JOHNSON
+                ],
+                'score': [(1, 6), (6, 1), (7, 5)],
+                'odds': {
+                    JANNIK_SINNER: 2.30,
+                    STEVE_JOHNSON: 1.65
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    PHILIPP_KOHLSCHREIBER,
+                    GILLES_SIMON
+                ],
+                'score': [(6, 2), (3, 6), (6, 3)],
+                'odds': {
+                    PHILIPP_KOHLSCHREIBER: 1.33,
+                    GILLES_SIMON: 3.26
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    LUCAS_POUILLE
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.38,
+                    LUCAS_POUILLE: 3.15
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 1), (3, 6), (6, 1)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.23,
+                    ANDREAS_SEPPI: 4.17
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.60,
+                    MARTON_FUCSOVICS: 1.52
+                }
+            },
+
+            # 2019-05-13
+            {
+                'round': 64,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    KYLE_EDMUND
+                ],
+                'score': [(4, 6), (6, 4), (6, 2)],
+                'odds': {
+                    FERNANDO_VERDASCO: 2.20,
+                    KYLE_EDMUND: 1.67
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    PABLO_CARRENO_BUSTA
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.67,
+                    PABLO_CARRENO_BUSTA: 2.19
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    CASPER_RUUD,
+                    DANIEL_EVANS
+                ],
+                'score': [(7, 5), (0, 6), (6, 3)],
+                'odds': {
+                    CASPER_RUUD: 1.42,
+                    DANIEL_EVANS: 2.88
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    CAMERON_NORRIE,
+                    JOHN_MILLMAN
+                ],
+                'score': [(3, 6), (6, 3), (6, 4)],
+                'odds': {
+                    CAMERON_NORRIE: 1.87,
+                    JOHN_MILLMAN: 1.89
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    LASLO_DJERE,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    LASLO_DJERE: 1.37,
+                    MIKHAIL_KUKUSHKIN: 2.90
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    MARCO_CECCHINATO,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(4, 6), (6, 3), (6, 1)],
+                'odds': {
+                    MARCO_CECCHINATO: 1.25,
+                    ALEX_DE_MINAUR: 4.04
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    GAEL_MONFILS
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 3.30,
+                    GAEL_MONFILS: 1.36
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    BORNA_CORIC,
+                    FELIX_AUGER_ALIASSIME
+                ],
+                'score': [(6, 7), (6, 3), (6, 4)],
+                'odds': {
+                    BORNA_CORIC: 2.00,
+                    FELIX_AUGER_ALIASSIME: 1.80
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    KAREN_KHACHANOV,
+                    LORENZO_SONEGO
+                ],
+                'score': [(6, 3), (6, 7), (6, 3)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.83,
+                    LORENZO_SONEGO: 2.00
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    FABIO_FOGNINI,
+                    JO_WILFRIED_TSONGA
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    FABIO_FOGNINI: 1.36,
+                    JO_WILFRIED_TSONGA: 3.35
+                }
+            },
+
+            # 2019-05-14
+            {
+                'round': 64,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    GRIGOR_DIMITROV
+                ],
+                'score': [(6, 4), (6, 7), (6, 3)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 2.14,
+                    GRIGOR_DIMITROV: 1.71
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    JOAO_SOUSA,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 3), (6, 7), (7, 6)],
+                'odds': {
+                    JOAO_SOUSA: 2.70,
+                    FRANCES_TIAFOE: 1.45
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.43,
+                    YOSHIHITO_NISHIOKA: 2.84
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    DAVID_GOFFIN,
+                    STAN_WAWRINKA
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    DAVID_GOFFIN: 2.60,
+                    STAN_WAWRINKA: 1.49
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    TAYLOR_FRITZ,
+                    GUIDO_PELLA
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    TAYLOR_FRITZ: 3.15,
+                    GUIDO_PELLA: 1.38
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    JEREMY_CHARDY,
+                    RICHARD_GASQUET
+                ],
+                'score': [(6, 1), (4, 6), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 64,
+                'players': [
+                    RADU_ALBOT,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    RADU_ALBOT: 2.79,
+                    BENOIT_PAIRE: 1.44
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    NICK_KYRGIOS,
+                    DANILL_MEDVEDEV
+                ],
+                'score': [(6, 3), (3, 6), (6, 3)],
+                'odds': {
+                    NICK_KYRGIOS: 2.99,
+                    DANILL_MEDVEDEV: 1.39
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    MARIN_CILIC,
+                    ANDREA_BASSO
+                ],
+                'score': [(6, 1), (7, 5)],
+                'odds': {
+                    MARIN_CILIC: 1.07,
+                    ANDREA_BASSO: 7.79
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    LASLO_DJERE
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.26,
+                    LASLO_DJERE: 1.61
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BORNA_CORIC,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    BORNA_CORIC: 1.20,
+                    CAMERON_NORRIE: 4.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KAREN_KHACHANOV,
+                    ROBERTO_BAUTISTA_AGUT
+                ],
+                'score': [(5, 7), (6, 4), (6, 2)],
+                'odds': {
+                    KAREN_KHACHANOV: 2.20,
+                    ROBERTO_BAUTISTA_AGUT: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.31,
+                    ALEXANDER_ZVEREV: 1.61
+                }
+            },
+
+            # 2019-05-16
+            {
+                'round': 32,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.44,
+                    ALBERT_RAMOS_VINOLAS: 2.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CASPER_RUUD,
+                    NICK_KYRGIOS
+                ],
+                'score': [(6, 3), (6, 7), (2, 1)],
+                'def': True,
+                'odds': {
+                    CASPER_RUUD: 3.10,
+                    NICK_KYRGIOS: 1.36,
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PHILIPP_KOHLSCHREIBER,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    PHILIPP_KOHLSCHREIBER: 2.17,
+                    MARCO_CECCHINATO: 1.69
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FABIO_FOGNINI,
+                    RADU_ALBOT
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    FABIO_FOGNINI: 1.25,
+                    RADU_ALBOT: 3.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    MARIN_CILIC
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 2.40,
+                    MARIN_CILIC: 1.57
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    JANNIK_SINNER
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.13,
+                    JANNIK_SINNER: 5.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    DAVID_GOFFIN
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 2.35,
+                    DAVID_GOFFIN: 1.56
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KEI_NISHIKORI,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    KEI_NISHIKORI: 1.31,
+                    TAYLOR_FRITZ: 3.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    DOMINIC_THIEM
+                ],
+                'score': [(4, 6), (6, 4), (7, 5)],
+                'odds': {
+                    FERNANDO_VERDASCO: 4.90,
+                    DOMINIC_THIEM: 1.16
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROGER_FEDERER,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    ROGER_FEDERER: 1.07,
+                    JOAO_SOUSA: 8.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RAFAEL_NADAL,
+                    JEREMY_CHARDY
+                ],
+                'score': [(6, 0), (6, 1)],
+                'odds': {
+                    RAFAEL_NADAL: 1.03,
+                    JEREMY_CHARDY: 11.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.10,
+                    DENIS_SHAPOVALOV: 7.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 2.37,
+                    MATTEO_BERRETTINI: 1.54
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    KAREN_KHACHANOV
+                ],
+                'score': [(7, 5), (3, 6), (6, 3)],
+                'odds': {
+                    FERNANDO_VERDASCO: 2.60,
+                    KAREN_KHACHANOV: 2.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    FABIO_FOGNINI
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.43,
+                    FABIO_FOGNINI: 2.45
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    CASPER_RUUD
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.36,
+                    CASPER_RUUD: 3.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KEI_NISHIKORI,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(3, 6), (7, 6), (6, 3)],
+                'odds': {
+                    KEI_NISHIKORI: 1.50,
+                    JAN_LENNARD_STRUFF: 2.65
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROGER_FEDERER,
+                    BORNA_CORIC
+                ],
+                'score': [(2, 6), (6, 4), (7, 6)],
+                'odds': {
+                    ROGER_FEDERER: 1.50,
+                    BORNA_CORIC: 2.45
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RAFAEL_NADAL,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(6, 1), (6, 0)],
+                'odds': {
+                    RAFAEL_NADAL: 1.02,
+                    NIKOLOZ_BASILASHVILI: 11.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.08,
+                    PHILIPP_KOHLSCHREIBER: 7.00
+                }
+            },
+
+            # 2019-05-17
+            {
+                'round': 8,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    KEI_NISHIKORI
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 2.30,
+                    KEI_NISHIKORI: 1.57
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    ROGER_FEDERER
+                ],
+                'score': [],
+                'wo': True,
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.69,
+                    ROGER_FEDERER: 2.15
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RAFAEL_NADAL,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 4), (6, 0)],
+                'odds': {
+                    RAFAEL_NADAL: 1.03,
+                    FERNANDO_VERDASCO: 12.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    JUAN_MARTIN_DEL_POTRO
+                ],
+                'score': [(4, 6), (7, 6), (6, 4)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.12,
+                    JUAN_MARTIN_DEL_POTRO: 6.62
+                }
+            },
+
+            # 2019-05-18
+            {
+                'round': 4,
+                'players': [
+                    RAFAEL_NADAL,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    RAFAEL_NADAL: 1.21,
+                    STEFANOS_TSITSIPAS: 4.00
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(6, 3), (6, 7), (6, 3)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.12,
+                    DIEGO_SCHWARTZMAN: 6.50
+                }
+            },
+
+            # 2019-05-19
+            {
+                'round': 2,
+                'players': [
+                    RAFAEL_NADAL,
+                    NOVAK_DJOKOVIC
+                ],
+                'score': [(6, 0), (4, 6), (6, 1)],
+                'odds': {
+                    RAFAEL_NADAL: 1.47,
+                    NOVAK_DJOKOVIC: 2.62
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Banque Eric Sturdza Geneva Open',
         'date': '2019-05-19',
         'location': 'Geneva, Switzerland',
@@ -1047,12 +1982,12 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    MATTEO_BARRETTINI,
+                    MATTEO_BERRETTINI,
                     PABLO_ANDUJAR
                 ],
                 'score': [(6, 7), (6, 4), (6, 4), (6, 2)],
                 'odds': {
-                    MATTEO_BARRETTINI: 1.19,
+                    MATTEO_BERRETTINI: 1.19,
                     PABLO_ANDUJAR: 5.00
                 }
             },
@@ -1779,12 +2714,12 @@ DATA = [
                 'round': 64,
                 'players': [
                     CASPER_RUUD,
-                    MATTEO_BARRETTINI
+                    MATTEO_BERRETTINI
                 ],
                 'score': [(6, 4), (7, 5), (6, 3)],
                 'odds': {
                     CASPER_RUUD: 2.55,
-                    MATTEO_BARRETTINI: 1.51
+                    MATTEO_BERRETTINI: 1.51
                 }
             },
             {
@@ -2734,12 +3669,12 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    MATTEO_BARRETTINI,
+                    MATTEO_BERRETTINI,
                     NICK_KYRGIOS
                 ],
                 'score': [(6, 3), (6, 4)],
                 'odds': {
-                    MATTEO_BARRETTINI: 2.77,
+                    MATTEO_BERRETTINI: 2.77,
                     NICK_KYRGIOS: 1.45
                 }
             },
@@ -2867,12 +3802,12 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    MATTEO_BARRETTINI,
+                    MATTEO_BERRETTINI,
                     KAREN_KHACHANOV
                 ],
                 'score': [(6, 4), (6, 2)],
                 'odds': {
-                    MATTEO_BARRETTINI: 1.95,
+                    MATTEO_BERRETTINI: 1.95,
                     KAREN_KHACHANOV: 1.74
                 }
             },
@@ -2904,12 +3839,12 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    MATTEO_BARRETTINI,
+                    MATTEO_BERRETTINI,
                     DENIS_KUDLA
                 ],
                 'score': [(6, 3), (6, 3)],
                 'odds': {
-                    MATTEO_BARRETTINI: 1.49,
+                    MATTEO_BERRETTINI: 1.49,
                     DENIS_KUDLA: 2.61
                 }
             },
@@ -2941,12 +3876,12 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    MATTEO_BARRETTINI,
+                    MATTEO_BERRETTINI,
                     JAN_LENNARD_STRUFF
                 ],
                 'score': [(6, 4), (7, 5)],
                 'odds': {
-                    MATTEO_BARRETTINI: 1.76,
+                    MATTEO_BERRETTINI: 1.76,
                     JAN_LENNARD_STRUFF: 2.10
                 }
             },
@@ -2967,12 +3902,12 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    MATTEO_BARRETTINI,
+                    MATTEO_BERRETTINI,
                     FELIX_AUGER_ALIASSIME
                 ],
                 'score': [(6, 4), (7, 6)],
                 'odds': {
-                    MATTEO_BARRETTINI: 1.47,
+                    MATTEO_BERRETTINI: 1.47,
                     FELIX_AUGER_ALIASSIME: 2.70
                 }
             }
