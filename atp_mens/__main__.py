@@ -63,6 +63,7 @@ def get_regressor(training_data, label_data, scaler):
     return reg
 
 
+# 61 -1.57 <- geneva
 # 56 -1.58 <- parc auvergne
 # 54 -1.41 <- roland garros 2019
 # 54 -1.29 <- partial roland garros 2019

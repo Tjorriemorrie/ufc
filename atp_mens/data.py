@@ -2,6 +2,474 @@ from men import *
 
 DATA = [
     {
+        'name': 'Banque Eric Sturdza Geneva Open',
+        'date': '2019-05-19',
+        'location': 'Geneva, Switzerland',
+        'matches': [
+
+            # 2019-05-18
+            {
+                'round': 512,
+                'players': [
+                    BERNABE_ZAPATA_MIRALLES,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(5, 7), (6, 4), (6, 2)],
+                'odds': {
+                    BERNABE_ZAPATA_MIRALLES: 1.40,
+                    BRADLEY_KLAHN: 2.75
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    KAICHI_UCHIDA,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    KAICHI_UCHIDA: 3.78,
+                    RICARDAS_BERANKIS: 1.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LORENZO_SONEGO,
+                    DANIEL_MASUR
+                ],
+                'score': [(4, 6), (6, 2), (6, 3)],
+                'odds': {
+                    LORENZO_SONEGO: 1.20,
+                    DANIEL_MASUR: 3.99
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TOMMY_PAUL,
+                    STEPHANE_ROBERT
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    TOMMY_PAUL: 1.18,
+                    STEPHANE_ROBERT: 4.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    ULISES_BLANCH
+                ],
+                'score': [(4, 6), (6, 1), (6, 4)],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 1.21,
+                    ULISES_BLANCH: 3.60
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    THOMAS_FABBIANO,
+                    MARKO_MILADINOVIC
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.10,
+                    MARKO_MILADINOVIC: 6.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    JC_ARAGONE
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.10,
+                    JC_ARAGONE: 6.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    MARC_ANDREA_HUESLER
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.08,
+                    MARC_ANDREA_HUESLER: 6.50
+                }
+            },
+
+            # 2019-05-19
+            {
+                'round': 256,
+                'players': [
+                    BERNABE_ZAPATA_MIRALLES,
+                    KAICHI_UCHIDA
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    BERNABE_ZAPATA_MIRALLES: 1.26,
+                    KAICHI_UCHIDA: 3.47
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    LORENZO_SONEGO,
+                    MIOMIR_KECMANOVIC
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    LORENZO_SONEGO: 1.47,
+                    MIOMIR_KECMANOVIC: 2.63
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    TOMMY_PAUL
+                ],
+                'score': [(6, 2), (4, 6), (6, 3)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.65,
+                    TOMMY_PAUL: 2.15
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.18,
+                    THOMAS_FABBIANO: 4.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.25,
+                    MISCHA_ZVEREV: 4.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ERNESTS_GULBIS,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    ERNESTS_GULBIS: 2.51,
+                    YOSHIHITO_NISHIOKA: 1.53
+                }
+            },
+
+            # 2019-05-20
+            {
+                'round': 32,
+                'players': [
+                    JANKO_TIPSAREVIC,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    JANKO_TIPSAREVIC: 2.30,
+                    PETER_GOJOWCZYK: 1.56
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_KUDLA,
+                    JORDAN_THOMPSON
+                ],
+                'score': [(5, 7), (6, 2), (6, 4)],
+                'odds': {
+                    DENIS_KUDLA: 2.30,
+                    JORDAN_THOMPSON: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    BERNABE_ZAPATA_MIRALLES
+                ],
+                'score': [(6, 4), (4, 6), (6, 3)],
+                'odds': {
+                    TARO_DANIEL: 1.61,
+                    BERNABE_ZAPATA_MIRALLES: 2.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HUGO_DELLIEN,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 1), (3, 6), (6, 4)],
+                'odds': {
+                    HUGO_DELLIEN: 1.79,
+                    ANDREAS_SEPPI: 1.95
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_JARRY,
+                    MATTHEW_EBDEN
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    NICOLAS_JARRY: 1.12,
+                    MATTHEW_EBDEN: 6.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RADU_ALBOT,
+                    LORENZO_SONEGO
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    RADU_ALBOT: 2.40,
+                    LORENZO_SONEGO: 1.56
+                }
+            },
+
+            # 2019-05-21
+            {
+                'round': 32,
+                'players': [
+                    JOAO_SOUSA,
+                    LEONARDO_MAYER
+                ],
+                'score': [(6, 2), (6, 7), (6, 4)],
+                'odds': {
+                    JOAO_SOUSA: 1.98,
+                    LEONARDO_MAYER: 1.74
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [(6, 7), (6, 4), (7, 5)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.49,
+                    FELICIANO_LOPEZ: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    GRIGOR_DIMITROV
+                ],
+                'score': [(6, 7), (6, 3), (6, 2)],
+                'odds': {
+                    FEDERICO_DELBONIS: 2.70,
+                    GRIGOR_DIMITROV: 1.44
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    HUGO_DELLIEN,
+                    JANKO_TIPSAREVIC
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    HUGO_DELLIEN: 1.44,
+                    JANKO_TIPSAREVIC: 2.75
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.15,
+                    ERNESTS_GULBIS: 5.50
+                }
+            },
+
+            # 2019-05-22
+            {
+                'round': 16,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 0), (6, 3)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.63,
+                    JOAO_SOUSA: 2.21
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NICOLAS_JARRY,
+                    DENIS_KUDLA
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    NICOLAS_JARRY: 1.40,
+                    DENIS_KUDLA: 3.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RADU_ALBOT,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(6, 1), (6, 7), (6, 4)],
+                'odds': {
+                    RADU_ALBOT: 1.79,
+                    JUAN_IGNACIO_LONDERO: 1.95
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.95,
+                    MARTON_FUCSOVICS: 1.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    TARO_DANIEL,
+                    CHRISTIAN_GARIN
+                ],
+                'score': [(6, 2), (4, 6), (6, 4)],
+                'odds': {
+                    TARO_DANIEL: 3.25,
+                    CHRISTIAN_GARIN: 1.31
+                }
+            },
+
+            # 2019-05-23
+            {
+                'round': 8,
+                'players': [
+                    NICOLAS_JARRY,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 1), (7, 5)],
+                'odds': {
+                    NICOLAS_JARRY: 1.46,
+                    TARO_DANIEL: 2.87
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.67,
+                    ALBERT_RAMOS_VINOLAS: 2.20
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RADU_ALBOT,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    RADU_ALBOT: 1.83,
+                    DAMIR_DZUMHUR: 1.87
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    HUGO_DELLIEN
+                ],
+                'score': [(7, 5), (3, 6), (6, 3)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.19,
+                    HUGO_DELLIEN: 5.37
+                }
+            },
+
+            # 2019-05-24
+            {
+                'round': 4,
+                'players': [
+                    NICOLAS_JARRY,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    NICOLAS_JARRY: 1.74,
+                    RADU_ALBOT: 1.97
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(7, 5), (6, 7), (6, 3)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.45,
+                    FEDERICO_DELBONIS: 2.86
+                }
+            },
+
+            # 2019-05-25
+            {
+                'round': 2,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 3), (3, 6), (7, 6)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.47,
+                    NICOLAS_JARRY: 2.82
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Open Parc Auvergne-Rhone-Alpes Lyon',
         'date': '2019-05-19',
         'location': 'Lyon, France',
