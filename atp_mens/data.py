@@ -2,6 +2,480 @@ from men import *
 
 DATA = [
     {
+        'name': 'Open Parc Auvergne-Rhone-Alpes Lyon',
+        'date': '2019-05-19',
+        'location': 'Lyon, France',
+        'matches': [
+
+            # 2019-05-18
+            {
+                'round': 512,
+                'players': [
+                    MAXIME_JANVIER,
+                    GUILHERME_CLEZAR
+                ],
+                'score': [(7, 5), (4, 6), (6, 4)],
+                'odds': {
+                    MAXIME_JANVIER: 1.48,
+                    GUILHERME_CLEZAR: 2.60
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    QUENTIN_HALYS,
+                    MARIO_VILELLA_MARTINEZ
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    QUENTIN_HALYS: 1.34,
+                    MARIO_VILELLA_MARTINEZ: 2.90
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JANNIK_SINNER,
+                    ANTOINE_HOANG
+                ],
+                'score': [(6, 4), (5, 7), (6, 1)],
+                'odds': {
+                    JANNIK_SINNER: 1.74,
+                    ANTOINE_HOANG: 1.95
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GREGOIRE_BARRERE,
+                    HUGO_GRENIER
+                ],
+                'score': [(6, 7), (6, 4), (7, 6)],
+                'odds': {
+                    GREGOIRE_BARRERE: 1.17,
+                    HUGO_GRENIER: 5.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEVEN_DIEZ,
+                    ALEXEI_POPYRIN
+                ],
+                'score': [(6, 4), (3, 6), (7, 5)],
+                'odds': {
+                    STEVEN_DIEZ: 2.40,
+                    ALEXEI_POPYRIN: 1.48
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JIRI_VESELY,
+                    NICOLA_KUHN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JIRI_VESELY: 1.65,
+                    NICOLA_KUHN: 2.13
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TRISTAN_LAMASINE,
+                    ALEXANDER_BUBLIK
+                ],
+                'score': [(6, 2), (2, 6), (7, 5)],
+                'odds': {
+                    TRISTAN_LAMASINE: 1.78,
+                    ALEXANDER_BUBLIK: 1.74
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LLOYD_HARRIS,
+                    KENNY_DE_SCHEPPER
+                ],
+                'score': [(3, 6), (6, 3), (6, 2)],
+                'odds': {
+                    LLOYD_HARRIS: 1.19,
+                    KENNY_DE_SCHEPPER: 4.40
+                }
+            },
+
+            # 2019-05-19
+            {
+                'round': 256,
+                'players': [
+                    JANNIK_SINNER,
+                    TRISTAN_LAMASINE
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    JANNIK_SINNER: 1.48,
+                    TRISTAN_LAMASINE: 2.45
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    STEVEN_DIEZ,
+                    QUENTIN_HALYS
+                ],
+                'score': [(6, 2), (3, 6), (6, 3)],
+                'odds': {
+                    STEVEN_DIEZ: 2.90,
+                    QUENTIN_HALYS: 1.33
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JIRI_VESELY,
+                    GREGOIRE_BARRERE
+                ],
+                'score': [(3, 6), (6, 3), (6, 2)],
+                'odds': {
+                    JIRI_VESELY: 1.48,
+                    GREGOIRE_BARRERE: 2.50
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MAXIME_JANVIER,
+                    LLOYD_HARRIS
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    MAXIME_JANVIER: 2.05,
+                    LLOYD_HARRIS: 1.69
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_MILLMAN,
+                    PABLO_ANDUJAR
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    JOHN_MILLMAN: 2.04,
+                    PABLO_ANDUJAR: 1.72
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.60,
+                    DUSAN_LAJOVIC: 2.30
+                }
+            },
+
+            # 2019-05-20
+            {
+                'round': 32,
+                'players': [
+                    TRISTAN_LAMASINE,
+                    JANNIK_SINNER
+                ],
+                'score': [(6, 0), (7, 6)],
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEVE_JOHNSON,
+                    LLOYD_HARRIS
+                ],
+                'score': [(6, 2), (7, 6)],
+            },
+            {
+                'round': 32,
+                'players': [
+                    UGO_HUMBERT,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    UGO_HUMBERT: 2.50,
+                    CAMERON_NORRIE: 1.49
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TAYLOR_FRITZ,
+                    JIRI_VESELY
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.67,
+                    JIRI_VESELY: 2.15
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEVEN_DIEZ,
+                    BERNARD_TOMIC
+                ],
+                'score': [(6, 4), (4, 1)],
+                'retired': True,
+                'odds': {
+                    STEVEN_DIEZ: 1.74,
+                    BERNARD_TOMIC: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    JEREMY_CHARDY
+                ],
+                'score': [(6, 7), (6, 2), (7, 6)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.05,
+                    JEREMY_CHARDY: 1.71
+                }
+            },
+
+            # 2019-05-21
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(3, 6), (7, 6), (6, 1)],
+                'odds': {
+                    BENOIT_PAIRE: 1.33,
+                    MACKENZIE_MCDONALD: 3.09
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CORENTIN_MOUTET,
+                    REILLY_OPELKA
+                ],
+                'score': [(6, 3), (2, 6), (7, 6)],
+                'odds': {
+                    CORENTIN_MOUTET: 2.51,
+                    REILLY_OPELKA: 1.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CUEVAS,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    PABLO_CUEVAS: 1.71,
+                    HUBERT_HURKACZ: 2.05
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEVE_JOHNSON,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(7, 6), (5, 7), (6, 1)],
+                'odds': {
+                    STEVE_JOHNSON: 2.55,
+                    PIERRE_HUGUES_HERBERT: 1.51
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    JOHN_MILLMAN
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.43,
+                    JOHN_MILLMAN: 2.55
+                }
+            },
+
+            # 2019-05-22
+            {
+                'round': 16,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    STEVEN_DIEZ
+                ],
+                'score': [(3, 6), (7, 6), (6, 3)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.20,
+                    STEVEN_DIEZ: 4.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    BENOIT_PAIRE,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    BENOIT_PAIRE: 2.65,
+                    PABLO_CUEVAS: 1.48
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    TAYLOR_FRITZ,
+                    RICHARD_GASQUET
+                ],
+                'score': [],
+                'wo': True,
+                'odds': {
+                    TAYLOR_FRITZ: 1.54,
+                    RICHARD_GASQUET: 2.30
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    UGO_HUMBERT
+                ],
+                'score': [(2, 6), (7, 6), (6, 2)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.47,
+                    UGO_HUMBERT: 2.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(4, 6), (6, 4), (6, 3)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.22,
+                    CORENTIN_MOUTET: 4.15
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    TRISTAN_LAMASINE
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.25,
+                    TRISTAN_LAMASINE: 3.85
+                }
+            },
+
+            # 2019-05-23
+            {
+                'round': 8,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    STEVE_JOHNSON
+                ],
+                'score': [(6, 4), (2, 6), (6, 4)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.33,
+                    STEVE_JOHNSON: 3.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    BENOIT_PAIRE,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(6, 3), (4, 6), (7, 6)],
+                'odds': {
+                    BENOIT_PAIRE: 1.80,
+                    DENIS_SHAPOVALOV: 2.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    TAYLOR_FRITZ,
+                    ROBERTO_BAUTISTA_AGUT
+                ],
+                'score': [(6, 7), (6, 3), (6, 4)],
+                'odds': {
+                    TAYLOR_FRITZ: 2.40,
+                    ROBERTO_BAUTISTA_AGUT: 1.56
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    JO_WILFRIED_TSONGA
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.22,
+                    JO_WILFRIED_TSONGA: 1.65
+                }
+            },
+
+            # 2019-05-24
+            {
+                'round': 4,
+                'players': [
+                    BENOIT_PAIRE,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    BENOIT_PAIRE: 2.04,
+                    TAYLOR_FRITZ: 1.71
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(2, 6), (7, 6), (6, 4)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.64,
+                    NIKOLOZ_BASILASHVILI: 2.15
+                }
+            },
+
+            # 2019-05-25
+            {
+                'round': 2,
+                'players': [
+                    BENOIT_PAIRE,
+                    FELIX_AUGER_ALIASSIME
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    BENOIT_PAIRE: 1.95,
+                    FELIX_AUGER_ALIASSIME: 1.80
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Roland Garros',
         'date': '2019-05-26',
         'location': 'Paris, France',
@@ -1535,7 +2009,7 @@ DATA = [
         'location': 'Stuttgart, Germany',
         'matches': [
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     GREGOIRE_BARRERE,
                     SASI_KUMAR_MUKUND,
@@ -1549,7 +2023,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     SERGIY_STAKHOVSKY,
                     ADRIAN_MENENDEZ_MACEIRAS,
@@ -1563,7 +2037,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     ALEXEI_POPYRIN,
                     MAVERICK_BANES,
@@ -1577,7 +2051,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     FELICIANO_LOPEZ,
                     TIM_PUETZ,
@@ -1591,7 +2065,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     VIKTOR_GALOVIC,
                     BRAYDEN_SCHNUR,
@@ -1605,7 +2079,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     DUSTIN_BROWN,
                     DENIS_ISTOMIN,
@@ -1619,7 +2093,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     ALEXANDER_BUBLIK,
                     HIROKI_MORIYA,
@@ -1633,7 +2107,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q1',
+                'round': 512,
                 'players': [
                     MATTEO_VIOLA,
                     PRAJNESH_GUNNESWARAN
@@ -1649,7 +2123,7 @@ DATA = [
             },
 
             {
-                'round': 'Q2',
+                'round': 256,
                 'players': [
                     DUSTIN_BROWN,
                     GREGOIRE_BARRERE
@@ -1663,7 +2137,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q2',
+                'round': 256,
                 'players': [
                     VIKTOR_GALOVIC,
                     SERGIY_STAKHOVSKY
@@ -1677,7 +2151,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q2',
+                'round': 256,
                 'players': [
                     ALEXEI_POPYRIN,
                     MATTEO_VIOLA
@@ -1691,7 +2165,7 @@ DATA = [
                 }
             },
             {
-                'round': 'Q2',
+                'round': 256,
                 'players': [
                     FELICIANO_LOPEZ,
                     ALEXANDER_BUBLIK
