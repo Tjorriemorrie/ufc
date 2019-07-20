@@ -54,15 +54,15 @@ def get_regressor(training_data, label_data, scaler):
     feature_names = [
         'win%', '~win%', 'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
-        'last', '~last', 'early', '~early',
-        'wins', '~wins', 'losses', '~losses',
-        'track', '~track']
+        'round']
     for name, val in zip(feature_names, reg.feature_importances_):
         logger.info(f'{name}: {val}')
 
     return reg
 
 
+# 62 -1.12 <- Mutua Madrid Open
+# 52 -2.88 <- added round as variable
 # 58 -2.32 <- italia
 # 61 -1.57 <- geneva
 # 56 -1.58 <- parc auvergne
@@ -117,6 +117,7 @@ def main():
                     ratings[p2].mu,
                     ratings[p1].sigma,
                     ratings[p2].sigma,
+                    1 / match['round'],
                 ],
                 [
                     win2_prob,
@@ -127,6 +128,7 @@ def main():
                     ratings[p1].mu,
                     ratings[p2].sigma,
                     ratings[p1].sigma,
+                    1 / match['round'],
                 ]
             ]
 
