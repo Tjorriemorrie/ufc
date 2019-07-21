@@ -2,6 +2,500 @@ from men import *
 
 DATA = [
     {
+        'name': 'BMW Open by FWU',
+        'date': '2019-04-29',
+        'location': 'Munich, Germany',
+        'matches': [
+
+            # 2019-04-27
+            {
+                'round': 512,
+                'players': [
+                    DENIS_ISTOMIN,
+                    CEDRIC_MARCEL_STEBE
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    DENIS_ISTOMIN: 1.63,
+                    CEDRIC_MARCEL_STEBE: 2.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YANNICK_MADEN,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(4, 6), (6, 2), (6, 2)],
+                'odds': {
+                    YANNICK_MADEN: 1.42,
+                    THOMAS_FABBIANO: 2.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANDREY_RUBLEV,
+                    MATTHIAS_BACHINGER
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    ANDREY_RUBLEV: 1.25,
+                    MATTHIAS_BACHINGER: 3.80
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    MIOMIR_KECMANOVIC
+                ],
+                'score': [(4, 6), (6, 1), (6, 4)],
+                'odds': {
+                    HENRI_LAAKSONEN: 2.25,
+                    MIOMIR_KECMANOVIC: 1.61
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LUKAS_ROSOL,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 4), (2, 6), (6, 4)],
+                'odds': {
+                    LUKAS_ROSOL: 2.61,
+                    PETER_GOJOWCZYK: 1.47
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 3), (2, 6), (6, 2)],
+                'odds': {
+                    THIAGO_MONTEIRO: 3.27,
+                    ALBERT_RAMOS_VINOLAS: 1.32
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PRAJNESH_GUNNESWARAN,
+                    ALEXANDER_ERLER
+                ],
+                'score': [(3, 6), (7, 6), (7, 5)],
+                'odds': {
+                    PRAJNESH_GUNNESWARAN: 1.05,
+                    ALEXANDER_ERLER: 10.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LORENZO_SONEGO,
+                    YANNICK_HANFMANN
+                ],
+                'score': [(7, 6), (6, 7), (6, 3)],
+                'odds': {
+                    LORENZO_SONEGO: 1.23,
+                    YANNICK_HANFMANN: 3.85
+                }
+            },
+
+            # 2019-04-28
+            {
+                'round': 256,
+                'players': [
+                    YANNICK_MADEN,
+                    LUKAS_ROSOL
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    YANNICK_MADEN: 1.32,
+                    LUKAS_ROSOL: 3.12
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(6, 3), (6, 7), (6, 4)],
+                'odds': {
+                    THIAGO_MONTEIRO: 2.70,
+                    ANDREY_RUBLEV: 1.43
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DENIS_ISTOMIN,
+                    PRAJNESH_GUNNESWARAN
+                ],
+                'score': [(4, 6), (6, 2), (6, 2)],
+                'odds': {
+                    DENIS_ISTOMIN: 1.67,
+                    PRAJNESH_GUNNESWARAN: 1.93
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    LORENZO_SONEGO,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(6, 0), (5, 7), (7, 6)],
+                'odds': {
+                    LORENZO_SONEGO: 1.38,
+                    HENRI_LAAKSONEN: 2.73
+                }
+            },
+
+            # 2019-04-29
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    UGO_HUMBERT,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    TARO_DANIEL: 1.65,
+                    UGO_HUMBERT: 2.15
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    LORENZO_SONEGO
+                ],
+                'score': [(7, 5), (4, 6), (7, 6)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.91,
+                    LORENZO_SONEGO: 1.80
+                }
+            },
+
+            # 2019-04-30
+            {
+                'round': 32,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    THIAGO_MONTEIRO: 3.50,
+                    JAN_LENNARD_STRUFF: 1.29
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RUDOLF_MOLLEKER,
+                    MARIUS_COPIL
+                ],
+                'score': [(7, 6), (4, 6), (6, 4)],
+                'odds': {
+                    RUDOLF_MOLLEKER: 1.77,
+                    MARIUS_COPIL: 1.97
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(6, 2), (4, 6), (6, 2)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.50,
+                    MAXIMILIAN_MARTERER: 2.53
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PHILIPP_KOHLSCHREIBER,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    PHILIPP_KOHLSCHREIBER: 1.32,
+                    ANDREAS_SEPPI: 3.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTIN_KLIZAN,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.50,
+                    ERNESTS_GULBIS: 2.54
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CRISTIAN_GARIN,
+                    YANNICK_MADEN
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.50,
+                    YANNICK_MADEN: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.33,
+                    DENIS_ISTOMIN: 3.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_PELLA,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    GUIDO_PELLA: 1.11,
+                    MISCHA_ZVEREV: 7.04
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 4), (1, 6), (6, 1)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.60,
+                    BENOIT_PAIRE: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_KUDLA,
+                    KYLE_EDMUND
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    DENIS_KUDLA: 6.00,
+                    KYLE_EDMUND: 1.11
+                }
+            },
+
+            # 2019-05-01
+            {
+                'round': 16,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    THIAGO_MONTEIRO
+                ],
+                'score': [(6, 7), (6, 4), (6, 3)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.57,
+                    THIAGO_MONTEIRO: 2.30
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CRISTIAN_GARIN,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(6, 1), (7, 5)],
+                'odds': {
+                    CRISTIAN_GARIN: 2.02,
+                    DIEGO_SCHWARTZMAN: 1.74
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCO_CECCHINATO,
+                    MARTIN_KLIZAN
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    MARCO_CECCHINATO: 1.65,
+                    MARTIN_KLIZAN: 2.31
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(7, 5), (6, 1)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.18,
+                    JUAN_IGNACIO_LONDERO: 5.15
+                }
+            },
+
+            # 2019-05-02
+            {
+                'round': 16,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    DENIS_KUDLA
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.26,
+                    DENIS_KUDLA: 3.85
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GUIDO_PELLA,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 1), (6, 7), (6, 3)],
+                'odds': {
+                    GUIDO_PELLA: 1.17,
+                    TARO_DANIEL: 5.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    RUDOLF_MOLLEKER
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.22,
+                    RUDOLF_MOLLEKER: 4.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PHILIPP_KOHLSCHREIBER,
+                    KAREN_KHACHANOV
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    PHILIPP_KOHLSCHREIBER: 1.50,
+                    KAREN_KHACHANOV: 2.35
+                }
+            },
+
+            # 2019-05-03
+            {
+                'round': 8,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(4, 6), (7, 5), (6, 4)],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.20,
+                    PHILIPP_KOHLSCHREIBER: 1.65
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    GUIDO_PELLA
+                ],
+                'score': [(4, 6), (6, 4), (6, 0)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.79,
+                    GUIDO_PELLA: 1.95
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARCO_CECCHINATO,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(1, 6), (7, 5), (7, 5)],
+                'odds': {
+                    MARCO_CECCHINATO: 1.57,
+                    MARTON_FUCSOVICS: 2.41
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    CRISTIAN_GARIN,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(6, 4), (5, 7), (7, 5)],
+                'odds': {
+                    CRISTIAN_GARIN: 3.28,
+                    ALEXANDER_ZVEREV: 1.37
+                }
+            },
+
+            # 2019-05-04
+            {
+                'round': 4,
+                'players': [
+                    CRISTIAN_GARIN,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.92,
+                    MARCO_CECCHINATO: 1.83
+                }
+            },
+
+            # 2019-05-05
+            {
+                'round': 4,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ROBERTO_BAUTISTA_AGUT
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.13,
+                    ROBERTO_BAUTISTA_AGUT: 1.69
+                }
+            },
+            {
+                'round': 2,
+                'players': [
+                    CRISTIAN_GARIN,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(6, 1), (3, 6), (7, 6)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.86,
+                    MATTEO_BERRETTINI: 1.95
+                }
+            },
+        ]
+    },
+
+    {
         'name': 'Millennium Estoril Open',
         'date': '2019-04-29',
         'location': 'Estoril, Portugal',
