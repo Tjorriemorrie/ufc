@@ -2,6 +2,545 @@ from men import *
 
 DATA = [
     {
+        'name': 'Grand Prix Hassan II',
+        'category': 'ATP250',
+        'date': '2019--04-14',
+        'location': 'Marrakech, Morocco',
+        'matches': [
+
+            # 2019-04-07
+            {
+                'round': 512,
+                'players': [
+                    EVGENY_KARLOVSKIY,
+                    TIM_PUETZ
+                ],
+                'score': [(7, 6), (4, 6), (6, 2)],
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    CARLOS_BERLOCQ,
+                    ADAM_MOUNDIR
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    CARLOS_BERLOCQ: 1.07,
+                    ADAM_MOUNDIR: 7.18
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    VIKTOR_TROICKI
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    FACUNDO_BAGNIS: 1.69,
+                    VIKTOR_TROICKI: 2.01
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    LAMINE_OUAHAB
+                ],
+                'score': [(7, 6), (6, 7), (6, 4)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 2.28,
+                    LAMINE_OUAHAB: 1.57
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ELLIOT_BENCHETRIT,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    ELLIOT_BENCHETRIT: 3.24,
+                    CORENTIN_MOUTET: 1.33
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    GREGOIRE_BARRERE
+                ],
+                'score': [(7, 5), (3, 6), (6, 4)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.59,
+                    GREGOIRE_BARRERE: 2.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ELIAS_YMER,
+                    KEVIN_KRAWIETZ
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ELIAS_YMER: 1.31,
+                    KEVIN_KRAWIETZ: 3.40
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LORENZO_SONEGO,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    LORENZO_SONEGO: 1.36,
+                    ALEXEY_VATUTIN: 3.00
+                }
+            },
+
+            # 2019-04-08
+            {
+                'round': 256,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    EVGENY_KARLOVSKIY
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.15,
+                    EVGENY_KARLOVSKIY: 5.16
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    ELLIOT_BENCHETRIT
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 2.55,
+                    ELLIOT_BENCHETRIT: 1.48
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    ELIAS_YMER
+                ],
+                'score': [(1, 6), (6, 3), (7, 5)],
+                'odds': {
+                    FACUNDO_BAGNIS: 2.13,
+                    ELIAS_YMER: 1.63
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    LORENZO_SONEGO,
+                    CARLOS_BERLOCQ
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    LORENZO_SONEGO: 1.28,
+                    CARLOS_BERLOCQ: 3.34
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    CEDRIC_MARCEL_STEBE
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.11,
+                    CEDRIC_MARCEL_STEBE: 6.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    TARO_DANIEL: 1.45,
+                    MISCHA_ZVEREV: 2.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_ANDREOZZI,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    GUIDO_ANDREOZZI: 2.40,
+                    ALBERT_RAMOS_VINOLAS: 1.59
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
+                    JOZEF_KOVALIK
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    GILLES_SIMON: 1.38,
+                    JOZEF_KOVALIK: 3.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KYLE_EDMUND,
+                    UGO_HUMBERT
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    KYLE_EDMUND: 1.20,
+                    UGO_HUMBERT: 4.70
+                }
+            },
+
+            # 2019-04-09
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    ALJAZ_BEDENE
+                ],
+                'score': [(3, 6), (6, 4), (7, 5)],
+                'odds': {
+                    BENOIT_PAIRE: 1.95,
+                    ALJAZ_BEDENE: 1.74
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAUME_MUNAR,
+                    FACUNDO_BAGNIS
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    JAUME_MUNAR: 1.30,
+                    FACUNDO_BAGNIS: 3.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    CARLOS_BERLOCQ
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.50,
+                    CARLOS_BERLOCQ: 2.51
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBIN_HAASE,
+                    MALEK_JAZIRI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    ROBIN_HAASE: 1.44,
+                    MALEK_JAZIRI: 2.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_ANDUJAR,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    PABLO_ANDUJAR: 2.25,
+                    FEDERICO_DELBONIS: 1.63
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(6, 7), (6, 4), (6, 1)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.61,
+                    THOMAS_FABBIANO: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PHILIPP_KOHLSCHREIBER,
+                    ALEJANDRO_DAVIDOVICH_FOKINA
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    PHILIPP_KOHLSCHREIBER: 1.56,
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 2.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(5, 7), (6, 2), (6, 2)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 4.60,
+                    FERNANDO_VERDASCO: 1.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LORENZO_SONEGO,
+                    LASLO_DJERE
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    LORENZO_SONEGO: 2.13,
+                    LASLO_DJERE: 1.63
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JIRI_VESELY,
+                    FABIO_FOGNINI
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    JIRI_VESELY: 2.32,
+                    FABIO_FOGNINI: 1.54
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.10,
+                    DENIS_ISTOMIN: 7.70
+                }
+            },
+
+            # 2019-04-10
+            {
+                'round': 16,
+                'players': [
+                    LORENZO_SONEGO,
+                    ROBIN_HAASE
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    LORENZO_SONEGO: 1.66,
+                    ROBIN_HAASE: 2.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    TARO_DANIEL,
+                    ADRIAN_MENENDEZ_MACEIRAS
+                ],
+                'score': [(6, 2), (1, 6), (6, 1)],
+                'odds': {
+                    TARO_DANIEL: 1.30,
+                    ADRIAN_MENENDEZ_MACEIRAS: 3.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GILLES_SIMON,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    GILLES_SIMON: 1.59,
+                    GUIDO_ANDREOZZI: 2.25
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    KYLE_EDMUND
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 2.65,
+                    KYLE_EDMUND: 1.49
+                }
+            },
+
+            # 2019-04-11
+            {
+                'round': 16,
+                'players': [
+                    JIRI_VESELY,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JIRI_VESELY: 1.77,
+                    JUAN_IGNACIO_LONDERO: 2.05
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    BENOIT_PAIRE,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    BENOIT_PAIRE: 1.67,
+                    PIERRE_HUGUES_HERBERT: 2.15
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_ANDUJAR,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    PABLO_ANDUJAR: 1.95,
+                    PHILIPP_KOHLSCHREIBER: 1.74
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JAUME_MUNAR,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(7, 6), (2, 6), (6, 3)],
+                'odds': {
+                    JAUME_MUNAR: 4.11,
+                    ALEXANDER_ZVEREV: 1.24
+                }
+            },
+
+            # 2019-04-12
+            {
+                'round': 8,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    LORENZO_SONEGO
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.42,
+                    LORENZO_SONEGO: 2.75
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    BENOIT_PAIRE,
+                    JAUME_MUNAR
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    BENOIT_PAIRE: 2.35,
+                    JAUME_MUNAR: 1.59
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    PABLO_ANDUJAR,
+                    JIRI_VESELY
+                ],
+                'score': [],
+                'wo': True,
+                'odds': {
+                    PABLO_ANDUJAR: 1.77,
+                    JIRI_VESELY: 2.05
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    GILLES_SIMON,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    GILLES_SIMON: 1.36,
+                    TARO_DANIEL: 3.00
+                }
+            },
+
+            # 2019-04-13
+            {
+                'round': 4,
+                'players': [
+                    BENOIT_PAIRE,
+                    JO_WILFRIED_TSONGA
+                ],
+                'score': [(2, 6), (6, 4), (6, 3)],
+                'odds': {
+                    BENOIT_PAIRE: 3.00,
+                    JO_WILFRIED_TSONGA: 1.38
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    PABLO_ANDUJAR,
+                    GILLES_SIMON
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    PABLO_ANDUJAR: 1.91,
+                    GILLES_SIMON: 1.80
+                }
+            },
+
+            # 2019-04-14
+            {
+                'round': 2,
+                'players': [
+                    BENOIT_PAIRE,
+                    PABLO_ANDUJAR
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    BENOIT_PAIRE: 2.10,
+                    PABLO_ANDUJAR: 1.69
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Rolex Monte-Carlo Masters',
         'category': 'ATP1000',
         'date': '2019-04-21',
