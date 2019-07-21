@@ -2,6 +2,496 @@ from men import *
 
 DATA = [
     {
+        'name': 'Millennium Estoril Open',
+        'date': '2019-04-29',
+        'location': 'Estoril, Portugal',
+        'matches': [
+
+            # 2019-04-27
+            {
+                'round': 512,
+                'players': [
+                    SALVATORE_CARUSO,
+                    PEDRO_MARTINEZ
+                ],
+                'score': [(6, 3), (5, 7), (7, 6)],
+                'odds': {
+                    SALVATORE_CARUSO: 1.83,
+                    PEDRO_MARTINEZ: 1.83
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    SIMONE_BOLELLI,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    SIMONE_BOLELLI: 1.41,
+                    EGOR_GERASIMOV: 2.66
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    BJORN_FRATANGELO
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.38,
+                    BJORN_FRATANGELO: 2.70
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FILLIPPO_BALDI,
+                    JOZEF_KOVALIK
+                ],
+                'score': [(4, 6), (6, 3), (6, 2)],
+                'odds': {
+                    FILLIPPO_BALDI: 2.40,
+                    JOZEF_KOVALIK: 1.56
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    GASTAO_ELIAS
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.58,
+                    GASTAO_ELIAS: 2.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JOAO_DOMINGUES,
+                    ELIAS_YMER
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    JOAO_DOMINGUES: 1.94,
+                    ELIAS_YMER: 1.74
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_EVANS,
+                    LORENZO_GUISTINO
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    DANIEL_EVANS: 1.87,
+                    LORENZO_GUISTINO: 1.80
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PABLO_CUEVAS,
+                    DANIEL_BRANDS
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    PABLO_CUEVAS: 4.65,
+                    DANIEL_BRANDS: 4.65
+                }
+            },
+
+            # 2019-04-28
+            {
+                'round': 256,
+                'players': [
+                    JOAO_DOMINGUES,
+                    FILLIPPO_BALDI
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    JOAO_DOMINGUES: 1.40,
+                    FILLIPPO_BALDI: 2.75
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    SIMONE_BOLELLI
+                ],
+                'score': [(2, 6), (6, 3), (6, 4)],
+                'odds': {
+                    ALEXEI_POPYRIN: 2.21,
+                    SIMONE_BOLELLI: 1.59
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    DANIEL_EVANS
+                ],
+                'score': [(3, 6), (6, 1), (6, 4)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.46,
+                    DANIEL_EVANS: 2.40
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    SALVATORE_CARUSO,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 4), (5, 7), (6, 4)],
+                # no odds
+            },
+
+            # 2019-04-29
+            {
+                'round': 32,
+                'players': [
+                    REILLY_OPELKA,
+                    PEDRO_SOUSA
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    REILLY_OPELKA: 2.15,
+                    PEDRO_SOUSA: 1.71
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.71,
+                    MACKENZIE_MCDONALD: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_ANDREOZZI,
+                    HUGO_DELLIEN
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    GUIDO_ANDREOZZI: 1.91,
+                    HUGO_DELLIEN: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOAO_DOMINGUES,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(6, 2), (2, 6), (6, 2)],
+                'odds': {
+                    JOAO_DOMINGUES: 2.00,
+                    ALEX_DE_MINAUR: 1.74
+                }
+            },
+
+            # 2019-04-30
+            {
+                'round': 32,
+                'players': [
+                    JOAO_SOUSA,
+                    ALEXEI_POPYRIN
+                ],
+                'score': [(6, 4), (2, 6), (6, 2)],
+                'odds': {
+                    JOAO_SOUSA: 1.45,
+                    ALEXEI_POPYRIN: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_MILLMAN,
+                    BERNARD_TOMIC
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    JOHN_MILLMAN: 1.39,
+                    BERNARD_TOMIC: 2.85
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MALEK_JAZIRI,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 3), (3, 6), (6, 4)],
+                'odds': {
+                    MALEK_JAZIRI: 3.20,
+                    NICOLAS_JARRY: 1.38
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.67,
+                    TAYLOR_FRITZ: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CUEVAS,
+                    SALVATORE_CARUSO
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    PABLO_CUEVAS: 3.25,
+                    SALVATORE_CARUSO: 3.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FRANCES_TIAFOE,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    FRANCES_TIAFOE: 1.67,
+                    MIKHAIL_KUKUSHKIN: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JEREMY_CHARDY,
+                    PABLO_CARRENO_BUSTA
+                ],
+                'score': [(5, 7), (6, 1), (6, 2)],
+                'odds': {
+                    JEREMY_CHARDY: 2.05,
+                    PABLO_CARRENO_BUSTA: 1.76
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LEONARDO_MAYER,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    LEONARDO_MAYER: 2.03,
+                    DUSAN_LAJOVIC: 1.71
+                }
+            },
+
+            # 2019-05-01
+            {
+                'round': 16,
+                'players': [
+                    JOAO_DOMINGUES,
+                    JOHN_MILLMAN
+                ],
+                'score': [(6, 3), (2, 1)],
+                'retired': True,
+                'odds': {
+                    JOAO_DOMINGUES: 2.50,
+                    JOHN_MILLMAN: 1.53
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    JEREMY_CHARDY
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.95,
+                    JEREMY_CHARDY: 1.74
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    REILLY_OPELKA
+                ],
+                'score': [(3, 6), (6, 3), (6, 0)],
+                'odds': {
+                    GAEL_MONFILS: 1.48,
+                    REILLY_OPELKA: 2.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.15,
+                    GUIDO_ANDREOZZI: 5.00
+                }
+            },
+
+            # 2019-05-02
+            {
+                'round': 16,
+                'players': [
+                    MALEK_JAZIRI,
+                    LEONARDO_MAYER
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    MALEK_JAZIRI: 3.35,
+                    LEONARDO_MAYER: 1.30
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_CUEVAS,
+                    FILLIPPO_BALDI
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    PABLO_CUEVAS: 1.18,
+                    FILLIPPO_BALDI: 4.51
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FRANCES_TIAFOE,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(2, 6), (6, 3), (7, 6)],
+                'odds': {
+                    FRANCES_TIAFOE: 1.63,
+                    YOSHIHITO_NISHIOKA: 2.25
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAVID_GOFFIN,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    DAVID_GOFFIN: 1.48,
+                    JOAO_SOUSA: 2.60
+                }
+            },
+
+            # 2019-05-03
+            {
+                'round': 8,
+                'players': [
+                    PABLO_CUEVAS,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 0), (6, 7), (6, 2)],
+                'odds': {
+                    PABLO_CUEVAS: 1.57,
+                    FRANCES_TIAFOE: 2.39
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DAVID_GOFFIN,
+                    MALEK_JAZIRI
+                ],
+                'score': [(4, 6), (7, 6), (6, 2)],
+                'odds': {
+                    DAVID_GOFFIN: 1.20,
+                    MALEK_JAZIRI: 4.60
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    GAEL_MONFILS
+                ],
+                'score': [(6, 7), (7, 5), (6, 4)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 2.63,
+                    GAEL_MONFILS: 1.41
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    JOAO_DOMINGUES
+                ],
+                'score': [(7, 6), (6, 4)],
+                # no odds
+            },
+
+            # 2019-05-04
+            {
+                'round': 4,
+                'players': [
+                    PABLO_CUEVAS,
+                    ALEJANDRO_DAVIDOVICH_FOKINA
+                ],
+                'score': [(3, 6), (6, 2), (6, 2)],
+                'odds': {
+                    PABLO_CUEVAS: 1.51,
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 2.45
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    DAVID_GOFFIN
+                ],
+                'score': [(3, 6), (6, 4), (6, 4)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.53,
+                    DAVID_GOFFIN: 2.45
+                }
+            },
+
+            # 2019-095-05
+            {
+                'round': 2,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.36,
+                    PABLO_CUEVAS: 3.15
+                }
+            }
+
+        ]
+    },
+
+    {
         'name': 'Mutua Madrid Open',
         'date': '2019-05-05',
         'location': 'Madrid, Spain',

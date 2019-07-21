@@ -61,6 +61,7 @@ def get_regressor(training_data, label_data, scaler):
     return reg
 
 
+# 67 -0.40 <- 2019-04-29 Millennium Estoril Open
 # 62 -1.12 <- Mutua Madrid Open
 # 52 -2.88 <- added round as variable
 # 58 -2.32 <- italia
