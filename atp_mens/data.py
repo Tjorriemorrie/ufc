@@ -2,6 +2,495 @@ from men import *
 
 DATA = [
     {
+        'name': 'Hungarian Open',
+        'date': '2019-04-22',
+        'location': 'Budapest, Hungary',
+        'matches': [
+
+            # 2019-04-20
+            {
+                'round': 512,
+                'players': [
+                    EGOR_GERASIMOV,
+                    FILLIPPO_BALDI
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    EGOR_GERASIMOV: 2.45,
+                    FILLIPPO_BALDI: 1.43
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JANNIK_SINNER,
+                    LUKAS_ROSOL
+                ],
+                'score': [(6, 2), (3, 0)],
+                'retired': True,
+                'odds': {
+                    JANNIK_SINNER: 2.31,
+                    LUKAS_ROSOL: 1.56
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    FILIP_HORANSKY
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 2.44,
+                    FILIP_HORANSKY: 1.53
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    SERGIY_STAKHOVSKY,
+                    DANIEL_BRANDS
+                ],
+                'score': [(7, 5), (6, 1)],
+                'odds': {
+                    SERGIY_STAKHOVSKY: 1.53,
+                    DANIEL_BRANDS: 2.48
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YANNICK_MADEN,
+                    ZSOMBOR_PIROS
+                ],
+                'score': [(6, 4), (1, 6), (6, 3)],
+                'odds': {
+                    YANNICK_MADEN: 1.32,
+                    ZSOMBOR_PIROS: 3.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    ROBERTO_MARCORA
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.13,
+                    ROBERTO_MARCORA: 5.43
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LLOYD_HARRIS,
+                    DANIEL_GIMENO_TRAVER
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    LLOYD_HARRIS: 1.69,
+                    DANIEL_GIMENO_TRAVER: 2.05
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    ALESSANDRO_GIANNESSI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 1.57,
+                    ALESSANDRO_GIANNESSI: 2.34
+                }
+            },
+
+            # 2019-04-21
+            {
+                'round': 256,
+                'players': [
+                    YANNICK_MADEN,
+                    JANNIK_SINNER
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    YANNICK_MADEN: 1.46,
+                    JANNIK_SINNER: 2.45
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.15,
+                    EGOR_GERASIMOV: 5.10
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    LLOYD_HARRIS,
+                    MATTHIAS_BACHINGER
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    LLOYD_HARRIS: 1.77,
+                    MATTHIAS_BACHINGER: 1.91
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    SERGIY_STAKHOVSKY
+                ],
+                'score': [(6, 4), (6, 4)],
+                # no odds
+            },
+
+            # 2019-04-22
+            {
+                'round': 32,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 2), (6, 7), (7, 5)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.44,
+                    ANDREAS_SEPPI: 2.52
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    BERNARD_TOMIC
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ALJAZ_BEDENE: 1.41,
+                    BERNARD_TOMIC: 2.63
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RADU_ALBOT,
+                    SERGIY_STAKHOVSKY
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    RADU_ALBOT: 1.28,
+                    SERGIY_STAKHOVSKY: 3.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.57,
+                    MIKHAIL_KUKUSHKIN: 2.30
+                }
+            },
+
+            # 2019-04-23
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(6, 3), 96, 2],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBIN_HAASE,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(6, 7), (6, 3), (6, 2)],
+                'odds': {
+                    ROBIN_HAASE: 1.45,
+                    THOMAS_FABBIANO: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PETER_GOJOWCZYK,
+                    LLOYD_HARRIS
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    PETER_GOJOWCZYK: 2.27,
+                    LLOYD_HARRIS: 1.63
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ATTILA_BALAZS,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    ATTILA_BALAZS: 3.35,
+                    HUBERT_HURKACZ: 1.32
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_MILLMAN,
+                    MIOMIR_KECMANOVIC
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    JOHN_MILLMAN: 2.20,
+                    MIOMIR_KECMANOVIC: 1.69
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LASLO_DJERE,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(6, 4), (6, 7), (7, 6)],
+                'odds': {
+                    LASLO_DJERE: 1.35,
+                    ERNESTS_GULBIS: 2.90
+                }
+            },
+
+            # 2019-04-24
+            {
+                'round': 32,
+                'players': [
+                    JANNIK_SINNER,
+                    MATE_VALKUSZ
+                ],
+                'score': [(6, 2), (0, 6), (6, 4)],
+                'odds': {
+                    JANNIK_SINNER: 1.83,
+                    MATE_VALKUSZ: 1.83
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CUEVAS,
+                    YANNICK_MADEN
+                ],
+                'score': [(6, 3), (3, 6), (6, 4)],
+                'odds': {
+                    PABLO_CUEVAS: 1.38,
+                    YANNICK_MADEN: 3.05
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    MATTHIAS_BACHINGER
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.26,
+                    MATTHIAS_BACHINGER: 3.65
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ATTILA_BALAZS,
+                    JOHN_MILLMAN
+                ],
+                'score': [(6, 4), (2, 6), (6, 2)],
+                'odds': {
+                    ATTILA_BALAZS: 2.71,
+                    JOHN_MILLMAN: 1.43
+                }
+            },
+
+            # 2019-04-25
+            {
+                'round': 16,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ALJAZ_BEDENE
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.65,
+                    ALJAZ_BEDENE: 2.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    RADU_ALBOT
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.37,
+                    RADU_ALBOT: 3.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    LASLO_DJERE,
+                    JANNIK_SINNER
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    LASLO_DJERE: 1.20,
+                    JANNIK_SINNER: 4.55
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 3), (0, 6), (6, 3)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.42,
+                    PETER_GOJOWCZYK: 2.90
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    BORNA_CORIC,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 3), (4, 6), (6, 4)],
+                'odds': {
+                    BORNA_CORIC: 1.33,
+                    ROBIN_HAASE: 3.25
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_CUEVAS,
+                    MARIN_CILIC
+                ],
+                'score': [(5, 7), (7, 6), (7, 6)],
+                'odds': {
+                    PABLO_CUEVAS: 2.25,
+                    MARIN_CILIC: 1.61
+                }
+            },
+
+            # 2019-04-26
+            {
+                'round': 8,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    ATTILA_BALAZS
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.55,
+                    ATTILA_BALAZS: 2.45
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 3), (1, 6), (6, 3)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.59,
+                    PABLO_CUEVAS: 2.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    LASLO_DJERE,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(3, 6), (6, 2), (6, 3)],
+                'odds': {
+                    LASLO_DJERE: 1.61,
+                    NIKOLOZ_BASILASHVILI: 2.20
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    BORNA_CORIC
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 2.05,
+                    BORNA_CORIC: 1.74
+                }
+            },
+
+            # 2019-04-27
+            {
+                'round': 4,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.41,
+                    PIERRE_HUGUES_HERBERT: 2.95
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    LASLO_DJERE
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.67,
+                    LASLO_DJERE: 2.15
+                }
+            },
+
+            # 2019-04-28
+            {
+                'round': 2,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    FILIP_KRAJINOVIC
+                ],
+                'score': [(4, 6), (6, 3), (6, 1)],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.10,
+                    FILIP_KRAJINOVIC: 1.69
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'BMW Open by FWU',
         'date': '2019-04-29',
         'location': 'Munich, Germany',

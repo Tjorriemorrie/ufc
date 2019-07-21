@@ -61,6 +61,7 @@ def get_regressor(training_data, label_data, scaler):
     return reg
 
 
+# 68 -0.57 <- 2019-04-22 Hungarian Open
 # 65 -0.83 <- 2019-04-29 BMW Open by FWU
 # 67 -0.40 <- 2019-04-29 Millennium Estoril Open
 # 62 -1.12 <- Mutua Madrid Open
