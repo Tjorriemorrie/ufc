@@ -61,6 +61,7 @@ def get_regressor(training_data, label_data, scaler):
     return reg
 
 
+# 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
 # 62 -1.15 <- 2019-04-28 Barcelona Open Banc Sabadell
 # 68 -0.57 <- 2019-04-22 Hungarian Open
 # 65 -0.83 <- 2019-04-29 BMW Open by FWU
