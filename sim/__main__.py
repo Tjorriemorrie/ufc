@@ -8,7 +8,7 @@ from sklearn.preprocessing import MinMaxScaler
 from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
-from data import DATA
+from .data import DATA
 
 
 def win_probability(team1, team2):

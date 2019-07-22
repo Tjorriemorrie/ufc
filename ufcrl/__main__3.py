@@ -2,8 +2,9 @@ from collections import defaultdict
 from itertools import chain
 from pathlib import Path
 from typing import List, Optional, Tuple
-import numpy as np
-from keras.layers import Flatten, Dense, Activation
+
+from keras.layers import Flatten, Dense, Activation, np
+from keras.losses import mean_squared_error
 from keras.optimizers import Adam
 from loguru import logger
 from keras.models import Sequential
@@ -38,7 +39,7 @@ class MyPolicy(Policy):
         norm_q_values = []
         for q in pair_q_values:
             norm_q_values.append(q / sum(pair_q_values))
-        return np.array(norm_q_values)
+        return norm_q_values
 
 
 class MyEnv(Env):
@@ -116,7 +117,7 @@ class MyEnv(Env):
     def _get_obs(self) -> List[float]:
         obs = self.x_train[self.i]
         assert len(obs) == 40
-        return np.array(obs)
+        return obs
 
     def reset(self) -> List[float]:
         self._reset()
@@ -151,26 +152,88 @@ class MyEnv(Env):
     #     pass
 
 
+def load_data():
+    x_train = []
+    y_train = []
+    x_test = []
+    y_test = []
+    ratings = defaultdict(lambda: Rating())
+    cutoff = int(len(DATA) * 0.7)
+    for i, scene in enumerate(DATA):
+        if len(scene['fights']) < 10:
+            continue
+        x = []
+        y = []
+        for fight in reversed(scene['fights']):
+            # skip if no odds:
+            if 'odds' not in fight:
+                continue
+
+            f1 = fight['fighters'][0]['name']
+            f2 = fight['fighters'][1]['name']
+
+            f1_odds = fight['odds'][f1]
+            f2_odds = fight['odds'][f2]
+            if not -50 < f1_odds < 50 or not -50 < f2_odds < 50:
+                raise ValueError(f'surely these odds are wrong? {f1_odds} {f2_odds}')
+
+            win1_prob = win_probability([ratings[f1]], [ratings[f2]])
+            win2_prob = win_probability([ratings[f2]], [ratings[f1]])
+
+            # get winner
+            fw = fight['winner']['fighter']
+            is_win_1 = fw == f1
+            fl = f2 if is_win_1 else f1
+            if not is_win_1 and fw != f2 and fw is not None:
+                raise ValueError(f'unknown winner {fw}')
+            drawn = fw is None
+
+            x.extend([
+                1 / f1_odds,
+                1 / f2_odds,
+                win1_prob,
+                win2_prob,
+            ])
+
+            y.extend([
+                fight['odds'][f1] if is_win_1 else 0,
+                fight['odds'][f2] if not is_win_1 else 0,
+            ])
+
+            # update ratings
+            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+
+            if len(x) == 40:
+                break
+
+        # add data and results for rewards
+        if i < cutoff:
+            x_train.append(x)
+            y_train.append(y)
+        else:
+            x_test.append(x)
+            y_test.append(y)
+
+    return np.array(x_train), np.array(y_train), np.array(x_test), np.array(y_test)
+
+
 def main():
 
+    x_train, y_train, x_test, y_test = load_data()
+
     model = Sequential()
-    model.add(Flatten(input_shape=(1, 40)))
+    model.add(Dense(units=40, activation='relu', input_dim=40))
     model.add(Dense(units=40, activation='relu'))
     model.add(Dense(units=10, activation='softmax'))
-    logger.info(model.summary())
-
-    policy = MyPolicy()
-    agent = SARSAAgent(model=model, nb_actions=10, policy=policy, train_interval=1, nb_steps_warmup=0)
+    logger.info(print(model.summary()))
 
     optimizer = Adam(lr=1e-3)
-    agent.compile(optimizer, metrics=['mae'])
+    model.compile(optimizer, loss=mean_squared_error)
 
-    env = MyEnv()
-    steps = 100
-    agent.fit(env, steps, verbose=2, visualize=True)
+    model.fit(x_train, y_train)
 
-    fp = Path(__file__).resolve().parent / 'sarsa_weights.h5f'
-    agent.save_weights(fp, overwrite=True)
+    score = model.evaluate(x_test, y_test)
+    logger.info(f'Model score {score:.2f}')
 
     logger.info('Done')
 

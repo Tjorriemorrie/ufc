@@ -2,6 +2,487 @@ from men import *
 
 DATA = [
     {
+        'name': 'Fayez Sarofim & Co US Mens Clay Court Championship',
+        'category': 'ATP250',
+        'date': '2019-04-14',
+        'location': 'Houston, United States',
+        'matches': [
+
+            # 2019-04-06
+            {
+                'round': 512,
+                'players': [
+                    SANTIAGO_GIRALDO,
+                    JAMES_WARD
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    SANTIAGO_GIRALDO: 1.27,
+                    JAMES_WARD: 3.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PEDJA_KRSTIN,
+                    MARCOS_GIRON
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    PEDJA_KRSTIN: 1.65,
+                    MARCOS_GIRON: 2.15
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ROBERTO_QUIROZ,
+                    JC_ARAGONE
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    ROBERTO_QUIROZ: 1.65,
+                    JC_ARAGONE: 2.13
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MITCHELL_KRUEGER,
+                    DOMINIK_KOEPFER
+                ],
+                'score': [(3, 6), (6, 3), (6, 4)],
+                'odds': {
+                    MITCHELL_KRUEGER: 1.67,
+                    DOMINIK_KOEPFER: 1.96
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_ELAHI_GALAN,
+                    SEBASTIAN_OFNER
+                ],
+                'score': [(6, 0), (6, 2)],
+                'odds': {
+                    DANIEL_ELAHI_GALAN: 2.14,
+                    SEBASTIAN_OFNER: 1.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CHRISTOPHER_EUBANKS,
+                    JAY_CLARKE
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    CHRISTOPHER_EUBANKS: 2.40,
+                    JAY_CLARKE: 1.56
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DARIAN_KING,
+                    PETER_POLANSKY
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    DARIAN_KING: 1.63,
+                    PETER_POLANSKY: 2.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    TOMMY_PAUL
+                ],
+                'score': [(6, 4), (6, 7), (6, 4)],
+                'odds': {
+                    HENRI_LAAKSONEN: 1.93,
+                    TOMMY_PAUL: 1.69
+                }
+            },
+
+            # 2019-04-08
+            {
+                'round': 256,
+                'players': [
+                    PEDJA_KRSTIN,
+                    DARIAN_KING
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    PEDJA_KRSTIN: 1.48,
+                    DARIAN_KING: 2.51
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DANIEL_ELAHI_GALAN,
+                    ROBERTO_QUIROZ
+                ],
+                'score': [(4, 6), (7, 5), (6, 1)],
+                # no odds
+            },
+            {
+                'round': 256,
+                'players': [
+                    SANTIAGO_GIRALDO,
+                    CHRISTOPHER_EUBANKS
+                ],
+                'score': [(6, 4), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 256,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    MITCHELL_KRUEGER
+                ],
+                'score': [(6, 3), (5, 7), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    BERNARD_TOMIC,
+                    DENIS_KUDLA
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    BERNARD_TOMIC: 1.77,
+                    DENIS_KUDLA: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CASPER_RUUD,
+                    HUGO_DELLIEN
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    CASPER_RUUD: 1.49,
+                    HUGO_DELLIEN: 2.68
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RYAN_HARRISON,
+                    IVO_KARLOVIC
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    RYAN_HARRISON: 2.26,
+                    IVO_KARLOVIC: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CRISTIAN_GARIN,
+                    PABLO_CUEVAS
+                ],
+                'score': [(4, 6), (6, 4), (6, 2)],
+                'odds': {
+                    CRISTIAN_GARIN: 2.38,
+                    PABLO_CUEVAS: 1.59
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(6, 2), (4, 6), (6, 2)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 2.20,
+                    TAYLOR_FRITZ: 1.59
+                }
+            },
+
+            # 2019-04-09
+            {
+                'round': 32,
+                'players': [
+                    JANKO_TIPSAREVIC,
+                    TENNYS_SANDGREN
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    JANKO_TIPSAREVIC: 2.71,
+                    TENNYS_SANDGREN: 1.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SANTIAGO_GIRALDO,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    SANTIAGO_GIRALDO: 1.43,
+                    BRADLEY_KLAHN: 2.78
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    NOAH_RUBIN
+                ],
+                'score': [(6, 7), (6, 3), (6, 3)],
+                'odds': {
+                    GUILLERMO_GARCIA_LOPEZ: 1.57,
+                    NOAH_RUBIN: 2.48
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANIEL_ELAHI_GALAN,
+                    PAOLO_LORENZI
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    DANIEL_ELAHI_GALAN: 2.00,
+                    PAOLO_LORENZI: 1.77
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    BJORN_FRATANGELO
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    SAM_QUERREY: 1.61,
+                    BJORN_FRATANGELO: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JORDAN_THOMPSON,
+                    PEDJA_KRSTIN
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    JORDAN_THOMPSON: 1.58,
+                    PEDJA_KRSTIN: 2.48
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    HENRI_LAAKSONEN: 1.71,
+                    MACKENZIE_MCDONALD: 2.13
+                }
+            },
+
+            # 2019-04-10
+            {
+                'round': 16,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    RYAN_HARRISON
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    HENRI_LAAKSONEN: 1.93,
+                    RYAN_HARRISON: 1.83
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    BERNARD_TOMIC
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 1.59,
+                    BERNARD_TOMIC: 2.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CASPER_RUUD,
+                    REILLY_OPELKA
+                ],
+                'score': [(4, 6), (6, 4), (6, 4)],
+                'odds': {
+                    CASPER_RUUD: 1.89,
+                    REILLY_OPELKA: 1.91
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CRISTIAN_GARIN,
+                    JEREMY_CHARDY
+                ],
+                'score': [(3, 6), (7, 6), (7, 6)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.67,
+                    JEREMY_CHARDY: 2.03
+                }
+            },
+
+            # 2019-04-11
+            {
+                'round': 16,
+                'players': [
+                    SAM_QUERREY,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    SAM_QUERREY: 1.44,
+                    GUILLERMO_GARCIA_LOPEZ: 2.79
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JORDAN_THOMPSON,
+                    SANTIAGO_GIRALDO
+                ],
+                'score': [(4, 6), (7, 6), (7, 5)],
+                'odds': {
+                    JORDAN_THOMPSON: 1.59,
+                    SANTIAGO_GIRALDO: 2.30
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JANKO_TIPSAREVIC,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JANKO_TIPSAREVIC: 2.27,
+                    CAMERON_NORRIE: 1.63
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANIEL_ELAHI_GALAN,
+                    STEVE_JOHNSON
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    DANIEL_ELAHI_GALAN: 2.85,
+                    STEVE_JOHNSON: 1.43
+                }
+            },
+
+            # 2019-04-12
+            {
+                'round': 8,
+                'players': [
+                    CASPER_RUUD,
+                    MARCEL_GRANOLLERS
+                ],
+                'score': [(6, 1), (6, 0)],
+                'odds': {
+                    CASPER_RUUD: 1.65,
+                    MARCEL_GRANOLLERS: 2.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    CRISTIAN_GARIN,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.49,
+                    HENRI_LAAKSONEN: 2.72
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    SAM_QUERREY,
+                    JANKO_TIPSAREVIC
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    SAM_QUERREY: 1.40,
+                    JANKO_TIPSAREVIC: 2.96
+                }
+            },
+
+            # 2019-04-13
+            {
+                'round': 8,
+                'players': [
+                    DANIEL_ELAHI_GALAN,
+                    JORDAN_THOMPSON
+                ],
+                'score': [(6, 1), (4, 6), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 4,
+                'players': [
+                    CASPER_RUUD,
+                    DANIEL_ELAHI_GALAN
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    CASPER_RUUD: 1.29,
+                    DANIEL_ELAHI_GALAN: 3.60
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    CRISTIAN_GARIN,
+                    SAM_QUERREY
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    CRISTIAN_GARIN: 2.00,
+                    SAM_QUERREY: 1.81
+                }
+            },
+
+            # 2019-04-13
+            {
+                'round': 2,
+                'players': [
+                    CRISTIAN_GARIN,
+                    CASPER_RUUD
+                ],
+                'score': [(7, 6), (4, 6), (6, 3)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.67,
+                    CASPER_RUUD: 2.25
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Grand Prix Hassan II',
         'category': 'ATP250',
         'date': '2019--04-14',

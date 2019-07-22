@@ -61,7 +61,8 @@ def get_regressor(training_data, label_data, scaler):
     return reg
 
 
-# 68 -0.09 <- 2019--04-14 Grand Prix Hassan II
+# 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
+# 68 -0.09 <- 2019-04-14 Grand Prix Hassan II
 # 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
 # 62 -1.15 <- 2019-04-28 Barcelona Open Banc Sabadell
 # 68 -0.57 <- 2019-04-22 Hungarian Open
