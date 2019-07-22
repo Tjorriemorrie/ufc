@@ -186,6 +186,23 @@ def main():
 
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
+                multi = 2 if pred1 - pred2 > 0.25 else 1
+                multi *= 2 if pred1 - pred2 > 0.4 else 1
+
+                if 'prediction' in fight and fight['prediction'] is None:
+                    if pred1 > pred2:
+                        predw = pred1
+                        fw = f1
+                        predl = pred2
+                        fl = f2
+                    else:
+                        predw = pred2
+                        fw = f2
+                        predl = pred1
+                        fl = f1
+                    logger.info(f'[*{multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} vs {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+                    continue
+
                 if is_win_1:
                     predw = pred1
                     predl = pred2
@@ -197,8 +214,6 @@ def main():
 
                 # testing outcome
                 correct = 0
-                multi = 2 if pred1 - pred2 > 0.25 else 1
-                multi *= 2 if pred1 - pred2 > 0.4 else 1
                 payout = -bet_size * multi
                 if is_win_1 and pred1 > pred2:
                     correct = 1

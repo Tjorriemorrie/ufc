@@ -1,5 +1,6 @@
 from fighters import *
 
+# 65 5.76 <- 2019-07-20 UFC Fight Night - San Antonio 2019
 # 63 7.44 <- scaling bets on diff?
 # 68 0.60 <- changed bet size to dynamic
 # 70 0.83 <- xgb50
@@ -8,11 +9,9 @@ from fighters import *
 # 65 1.02 <- xgb3k
 # 66 1.17 <- xgb2k
 # 62 0.62
-# 64 0.66
-# 71 1.04
-# 61 -0.81
-# 63 -0.31
 
+# 64 0.66
+# 61 -0.81
 # 63 -0.48
 # 60 -0.91
 # 59 -1.16
@@ -28713,8 +28712,331 @@ DATA = [
                 'bet': 10,
             },
         ]
-    }
-]
+    },
 
-PREDICTIONS = [
+    {
+        'date': '2019-07-20',
+        'name': 'UFC Fight Night - San Antonio 2019',
+        'location': 'San Antonio, Texas',
+        'venue': 'AT&T Center',
+        'fights': [
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': FELIPE_COLARES,
+                        'stats': '8-1-0'
+                    },
+                    {
+                        'name': DOM_PILARTE,
+                        'stats': '8-1-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': FELIPE_COLARES,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:05',
+                'odds': {
+                    FELIPE_COLARES: 4.00,
+                    DOM_PILARTE: 1.25
+                },
+                'prediction': DOM_PILARTE
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': JIN_SOON_SON,
+                        'stats': '0-0-0'
+                    },
+                    {
+                        'name': MARIO_BAUTISTA,
+                        'stats': '0-0-0'
+                    },
+                ],
+                'winner': {
+                    'fighter': MARIO_BAUTISTA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '18:35',
+                'odds': {
+                    JIN_SOON_SON: 1.54,
+                    MARIO_BAUTISTA: 2.43
+                },
+                'prediction': MARIO_BAUTISTA
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': GABRIEL_SILVA,
+                        'stats': '0-0-0'
+                    },
+                    {
+                        'name': RAY_BORG,
+                        'stats': '11-4-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': RAY_BORG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
+                'time': '19:05',
+                'odds': {
+                    GABRIEL_SILVA: 2.45,
+                    RAY_BORG: 1.54
+                },
+                'prediction': RAY_BORG
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JENNIFER_MAIA,
+                        'stats': '16-5-1'
+                    },
+                    {
+                        'name': ROXANNE_MODAFFERI,
+                        'stats': '3-3-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': JENNIFER_MAIA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
+                'time': '19:35',
+                'odds': {
+                    JENNIFER_MAIA: 1.71,
+                    ROXANNE_MODAFFERI: 2.10
+                },
+                'prediction': JENNIFER_MAIA
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': KLIDSON_DE_ABREU,
+                        'stats': '0-0-0'
+                    },
+                    {
+                        'name': SAM_ALVEY,
+                        'stats': '33-11-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': KLIDSON_DE_ABREU,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
+                'time': '20:05',
+                'odds': {
+                    KLIDSON_DE_ABREU: 1.56,
+                    SAM_ALVEY: 2.37
+                },
+                'prediction': SAM_ALVEY
+            },
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': IRENE_ALDANA,
+                        'stats': '9-4-0'
+                    },
+                    {
+                        'name': RAQUEL_PENNINGTON,
+                        'stats': '9-8-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': RAQUEL_PENNINGTON,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
+                'odds': {
+                    IRENE_ALDANA: 1.69,
+                    RAQUEL_PENNINGTON: 2.10
+                },
+                'prediction': RAQUEL_PENNINGTON
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': STEVEN_PETERSON,
+                        'stats': '17-8-0'
+                    },
+                    {
+                        'name': ALEX_CACERES,
+                        'stats': '14-12-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': ALEX_CACERES,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
+                'odds': {
+                    STEVEN_PETERSON: 1.85,
+                    ALEX_CACERES: 1.83
+                },
+                'prediction': STEVEN_PETERSON
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': BEN_ROTHWELL,
+                        'stats': '36-11-0'
+                    },
+                    {
+                        'name': ANDREI_ARLOVSKI,
+                        'stats': '27-17-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': ANDREI_ARLOVSKI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
+                'odds': {
+                    BEN_ROTHWELL: 1.54,
+                    ANDREI_ARLOVSKI: 2.43
+                },
+                'prediction': ANDREI_ARLOVSKI
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': FRANCISCO_TRINALDO,
+                        'stats': '23-6-0'
+                    },
+                    {
+                        'name': ALEXANDER_HERNANDEZ,
+                        'stats': '10-2-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': ALEXANDER_HERNANDEZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
+                'odds': {
+                    FRANCISCO_TRINALDO: 2.73,
+                    ALEXANDER_HERNANDEZ: 1.38
+                },
+                'prediction': ALEXANDER_HERNANDEZ
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAN_HOOKER,
+                        'stats': '18-8-0'
+                    },
+                    {
+                        'name': JAMES_VICK,
+                        'stats': '13-3-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': DAN_HOOKER,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '2:33'
+                },
+                'odds': {
+                    DAN_HOOKER: 1.70,
+                    JAMES_VICK: 2.05
+                },
+                'prediction': DAN_HOOKER
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUAN_ADAMS,
+                        'stats': '5-0-0'
+                    },
+                    {
+                        'name': GREG_HARDY,
+                        'stats': '3-1-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': GREG_HARDY,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:45'
+                },
+                'odds': {
+                    JUAN_ADAMS: 1.74,
+                    GREG_HARDY: 1.83
+                },
+                'prediction': JUAN_ADAMS
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': WALT_HARRIS,
+                        'stats': '11-7-0'
+                    },
+                    {
+                        'name': ALEKSEI_OLEINIK,
+                        'stats': '57-11-1'
+                    }
+                ],
+                'winner': {
+                    'fighter': WALT_HARRIS,
+                    'by': 'ko/tko',
+                    'round': 1,
+                    'time': '0:12'
+                },
+                'odds': {
+                    WALT_HARRIS: 1.65,
+                    ALEKSEI_OLEINIK: 2.25
+                },
+                'prediction': ALEKSEI_OLEINIK
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': LEON_EDWARDS,
+                        'stats': '17-3-0'
+                    },
+                    {
+                        'name': RAFAEL_DOS_ANJOS,
+                        'stats': '28-11-0'
+                    }
+                ],
+                'winner': {
+                    'fighter': LEON_EDWARDS,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00'
+                },
+                'odds': {
+                    LEON_EDWARDS: 1.77,
+                    RAFAEL_DOS_ANJOS: 1.87
+                },
+                'prediction': LEON_EDWARDS
+            }
+        ]
+    }
 ]
