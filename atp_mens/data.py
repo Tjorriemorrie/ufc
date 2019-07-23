@@ -2,6 +2,498 @@ from men import *
 
 DATA = [
     {
+        'name': 'Brasil Open',
+        'category': 'ATP250',
+        'date': '2019-03-03',
+        'location': 'Sao Paulo, Brazil',
+        'matches': [
+
+            # 2019-02-23
+            {
+                'round': 512,
+                'players': [
+                    PEDRO_SAKAMOTO,
+                    MATTEO_DONATI
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    PEDRO_SAKAMOTO: 3.01,
+                    MATTEO_DONATI: 1.36
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    KIMMER_COPPEJANS,
+                    JOAO_DOMINGUES
+                ],
+                'score': [(4, 6), (6, 0), (6, 3)],
+                'odds': {
+                    KIMMER_COPPEJANS: 1.61,
+                    JOAO_DOMINGUES: 2.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FEDERICO_CORIA,
+                    FACUNDO_ARGUELLO
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    FEDERICO_CORIA: 2.70,
+                    FACUNDO_ARGUELLO: 1.31
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANDREJ_MARTIN,
+                    DANIEL_GIMENO_TRAVER
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    ANDREJ_MARTIN: 1.65,
+                    DANIEL_GIMENO_TRAVER: 2.11
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PEDRO_MARTINEZ,
+                    JOAO_MENEZES
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    PEDRO_MARTINEZ: 1.36,
+                    JOAO_MENEZES: 3.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALESSANDRO_GIANNESSI,
+                    JOAO_SOUSA
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    ALESSANDRO_GIANNESSI: 1.36,
+                    JOAO_SOUSA: 2.98
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    ALEN_AVIDZBA
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    FACUNDO_BAGNIS: 1.21,
+                    ALEN_AVIDZBA: 4.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CARLOS_BERLOCQ,
+                    GIAN_MARCO_MORONI
+                ],
+                'score': [(1, 6), (6, 3), (6, 4)],
+                'odds': {
+                    CARLOS_BERLOCQ: 1.73,
+                    GIAN_MARCO_MORONI: 2.01
+                }
+            },
+
+            # 2019-02-24
+            {
+                'round': 256,
+                'players': [
+                    PEDRO_MARTINEZ,
+                    FEDERICO_CORIA
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    PEDRO_MARTINEZ: 1.61,
+                    FEDERICO_CORIA: 2.11
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALESSANDRO_GIANNESSI,
+                    KIMMER_COPPEJANS
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    ALESSANDRO_GIANNESSI: 1.83,
+                    KIMMER_COPPEJANS: 1.83
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    ANDREJ_MARTIN
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    FACUNDO_BAGNIS: 1.53,
+                    ANDREJ_MARTIN: 2.47
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    PEDRO_SAKAMOTO,
+                    CARLOS_BERLOCQ
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    PEDRO_SAKAMOTO: 3.21,
+                    CARLOS_BERLOCQ: 1.33
+                }
+            },
+
+            # 2019-02-25
+            {
+                'round': 32,
+                'players': [
+                    LORENZO_SONEGO,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    LORENZO_SONEGO: 2.40,
+                    FEDERICO_DELBONIS: 1.59
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CRISTIAN_GARIN,
+                    PEDRO_SOUSA
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.30,
+                    PEDRO_SOUSA: 3.59
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(3, 6), (6, 1), (6, 2)],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 2.12,
+                    MAXIMILIAN_MARTERER: 1.74
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 4), (3, 6), (7, 6)],
+                'odds': {
+                    MARCO_TRUNGELLITI: 2.28,
+                    TARO_DANIEL: 1.59
+                }
+            },
+
+            # 2019-02-26
+            {
+                'round': 32,
+                'players': [
+                    THIAGO_SEYBOTH_WILD,
+                    ELIAS_YMER
+                ],
+                'score': [(6, 3), (4, 6), (6, 2)],
+                'odds': {
+                    THIAGO_SEYBOTH_WILD: 2.60,
+                    ELIAS_YMER: 1.48
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CASPER_RUUD,
+                    THIAGO_MONTEIRO
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    CASPER_RUUD: 1.71,
+                    THIAGO_MONTEIRO: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    FACUNDO_BAGNIS,
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.59,
+                    FACUNDO_BAGNIS: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HUGO_DELLIEN,
+                    PEDRO_MARTINEZ
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    HUGO_DELLIEN: 1.74,
+                    PEDRO_MARTINEZ: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    PAOLO_LORENZI
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.53,
+                    PAOLO_LORENZI: 2.44
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAUME_MUNAR,
+                    PEDRO_SAKAMOTO
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    JAUME_MUNAR: 1.10,
+                    PEDRO_SAKAMOTO: 7.00
+                }
+            },
+
+            # 2019-02-27
+            {
+                'round': 32,
+                'players': [
+                    LASLO_DJERE,
+                    ALESSANDRO_GIANNESSI
+                ],
+                'score': [(7, 6), (4, 6), (6, 4)],
+                'odds': {
+                    LASLO_DJERE: 1.42,
+                    ALESSANDRO_GIANNESSI: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    PABLO_CUEVAS
+                ],
+                'score': [(5, 7), (4, 6), (6, 4)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 2.48,
+                    PABLO_CUEVAS: 1.51
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    THIAGO_SEYBOTH_WILD
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    MARCO_TRUNGELLITI: 1.59,
+                    THIAGO_SEYBOTH_WILD: 2.35
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CRISTIAN_GARIN,
+                    JAUME_MUNAR
+                ],
+                'score': [(7, 6), (6, 7), (7, 6)],
+                'odds': {
+                    CRISTIAN_GARIN: 2.18,
+                    JAUME_MUNAR: 1.67
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    LEONARDO_MAYER,
+                    LORENZO_SONEGO
+                ],
+                'score': [(6, 1), (3, 6), (6, 3)],
+                'odds': {
+                    LEONARDO_MAYER: 1.71,
+                    LORENZO_SONEGO: 2.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GUIDO_PELLA,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    GUIDO_PELLA: 1.67,
+                    ROBERTO_CARBALLES_BAENA: 2.26
+                }
+            },
+
+            # 2019-02-28
+            {
+                'round': 16,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.65,
+                    ALBERT_RAMOS_VINOLAS: 2.05
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    HUGO_DELLIEN,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    HUGO_DELLIEN: 2.43,
+                    JUAN_IGNACIO_LONDERO: 1.56
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    LASLO_DJERE,
+                    MALEK_JAZIRI
+                ],
+                'score': [(6, 3), (3, 6), (7, 6)],
+                'odds': {
+                    LASLO_DJERE: 1.35,
+                    MALEK_JAZIRI: 3.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CASPER_RUUD,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    CASPER_RUUD: 1.78,
+                    JOAO_SOUSA: 1.91
+                }
+            },
+
+            # 2019-03-01
+            {
+                'round': 8,
+                'players': [
+                    CASPER_RUUD,
+                    HUGO_DELLIEN
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    CASPER_RUUD: 1.48,
+                    HUGO_DELLIEN: 2.60
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    LASLO_DJERE,
+                    FELIX_AUGER_ALIASSIME
+                ],
+                'score': [(6, 2), (3, 6), (6, 3)],
+                'odds': {
+                    LASLO_DJERE: 2.15,
+                    FELIX_AUGER_ALIASSIME: 1.43
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    CRISTIAN_GARIN,
+                    LEONARDO_MAYER
+                ],
+                'score': [(4, 6), (6, 4), (6, 4)],
+                'odds': {
+                    CRISTIAN_GARIN: 2.00,
+                    LEONARDO_MAYER: 1.77
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    GUIDO_PELLA,
+                    MARCO_TRUNGELLITI
+                ],
+                'score': [(6, 0), (6, 3)],
+                'odds': {
+                    GUIDO_PELLA: 1.17,
+                    MARCO_TRUNGELLITI: 5.00
+                }
+            },
+
+            # 2019-03-02
+            {
+                'round': 4,
+                'players': [
+                    CRISTIAN_GARIN,
+                    CASPER_RUUD
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    CRISTIAN_GARIN: 2.16,
+                    CASPER_RUUD: 1.65
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    GUIDO_PELLA,
+                    LASLO_DJERE
+                ],
+                'score': [(7, 6), (7, 6)],
+                # no odds
+            },
+
+            # 2019-03-03
+            {
+                'round': 2,
+                'players': [
+                    GUIDO_PELLA,
+                    CRISTIAN_GARIN
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    GUIDO_PELLA: 1.50,
+                    CRISTIAN_GARIN: 2.44
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'BNP Paribas Open',
         'category': 'ATP1000',
         'date': '2019-03-17',

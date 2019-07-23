@@ -60,6 +60,7 @@ def get_regressor(training_data, label_data, scaler):
 
     return reg
 
+# 53 -1.74 <- 2019-03-03 Brasil Open
 # 50 -1.73 <- 2019-03-17 BNP Paribas Open
 # 57 -1.03 <- 2019-03-31 Miami Open presented by Itau
 # 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
