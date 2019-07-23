@@ -2,6 +2,535 @@ from men import *
 
 DATA = [
     {
+        'name': 'Abierto Mexicano Telcel presentado por HSBC',
+        'category': 'ATP500',
+        'date': '2019-03-02',
+        'location': 'Acapulco, Mexico',
+        'matches': [
+
+            # 2019-02-23
+            {
+                'round': 512,
+                'players': [
+                    EMILIO_GOMEZ,
+                    DANIEL_ELAHI_GALAN
+                ],
+                'score': [(6, 4), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    FEDERICO_GAIO,
+                    ANTE_PAVIC
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    FEDERICO_GAIO: 1.57,
+                    ANTE_PAVIC: 2.31
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    LUIS_PATINO
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 1.08,
+                    LUIS_PATINO: 6.45
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    ROBERTO_ORTEGA_OLMEDO
+                ],
+                'score': [(6, 2)],
+                'retired': True,
+                'odds': {
+                    ALEXEI_POPYRIN: 1.22,
+                    ROBERTO_ORTEGA_OLMEDO: 3.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    KEVIN_KRAWIETZ
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 1.24,
+                    KEVIN_KRAWIETZ: 4.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    ROBERTO_CID_SUBERVI
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    GUILLERMO_GARCIA_LOPEZ: 1.13,
+                    ROBERTO_CID_SUBERVI: 5.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RYAN_HARRISON,
+                    JUAN_ALEJANDRO_HERNANDEZ
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    RYAN_HARRISON: 1.01,
+                    JUAN_ALEJANDRO_HERNANDEZ: 18.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BERNARD_TOMIC,
+                    LUCAS_GOMEZ
+                ],
+                'score': [(6, 1), (5, 7), (6, 0)],
+                'odds': {
+                    BERNARD_TOMIC: 1.07,
+                    LUCAS_GOMEZ: 7.00
+                }
+            },
+
+            # 2019-02-24
+            {
+                'round': 256,
+                'players': [
+                    FEDERICO_GAIO,
+                    EMILIO_GOMEZ
+                ],
+                'score': [(6, 1), (4, 6), (7, 6)],
+                'odds': {
+                    FEDERICO_GAIO: 2.00,
+                    EMILIO_GOMEZ: 1.71
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(6, 4), (3, 6), (6, 1)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 2.05,
+                    GUILLERMO_GARCIA_LOPEZ: 1.67
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    RYAN_HARRISON,
+                    ADRIAN_MENENDEZ_MACEIRAS
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    RYAN_HARRISON: 1.27,
+                    ADRIAN_MENENDEZ_MACEIRAS: 3.49
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    BERNARD_TOMIC
+                ],
+                'score': [],
+                'wo': True,
+                'odds': {
+                    ALEXEI_POPYRIN: 2.03,
+                    BERNARD_TOMIC: 1.63
+                }
+            },
+
+            # 2019-02-25
+            {
+                'round': 32,
+                'players': [
+                    STAN_WAWRINKA,
+                    RYAN_HARRISON
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    STAN_WAWRINKA: 1.33,
+                    RYAN_HARRISON: 3.15
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PETER_GOJOWCZYK,
+                    FEDERICO_GAIO
+                ],
+                'score': [(5, 7), (6, 4), (6, 2)],
+                'odds': {
+                    PETER_GOJOWCZYK: 1.25,
+                    FEDERICO_GAIO: 3.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_MILLMAN,
+                    MARCEL_GRANOLLERS
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JOHN_MILLMAN: 1.31,
+                    MARCEL_GRANOLLERS: 3.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEVE_JOHNSON,
+                    GERARDO_LOPEZ_VILLASENOR
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    STEVE_JOHNSON: 1.09,
+                    GERARDO_LOPEZ_VILLASENOR: 6.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FRANCES_TIAFOE,
+                    JORDAN_THOMPSON
+                ],
+                'score': [(3, 6), (6, 4), (6, 3)],
+                'odds': {
+                    FRANCES_TIAFOE: 1.63,
+                    JORDAN_THOMPSON: 2.24
+                }
+            },
+
+            # 2019-02-26
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    SAM_QUERREY: 1.32,
+                    GUILLERMO_GARCIA_LOPEZ: 3.69
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(6, 2), (2, 6), (6, 2)],
+                'odds': {
+                    CAMERON_NORRIE: 2.12,
+                    YOSHIHITO_NISHIOKA: 1.67
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MACKENZIE_MCDONALD,
+                    EMILIO_NAVA
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    MACKENZIE_MCDONALD: 1.06,
+                    EMILIO_NAVA: 9.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 7), (6, 2), (7, 5)],
+                'odds': {
+                    FELICIANO_LOPEZ: 2.02,
+                    DUSAN_LAJOVIC: 1.77
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICK_KYRGIOS,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    NICK_KYRGIOS: 2.05,
+                    ANDREAS_SEPPI: 1.71
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAVID_FERRER,
+                    TENNYS_SANDGREN
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    DAVID_FERRER: 1.58,
+                    TENNYS_SANDGREN: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    NICOLAS_JARRY
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.31,
+                    NICOLAS_JARRY: 3.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    MARIUS_COPIL
+                ],
+                'score': [(6, 3), (4, 6), (6, 1)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.65,
+                    MARIUS_COPIL: 2.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_ISNER,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 3), (4, 6), (6, 3)],
+                'odds': {
+                    JOHN_ISNER: 1.31,
+                    ADRIAN_MANNARINO: 3.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ALEXEI_POPYRIN
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.17,
+                    ALEXEI_POPYRIN: 5.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RAFAEL_NADAL,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    RAFAEL_NADAL: 1.06,
+                    MISCHA_ZVEREV: 11.50
+                }
+            },
+
+            # 2019-02-27
+            {
+                'round': 16,
+                'players': [
+                    JOHN_MILLMAN,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 0), (6, 2)],
+                'odds': {
+                    JOHN_MILLMAN: 1.43,
+                    PETER_GOJOWCZYK: 2.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STAN_WAWRINKA,
+                    STEVE_JOHNSON
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    STAN_WAWRINKA: 1.29,
+                    STEVE_JOHNSON: 3.55
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MACKENZIE_MCDONALD,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 7), (7, 5), (6, 3)],
+                'odds': {
+                    MACKENZIE_MCDONALD: 2.20,
+                    FRANCES_TIAFOE: 1.67
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [],
+                'wo': True,
+                'odds': {
+                    ALEX_DE_MINAUR: 1.28,
+                    FELICIANO_LOPEZ: 3.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JOHN_ISNER,
+                    SAM_QUERREY
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JOHN_ISNER: 1.90,
+                    SAM_QUERREY: 1.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    DAVID_FERRER
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.20,
+                    DAVID_FERRER: 4.86
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NICK_KYRGIOS,
+                    RAFAEL_NADAL
+                ],
+                'score': [(3, 6), (7, 6), (7, 6)],
+                'odds': {
+                    NICK_KYRGIOS: 3.96,
+                    RAFAEL_NADAL: 1.22
+                }
+            },
+
+            # 2019-02-28
+            {
+                'round': 8,
+                'players': [
+                    CAMERON_NORRIE,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    CAMERON_NORRIE: 1.67,
+                    MACKENZIE_MCDONALD: 2.10
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    NICK_KYRGIOS,
+                    STAN_WAWRINKA
+                ],
+                'score': [(7, 5), (6, 7), (6, 4)],
+                'odds': {
+                    NICK_KYRGIOS: 2.50,
+                    STAN_WAWRINKA: 1.54
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JOHN_ISNER,
+                    JOHN_MILLMAN
+                ],
+                'score': [(7, 6), (6, 7), (7, 6)],
+                'odds': {
+                    JOHN_ISNER: 1.65,
+                    JOHN_MILLMAN: 2.20
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.36,
+                    ALEX_DE_MINAUR: 3.24
+                }
+            },
+
+            # 2019-03-01
+            {
+                'round': 4,
+                'players': [
+                    NICK_KYRGIOS,
+                    JOHN_ISNER
+                ],
+                'score': [(7, 5), (5, 7), (7, 6)],
+                'odds': {
+                    NICK_KYRGIOS: 1.71,
+                    JOHN_ISNER: 2.00
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    CAMERON_NORRIE
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.18,
+                    CAMERON_NORRIE: 5.48
+                }
+            },
+
+            # 2019-03-02
+            {
+                'round': 2,
+                'players': [
+                    NICK_KYRGIOS,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    NICK_KYRGIOS: 3.01,
+                    ALEXANDER_ZVEREV: 1.43
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Brasil Open',
         'category': 'ATP250',
         'date': '2019-03-03',
