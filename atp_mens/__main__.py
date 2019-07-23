@@ -60,6 +60,7 @@ def get_regressor(training_data, label_data, scaler):
 
     return reg
 
+# 53 1.68 <- bet multiplier added
 # 53 -1.74 <- 2019-03-03 Brasil Open
 # 50 -1.73 <- 2019-03-17 BNP Paribas Open
 # 57 -1.03 <- 2019-03-31 Miami Open presented by Itau
@@ -155,16 +156,15 @@ def main():
 
                 scaled_match_data = scaler.transform(match_data)
                 pred1, pred2 = reg.predict(scaled_match_data)
+                multi = 2 if pred1 - pred2 > 0.25 else 1
+                multi *= 2 if pred1 - pred2 > 0.4 else 1
 
                 # testing outcome
                 correct = 0
-                multi = 1
-                # multi = 2 if pred1 - pred2 > 0.25 else 1
-                # multi *= 2 if pred1 - pred2 > 0.4 else 1
                 payout = -bet_size * multi
                 if pred1 > pred2:
                     correct = 1
-                    payout += f1_odds * bet_size
+                    payout += f1_odds * bet_size * multi
                 payouts.append(round(payout, 2))
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
@@ -179,7 +179,7 @@ def main():
                         payout += w_odds * match['bet']
                     tab.append(round(payout, 2))
 
-                logger.info(f'[{sum(payouts):.0f}|{payout:.0f}] [{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%] {p1} {match["score"]} {p2} [{ratings[p1].mu:.0f} vs {ratings[p2].mu:.0f}]')
+                logger.info(f'[{sum(payouts):.0f}|{payout:.0f}] [{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%] {p1} {match["score"]} {p2} [{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]')
 
             # update ratings
             ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
