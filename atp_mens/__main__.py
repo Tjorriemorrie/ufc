@@ -128,17 +128,6 @@ def main():
                     ratings[p1].sigma,
                     ratings[p2].sigma,
                     1 / match['round'],
-                ],
-                [
-                    win2_prob,
-                    win1_prob,
-                    1 / f2_odds,
-                    1 / f1_odds,
-                    ratings[p2].mu,
-                    ratings[p1].mu,
-                    ratings[p2].sigma,
-                    ratings[p1].sigma,
-                    1 / match['round'],
                 ]
             ]
 
@@ -146,7 +135,7 @@ def main():
             # train
             if is_training:
                 training_data.extend(match_data)
-                label_data.extend([1, 0])
+                label_data.extend([1])
 
             ###################################
             # test
@@ -155,7 +144,7 @@ def main():
                     reg = get_regressor(training_data, label_data, scaler)
 
                 scaled_match_data = scaler.transform(match_data)
-                pred1, pred2 = reg.predict(scaled_match_data)
+                pred = reg.predict(scaled_match_data)
                 multi = 2 if pred1 - pred2 > 0.25 else 1
                 multi *= 2 if pred1 - pred2 > 0.4 else 1
 

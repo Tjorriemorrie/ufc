@@ -55,11 +55,7 @@ class MyEnv(Env):
         ratings = defaultdict(lambda: Rating())
         cutoff = int(len(DATA) * 0.7)
         for i, scene in enumerate(DATA):
-            if len(scene['fights']) < 10:
-                continue
-            x = []
-            y = []
-            for fight in reversed(scene['fights']):
+            for fight in scene['fights']:
                 # skip if no odds:
                 if 'odds' not in fight:
                     continue
@@ -83,39 +79,44 @@ class MyEnv(Env):
                     raise ValueError(f'unknown winner {fw}')
                 drawn = fw is None
 
-                x.extend([
-                    1 / f1_odds,
-                    1 / f2_odds,
-                    win1_prob,
-                    win2_prob,
-                ])
+                x = [
+                    [
+                        1 / f1_odds,
+                        1 / f2_odds,
+                        win1_prob,
+                        win2_prob,
+                    ],
+                    [
+                        1 / f2_odds,
+                        1 / f1_odds,
+                        win2_prob,
+                        win1_prob,
+                    ]
+                ]
 
-                y.extend([
-                    fight['odds'][f1] if is_win_1 else 0,
-                    fight['odds'][f2] if not is_win_1 else 0,
-                ])
+                y = [
+                    [fight['odds'][f1] - 1 if is_win_1 else 0],
+                    [fight['odds'][f2] - 1 if not is_win_1 else 0]
+                ]
+
+                # add data and results for rewards
+                if i < cutoff:
+                    self.x_train.extend(x)
+                    self.y_train.append(y)
+                else:
+                    self.x_test.append(x)
+                    self.y_test.append(y)
 
                 # update ratings
                 ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
 
-                if len(x) == 40:
-                    break
-
-            # add data and results for rewards
-            if i < cutoff:
-                self.x_train.append(x)
-                self.y_train.append(y)
-            else:
-                self.x_test.append(x)
-                self.y_test.append(y)
-
     def _reset(self) -> None:
         self.i = 0
-        self.balance = 1000
+        self.balance = 0
 
     def _get_obs(self) -> List[float]:
         obs = self.x_train[self.i]
-        assert len(obs) == 40
+        assert len(obs) == 4
         return np.array(obs)
 
     def reset(self) -> List[float]:
@@ -124,7 +125,8 @@ class MyEnv(Env):
 
     def step(self, action) -> Tuple[Optional[List[float]], float, bool, dict]:
         odds = self.y_train[self.i]
-        bet_amt = max(self.balance, 200) / 100
+        # bet_amt = max(self.balance, 200) / 100
+        bet_amt = 10
         reward = -bet_amt * 10
         reward += sum([b * o * bet_amt for b, o in zip(action, odds)])
         self.balance += reward
