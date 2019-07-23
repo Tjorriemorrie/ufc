@@ -60,7 +60,7 @@ def get_regressor(training_data, label_data, scaler):
 
     return reg
 
-
+# 57 -1.03 <- 2019-03-31 Miami Open presented by Itau
 # 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
 # 68 -0.09 <- 2019-04-14 Grand Prix Hassan II
 # 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
