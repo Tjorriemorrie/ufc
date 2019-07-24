@@ -1,5 +1,6 @@
 from men import *
 
+# 66  2.35  2019-06-16 Libema Open
 # 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
 # 65  2.47  2019-03-02 Dubai Duty Free Tennis Championships
 # 64  2.27  bet unit fixed at 5
@@ -14435,6 +14436,481 @@ DATA = [
                     MATTEO_BERRETTINI: 1.47,
                     FELIX_AUGER_ALIASSIME: 2.70
                 }
+            }
+        ]
+    },
+
+    {
+        'name': 'Libema Open',
+        'category': 'ATP250',
+        'date': '2019-06-16',
+        'location': 's-Hertogenbosch, Netherlands',
+        'matches': [
+
+            # 2019-06-08
+            {
+                'round': 512,
+                'players': [
+                    SALVATORE_CARUSO,
+                    FILIP_HORANSKY
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    SALVATORE_CARUSO: 1.43,
+                    FILIP_HORANSKY: 2.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JANNIK_SINNER,
+                    LUKAS_LACKO
+                ],
+                'score': [(6, 7), (7, 6), (6, 2)],
+                'odds': {
+                    JANNIK_SINNER: 3.30,
+                    LUKAS_LACKO: 1.27
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    NICOLAS_MAHUT
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 2.35,
+                    NICOLAS_MAHUT: 1.56
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TOMMY_PAUL,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    TOMMY_PAUL: 1.36,
+                    EGOR_GERASIMOV: 2.73
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_BRANDS,
+                    ALEX_BOLT
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DANIEL_BRANDS: 2.50,
+                    ALEX_BOLT: 1.51
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCOS_GIRON,
+                    JASON_JUNG
+                ],
+                'score': [(6, 2), (5, 7), (6, 2)],
+                'odds': {
+                    MARCOS_GIRON: 2.19,
+                    JASON_JUNG: 1.57
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    THOMAS_FABBIANO,
+                    EMIL_RUUSUVUORI
+                ],
+                'score': [(4, 6), (6, 3), (6, 1)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.19,
+                    EMIL_RUUSUVUORI: 4.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANDREA_ARNABOLDI,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(4, 6), (6, 4), (6, 2)],
+                'odds': {
+                    ANDREA_ARNABOLDI: 2.65,
+                    BRADLEY_KLAHN: 1.42
+                }
+            },
+
+            # 2019-06-09
+            {
+                'round': 256,
+                'players': [
+                    SALVATORE_CARUSO,
+                    MARCOS_GIRON
+                ],
+                'score': [(6, 3), (3, 6), (6, 3)],
+                'odds': {
+                    SALVATORE_CARUSO: 1.63,
+                    MARCOS_GIRON: 2.05
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    ANDREA_ARNABOLDI
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.18,
+                    ANDREA_ARNABOLDI: 4.56
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    TOMMY_PAUL,
+                    DANIEL_BRANDS
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    TOMMY_PAUL: 1.42,
+                    DANIEL_BRANDS: 2.70
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JANNIK_SINNER,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    JANNIK_SINNER: 2.05,
+                    THOMAS_FABBIANO: 1.61
+                }
+            },
+
+            # 2019-06-10
+            {
+                'round': 32,
+                'players': [
+                    JORDAN_THOMPSON,
+                    TOMMY_PAUL
+                ],
+                'score': [(3, 6), (6, 1), (6, 4)],
+                'odds': {
+                    JORDAN_THOMPSON: 1.83,
+                    TOMMY_PAUL: 1.92
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBIN_HAASE,
+                    UGO_HUMBERT
+                ],
+                'score': [(5, 7), (7, 6), (7, 6)],
+                'odds': {
+                    ROBIN_HAASE: 1.65,
+                    UGO_HUMBERT: 2.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TAYLOR_FRITZ,
+                    JURIJ_RODIONOV
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.22,
+                    JURIJ_RODIONOV: 4.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CRISTIAN_GARIN,
+                    SALVATORE_CARUSO
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    CRISTIAN_GARIN: 1.59,
+                    SALVATORE_CARUSO: 2.47
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FRANCES_TIAFOE,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    FRANCES_TIAFOE: 1.41,
+                    JOAO_SOUSA: 3.03
+                }
+            },
+
+            # 2019-06-11
+            {
+                'round': 32,
+                'players': [
+                    ANDREAS_SEPPI,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    ANDREAS_SEPPI: 1.45,
+                    THOMAS_FABBIANO: 2.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    THIEMO_DE_BAKKER
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.20,
+                    THIEMO_DE_BAKKER: 4.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    LORENZO_SONEGO
+                ],
+                'score': [(5, 7), (6, 4), (6, 4)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.59,
+                    LORENZO_SONEGO: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_JARRY,
+                    JANNIK_SINNER
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    NICOLAS_JARRY: 1.80,
+                    JANNIK_SINNER: 2.03
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    MATTHEW_EBDEN
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.05,
+                    MATTHEW_EBDEN: 1.74
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICHARD_GASQUET,
+                    ALJAZ_BEDENE
+                ],
+                'score': [(6, 7), (7, 6), (6, 4)],
+                'odds': {
+                    RICHARD_GASQUET: 1.35,
+                    ALJAZ_BEDENE: 3.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAVID_GOFFIN,
+                    ALEJANDRO_DAVIDOVICH_FOKINA
+                ],
+                'score': [(6, 0), (6, 2)],
+                'odds': {
+                    DAVID_GOFFIN: 1.35,
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 3.22
+                }
+            },
+
+            # 2019-06-12
+            {
+                'round': 16,
+                'players': [
+                    JORDAN_THOMPSON,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    JORDAN_THOMPSON: 2.41,
+                    FRANCES_TIAFOE: 1.59
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.59,
+                    ANDREAS_SEPPI: 2.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    BORNA_CORIC,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(4, 6), (6, 3), (6, 3)],
+                'odds': {
+                    BORNA_CORIC: 1.61,
+                    TAYLOR_FRITZ: 2.36
+                }
+            },
+
+            # 2019-06-13
+            {
+                'round': 16,
+                'players': [
+                    CRISTIAN_GARIN,
+                    ROBIN_HAASE
+                ],
+                'score': [(7, 5), (7, 5)],
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAVID_GOFFIN,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    DAVID_GOFFIN: 1.38,
+                    PIERRE_HUGUES_HERBERT: 3.07
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(1, 6), (6, 3), (6, 4)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.69,
+                    FERNANDO_VERDASCO: 2.24
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NICOLAS_JARRY,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 4), (3, 6), (6, 4)],
+                'odds': {
+                    NICOLAS_JARRY: 4.45,
+                    STEFANOS_TSITSIPAS: 1.18
+                }
+            },
+
+            # 2019-06-14
+            {
+                'round': 16,
+                'players': [
+                    RICHARD_GASQUET,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(7, 6), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 8,
+                'players': [
+                    RICHARD_GASQUET,
+                    NICOLAS_JARRY
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    RICHARD_GASQUET: 1.76,
+                    NICOLAS_JARRY: 2.19
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    DAVID_GOFFIN
+                ],
+                'score': [(4, 6), (7, 5), (6, 3)],
+                'odds': {
+                    ADRIAN_MANNARINO: 3.59,
+                    DAVID_GOFFIN: 1.29
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JORDAN_THOMPSON,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(4, 6), (6, 2), (6, 3)],
+                'odds': {
+                    JORDAN_THOMPSON: 2.60,
+                    ALEX_DE_MINAUR: 1.54
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    BORNA_CORIC,
+                    CRISTIAN_GARIN
+                ],
+                'score': [(6, 7), (6, 3), (7, 6)],
+                'odds': {
+                    BORNA_CORIC: 1.41,
+                    CRISTIAN_GARIN: 2.95
+                }
+            },
+
+            # 2019-06-16
+            {
+                'round': 4,
+                'players': [
+                    JORDAN_THOMPSON,
+                    RICHARD_GASQUET
+                ],
+                'score': [(7, 5), (6, 3)]
+            },
+            {
+                'round': 4,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    BORNA_CORIC
+                ],
+                'score': [(4, 6), (6, 3), (7, 6)]
+            },
+            {
+                'round': 2,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    JORDAN_THOMPSON
+                ],
+                'score': [(7, 6), (6, 3)]
             }
         ]
     },
