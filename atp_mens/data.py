@@ -1,6 +1,579 @@
 from men import *
 
+# 65  2.47  2019-03-02 Dubai Duty Free Tennis Championships
+# 64  2.27  bet unit fixed at 5
+# 64 50.93 <- 2019-03-02 Abierto Mexicano Telcel presentado por HSBC
+# 53 1.68 <- bet multiplier added
+# 53 -1.74 <- 2019-03-03 Brasil Open
+# 50 -1.73 <- 2019-03-17 BNP Paribas Open
+# 57 -1.03 <- 2019-03-31 Miami Open presented by Itau
+# 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
+# 68 -0.09 <- 2019-04-14 Grand Prix Hassan II
+# 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
+# 62 -1.15 <- 2019-04-28 Barcelona Open Banc Sabadell
+# 68 -0.57 <- 2019-04-22 Hungarian Open
+# 65 -0.83 <- 2019-04-29 BMW Open by FWU
+# 67 -0.40 <- 2019-04-29 Millennium Estoril Open
+# 62 -1.12 <- Mutua Madrid Open
+# 52 -2.88 <- added round as variable
+# 58 -2.32 <- italia
+# 61 -1.57 <- geneva
+# 56 -1.58 <- parc auvergne
+# 54 -1.41 <- roland garros 2019
+# 54 -1.29 <- partial roland garros 2019
+
 DATA = [
+    {
+        'name': 'Dubai Duty Free Tennis Championships',
+        'category': 'ATP500',
+        'date': '2019-03-02',
+        'location': 'Dubai, United Arab Emirates',
+        'matches': [
+            {
+                'round': 512,
+                'players': [
+                    MIRZA_BASIC,
+                    SIMON_CARR
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MIRZA_BASIC: 1.04,
+                    SIMON_CARR: 7.00
+                },
+                'prediction': MIRZA_BASIC,
+            },
+            {
+                'round': 512,
+                'players': [
+                    EGOR_GERASIMOV,
+                    ALEKSANDR_NEDOVYESOV
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.49,
+                    ALEKSANDR_NEDOVYESOV: 2.45
+                },
+                'prediction': EGOR_GERASIMOV
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANTOINE_HOANG,
+                    ADHAM_GABER
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    ANTOINE_HOANG: 1.01,
+                    ADHAM_GABER: 20.68
+                },
+                'prediction': ANTOINE_HOANG,
+            },
+            {
+                'round': 512,
+                'players': [
+                    CORENTIN_MOUTET,
+                    KARIM_MOHAMED_MAAMOUN
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    CORENTIN_MOUTET: 1.24,
+                    KARIM_MOHAMED_MAAMOUN: 3.45
+                },
+                'prediction': CORENTIN_MOUTET
+            },
+            {
+                'round': 512,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    CONSTANT_LESTIENNE
+                ],
+                'score': [(6, 3), (3, 6), (6, 2)],
+                'odds': {
+                    RICARDAS_BERANKIS: 1.48,
+                    CONSTANT_LESTIENNE: 2.60
+                },
+                'prediction': CONSTANT_LESTIENNE
+            },
+            {
+                'round': 512,
+                'players': [
+                    JIRI_VESELY,
+                    JAMES_WARD
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    JIRI_VESELY: 1.36,
+                    JAMES_WARD: 2.88
+                },
+                'prediction': JIRI_VESELY
+            },
+            {
+                'round': 512,
+                'players': [
+                    THOMAS_FABBIANO,
+                    RUDOLF_MOLLEKER
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.36,
+                    RUDOLF_MOLLEKER: 2.95
+                },
+                'prediction': THOMAS_FABBIANO
+            },
+            {
+                'round': 512,
+                'players': [
+                    ILYA_IVASHKA,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(5, 7), (7, 5), (6, 2)],
+                'odds': {
+                    ILYA_IVASHKA: 1.54,
+                    ALEXEY_VATUTIN: 2.42
+                },
+                'prediction': ILYA_IVASHKA
+            },
+
+            # 2019-02-24
+            {
+                'round': 256,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    MIRZA_BASIC
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    RICARDAS_BERANKIS: 1.38,
+                    MIRZA_BASIC: 2.85
+                },
+                'prediction': RICARDAS_BERANKIS
+            },
+            {
+                'round': 256,
+                'players': [
+                    EGOR_GERASIMOV,
+                    JIRI_VESELY
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.62,
+                    JIRI_VESELY: 2.20
+                },
+                'prediction': EGOR_GERASIMOV
+            },
+            {
+                'round': 256,
+                'players': [
+                    THOMAS_FABBIANO,
+                    ANTOINE_HOANG
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.65,
+                    ANTOINE_HOANG: 2.06
+                },
+                'prediction': THOMAS_FABBIANO
+            },
+            {
+                'round': 256,
+                'players': [
+                    CORENTIN_MOUTET,
+                    ILYA_IVASHKA
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    CORENTIN_MOUTET: 1.80,
+                    ILYA_IVASHKA: 1.81
+                },
+                'prediction': CORENTIN_MOUTET
+            },
+
+            # 2019-02-25
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(3, 6), (6, 3), (6, 2)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.38,
+                    THOMAS_FABBIANO: 3.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.53,
+                    DAMIR_DZUMHUR: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    RAMKUMAR_RAMANATHAN
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.07,
+                    RAMKUMAR_RAMANATHAN: 7.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    MILOS_RAONIC
+                ],
+                'score': [(6, 4), (5, 7), (6, 4)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 5.00,
+                    MILOS_RAONIC: 1.18
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    KAREN_KHACHANOV
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.66,
+                    KAREN_KHACHANOV: 1.48
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROGER_FEDERER,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(6, 4), (3, 6), (6, 1)],
+                'odds': {
+                    ROGER_FEDERER: 1.12,
+                    PHILIPP_KOHLSCHREIBER: 6.52
+                }
+            },
+
+            # 2019-02-26
+            {
+                'round': 32,
+                'players': [
+                    DENIS_KUDLA,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(2, 6), (7, 5), (7, 5)],
+                'odds': {
+                    DENIS_KUDLA: 2.93,
+                    MATTEO_BERRETTINI: 1.36
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HUBERT_HURKACZ,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    HUBERT_HURKACZ: 1.59,
+                    CORENTIN_MOUTET: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    EGOR_GERASIMOV,
+                    ROBIN_HAASE
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.92,
+                    ROBIN_HAASE: 1.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TOMAS_BERDYCH,
+                    ILYA_IVASHKA
+                ],
+                'score': [(6, 4), (4, 6), (7, 6)],
+                'odds': {
+                    TOMAS_BERDYCH: 1.14,
+                    ILYA_IVASHKA: 5.27
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCOS_BAGHDATIS,
+                    MOHAMED_SAFWAT
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)],
+                'odds': {
+                    MARCOS_BAGHDATIS: 1.15,
+                    MOHAMED_SAFWAT: 5.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    DANILL_MEDVEDEV
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    RICARDAS_BERANKIS: 5.00,
+                    DANILL_MEDVEDEV: 1.13
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BORNA_CORIC,
+                    JIRI_VESELY
+                ],
+                'score': [(7, 5), (3, 6), (7, 6)],
+                'odds': {
+                    BORNA_CORIC: 1.20,
+                    JIRI_VESELY: 4.31
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    MATTHEW_EBDEN
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.22,
+                    MATTHEW_EBDEN: 4.15
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    MARIN_CILIC
+                ],
+                'score': [(6, 3), (4, 6), (6, 0)],
+                'odds': {
+                    GAEL_MONFILS: 1.85,
+                    MARIN_CILIC: 1.91
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KEI_NISHIKORI,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    KEI_NISHIKORI: 1.19,
+                    BENOIT_PAIRE: 4.60
+                }
+            },
+
+            # 2019-02-27
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    MARCOS_BAGHDATIS
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    GAEL_MONFILS: 1.13,
+                    MARCOS_BAGHDATIS: 5.25
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.59,
+                    JAN_LENNARD_STRUFF: 2.35
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    DENIS_KUDLA
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    RICARDAS_BERANKIS: 1.56,
+                    DENIS_KUDLA: 2.42
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    ROBERTO_BAUTISTA_AGUT
+                ],
+                'score': [(6, 7), (6, 4), (6, 3)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 3.10,
+                    ROBERTO_BAUTISTA_AGUT: 1.34
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    BORNA_CORIC,
+                    TOMAS_BERDYCH
+                ],
+                'score': [(1, 6), (6, 1), (7, 6)],
+                'odds': {
+                    BORNA_CORIC: 1.95,
+                    TOMAS_BERDYCH: 1.71
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.21,
+                    EGOR_GERASIMOV: 4.33
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROGER_FEDERER,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 3), (3, 6), (6, 3)],
+                'odds': {
+                    ROGER_FEDERER: 1.17,
+                    FERNANDO_VERDASCO: 5.22
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    HUBERT_HURKACZ,
+                    KEI_NISHIKORI
+                ],
+                'score': [(7, 5), (5, 7), (6, 2)],
+                'odds': {
+                    HUBERT_HURKACZ: 5.50,
+                    KEI_NISHIKORI: 1.14
+                }
+            },
+
+            # 2019-02-28
+            {
+                'round': 8,
+                'players': [
+                    GAEL_MONFILS,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(6, 1), (6, 7), (6, 2)],
+                'odds': {
+                    GAEL_MONFILS: 1.18,
+                    RICARDAS_BERANKIS: 4.78
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    BORNA_CORIC,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(4, 6), (6, 2), (7, 6)],
+                'odds': {
+                    BORNA_CORIC: 1.71,
+                    NIKOLOZ_BASILASHVILI: 1.95
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(7, 6), (6, 7), (6, 1)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.20,
+                    HUBERT_HURKACZ: 4.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROGER_FEDERER,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.13,
+                    MARTON_FUCSOVICS: 5.00
+                }
+            },
+
+            # 2019-03-01
+            {
+                'round': 4,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    GAEL_MONFILS
+                ],
+                'score': [(4, 6), (7, 6), (7, 6)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.95,
+                    GAEL_MONFILS: 1.74
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    ROGER_FEDERER,
+                    BORNA_CORIC
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    ROGER_FEDERER: 1.36,
+                    BORNA_CORIC: 3.00
+                }
+            },
+
+            # 2019-03-02
+            {
+                'round': 2,
+                'players': [
+                    ROGER_FEDERER,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.32,
+                    STEFANOS_TSITSIPAS: 3.45
+                }
+            }
+        ]
+    },
+
     {
         'name': 'Abierto Mexicano Telcel presentado por HSBC',
         'category': 'ATP500',

@@ -1,5 +1,6 @@
 from fighters import *
 
+# 65  1.55  bet unit fixed at 5
 # 65 5.76 <- 2019-07-20 UFC Fight Night - San Antonio 2019
 # 63 7.44 <- scaling bets on diff?
 # 68 0.60 <- changed bet size to dynamic

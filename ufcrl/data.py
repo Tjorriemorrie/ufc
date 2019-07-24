@@ -1,5 +1,6 @@
 from fighters import *
 
+# 65  5.76  UFC Fight Night - San Antonio 2019
 # 63 7.44 <- scaling bets on diff?
 # 68 0.60 <- changed bet size to dynamic
 # 70 0.83 <- xgb50
@@ -10,9 +11,8 @@ from fighters import *
 # 62 0.62
 # 64 0.66
 # 71 1.04
-# 61 -0.81
-# 63 -0.31
 
+# 61 -0.81
 # 63 -0.48
 # 60 -0.91
 # 59 -1.16

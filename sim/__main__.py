@@ -99,7 +99,8 @@ def main():
 
     # loop through scenes
     for i, scene in enumerate(DATA):
-        bet_size = max(sum(payouts), 200) // 20
+        # bet_size = max(sum(payouts), 200) // 20
+        bet_size = 5
         is_training = i < cutoff
         if not is_training:
             logger.info('')

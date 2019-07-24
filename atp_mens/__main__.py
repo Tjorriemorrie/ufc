@@ -52,33 +52,13 @@ def get_regressor(training_data, label_data, scaler):
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
     feature_names = [
-        'win%', '~win%', 'odds', '~odds',
+        'win%', 'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
         'round']
     for name, val in zip(feature_names, reg.feature_importances_):
         logger.info(f'{name}: {val}')
 
     return reg
-
-# 64 50.93 <- 2019-03-02 Abierto Mexicano Telcel presentado por HSBC
-# 53 1.68 <- bet multiplier added
-# 53 -1.74 <- 2019-03-03 Brasil Open
-# 50 -1.73 <- 2019-03-17 BNP Paribas Open
-# 57 -1.03 <- 2019-03-31 Miami Open presented by Itau
-# 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
-# 68 -0.09 <- 2019-04-14 Grand Prix Hassan II
-# 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
-# 62 -1.15 <- 2019-04-28 Barcelona Open Banc Sabadell
-# 68 -0.57 <- 2019-04-22 Hungarian Open
-# 65 -0.83 <- 2019-04-29 BMW Open by FWU
-# 67 -0.40 <- 2019-04-29 Millennium Estoril Open
-# 62 -1.12 <- Mutua Madrid Open
-# 52 -2.88 <- added round as variable
-# 58 -2.32 <- italia
-# 61 -1.57 <- geneva
-# 56 -1.58 <- parc auvergne
-# 54 -1.41 <- roland garros 2019
-# 54 -1.29 <- partial roland garros 2019
 
 
 def main():
@@ -98,7 +78,8 @@ def main():
 
     # loop through scenes
     for i, event in enumerate(DATA):
-        bet_size = max(sum(payouts), 200) // 20
+        # bet_size = max(sum(payouts), 200) // 50
+        bet_size = 5
         is_training = i < cutoff
         if not is_training:
             logger.info('')
@@ -114,14 +95,12 @@ def main():
             f2_odds = match['odds'][p2]
             if not -30 < f1_odds < 30 or not -30 < f2_odds < 30:
                 raise ValueError(f'surely these odds are wrong? {f1_odds} {f2_odds}')
-
             win1_prob = win_probability([ratings[p1]], [ratings[p2]])
             win2_prob = win_probability([ratings[p2]], [ratings[p1]])
 
             match_data = [
                 [
                     win1_prob,
-                    win2_prob,
                     1 / f1_odds,
                     1 / f2_odds,
                     ratings[p1].mu,
@@ -132,7 +111,6 @@ def main():
                 ],
                 [
                     win2_prob,
-                    win1_prob,
                     1 / f2_odds,
                     1 / f1_odds,
                     ratings[p2].mu,
@@ -160,6 +138,20 @@ def main():
                 multi = 2 if pred1 - pred2 > 0.25 else 1
                 multi *= 2 if pred1 - pred2 > 0.4 else 1
 
+                if 'prediction' in match and match['prediction'] is None:
+                    if pred1 > pred2:
+                        predw = pred1
+                        pw = p1
+                        predl = pred2
+                        pl = p2
+                    else:
+                        predw = pred2
+                        pw = p2
+                        predl = pred1
+                        pl = p1
+                    logger.info(f'[*{multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    continue
+
                 # testing outcome
                 correct = 0
                 payout = -bet_size * multi
@@ -180,7 +172,12 @@ def main():
                         payout += w_odds * match['bet']
                     tab.append(round(payout, 2))
 
-                logger.info(f'[{sum(payouts):.0f}|{payout:.0f}] [{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%] {p1} {match["score"]} {p2} [{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]')
+                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}*{multi}]'
+                log_pred = f'[{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%]'
+                log_players = f'{p1} {match["score"]} {p2}'
+                log_odds = f'[{f1_odds:.2f} vs {f2_odds:.2f}]'
+                log_trueskill = f'[{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]'
+                logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
 
             # update ratings
             ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
