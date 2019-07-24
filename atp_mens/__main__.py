@@ -78,10 +78,11 @@ def main():
 
     # loop through scenes
     for i, event in enumerate(DATA):
-        # bet_size = max(sum(payouts), 200) // 50
         bet_size = 5
         is_training = i < cutoff
         if not is_training:
+            if not reg:
+                reg = get_regressor(training_data, label_data, scaler)
             logger.info('')
         logger.info(f'{event["date"]} {event["name"]}')
 
@@ -130,9 +131,6 @@ def main():
             ###################################
             # test
             else:
-                if not reg:
-                    reg = get_regressor(training_data, label_data, scaler)
-
                 scaled_match_data = scaler.transform(match_data)
                 pred1, pred2 = reg.predict(scaled_match_data)
                 multi = 2 if pred1 - pred2 > 0.25 else 1
@@ -149,7 +147,7 @@ def main():
                         pw = p2
                         predl = pred1
                         pl = p1
-                    logger.info(f'[*{multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.info(f'[x{multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # testing outcome
@@ -172,7 +170,7 @@ def main():
                         payout += w_odds * match['bet']
                     tab.append(round(payout, 2))
 
-                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}*{multi}]'
+                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}x{multi}]'
                 log_pred = f'[{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%]'
                 log_players = f'{p1} {match["score"]} {p2}'
                 log_odds = f'[{f1_odds:.2f} vs {f2_odds:.2f}]'
