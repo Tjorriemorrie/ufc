@@ -1,19 +1,15 @@
 from collections import Counter, defaultdict
 from itertools import chain
-from time import sleep
-
-from cma import CMAEvolutionStrategy
 from math import sqrt
 
 import numpy as np
+from cma import CMAEvolutionStrategy
 from loguru import logger
 from sklearn.preprocessing import MinMaxScaler
 from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
 from .data import DATA
-
-BET_AMT = 10
 
 
 def win_probability(team1, team2):
@@ -58,8 +54,8 @@ def get_regressor(training_data, label_data, scaler):
         'win%', 'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
         'round']
-    for name, val in zip(feature_names, reg.feature_importances_):
-        logger.info(f'{name}: {val}')
+    # for name, val in zip(feature_names, reg.feature_importances_):
+    #     logger.info(f'{name}: {val}')
 
     return reg
 
@@ -81,7 +77,7 @@ def main(bet_multi_params=None):
     predictions = {0: [], 1: []}
 
     # loop through scenes
-    for i, event in enumerate(DATA):
+    for i, event in enumerate(DATA[:-3]):
         bet_size = 5
         is_training = i < cutoff
         if not is_training:
@@ -160,21 +156,13 @@ def main(bet_multi_params=None):
                 4     4.63  11.2
                 6     7.83
                 """
-                if not bet_multi_params:
-                    multi_level_1 = -0.05
-                    multi_level_2 = 0.05
-                    bet_multi = 1
-                    bet_multi *= 2 if pred1 - pred2 > multi_level_1 else 1
-                    bet_multi *= 2 if pred1 - pred2 > multi_level_2 else 1
-                else:
-                    # calculate bet size with function
-                    bet_multi = np.polyval(bet_multi_params, pred_diff)
-
+                multi_level_1, multi_level_2 = bet_multi_params
+                bet_multi = 1
+                if pred_diff > multi_level_1:
+                    bet_multi *= 2
+                    if pred_diff > multi_level_2:
+                        bet_multi *= 2
                 bet_amt = bet_size * bet_multi
-                if bet_amt < 1:
-                    logger.info(f'[{bet_amt:.0f}x{bet_multi:.2f}] [{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%] No bet on {p1} or {p2} [{ratings[p1].mu:.0f} vs {ratings[p2].mu:.0f}]')
-                    payouts.append(-1)
-                    continue
 
                 if 'prediction' in match and match['prediction'] is None:
                     if pred1 > pred2:
@@ -187,7 +175,7 @@ def main(bet_multi_params=None):
                         pw = p2
                         predl = pred1
                         pl = p1
-                    logger.info(f'[x{bet_multi:.2f}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.info(f'[x{bet_multi:.1f}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] Bet on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # testing outcome
@@ -208,7 +196,7 @@ def main(bet_multi_params=None):
                         cash += f1_odds * match['bet']
                     tab.append(round(cash, 2))
 
-                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}x{bet_multi:.2f}]'
+                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}x{bet_multi:.1f}]'
                 log_pred = f'[{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%]'
                 log_players = f'{p1} {match.get("score")} {p2}'
                 log_odds = f'[{f1_odds:.2f} vs {f2_odds:.2f}]'
@@ -252,15 +240,17 @@ def main(bet_multi_params=None):
 
 
 if __name__ == '__main__':
-    main()
+    bet_params = [2.625000e+01, 2.625000e+01]
+    main(bet_params)
 
-    # es = CMAEvolutionStrategy([0] * 4, 1)
+    # es = CMAEvolutionStrategy(bet_params, 10)
     # while not es.stop():
     #     solutions = es.ask()
     #     fitness = [main(x) for x in solutions]
     #     es.tell(solutions, fitness)
     #     # es.logger.add()
     #     es.disp()
+    #     print(es.result[0])
     # es.result_pretty()
     # # es.logger.plot()
     # a = 1

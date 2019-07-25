@@ -1,5 +1,7 @@
 from men import *
 
+# 61  -0.16  diff optmized with cma-es
+# 61  -0.24  diff set to absolute
 # 62  5.43  2019-07-28 J Safra Sarasin Swiss Open Gstaad
 # 60  5.31  2019-06-29 Nature Valley International
 # 62  4.70  multi params optimized (-0.05 and 0.05)
@@ -17,9 +19,8 @@ from men import *
 # 57 -1.03 <- 2019-03-31 Miami Open presented by Itau
 # 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
 # 68 -0.09 <- 2019-04-14 Grand Prix Hassan II
-# 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
-# 62 -1.15 <- 2019-04-28 Barcelona Open Banc Sabadell
 
+# 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
 # 68 -0.57 <- 2019-04-22 Hungarian Open
 # 67 -0.40 <- 2019-04-29 Millennium Estoril Open
 # 52 -2.88 <- added round as variable
@@ -17852,7 +17853,7 @@ DATA = [
                     FILIP_KRAJINOVIC: 1.45,
                     MARTIN_KLIZAN: 2.70
                 },
-                'prediction': FILIP_KRAJINOVIC,
+                'prediction': None,
                 'bet': 20,
             },
             {
@@ -17865,7 +17866,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA: 2.50,
                     JAN_LENNARD_STRUFF: 1.52
                 },
-                'prediction': PABLO_CARRENO_BUSTA,
+                'prediction': None,
                 'bet': 20,
             },
             {
@@ -17878,7 +17879,7 @@ DATA = [
                     FEDERICO_DELBONIS: 3.80,
                     ALEXANDER_ZVEREV: 1.26
                 },
-                'prediction': FEDERICO_DELBONIS,
+                'prediction': None,
                 'bet': 20,
             },
             {
@@ -17891,7 +17892,7 @@ DATA = [
                     FABIO_FOGNINI: 1.30,
                     RUDOLF_MOLLEKER: 3.40
                 },
-                'prediction': FABIO_FOGNINI,
+                'prediction': None,
                 'bet': 20,
             }
         ]
