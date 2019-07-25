@@ -187,15 +187,19 @@ def main():
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
                 """
-                1vs2  -.10  0.00  0.10  0.20  0.40
-                -.20  2.00
-                -.10        1.90
-                0.00  1.90  1.83  1.90  1.69
-                0.10                    1.73           
-                0.25        1.55
+                1vs2  -.50  -.40  -.30  -.20  -.10  0.00  0.10  0.20  0.40
+                -.60  2.01                                            1.69
+                -.50        2.10  2.09  1.96                    1.76
+                -.40         --   2.12  1.98
+                -.30               --   1.98  2.07  1.93
+                -.20                          2.00  1.86
+                -.10                                1.90
+                0.00                          1.90  1.83  1.90  1.69
+                0.10                                            1.73           
+                0.20                                                  1.58
                 """
-                bet_multi_level_1 = -.20
-                bet_multi_level_2 = -.1
+                bet_multi_level_1 = -.4
+                bet_multi_level_2 = -.3
                 bet_multi = 1
                 bet_multi *= 2 if pred1 - pred2 > bet_multi_level_1 else 1
                 bet_multi *= 2 if pred1 - pred2 > bet_multi_level_2 else 1
