@@ -1,5 +1,8 @@
 from collections import Counter, defaultdict
 from itertools import chain
+from time import sleep
+
+from cma import CMAEvolutionStrategy
 from math import sqrt
 
 import numpy as np
@@ -61,7 +64,7 @@ def get_regressor(training_data, label_data, scaler):
     return reg
 
 
-def main():
+def main(bet_multi_params=None):
     logger.info('Starting main training')
 
     # init
@@ -148,11 +151,29 @@ def main():
                 0.10  ----  ----  ----  ----  ----  3.89
                 0.20  ----  ----  ----  ----  ----  ----  3.15  2.92
                 0.30  ----  ----  ----  ----  ----  ----        2.63
+                
+                bets  1     2     3     4     6     10
+                1     -.17  1.46  3.10  4.73  8.00  14.53
+                2     1.43  4.70  7.97  11.2
+                3     3.03  7.93  12.8
+                4     4.63  11.2
+                6     7.83
                 """
-                multi_level_1 = -0.05
-                multi_level_2 = 0.05
-                multi = 2 if pred1 - pred2 > multi_level_1 else 1
-                multi *= 2 if pred1 - pred2 > multi_level_2 else 1
+                if not bet_multi_params:
+                    multi_level_1 = -0.05
+                    multi_level_2 = 0.05
+                    bet_multi = 1
+                    bet_multi *= 2 if pred1 - pred2 > multi_level_1 else 1
+                    bet_multi *= 2 if pred1 - pred2 > multi_level_2 else 1
+                else:
+                    # calculate bet size with function
+                    bet_multi = np.polyval(bet_multi_params, abs(pred1 - pred2))
+
+                bet_amt = bet_size * bet_multi
+                if bet_amt < 1:
+                    logger.info(f'[{bet_amt:.0f}x{bet_multi:.2f}] [{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%] No bet on {p1} or {p2} [{ratings[p1].mu:.0f} vs {ratings[p2].mu:.0f}]')
+                    payouts.append(-1)
+                    continue
 
                 if 'prediction' in match and match['prediction'] is None:
                     if pred1 > pred2:
@@ -165,15 +186,15 @@ def main():
                         pw = p2
                         predl = pred1
                         pl = p1
-                    logger.info(f'[x{multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.info(f'[x{bet_multi:.2f}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # testing outcome
                 correct = 0
-                payout = -bet_size * multi
+                payout = -bet_amt
                 if pred1 > pred2:
                     correct = 1
-                    payout += f1_odds * bet_size * multi
+                    payout += f1_odds * bet_amt
                 payouts.append(round(payout, 2))
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
@@ -186,7 +207,7 @@ def main():
                         cash += f1_odds * match['bet']
                     tab.append(round(cash, 2))
 
-                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}x{multi}]'
+                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}x{bet_multi:.2f}]'
                 log_pred = f'[{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%]'
                 log_players = f'{p1} {match.get("score")} {p2}'
                 log_odds = f'[{f1_odds:.2f} vs {f2_odds:.2f}]'
@@ -198,6 +219,9 @@ def main():
 
     ###################################
     # Summary
+
+    if not accuracy[1]:
+        return 1000
 
     if accuracy[1]:
         logger.info('')
@@ -222,9 +246,20 @@ def main():
     # logger.info(f'Winners: {np.percentile(predictions[1], [10, 30, 50, 70, 90])}')
     # logger.info(f'Losers: {np.percentile(predictions[0], [10, 30, 50, 70, 90])}')
 
-    logger.info('Done')
-    return sum(payouts)
+    logger.info(f'Done')
+    return -sum(payouts)
 
 
 if __name__ == '__main__':
     main()
+
+    # es = CMAEvolutionStrategy([0] * 4, 1)
+    # while not es.stop():
+    #     solutions = es.ask()
+    #     fitness = [main(x) for x in solutions]
+    #     es.tell(solutions, fitness)
+    #     # es.logger.add()
+    #     es.disp()
+    # es.result_pretty()
+    # # es.logger.plot()
+    # a = 1

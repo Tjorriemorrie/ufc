@@ -12,6 +12,7 @@ trueskill = "*"
 xgboost = "*"
 keras-rl = "*"
 tensorflow = "*"
+cma = "*"
 
 [requires]
 python_version = "3.7"
