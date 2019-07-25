@@ -1,5 +1,6 @@
 from men import *
 
+# 62  4.70  multi params optimized (-0.05 and 0.05)
 # 62  2.51  2019-06-29 Turkish Airlines Open Antalya
 # 65  2.23  2019-06-23 Noventi Open
 # 64  2.23  2019-06-23 Fever-Tree Championships
@@ -20,9 +21,8 @@ from men import *
 # 65 -0.83 <- 2019-04-29 BMW Open by FWU
 # 67 -0.40 <- 2019-04-29 Millennium Estoril Open
 # 62 -1.12 <- Mutua Madrid Open
-# 52 -2.88 <- added round as variable
-# 58 -2.32 <- italia
 
+# 52 -2.88 <- added round as variable
 # 61 -1.57 <- geneva
 # 54 -1.41 <- roland garros 2019
 
@@ -16460,6 +16460,493 @@ CEM_ILKEL: 1.93
         ]
     },
 
+    {
+        'name': 'Nature Valley International',
+        'category': 'ATP250',
+        'date': '2019-06-29',
+        'location': 'Eastbourne, Great Britain',
+        'matches': [
+
+            # 2019-06-22
+            {
+                'round': 512,
+                'players': [
+                    PAUL_JUBB,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 2), (5, 7), (7, 6)],
+                'odds': {
+                    PAUL_JUBB: 2.95,
+                    DENIS_ISTOMIN: 1.34
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    THOMAS_FABBIANO,
+                    KENNY_DE_SCHEPPER
+                ],
+                'score': [(2, 6), (6, 3), (7, 6)],
+                'odds': {
+                    THOMAS_FABBIANO: 3.45,
+                    KENNY_DE_SCHEPPER: 3.45
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TENNYS_SANDGREN,
+                    THAI_SON_KWIATKOWSKI
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    TENNYS_SANDGREN: 1.65,
+                    THAI_SON_KWIATKOWSKI: 2.07
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JAMES_WARD,
+                    LLOYD_HARRIS
+                ],
+                'score': [(4, 6), (7, 6), (6, 4)],
+                'odds': {
+                    JAMES_WARD: 1.67,
+                    LLOYD_HARRIS: 2.10
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXANDER_BUBLIK,
+                    STEVEN_DIEZ
+                ],
+                'score': [(4, 6), (6, 0), (6, 3)],
+                'odds': {
+                    ALEXANDER_BUBLIK: 1.22,
+                    STEVEN_DIEZ: 4.19
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANDREY_RUBLEV,
+                    MAX_PURCELL
+                ],
+                'score': [(7, 5), (6, 7), (6, 3)],
+                'odds': {
+                    ANDREY_RUBLEV: 1.30,
+                    MAX_PURCELL: 3.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DENIS_KUDLA,
+                    DANIEL_MASUR
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    DENIS_KUDLA: 1.13,
+                    DANIEL_MASUR: 5.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.94,
+                    GUIDO_ANDREOZZI: 1.69
+                }
+            },
+
+            # 2019-06-23
+            {
+                'round': 256,
+                'players': [
+                    TENNYS_SANDGREN,
+                    ALEXANDER_BUBLIK
+                ],
+                'score': [(4, 6), (6, 4), (6, 3)],
+                'odds': {
+                    TENNYS_SANDGREN: 2.05,
+                    ALEXANDER_BUBLIK: 1.59
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    PAUL_JUBB,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(4, 6), (6, 3), (6, 2)],
+                'odds': {
+                    PAUL_JUBB: 3.00,
+                    ANDREY_RUBLEV: 1.28
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JAMES_WARD,
+                    DENIS_KUDLA
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    JAMES_WARD: 2.90,
+                    DENIS_KUDLA: 1.32
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    THOMAS_FABBIANO,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.53,
+                    JUAN_IGNACIO_LONDERO: 2.35
+                }
+            },
+
+            # 2019-06-24
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    SAM_QUERREY: 1.71,
+                    MIKHAIL_KUKUSHKIN: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEVE_JOHNSON,
+                    REILLY_OPELKA
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    STEVE_JOHNSON: 1.53,
+                    REILLY_OPELKA: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TAYLOR_FRITZ,
+                    PAUL_JUBB
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.32,
+                    PAUL_JUBB: 3.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HUBERT_HURKACZ,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    HUBERT_HURKACZ: 1.48,
+                    MARCO_CECCHINATO: 2.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    JOHN_MILLMAN
+                ],
+                'score': [(6, 7), (6, 4), (6, 1)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.95,
+                    JOHN_MILLMAN: 1.77
+                }
+            },
+
+            # 2019-06-25
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    JEREMY_CHARDY
+                ],
+                'score': [(6, 3), (7, 6)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    JAY_CLARKE
+                ],
+                'score': [(6, 7), (6, 1), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_JARRY,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    NICOLAS_JARRY: 1.54,
+                    PABLO_CUEVAS: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    DENIS_KUDLA
+                ],
+                'score': [(5, 7), (7, 6), (6, 4)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.53,
+                    DENIS_KUDLA: 2.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    THOMAS_FABBIANO,
+                    JAMES_WARD
+                ],
+                'score': [(2, 6), (6, 3), (6, 1)],
+                'odds': {
+                    THOMAS_FABBIANO: 2.12,
+                    JAMES_WARD: 1.63
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANIEL_EVANS,
+                    RADU_ALBOT
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    DANIEL_EVANS: 1.50,
+                    RADU_ALBOT: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
+                    TENNYS_SANDGREN
+                ],
+                'score': [(7, 5), (6, 1)],
+                'odds': {
+                    GILLES_SIMON: 1.59,
+                    TENNYS_SANDGREN: 2.30
+                }
+            },
+
+            # 2019-06-26
+            {
+                'round': 16,
+                'players': [
+                    HUBERT_HURKACZ,
+                    STEVE_JOHNSON
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    HUBERT_HURKACZ: 2.30,
+                    STEVE_JOHNSON: 1.53
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANIEL_EVANS,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    DANIEL_EVANS: 1.63,
+                    PIERRE_HUGUES_HERBERT: 2.23
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GILLES_SIMON,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    GILLES_SIMON: 1.75,
+                    NICOLAS_JARRY: 2.09
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(6, 7), (6, 3), (7, 6)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.28,
+                    JUAN_IGNACIO_LONDERO: 3.75
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    SAM_QUERREY,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    SAM_QUERREY: 1.29,
+                    DUSAN_LAJOVIC: 3.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KYLE_EDMUND,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    KYLE_EDMUND: 1.59,
+                    CAMERON_NORRIE: 2.35
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    THOMAS_FABBIANO,
+                    LASLO_DJERE
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.63,
+                    LASLO_DJERE: 2.19
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    TAYLOR_FRITZ,
+                    GUIDO_PELLA
+                ],
+                'score': [(6, 4), (3, 6), (6, 4)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.31,
+                    GUIDO_PELLA: 3.15
+                }
+            },
+
+            # 2019-06-27
+            {
+                'round': 8,
+                'players': [
+                    TAYLOR_FRITZ,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.67,
+                    HUBERT_HURKACZ: 2.20
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    THOMAS_FABBIANO,
+                    GILLES_SIMON
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    THOMAS_FABBIANO: 4.28,
+                    GILLES_SIMON: 1.19
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    SAM_QUERREY,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    SAM_QUERREY: 1.43,
+                    FERNANDO_VERDASCO: 2.74
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KYLE_EDMUND,
+                    DANIEL_EVANS
+                ],
+                'score': [(1, 6), (6, 3), (6, 4)],
+                'odds': {
+                    KYLE_EDMUND: 1.80,
+                    DANIEL_EVANS: 2.00
+                }
+            },
+
+            # 2019-06-28
+            {
+                'round': 4,
+                'players': [
+                    SAM_QUERREY,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(6, 3), (6, 7), (6, 3)],
+                'odds': {
+                    SAM_QUERREY: 1.21,
+                    THOMAS_FABBIANO: 4.10
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    TAYLOR_FRITZ,
+                    KYLE_EDMUND
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    TAYLOR_FRITZ: 2.60,
+                    KYLE_EDMUND: 1.51
+                }
+            },
+
+            # 2019-06-29
+            {
+                'round': 2,
+                'players': [
+                    TAYLOR_FRITZ,
+                    SAM_QUERREY
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    TAYLOR_FRITZ: 2.35,
+                    SAM_QUERREY: 1.61
+                }
+            }
+        ]
+    },
+
     ###############################################################################
     # predictions
     ###############################################################################
@@ -16479,7 +16966,8 @@ CEM_ILKEL: 1.93
                     ALEXEI_POPYRIN: 1.90,
                     PIERRE_HUGUES_HERBERT: 1.90
                 },
-                'prediction': None,
+                'prediction': ALEXEI_POPYRIN,
+                'bet': 5
             },
             {
                 'round': 16,
@@ -16491,7 +16979,8 @@ CEM_ILKEL: 1.93
                     CAMERON_NORRIE: 1.85,
                     SOONWOO_KWON: 1.95
                 },
-                'prediction': None,
+                'prediction': CAMERON_NORRIE,
+                'bet': 20
             },
             {
                 'round': 16,
@@ -16503,7 +16992,8 @@ CEM_ILKEL: 1.93
                     DANIEL_EVANS: 1.48,
                     RADU_ALBOT: 2.60
                 },
-                'prediction': None,
+                'prediction': DANIEL_EVANS,
+                'bet': 20
             },
             {
                 'round': 16,
@@ -16515,7 +17005,8 @@ CEM_ILKEL: 1.93
                     JOHN_ISNER: 1.60,
                     REILLY_OPELKA: 2.30
                 },
-                'prediction': None,
+                'prediction': JOHN_ISNER,
+                'bet': 5
             },
         ]
     },
@@ -16535,19 +17026,21 @@ CEM_ILKEL: 1.93
                     ROBERTO_CARBALLES_BAENA: 1.55,
                     STEFANO_TRAVAGLIA: 2.40
                 },
-                'prediction': None
+                'prediction': ROBERTO_CARBALLES_BAENA,
+                'bet': 20
             },
             {
                 'round': 16,
                 'players': [
-                    LORENZO_SONEGO,
-                    THOMAS_FABBIANO
+                    THOMAS_FABBIANO,
+                    LORENZO_SONEGO
                 ],
                 'odds': {
-                    LORENZO_SONEGO: 1.40,
-                    THOMAS_FABBIANO: 2.90
+                    THOMAS_FABBIANO: 2.90,
+                    LORENZO_SONEGO: 1.40
                 },
-                'prediction': None
+                'prediction': LORENZO_SONEGO,
+                'bet': 20
             },
             {
                 'round': 16,
@@ -16559,19 +17052,21 @@ CEM_ILKEL: 1.93
                     ALBERT_RAMOS_VINOLAS: 1.95,
                     FERNANDO_VERDASCO: 1.85
                 },
-                'prediction': None
+                'prediction': ALBERT_RAMOS_VINOLAS,
+                'bet': 5
             },
             {
                 'round': 16,
                 'players': [
-                    JIRI_VESELY,
-                    CEDRIC_MARCEL_STEBE
+                    CEDRIC_MARCEL_STEBE,
+                    JIRI_VESELY
                 ],
                 'odds': {
-                    JIRI_VESELY: 1.45,
-                    CEDRIC_MARCEL_STEBE: 2.70
+                    CEDRIC_MARCEL_STEBE: 2.70,
+                    JIRI_VESELY: 1.45
                 },
-                'prediction': None
+                'prediction': CEDRIC_MARCEL_STEBE,
+                'bet': 5
             }
         ]
     },
@@ -16586,14 +17081,14 @@ CEM_ILKEL: 1.93
             {
                 'round': 16,
                 'players': [
-                    CASPER_RUUD,
-                    ANDREY_RUBLEV
+                    ANDREY_RUBLEV,
+                    CASPER_RUUD
                 ],
                 'odds': {
-                    CASPER_RUUD: 1.90,
-                    ANDREY_RUBLEV: 1.90
+                    ANDREY_RUBLEV: 1.90,
+                    CASPER_RUUD: 1.90
                 },
-                'prediction': None,
+                'prediction': CASPER_RUUD,
                 'bet': 5,
             },
             {
@@ -16606,7 +17101,7 @@ CEM_ILKEL: 1.93
                     JEREMY_CHARDY: 1.80,
                     RICHARD_GASQUET: 2.00
                 },
-                'prediction': None,
+                'prediction': JEREMY_CHARDY,
                 'bet': 5
             },
             {
@@ -16619,20 +17114,20 @@ CEM_ILKEL: 1.93
                     DOMINIC_THIEM: 1.18,
                     MARTON_FUCSOVICS: 4.60
                 },
-                'prediction': None,
+                'prediction': DOMINIC_THIEM,
                 'bet': 20
             },
             {
                 'round': 16,
                 'players': [
-                    JUAN_IGNACIO_LONDERO,
-                    NIKOLOZ_BASILASHVILI
+                    NIKOLOZ_BASILASHVILI,
+                    JUAN_IGNACIO_LONDERO
                 ],
                 'odds': {
-                    JUAN_IGNACIO_LONDERO: 1.75,
-                    NIKOLOZ_BASILASHVILI: 2.05
+                    NIKOLOZ_BASILASHVILI: 2.05,
+                    JUAN_IGNACIO_LONDERO: 1.75
                 },
-                'prediction': None,
+                'prediction': NIKOLOZ_BASILASHVILI,
                 'bet': 5
             },
         ]

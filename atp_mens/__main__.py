@@ -75,6 +75,7 @@ def main():
     accuracy = (0, 0)
     tab = []
     actual = (0, 0)
+    predictions = {0: [], 1: []}
 
     # loop through scenes
     for i, event in enumerate(DATA):
@@ -133,8 +134,25 @@ def main():
             else:
                 scaled_match_data = scaler.transform(match_data)
                 pred1, pred2 = reg.predict(scaled_match_data)
-                multi = 2 if pred1 - pred2 > 0.25 else 1
-                multi *= 2 if pred1 - pred2 > 0.4 else 1
+                predictions[1].append(pred1 - pred2)
+                predictions[0].append(pred2 - pred1)
+                """
+                Winners: [-0.588073   -0.10473108  0.20082912  0.48903563  0.95547485]
+                Losers: [-0.95547485 -0.48903563 -0.20082912  0.10473108  0.588073  ]
+                1to2  -.10  -.05  0.00  0.05  0.10  0.20  0.30  0.40
+                -.20  3.58  4.08  4.34  4.15  3.80  3.48
+                -.10  ----  4.38  4.63  4.44  4.09  3.78
+                -.05  ----  1.21  4.88  4.70  4.35
+                0.00  ----  ----  5.01  4.82  4.47  4.16  3.58
+                0.05  ----  ----  ----  1.93  4.38
+                0.10  ----  ----  ----  ----  ----  3.89
+                0.20  ----  ----  ----  ----  ----  ----  3.15  2.92
+                0.30  ----  ----  ----  ----  ----  ----        2.63
+                """
+                multi_level_1 = -0.05
+                multi_level_2 = 0.05
+                multi = 2 if pred1 - pred2 > multi_level_1 else 1
+                multi *= 2 if pred1 - pred2 > multi_level_2 else 1
 
                 if 'prediction' in match and match['prediction'] is None:
                     if pred1 > pred2:
@@ -161,18 +179,16 @@ def main():
 
                 # actual outcome
                 if 'bet' in match:
-                    raise NotImplementedError('todo')
-                    is_actual_correct = match['prediction'] == fw
+                    is_actual_correct = match['prediction'] == p1
                     actual = (actual[0] + is_actual_correct, actual[1] + 1)
-                    payout = -match['bet']
+                    cash = -match['bet']
                     if is_actual_correct:
-                        w_odds = f1_odds if is_win_1 else f2_odds
-                        payout += w_odds * match['bet']
-                    tab.append(round(payout, 2))
+                        cash += f1_odds * match['bet']
+                    tab.append(round(cash, 2))
 
                 log_balance = f'[{sum(payouts):.0f}|{payout:.0f}x{multi}]'
                 log_pred = f'[{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%]'
-                log_players = f'{p1} {match["score"]} {p2}'
+                log_players = f'{p1} {match.get("score")} {p2}'
                 log_odds = f'[{f1_odds:.2f} vs {f2_odds:.2f}]'
                 log_trueskill = f'[{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]'
                 logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
@@ -201,71 +217,13 @@ def main():
         logger.info(f'tab: max={tab.max()} min={tab.min()}')
         logger.info(f'Most common: {Counter(tab).most_common(5)}')
 
-    # out_wins = np.array([round(w, 1) for w in out_to_preds[1]])
-    # out_loss = np.array([round(l, 1) for l in out_to_preds[0]])
-    # outcomes = OrderedDict()
-    # for w in out_wins:
-    #     if w not in outcomes:
-    #         outcomes[w] = 0
-    #     outcomes[w] += 1
-    # for l in out_loss:
-    #     if l not in outcomes:
-    #         outcomes[l] = 0
-    #     outcomes[l] -= 1
-    # for o, v in outcomes.items():
-    #     logger.info(f'{o} => {v}')
-    # logger.info(f'correct mean {out_wins.mean()} upset mean {out_loss.mean()}')
-    # logger.info(f'correct percentiles: {np.percentile(out_wins, [10, 30, 50, 70, 90])}')
-    # logger.info(f'upset percentiles: {np.percentile(out_loss, [10, 30, 50, 70, 90])}')
-
-    # # do predictions
-    # for scene in PREDICTIONS:
-    #     logger.info('')
-    #     logger.info(f'{scene["date"]} {scene["name"]}')
-    #     for fight in scene['fights']:
-    #         # skip if no odds:
-    #         if 'odds' not in fight or not fight['odds']:
-    #             continue
-    #
-    #         f1 = fight['fighters'][0]['name']
-    #         f2 = fight['fighters'][1]['name']
-    #
-    #         win1_prob = win_probability([ratings[f1]], [ratings[f2]])
-    #         win2_prob = win_probability([ratings[f2]], [ratings[f1]])
-    #
-    #         f1_odds = fight['odds'][f1]
-    #         f2_odds = fight['odds'][f2]
-    #
-    #         # regressor betting
-    #         scaled_data = scaler.transform([
-    #             [
-    #                 win1_prob,
-    #                 win2_prob,
-    #                 to_implied_odds(f1_odds),
-    #                 to_implied_odds(f2_odds),
-    #                 ratings[f1].mu,
-    #                 ratings[f2].mu,
-    #                 ratings[f1].sigma,
-    #                 ratings[f2].sigma,
-    #             ],
-    #             [
-    #                 win2_prob,
-    #                 win1_prob,
-    #                 to_implied_odds(f2_odds),
-    #                 to_implied_odds(f1_odds),
-    #                 ratings[f2].mu,
-    #                 ratings[f1].mu,
-    #                 ratings[f2].sigma,
-    #                 ratings[f1].sigma,
-    #             ]
-    #         ])
-    #         pred1, pred2 = reg.predict(scaled_data)
-    #         if pred1 > pred2:
-    #             logger.info(f'Bet on {f1} [{pred1*100:.0f}% {f1_odds}] (against {f2} [{pred2*100:.0f}% {f2_odds}])')
-    #         else:
-    #             logger.info(f'Bet on {f2} [{pred2*100:.0f}% {f2_odds}] (against {f1} [{pred1*100:.0f}% {f1_odds}])')
+    # logger.info('')
+    # logger.info('prediction percentiles:')
+    # logger.info(f'Winners: {np.percentile(predictions[1], [10, 30, 50, 70, 90])}')
+    # logger.info(f'Losers: {np.percentile(predictions[0], [10, 30, 50, 70, 90])}')
 
     logger.info('Done')
+    return sum(payouts)
 
 
 if __name__ == '__main__':
