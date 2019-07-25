@@ -1,5 +1,6 @@
 from men import *
 
+# 62  5.43  2019-07-28 J Safra Sarasin Swiss Open Gstaad
 # 60  5.31  2019-06-29 Nature Valley International
 # 62  4.70  multi params optimized (-0.05 and 0.05)
 # 62  2.51  2019-06-29 Turkish Airlines Open Antalya
@@ -18,11 +19,9 @@ from men import *
 # 68 -0.09 <- 2019-04-14 Grand Prix Hassan II
 # 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
 # 62 -1.15 <- 2019-04-28 Barcelona Open Banc Sabadell
-# 68 -0.57 <- 2019-04-22 Hungarian Open
-# 65 -0.83 <- 2019-04-29 BMW Open by FWU
-# 67 -0.40 <- 2019-04-29 Millennium Estoril Open
-# 62 -1.12 <- Mutua Madrid Open
 
+# 68 -0.57 <- 2019-04-22 Hungarian Open
+# 67 -0.40 <- 2019-04-29 Millennium Estoril Open
 # 52 -2.88 <- added round as variable
 # 61 -1.57 <- geneva
 # 54 -1.41 <- roland garros 2019
@@ -17301,6 +17300,287 @@ DATA = [
         'date': '2019-07-28',
         'location': 'Gstaad, Switzerland',
         'matches': [
+
+            # 2019-07-20
+            {
+                'round': 512,
+                'players': [
+                    GIAN_MARCO_MORONI,
+                    LUCA_MARGAROLI
+                ],
+                'score': [(6, 3), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    VIKTOR_GALOVIC,
+                    STEFANO_NAPOLITANO
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    VIKTOR_GALOVIC: 2.30,
+                    STEFANO_NAPOLITANO: 1.53
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_ELAHI_GALAN,
+                    ELLIOT_BENCHETRIT
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    DANIEL_ELAHI_GALAN: 1.63,
+                    ELLIOT_BENCHETRIT: 2.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    GONZALO_ESCOBAR
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    GUILLERMO_GARCIA_LOPEZ: 1.21,
+                    GONZALO_ESCOBAR: 4.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    RAPHAEL_BALTENSPERGER
+                ],
+                'score': [(4, 6), (6, 3), (7, 5)],
+                'odds': {
+                    MARCO_TRUNGELLITI: 1.09,
+                    RAPHAEL_BALTENSPERGER: 6.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FILLIPPO_BALDI,
+                    JOHAN_NIKLES
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    FILLIPPO_BALDI: 1.23,
+                    JOHAN_NIKLES: 3.90
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DENNIS_NOVAK,
+                    STEPHANE_ROBERT
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    DENNIS_NOVAK: 1.06,
+                    STEPHANE_ROBERT: 8.07
+                }
+            },
+
+            # 2019-07-21
+            {
+                'round': 256,
+                'players': [
+                    DANIEL_ELAHI_GALAN,
+                    JAKUB_PAUL
+                ],
+                'score': [(6, 1), (2, 6), (7, 6)],
+                'odds': {
+                    DANIEL_ELAHI_GALAN: 1.07,
+                    JAKUB_PAUL: 6.02
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    GIAN_MARCO_MORONI,
+                    MARCO_TRUNGELLITI
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    GIAN_MARCO_MORONI: 1.59,
+                    MARCO_TRUNGELLITI: 2.22
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    FILLIPPO_BALDI,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(4, 6), (7, 6), (6, 2)],
+                'odds': {
+                    FILLIPPO_BALDI: 2.95,
+                    GUILLERMO_GARCIA_LOPEZ: 1.34
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DENNIS_NOVAK,
+                    VIKTOR_GALOVIC
+                ],
+                'score': [(6, 1), (2, 6), (7, 6)],
+                'odds': {
+                    DENNIS_NOVAK: 1.36,
+                    VIKTOR_GALOVIC: 2.67
+                }
+            },
+
+            # 2019-07-22
+            {
+                'round': 32,
+                'players': [
+                    JIRI_VESELY,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    JIRI_VESELY: 1.49,
+                    ERNESTS_GULBIS: 2.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEFANO_TRAVAGLIA,
+                    DANIEL_ELAHI_GALAN
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    STEFANO_TRAVAGLIA: 1.50,
+                    DANIEL_ELAHI_GALAN: 2.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    THOMAS_FABBIANO,
+                    SANDRO_EHRAT
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.68,
+                    SANDRO_EHRAT: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CEDRIC_MARCEL_STEBE,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    CEDRIC_MARCEL_STEBE: 2.75,
+                    CORENTIN_MOUTET: 1.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_ANDUJAR,
+                    DENNIS_NOVAK
+                ],
+                'score': [(6, 1), (3, 6), (6, 3)],
+                'odds': {
+                    PABLO_ANDUJAR: 1.77,
+                    DENNIS_NOVAK: 1.96
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 7), (6, 3), (6, 2)],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 1.32,
+                    PAOLO_LORENZI: 3.34
+                }
+            },
+
+            # 2019-07-23
+            {
+                'round': 32,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(6, 0), (6, 3)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.67,
+                    HENRI_LAAKSONEN: 2.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAUME_MUNAR,
+                    MALEK_JAZIRI
+                ],
+                'score': [(5, 7), (6, 3), (6, 4)],
+                'odds': {
+                    JAUME_MUNAR: 1.29,
+                    MALEK_JAZIRI: 3.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GIAN_MARCO_MORONI,
+                    TOMMY_ROBREDO
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    GIAN_MARCO_MORONI: 2.00,
+                    TOMMY_ROBREDO: 1.77
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_ISTOMIN,
+                    MARC_ANDREA_HUESLER
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    DENIS_ISTOMIN: 1.74,
+                    MARC_ANDREA_HUESLER: 1.95
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    FILLIPPO_BALDI
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    TARO_DANIEL: 1.88,
+                    FILLIPPO_BALDI: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOAO_SOUSA,
+                    STEVE_DARCIS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JOAO_SOUSA: 1.36,
+                    STEVE_DARCIS: 2.90
+                }
+            },
 
             # 2019-07-24
             {
