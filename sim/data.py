@@ -1,5 +1,6 @@
 from fighters import *
 
+# 65  10.0  bet multi removed and switched to roi
 # 65  1.55  bet unit fixed at 5
 # 65 5.76 <- 2019-07-20 UFC Fight Night - San Antonio 2019
 # 63 7.44 <- scaling bets on diff?
@@ -8,18 +9,16 @@ from fighters import *
 # 63 0.60 <- xgb3k
 # 67 1.08 <- xgb1k
 # 65 1.02 <- xgb3k
-# 66 1.17 <- xgb2k
-# 62 0.62
 
+# 66 1.17 <- xgb2k
 # 64 0.66
 # 61 -0.81
 # 63 -0.48
 # 60 -0.91
 # 59 -1.16
 # 61 -0.85 <- fixed prediction on trained data
-# 92.0 6.53
-# 92.2 6.57
 
+# 92.0 6.53
 # 92 6.49
 # 90 5.83 <- xgb1500
 # 88 5.37 <- 1000 estimators

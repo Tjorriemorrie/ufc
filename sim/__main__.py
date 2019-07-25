@@ -2,6 +2,7 @@ from collections import Counter, defaultdict, OrderedDict
 from itertools import chain
 
 import numpy as np
+from cma import CMAEvolutionStrategy
 from loguru import logger
 from math import sqrt
 from sklearn.preprocessing import MinMaxScaler
@@ -65,7 +66,7 @@ def get_regressor(training_data, label_data, scaler):
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
     feature_names = [
-        'win%', '~win%', 'odds', '~odds',
+        'win%', 'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
         'last', '~last', 'early', '~early',
         'wins', '~wins', 'losses', '~losses',
@@ -93,6 +94,7 @@ def main():
     training_data = []
     label_data = []
     payouts = []
+    bet_amts = []
     accuracy = (0, 0)
     tab = []
     actual = (0, 0)
@@ -139,7 +141,6 @@ def main():
             fight_data = [
                 [
                     win1_prob,
-                    win2_prob,
                     1 / f1_odds,
                     1 / f2_odds,
                     ratings[f1].mu,
@@ -157,7 +158,6 @@ def main():
                 ],
                 [
                     win2_prob,
-                    win1_prob,
                     1 / f2_odds,
                     1 / f1_odds,
                     ratings[f2].mu,
@@ -186,25 +186,8 @@ def main():
             else:
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
-                """
-                1vs2  -.50  -.40  -.30  -.20  -.10  0.00  0.10  0.20  0.40
-                -.60  2.01                                            1.69
-                -.50        2.10  2.09  1.96                    1.76
-                -.40         --   2.12  1.98
-                -.30               --   1.98  2.07  1.93
-                -.20                          2.00  1.86
-                -.10                                1.90
-                0.00                          1.90  1.83  1.90  1.69
-                0.10                                            1.73           
-                0.20                                                  1.58
-                """
-                bet_multi_level_1 = -.4
-                bet_multi_level_2 = -.3
-                bet_multi = 1
-                bet_multi *= 2 if pred1 - pred2 > bet_multi_level_1 else 1
-                bet_multi *= 2 if pred1 - pred2 > bet_multi_level_2 else 1
-                bet_amt = bet_size * bet_multi
 
+                # prediction
                 if 'prediction' in fight and fight['prediction'] is None:
                     if pred1 > pred2:
                         predw = pred1
@@ -216,8 +199,7 @@ def main():
                         fw = f2
                         predl = pred1
                         fl = f1
-                    logger.info(
-                        f'[*{bet_multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} vs {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+                    logger.info(f'[{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} vs {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
                     continue
 
                 if is_win_1:
@@ -231,14 +213,15 @@ def main():
 
                 # testing outcome
                 correct = 0
-                payout = -bet_amt
+                payout = -bet_size
                 if is_win_1 and pred1 > pred2:
                     correct = 1
-                    payout += f1_odds * bet_amt
+                    payout += f1_odds * bet_size
                 elif not is_win_1 and pred2 > pred1:
                     correct = 1
-                    payout += f2_odds * bet_amt
+                    payout += f2_odds * bet_size
                 payouts.append(round(payout, 2))
+                bet_amts.append(bet_size)
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
                 # actual outcome
@@ -268,6 +251,7 @@ def main():
     if accuracy[1]:
         logger.info('')
         logger.info('Testing:')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}c/b')
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0] / accuracy[1] * 100:.0f}%')
         payouts = np.array(payouts)
         logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
@@ -283,78 +267,20 @@ def main():
         logger.info(f'tab: max={tab.max()} min={tab.min()}')
         logger.info(f'Most common: {Counter(tab).most_common(5)}')
 
-    # out_wins = np.array([round(w, 1) for w in out_to_preds[1]])
-    # out_loss = np.array([round(l, 1) for l in out_to_preds[0]])
-    # outcomes = OrderedDict()
-    # for w in out_wins:
-    #     if w not in outcomes:
-    #         outcomes[w] = 0
-    #     outcomes[w] += 1
-    # for l in out_loss:
-    #     if l not in outcomes:
-    #         outcomes[l] = 0
-    #     outcomes[l] -= 1
-    # for o, v in outcomes.items():
-    #     logger.info(f'{o} => {v}')
-    # logger.info(f'correct mean {out_wins.mean()} upset mean {out_loss.mean()}')
-    # logger.info(f'correct percentiles: {np.percentile(out_wins, [10, 30, 50, 70, 90])}')
-    # logger.info(f'upset percentiles: {np.percentile(out_loss, [10, 30, 50, 70, 90])}')
-
-    # # do predictions
-    # for scene in PREDICTIONS:
-    #     logger.info('')
-    #     logger.info(f'{scene["date"]} {scene["name"]}')
-    #     for fight in scene['fights']:
-    #         # skip if no odds:
-    #         if 'odds' not in fight or not fight['odds']:
-    #             continue
-    #
-    #         f1 = fight['fighters'][0]['name']
-    #         f2 = fight['fighters'][1]['name']
-    #
-    #         win1_prob = win_probability([ratings[f1]], [ratings[f2]])
-    #         win2_prob = win_probability([ratings[f2]], [ratings[f1]])
-    #
-    #         f1_odds = fight['odds'][f1]
-    #         f2_odds = fight['odds'][f2]
-    #
-    #         # regressor betting
-    #         scaled_data = scaler.transform([
-    #             [
-    #                 win1_prob,
-    #                 win2_prob,
-    #                 to_implied_odds(f1_odds),
-    #                 to_implied_odds(f2_odds),
-    #                 ratings[f1].mu,
-    #                 ratings[f2].mu,
-    #                 ratings[f1].sigma,
-    #                 ratings[f2].sigma,
-    #             ],
-    #             [
-    #                 win2_prob,
-    #                 win1_prob,
-    #                 to_implied_odds(f2_odds),
-    #                 to_implied_odds(f1_odds),
-    #                 ratings[f2].mu,
-    #                 ratings[f1].mu,
-    #                 ratings[f2].sigma,
-    #                 ratings[f1].sigma,
-    #             ]
-    #         ])
-    #         pred1, pred2 = reg.predict(scaled_data)
-    #         if pred1 > pred2:
-    #             logger.info(f'Bet on {f1} [{pred1*100:.0f}% {f1_odds}] (against {f2} [{pred2*100:.0f}% {f2_odds}])')
-    #         else:
-    #             logger.info(f'Bet on {f2} [{pred2*100:.0f}% {f2_odds}] (against {f1} [{pred1*100:.0f}% {f1_odds}])')
-
     logger.info('Done')
+    return -(sum(payouts) / sum(bet_amts))
 
 
 if __name__ == '__main__':
     main()
 
-# from trueskill import Rating, quality_1vs1, rate_1vs1
-# alice, bob = Rating(25), Rating(30)  # assign Alice and Bob's ratings
-# if quality_1vs1(alice, bob) < 0.50:
-#     print('This match seems to be not so fair')
-# alice, bob = rate_1vs1(alice, bob)  # update the ratings after the match
+    # es = CMAEvolutionStrategy(bet_params, 1)
+    # while not es.stop():
+    #     solutions = es.ask()
+    #     fitness = [main(x) for x in solutions]
+    #     es.tell(solutions, fitness)
+    #     # es.logger.add()
+    #     es.disp()
+    #     print(es.result[0])
+    # es.result_pretty()
+    # # es.logger.plot()
