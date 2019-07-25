@@ -103,8 +103,10 @@ def main():
         bet_size = 5
         is_training = i < cutoff
         if not is_training:
+            if not reg:
+                reg = get_regressor(training_data, label_data, scaler)
             logger.info('')
-            logger.info(f'{scene["date"]} {scene["name"]}')
+        logger.info(f'{scene["date"]} {scene["name"]}')
 
         for fight in scene['fights']:
             # skip if no odds:
@@ -182,13 +184,22 @@ def main():
             ###################################
             # test
             else:
-                if not reg:
-                    reg = get_regressor(training_data, label_data, scaler)
-
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
-                multi = 2 if pred1 - pred2 > 0.25 else 1
-                multi *= 2 if pred1 - pred2 > 0.4 else 1
+                """
+                1vs2  -.10  0.00  0.10  0.20  0.40
+                -.20  2.00
+                -.10        1.90
+                0.00  1.90  1.83  1.90  1.69
+                0.10                    1.73           
+                0.25        1.55
+                """
+                bet_multi_level_1 = -.20
+                bet_multi_level_2 = -.1
+                bet_multi = 1
+                bet_multi *= 2 if pred1 - pred2 > bet_multi_level_1 else 1
+                bet_multi *= 2 if pred1 - pred2 > bet_multi_level_2 else 1
+                bet_amt = bet_size * bet_multi
 
                 if 'prediction' in fight and fight['prediction'] is None:
                     if pred1 > pred2:
@@ -201,7 +212,8 @@ def main():
                         fw = f2
                         predl = pred1
                         fl = f1
-                    logger.info(f'[*{multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} vs {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+                    logger.info(
+                        f'[*{bet_multi}] [{predw * 100:.0f}% vs {predl * 100:.0f}%] {fw} vs {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
                     continue
 
                 if is_win_1:
@@ -215,13 +227,13 @@ def main():
 
                 # testing outcome
                 correct = 0
-                payout = -bet_size * multi
+                payout = -bet_amt
                 if is_win_1 and pred1 > pred2:
                     correct = 1
-                    payout += f1_odds * bet_size * multi
+                    payout += f1_odds * bet_amt
                 elif not is_win_1 and pred2 > pred1:
                     correct = 1
-                    payout += f2_odds * bet_size * multi
+                    payout += f2_odds * bet_amt
                 payouts.append(round(payout, 2))
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
@@ -252,7 +264,7 @@ def main():
     if accuracy[1]:
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0] / accuracy[1] * 100:.0f}%')
         payouts = np.array(payouts)
         logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
         logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
@@ -261,7 +273,7 @@ def main():
     if actual[1]:
         logger.info('')
         logger.info('Actual:')
-        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
+        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0] / actual[1] * 100:.0f}%')
         tab = np.array(tab)
         logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
         logger.info(f'tab: max={tab.max()} min={tab.min()}')
@@ -336,7 +348,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 
 # from trueskill import Rating, quality_1vs1, rate_1vs1
 # alice, bob = Rating(25), Rating(30)  # assign Alice and Bob's ratings

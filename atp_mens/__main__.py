@@ -137,6 +137,7 @@ def main(bet_multi_params=None):
             else:
                 scaled_match_data = scaler.transform(match_data)
                 pred1, pred2 = reg.predict(scaled_match_data)
+                pred_diff = abs(pred1 - pred2)
                 predictions[1].append(pred1 - pred2)
                 predictions[0].append(pred2 - pred1)
                 """
@@ -167,7 +168,7 @@ def main(bet_multi_params=None):
                     bet_multi *= 2 if pred1 - pred2 > multi_level_2 else 1
                 else:
                     # calculate bet size with function
-                    bet_multi = np.polyval(bet_multi_params, abs(pred1 - pred2))
+                    bet_multi = np.polyval(bet_multi_params, pred_diff)
 
                 bet_amt = bet_size * bet_multi
                 if bet_amt < 1:
