@@ -243,7 +243,7 @@ def main(bet_multi_params=None):
 
 
 if __name__ == '__main__':
-    bet_params = [0.87596591, 1.31996753, 7.0982533 ]
+    bet_params = [-6.649785117272925, -2.1954151653870495, 6.624531057683759]
     main(bet_params)
 
     # es = CMAEvolutionStrategy(bet_params, 1)

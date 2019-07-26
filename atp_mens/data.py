@@ -1,5 +1,6 @@
 from men import *
 
+# 57  -10.3  2019-07-21 Swedish Open
 # 53  -8.45  Plava Laguna Croatia Open Umag
 # 53  -9.73  2019-07-21 Hall of Fame Open
 # 55  -9.7  2019-07-14 Wimbledon
@@ -12,9 +13,8 @@ from men import *
 # 62  5.43  2019-07-28 J Safra Sarasin Swiss Open Gstaad
 # 60  5.31  2019-06-29 Nature Valley International
 # 62  4.70  multi params optimized (-0.05 and 0.05)
-# 62  2.51  2019-06-29 Turkish Airlines Open Antalya
-# 65  2.23  2019-06-23 Noventi Open
 
+# 62  2.51  2019-06-29 Turkish Airlines Open Antalya
 # 64  2.23  2019-06-23 Fever-Tree Championships
 # 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
 # 64  2.27  bet unit fixed at 5
@@ -24,8 +24,8 @@ from men import *
 # 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
 # 68 -0.57 <- 2019-04-22 Hungarian Open
 # 67 -0.40 <- 2019-04-29 Millennium Estoril Open
+
 # 52 -2.88 <- added round as variable
-# 61 -1.57 <- geneva
 
 
 DATA = [
@@ -9593,12 +9593,12 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-NINO_SERDARUSIC,
+                    NINO_SERDARUSIC,
                     MARCO_TRUNGELLITI
                 ],
                 'score': [(6, 3), (6, 3)],
                 'odds': {
-NINO_SERDARUSIC: 2.55,
+                    NINO_SERDARUSIC: 2.55,
                     MARCO_TRUNGELLITI: 1.51
                 }
             },
@@ -9876,6 +9876,500 @@ NINO_SERDARUSIC: 2.55,
                 'odds': {
                     DUSAN_LAJOVIC: 1.50,
                     ATTILA_BALAZS: 2.60
+                }
+            }
+        ]
+    },
+
+    {
+        'name': 'Swedish Open',
+        'category': 'ATP250',
+        'date': '2019-07-21',
+        'location': 'Bastad, Sweden',
+        'matches': [
+
+            # 2019-07-14
+            {
+                'round': 512,
+                'players': [
+                    ROBERTO_QUIROZ,
+                    YANNICK_MERTENS
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    ROBERTO_QUIROZ: 1.20,
+                    YANNICK_MERTENS: 4.16
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEVEN_DIEZ,
+                    MARC_ANDREA_HUESLER
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    STEVEN_DIEZ: 1.33,
+                    MARC_ANDREA_HUESLER: 2.97
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEY_VATUTIN,
+                    JULIAN_OCLEPPO
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    ALEXEY_VATUTIN: 1.19,
+                    JULIAN_OCLEPPO: 4.28
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CONSTANT_LESTIENNE,
+                    JOHN_HALLQUIST_LITHEN
+                ],
+                'score': [(6, 0), (7, 6)],
+                'odds': {
+                    CONSTANT_LESTIENNE: 1.02,
+                    JOHN_HALLQUIST_LITHEN: 13.78
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BERNABE_ZAPATA_MIRALLES,
+                    FILIP_HORANSKY
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    BERNABE_ZAPATA_MIRALLES: 1.67,
+                    FILIP_HORANSKY: 1.99
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FACUNDO_ARGUELLO,
+                    MARKUS_ERIKSSON
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    FACUNDO_ARGUELLO: 1.33,
+                    MARKUS_ERIKSSON: 2.94
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LAURYNAS_GRIGELIS,
+                    JOAO_DOMINGUES
+                ],
+                'score': [(7, 6), (2, 6), (6, 2)],
+                'odds': {
+                    LAURYNAS_GRIGELIS: 3.42,
+                    JOAO_DOMINGUES: 1.26
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    CARL_SODERLUND
+                ],
+                'score': [(3, 6), (6, 4), (6, 3)],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.05,
+                    CARL_SODERLUND: 10.15
+                }
+            },
+
+            # 2019-07-15
+            {
+                'round': 256,
+                'players': [
+                    BERNABE_ZAPATA_MIRALLES,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    BERNABE_ZAPATA_MIRALLES: 1.87,
+                    ALEXEY_VATUTIN: 1.74
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    CONSTANT_LESTIENNE,
+                    LAURYNAS_GRIGELIS
+                ],
+                'score': [(1, 6), (6, 2), (6, 1)],
+                'odds': {
+                    CONSTANT_LESTIENNE: 1.33,
+                    LAURYNAS_GRIGELIS: 3.05
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    FACUNDO_ARGUELLO,
+                    STEVEN_DIEZ
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    FACUNDO_ARGUELLO: 1.77,
+                    STEVEN_DIEZ: 1.83
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    ROBERTO_QUIROZ
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.17,
+                    ROBERTO_QUIROZ: 4.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKAEL_YMER,
+                    ALEJANDRO_DAVIDOVICH_FOKINA
+                ],
+                'score': [(4, 6), (7, 5), (6, 0)],
+                'odds': {
+                    MIKAEL_YMER: 1.61,
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 2.27
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    JAUME_MUNAR
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 1.80,
+                    JAUME_MUNAR: 1.97
+                }
+            },
+
+            # 2019-07-16
+            {
+                'round': 32,
+                'players': [
+                    ELIAS_YMER,
+                    THIAGO_MONTEIRO
+                ],
+                'score': [(6, 3), (2, 6), (7, 5)],
+                'odds': {
+                    ELIAS_YMER: 2.10,
+                    THIAGO_MONTEIRO: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    CONSTANT_LESTIENNE
+                ],
+                'score': [(6, 1), (7, 5)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.33,
+                    CONSTANT_LESTIENNE: 3.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENNIS_NOVAK,
+                    STEVE_DARCIS
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    DENNIS_NOVAK: 1.60,
+                    STEVE_DARCIS: 2.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HUGO_DELLIEN,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(6, 2), (2, 1)],
+                'retired': True,
+                'odds': {
+                    HUGO_DELLIEN: 1.43,
+                    ERNESTS_GULBIS: 2.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    BERNABE_ZAPATA_MIRALLES
+                ],
+                'score': [(7, 5), (3, 6), (6, 2)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.25,
+                    BERNABE_ZAPATA_MIRALLES: 3.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JEREMY_CHARDY,
+                    PABLO_CARRENO_BUSTA
+                ],
+                'score': [(6, 4), (4, 6), (7, 5)],
+                'odds': {
+                    JEREMY_CHARDY: 2.25,
+                    PABLO_CARRENO_BUSTA: 1.66
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOAO_SOUSA,
+                    JOZEF_KOVALIK
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    JOAO_SOUSA: 1.56,
+                    JOZEF_KOVALIK: 2.32
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    CASPER_RUUD
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DAMIR_DZUMHUR: 3.10,
+                    CASPER_RUUD: 1.34
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    FACUNDO_ARGUELLO
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.40,
+                    FACUNDO_ARGUELLO: 3.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_JARRY,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    NICOLAS_JARRY: 1.56,
+                    HENRI_LAAKSONEN: 2.54
+                }
+            },
+
+            # 2019-07-17
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 1.63,
+                    DAMIR_DZUMHUR: 2.35
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NICOLAS_JARRY,
+                    MIKAEL_YMER
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    NICOLAS_JARRY: 1.69,
+                    MIKAEL_YMER: 2.24
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 2.50,
+                    FERNANDO_VERDASCO: 1.54
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JEREMY_CHARDY,
+                    CRISTIAN_GARIN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JEREMY_CHARDY: 2.40,
+                    CRISTIAN_GARIN: 1.57
+                }
+            },
+
+            # 2019-07-18
+            {
+                'round': 16,
+                'players': [
+                    JOAO_SOUSA,
+                    ELIAS_YMER
+                ],
+                'score': [(4, 6), (6, 4), (6, 2)],
+                'odds': {
+                    JOAO_SOUSA: 1.61,
+                    ELIAS_YMER: 2.17
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    HUGO_DELLIEN
+                ],
+                'score': [(4, 6), (7, 5), (6, 3)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.59,
+                    HUGO_DELLIEN: 2.29
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICHARD_GASQUET,
+                    DENNIS_NOVAK
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)],
+                'odds': {
+                    RICHARD_GASQUET: 1.53,
+                    DENNIS_NOVAK: 2.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    FEDERICO_DELBONIS: 2.27,
+                    PABLO_CUEVAS: 1.65
+                }
+            },
+
+            # 2019-07-19
+            {
+                'round': 8,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(4, 6), (6, 1), (6, 1)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.99,
+                    ROBERTO_CARBALLES_BAENA: 1.83
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.58,
+                    JOAO_SOUSA: 2.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    NICOLAS_JARRY,
+                    JEREMY_CHARDY
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    NICOLAS_JARRY: 1.99,
+                    JEREMY_CHARDY: 1.80
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    RICHARD_GASQUET
+                ],
+                'score': [(7, 6), (4, 6), (6, 3)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.67,
+                    RICHARD_GASQUET: 2.10
+                }
+            },
+
+            # 2019-07-20
+            {
+                'round': 4,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 2.10,
+                    ALBERT_RAMOS_VINOLAS: 1.67
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    NICOLAS_JARRY,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    NICOLAS_JARRY: 2.17,
+                    FEDERICO_DELBONIS: 1.71
+                }
+            },
+
+            # 2019-07-21
+            {
+                'round': 2,
+                'players': [
+                    NICOLAS_JARRY,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    NICOLAS_JARRY: 1.67,
+                    JUAN_IGNACIO_LONDERO: 2.25
                 }
             }
         ]
