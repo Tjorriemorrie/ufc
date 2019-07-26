@@ -13,6 +13,7 @@ from xgboost import XGBRegressor
 
 from data_2019_02 import DATA_2019_02
 from data_2019_03 import DATA_2019_03
+from data_2019_04 import DATA_2019_04
 from .data import DATA
 
 
@@ -66,7 +67,10 @@ def get_regressor(training_data, label_data, scaler):
 
 def main(bet_multi_params=None):
     logger.info('Starting main training')
-    all_data = DATA_2019_02 + DATA_2019_03 + DATA
+    all_data = DATA_2019_02 + \
+               DATA_2019_03 + \
+               DATA_2019_04 + \
+               DATA
 
     multi_level_1, multi_level_2, retired_cutoff = bet_multi_params
     retired_cutoff = int(retired_cutoff)
@@ -218,7 +222,7 @@ def main(bet_multi_params=None):
     if accuracy[1]:
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%')
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
         payouts = np.array(payouts)
         logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
@@ -239,7 +243,7 @@ def main(bet_multi_params=None):
 
 
 if __name__ == '__main__':
-    bet_params = [2.3441765153115566, 0.6603885280936959, 5.54330826126536]
+    bet_params = [0.9078849290630874, 1.033418904481143, 9.437413816435642]
     main(bet_params)
 
     # es = CMAEvolutionStrategy(bet_params, 1)
