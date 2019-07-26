@@ -1,7 +1,11 @@
 from men import *
 
-# 61  -0.16  diff optmized with cma-es
-# 61  -0.24  diff set to absolute
+# 67  9.1  retireds added
+# 65  -0.0  hamburg updated
+# 64  -2.8  2019-07-25 results
+# 63  -1.5  added multi bet and changed to roi
+# 61  -16  diff optmized with cma-es
+# 61  -24  diff set to absolute
 # 62  5.43  2019-07-28 J Safra Sarasin Swiss Open Gstaad
 # 60  5.31  2019-06-29 Nature Valley International
 # 62  4.70  multi params optimized (-0.05 and 0.05)
@@ -9,23 +13,17 @@ from men import *
 # 65  2.23  2019-06-23 Noventi Open
 # 64  2.23  2019-06-23 Fever-Tree Championships
 # 66  2.35  2019-06-16 Libema Open
-# 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
-# 65  2.47  2019-03-02 Dubai Duty Free Tennis Championships
-# 64  2.27  bet unit fixed at 5
-# 64 50.93 <- 2019-03-02 Abierto Mexicano Telcel presentado por HSBC
-# 53 1.68 <- bet multiplier added
-# 53 -1.74 <- 2019-03-03 Brasil Open
-# 50 -1.73 <- 2019-03-17 BNP Paribas Open
-# 57 -1.03 <- 2019-03-31 Miami Open presented by Itau
-# 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
-# 68 -0.09 <- 2019-04-14 Grand Prix Hassan II
 
+# 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
+# 64  2.27  bet unit fixed at 5
+# 53 1.68 <- bet multiplier added
+# 50 -1.73 <- 2019-03-17 BNP Paribas Open
+# 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
 # 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
 # 68 -0.57 <- 2019-04-22 Hungarian Open
 # 67 -0.40 <- 2019-04-29 Millennium Estoril Open
 # 52 -2.88 <- added round as variable
 # 61 -1.57 <- geneva
-# 54 -1.41 <- roland garros 2019
 
 DATA = [
     {
@@ -16949,6 +16947,407 @@ DATA = [
     },
 
     {
+        'name': 'Wimbledon',
+        'category': 'ATP2000',
+        'date': '2019-07-14',
+        'location': 'London, Great Britian',
+        'matches': [
+
+            # 2019-07-01
+            {
+                'round': 128,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    KAMIL_MAJCHRZAK
+                ],
+                'score': [(6, 4), (6, 4), (6, 4)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.95,
+                    KAMIL_MAJCHRZAK: 1.87
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    JANKO_TIPSAREVIC,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(6, 4), (6, 7), (6, 2), (5, 7), (6, 2)],
+                'odds': {
+                    JANKO_TIPSAREVIC: 2.10,
+                    YOSHIHITO_NISHIOKA: 1.29
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    ANDREAS_SEPPI,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 3), (6, 7), (6, 1), (6, 2)],
+                'odds': {
+                    ANDREAS_SEPPI: 1.91,
+                    NICOLAS_JARRY: 1.85
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    PABLO_CARRENO_BUSTA
+                ],
+                'score': [(7, 6), (7, 5), (6, 2)],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.61,
+                    PABLO_CARRENO_BUSTA: 2.30
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    REILLY_OPELKA,
+                    CEDRIC_MARCEL_STEBE
+                ],
+                'score': [(7, 6), (7, 5), (6, 2)],
+                'odds': {
+                    REILLY_OPELKA: 1.12,
+                    CEDRIC_MARCEL_STEBE: 3.10
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    CORENTIN_MOUTET,
+                    GRIGOR_DIMITROV
+                ],
+                'score': [(2, 6), (3, 6), (7, 6), (6, 3), (6, 1)],
+                'odds': {
+                    CORENTIN_MOUTET: 4.70,
+                    GRIGOR_DIMITROV: 1.19
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    LEONARDO_MAYER,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(6, 1), (7, 6), (6, 2)],
+                'odds': {
+                    LEONARDO_MAYER: 1.89,
+                    ERNESTS_GULBIS: 1.87
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    MARCOS_GIRON
+                ],
+                'score': [(6, 4), (6, 2), (6, 4)],
+                'odds': {
+                    FELICIANO_LOPEZ: 1.25,
+                    MARCOS_GIRON: 4.00
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    DENIS_KUDLA,
+                    MALEK_JAZIRI
+                ],
+                'score': [(6, 4), (6, 1), (6, 3)],
+                'odds': {
+                    DENIS_KUDLA: 1.13,
+                    MALEK_JAZIRI: 5.50
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(2, 6), (6, 3), (6, 3), (6, 1)],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 1.43,
+                    ROBERTO_CARBALLES_BAENA: 2.95
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    IVO_KARLOVIC,
+                    ANDREA_ARNABOLDI
+                ],
+                'score': [(6, 4), (6, 4), (7, 6)],
+                'odds': {
+                    IVO_KARLOVIC: 1.25,
+                    ANDREA_ARNABOLDI: 3.87
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    ROBIN_HAASE,
+                    JOZEF_KOVALIK
+                ],
+                'score': [(6, 1), (6, 3), (6, 1)],
+                'odds': {
+                    ROBIN_HAASE: 1.27,
+                    JOZEF_KOVALIK: 3.90
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    LORENZO_SONEGO
+                ],
+                'score': [(7, 6), (6, 4), (6, 4)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 2.20,
+                    LORENZO_SONEGO: 1.67
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    STEVE_DARCIS,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(6, 2), (6, 4), (6, 4)],
+                'odds': {
+                    STEVE_DARCIS: 1.67,
+                    MISCHA_ZVEREV: 2.22
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    PABLO_CUEVAS,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(4, 6), (7, 6), (2, 6), (6, 4), (6, 2)],
+                'odds': {
+                    PABLO_CUEVAS: 1.83,
+                    DAMIR_DZUMHUR: 1.92
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    JEREMY_CHARDY,
+                    MARTIN_KLIZAN
+                ],
+                'score': [(3, 6), (6, 0), (6, 3), (6, 4)],
+                'odds': {
+                    JEREMY_CHARDY: 1.26,
+                    MARTIN_KLIZAN: 3.90
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    HUBERT_HURKACZ,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 3), (4, 6), (6, 4), (6, 4)],
+                'odds': {
+                    HUBERT_HURKACZ: 1.32,
+                    DUSAN_LAJOVIC: 3.31
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    KYLE_EDMUND,
+                    JAUME_MUNAR
+                ],
+                'score': [(6, 4), (6, 4), (6, 4)],
+                'odds': {
+                    KYLE_EDMUND: 1.11,
+                    JAUME_MUNAR: 6.50
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    BENOIT_PAIRE,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(4, 6), (6, 4), (6, 4), (7, 6)],
+                'odds': {
+                    BENOIT_PAIRE: 1.26,
+                    JUAN_IGNACIO_LONDERO: 3.55
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    GUIDO_PELLA,
+                    MARIUS_COPIL
+                ],
+                'score': [(7, 6), (5, 7), (6, 3), (6, 4)],
+                'odds': {
+                    GUIDO_PELLA: 1.91,
+                    MARIUS_COPIL: 1.83
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 3), (6, 2), (6, 3)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.04,
+                    PETER_GOJOWCZYK: 11.00
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    STAN_WAWRINKA,
+                    RUBEN_BEMELMANS
+                ],
+                'score': [(6, 3), (6, 2), (6, 2)],
+                'odds': {
+                    STAN_WAWRINKA: 1.14,
+                    RUBEN_BEMELMANS: 5.50
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    DAVID_GOFFIN,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 4), (6, 4), (6, 4)],
+                'odds': {
+                    DAVID_GOFFIN: 1.02,
+                    BRADLEY_KLAHN: 13.00
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    VASEK_POSPISIL
+                ],
+                'score': [(5, 7), (6, 2), (6, 4), (6, 3)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.06,
+                    VASEK_POSPISIL: 10.50
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    UGO_HUMBERT,
+                    GAEL_MONFILS
+                ],
+                'score': [(6, 7), (3, 6), (6, 4), (7, 5), (3, 0)],
+                'odds': {
+                    UGO_HUMBERT: 3.40,
+                    GAEL_MONFILS: 1.30
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    MILOS_RAONIC,
+                    PRAJNESH_GUNNESWARAN
+                ],
+                'score': [(7, 6), (6, 4), (6, 2)],
+                'odds': {
+                    MILOS_RAONIC: 1.04,
+                    PRAJNESH_GUNNESWARAN: 14.30
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 3), (7, 6), (7, 6)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.01,
+                    PAOLO_LORENZI: 33.64
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    KAREN_KHACHANOV,
+                    SOONWOO_KWON
+                ],
+                'score': [(7, 6), (6, 4), (4, 6), (7, 5)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.27,
+                    SOONWOO_KWON: 3.55
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    THOMAS_FABBIANO,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 4), (3, 6), (6, 4), (6, 7), (6, 3)],
+                'odds': {
+                    THOMAS_FABBIANO: 7.50,
+                    STEFANOS_TSITSIPAS: 1.10
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    JIRI_VESELY,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(4, 6), (6, 3), (6, 2), (7, 5)],
+                'odds': {
+                    JIRI_VESELY: 4.45,
+                    ALEXANDER_ZVEREV: 1.21
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    KEVIN_ANDERSON,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 3), (6, 4), (6, 2)],
+                'odds': {
+                    KEVIN_ANDERSON: 1.34,
+                    PIERRE_HUGUES_HERBERT: 3.20
+                }
+            },
+            {
+                'round': 128,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(6, 3), (7, 5), (6, 3)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.02,
+                    PHILIPP_KOHLSCHREIBER: 22.59
+                }
+            },
+
+            #
+        ]
+    },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
+
+    {
         'name': 'BB&T Atlanta Open',
         'date': '2019-07-28',
         'location': 'Atlanta, United States',
@@ -17293,6 +17692,118 @@ DATA = [
                 'prediction': JOHN_ISNER,
                 'bet': 5
             },
+
+            # 2019-07-25
+            {
+                'round': 16,
+                'players': [
+                    BERNARD_TOMIC,
+                    MATTHEW_EBDEN
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    BERNARD_TOMIC: 1.80,
+                    MATTHEW_EBDEN: 2.00
+                },
+                'prediction': MATTHEW_EBDEN,
+                'bet': 20
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.42,
+                    BRADLEY_KLAHN: 2.80
+                },
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 20
+            },
+            {
+                'round': 16,
+                'players': [
+                    TAYLOR_FRITZ,
+                    KEVIN_KING
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.16,
+                    KEVIN_KING: 5.00
+                },
+                'prediction': TAYLOR_FRITZ,
+                'bet': 5
+            },
+
+            # 2016-09-26
+            {
+                'round': 16,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    UGO_HUMBERT
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 1.95,
+                    UGO_HUMBERT: 1.85
+                },
+                'prediction': MIOMIR_KECMANOVIC,
+                'bet': 5
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    BERNARD_TOMIC
+                ],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.34,
+                    BERNARD_TOMIC: 3.20
+                },
+                'prediction': BERNARD_TOMIC,
+                'bet': 20,
+            },
+            {
+                'round': 8,
+                'players': [
+                    REILLY_OPELKA,
+                    DANIEL_EVANS
+                ],
+                'odds': {
+                    REILLY_OPELKA: 1.80,
+                    DANIEL_EVANS: 2.00
+                },
+                'prediction': DANIEL_EVANS,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    CAMERON_NORRIE,
+                    ALEXEI_POPYRIN
+                ],
+                'odds': {
+                    CAMERON_NORRIE: 1.80,
+                    ALEXEI_POPYRIN: 2.00
+                },
+                'prediction': CAMERON_NORRIE,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    TAYLOR_FRITZ
+                ],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 2.70,
+                    TAYLOR_FRITZ: 1.45
+                },
+                'prediction': TAYLOR_FRITZ,
+                'bet': 10,
+            }
         ]
     },
 
@@ -17640,6 +18151,118 @@ DATA = [
                 'prediction': ALBERT_RAMOS_VINOLAS,
                 'bet': 5
             },
+
+            # 2019-07-25
+            {
+                'round': 16,
+                'players': [
+                    PABLO_ANDUJAR,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 1), (3, 6), (7, 6)],
+                'odds': {
+                    PABLO_ANDUJAR: 1.48,
+                    TARO_DANIEL: 2.60
+                },
+                'prediction': PABLO_ANDUJAR,
+                'bet': 20,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 4), (6, 7), (7, 6)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.24,
+                    DENIS_ISTOMIN: 4.00
+                },
+                'prediction': DUSAN_LAJOVIC,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    JOAO_SOUSA,
+                    GIAN_MARCO_MORONI
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JOAO_SOUSA: 1.48,
+                    GIAN_MARCO_MORONI: 2.60
+                },
+                'prediction': JOAO_SOUSA,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    JAUME_MUNAR
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.28,
+                    JAUME_MUNAR: 3.60
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 20,
+            },
+
+            # 2019-07-26
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 2.30,
+                    ALBERT_RAMOS_VINOLAS: 1.60
+                },
+                'prediction': ALBERT_RAMOS_VINOLAS,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    PABLO_ANDUJAR,
+                    DUSAN_LAJOVIC
+                ],
+                'odds': {
+                    PABLO_ANDUJAR: 2.00,
+                    DUSAN_LAJOVIC: 1.80
+                },
+                'prediction': DUSAN_LAJOVIC,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    JOAO_SOUSA
+                ],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.24,
+                    JOAO_SOUSA: 4.00
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    THOMAS_FABBIANO,
+                    CEDRIC_MARCEL_STEBE
+                ],
+                'odds': {
+                    THOMAS_FABBIANO: 1.90,
+                    CEDRIC_MARCEL_STEBE: 1.90
+                },
+                'prediction': CEDRIC_MARCEL_STEBE,
+                'bet': 10,
+            }
         ]
     },
 
@@ -17648,6 +18271,338 @@ DATA = [
         'date': '2019-07-28',
         'location': 'Hamburg, Germany',
         'matches': [
+
+            # 2019-07-20
+            {
+                'round': 512,
+                'players': [
+                    CARLOS_BERLOCQ,
+                    JOZEF_KOVALIK
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    CARLOS_BERLOCQ: 3.92,
+                    JOZEF_KOVALIK: 1.22
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JULIAN_LENZ,
+                    JOAO_DOMINGUES
+                ],
+                'score': [(6, 3), (4, 6), (7, 6)],
+                'odds': {
+                    JULIAN_LENZ: 2.25,
+                    JOAO_DOMINGUES: 1.56
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEY_VATUTIN,
+                    PEDRO_MARTINEZ
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    ALEXEY_VATUTIN: 1.83,
+                    PEDRO_MARTINEZ: 1.71
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    SUMIT_NAGAL,
+                    SEBASTIAN_OFNER
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    SUMIT_NAGAL: 1.45,
+                    SEBASTIAN_OFNER: 2.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GIANLUCA_MAGER,
+                    TOBIAS_KAMKE
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    GIANLUCA_MAGER: 1.49,
+                    TOBIAS_KAMKE: 2.24
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    JOHANNES_HAERTEIS
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.19,
+                    JOHANNES_HAERTEIS: 4.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    HUGO_DELLIEN,
+                    DANIEL_MASUR
+                ],
+                'score': [(4, 6), (6, 2), (7, 5)],
+                'odds': {
+                    HUGO_DELLIEN: 1.26,
+                    DANIEL_MASUR: 3.15
+                }
+            },
+
+            # 2019-07-21
+            {
+                'round': 256,
+                'players': [
+                    JULIAN_LENZ,
+                    GIANLUCA_MAGER
+                ],
+                'score': [(6, 2), (6, 7), (7, 5)],
+                'odds': {
+                    JULIAN_LENZ: 2.45,
+                    GIANLUCA_MAGER: 1.48
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    SUMIT_NAGAL,
+                    ALEJANDRO_DAVIDOVICH_FOKINA
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    SUMIT_NAGAL: 2.35,
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.47
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    HUGO_DELLIEN,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    HUGO_DELLIEN: 1.42,
+                    ALEXEY_VATUTIN: 2.67
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    CARLOS_BERLOCQ
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    THIAGO_MONTEIRO: 1.17,
+                    CARLOS_BERLOCQ: 4.35
+                }
+            },
+
+            # 2019-07-22
+            {
+                'round': 32,
+                'players': [
+                    RUDOLF_MOLLEKER,
+                    LEONARDO_MAYER
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    RUDOLF_MOLLEKER: 3.38,
+                    LEONARDO_MAYER: 1.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTIN_KLIZAN,
+                    DANIEL_ALTMAIER
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.42,
+                    DANIEL_ALTMAIER: 2.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    MARTON_FUCSOVICS: 2.25,
+                    PHILIPP_KOHLSCHREIBER: 1.63
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDREY_RUBLEV,
+                    CRISTIAN_GARIN
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    ANDREY_RUBLEV: 2.13,
+                    CRISTIAN_GARIN: 1.67
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JEREMY_CHARDY,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 7), (7, 5), (6, 3)],
+                'odds': {
+                    JEREMY_CHARDY: 1.96,
+                    BENOIT_PAIRE: 1.77
+                }
+            },
+
+            # 2019-07-23
+            {
+                'round': 32,
+                'players': [
+                    CASPER_RUUD,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 3), (3, 6), (6, 1)],
+                'odds': {
+                    CASPER_RUUD: 1.43,
+                    ROBIN_HAASE: 2.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    ALEJANDRO_DAVIDOVICH_FOKINA
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.44,
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 2.76
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICHARD_GASQUET,
+                    SUMIT_NAGAL
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    RICHARD_GASQUET: 1.40,
+                    SUMIT_NAGAL: 2.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 7), (7, 6), (6, 2)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.45,
+                    MARCO_CECCHINATO: 2.68
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    YANNICK_HANFMANN
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.74,
+                    YANNICK_HANFMANN: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    THIAGO_MONTEIRO
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.63,
+                    THIAGO_MONTEIRO: 2.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    LASLO_DJERE
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.58,
+                    LASLO_DJERE: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    HUGO_DELLIEN
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.77,
+                    HUGO_DELLIEN: 1.95
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FABIO_FOGNINI,
+                    JULIAN_LENZ
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    FABIO_FOGNINI: 1.24,
+                    JULIAN_LENZ: 4.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.42,
+                    NICOLAS_JARRY: 2.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DOMINIC_THIEM,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    DOMINIC_THIEM: 1.25,
+                    PABLO_CUEVAS: 3.85
+                }
+            },
 
             # 2019-07-24
             {
@@ -17706,141 +18661,6 @@ DATA = [
                 'prediction': NIKOLOZ_BASILASHVILI,
                 'bet': 5
             },
-        ]
-    },
-
-    ###############################################################################
-    # predictions
-    ###############################################################################
-
-    {
-        'name': 'BB&T Atlanta Open',
-        'date': '2019-07-28',
-        'location': 'Atlanta, United States',
-        'matches': [
-            # 2019-07-25
-            {
-                'round': 16,
-                'players': [
-                    MATTHEW_EBDEN,
-                    BERNARD_TOMIC
-                ],
-                'odds': {
-                    MATTHEW_EBDEN: 2.00,
-                    BERNARD_TOMIC: 1.80
-                },
-                'prediction': MATTHEW_EBDEN,
-                'bet': 20
-            },
-            {
-                'round': 16,
-                'players': [
-                    ALEX_DE_MINAUR,
-                    BRADLEY_KLAHN
-                ],
-                'odds': {
-                    ALEX_DE_MINAUR: 1.42,
-                    BRADLEY_KLAHN: 2.80
-                },
-                'prediction': ALEX_DE_MINAUR,
-                'bet': 20
-            },
-            {
-                'round': 16,
-                'players': [
-                    KEVIN_KING,
-                    TAYLOR_FRITZ
-                ],
-                'odds': {
-                    KEVIN_KING: 5.00,
-                    TAYLOR_FRITZ: 1.16
-                },
-                'prediction': TAYLOR_FRITZ,
-                'bet': 5
-            },
-            {
-                'round': 16,
-                'players': [
-                    UGO_HUMBERT,
-                    MIOMIR_KECMANOVIC
-                ],
-                'odds': {
-                    UGO_HUMBERT: 1.85,
-                    MIOMIR_KECMANOVIC: 1.95
-                },
-                'prediction': MIOMIR_KECMANOVIC,
-                'bet': 5
-            }
-        ]
-    },
-
-    {
-        'name': 'J Safra Sarasin Swiss Open Gstaad',
-        'date': '2019-07-28',
-        'location': 'Gstaad, Switzerland',
-        'matches': [
-
-            # 2019-07-25
-            {
-                'round': 16,
-                'players': [
-                    PABLO_ANDUJAR,
-                    TARO_DANIEL
-                ],
-                'odds': {
-                    PABLO_ANDUJAR: 1.48,
-                    TARO_DANIEL: 2.60
-                },
-                'prediction': PABLO_ANDUJAR,
-                'bet': 20,
-            },
-            {
-                'round': 16,
-                'players': [
-                    DENIS_ISTOMIN,
-                    DUSAN_LAJOVIC
-                ],
-                'odds': {
-                    DENIS_ISTOMIN: 4.00,
-                    DUSAN_LAJOVIC: 1.24
-                },
-                'prediction': DUSAN_LAJOVIC,
-                'bet': 5,
-            },
-            {
-                'round': 16,
-                'players': [
-                    GIAN_MARCO_MORONI,
-                    JOAO_SOUSA
-                ],
-                'odds': {
-                    GIAN_MARCO_MORONI: 2.60,
-                    JOAO_SOUSA: 1.48
-                },
-                'prediction': JOAO_SOUSA,
-                'bet': 5,
-            },
-            {
-                'round': 16,
-                'players': [
-                    ROBERTO_BAUTISTA_AGUT,
-                    JAUME_MUNAR
-                ],
-                'odds': {
-                    ROBERTO_BAUTISTA_AGUT: 1.28,
-                    JAUME_MUNAR: 3.60
-                },
-                'prediction': ROBERTO_BAUTISTA_AGUT,
-                'bet': 20,
-            },
-        ]
-    },
-
-    {
-        'name': 'Hamburg European Open',
-        'date': '2019-07-28',
-        'location': 'Hamburg, Germany',
-        'matches': [
 
             # 2019-07-25
             {
@@ -17849,11 +18669,12 @@ DATA = [
                     FILIP_KRAJINOVIC,
                     MARTIN_KLIZAN
                 ],
+                'score': [(6, 7), (7, 5), (6, 1)],
                 'odds': {
                     FILIP_KRAJINOVIC: 1.45,
                     MARTIN_KLIZAN: 2.70
                 },
-                'prediction': None,
+                'prediction': FILIP_KRAJINOVIC,
                 'bet': 20,
             },
             {
@@ -17862,24 +18683,26 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                     JAN_LENNARD_STRUFF
                 ],
+                'score': [(6, 1), (7, 6)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 2.50,
                     JAN_LENNARD_STRUFF: 1.52
                 },
-                'prediction': None,
+                'prediction': PABLO_CARRENO_BUSTA,
                 'bet': 20,
             },
             {
                 'round': 16,
                 'players': [
-                    FEDERICO_DELBONIS,
-                    ALEXANDER_ZVEREV
+                    ALEXANDER_ZVEREV,
+                    FEDERICO_DELBONIS
                 ],
+                'score': [(6, 4), (7, 6)],
                 'odds': {
-                    FEDERICO_DELBONIS: 3.80,
-                    ALEXANDER_ZVEREV: 1.26
+                    ALEXANDER_ZVEREV: 1.26,
+                    FEDERICO_DELBONIS: 3.80
                 },
-                'prediction': None,
+                'prediction': FEDERICO_DELBONIS,
                 'bet': 20,
             },
             {
@@ -17888,12 +18711,67 @@ DATA = [
                     FABIO_FOGNINI,
                     RUDOLF_MOLLEKER
                 ],
+                'score': [(7, 5), (6, 4)],
                 'odds': {
                     FABIO_FOGNINI: 1.30,
                     RUDOLF_MOLLEKER: 3.40
                 },
-                'prediction': None,
+                'prediction': FABIO_FOGNINI,
                 'bet': 20,
+            },
+
+            # 2019-07-26
+            {
+                'round': 8,
+                'players': [
+                    JEREMY_CHARDY,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'odds': {
+                    JEREMY_CHARDY: 2.00,
+                    NIKOLOZ_BASILASHVILI: 1.80
+                },
+                'prediction': JEREMY_CHARDY,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DOMINIC_THIEM,
+                    ANDREY_RUBLEV
+                ],
+                'odds': {
+                    DOMINIC_THIEM: 1.14,
+                    ANDREY_RUBLEV: 5.50
+                },
+                'prediction': DOMINIC_THIEM,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    ALEXANDER_ZVEREV
+                ],
+                'odds': {
+                    FILIP_KRAJINOVIC: 3.10,
+                    ALEXANDER_ZVEREV: 1.36
+                },
+                'prediction': ALEXANDER_ZVEREV,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    FABIO_FOGNINI,
+                    PABLO_CARRENO_BUSTA
+                ],
+                'odds': {
+                    FABIO_FOGNINI: 2.00,
+                    PABLO_CARRENO_BUSTA: 1.80
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 10,
             }
         ]
     }

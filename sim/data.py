@@ -1,5 +1,6 @@
 from fighters import *
 
+# 65  13.1  bet multi for LOWER pred
 # 65  10.0  bet multi removed and switched to roi
 # 65  1.55  bet unit fixed at 5
 # 65 5.76 <- 2019-07-20 UFC Fight Night - San Antonio 2019
@@ -15,9 +16,8 @@ from fighters import *
 # 61 -0.81
 # 63 -0.48
 # 60 -0.91
-# 59 -1.16
-# 61 -0.85 <- fixed prediction on trained data
 
+# 59 -1.16
 # 92.0 6.53
 # 92 6.49
 # 90 5.83 <- xgb1500
@@ -25,7 +25,6 @@ from fighters import *
 # 74 1.68
 # 71 1.13
 # 67 0.41
-# 72 1.57
 
 DATA = [
     {

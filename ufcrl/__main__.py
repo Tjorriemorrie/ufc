@@ -124,15 +124,17 @@ class MyEnv(Env):
         is_win_1, f1_odds, f2_odds = self.y_train[self.i][0]
         multi = 1 if action < 2 else 2 if action < 4 else 4
         bet_size = 5 * multi
+
+        # deduct bet
+        reward = -bet_size
+
         # won with first fighter
         if is_win_1 and action % 2 == 0:
-            reward = f1_odds * bet_size - bet_size
+            reward += f1_odds * bet_size
+
         # won with second fighter
         elif not is_win_1 and action % 2 != 0:
-            reward = f2_odds * bet_size - bet_size
-        # lost
-        else:
-            reward = -bet_size
+            reward += f2_odds * bet_size
 
         # reward = -reward
         self.rewards.append(reward)
