@@ -11,6 +11,8 @@ from sklearn.preprocessing import MinMaxScaler
 from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
+from data_2019_02 import DATA_2019_02
+from data_2019_03 import DATA_2019_03
 from .data import DATA
 
 
@@ -64,6 +66,7 @@ def get_regressor(training_data, label_data, scaler):
 
 def main(bet_multi_params=None):
     logger.info('Starting main training')
+    all_data = DATA_2019_02 + DATA_2019_03 + DATA
 
     multi_level_1, multi_level_2, retired_cutoff = bet_multi_params
     retired_cutoff = int(retired_cutoff)
@@ -83,7 +86,7 @@ def main(bet_multi_params=None):
     actual = (0, 0)
 
     # loop through scenes
-    for i, event in enumerate(DATA):
+    for i, event in enumerate(all_data):
         bet_size = 5
         is_training = i < cutoff
         if not is_training:
