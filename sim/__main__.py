@@ -10,6 +10,9 @@ from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
 from .data import DATA
+from .data_2016 import DATA_2016
+from .data_2017 import DATA_2017
+from .data_2018 import DATA_2018
 
 
 def win_probability(team1, team2):
@@ -81,6 +84,7 @@ def main(bet_params):
     logger.info('Starting main training')
 
     # init
+    all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
     out_to_preds = {
         0: [],
         1: [],
@@ -100,7 +104,7 @@ def main(bet_params):
     actual = (0, 0)
 
     # loop through scenes
-    for i, scene in enumerate(DATA):
+    for i, scene in enumerate(all_data):
         is_training = i < cutoff
         if not is_training:
             if not reg:
@@ -124,14 +128,6 @@ def main(bet_params):
 
             win1_prob = win_probability([ratings[f1]], [ratings[f2]])
             win2_prob = win_probability([ratings[f2]], [ratings[f1]])
-
-            # get winner
-            fw = fight['winner']['fighter']
-            is_win_1 = fw == f1
-            fl = f2 if is_win_1 else f1
-            if not is_win_1 and fw != f2 and fw is not None:
-                raise ValueError(f'unknown winner {fw}')
-            drawn = fw is None
 
             # wins and losses
             wins_and_losses_1 = fight['fighters'][0]['stats'].split('-')
@@ -174,6 +170,24 @@ def main(bet_params):
                 ]
             ]
 
+            ##########################################
+            # update ratings
+            if 'winner' in fight:
+                # get winner
+                fw = fight['winner']['fighter']
+                is_win_1 = fw == f1
+                fl = f2 if is_win_1 else f1
+                if not is_win_1 and fw != f2 and fw is not None:
+                    raise ValueError(f'unknown winner {fw}')
+                drawn = fw is None
+
+                ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+                # update fights
+                early_fights[fw] = last_fights[fw]
+                early_fights[fl] = last_fights[fl]
+                last_fights[fw] = 1
+                last_fights[fl] = 0
+
             ###################################
             # train
             if is_training:
@@ -195,6 +209,7 @@ def main(bet_params):
                 bet_size *= bet_multi
                 bet_amts.append(bet_size)
 
+                # prediction made
                 if 'prediction' in fight and fight['prediction'] is None:
                     if pred1 > pred2:
                         predw = pred1
@@ -206,7 +221,12 @@ def main(bet_params):
                         fw = f2
                         predl = pred1
                         fl = f1
-                    logger.info(f'[[{predw * 100:.0f}% vs {predl * 100:.0f}%] Bet x{bet_multi} on {fw} to beat {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+                    logger.warning(f'[{predw * 100:.0f}% vs {predl * 100:.0f}%] Bet x{bet_multi} on {fw} to beat {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+                    continue
+
+                # good luck with your bets
+                elif 'winner' not in fight:
+                    logger.warning(f'Pending {f1} vs {f2}')
                     continue
 
                 if is_win_1:
@@ -245,15 +265,6 @@ def main(bet_params):
                 log_fight = f'{fw} {fight["winner"]["by"]} {fl}'
                 log_ratings = f'[{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]'
                 logger.info(f'{log_balance} {log_pred} {log_fight} {log_ratings}')
-
-            # update ratings
-            ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
-
-            # update fights
-            early_fights[fw] = last_fights[fw]
-            early_fights[fl] = last_fights[fl]
-            last_fights[fw] = 1
-            last_fights[fl] = 0
 
     ###################################
     # Summary

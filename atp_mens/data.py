@@ -1,5 +1,6 @@
 from men import *
 
+# 68  -1.0  2019-02-17 Argentina Open
 # 67  -2.6  2019-02-24 Rio Open presented by Claro
 # 67  0.41  skipping bets based on pred (none excluded)
 # 67  0.30  estimators to 100 and no betting on qualifiers
@@ -9,17 +10,15 @@ from men import *
 # 53  -9.73  2019-07-21 Hall of Fame Open
 # 55  -9.7  2019-07-14 Wimbledon
 # 67  9.1  retireds added
-# 65  -0.0  hamburg updated
-# 64  -2.8  2019-07-25 results
 
+# 65  -0.0  hamburg updated
 # 63  -1.5  added multi bet and changed to roi
 # 61  -24  diff set to absolute
 # 60  5.31  2019-06-29 Nature Valley International
 # 62  2.51  2019-06-29 Turkish Airlines Open Antalya
 # 64  2.23  2019-06-23 Fever-Tree Championships
-# 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
-# 64  2.27  bet unit fixed at 5
 
+# 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
 # 53 1.68 <- bet multiplier added
 # 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
 # 68 -0.57 <- 2019-04-22 Hungarian Open

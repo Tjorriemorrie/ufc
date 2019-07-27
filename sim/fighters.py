@@ -227,6 +227,7 @@ TERUTO_ISHIHARA = 'Teruto Ishihara'
 WANG_GUAN = 'Wang Guan'
 WULIJI_BUREN = 'Wuliji Buren'
 YAIR_RODRIGUEZ = 'Yair Rodriguez'
+YOSHINORI_HORIE = 'Yoshinori Horie'
 ZABIT_MAGOMEDSHARIPOV = 'Zabit Magomedsharipov'
 
 
