@@ -44,7 +44,7 @@ def get_regressor(training_data, label_data, scaler):
     # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
-    reg = XGBRegressor(n_estimators=1000, objective='reg:squarederror', n_jobs=4)
+    reg = XGBRegressor(n_estimators=100, objective='reg:squarederror', n_jobs=4)
     reg = reg.fit(X_train, y_train)
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
@@ -58,7 +58,7 @@ def get_regressor(training_data, label_data, scaler):
     feature_names = [
         'win%', 'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
-        'round', 'retired', '~retired']
+        'round', 'retired', '~retired', 'upsets' '~upsets']
     # for name, val in zip(feature_names, reg.feature_importances_):
     #     logger.info(f'{name}: {val}')
 
@@ -72,8 +72,9 @@ def main(bet_multi_params=None):
                DATA_2019_04 + \
                DATA
 
-    multi_level_1, multi_level_2, retired_cutoff = bet_multi_params
+    multi_level_1, multi_level_2, retired_cutoff, upsets_cutoff = bet_multi_params
     retired_cutoff = int(retired_cutoff)
+    upsets_cutoff = int(upsets_cutoff)
 
     # init
     reg = None
@@ -81,6 +82,7 @@ def main(bet_multi_params=None):
     cutoff = int(len(DATA) * 0.7)
     ratings = defaultdict(lambda: Rating())
     retireds = defaultdict(lambda: [])
+    upsets = defaultdict(lambda: [])
     training_data = []
     label_data = []
     payouts = []
@@ -115,8 +117,10 @@ def main(bet_multi_params=None):
             # retired?
             p1_retired = sum(retireds[p1])
             p2_retired = sum(retireds[p2])
-            retireds[p1] = retireds[p1][-retired_cutoff:] + [0]
-            retireds[p2] = retireds[p2][-retired_cutoff:] + [match.get('retired', 0)]
+
+            # upsets
+            p1_upsets = sum(upsets[p1])
+            p2_upsets = sum(upsets[p2])
 
             match_data = [
                 [
@@ -130,6 +134,8 @@ def main(bet_multi_params=None):
                     1 / match['round'],
                     p1_retired,
                     p2_retired,
+                    p1_upsets,
+                    p2_upsets,
                 ],
                 [
                     win2_prob,
@@ -142,8 +148,22 @@ def main(bet_multi_params=None):
                     1 / match['round'],
                     p2_retired,
                     p1_retired,
+                    p2_upsets,
+                    p1_upsets,
                 ]
             ]
+
+            #########################################
+            # update here as next sections can skip ahead
+            # update upsets
+            upset = win1_prob < 0.50
+            upsets[p1] = upsets[p1][-upsets_cutoff:] + [upset]
+            upsets[p2] = upsets[p2][-upsets_cutoff:] + [0]
+            # update retireds
+            retireds[p1] = retireds[p1][-retired_cutoff:] + [0]
+            retireds[p2] = retireds[p2][-retired_cutoff:] + [match.get('retired', 0)]
+            # update ratings
+            ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
 
             ###################################
             # train
@@ -182,7 +202,11 @@ def main(bet_multi_params=None):
 
                 # prediction bet on
                 elif 'score' not in match:
-                    logger.info(f'Pending {p1} vs {p2}')
+                    logger.warning(f'Pending {p1} vs {p2}')
+                    continue
+
+                # do not bet on qualifiers
+                if match['round'] > 128:
                     continue
 
                 # testing outcome
@@ -209,9 +233,6 @@ def main(bet_multi_params=None):
                 log_odds = f'[{p1_odds:.2f} vs {p2_odds:.2f}]'
                 log_trueskill = f'[{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]'
                 logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
-
-            # update ratings
-            ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
 
     ###################################
     # Summary
@@ -243,7 +264,7 @@ def main(bet_multi_params=None):
 
 
 if __name__ == '__main__':
-    bet_params = [-6.649785117272925, -2.1954151653870495, 6.624531057683759]
+    bet_params = [-11.98695063458035, -4.082664282097971, -1.485468733895432, 1.3967313436880064]
     main(bet_params)
 
     # es = CMAEvolutionStrategy(bet_params, 1)

@@ -1,5 +1,9 @@
 from men import *
 
+# 67  -2.6  2019-02-24 Rio Open presented by Claro
+# 67  0.41  skipping bets based on pred (none excluded)
+# 67  0.30  estimators to 100 and no betting on qualifiers
+# 59  -2.84  2019-02-24 Open 13 Provence
 # 57  -10.3  2019-07-21 Swedish Open
 # 53  -8.45  Plava Laguna Croatia Open Umag
 # 53  -9.73  2019-07-21 Hall of Fame Open
@@ -7,24 +11,18 @@ from men import *
 # 67  9.1  retireds added
 # 65  -0.0  hamburg updated
 # 64  -2.8  2019-07-25 results
-# 63  -1.5  added multi bet and changed to roi
-# 61  -16  diff optmized with cma-es
-# 61  -24  diff set to absolute
-# 62  5.43  2019-07-28 J Safra Sarasin Swiss Open Gstaad
-# 60  5.31  2019-06-29 Nature Valley International
-# 62  4.70  multi params optimized (-0.05 and 0.05)
 
+# 63  -1.5  added multi bet and changed to roi
+# 61  -24  diff set to absolute
+# 60  5.31  2019-06-29 Nature Valley International
 # 62  2.51  2019-06-29 Turkish Airlines Open Antalya
 # 64  2.23  2019-06-23 Fever-Tree Championships
 # 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
 # 64  2.27  bet unit fixed at 5
-# 53 1.68 <- bet multiplier added
-# 50 -1.73 <- 2019-03-17 BNP Paribas Open
-# 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
-# 69 0.32  <- 2019-04-21 Rolex Monte-Carlo Masters
-# 68 -0.57 <- 2019-04-22 Hungarian Open
-# 67 -0.40 <- 2019-04-29 Millennium Estoril Open
 
+# 53 1.68 <- bet multiplier added
+# 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
+# 68 -0.57 <- 2019-04-22 Hungarian Open
 # 52 -2.88 <- added round as variable
 
 
