@@ -72,7 +72,7 @@ def main(bet_multi_params=None):
                DATA_2019_04 + \
                DATA
 
-    multi_level_1, multi_level_2, retired_cutoff, upsets_cutoff = bet_multi_params
+    bet_multi_bot, bet_multi_top, retired_cutoff, upsets_cutoff = bet_multi_params
     retired_cutoff = int(retired_cutoff)
     upsets_cutoff = int(upsets_cutoff)
 
@@ -179,10 +179,10 @@ def main(bet_multi_params=None):
                 max_pred = max(pred1, pred2)
 
                 bet_multi = 1
-                if max_pred < multi_level_1:
-                    bet_multi *= 2
-                    if max_pred < multi_level_2:
-                        bet_multi *= 2
+                if max_pred < bet_multi_bot:
+                    bet_multi *= 3
+                if max_pred > bet_multi_top:
+                    bet_multi *= 3
                 bet_amt = bet_size * bet_multi
                 bet_amts.append(bet_amt)
 
@@ -197,7 +197,7 @@ def main(bet_multi_params=None):
                         pw = p2
                         predl = pred1
                         pl = p1
-                    logger.info(f'[x{bet_multi}] [{predw*100:.0f}% vs {predl*100:.0f}%] Bet on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.warning(f'[x{bet_multi}] [{predw*100:.0f}% vs {predl*100:.0f}%] Bet on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # prediction bet on
@@ -264,10 +264,10 @@ def main(bet_multi_params=None):
 
 
 if __name__ == '__main__':
-    bet_params = [-11.98695063458035, -4.082664282097971, -1.485468733895432, 1.3967313436880064]
+    bet_params = [-14.56199443188353, -10.431491877191691, -3.2500583409832715, 4.536101962372105]
     main(bet_params)
 
-    # es = CMAEvolutionStrategy(bet_params, 1)
+    # es = CMAEvolutionStrategy(bet_params, 0.1)
     # while not es.stop():
     #     solutions = es.ask()
     #     fitness = [main(x) for x in solutions]

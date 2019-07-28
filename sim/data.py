@@ -1,5 +1,7 @@
 from .fighters import *
 
+# 55  1.1
+# 55  1.4  bet updating fixed
 # 65  13.1  bet multi for LOWER pred
 # 65  10.0  bet multi removed and switched to roi
 # 65  1.55  bet unit fixed at 5
@@ -8,9 +10,8 @@ from .fighters import *
 # 68 0.60 <- changed bet size to dynamic
 # 70 0.83 <- xgb50
 # 63 0.60 <- xgb3k
-# 67 1.08 <- xgb1k
-# 65 1.02 <- xgb3k
 
+# 67 1.08 <- xgb1k
 # 66 1.17 <- xgb2k
 # 64 0.66
 # 61 -0.81
@@ -6849,7 +6850,7 @@ DATA = [
 
     {
         'date': '2019-07-28',
-        'name': 'UFC Fight Night',
+        'name': 'UFC 240: Edmonton 2019',
         'location': '',
         'venue': '',
         'fights': [
@@ -6865,6 +6866,12 @@ DATA = [
                         'stats': '8-1-0'
                     }
                 ],
+                'winner': {
+                    'fighter': ERIK_KOCH,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     ERIK_KOCH: 1.90,
                     KYLE_STEWART: 1.90
@@ -6884,6 +6891,12 @@ DATA = [
                         'stats': '9-1-0',
                     }
                 ],
+                'winner': {
+                    'fighter': GILLIAN_ROBERTSON,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '4:13',
+                },
                 'odds': {
                     GILLIAN_ROBERTSON: 1.75,
                     SARAH_FROTA: 2.05
@@ -6903,6 +6916,12 @@ DATA = [
                         'stats': '15-1-0'
                     }
                 ],
+                'winner': {
+                    'fighter': DEIVESON_FIGUEIREDO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
                 'odds': {
                     ALEXANDRE_PANTOJA: 1.85,
                     DEIVESON_FIGUEIREDO: 1.95
@@ -6922,6 +6941,12 @@ DATA = [
                         'stats': '7-1-0'
                     }
                 ],
+                'winner': {
+                    'fighter': GAVIN_TUCKER,
+                    'by': 'submission',
+                    'round': 3,
+                    'time': '3:17'
+                },
                 'odds': {
                     GAVIN_TUCKER: 1.90,
                     SEUNGWOO_CHOI: 1.90
@@ -6941,6 +6966,12 @@ DATA = [
                         'stats': '0-0-0'
                     }
                 ],
+                'winner': {
+                    'fighter': HAKEEM_DAWODU,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '4:09',
+                },
                 'odds': {
                     HAKEEM_DAWODU: 1.25,
                     YOSHINORI_HORIE: 3.75
@@ -6960,6 +6991,12 @@ DATA = [
                         'stats': '6-1-0'
                     }
                 ],
+                'winner': {
+                    'fighter': VIVIANE_ARAUJO,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     ALEXIS_DAVIS: 2.50,
                     VIVIANE_ARAUJO: 1.52
@@ -6979,6 +7016,12 @@ DATA = [
                         'stats': '11-1-0',
                     }
                 ],
+                'winner': {
+                    'fighter': KRZYSZTOF_JOTKO,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     KRZYSZTOF_JOTKO: 1.55,
                     MARC_ANDRE_BARRIAULT: 2.40
@@ -6998,6 +7041,12 @@ DATA = [
                         'stats': '12-1-0'
                     }
                 ],
+                'winner': {
+                    'fighter': ARMAN_TSARUKYAN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     OLIVIER_AUBIN_MERCIER: 2.50,
                     ARMAN_TSARUKYAN: 1.52
@@ -7017,6 +7066,12 @@ DATA = [
                         'stats': '13-2-0'
                     }
                 ],
+                'winner': {
+                    'fighter': GEOFF_NEAL,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '2:39'
+                },
                 'odds': {
                     GEOFF_NEAL: 1.30,
                     NIKO_PRICE: 3.30
@@ -7036,7 +7091,16 @@ DATA = [
                         'stats': '6-0-0'
                     }
                 ],
-                'prediction': None,
+                'winner': {
+                    'fighter': CRIS_CYBORG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00'
+                },
+                'odds': {
+                    CRIS_CYBORG: 1.22,
+                    FELICIA_SPENCER: 3.91
+                }
             },
             {
                 'weight_class': MENS_FEATHERWEIGHT,
@@ -7050,6 +7114,12 @@ DATA = [
                         'stats': '22-6-1'
                     }
                 ],
+                'winner': {
+                    'fighter': MAX_HOLLOWAY,
+                    'by': 'u.dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
                 'odds': {
                     MAX_HOLLOWAY: 1.24,
                     FRANKIE_EDGAR: 4.00

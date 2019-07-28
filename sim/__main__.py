@@ -84,6 +84,7 @@ def main(bet_params):
     logger.info('Starting main training')
 
     # init
+    bet_multi_bot, bet_multi_top = bet_params
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
     out_to_preds = {
         0: [],
@@ -199,13 +200,12 @@ def main(bet_params):
             else:
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
-                bet_level_1, bet_level_2 = bet_params
                 max_pred = max(pred1, pred2)
                 bet_multi = 1
-                if max_pred < bet_level_1:
-                    bet_multi *= 2
-                    if max_pred < bet_level_2:
-                        bet_multi *= 2
+                if max_pred < bet_multi_bot:
+                    bet_multi *= 3
+                if max_pred > bet_multi_top:
+                    bet_multi *= 3
                 bet_size *= bet_multi
                 bet_amts.append(bet_size)
 
@@ -293,7 +293,7 @@ def main(bet_params):
 
 
 if __name__ == '__main__':
-    bet_params = [0.821054022487381, 0.6223928588052682]
+    bet_params = [0.34182661236101364, 0.8468835566008797]
     main(bet_params)
 
     # es = CMAEvolutionStrategy(bet_params, 0.1)
