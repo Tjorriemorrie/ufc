@@ -37,11 +37,11 @@ def get_regressor(training_data, label_data, scaler):
     # reg = GradientBoostingRegressor(n_estimators=1000)
     # reg = reg.fit(X_train, y_train)
     # # mse = mean_squared_error(y_test, reg.predict(X_test))
-    # # #logger.info(f'MSE: {mse:.2f}')
+    # # logger.info(f'MSE: {mse:.2f}')
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
     # accuracy = accuracy_score(y_test, y_pred_bin)
-    # #logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
     reg = XGBRegressor(n_estimators=100, objective='reg:squarederror', n_jobs=4)
@@ -49,9 +49,9 @@ def get_regressor(training_data, label_data, scaler):
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
     # accuracy = accuracy_score(y_test, y_pred_bin)
-    # #logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # mse = mean_squared_error(y_test, y_pred)
-    # #logger.info(f'MSE: {mse:.2f}')
+    # logger.info(f'MSE: {mse:.2f}')
     # sleep(3)
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
@@ -60,13 +60,13 @@ def get_regressor(training_data, label_data, scaler):
         'mu', '~mu', 'sigma', '~sigma',
         'round', 'retired', '~retired', 'upsets' '~upsets']
     # for name, val in zip(feature_names, reg.feature_importances_):
-    #     #logger.info(f'{name}: {val}')
+    #     logger.info(f'{name}: {val}')
 
     return reg
 
 
 def main(bet_params=None):
-    #logger.info('Starting main training')
+    logger.info('Starting main training')
 
     all_data = DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA
     upsets_cutoff, retireds_cutoff, \
@@ -98,8 +98,8 @@ def main(bet_params=None):
         if not is_training:
             if not reg:
                 reg = get_regressor(training_data, label_data, scaler)
-            #logger.info('')
-        #logger.info(f'{event["date"]} {event["name"]}')
+            logger.info('')
+        logger.info(f'{event["date"]} {event["name"]}')
 
         for match in event['matches']:
             # skip if no odds:
@@ -180,18 +180,38 @@ def main(bet_params=None):
                 #########################
                 # bet scaling
                 bet_multi = 1
-                # pred
+
+                """ 
+                top  0.3  0.5  0.7  0.9  1.1  1.3  1.5  1.7
+                1         -2.4                     -2.3
+                2    -2.3                               -2.3
+                3              -2.9
+                4    
+                5                   -2.5
+                7                        -3.3
+                9                             -2.3
+                """
                 max_pred = max(pred1, pred2)
-                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [max_pred])
-                bet_multi += min(max(int(bet_pred_bot_multi), 0), 5)
-                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [max_pred])
-                bet_multi += min(max(int(bet_pred_top_multi), 0), 5)
+                if max_pred > 0.3:
+                    bet_multi += 4
+                """ 
+                bot   .60   .75   .85   .90   .95   1.0   1.1   1.15   1.2   1.4
+                .4    -4.7         
+                .5          -.30  
+                .55               -.37        -.06        .32          0.85
+                .6                      1.78  2.14  2.41  2.79  3.01   3.22  3.22
+                .65               -.67        -.52                     -.07
+                .7                                  -1.7
+                """
+                # if max_pred < 0.6:
+                #     bet_multi += 5
+
                 # round
-                rnd = 1 / match['round']
-                bet_rnd_bot_multi = np.polyval([bet_rnd_bot_a, bet_rnd_bot_b], [rnd])
-                bet_multi += min(max(int(bet_rnd_bot_multi), 0), 5)
-                bet_rnd_top_multi = np.polyval([bet_rnd_top_a, bet_rnd_top_b], [rnd])
-                bet_multi += min(max(int(bet_rnd_top_multi), 0), 5)
+                # rnd = 1 / match['round']
+                # bet_rnd_bot_multi = np.polyval([bet_rnd_bot_a, bet_rnd_bot_b], [rnd])
+                # bet_multi += min(max(int(bet_rnd_bot_multi), 0), 5)
+                # bet_rnd_top_multi = np.polyval([bet_rnd_top_a, bet_rnd_top_b], [rnd])
+                # bet_multi += min(max(int(bet_rnd_top_multi), 0), 5)
 
                 bet_multis.append(bet_multi)
                 bet_amt = bet_size * bet_multi
@@ -208,12 +228,12 @@ def main(bet_params=None):
                         pw = p2
                         predl = pred1
                         pl = p1
-                    #logger.warning(f'[x{bet_multi}] [{predw*100:.0f}% vs {predl*100:.0f}%] Bet on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.warning(f'[x{bet_multi}] [{predw*100:.0f}% vs {predl*100:.0f}%] Bet on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # prediction bet on
                 elif 'score' not in match:
-                    #logger.warning(f'Pending {p1} vs {p2}')
+                    logger.warning(f'Pending {p1} vs {p2}')
                     continue
 
                 # testing outcome
@@ -239,32 +259,32 @@ def main(bet_params=None):
                 log_players = f'x{bet_multi} {p1} {match.get("score")} {p2}'
                 log_odds = f'[{p1_odds:.2f} vs {p2_odds:.2f}]'
                 log_trueskill = f'[{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]'
-                #logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
+                logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
 
     ###################################
     # Summary
 
     if accuracy[1]:
-        #logger.info('')
-        #logger.info('Testing:')
+        logger.info('')
+        logger.info('Testing:')
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%')
-        #logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
         payouts = np.array(payouts)
         logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
-        #logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
-        #logger.info(f'Most common: {Counter(payouts).most_common(5)}')
-        #logger.info(f'Common multis: {Counter(bet_multis).most_common(10)}')
+        logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
+        logger.info(f'Most common: {Counter(payouts).most_common(5)}')
+        logger.info(f'Common multis: {Counter(bet_multis).most_common(10)}')
 
     if actual[1]:
-        #logger.info('')
-        #logger.info('Actual:')
-        #logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
+        logger.info('')
+        logger.info('Actual:')
+        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
         tab = np.array(tab)
-        #logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
-        #logger.info(f'tab: max={tab.max()} min={tab.min()}')
-        #logger.info(f'Most common: {Counter(tab).most_common(5)}')
+        logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
+        logger.info(f'tab: max={tab.max()} min={tab.min()}')
+        logger.info(f'Most common: {Counter(tab).most_common(5)}')
 
-    #logger.info(f'Done')
+    logger.info(f'Done')
     return -(sum(payouts) / sum(bet_amts))
 
 
@@ -281,15 +301,15 @@ if __name__ == '__main__':
         # round higher
         9.74950199, -7.69972695,
     ]
-    # main(bet_params)
+    main(bet_params)
 
-    es = CMAEvolutionStrategy(bet_params, 1)
-    while not es.stop():
-        solutions = es.ask()
-        fitness = [main(x) for x in solutions]
-        es.tell(solutions, fitness)
-        # es.#logger.add()
-        es.disp()
-        print(es.result[0])
-    es.result_pretty()
-    # es.#logger.plot()
+    # es = CMAEvolutionStrategy(bet_params, 1)
+    # while not es.stop():
+    #     solutions = es.ask()
+    #     fitness = [main(x) for x in solutions]
+    #     es.tell(solutions, fitness)
+    #     # es.logger.add()
+    #     es.disp()
+    #     print(es.result[0])
+    # es.result_pretty()
+    # # es.logger.plot()
