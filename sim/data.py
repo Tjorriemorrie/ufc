@@ -1,31 +1,29 @@
 from .fighters import *
 
-# 55  1.1
+# acc  roi   profit  mm     desc
+# 60   5.94  536     1x3    removed prob scaling (1, 507), (2, 246), (3, 149)
+# 60   3.11  596     2x3    reduced pred (bad?) and added prob scaling (4, 262), (3, 258), (5, 183)
+# 60   5.67  734     1-5-5  linear bet scaling for max pred
+# 55  1.3  101  ufc 240
 # 55  1.4  bet updating fixed
 # 65  13.1  bet multi for LOWER pred
 # 65  10.0  bet multi removed and switched to roi
-# 65  1.55  bet unit fixed at 5
-# 65 5.76 <- 2019-07-20 UFC Fight Night - San Antonio 2019
-# 63 7.44 <- scaling bets on diff?
-# 68 0.60 <- changed bet size to dynamic
-# 70 0.83 <- xgb50
-# 63 0.60 <- xgb3k
 
+# 65  1.55  bet unit fixed at 5
+# 63 7.44 <- scaling bets on diff?
+# 70 0.83 <- xgb50
 # 67 1.08 <- xgb1k
 # 66 1.17 <- xgb2k
 # 64 0.66
 # 61 -0.81
-# 63 -0.48
-# 60 -0.91
 
+# 63 -0.48
 # 59 -1.16
 # 92.0 6.53
 # 92 6.49
 # 90 5.83 <- xgb1500
 # 88 5.37 <- 1000 estimators
 # 74 1.68
-# 71 1.13
-# 67 0.41
 
 DATA = [
     {

@@ -57,7 +57,7 @@ def get_regressor(training_data, label_data, scaler):
     # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
-    reg = XGBRegressor(n_estimators=1000, objective='reg:squarederror', n_jobs=4)
+    reg = XGBRegressor(n_estimators=100, objective='reg:squarederror', n_jobs=4)
     reg = reg.fit(X_train, y_train)
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
@@ -69,11 +69,15 @@ def get_regressor(training_data, label_data, scaler):
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
     feature_names = [
-        'win%', 'odds', '~odds',
-        'mu', '~mu', 'sigma', '~sigma',
-        'last', '~last', 'early', '~early',
-        'wins', '~wins', 'losses', '~losses',
-        'track', '~track']
+        'win%',
+        'odds', '~odds',
+        'mu', '~mu',
+        'sigma', '~sigma',
+        'last', '~last',
+        'early', '~early',
+        'wins', '~wins',
+        'losses', '~losses',
+    ]
     # for name, val in zip(feature_names, reg.feature_importances_):
     #     logger.info(f'{name}: {val}')
 
@@ -83,13 +87,10 @@ def get_regressor(training_data, label_data, scaler):
 def main(bet_params):
     logger.info('Starting main training')
 
-    # init
-    bet_multi_bot, bet_multi_top = bet_params
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
-    out_to_preds = {
-        0: [],
-        1: [],
-    }
+    bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, bet_pred_max = bet_params
+
+    # init
     reg = None
     scaler = MinMaxScaler()
     cutoff = int(len(DATA) * 0.7)
@@ -103,6 +104,7 @@ def main(bet_params):
     accuracy = (0, 0)
     tab = []
     actual = (0, 0)
+    bet_multis = []
 
     # loop through scenes
     for i, scene in enumerate(all_data):
@@ -137,8 +139,8 @@ def main(bet_params):
             fight_data = [
                 [
                     win1_prob,
-                    1 / f1_odds,
-                    1 / f2_odds,
+                    f1_odds,
+                    f2_odds,
                     ratings[f1].mu,
                     ratings[f2].mu,
                     ratings[f1].sigma,
@@ -154,8 +156,8 @@ def main(bet_params):
                 ],
                 [
                     win2_prob,
-                    1 / f2_odds,
-                    1 / f1_odds,
+                    f2_odds,
+                    f1_odds,
                     ratings[f2].mu,
                     ratings[f1].mu,
                     ratings[f2].sigma,
@@ -200,12 +202,18 @@ def main(bet_params):
             else:
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
-                max_pred = max(pred1, pred2)
+
+                #########################
+                # bet scaling
                 bet_multi = 1
-                if max_pred < bet_multi_bot:
-                    bet_multi *= 3
-                if max_pred > bet_multi_top:
-                    bet_multi *= 3
+                # pred
+                max_pred = max(pred1, pred2)
+                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [max_pred])
+                bet_multi += min(max(int(bet_pred_bot_multi), 0), min(max(int(bet_pred_max), 0), 10))
+                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [max_pred])
+                bet_multi += min(max(int(bet_pred_top_multi), 0), min(max(int(bet_pred_max), 0), 10))
+
+                bet_multis.append(bet_multi)
                 bet_size *= bet_multi
                 bet_amts.append(bet_size)
 
@@ -232,11 +240,9 @@ def main(bet_params):
                 if is_win_1:
                     predw = pred1
                     predl = pred2
-                    out_to_preds[1].append(round(pred1 - pred2, 2))
                 else:
                     predw = pred2
                     predl = pred1
-                    out_to_preds[0].append(round(pred2 - pred1, 2))
 
                 # testing outcome
                 correct = 0
@@ -260,9 +266,9 @@ def main(bet_params):
                         payout += w_odds * fight['bet']
                     tab.append(round(payout, 2))
 
-                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}|{bet_multi}]'
+                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}]'
                 log_pred = f'[{predw * 100:.0f}% vs {predl * 100:.0f}%]'
-                log_fight = f'{fw} {fight["winner"]["by"]} {fl}'
+                log_fight = f'x{bet_multi} {fw} {fight["winner"]["by"]} {fl}'
                 log_ratings = f'[{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]'
                 logger.info(f'{log_balance} {log_pred} {log_fight} {log_ratings}')
 
@@ -270,20 +276,21 @@ def main(bet_params):
     # Summary
 
     if accuracy[1]:
+        payouts = np.array(payouts)
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%')
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0] / accuracy[1] * 100:.0f}%')
-        payouts = np.array(payouts)
         logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
-        logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
+        # logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
         logger.info(f'Most common: {Counter(payouts).most_common(5)}')
+        logger.info(f'Common multis: {Counter(bet_multis).most_common(10)}')
 
     if actual[1]:
+        tab = np.array(tab)
         logger.info('')
         logger.info('Actual:')
         logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0] / actual[1] * 100:.0f}%')
-        tab = np.array(tab)
         logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
         logger.info(f'tab: max={tab.max()} min={tab.min()}')
         logger.info(f'Most common: {Counter(tab).most_common(5)}')
@@ -293,10 +300,17 @@ def main(bet_params):
 
 
 if __name__ == '__main__':
-    bet_params = [0.34182661236101364, 0.8468835566008797]
+    bet_params = [
+        # pred lower
+        -3.3372725257647837, -0.7692445061344202,
+        # pred higher
+        8.04971947323567, -4.1931369184391425,
+        # pred max
+        4.336713116431996
+    ]
     main(bet_params)
 
-    # es = CMAEvolutionStrategy(bet_params, 0.1)
+    # es = CMAEvolutionStrategy(bet_params, 1)
     # while not es.stop():
     #     solutions = es.ask()
     #     fitness = [main(x) for x in solutions]

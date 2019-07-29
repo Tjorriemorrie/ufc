@@ -37,11 +37,11 @@ def get_regressor(training_data, label_data, scaler):
     # reg = GradientBoostingRegressor(n_estimators=1000)
     # reg = reg.fit(X_train, y_train)
     # # mse = mean_squared_error(y_test, reg.predict(X_test))
-    # # logger.info(f'MSE: {mse:.2f}')
+    # # #logger.info(f'MSE: {mse:.2f}')
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
     # accuracy = accuracy_score(y_test, y_pred_bin)
-    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    # #logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
     reg = XGBRegressor(n_estimators=100, objective='reg:squarederror', n_jobs=4)
@@ -49,9 +49,9 @@ def get_regressor(training_data, label_data, scaler):
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
     # accuracy = accuracy_score(y_test, y_pred_bin)
-    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    # #logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # mse = mean_squared_error(y_test, y_pred)
-    # logger.info(f'MSE: {mse:.2f}')
+    # #logger.info(f'MSE: {mse:.2f}')
     # sleep(3)
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
@@ -60,21 +60,20 @@ def get_regressor(training_data, label_data, scaler):
         'mu', '~mu', 'sigma', '~sigma',
         'round', 'retired', '~retired', 'upsets' '~upsets']
     # for name, val in zip(feature_names, reg.feature_importances_):
-    #     logger.info(f'{name}: {val}')
+    #     #logger.info(f'{name}: {val}')
 
     return reg
 
 
-def main(bet_multi_params=None):
-    logger.info('Starting main training')
-    all_data = DATA_2019_02 + \
-               DATA_2019_03 + \
-               DATA_2019_04 + \
-               DATA
+def main(bet_params=None):
+    #logger.info('Starting main training')
 
-    bet_multi_bot, bet_multi_top, retired_cutoff, upsets_cutoff = bet_multi_params
-    retired_cutoff = int(retired_cutoff)
+    all_data = DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA
+    upsets_cutoff, retireds_cutoff, \
+        bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
+        bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b = bet_params
     upsets_cutoff = int(upsets_cutoff)
+    retireds_cutoff = int(retireds_cutoff)
 
     # init
     reg = None
@@ -90,6 +89,7 @@ def main(bet_multi_params=None):
     accuracy = (0, 0)
     tab = []
     actual = (0, 0)
+    bet_multis = []
 
     # loop through scenes
     for i, event in enumerate(all_data):
@@ -98,8 +98,8 @@ def main(bet_multi_params=None):
         if not is_training:
             if not reg:
                 reg = get_regressor(training_data, label_data, scaler)
-            logger.info('')
-        logger.info(f'{event["date"]} {event["name"]}')
+            #logger.info('')
+        #logger.info(f'{event["date"]} {event["name"]}')
 
         for match in event['matches']:
             # skip if no odds:
@@ -160,8 +160,8 @@ def main(bet_multi_params=None):
             upsets[p1] = upsets[p1][-upsets_cutoff:] + [upset]
             upsets[p2] = upsets[p2][-upsets_cutoff:] + [0]
             # update retireds
-            retireds[p1] = retireds[p1][-retired_cutoff:] + [0]
-            retireds[p2] = retireds[p2][-retired_cutoff:] + [match.get('retired', 0)]
+            retireds[p1] = retireds[p1][-retireds_cutoff:] + [0]
+            retireds[p2] = retireds[p2][-retireds_cutoff:] + [match.get('retired', 0)]
             # update ratings
             ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
 
@@ -176,13 +176,24 @@ def main(bet_multi_params=None):
             else:
                 scaled_match_data = scaler.transform(match_data)
                 pred1, pred2 = reg.predict(scaled_match_data)
-                max_pred = max(pred1, pred2)
 
+                #########################
+                # bet scaling
                 bet_multi = 1
-                if max_pred < bet_multi_bot:
-                    bet_multi *= 3
-                if max_pred > bet_multi_top:
-                    bet_multi *= 3
+                # pred
+                max_pred = max(pred1, pred2)
+                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [max_pred])
+                bet_multi += min(max(int(bet_pred_bot_multi), 0), 5)
+                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [max_pred])
+                bet_multi += min(max(int(bet_pred_top_multi), 0), 5)
+                # round
+                rnd = 1 / match['round']
+                bet_rnd_bot_multi = np.polyval([bet_rnd_bot_a, bet_rnd_bot_b], [rnd])
+                bet_multi += min(max(int(bet_rnd_bot_multi), 0), 5)
+                bet_rnd_top_multi = np.polyval([bet_rnd_top_a, bet_rnd_top_b], [rnd])
+                bet_multi += min(max(int(bet_rnd_top_multi), 0), 5)
+
+                bet_multis.append(bet_multi)
                 bet_amt = bet_size * bet_multi
                 bet_amts.append(bet_amt)
 
@@ -197,16 +208,12 @@ def main(bet_multi_params=None):
                         pw = p2
                         predl = pred1
                         pl = p1
-                    logger.warning(f'[x{bet_multi}] [{predw*100:.0f}% vs {predl*100:.0f}%] Bet on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    #logger.warning(f'[x{bet_multi}] [{predw*100:.0f}% vs {predl*100:.0f}%] Bet on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # prediction bet on
                 elif 'score' not in match:
-                    logger.warning(f'Pending {p1} vs {p2}')
-                    continue
-
-                # do not bet on qualifiers
-                if match['round'] > 128:
+                    #logger.warning(f'Pending {p1} vs {p2}')
                     continue
 
                 # testing outcome
@@ -227,53 +234,62 @@ def main(bet_multi_params=None):
                         cash += p1_odds * match['bet']
                     tab.append(round(cash, 2))
 
-                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}x{bet_multi}]'
+                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}]'
                 log_pred = f'[{pred1 * 100:.0f}% vs {pred2 * 100:.0f}%]'
-                log_players = f'{p1} {match.get("score")} {p2}'
+                log_players = f'x{bet_multi} {p1} {match.get("score")} {p2}'
                 log_odds = f'[{p1_odds:.2f} vs {p2_odds:.2f}]'
                 log_trueskill = f'[{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]'
-                logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
+                #logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
 
     ###################################
     # Summary
 
-    if not accuracy[1]:
-        return 1000
-
     if accuracy[1]:
-        logger.info('')
-        logger.info('Testing:')
+        #logger.info('')
+        #logger.info('Testing:')
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%')
-        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+        #logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
         payouts = np.array(payouts)
         logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
-        logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
-        logger.info(f'Most common: {Counter(payouts).most_common(5)}')
+        #logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
+        #logger.info(f'Most common: {Counter(payouts).most_common(5)}')
+        #logger.info(f'Common multis: {Counter(bet_multis).most_common(10)}')
 
     if actual[1]:
-        logger.info('')
-        logger.info('Actual:')
-        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
+        #logger.info('')
+        #logger.info('Actual:')
+        #logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
         tab = np.array(tab)
-        logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
-        logger.info(f'tab: max={tab.max()} min={tab.min()}')
-        logger.info(f'Most common: {Counter(tab).most_common(5)}')
+        #logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
+        #logger.info(f'tab: max={tab.max()} min={tab.min()}')
+        #logger.info(f'Most common: {Counter(tab).most_common(5)}')
 
-    logger.info(f'Done')
+    #logger.info(f'Done')
     return -(sum(payouts) / sum(bet_amts))
 
 
 if __name__ == '__main__':
-    bet_params = [-14.56199443188353, -10.431491877191691, -3.2500583409832715, 4.536101962372105]
-    main(bet_params)
+    bet_params = [
+        # cutoff (upsets, retireds)
+        17.79032316, 12.4691518,
+        # pred lower
+        -22.23187227, 14.82638623,
+        # pred higher
+        9.74950199, -7.69972695,
+        # round lower
+        -22.23187227, 14.82638623,
+        # round higher
+        9.74950199, -7.69972695,
+    ]
+    # main(bet_params)
 
-    # es = CMAEvolutionStrategy(bet_params, 0.1)
-    # while not es.stop():
-    #     solutions = es.ask()
-    #     fitness = [main(x) for x in solutions]
-    #     es.tell(solutions, fitness)
-    #     # es.logger.add()
-    #     es.disp()
-    #     print(es.result[0])
-    # es.result_pretty()
-    # # es.logger.plot()
+    es = CMAEvolutionStrategy(bet_params, 1)
+    while not es.stop():
+        solutions = es.ask()
+        fitness = [main(x) for x in solutions]
+        es.tell(solutions, fitness)
+        # es.#logger.add()
+        es.disp()
+        print(es.result[0])
+    es.result_pretty()
+    # es.#logger.plot()

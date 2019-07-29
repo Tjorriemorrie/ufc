@@ -13,6 +13,9 @@ from rl.core import Env
 from rl.policy import BoltzmannQPolicy, Policy
 from trueskill import BETA, global_env, Rating, rate_1vs1
 
+from .data_2016 import DATA_2016
+from .data_2017 import DATA_2017
+from .data_2018 import DATA_2018
 from .data import DATA
 
 
@@ -60,8 +63,9 @@ class MyEnv(Env):
         self.x_test = []
         self.y_test = []
         ratings = defaultdict(lambda: Rating())
-        cutoff = int(len(DATA) * 0.99)
-        for i, scene in enumerate(DATA):
+        all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
+        cutoff = int(len(all_data) * 0.90)
+        for i, scene in enumerate(all_data):
             for fight in scene['fights']:
                 # skip if no odds:
                 if 'odds' not in fight:
@@ -95,6 +99,9 @@ class MyEnv(Env):
                 # y is the data to calculate the reward
                 y = [is_win_1, fight['odds'][f1], fight['odds'][f2]],
 
+                # update ratings
+                ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
+
                 # add data and results for rewards
                 if i < cutoff:
                     self.x_train.append(x)
@@ -102,9 +109,6 @@ class MyEnv(Env):
                 else:
                     self.x_test.append(x)
                     self.y_test.append(y)
-
-                # update ratings
-                ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
 
     def _reset(self) -> None:
         self.i = 0

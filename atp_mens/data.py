@@ -1,5 +1,9 @@
 from men import *
 
+# acc  roi   profit  desc
+# 68   -2.48 -1418   all round (maybe should leave out qualifiers?) (21, 520), (1, 505), (13, 1)
+# 69   1.19  681     added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
+# 67   0.60  345     scaling bets with tennis does not work like ufc (21, 524), (1, 497), (19, 2), (9, 2), (8, 1)
 # 68  -1.0  2019-02-17 Argentina Open
 # 67  -2.6  2019-02-24 Rio Open presented by Claro
 # 67  0.41  skipping bets based on pred (none excluded)
@@ -8,16 +12,14 @@ from men import *
 # 57  -10.3  2019-07-21 Swedish Open
 # 53  -8.45  Plava Laguna Croatia Open Umag
 # 53  -9.73  2019-07-21 Hall of Fame Open
-# 55  -9.7  2019-07-14 Wimbledon
-# 67  9.1  retireds added
 
+# 55  -9.7  2019-07-14 Wimbledon
 # 65  -0.0  hamburg updated
 # 63  -1.5  added multi bet and changed to roi
 # 61  -24  diff set to absolute
 # 60  5.31  2019-06-29 Nature Valley International
-# 62  2.51  2019-06-29 Turkish Airlines Open Antalya
-# 64  2.23  2019-06-23 Fever-Tree Championships
 
+# 62  2.51  2019-06-29 Turkish Airlines Open Antalya
 # 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
 # 53 1.68 <- bet multiplier added
 # 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
