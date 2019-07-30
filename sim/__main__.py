@@ -39,7 +39,7 @@ def to_implied_odds(us_odds: float) -> float:
         return 1
 
 
-def get_regressor(training_data, label_data, scaler):
+def get_regressor(training_data, label_data, scaler, estimators=100):
     """get regressor"""
     # scale
     scaler.partial_fit(training_data)
@@ -57,7 +57,7 @@ def get_regressor(training_data, label_data, scaler):
     # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
-    reg = XGBRegressor(n_estimators=100, objective='reg:squarederror', n_jobs=4)
+    reg = XGBRegressor(n_estimators=estimators, objective='reg:squarederror', n_jobs=4)
     reg = reg.fit(X_train, y_train)
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
@@ -88,7 +88,8 @@ def main(bet_params):
     logger.info('Starting main training')
 
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
-    bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, bet_pred_max = bet_params
+    estimators, bet_max, bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b = bet_params
+    estimators = int(estimators * 100)
 
     # init
     reg = None
@@ -111,7 +112,7 @@ def main(bet_params):
         is_training = i < cutoff
         if not is_training:
             if not reg:
-                reg = get_regressor(training_data, label_data, scaler)
+                reg = get_regressor(training_data, label_data, scaler, estimators=estimators)
             logger.info('')
         logger.info(f'{scene["date"]} {scene["name"]}')
 
@@ -203,33 +204,39 @@ def main(bet_params):
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
 
-                #########################
+                if pred1 > pred2:
+                    fw = f1
+                    fw_odds = f1_odds
+                    fw_pred = pred1
+                    fl = f2
+                    fl_odds = f2_odds
+                    fl_pred = pred2
+                else:
+                    fw = f2
+                    fw_odds = f2_odds
+                    fw_pred = pred2
+                    fl = f1
+                    fl_odds = f1_odds
+                    fl_pred = pred1
+
+                #############################
                 # bet scaling
                 bet_multi = 1
+
                 # pred
-                max_pred = max(pred1, pred2)
-                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [max_pred])
-                bet_multi += min(max(int(bet_pred_bot_multi), 0), min(max(int(bet_pred_max), 0), 10))
-                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [max_pred])
-                bet_multi += min(max(int(bet_pred_top_multi), 0), min(max(int(bet_pred_max), 0), 10))
+                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [fw_pred])
+                bet_multi += min(max(int(bet_pred_bot_multi), 0), min(max(int(bet_max), 0), 10))
+                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [fw_pred])
+                bet_multi += min(max(int(bet_pred_top_multi), 0), min(max(int(bet_max), 0), 10))
 
                 bet_multis.append(bet_multi)
                 bet_size *= bet_multi
                 bet_amts.append(bet_size)
+                #############################
 
                 # prediction made
                 if 'prediction' in fight and fight['prediction'] is None:
-                    if pred1 > pred2:
-                        predw = pred1
-                        fw = f1
-                        predl = pred2
-                        fl = f2
-                    else:
-                        predw = pred2
-                        fw = f2
-                        predl = pred1
-                        fl = f1
-                    logger.warning(f'[{predw * 100:.0f}% vs {predl * 100:.0f}%] Bet x{bet_multi} on {fw} to beat {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+                    logger.warning(f'[{fw_pred * 100:.0f}% vs {fl_pred * 100:.0f}%] Bet x{bet_multi} on {fw} to beat {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
                     continue
 
                 # good luck with your bets
@@ -238,11 +245,11 @@ def main(bet_params):
                     continue
 
                 if is_win_1:
-                    predw = pred1
-                    predl = pred2
+                    fw_pred = pred1
+                    fl_pred = pred2
                 else:
-                    predw = pred2
-                    predl = pred1
+                    fw_pred = pred2
+                    fl_pred = pred1
 
                 # testing outcome
                 correct = 0
@@ -267,7 +274,7 @@ def main(bet_params):
                     tab.append(round(payout, 2))
 
                 log_balance = f'[{sum(payouts):.0f}|{payout:.0f}]'
-                log_pred = f'[{predw * 100:.0f}% vs {predl * 100:.0f}%]'
+                log_pred = f'[{fw_pred * 100:.0f}% vs {fl_pred * 100:.0f}%]'
                 log_fight = f'x{bet_multi} {fw} {fight["winner"]["by"]} {fl}'
                 log_ratings = f'[{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]'
                 logger.info(f'{log_balance} {log_pred} {log_fight} {log_ratings}')
@@ -301,22 +308,28 @@ def main(bet_params):
 
 if __name__ == '__main__':
     bet_params = [
+        # estimators
+        2.276484519529152, 
+        # bet max
+        10.874928957139876, 
         # pred lower
-        -3.3372725257647837, -0.7692445061344202,
+        -12.785237743583401, -1.9265052392632152, 
         # pred higher
-        8.04971947323567, -4.1931369184391425,
-        # pred max
-        4.336713116431996
+        15.659256378079002, -10.392205569263318,
     ]
-    main(bet_params)
 
-    # es = CMAEvolutionStrategy(bet_params, 1)
-    # while not es.stop():
-    #     solutions = es.ask()
-    #     fitness = [main(x) for x in solutions]
-    #     es.tell(solutions, fitness)
-    #     # es.logger.add()
-    #     es.disp()
-    #     print(es.result[0])
-    # es.result_pretty()
-    # # es.logger.plot()
+    train = 0
+
+    if not train:
+        main(bet_params)
+    else:
+        es = CMAEvolutionStrategy(bet_params, 1)
+        while not es.stop():
+            solutions = es.ask()
+            fitness = [main(x) for x in solutions]
+            es.tell(solutions, fitness)
+            # es.logger.add()
+            es.disp()
+            print(es.result[0])
+        es.result_pretty()
+        # es.logger.plot()

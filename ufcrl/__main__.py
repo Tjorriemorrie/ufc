@@ -68,7 +68,7 @@ class MyEnv(Env):
         for i, scene in enumerate(all_data):
             for fight in scene['fights']:
                 # skip if no odds:
-                if 'odds' not in fight:
+                if 'odds' not in fight or 'winner' not in fight:
                     continue
 
                 f1 = fight['fighters'][0]['name']
@@ -97,7 +97,7 @@ class MyEnv(Env):
                 ]
 
                 # y is the data to calculate the reward
-                y = [is_win_1, fight['odds'][f1], fight['odds'][f2]],
+                y = [is_win_1, fight['odds'][f1], fight['odds'][f2]]
 
                 # update ratings
                 ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
@@ -125,7 +125,7 @@ class MyEnv(Env):
 
     def step(self, action) -> Tuple[Optional[List[float]], float, bool, dict]:
         # bet_size = max(sum(self.rewards), 200) // 20
-        is_win_1, f1_odds, f2_odds = self.y_train[self.i][0]
+        is_win_1, f1_odds, f2_odds = self.y_train[self.i]
         multi = 1 if action < 2 else 2 if action < 4 else 4
         bet_size = 5 * multi
 
@@ -175,7 +175,7 @@ def main():
     model.add(Dense(units=6, activation='softmax'))
     logger.info(model.summary())
 
-    steps = 1E6
+    steps = 1E9
     interval = steps // 100
 
     # policy = MyPolicy()

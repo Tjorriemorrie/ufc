@@ -1,6 +1,7 @@
 from .fighters import *
 
-# acc  roi   profit  mm     desc
+# acc  roi   profit  desc
+# 59   7.87  709     add estimators number as parameter (1, 707), (2, 78), (3, 70), (4, 44), (5, 36), (6, 18), (7, 16), (8, 8), (9, 4), (11, 3)
 # 60   5.94  536     1x3    removed prob scaling (1, 507), (2, 246), (3, 149)
 # 60   3.11  596     2x3    reduced pred (bad?) and added prob scaling (4, 262), (3, 258), (5, 183)
 # 60   5.67  734     1-5-5  linear bet scaling for max pred
