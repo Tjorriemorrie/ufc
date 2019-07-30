@@ -27,6 +27,9 @@ def win_probability(team1, team2):
 
 def get_regressor(training_data, label_data, scaler, estimators=100):
     """get regressor"""
+    logger.info('')
+    logger.info('Training model...')
+
     # scale
     scaler.partial_fit(training_data)
     X_train = scaler.transform(training_data)
@@ -57,9 +60,12 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
     feature_names = [
         'win%', 'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
-        'round', 'retired', '~retired', 'upsets' '~upsets']
-    # for name, val in zip(feature_names, reg.feature_importances_):
-    #     logger.info(f'{name}: {val}')
+        'round',
+        'upsets', '~upsets',
+        'sets', '~sets',
+    ]
+    for name, val in zip(feature_names, reg.feature_importances_):
+        logger.info(f'{name}: {val}')
 
     return reg
 
@@ -68,20 +74,20 @@ def main(bet_params=None):
     logger.info('Starting main training')
 
     all_data = DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
-    estimators, upsets_cutoff, retireds_cutoff, \
+    estimators, upsets_cutoff, sets_cutoff, \
         bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
-        bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b = bet_params
+        bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, = bet_params
     estimators = int(estimators * 100)
     upsets_cutoff = int(upsets_cutoff)
-    retireds_cutoff = int(retireds_cutoff)
+    sets_cutoff = int(sets_cutoff)
 
     # init
     reg = None
     scaler = MinMaxScaler()
     cutoff = int(len(DATA) * 0.7)
     ratings = defaultdict(lambda: Rating())
-    retireds = defaultdict(lambda: [])
     upsets = defaultdict(lambda: [])
+    sets = defaultdict(lambda: [])
     training_data = []
     label_data = []
     payouts = []
@@ -114,13 +120,13 @@ def main(bet_params=None):
             win1_prob = win_probability([ratings[p1]], [ratings[p2]])
             win2_prob = win_probability([ratings[p2]], [ratings[p1]])
 
-            # retired?
-            p1_retired = sum(retireds[p1])
-            p2_retired = sum(retireds[p2])
-
             # upsets
             p1_upsets = sum(upsets[p1])
             p2_upsets = sum(upsets[p2])
+
+            # sets
+            p1_sets = sum(sets[p1])
+            p2_sets = sum(sets[p2])
 
             match_data = [
                 [
@@ -132,10 +138,10 @@ def main(bet_params=None):
                     ratings[p1].sigma,
                     ratings[p2].sigma,
                     1 / match['round'],
-                    p1_retired,
-                    p2_retired,
                     p1_upsets,
                     p2_upsets,
+                    p1_sets,
+                    p2_sets,
                 ],
                 [
                     win2_prob,
@@ -146,23 +152,31 @@ def main(bet_params=None):
                     ratings[p2].sigma,
                     ratings[p1].sigma,
                     1 / match['round'],
-                    p2_retired,
-                    p1_retired,
                     p2_upsets,
                     p1_upsets,
+                    p2_sets,
+                    p1_sets,
                 ]
             ]
 
             #########################################
             # update here as next sections can skip ahead
             if 'score' in match:
+
                 # update upsets
                 upset = win2_prob > 0.50
                 upsets[p1] = upsets[p1][-upsets_cutoff:] + [0]
                 upsets[p2] = upsets[p2][-upsets_cutoff:] + [upset]
-                # update retireds
-                retireds[p1] = retireds[p1][-retireds_cutoff:] + [0]
-                retireds[p2] = retireds[p2][-retireds_cutoff:] + [match.get('retired', 0)]
+
+                # sets
+                try:
+                    p1_new_sets = sum(s[0] > s[1] for s in match['score'])
+                except Exception as exc:
+                    logger.warning(f'match score is not tuple: {match["score"]}')
+                    raise
+                sets[p1] = sets[p1][-sets_cutoff:] + [p1_new_sets]
+                sets[p2] = sets[p2][-sets_cutoff:] + [sum(s[0] < s[1] for s in match['score'])]
+
                 # update ratings
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
 
@@ -183,25 +197,17 @@ def main(bet_params=None):
                 bet_multi = 1
 
                 # pred
-                pre_pred = bet_multi
                 bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [p1_pred])
                 bet_multi += min(max(int(bet_pred_bot_multi), 0), 1)
                 bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [p1_pred])
                 bet_multi += min(max(int(bet_pred_top_multi), 0), 1)
-                # if bet_multi == pre_pred + 10:
-                #     logger.error(f'Both pred triggered for bottom and top')
-                    # bet_multi = pre_pred
 
                 # round
-                pre_rnd = bet_multi
                 rnd = 1 / match['round']
                 bet_rnd_bot_multi = np.polyval([bet_rnd_bot_a, bet_rnd_bot_b], [rnd])
                 bet_multi += min(max(int(bet_rnd_bot_multi), 0), 1)
                 bet_rnd_top_multi = np.polyval([bet_rnd_top_a, bet_rnd_top_b], [rnd])
                 bet_multi += min(max(int(bet_rnd_top_multi), 0), 1)
-                # if bet_multi == pre_rnd + 10:
-                #     logger.error(f'Both round triggered for bottom and top')
-                    # bet_multi = pre_rnd
 
                 bet_multis.append(bet_multi)
                 bet_amt = bet_size * bet_multi
@@ -237,7 +243,7 @@ def main(bet_params=None):
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
                 # actual outcome
-                if 'bet' in match:
+                if 'bet' in match and 'score' in match:
                     is_actual_correct = match['prediction'] == p1
                     actual = (actual[0] + is_actual_correct, actual[1] + 1)
                     cash = -match['bet']
@@ -282,17 +288,17 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        0.84194542, 
-        # cutoff (upsets, retireds)
-        6.20159525,  4.049253, 
+        7.20722502,
+        # cutoff (upsets, sets)
+        5.64323021, 4.64422689,
         # pred lower
-        -18.12630082, 20.61209893,
+        -18.45719907, 27.30952479,
         # pred higher
-        12.20252695, -4.9469947,
+        10.72685041, -4.21794614,
         # round lower
-        -21.7650541, 14.015316,
+        -19.63719899, 14.63254912,
         # round higher
-        8.55906672, -10.84219825,
+        12.61853246, -10.53296813,
     ]
     
     train = 0

@@ -1,6 +1,7 @@
 from men import *
 
 # acc  roi   profit  desc
+# 68   11.8  538     replaced retireds with net sets (-3.0, 390), (1.44, 22), (0.08, 18), (2.0, 17), (0.72, 17)
 # 67   3.48  162     2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17), (0.72, 17)
 # 66   -0.3  -44     2019-07-28 Hamburg European Open (11, 415), (14, 172), (15, 171), (12, 165), (6, 161), (13, 144), (10, 6), (5, 3)
 # 69   2.94  368     estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106), (12, 103), (10, 3), (5, 2)
@@ -6235,7 +6236,7 @@ DATA = [
                     KEVIN_KING,
                     GRIGOR_DIMITROV
                 ],
-                'score': [(7, 5), 6, 4],
+                'score': [(7, 5), (6, 4)],
                 'odds': {
                     KEVIN_KING: 5.50,
                     GRIGOR_DIMITROV: 1.13

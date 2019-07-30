@@ -2010,7 +2010,7 @@ DATA_2019_04 = [
                     ROBERTO_CARBALLES_BAENA,
                     PEDRO_MARTINEZ
                 ],
-                'score': [(7, 5), 6, 1],
+                'score': [(7, 5), (6, 1)],
                 'odds': {
                     ROBERTO_CARBALLES_BAENA: 1.36,
                     PEDRO_MARTINEZ: 2.85

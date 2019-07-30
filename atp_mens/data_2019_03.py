@@ -4408,7 +4408,7 @@ DATA_2019_03 = [
                     FELIX_AUGER_ALIASSIME,
                     HUBERT_HURKACZ
                 ],
-                'score': [(7, 6), 6, 4],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
                     FELIX_AUGER_ALIASSIME: 2.05,
                     HUBERT_HURKACZ: 1.74
@@ -4577,7 +4577,7 @@ DATA_2019_03 = [
                     KEVIN_ANDERSON,
                     JOAO_SOUSA
                 ],
-                'score': [(6, 4), 7, 6],
+                'score': [(6, 4), (7, 6)],
                 'odds': {
                     KEVIN_ANDERSON: 1.53,
                     JOAO_SOUSA: 2.57

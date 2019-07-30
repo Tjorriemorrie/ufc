@@ -4018,7 +4018,7 @@ DATA_2019_05 = [
                     ROGER_FEDERER,
                     CASPER_RUUD
                 ],
-                'score': [(6, 3), (6, 1), 7, 6],
+                'score': [(6, 3), (6, 1), (7, 6)],
                 'odds': {
                     ROGER_FEDERER: 1.12,
                     CASPER_RUUD: 6.00
