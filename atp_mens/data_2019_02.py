@@ -2,6 +2,500 @@ from men import *
 
 DATA_2019_02 = [
     {
+        'name': 'New York Open',
+        'category': 'ATP250',
+        'date': '2019-02-17',
+        'location': 'New York, United States',
+        'matches': [
+
+            # 2019-02-10
+            {
+                'round': 512,
+                'players': [
+                    ANDREA_ARNABOLDI,
+                    YOSUKE_WATANUKI
+                ],
+                'score': [(7, 5), (4, 6), (6, 3)],
+                'odds': {
+                    ANDREA_ARNABOLDI: 2.75,
+                    YOSUKE_WATANUKI: 1.41
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TIM_SMYCZEK,
+                    ROBERTO_QUIROZ
+                ],
+                'score': [(6, 7), (6, 3), (7, 5)],
+                'odds': {
+                    TIM_SMYCZEK: 1.47,
+                    ROBERTO_QUIROZ: 2.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ERNESTO_ESCOBEDO,
+                    YASUTAKA_UCHIYAMA
+                ],
+                'score': [(4, 6), (6, 3), (7, 6)],
+                'odds': {
+                    ERNESTO_ESCOBEDO: 2.18,
+                    YASUTAKA_UCHIYAMA: 1.59
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    CANNON_KINGSLEY
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    BRAYDEN_SCHNUR: 1.08,
+                    CANNON_KINGSLEY: 6.75
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CHRISTOPHER_EUBANKS,
+                    ADAM_EL_MIHDAWY
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    CHRISTOPHER_EUBANKS: 1.12,
+                    ADAM_EL_MIHDAWY: 5.75
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    ROY_SMITH
+                ],
+                'score': [(4, 6), (6, 2), (6, 4)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 1.25,
+                    ROY_SMITH: 3.60
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    JAMES_WARD
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.32,
+                    JAMES_WARD: 3.21
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    TIM_PUETZ
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 1.61,
+                    TIM_PUETZ: 2.25
+                }
+            },
+
+            # 2019-02-11
+            {
+                'round': 256,
+                'players': [
+                    CHRISTOPHER_EUBANKS,
+                    ERNESTO_ESCOBEDO
+                ],
+                'score': [(5, 7), (6, 3), (7, 5)],
+                'odds': {
+                    CHRISTOPHER_EUBANKS: 1.65,
+                    ERNESTO_ESCOBEDO: 2.10
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    TIM_SMYCZEK
+                ],
+                'score': [(6, 3), (3, 6), (7, 5)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 2.11,
+                    TIM_SMYCZEK: 1.63
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    ALEXEI_POPYRIN
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    BRAYDEN_SCHNUR: 2.39,
+                    ALEXEI_POPYRIN: 1.53
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    ANDREA_ARNABOLDI
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 1.55,
+                    ANDREA_ARNABOLDI: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BERNARD_TOMIC,
+                    LUKAS_LACKO
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    BERNARD_TOMIC: 1.51,
+                    LUKAS_LACKO: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PAOLO_LORENZI,
+                    TENNYS_SANDGREN
+                ],
+                'score': [(7, 6), (6, 7), (6, 4)],
+                'odds': {
+                    PAOLO_LORENZI: 3.95,
+                    TENNYS_SANDGREN: 1.22
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JORDAN_THOMPSON,
+                    NOAH_RUBIN
+                ],
+                'score': [(6, 7), (7, 5), (6, 1)],
+                'odds': {
+                    JORDAN_THOMPSON: 1.66,
+                    NOAH_RUBIN: 2.25
+                }
+            },
+
+            # 2019-02-12
+            {
+                'round': 32,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    JACK_MINGJIE_LIN
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    BRAYDEN_SCHNUR: 1.06,
+                    JACK_MINGJIE_LIN: 10.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JASON_JUNG,
+                    RAMKUMAR_RAMANATHAN
+                ],
+                'score': [(6, 3), (3, 6), (6, 1)],
+                'odds': {
+                    JASON_JUNG: 2.05,
+                    RAMKUMAR_RAMANATHAN: 1.69
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RYAN_HARRISON,
+                    PETER_POLANSKY
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    RYAN_HARRISON: 1.39,
+                    PETER_POLANSKY: 2.85
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    ALEXEI_POPYRIN
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    GUILLERMO_GARCIA_LOPEZ: 2.25,
+                    ALEXEI_POPYRIN: 1.62
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CHRISTOPHER_EUBANKS,
+                    ADRIAN_MENENDEZ_MACEIRAS
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    CHRISTOPHER_EUBANKS: 1.67,
+                    ADRIAN_MENENDEZ_MACEIRAS: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    LLOYD_HARRIS
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    SAM_QUERREY: 1.39,
+                    LLOYD_HARRIS: 2.85
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    REILLY_OPELKA,
+                    ANDRIAN_MANNARINO
+                ],
+                'score': [(2, 6), (7, 6), (6, 4)],
+                'odds': {
+                    REILLY_OPELKA: 1.63,
+                    ANDRIAN_MANNARINO: 2.25
+                }
+            },
+
+            # 2019-02-13
+            {
+                'round': 32,
+                'players': [
+                    DENIS_ISTOMIN,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(4, 6), (6, 2), (6, 3)],
+                'odds': {
+                    DENIS_ISTOMIN: 2.30,
+                    MACKENZIE_MCDONALD: 1.59
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RADU_ALBOT,
+                    IVO_KARLOVIC
+                ],
+                'score': [(6, 7), (7, 6), (7, 6)],
+                'odds': {
+                    RADU_ALBOT: 2.15,
+                    IVO_KARLOVIC: 1.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PAOLO_LORENZI,
+                    RYAN_HARRISON
+                ],
+                'score': [(4, 6), (6, 4), (6, 4)],
+                'odds': {
+                    PAOLO_LORENZI: 3.45,
+                    RYAN_HARRISON: 1.26
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JORDAN_THOMPSON,
+                    CHRISTOPHER_EUBANKS
+                ],
+                'score': [(4, 6), (6, 1), (6, 4)],
+                'odds': {
+                    JORDAN_THOMPSON: 1.48,
+                    CHRISTOPHER_EUBANKS: 2.69
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    STEVE_JOHNSON
+                ],
+                'score': [(6, 4), (4, 6), (7, 6)],
+                'odds': {
+                    BRAYDEN_SCHNUR: 2.44,
+                    STEVE_JOHNSON: 1.54
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JOHN_ISNER,
+                    BERNARD_TOMIC
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    JOHN_ISNER: 1.34,
+                    BERNARD_TOMIC: 3.25
+                }
+            },
+
+            # 2019-02-14
+            {
+                'round': 16,
+                'players': [
+                    REILLY_OPELKA,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 7), (7, 6), (1, 0)],
+                'retired': True,
+                'odds': {
+                    REILLY_OPELKA: 1.80,
+                    DENIS_ISTOMIN: 1.98
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    SAM_QUERREY,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    SAM_QUERREY: 1.33,
+                    RADU_ALBOT: 3.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    JOHN_MILLMAN
+                ],
+                'score': [(7, 6), (1, 6), (6, 4)],
+                'odds': {
+                    GUILLERMO_GARCIA_LOPEZ: 3.10,
+                    JOHN_MILLMAN: 1.35
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JASON_JUNG,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    JASON_JUNG: 5.16,
+                    FRANCES_TIAFOE: 1.14
+                }
+            },
+
+            # 2019-02-15
+            {
+                'round': 8,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 7), (7, 6), (7, 5)],
+                'odds': {
+                    BRAYDEN_SCHNUR: 1.72,
+                    PAOLO_LORENZI: 2.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    REILLY_OPELKA,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    REILLY_OPELKA: 1.54,
+                    GUILLERMO_GARCIA_LOPEZ: 2.50
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    SAM_QUERREY,
+                    JASON_JUNG
+                ],
+                'score': [(6, 3), (3, 6), (6, 3)],
+                'odds': {
+                    SAM_QUERREY: 1.16,
+                    JASON_JUNG: 4.75
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JOHN_ISNER,
+                    JORDAN_THOMPSON
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    JOHN_ISNER: 1.28,
+                    JORDAN_THOMPSON: 3.77
+                }
+            },
+
+            # 2019-02-16
+            {
+                'round': 4,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    SAM_QUERREY
+                ],
+                'score': [(7, 6), (4, 6), (6, 3)],
+                'odds': {
+                    BRAYDEN_SCHNUR: 4.30,
+                    SAM_QUERREY: 1.21
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    REILLY_OPELKA,
+                    JOHN_ISNER
+                ],
+                'score': [(6, 7), (7, 6), (7, 6)],
+                'odds': {
+                    REILLY_OPELKA: 3.05,
+                    JOHN_ISNER: 1.36
+                }
+            },
+
+            # 2019-02-17
+            {
+                'round': 2,
+                'players': [
+                    REILLY_OPELKA,
+                    BRAYDEN_SCHNUR
+                ],
+                'score': [(6, 1), (6, 7), (7, 6)],
+                'odds': {
+                    REILLY_OPELKA: 1.43,
+                    BRAYDEN_SCHNUR: 2.85
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Argentina Open',
         'category': 'ATP250',
         'date': '2019-02-17',

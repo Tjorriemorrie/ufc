@@ -1,6 +1,7 @@
 from men import *
 
 # acc  roi   profit  desc
+# 67   3.48  162     2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17), (0.72, 17)
 # 66   -0.3  -44     2019-07-28 Hamburg European Open (11, 415), (14, 172), (15, 171), (12, 165), (6, 161), (13, 144), (10, 6), (5, 3)
 # 69   2.94  368     estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106), (12, 103), (10, 3), (5, 2)
 # 68   -2.48 -1418   all round (maybe should leave out qualifiers?) (21, 520), (1, 505), (13, 1)
@@ -8,9 +9,8 @@ from men import *
 # 67   0.60  345     scaling bets with tennis does not work like ufc (21, 524), (1, 497), (19, 2), (9, 2), (8, 1)
 # 68  -1.0  2019-02-17 Argentina Open
 # 67  -2.6  2019-02-24 Rio Open presented by Claro
-# 67  0.41  skipping bets based on pred (none excluded)
-# 67  0.30  estimators to 100 and no betting on qualifiers
 
+# 67  0.41  skipping bets based on pred (none excluded)
 # 59  -2.84  2019-02-24 Open 13 Provence
 # 53  -8.45  Plava Laguna Croatia Open Umag
 # 55  -9.7  2019-07-14 Wimbledon
@@ -22,7 +22,6 @@ from men import *
 # 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
 # 53 1.68 <- bet multiplier added
 # 65 -0.80 <- 2019-04-14 Fayez Sarofim & Co US Mens Clay Court Championship
-# 68 -0.57 <- 2019-04-22 Hungarian Open
 
 
 DATA = [
