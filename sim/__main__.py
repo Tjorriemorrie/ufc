@@ -91,7 +91,7 @@ def main(bet_params):
     logger.info('Starting main training')
 
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
-    estimators, bet_max, bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b = bet_params
+    estimators, bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b = bet_params
     estimators = int(estimators * 100)
 
     # init
@@ -228,9 +228,9 @@ def main(bet_params):
 
                 # pred
                 bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [fw_pred])
-                bet_multi += min(max(int(bet_pred_bot_multi), 0), min(max(int(bet_max), 0), 10))
+                bet_multi += min(max(int(bet_pred_bot_multi), 0), 10)
                 bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [fw_pred])
-                bet_multi += min(max(int(bet_pred_top_multi), 0), min(max(int(bet_max), 0), 10))
+                bet_multi += min(max(int(bet_pred_top_multi), 0), 10)
 
                 bet_multis.append(bet_multi)
                 bet_size *= bet_multi
@@ -312,13 +312,11 @@ def main(bet_params):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        3.16817464,
-        # bet max
-        11.42240157,
+        3.1646613635868306, 
         # pred lower
-        -7.51003898, -0.1264792,
+        -9.07054002594348, 2.9234956820842224, 
         # pred higher
-        13.04445643, -9.87139328,
+        13.07296230052152, -9.893621464102425,
     ]
     
     train = 0

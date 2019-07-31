@@ -1,6 +1,7 @@
 from .fighters import *
 
 # acc  roi   profit  desc
+# 67   12.09 415     removed max bet of 10 (no diff)
 # 67   12.09 415     fixed cutoff with all_data :(
 # 59   7.87  709     add estimators number as parameter (1, 707), (2, 78), (3, 70), (4, 44), (5, 36), (6, 18), (7, 16), (8, 8), (9, 4), (11, 3)
 # 60   5.94  536     1x3    removed prob scaling (1, 507), (2, 246), (3, 149)
@@ -8,17 +9,15 @@ from .fighters import *
 # 60   5.67  734     1-5-5  linear bet scaling for max pred
 # 55  1.3  101  ufc 240
 # 55  1.4  bet updating fixed
-# 65  13.1  bet multi for LOWER pred
-# 65  10.0  bet multi removed and switched to roi
 
+# 65  13.1  bet multi for LOWER pred
 # 65  1.55  bet unit fixed at 5
 # 63 7.44 <- scaling bets on diff?
 # 70 0.83 <- xgb50
 # 67 1.08 <- xgb1k
 # 66 1.17 <- xgb2k
-# 64 0.66
-# 61 -0.81
 
+# 64 0.66
 # 63 -0.48
 # 59 -1.16
 # 92.0 6.53

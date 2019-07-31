@@ -65,9 +65,8 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
         'sets', '~sets',
         'games', '~games',
     ]
-    for name, val in zip(feature_names, reg.feature_importances_):
-        logger.info(f'{name}: {val}')
-        continue
+    # for name, val in zip(feature_names, reg.feature_importances_):
+    #     logger.info(f'{name}: {val}')
 
     return reg
 
@@ -311,17 +310,17 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        15.16638463,   
+        13.67423178,
         # cutoff (upsets, sets, games)
-        2.9787428, 25.2290265, -16.29359802, 
+        1.31653446, 26.41511386, -20.05510112,
         # pred lower
-        -14.44272582, 38.711313,    
+        -15.28204223, 39.97592524, 
         # pred higher
-        36.39131848, -17.6493263, 
+        37.34779298, -18.23118563,
         # round lower
-        -7.554267, 29.86000324,
+        -7.01740082, 29.61905121,
         # round higher
-        1.71983416, -15.29742372,
+        1.73352223, -16.79537482,
     ]
     
     train = 0

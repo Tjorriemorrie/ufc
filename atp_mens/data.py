@@ -1,6 +1,7 @@
 from men import *
 
 # acc  roi   profit  desc
+# 63   4.24  85      2019-02-10 Cordoba Open
 # 66   4.37  76      fixed cutoff :(
 # 53   2.37  120     2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
 # 65   9.63  458     added net games (-3.0, 429), (-4.0, 19), (1.0, 18), (0.72, 17), (1.92, 16)

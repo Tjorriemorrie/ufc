@@ -2,6 +2,976 @@ from men import *
 
 DATA_2019_02 = [
     {
+        'name': 'Cordoba Open',
+        'category': 'ATP250',
+        'date': '2019-02-10',
+        'location': 'Cordoba, Argentina',
+        'matches': [
+
+            # 2019-02-02
+            {
+                'round': 512,
+                'players': [
+                    ANDREJ_MARTIN,
+                    FEDERICO_GAIO
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    ANDREJ_MARTIN: 1.75,
+                    FEDERICO_GAIO: 1.87
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALESSANDRO_GIANNESSI,
+                    FACUNDO_DIAZ_ACOSTA
+                ],
+                'score': [(7, 6), (1, 2)],
+                'retired': True,
+                'odds': {
+                    ALESSANDRO_GIANNESSI: 1.20,
+                    FACUNDO_DIAZ_ACOSTA: 4.34
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GIANLUIGI_QUINZI,
+                    ANDREA_COLLARINI
+                ],
+                'score': [(4, 6), (6, 4), (6, 1)],
+                'odds': {
+                    GIANLUIGI_QUINZI: 1.32,
+                    ANDREA_COLLARINI: 3.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    MARCELO_AREVALO
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    FACUNDO_BAGNIS: 1.25,
+                    MARCELO_AREVALO: 3.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    HUGO_DELLIEN,
+                    FRANCISCO_CERUNDOLO
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    HUGO_DELLIEN: 1.33,
+                    FRANCISCO_CERUNDOLO: 3.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PEDRO_CACHIN,
+                    MARCO_TRUNGELLITI
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    PEDRO_CACHIN: 2.15,
+                    MARCO_TRUNGELLITI: 1.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PAOLO_LORENZI,
+                    FACUNDO_ARGUELLO
+                ],
+                'score': [(3, 6), (6, 3), (6, 4)],
+                'odds': {
+                    PAOLO_LORENZI: 2.50,
+                    FACUNDO_ARGUELLO: 1.48
+                }
+            },
+
+            # 2019-02-03
+            {
+                'round': 256,
+                'players': [
+                    PEDRO_CACHIN,
+                    GIANLUIGI_QUINZI
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    PEDRO_CACHIN: 2.43,
+                    GIANLUIGI_QUINZI: 1.54
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    FEDERICO_CORIA
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    FACUNDO_BAGNIS: 1.33,
+                    FEDERICO_CORIA: 3.20
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ANDREJ_MARTIN,
+                    HUGO_DELLIEN
+                ],
+                'score': [(7, 6), (6, 7), (7, 5)],
+                'odds': {
+                    ANDREJ_MARTIN: 2.50,
+                    HUGO_DELLIEN: 1.53
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALESSANDRO_GIANNESSI,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 7), (6, 4), (7, 6)],
+                'odds': {
+                    ALESSANDRO_GIANNESSI: 2.25,
+                    PAOLO_LORENZI: 1.52
+                }
+            },
+
+            # 2019-02-04
+            {
+                'round': 32,
+                'players': [
+                    LORENZO_SONEGO,
+                    PABLO_ANDUJAR
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    LORENZO_SONEGO: 2.10,
+                    PABLO_ANDUJAR: 1.69
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PEDRO_CACHIN,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    PEDRO_CACHIN: 2.39,
+                    CAMERON_NORRIE: 1.56
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    ALJAZ_BEDENE: 1.95,
+                    MAXIMILIAN_MARTERER: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_PELLA,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    GUIDO_PELLA: 1.27,
+                    PAOLO_LORENZI: 3.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MALEK_JAZIRI,
+                    CARLOS_BERLOCQ
+                ],
+                'score': [(6, 3), (4, 6), (7, 6)],
+                'odds': {
+                    MALEK_JAZIRI: 2.65,
+                    CARLOS_BERLOCQ: 1.42
+                }
+            },
+
+            # 2019-02-05
+            {
+                'round': 32,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    HUGO_DELLIEN
+                ],
+                'score': [(7, 6), (4, 6), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAUME_MUNAR,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    JAUME_MUNAR: 1.53,
+                    GUIDO_ANDREOZZI: 2.49
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALESSANDRO_GIANNESSI,
+                    THIAGO_SEYBOTH_WILD
+                ],
+                'score': [(6, 7), (7, 5), (7 ,6)],
+                'odds': {
+                    ALESSANDRO_GIANNESSI: 1.48,
+                    THIAGO_SEYBOTH_WILD: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CUEVAS,
+                    FACUNDO_BAGNIS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    PABLO_CUEVAS: 1.63,
+                    FACUNDO_BAGNIS: 2.27
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    ANDREJ_MARTIN
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 1.51,
+                    ANDREJ_MARTIN: 2.68
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    LEONARDO_MAYER
+                ],
+                'score': [(6, 4), (6, 7), (6, 3)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.84,
+                    LEONARDO_MAYER: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 2.32,
+                    NICOLAS_JARRY: 1.61
+                }
+            },
+
+            # 2019-02-06
+            {
+                'round': 16,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    LORENZO_SONEGO
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 2.20,
+                    LORENZO_SONEGO: 1.65
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PEDRO_CACHIN,
+                    PABLO_CARRENO_BUSTA
+                ],
+                'score': [(6, 7), (1, 0)],
+                'retired': True,
+                'odds': {
+                    PEDRO_CACHIN: 3.67,
+                    PABLO_CARRENO_BUSTA: 1.28
+                }
+            },
+
+            # 2019-02-07
+            {
+                'round': 16,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(6, 7), (6, 2), (6, 2)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.45,
+                    ROBERTO_CARBALLES_BAENA: 2.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GUIDO_PELLA,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    GUIDO_PELLA: 1.35,
+                    ALBERT_RAMOS_VINOLAS: 3.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_CUEVAS,
+                    MALEK_JAZIRI
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    PABLO_CUEVAS: 1.21,
+                    MALEK_JAZIRI: 4.30
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    ALESSANDRO_GIANNESSI
+                ],
+                'score': [(6, 7), (6, 3), (6, 0)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.08,
+                    ALESSANDRO_GIANNESSI: 6.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JAUME_MUNAR,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 3), (3, 6), (6, 1)],
+                'odds': {
+                    JAUME_MUNAR: 1.96,
+                    MARCO_CECCHINATO: 1.83
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALJAZ_BEDENE,
+                    FABIO_FOGNINI
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    ALJAZ_BEDENE: 2.60,
+                    FABIO_FOGNINI: 1.45
+                }
+            },
+
+            # 2019-02-08
+            {
+                'round': 8,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    PEDRO_CACHIN
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.74,
+                    PEDRO_CACHIN: 2.10
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    JAUME_MUNAR
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.69,
+                    JAUME_MUNAR: 2.20
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    PABLO_CUEVAS,
+                    ALJAZ_BEDENE
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    PABLO_CUEVAS: 1.71,
+                    ALJAZ_BEDENE: 2.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    GUIDO_PELLA,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    GUIDO_PELLA: 2.75,
+                    DIEGO_SCHWARTZMAN: 1.44
+                }
+            },
+
+            # 2019-02-09
+            {
+                'round': 4,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(6, 1), (6, 0)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 3.14,
+                    FEDERICO_DELBONIS: 1.31
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    GUIDO_PELLA,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 1), (3, 6), (6, 3)],
+                'odds': {
+                    GUIDO_PELLA: 1.71,
+                    PABLO_CUEVAS: 2.05
+                }
+            },
+
+            # 2019-02-10
+            {
+                'round': 2,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    GUIDO_PELLA
+                ],
+                'score': [(3, 6), (7, 5), (6, 1)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 2.80,
+                    GUIDO_PELLA: 1.43
+                }
+            }
+        ]
+    },
+
+    {
+        'name': 'Open Sud de France',
+        'category': 'ATP250',
+        'date': '2019-02-10',
+        'location': 'Montpellier, France',
+        'matches': [
+
+            # 2019-02-03
+            {
+                'round': 512,
+                'players': [
+                    ALEXEY_VATUTIN,
+                    CONSTANT_LESTIENNE
+                ],
+                'score': [(6, 4), (3, 6), (6, 1)],
+                'odds': {
+                    ALEXEY_VATUTIN: 2.45,
+                    CONSTANT_LESTIENNE: 1.54
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANTOINE_HOANG,
+                    SERGIO_GUTIERREZ_FERROL
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    ANTOINE_HOANG: 1.11,
+                    SERGIO_GUTIERREZ_FERROL: 5.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    JONATHAN_EYSSERIC
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.15,
+                    JONATHAN_EYSSERIC: 5.05
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    QUENTIN_HALYS,
+                    KENNY_DE_SCHEPPER
+                ],
+                'score': [(6, 4), (3, 6), (6, 0)],
+                'odds': {
+                    QUENTIN_HALYS: 1.69,
+                    KENNY_DE_SCHEPPER: 1.96
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RUBEN_BEMELMANS,
+                    MATTEO_DONATI
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    RUBEN_BEMELMANS: 1.41,
+                    MATTEO_DONATI: 2.75
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCOS_BAGHDATIS,
+                    ANTOINE_CORNUT_CHAUVINC
+                ],
+                'score': [(3, 6), (6, 4), (6, 4)],
+                'odds': {
+                    MARCOS_BAGHDATIS: 1.17,
+                    ANTOINE_CORNUT_CHAUVINC: 5.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    BENJAMIN_BONZI
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 1.99,
+                    BENJAMIN_BONZI: 1.71
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    NICOLAS_MAHUT,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    NICOLAS_MAHUT: 2.97,
+                    RICARDAS_BERANKIS: 1.36
+                }
+            },
+
+            # 2019-02-04
+            {
+                'round': 256,
+                'players': [
+                    NICOLAS_MAHUT,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    NICOLAS_MAHUT: 1.51,
+                    ALEXEY_VATUTIN: 2.50
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    RUBEN_BEMELMANS
+                ],
+                'odds'
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.75,
+                    RUBEN_BEMELMANS: 1.74
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARCOS_BAGHDATIS,
+                    QUENTIN_HALYS
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    MARCOS_BAGHDATIS: 1.63,
+                    QUENTIN_HALYS: 2.20
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ANTOINE_HOANG,
+                    ADRIAN_MENENDEZ_MACEIRAS
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    ANTOINE_HOANG: 1.37,
+                    ADRIAN_MENENDEZ_MACEIRAS: 2.57
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    UGO_HUMBERT
+                ],
+                'score': [(3, 6), (7, 6), (6, 4)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.31,
+                    UGO_HUMBERT: 3.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    IVO_KARLOVIC
+                ],
+                'score': [(7, 6), (6, 7), (7, 6)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 2.70,
+                    IVO_KARLOVIC: 1.45
+                }
+            },
+
+            # 2019-02-05
+            {
+                'round': 32,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    NICOLAS_MAHUT
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.50,
+                    NICOLAS_MAHUT: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANTOINE_HOANG,
+                    STEVE_DARCIS
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    ANTOINE_HOANG: 1.56,
+                    STEVE_DARCIS: 2.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ERNESTS_GULBIS,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    ERNESTS_GULBIS: 2.00,
+                    HUBERT_HURKACZ: 1.77
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TOMAS_BERDYCH,
+                    MATTHIAS_BACHINGER
+                ],
+                'score': [(5, 7), (6, 3), (6, 3)],
+                'odds': {
+                    TOMAS_BERDYCH: 1.15,
+                    MATTHIAS_BACHINGER: 5.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    EVGENY_DONSKOY
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    BENOIT_PAIRE: 1.31,
+                    EVGENY_DONSKOY: 3.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    DENIS_KUDLA
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.41,
+                    DENIS_KUDLA: 2.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JEREMY_CHARDY,
+                    ADRIAN_MENENDEZ_MACEIRAS
+                ],
+                'score': [(6, 1), (6, 1)],
+                # no odds
+            },
+
+            # 2019-02-06
+            {
+                'round': 32,
+                'players': [
+                    ILYA_IVASHKA,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(4, 6), (6, 4), (6, 3)],
+                'odds': {
+                    ILYA_IVASHKA: 1.50,
+                    THOMAS_FABBIANO: 2.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCOS_BAGHDATIS,
+                    RUBEN_BEMELMANS
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    MARCOS_BAGHDATIS: 1.48,
+                    RUBEN_BEMELMANS: 2.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RADU_ALBOT,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    RADU_ALBOT: 3.10,
+                    PHILIPP_KOHLSCHREIBER: 1.36
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    TOMAS_BERDYCH,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    TOMAS_BERDYCH: 1.47,
+                    BENOIT_PAIRE: 2.75
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JEREMY_CHARDY,
+                    ANTOINE_HOANG
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    JEREMY_CHARDY: 1.45,
+                    ANTOINE_HOANG: 2.55
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    GILLES_SIMON
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.50,
+                    GILLES_SIMON: 2.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    DAVID_GOFFIN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 2.80,
+                    DAVID_GOFFIN: 1.40
+                }
+            },
+
+            # 2019-02-07
+            {
+                'round': 16,
+                'players': [
+                    RADU_ALBOT,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(7, 6), (4, 6), (6, 4)],
+                'odds': {
+                    RADU_ALBOT: 2.40,
+                    ERNESTS_GULBIS: 1.54
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    ILYA_IVASHKA
+                ],
+                'score': [(4, 6), (6, 4), (6, 2)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.27,
+                    ILYA_IVASHKA: 3.75
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    MARCEL_GRANOLLERS
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.30,
+                    MARCEL_GRANOLLERS: 3.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCOS_BAGHDATIS,
+                    LUCAS_POUILLE
+                ],
+                'score': [(7, 6), (6, 7), (6, 4)],
+                'odds': {
+                    MARCOS_BAGHDATIS: 2.65,
+                    LUCAS_POUILLE: 1.47
+                }
+            },
+
+            # 2019-02-08
+            {
+                'round': 8,
+                'players': [
+                    TOMAS_BERDYCH,
+                    FILIP_KRAJINOVIC
+                ],
+                'score': [(7, 6), (6, 7), (7, 5)],
+                'odds': {
+                    TOMAS_BERDYCH: 1.36,
+                    FILIP_KRAJINOVIC: 3.11
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RADU_ALBOT,
+                    MARCOS_BAGHDATIS
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    RADU_ALBOT: 1.98,
+                    MARCOS_BAGHDATIS: 1.83
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    JEREMY_CHARDY
+                ],
+                'score': [(6, 7), (7, 6), (6, 4)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.42,
+                    JEREMY_CHARDY: 2.70
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.25,
+                    DENIS_SHAPOVALOV: 1.63
+                }
+            },
+
+            # 2019-02-09
+            {
+                'round': 4,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.22,
+                    RADU_ALBOT: 4.58
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    TOMAS_BERDYCH
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.44,
+                    TOMAS_BERDYCH: 1.56
+                }
+            },
+
+            # 2019-02-10
+            {
+                'round': 2,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 4), (6, 2)],
+                # no odds
+            }
+        ]
+    },
+
+    {
         'name': 'Sofia Open',
         'category': 'ATP250',
         'date': '2019-02-10',
