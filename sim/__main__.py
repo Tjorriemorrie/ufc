@@ -94,7 +94,7 @@ def main(bet_params):
     # init
     reg = None
     scaler = MinMaxScaler()
-    cutoff = int(len(DATA) * 0.7)
+    cutoff = int(len(all_data) * 0.7)
     ratings = defaultdict(lambda: Rating())
     early_fights = defaultdict(lambda: 0.5)
     last_fights = defaultdict(lambda: 0.5)

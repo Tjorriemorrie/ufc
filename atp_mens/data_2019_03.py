@@ -4492,6 +4492,7 @@ DATA_2019_03 = [
                     NOVAK_DJOKOVIC,
                     FEDERICO_DELBONIS
                 ],
+                'score': [(7, 5), (4, 6), (6, 1)],
                 'odds': {
                     NOVAK_DJOKOVIC: 1.03,
                     FEDERICO_DELBONIS: 12.73

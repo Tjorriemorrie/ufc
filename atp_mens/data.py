@@ -1,23 +1,23 @@
 from men import *
 
 # acc  roi   profit  desc
-# 68   11.8  538     replaced retireds with net sets (-3.0, 390), (1.44, 22), (0.08, 18), (2.0, 17), (0.72, 17)
-# 67   3.48  162     2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17), (0.72, 17)
-# 66   -0.3  -44     2019-07-28 Hamburg European Open (11, 415), (14, 172), (15, 171), (12, 165), (6, 161), (13, 144), (10, 6), (5, 3)
-# 69   2.94  368     estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106), (12, 103), (10, 3), (5, 2)
+# 66   4.37  76      fixed cutoff :(
+# 53   2.37  120     2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
+# 65   9.63  458     added net games (-3.0, 429), (-4.0, 19), (1.0, 18), (0.72, 17), (1.92, 16)
+# 64   10.8  503     2019-02-17 ABN AMRO World Tennis Tournament (-3.0, 448), (-4.0, 22), (1.0, 18)
+# 68   11.8  538     replaced retireds with net sets (-3.0, 390), (1.44, 22), (0.08, 18), (2.0, 17)
+# 67   3.48  162     2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
+# 66   -0.3  -44     2019-07-28 Hamburg European Open (11, 415), (14, 172), (15, 171), (12, 165)
+# 69   2.94  368     estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106
 # 68   -2.48 -1418   all round (maybe should leave out qualifiers?) (21, 520), (1, 505), (13, 1)
-# 69   1.19  681     added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
-# 67   0.60  345     scaling bets with tennis does not work like ufc (21, 524), (1, 497), (19, 2), (9, 2), (8, 1)
-# 68  -1.0  2019-02-17 Argentina Open
-# 67  -2.6  2019-02-24 Rio Open presented by Claro
 
+# 69   1.19  681     added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
+# 68  -1.0  2019-02-17 Argentina Open
 # 67  0.41  skipping bets based on pred (none excluded)
 # 59  -2.84  2019-02-24 Open 13 Provence
-# 53  -8.45  Plava Laguna Croatia Open Umag
-# 55  -9.7  2019-07-14 Wimbledon
-# 65  -0.0  hamburg updated
-# 63  -1.5  added multi bet and changed to roi
 
+# 53  -8.45  Plava Laguna Croatia Open Umag
+# 65  -0.0  hamburg updated
 # 61  -24  diff set to absolute
 # 62  2.51  2019-06-29 Turkish Airlines Open Antalya
 # 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com

@@ -63,6 +63,7 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
         'round',
         'upsets', '~upsets',
         'sets', '~sets',
+        'games', '~games',
     ]
     for name, val in zip(feature_names, reg.feature_importances_):
         logger.info(f'{name}: {val}')
@@ -74,20 +75,22 @@ def main(bet_params=None):
     logger.info('Starting main training')
 
     all_data = DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
-    estimators, upsets_cutoff, sets_cutoff, \
+    estimators, upsets_cutoff, sets_cutoff, games_cutoff, \
         bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
         bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, = bet_params
     estimators = int(estimators * 100)
     upsets_cutoff = int(upsets_cutoff)
     sets_cutoff = int(sets_cutoff)
+    games_cutoff = int(games_cutoff)
 
     # init
     reg = None
     scaler = MinMaxScaler()
-    cutoff = int(len(DATA) * 0.7)
+    cutoff = int(len(all_data) * 0.7)
     ratings = defaultdict(lambda: Rating())
     upsets = defaultdict(lambda: [])
     sets = defaultdict(lambda: [])
+    games = defaultdict(lambda: [])
     training_data = []
     label_data = []
     payouts = []
@@ -128,6 +131,10 @@ def main(bet_params=None):
             p1_sets = sum(sets[p1])
             p2_sets = sum(sets[p2])
 
+            # games
+            p1_games = sum(games[p1])
+            p2_games = sum(games[p2])
+
             match_data = [
                 [
                     win1_prob,
@@ -142,6 +149,8 @@ def main(bet_params=None):
                     p2_upsets,
                     p1_sets,
                     p2_sets,
+                    p1_games,
+                    p2_games,
                 ],
                 [
                     win2_prob,
@@ -156,6 +165,8 @@ def main(bet_params=None):
                     p1_upsets,
                     p2_sets,
                     p1_sets,
+                    p2_games,
+                    p1_games,
                 ]
             ]
 
@@ -171,11 +182,22 @@ def main(bet_params=None):
                 # sets
                 try:
                     p1_new_sets = sum(s[0] > s[1] for s in match['score'])
+                    p2_new_sets = sum(s[0] < s[1] for s in match['score'])
                 except Exception as exc:
                     logger.warning(f'match score is not tuple: {match["score"]}')
                     raise
                 sets[p1] = sets[p1][-sets_cutoff:] + [p1_new_sets]
-                sets[p2] = sets[p2][-sets_cutoff:] + [sum(s[0] < s[1] for s in match['score'])]
+                sets[p2] = sets[p2][-sets_cutoff:] + [p2_new_sets]
+
+                # games
+                try:
+                    p1_new_games = sum(s[0] - s[1] for s in match['score'])
+                    p2_new_games = sum(s[1] - s[0] for s in match['score'])
+                except Exception as exc:
+                    logger.warning(f'match score is not tuple: {match["score"]}')
+                    raise
+                games[p1] = games[p1][-games_cutoff:] + [p1_new_games]
+                games[p2] = games[p2][-games_cutoff:] + [p2_new_games]
 
                 # update ratings
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
@@ -288,17 +310,17 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        7.20722502,
-        # cutoff (upsets, sets)
-        5.64323021, 4.64422689,
+        7.41113435,
+        # cutoff (upsets, sets, games)
+        1.35044028, 7.0890267,  5.19077409,
         # pred lower
-        -18.45719907, 27.30952479,
+        -14.88618081, 29.18613806,
         # pred higher
-        10.72685041, -4.21794614,
+        13.77856818, -6.18990272,
         # round lower
-        -19.63719899, 14.63254912,
+        -18.5958763, 9.16195715,
         # round higher
-        12.61853246, -10.53296813,
+        10.12825048, -15.05093678,
     ]
     
     train = 0
@@ -311,8 +333,9 @@ if __name__ == '__main__':
             solutions = es.ask()
             fitness = [main(x) for x in solutions]
             es.tell(solutions, fitness)
-            # es.logger.add()
             es.disp()
             print(es.result[0])
         es.result_pretty()
-        # es.logger.plot()
+        
+        print('')
+        print(es.result[0])
