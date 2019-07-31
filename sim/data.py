@@ -1,7 +1,7 @@
 from .fighters import *
 
 # acc  roi   profit  desc
-# 68   9.94  469     fixed cutoff with all_data :(
+# 67   12.09 415     fixed cutoff with all_data :(
 # 59   7.87  709     add estimators number as parameter (1, 707), (2, 78), (3, 70), (4, 44), (5, 36), (6, 18), (7, 16), (8, 8), (9, 4), (11, 3)
 # 60   5.94  536     1x3    removed prob scaling (1, 507), (2, 246), (3, 149)
 # 60   3.11  596     2x3    reduced pred (bad?) and added prob scaling (4, 262), (3, 258), (5, 183)

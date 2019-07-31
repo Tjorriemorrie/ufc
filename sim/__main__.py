@@ -81,8 +81,8 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
         'wins', '~wins',
         'losses', '~losses',
     ]
-    # for name, val in zip(feature_names, reg.feature_importances_):
-    #     logger.info(f'{name}: {val}')
+    for name, val in zip(feature_names, reg.feature_importances_):
+        logger.info(f'{name}: {val}')
 
     return reg
 
@@ -312,15 +312,15 @@ def main(bet_params):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        2.276484519529152, 
+        3.16817464,
         # bet max
-        10.874928957139876, 
+        11.42240157,
         # pred lower
-        -12.785237743583401, -1.9265052392632152, 
+        -7.51003898, -0.1264792,
         # pred higher
-        15.659256378079002, -10.392205569263318,
+        13.04445643, -9.87139328,
     ]
-
+    
     train = 0
 
     if not train:
@@ -331,8 +331,9 @@ if __name__ == '__main__':
             solutions = es.ask()
             fitness = [main(x) for x in solutions]
             es.tell(solutions, fitness)
-            # es.logger.add()
             es.disp()
             print(es.result[0])
         es.result_pretty()
-        # es.logger.plot()
+
+        print('')
+        print(es.result[0])
