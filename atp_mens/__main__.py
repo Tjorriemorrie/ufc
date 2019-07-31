@@ -67,6 +67,7 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
     ]
     for name, val in zip(feature_names, reg.feature_importances_):
         logger.info(f'{name}: {val}')
+        continue
 
     return reg
 
@@ -181,8 +182,8 @@ def main(bet_params=None):
 
                 # sets
                 try:
-                    p1_new_sets = sum(s[0] > s[1] for s in match['score'])
-                    p2_new_sets = sum(s[0] < s[1] for s in match['score'])
+                    p1_new_sets = sum(1 if s[0] > s[1] else -1 for s in match['score'])
+                    p2_new_sets = sum(1 if s[0] < s[1] else -1 for s in match['score'])
                 except Exception as exc:
                     logger.warning(f'match score is not tuple: {match["score"]}')
                     raise
@@ -310,17 +311,17 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        7.41113435,
+        15.16638463,   
         # cutoff (upsets, sets, games)
-        1.35044028, 7.0890267,  5.19077409,
+        2.9787428, 25.2290265, -16.29359802, 
         # pred lower
-        -14.88618081, 29.18613806,
+        -14.44272582, 38.711313,    
         # pred higher
-        13.77856818, -6.18990272,
+        36.39131848, -17.6493263, 
         # round lower
-        -18.5958763, 9.16195715,
+        -7.554267, 29.86000324,
         # round higher
-        10.12825048, -15.05093678,
+        1.71983416, -15.29742372,
     ]
     
     train = 0

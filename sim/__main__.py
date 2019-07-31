@@ -41,6 +41,9 @@ def to_implied_odds(us_odds: float) -> float:
 
 def get_regressor(training_data, label_data, scaler, estimators=100):
     """get regressor"""
+    logger.info('')
+    logger.info('Training model...')
+
     # scale
     scaler.partial_fit(training_data)
     X_train = scaler.transform(training_data)
