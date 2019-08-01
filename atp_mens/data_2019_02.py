@@ -235,7 +235,7 @@ DATA_2019_02 = [
                     ALESSANDRO_GIANNESSI,
                     THIAGO_SEYBOTH_WILD
                 ],
-                'score': [(6, 7), (7, 5), (7 ,6)],
+                'score': [(6, 7), (7, 5), (7, 6)],
                 'odds': {
                     ALESSANDRO_GIANNESSI: 1.48,
                     THIAGO_SEYBOTH_WILD: 2.60
@@ -2674,12 +2674,12 @@ DATA_2019_02 = [
             {
                 'round': 32,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     FELIX_AUGER_ALIASSIME
                 ],
                 'score': [(3, 6), (7, 5), (6, 3)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.83,
+                    CHRISTIAN_GARIN: 1.83,
                     FELIX_AUGER_ALIASSIME: 1.87
                 }
             },
@@ -2823,12 +2823,12 @@ DATA_2019_02 = [
                 'round': 16,
                 'players': [
                     MARCO_CECCHINATO,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(7, 6), (6, 4)],
                 'odds': {
                     MARCO_CECCHINATO: 1.59,
-                    CRISTIAN_GARIN: 2.22
+                    CHRISTIAN_GARIN: 2.22
                 }
             },
             {
@@ -3203,12 +3203,12 @@ DATA_2019_02 = [
             {
                 'round': 32,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     MAXIMILIAN_MARTERER
                 ],
                 'score': [(7, 5), (6, 3)],
                 'odds': {
-                    CRISTIAN_GARIN: 2.01,
+                    CHRISTIAN_GARIN: 2.01,
                     MAXIMILIAN_MARTERER: 1.77
                 }
             },
@@ -3363,12 +3363,12 @@ DATA_2019_02 = [
                 'round': 16,
                 'players': [
                     FELIX_AUGER_ALIASSIME,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(7, 5), (6, 4)],
                 'odds': {
                     FELIX_AUGER_ALIASSIME: 1.96,
-                    CRISTIAN_GARIN: 1.77
+                    CHRISTIAN_GARIN: 1.77
                 }
             },
 

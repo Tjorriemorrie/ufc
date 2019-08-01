@@ -185,12 +185,12 @@ DATA_2019_04 = [
             {
                 'round': 32,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     PABLO_CUEVAS
                 ],
                 'score': [(4, 6), (6, 4), (6, 2)],
                 'odds': {
-                    CRISTIAN_GARIN: 2.38,
+                    CHRISTIAN_GARIN: 2.38,
                     PABLO_CUEVAS: 1.59
                 }
             },
@@ -333,12 +333,12 @@ DATA_2019_04 = [
             {
                 'round': 16,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     JEREMY_CHARDY
                 ],
                 'score': [(3, 6), (7, 6), (7, 6)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.67,
+                    CHRISTIAN_GARIN: 1.67,
                     JEREMY_CHARDY: 2.03
                 }
             },
@@ -409,12 +409,12 @@ DATA_2019_04 = [
             {
                 'round': 8,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     HENRI_LAAKSONEN
                 ],
                 'score': [(6, 3), (6, 2)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.49,
+                    CHRISTIAN_GARIN: 1.49,
                     HENRI_LAAKSONEN: 2.72
                 }
             },
@@ -456,12 +456,12 @@ DATA_2019_04 = [
             {
                 'round': 4,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     SAM_QUERREY
                 ],
                 'score': [(7, 6), (6, 2)],
                 'odds': {
-                    CRISTIAN_GARIN: 2.00,
+                    CHRISTIAN_GARIN: 2.00,
                     SAM_QUERREY: 1.81
                 }
             },
@@ -470,12 +470,12 @@ DATA_2019_04 = [
             {
                 'round': 2,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     CASPER_RUUD
                 ],
                 'score': [(7, 6), (4, 6), (6, 3)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.67,
+                    CHRISTIAN_GARIN: 1.67,
                     CASPER_RUUD: 2.25
                 }
             }
@@ -2358,12 +2358,12 @@ DATA_2019_04 = [
             {
                 'round': 64,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     MARTIN_KLIZAN
                 ],
                 'score': [(7, 5), (6, 4)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.71,
+                    CHRISTIAN_GARIN: 1.71,
                     MARTIN_KLIZAN: 2.10
                 }
             },
@@ -2528,12 +2528,12 @@ DATA_2019_04 = [
             {
                 'round': 32,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     DENIS_SHAPOVALOV
                 ],
                 'score': [(7, 5), (6, 2)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.65,
+                    CHRISTIAN_GARIN: 1.65,
                     DENIS_SHAPOVALOV: 2.10
                 }
             },
@@ -2591,12 +2591,12 @@ DATA_2019_04 = [
                 'round': 16,
                 'players': [
                     ROBERTO_CARBALLES_BAENA,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(6, 4), (7, 6)],
                 'odds': {
                     ROBERTO_CARBALLES_BAENA: 2.76,
-                    CRISTIAN_GARIN: 1.42
+                    CHRISTIAN_GARIN: 1.42
                 }
             },
             {
@@ -3493,12 +3493,12 @@ DATA_2019_04 = [
             {
                 'round': 32,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     YANNICK_MADEN
                 ],
                 'score': [(6, 4), (6, 2)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.50,
+                    CHRISTIAN_GARIN: 1.50,
                     YANNICK_MADEN: 2.55
                 }
             },
@@ -3567,12 +3567,12 @@ DATA_2019_04 = [
             {
                 'round': 16,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     DIEGO_SCHWARTZMAN
                 ],
                 'score': [(6, 1), (7, 5)],
                 'odds': {
-                    CRISTIAN_GARIN: 2.02,
+                    CHRISTIAN_GARIN: 2.02,
                     DIEGO_SCHWARTZMAN: 1.74
                 }
             },
@@ -3691,12 +3691,12 @@ DATA_2019_04 = [
             {
                 'round': 8,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     ALEXANDER_ZVEREV
                 ],
                 'score': [(6, 4), (5, 7), (7, 5)],
                 'odds': {
-                    CRISTIAN_GARIN: 3.28,
+                    CHRISTIAN_GARIN: 3.28,
                     ALEXANDER_ZVEREV: 1.37
                 }
             },
@@ -3705,12 +3705,12 @@ DATA_2019_04 = [
             {
                 'round': 4,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     MARCO_CECCHINATO
                 ],
                 'score': [(6, 2), (6, 4)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.92,
+                    CHRISTIAN_GARIN: 1.92,
                     MARCO_CECCHINATO: 1.83
                 }
             },
@@ -3731,12 +3731,12 @@ DATA_2019_04 = [
             {
                 'round': 2,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     MATTEO_BERRETTINI
                 ],
                 'score': [(6, 1), (3, 6), (7, 6)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.86,
+                    CHRISTIAN_GARIN: 1.86,
                     MATTEO_BERRETTINI: 1.95
                 }
             },

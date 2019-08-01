@@ -1252,12 +1252,12 @@ DATA_2019_03 = [
             {
                 'round': 32,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     PEDRO_SOUSA
                 ],
                 'score': [(7, 6), (6, 2)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.30,
+                    CHRISTIAN_GARIN: 1.30,
                     PEDRO_SOUSA: 3.59
                 }
             },
@@ -1400,12 +1400,12 @@ DATA_2019_03 = [
             {
                 'round': 16,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     JAUME_MUNAR
                 ],
                 'score': [(7, 6), (6, 7), (7, 6)],
                 'odds': {
-                    CRISTIAN_GARIN: 2.18,
+                    CHRISTIAN_GARIN: 2.18,
                     JAUME_MUNAR: 1.67
                 }
             },
@@ -1512,12 +1512,12 @@ DATA_2019_03 = [
             {
                 'round': 8,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     LEONARDO_MAYER
                 ],
                 'score': [(4, 6), (6, 4), (6, 4)],
                 'odds': {
-                    CRISTIAN_GARIN: 2.00,
+                    CHRISTIAN_GARIN: 2.00,
                     LEONARDO_MAYER: 1.77
                 }
             },
@@ -1538,12 +1538,12 @@ DATA_2019_03 = [
             {
                 'round': 4,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     CASPER_RUUD
                 ],
                 'score': [(6, 4), (6, 4)],
                 'odds': {
-                    CRISTIAN_GARIN: 2.16,
+                    CHRISTIAN_GARIN: 2.16,
                     CASPER_RUUD: 1.65
                 }
             },
@@ -1562,12 +1562,12 @@ DATA_2019_03 = [
                 'round': 2,
                 'players': [
                     GUIDO_PELLA,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(7, 5), (6, 3)],
                 'odds': {
                     GUIDO_PELLA: 1.50,
-                    CRISTIAN_GARIN: 2.44
+                    CHRISTIAN_GARIN: 2.44
                 }
             }
         ]
@@ -3410,12 +3410,12 @@ DATA_2019_03 = [
                 'round': 512,
                 'players': [
                     BJORN_FRATANGELO,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(4, 6), (7, 6), (6, 1)],
                 'odds': {
                     BJORN_FRATANGELO: 1.51,
-                    CRISTIAN_GARIN: 2.45
+                    CHRISTIAN_GARIN: 2.45
                 }
             },
             {

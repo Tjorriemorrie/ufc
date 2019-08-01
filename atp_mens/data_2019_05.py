@@ -2243,12 +2243,12 @@ DATA_2019_05 = [
                 'round': 16,
                 'players': [
                     TARO_DANIEL,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(6, 2), (4, 6), (6, 4)],
                 'odds': {
                     TARO_DANIEL: 3.25,
-                    CRISTIAN_GARIN: 1.31
+                    CHRISTIAN_GARIN: 1.31
                 }
             },
 
@@ -3115,12 +3115,12 @@ DATA_2019_05 = [
             {
                 'round': 128,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     REILLY_OPELKA
                 ],
                 'score': [(7, 6), (7, 5), (7, 6)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.37,
+                    CHRISTIAN_GARIN: 1.37,
                     REILLY_OPELKA: 3.20
                 }
             },
@@ -3678,12 +3678,12 @@ DATA_2019_05 = [
                 'round': 64,
                 'players': [
                     STAN_WAWRINKA,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(6, 1), (6, 4), (6, 0)],
                 'odds': {
                     STAN_WAWRINKA: 1.53,
-                    CRISTIAN_GARIN: 2.50
+                    CHRISTIAN_GARIN: 2.50
                 }
             },
             {

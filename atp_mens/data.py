@@ -1,6 +1,7 @@
 from men import *
 
 # acc  roi   profit  desc
+# 64   6.19  125     2019-01-27 Australian Open
 # 63   4.24  85      2019-02-10 Cordoba Open
 # 66   4.37  76      fixed cutoff :(
 # 53   2.37  120     2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
@@ -730,12 +731,12 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     SALVATORE_CARUSO
                 ],
                 'score': [(6, 1), (6, 4)],
                 'odds': {
-                    CRISTIAN_GARIN: 1.59,
+                    CHRISTIAN_GARIN: 1.59,
                     SALVATORE_CARUSO: 2.47
                 }
             },
@@ -880,7 +881,7 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                     ROBIN_HAASE
                 ],
                 'score': [(7, 5), (7, 5)],
@@ -973,12 +974,12 @@ DATA = [
                 'round': 8,
                 'players': [
                     BORNA_CORIC,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(6, 7), (6, 3), (7, 6)],
                 'odds': {
                     BORNA_CORIC: 1.41,
-                    CRISTIAN_GARIN: 2.95
+                    CHRISTIAN_GARIN: 2.95
                 }
             },
 
@@ -1206,12 +1207,12 @@ DATA = [
                 'round': 32,
                 'players': [
                     MARIN_CILIC,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(6, 1), (7, 6)],
                 'odds': {
                     MARIN_CILIC: 1.29,
-                    CRISTIAN_GARIN: 3.50
+                    CHRISTIAN_GARIN: 3.50
                 }
             },
             {
@@ -3474,12 +3475,12 @@ DATA = [
                 'round': 128,
                 'players': [
                     ANDREY_RUBLEV,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(4, 6), (6, 4), (7, 5), (6, 4)],
                 'odds': {
                     ANDREY_RUBLEV: 2.55,
-                    CRISTIAN_GARIN: 1.53
+                    CHRISTIAN_GARIN: 1.53
                 }
             },
             {
@@ -5877,12 +5878,12 @@ DATA = [
                 'round': 16,
                 'players': [
                     JEREMY_CHARDY,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(6, 4), (6, 4)],
                 'odds': {
                     JEREMY_CHARDY: 2.40,
-                    CRISTIAN_GARIN: 1.57
+                    CHRISTIAN_GARIN: 1.57
                 }
             },
 
@@ -6445,8 +6446,6 @@ DATA = [
                     ALEX_DE_MINAUR: 1.34,
                     BERNARD_TOMIC: 3.20
                 },
-                'prediction': BERNARD_TOMIC,
-                'bet': 20,
             },
             {
                 'round': 8,
@@ -7223,12 +7222,12 @@ DATA = [
                 'round': 32,
                 'players': [
                     ANDREY_RUBLEV,
-                    CRISTIAN_GARIN
+                    CHRISTIAN_GARIN
                 ],
                 'score': [(6, 4), (7, 6)],
                 'odds': {
                     ANDREY_RUBLEV: 2.13,
-                    CRISTIAN_GARIN: 1.67
+                    CHRISTIAN_GARIN: 1.67
                 }
             },
             {
@@ -8089,8 +8088,6 @@ DATA = [
                     KEVIN_ANDERSON: 1.36,
                     ADRIAN_MANNARINO: 3.10,
                 },
-                'prediction': KEVIN_ANDERSON,
-                'bet': 4,
             },
             {
                 'round': 32,
@@ -8475,14 +8472,14 @@ DATA = [
                 'round': 32,
                 'players': [
                     JUAN_IGNACIO_LONDERO,
-                    CRISTIAN_GARIN,
+                    CHRISTIAN_GARIN,
                 ],
                 'score': [(3, 6), (6, 2), (6, 3)],
                 'odds': {
                     JUAN_IGNACIO_LONDERO: 2.50,
-                    CRISTIAN_GARIN: 1.52,
+                    CHRISTIAN_GARIN: 1.52,
                 },
-                'prediction': CRISTIAN_GARIN,
+                'prediction': CHRISTIAN_GARIN,
                 'bet': 15,
             },
             {

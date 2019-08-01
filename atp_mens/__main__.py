@@ -1,4 +1,5 @@
 from collections import Counter, defaultdict
+from datetime import datetime
 from itertools import chain
 
 import numpy as np
@@ -10,6 +11,7 @@ from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
 from .data import DATA
+from .data_2019_01 import DATA_2019_01
 from .data_2019_02 import DATA_2019_02
 from .data_2019_03 import DATA_2019_03
 from .data_2019_04 import DATA_2019_04
@@ -74,7 +76,7 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
 def main(bet_params=None):
     logger.info('Starting main training')
 
-    all_data = DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
+    all_data = DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
     estimators, upsets_cutoff, sets_cutoff, games_cutoff, \
         bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
         bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, = bet_params
@@ -87,6 +89,7 @@ def main(bet_params=None):
     reg = None
     scaler = MinMaxScaler()
     cutoff = int(len(all_data) * 0.7)
+    start_date = None
     ratings = defaultdict(lambda: Rating())
     upsets = defaultdict(lambda: [])
     sets = defaultdict(lambda: [])
@@ -106,6 +109,7 @@ def main(bet_params=None):
         is_training = i < cutoff
         if not is_training:
             if not reg:
+                start_date = datetime.strptime(event['date'], '%Y-%m-%d')
                 reg = get_regressor(training_data, label_data, scaler, estimators=estimators)
             logger.info('')
         logger.info(f'{event["date"]} {event["name"]}')
@@ -287,9 +291,10 @@ def main(bet_params=None):
         payouts = np.array(payouts)
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%')
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
-        logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%  Profit ${sum(payouts):.0f}')
+        days = (datetime.now() - start_date).days
+        logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
         logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
         logger.info(f'Most common: {Counter(payouts).most_common(5)}')
         logger.info(f'Common multis: {Counter(bet_multis).most_common(10)}')

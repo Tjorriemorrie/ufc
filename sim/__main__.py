@@ -1,3 +1,4 @@
+from datetime import datetime
 from collections import Counter, defaultdict, OrderedDict
 from itertools import chain
 
@@ -98,6 +99,7 @@ def main(bet_params):
     reg = None
     scaler = MinMaxScaler()
     cutoff = int(len(all_data) * 0.7)
+    start_date = None
     ratings = defaultdict(lambda: Rating())
     early_fights = defaultdict(lambda: 0.5)
     last_fights = defaultdict(lambda: 0.5)
@@ -115,6 +117,7 @@ def main(bet_params):
         is_training = i < cutoff
         if not is_training:
             if not reg:
+                start_date = datetime.strptime(scene['date'], '%Y-%m-%d')
                 reg = get_regressor(training_data, label_data, scaler, estimators=estimators)
             logger.info('')
         logger.info(f'{scene["date"]} {scene["name"]}')
@@ -289,10 +292,11 @@ def main(bet_params):
         payouts = np.array(payouts)
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%')
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0] / accuracy[1] * 100:.0f}%')
-        logger.info(f'Profit ${sum(payouts):.0f} per bet: {payouts.mean():.2f}')
-        # logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%  Profit ${sum(payouts):.0f}')
+        days = (datetime.now() - start_date).days
+        logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
+        logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
         logger.info(f'Most common: {Counter(payouts).most_common(5)}')
         logger.info(f'Common multis: {Counter(bet_multis).most_common(10)}')
 
