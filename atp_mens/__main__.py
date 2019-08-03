@@ -67,8 +67,8 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
         'sets', '~sets',
         'games', '~games',
     ]
-    # for name, val in zip(feature_names, reg.feature_importances_):
-    #     logger.info(f'{name}: {val}')
+    for name, val in zip(feature_names, reg.feature_importances_):
+        logger.info(f'{name}: {val}')
 
     return reg
 
@@ -193,10 +193,10 @@ def main(bet_params=None):
                 sets[p1] = sets[p1][-sets_cutoff:] + [p1_new_sets]
                 sets[p2] = sets[p2][-sets_cutoff:] + [p2_new_sets]
 
-                # games
+                # games (useless as net sum)
                 try:
-                    p1_new_games = sum(s[0] - s[1] for s in match['score'])
-                    p2_new_games = sum(s[1] - s[0] for s in match['score'])
+                    p1_new_games = sum(s[0] - s[1] for s in match['score']) * win2_prob
+                    p2_new_games = sum(s[1] - s[0] for s in match['score']) * win1_prob
                 except Exception as exc:
                     logger.warning(f'match score is not tuple: {match["score"]}')
                     raise
@@ -296,8 +296,8 @@ def main(bet_params=None):
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
         logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
-        logger.info(f'Most common: {Counter(payouts).most_common(5)}')
-        logger.info(f'Common multis: {Counter(bet_multis).most_common(10)}')
+        logger.info(f'Most common: {Counter(payouts).most_common(3)}')
+        logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
 
     if actual[1]:
         tab = np.array(tab)
@@ -315,17 +315,17 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        9.88241005, 
+        8.43400795,
         # cutoff (upsets, sets, games)
-        -0.50908109, 29.09589433, -15.99243417,
+        3.90344062, 28.6804042, -14.9096097,
         # pred lower
-        -16.17839156, 37.39795415,  
+        -15.35294162, 37.80424395,
         # pred higher
-        36.61091885, -17.0555342, 
+        41.12295121, -20.77922169,
         # round lower
-        -6.14361977, 37.14617707,
+        -10.04270258, 34.29670507,
         # round higher
-        -0.4798909, -20.56750397,
+        -1.71135428, -22.27730921,
     ]
     
     train = 0

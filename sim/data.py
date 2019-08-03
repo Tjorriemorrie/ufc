@@ -7127,6 +7127,243 @@ DATA = [
                 'bet': 20,
             }
         ]
+    },
+
+    {
+        'date': '2019-08-04',
+        'name': 'UFC Fight Night: Covington vs Lawler',
+        'location': 'Newark, United States',
+        'venue': 'Prudential Center',
+        'fights': [
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': MIRANDA_GRANGER,
+                        'stats': '0-0-0'
+                    },
+                    {
+                        'name': HANNAH_GOLDY,
+                        'stats': '0-0-0'
+                    }
+                ],
+                'odds': {
+                    MIRANDA_GRANGER: 2.35,
+                    HANNAH_GOLDY: 1.57,
+                },
+                'prediction': MIRANDA_GRANGER,
+                'bet': 5,
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': CLAUDIO_DA_SILVA,
+                        'stats': '13-1-0'
+                    },
+                    {
+                        'name': COLE_WILLIAMS,
+                        'stats': '11-1-0'
+                    }
+                ],
+                'odds': {
+                    CLAUDIO_DA_SILVA: 1.23,
+                    COLE_WILLIAMS: 4.00,
+                },
+                'prediction': CLAUDIO_DA_SILVA,
+                bet: 5,
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': LAUREN_MURPHY,
+                        'stats': '10-4-0',
+                    },
+                    {
+                        'name': MARA_ROMERO_BORELLA,
+                        'stats': '13-5-0'
+                    }
+                ],
+                'odds': {
+                    LAUREN_MURPHY: 2.40,
+                    MARA_ROMERO_BORELLA: 1.55,
+                },
+                'prediction': MARA_ROMERO_BORELLA,
+                'bet': 5,
+            },
+            {
+                'weight_class': MENS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': JORDAN_ESPINOSA,
+                        'stats': '13-5-0',
+                    },
+                    {
+                        'name': MATT_SCHNELL,
+                        'stats': '13-4-0'
+                    }
+                ],
+                'odds': {
+                    JORDAN_ESPINOSA: 1.85,
+                    MATT_SCHNELL: 1.95,
+                },
+                'prediction': JORDAN_ESPINOSA,
+                'bet': 5,
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': ANTONINA_SHEVCHENKO,
+                        'stats': '7-0-0'
+                    },
+                    {
+                        'name': LUCIE_PUDILOVA,
+                        'stats': '8-4-0',
+                    }
+                ],
+                'odds': {
+                    ANTONINA_SHEVCHENKO: 1.60,
+                    LUCIE_PUDILOVA: 2.30,
+                },
+                'prediction': ANTONINA_SHEVCHENKO,
+                'bet': 10,
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': MICKEY_GALL,
+                        'stats': '5-2-0',
+                    },
+                    {
+                        'name': SALIM_TOUAHRI,
+                        'stats': '10-3-0'
+                    }
+                ],
+                'odds': {
+                    MICKEY_GALL: 2.05,
+                    SALIM_TOUAHRI: 1.75,
+                },
+                'prediction': SALIM_TOUAHRI,
+                'bet': 5,
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DARKO_STOSIC,
+                        'stats': '13-1-0'
+                    },
+                    {
+                        'name': KENNEDY_NZECHUKWU,
+                        'stats': '6-1-0'
+                    }
+                ],
+                'odds': {
+                    DARKO_STOSIC: 1.75,
+                    KENNEDY_NZECHUKWU: 2.05,
+                },
+                'prediction': KENNEDY_NZECHUKWU,
+                'bet': 5,
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': SCOTT_HOLTZMAN,
+                        'stats': '12-3-0'
+                    },
+                    {
+                        'name': DONG_HYUN_MA,
+                        'stats': '16-9-3'
+                    }
+                ],
+                'odds': {
+                    SCOTT_HOLTZMAN: 1.25,
+                    DONG_HYUN_MA: 3.85,
+                },
+                'prediction': SCOTT_HOLTZMAN,
+                'bet': 5,
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': TREVIN_GILES,
+                        'stats': '11-0-0'
+                    },
+                    {
+                        'name': GERALD_MEERSCHAERT,
+                        'stats': '28-11-0'
+                    }
+                ],
+                'odds': {
+                    TREVIN_GILES: 1.63,
+                    GERALD_MEERSCHAERT: 2.25,
+                },
+                'prediction': TREVIN_GILES,
+                'bet': 10,
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JOAQUIM_SILVA,
+                        'stats': '11-1-0'
+                    },
+                    {
+                        'name': NASRAT_HAQPARAST,
+                        'stats': '10-2-0'
+                    }
+                ],
+                'odds': {
+                    JOAQUIM_SILVA: 2.90,
+                    NASRAT_HAQPARAST: 1.40,
+                },
+                'prediction': NASRAT_HAQPARAST,
+                'bet': 5,
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': JIM_MILLER,
+                        'stats': '29-13-0'
+                    },
+                    {
+                        'name': CLAY_GUIDA,
+                        'stats': '34-15-0'
+                    }
+                ],
+                'odds': {
+                    JIM_MILLER: 1.60,
+                    CLAY_GUIDA: 2.30,
+                },
+                'prediction': CLAY_GUIDA,
+                'bet': 5,
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': COLBY_COVINGTON,
+                        'stats': '14-1-0',
+                    },
+                    {
+                        'name': ROBBIE_LAWLER,
+                        'stats': '28-13-0',
+                    }
+                ],
+                'odds': {
+                    COLBY_COVINGTON: 1.45,
+                    ROBBIE_LAWLER: 2.75,
+                },
+                'prediction': COLBY_COVINGTON,
+                'bet': 20,
+            }
+        ]
     }
 
 ]
