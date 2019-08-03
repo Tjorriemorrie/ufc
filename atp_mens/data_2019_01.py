@@ -2,6 +2,376 @@ from men import *
 
 DATA_2019_01 = [
     {
+        'name': 'Qatar ExonMobil Open',
+        'category': 'ATP250',
+        'date': '2019-01-05',
+        'location': 'Doha, Qatar',
+        'matches': [
+
+            # 2018-12-29
+            {
+                'round': 512,
+                'players': [
+                    SERGIY_STAKHOVSKY,
+                    GIAN_MARCO_MORONI
+                ],
+                'score': [(7, 6), (7, 5)],
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCOS_BAGHDATIS,
+                    LUKAS_ROSOL
+                ],
+                'score': [(6, 0, (7, 6))]
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    MOUSA_SHANAN_ZAYED
+                ],
+                'score': [(6, 0), (6, 1)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    DENNIS_NOVAK
+                ],
+                'score': [(6, 4 , (6, 3))]
+            },
+            {
+                'round': 512,
+                'players': [
+                    PAOLO_LORENZI,
+                    JABOR_AL_MUTAWA
+                ],
+                'score': [(6, 1), (6, 0)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    JAMES_WARD
+                ],
+                'score': [(7, 6), (6, 2)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    MIRZA_BASIC,
+                    MATTHIAS_BACHINGER
+                ],
+                'score': [(6, 3), (6, 3)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    MAXIMILIAN_MARTERER,
+                    ANDREA_ARNABOLDI
+                ],
+                'score': [(3, 6), (6, 2), (6, 3)]
+            },
+
+            # 2018-12-30
+            {
+                'round': 256,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 4), (7, 6)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    MARCOS_BAGHDATIS
+                ],
+                'score': [(4, 6), (6, 2), (6, 4)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    SERGIY_STAKHOVSKY,
+                    MIRZA_BASIC
+                ],
+                'score': [(3, 6), (6, 2), (6, 3)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    MAXIMILIAN_MARTERER,
+                    MARCO_TRUNGELLITI
+                ],
+                'score': [(4, 6), (6, 4), (7, 5)]
+            },
+
+            # 2018-12-31
+            {
+                'round': 32,
+                'players': [
+                    ANDREY_RUBLEV,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(7, 5), (6, 1)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    MAXIMILIAN_MARTERER,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 1), (6, 4)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_JARRY,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 7), (6, 4), (7, 6)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    TOMAS_BERDYCH,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(6, 4), (7, 6)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 3), (6, 4)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(6, 1), (6, 4)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 1), (1, 6), (6, 1)]
+            },
+
+            # 2019-01-01
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_PELLA,
+                    CERN_ILKEL
+                ],
+                'score': [(7, 6), (6, 3)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 3), (7, 6)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    MUBARAK_SHANNAN_ZAYID
+                ],
+                'score': [(6, 1), (6, 3)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    MARIUS_COPIL
+                ],
+                'score': [(6, 3), (6, 2)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    DAVID_GOFFIN
+                ],
+                'score': [(3, 6), (6, 4), (7, 6)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCO_CECCHINATO,
+                    SERGIY_STAKHOVSKY
+                ],
+                'score': [(6, 4), (6, 2)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    STAN_WAWRINKA,
+                    KAREN_KHACHANOV
+                ],
+                'score': [(7, 6), (6, 4)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    DOMINIC_THIEM
+                ],
+                'score': [(6, 3), (7, 5)]
+            },
+            {
+                'round': 32,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 1), (6, 2)]
+            },
+
+            # 2019-01-02
+            {
+                'round': 16,
+                'players': [
+                    STAN_WAWRINKA,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 4), (7, 6)]
+            },
+            {
+                'round': 16,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(7, 6), (0, 6), (7, 5)]
+            },
+            {
+                'round': 16,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(6, 3), (6, 7), (7, 6)]
+            },
+            {
+                'round': 16,
+                'players': [
+                    TOMAS_BERDYCH,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(4, 6), (6, 3), (7, 5)]
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(6, 1), (6, 4)]
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(6, 3), (6, 4)]
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCO_CECCHINATO,
+                    GUIDO_PELLA
+                ],
+                'score': [],
+                'retired': True,
+            },
+            {
+                'round': 16,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(4, 6), (6, 4), (6, 1)]
+            },
+
+            # 2019-01-03
+            {
+                'round': 8,
+                'players': [
+                    TOMAS_BERDYCH,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 2), (6, 4)]
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    STAN_WAWRINKA
+                ],
+                'score': [(6, 4), (6, 4)]
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARCO_CECCHINATO,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(7, 6), (6, 2)]
+            },
+            {
+                'round': 8,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)]
+            },
+
+            # 2019-01-04
+            {
+                'round': 4,
+                'players': [
+                    TOMAS_BERDYCH,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(7, 6), (6, 3)]
+            },
+            {
+                'round': 4,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    NOVAK_DJOKOVIC
+                ],
+                'score': [(3, 6), (7, 6), (6, 4)]
+            },
+
+            # 2019-01-05
+            {
+                'round': 2,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    TOMAS_BERDYCH
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)]
+            }
+        ]
+    },
+
+    {
         'name': 'Brisbane International',
         'category': 'ATP250',
         'date': '2019-01-06',
