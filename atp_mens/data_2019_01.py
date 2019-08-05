@@ -374,7 +374,7 @@ DATA_2019_01 = [
                     MARTON_FUCSOVICS,
                     BENOIT_PAIRE
                 ],
-                'score': [(6, 4), (6, 4)]
+                'score': [(6, 4), (6, 4)],
                 'odds': {
                     MARTON_FUCSOVICS: 2.10,
                     BENOIT_PAIRE: 1.67
@@ -508,7 +508,7 @@ DATA_2019_01 = [
                 'score': [(7, 6), (6, 4)],
                 'odds': {
                     KEI_NISHIKORI: 1.13,
-                    ADRIAN_MANNARINO: 
+                    ADRIAN_MANNARINO: 5.60
                 }
             },
             {
@@ -517,7 +517,11 @@ DATA_2019_01 = [
                     GRIGOR_DIMITROV,
                     ROBERTO_BAUTISTA_AGUT
                 ],
-                'score': [(7, 6), (6, 4)]
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    GRIGOR_DIMITROV: 2.07,
+                    ROBERTO_BAUTISTA_AGUT: 1.67
+                }
             },
             {
                 'round': 32,
@@ -525,7 +529,11 @@ DATA_2019_01 = [
                     JOHN_ISNER,
                     MIKHAIL_KUKUSHKIN
                 ],
-                'score': [(6, 3), (6, 7), (7, 6)]
+                'score': [(6, 3), (6, 7), (7, 6)],
+                'odds': {
+                    JOHN_ISNER: 1.39,
+                    MIKHAIL_KUKUSHKIN: 2.85
+                }
             },
             {
                 'round': 32,
@@ -534,6 +542,10 @@ DATA_2019_01 = [
                     NIKOLOZ_BASILASHVILI
                 ],
                 'score': [(6, 3), (6, 7), (7, 6)],
+                'odds': {
+                    KEVIN_ANDERSON: 1.42,
+                    NIKOLOZ_BASILASHVILI: 2.80
+                }
             },
             {
                 'round': 32,
@@ -541,7 +553,11 @@ DATA_2019_01 = [
                     DOMINIC_THIEM,
                     GILLES_SIMON
                 ],
-                'score': [(6, 4), (6, 2)]
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DOMINIC_THIEM: 1.49,
+                    GILLES_SIMON: 2.31
+                }
             },
             {
                 'round': 32,
@@ -571,6 +587,10 @@ DATA_2019_01 = [
                 ],
                 'score': [],
                 'retired': True,
+                'odds': {
+                    ROGER_FEDERER: 1.33,
+                    MILOS_RAONIC: 3.40
+                }
             },
             {
                 'round': 32,
@@ -585,14 +605,18 @@ DATA_2019_01 = [
                 }
             },
 
-            # 2018-10-31
+            # 2018-11-01
             {
                 'round': 16,
                 'players': [
                     JACK_SOCK,
                     MALEK_JAZIRI
                 ],
-                'score': [(6, 0), (6, 4)]
+                'score': [(6, 0), (6, 4)],
+                'odds': {
+                    JACK_SOCK: 1.33,
+                    MALEK_JAZIRI: 3.20
+                }
             },
             {
                 'round': 16,
@@ -600,7 +624,11 @@ DATA_2019_01 = [
                     KAREN_KHACHANOV,
                     JOHN_ISNER
                 ],
-                'score': [(6, 4), (6, 7), (7, 6)]
+                'score': [(6, 4), (6, 7), (7, 6)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.50,
+                    JOHN_ISNER: 2.50
+                }
             },
             {
                 'round': 16,
@@ -608,7 +636,11 @@ DATA_2019_01 = [
                     KEI_NISHIKORI,
                     KEVIN_ANDERSON
                 ],
-                'score': [(6, 4), (6, 4)]
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    KEI_NISHIKORI: 1.71,
+                    KEVIN_ANDERSON: 2.10
+                }
             },
             {
                 'round': 16,
@@ -616,7 +648,11 @@ DATA_2019_01 = [
                     DOMINIC_THIEM,
                     BORNA_CORIC
                 ],
-                'score': [(6, 7), (6, 2), (7, 5)]
+                'score': [(6, 7), (6, 2), (7, 5)],
+                'odds': {
+                    DOMINIC_THIEM: 1.80,
+                    BORNA_CORIC: 2.00
+                }
             },
             {
                 'round': 16,
@@ -624,7 +660,11 @@ DATA_2019_01 = [
                     MARIN_CILIC,
                     GRIGOR_DIMITROV
                 ],
-                'score': [(7, 6), (6, 4)]
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    MARIN_CILIC: 1.47,
+                    GRIGOR_DIMITROV: 2.70
+                }
             },
             {
                 'round': 16,
@@ -632,7 +672,11 @@ DATA_2019_01 = [
                     ALEXANDER_ZVEREV,
                     DIEGO_SCHWARTZMAN
                 ],
-                'score': [(6, 4), (6, 2)]
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.29,
+                    DIEGO_SCHWARTZMAN: 3.95
+                }
             },
             {
                 'round': 16,
@@ -640,7 +684,11 @@ DATA_2019_01 = [
                     ROGER_FEDERER,
                     FABIO_FOGNINI
                 ],
-                'score': [(6, 4), (6, 3)]
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    ROGER_FEDERER: 1.13,
+                    FABIO_FOGNINI: 5.95
+                }
             },
             {
                 'round': 16,
@@ -650,16 +698,24 @@ DATA_2019_01 = [
                 ],
                 'score': [(6, 1), (2, 1)],
                 'retired': True,
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.02,
+                    DAMIR_DZUMHUR: 12.00
+                }
             },
 
-            # ?
+            # 2019-11-02
             {
                 'round': 8,
                 'players': [
                     DOMINIC_THIEM,
                     JACK_SOCK
                 ],
-                'score': [(4, 6), (6, 4), (6, 4)]
+                'score': [(4, 6), (6, 4), (6, 4)],
+                'odds': {
+                    DOMINIC_THIEM: 1.29,
+                    JACK_SOCK: 3.40
+                }
             },
             {
                 'round': 8,
@@ -667,7 +723,11 @@ DATA_2019_01 = [
                     KAREN_KHACHANOV,
                     ALEXANDER_ZVEREV
                 ],
-                'score': [(6, 1), (6, 2)]
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    KAREN_KHACHANOV: 2.80,
+                    ALEXANDER_ZVEREV: 1.48
+                }
             },
             {
                 'round': 8,
@@ -675,7 +735,11 @@ DATA_2019_01 = [
                     ROGER_FEDERER,
                     KEI_NISHIKORI
                 ],
-                'score': [(6, 4), (6, 4)]
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.43,
+                    KEI_NISHIKORI: 2.87
+                }
             },
             {
                 'round': 8,
@@ -683,17 +747,25 @@ DATA_2019_01 = [
                     NOVAK_DJOKOVIC,
                     MARIN_CILIC
                 ],
-                'score': [(4, 6), (6, 2), (6, 3)]
+                'score': [(4, 6), (6, 2), (6, 3)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.14,
+                    MARIN_CILIC: 5.45
+                }
             },
 
-            # ?
+            # 2019-11-03
             {
                 'round': 4,
                 'players': [
                     KAREN_KHACHANOV,
                     DOMINIC_THIEM
                 ],
-                'score': [(6, 4), (6, 1)]
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.87,
+                    DOMINIC_THIEM: 1.87
+                }
             },
             {
                 'round': 4,
@@ -701,17 +773,25 @@ DATA_2019_01 = [
                     NOVAK_DJOKOVIC,
                     ROGER_FEDERER
                 ],
-                'score': [(7, 6), (5, 7), (7, 6)]
+                'score': [(7, 6), (5, 7), (7, 6)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.38,
+                    ROGER_FEDERER: 3.00
+                }
             },
 
-            # ?
+            # 2019-11-04
             {
                 'round': 2,
                 'players': [
                     KAREN_KHACHANOV,
                     NOVAK_DJOKOVIC
                 ],
-                'score': [(7, 6), (6, 4)]
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    KAREN_KHACHANOV: 5.00,
+                    NOVAK_DJOKOVIC: 1.18
+                }
             }
         ]
     },
