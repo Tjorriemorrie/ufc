@@ -11,6 +11,7 @@ from math import sqrt
 from rl.agents import SARSAAgent
 from rl.core import Env
 from rl.policy import BoltzmannQPolicy, Policy
+from sklearn.preprocessing import MinMaxScaler
 from trueskill import BETA, global_env, Rating, rate_1vs1
 
 from .data_2016 import DATA_2016
@@ -92,8 +93,12 @@ class MyEnv(Env):
 
                 x = [
                     win1_prob,
-                    1 / f1_odds,
-                    1 / f2_odds,
+                    f1_odds,
+                    f2_odds,
+                    ratings[f1].mu,
+                    ratings[f2].mu,
+                    ratings[f1].sigma,
+                    ratings[f2].sigma,
                 ]
 
                 # y is the data to calculate the reward
@@ -110,13 +115,19 @@ class MyEnv(Env):
                     self.x_test.append(x)
                     self.y_test.append(y)
 
+        # scale data
+        scaler = MinMaxScaler()
+        scaler.partial_fit(self.x_train)
+        self.x_train = scaler.transform(self.x_train)
+        self.x_test = scaler.transform(self.x_test)
+
     def _reset(self) -> None:
         self.i = 0
         self.rewards = []
 
     def _get_obs(self) -> List[float]:
         obs = self.x_train[self.i]
-        assert len(obs) == 3
+        assert len(obs) == 7
         return np.array(obs)
 
     def reset(self) -> List[float]:
@@ -157,8 +168,8 @@ class MyEnv(Env):
         pass
 
     def render(self, mode='human', close=False):
-        pass
         # logger.info(f'Trained on scene {self.i-1} [{self.i/len(self.x_train)*100:.0f}% done], balance: ${sum(self.rewards):.0f}')
+        pass
 
     # def seed(self, seed=None):
     #     pass
@@ -170,9 +181,10 @@ class MyEnv(Env):
 def main():
 
     model = Sequential()
-    model.add(Flatten(input_shape=(1, 3)))
-    model.add(Dense(units=6, activation='relu'))
-    model.add(Dense(units=6, activation='softmax'))
+    model.add(Flatten(input_shape=(1, 7)))
+    model.add(Dense(units=20, activation='relu'))
+    model.add(Dense(units=20, activation='relu'))
+    model.add(Dense(units=6, activation='linear'))
     logger.info(model.summary())
 
     steps = 1E9

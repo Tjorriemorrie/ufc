@@ -207,6 +207,11 @@ def main(bet_params=None):
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
 
             ###################################
+            # cannot bet on qualifiers
+            if match['round'] >= 256:
+                continue
+
+            ###################################
             # train
             if is_training:
                 training_data.extend(match_data)

@@ -7597,10 +7597,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'name': 'Citi Open',
         'category': 'ATP500',
@@ -8371,6 +8367,7 @@ DATA = [
                     DANILL_MEDVEDEV,
                     PETER_GOJOWCZYK
                 ],
+                'score': [(6, 2), (6, 2)],
                 'odds': {
                     DANILL_MEDVEDEV: 1.16,
                     PETER_GOJOWCZYK: 5.00,
@@ -8384,12 +8381,27 @@ DATA = [
                     STEFANOS_TSITSIPAS,
                     NICK_KYRGIOS
                 ],
+                'score': [(6, 4), (3, 6), (7, 6)],
                 'odds': {
                     STEFANOS_TSITSIPAS: 1.70,
                     NICK_KYRGIOS: 2.10,
                 },
                 'prediction': STEFANOS_TSITSIPAS,
                 'bet': 4,
+            },
+
+            # 2019-08-04
+            {
+                'round': 2,
+                'players': [
+                    NICK_KYRGIOS,
+                    DANILL_MEDVEDEV
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    NICK_KYRGIOS: 2.10,
+                    DANILL_MEDVEDEV: 1.65,
+                },
             }
         ]
     },
@@ -8991,9 +9003,11 @@ DATA = [
             {
                 'round': 2,
                 'players': [
+                    DIEGO_SCHWARTZMAN,
                     TAYLOR_FRITZ,
-                    DIEGO_SCHWARTZMAN
                 ],
+                'score': [(7, 6), (6, 3)],
+                # no odds
             }
         ]
     },
@@ -9510,14 +9524,20 @@ DATA = [
                     DOMINIC_THIEM,
                     ALBERT_RAMOS_VINOLAS
                 ],
+                'score': [(7, 6), (6, 1)],
                 'odds': {
                     DOMINIC_THIEM: 1.22,
                     ALBERT_RAMOS_VINOLAS: 4.20,
                 },
-                'prediction': None,
+                'prediction': DOMINIC_THIEM,
+                'bet': 4,
             }
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'name': 'Coupe Rogers',
@@ -9526,6 +9546,311 @@ DATA = [
         'location': 'Montreal, Canada',
         'matches': [
 
+            # 2019-08-03
+            {
+                'round': 512,
+                'players': [
+                    MARC_POLMANS,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(1, 6), (7, 5), (7, 6)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    BERNARD_TOMIC,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(7, 6), (6, 2)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    BRADLEY_KLAHN,
+                    VIKTOR_TROICKI
+                ],
+                'score': [(7, 6), (6, 3)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    TOMMY_PAUL,
+                    ALEXEI_POPYRIN
+                ],
+                'score': [(6, 4), (5, 7), (6, 4)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    SOONWOO_KWON,
+                    ROBIN_HAASE
+                ],
+                'score': [(7, 6), (7, 6)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    ILYA_IVASHKA,
+                    LLOYD_HARRIS
+                ],
+                'score': [(5, 7), (6, 2), (6, 4)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    MARIUS_COPIL
+                ],
+                'score': [(6, 2), (6, 4)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    IVO_KARLOVIC,
+                    EVGENY_DONSKOY
+                ],
+                'score': [(6, 4), (4, 6), (7, 6)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    ALEXIS_GALARNEAU
+                ],
+                'score': [(6, 2), (6, 4)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    MALEK_JAZIRI
+                ],
+                'score': [(6, 2), (6, 3)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEVEN_DIEZ,
+                    ALEXANDER_BUBLIK
+                ],
+                'score': [(6, 4), (6, 4)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    JOHN_MILLMAN,
+                    FILIP_PELIWO
+                ],
+                'score': [(6, 1), (6, 0)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    GREGOIRE_BARRERE
+                ],
+                'score': [(7, 6), (7, 6)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_EVANS,
+                    THAI_SON_KWIATKOWSKI
+                ],
+                'score': [(7, 6), (6, 1)]
+            },
+
+            # 2019-08-04
+            {
+                'round': 256,
+                'players': [
+                    BERNARD_TOMIC,
+                    MARC_POLMANS
+                ],
+                'score': [(6, 4), (7, 6)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    TOMMY_PAUL,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(4, 6), (7, 6), (6, 3)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    ILYA_IVASHKA,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(6, 4), (6, 3)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    SOONWOO_KWON,
+                    JOHN_MILLMAN
+                ],
+                'score': [(6, 7), (6, 3), (6, 4)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    IVO_KARLOVIC
+                ],
+                'score': [],
+                'retired': True
+            },
+            {
+                'round': 256,
+                'players': [
+                    DANIEL_EVANS,
+                    MARCEL_GRANOLLERS
+                ],
+                'score': [(6, 3), (6, 3)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    BRADLEY_KLAHN,
+                    STEVEN_DIEZ
+                ],
+                'score': [(7, 6), (7, 6)]
+            },
+
+            # 2019-08-05
+            {
+                'round': 64,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    ADRIAN_MANNARINO
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    LASLO_DJERE,
+                    CHRISTIAN_GARIN
+                ],
+                'odds': {
+                    LASLO_DJERE: 2.05,
+                    CHRISTIAN_GARIN: 1.75,
+                },
+                'prediction': LASLO_DJERE,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ILYA_IVASHKA,
+                    SOONWOO_KWON
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    BERNARD_TOMIC
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    DUSAN_LAJOVIC
+                ],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.58,
+                    DUSAN_LAJOVIC: 2.35,
+                },
+                'prediction': DUSAN_LAJOVIC,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    CAMERON_NORRIE
+                ],
+                'odds': {
+                    MARTON_FUCSOVICS: 2.00,
+                    CAMERON_NORRIE: 1.80,
+                },
+                'prediction': CAMERON_NORRIE,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    BENOIT_PAIRE,
+                    RICHARD_GASQUET
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    STAN_WAWRINKA,
+                    GRIGOR_DIMITROV
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    TOMMY_PAUL,
+                    BRAYDEN_SCHNUR
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    JO_WILFRIED_TSONGA
+                ],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 2.35,
+                    JO_WILFRIED_TSONGA: 1.58,
+                },
+                'prediction': JO_WILFRIED_TSONGA,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    PETER_POLANSKY,
+                    GAEL_MONFILS
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    DENIS_SHAPOVALOV
+                ],
+                'prediction': None,
+            },
+            {
+                'round': 64,
+                'players': [
+                    LUCAS_POUILLE,
+                    MILOS_RAONIC
+                ],
+                'odds': {
+                    LUCAS_POUILLE: 3.00,
+                    MILOS_RAONIC: 1.38,
+                },
+                'prediction': MILOS_RAONIC,
+                'bet': 3,
+            },
+
+            #
         ]
     },
 
