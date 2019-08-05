@@ -1,6 +1,9 @@
 from men import *
 
 # acc  roi   profit  desc
+# 59   6.96  126     optimized      [(4, 283), (3, 225)]
+# 56   -.2   -3      games variable removed
+# 60   4.21  76      2018-10-27 ATP Master 1000 Paris   [(4, 283), (3, 225)]
 # 65   7.60  176     2019-01-05 Qatar ExonMobil Open    [(4, 400), (3, 239)]
 # 65   7.51  173     2019-01-06 Brisbane International      [(4, 394), (3, 241)]
 # 64   3.92  90      2019-01-05 Tata Open Maharashtra [(4, 397), (3, 238)]
