@@ -6951,7 +6951,7 @@ DATA = [
                     SEUNGWOO_CHOI: 1.90
                 },
                 'prediction': GAVIN_TUCKER,
-                'bet': 20,
+                'bet': 0,
             },
             {
                 'weight_class': MENS_FEATHERWEIGHT,
@@ -7001,7 +7001,7 @@ DATA = [
                     VIVIANE_ARAUJO: 1.52
                 },
                 'prediction': VIVIANE_ARAUJO,
-                'bet': 5,
+                'bet': 20,
             },
             {
                 'weight_class': MENS_MIDDLEWEIGHT,
@@ -7048,10 +7048,10 @@ DATA = [
                 },
                 'odds': {
                     OLIVIER_AUBIN_MERCIER: 2.50,
-                    ARMAN_TSARUKYAN: 1.52
+                    ARMAN_TSARUKYAN: 1.62
                 },
                 'prediction': ARMAN_TSARUKYAN,
-                'bet': 20,
+                'bet': 5,
             },
             {
                 'weight_class': MENS_WELTERWEIGHT,
@@ -7076,7 +7076,7 @@ DATA = [
                     NIKO_PRICE: 3.30
                 },
                 'prediction': NIKO_PRICE,
-                'bet': 10,
+                'bet': 5,
             },
             {
                 'weight_class': WOMANS_FEATHERWEIGHT,
@@ -7120,11 +7120,11 @@ DATA = [
                     'time': '5:00',
                 },
                 'odds': {
-                    MAX_HOLLOWAY: 1.24,
+                    MAX_HOLLOWAY: 1.26,
                     FRANKIE_EDGAR: 4.00
                 },
                 'prediction': MAX_HOLLOWAY,
-                'bet': 20,
+                'bet': 10,
             }
         ]
     },
@@ -7147,6 +7147,12 @@ DATA = [
                         'stats': '0-0-0'
                     }
                 ],
+                'winner': {
+                    'fighter': MIRANDA_GRANGER,
+                    'by': 'dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     MIRANDA_GRANGER: 2.35,
                     HANNAH_GOLDY: 1.57,
@@ -7166,12 +7172,18 @@ DATA = [
                         'stats': '11-1-0'
                     }
                 ],
+                'winner': {
+                    'fighter': CLAUDIO_DA_SILVA,
+                    'by': 'sub',
+                    'round': 1,
+                    'time': '2:33',
+                },
                 'odds': {
                     CLAUDIO_DA_SILVA: 1.23,
                     COLE_WILLIAMS: 4.00,
                 },
                 'prediction': CLAUDIO_DA_SILVA,
-                bet: 5,
+                'bet': 5,
             },
             {
                 'weight_class': WOMANS_FLYWEIGHT,
@@ -7185,6 +7197,12 @@ DATA = [
                         'stats': '13-5-0'
                     }
                 ],
+                'winner': {
+                    'fighter': LAUREN_MURPHY,
+                    'by': 'ko/tko',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     LAUREN_MURPHY: 2.40,
                     MARA_ROMERO_BORELLA: 1.55,
@@ -7204,6 +7222,12 @@ DATA = [
                         'stats': '13-4-0'
                     }
                 ],
+                'winner': {
+                    'fighter': MATT_SCHNELL,
+                    'by': 'sub',
+                    'round': 1,
+                    'time': '1:23',
+                },
                 'odds': {
                     JORDAN_ESPINOSA: 1.85,
                     MATT_SCHNELL: 1.95,
@@ -7223,6 +7247,12 @@ DATA = [
                         'stats': '8-4-0',
                     }
                 ],
+                'winner': {
+                    'fighter': ANTONINA_SHEVCHENKO,
+                    'by': 'sub',
+                    'round': 2,
+                    'time': '',
+                },
                 'odds': {
                     ANTONINA_SHEVCHENKO: 1.60,
                     LUCIE_PUDILOVA: 2.30,
@@ -7242,6 +7272,12 @@ DATA = [
                         'stats': '10-3-0'
                     }
                 ],
+                'winner': {
+                    'fighter': MICKEY_GALL,
+                    'by': 'dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     MICKEY_GALL: 2.05,
                     SALIM_TOUAHRI: 1.75,
@@ -7261,6 +7297,12 @@ DATA = [
                         'stats': '6-1-0'
                     }
                 ],
+                'winner': {
+                    'fighter': KENNEDY_NZECHUKWU,
+                    'by': 'dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     DARKO_STOSIC: 1.75,
                     KENNEDY_NZECHUKWU: 2.05,
@@ -7280,6 +7322,12 @@ DATA = [
                         'stats': '16-9-3'
                     }
                 ],
+                'winner': {
+                    'fighter': SCOTT_HOLTZMAN,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '0:00',
+                },
                 'odds': {
                     SCOTT_HOLTZMAN: 1.25,
                     DONG_HYUN_MA: 3.85,
@@ -7299,6 +7347,12 @@ DATA = [
                         'stats': '28-11-0'
                     }
                 ],
+                'winner': {
+                    'fighter': GERALD_MEERSCHAERT,
+                    'by': 'sub',
+                    'round': 3,
+                    'time': '1:54',
+                },
                 'odds': {
                     TREVIN_GILES: 1.63,
                     GERALD_MEERSCHAERT: 2.25,
@@ -7318,6 +7372,12 @@ DATA = [
                         'stats': '10-2-0'
                     }
                 ],
+                'winner': {
+                    'fighter': NASRAT_HAQPARAST,
+                    'by': 'ko/tko',
+                    'round': 2,
+                    'time': '0:37',
+                },
                 'odds': {
                     JOAQUIM_SILVA: 2.90,
                     NASRAT_HAQPARAST: 1.40,
@@ -7337,6 +7397,12 @@ DATA = [
                         'stats': '34-15-0'
                     }
                 ],
+                'winner': {
+                    'fighter': JIM_MILLER,
+                    'by': 'sub',
+                    'round': 1,
+                    'time': '0:57',
+                },
                 'odds': {
                     JIM_MILLER: 1.60,
                     CLAY_GUIDA: 2.30,
@@ -7356,6 +7422,12 @@ DATA = [
                         'stats': '28-13-0',
                     }
                 ],
+                'winner': {
+                    'fighter': COLBY_COVINGTON,
+                    'by': 'dec',
+                    'round': 5,
+                    'time': '5:00',
+                },
                 'odds': {
                     COLBY_COVINGTON: 1.45,
                     ROBBIE_LAWLER: 2.75,

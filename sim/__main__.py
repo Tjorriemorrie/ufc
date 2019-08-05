@@ -181,7 +181,7 @@ def main(bet_params):
             ]
 
             ##########################################
-            # update ratings
+            # update data
             if 'winner' in fight:
                 # get winner
                 fw = fight['winner']['fighter']
@@ -191,12 +191,14 @@ def main(bet_params):
                     raise ValueError(f'unknown winner {fw}')
                 drawn = fw is None
 
-                ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
                 # update fights
                 early_fights[fw] = last_fights[fw]
                 early_fights[fl] = last_fights[fl]
                 last_fights[fw] = 1
                 last_fights[fl] = 0
+
+                # update ratings
+                ratings[fw], ratings[fl] = rate_1vs1(ratings[fw], ratings[fl], drawn=drawn)
 
             ###################################
             # train
@@ -209,21 +211,8 @@ def main(bet_params):
             else:
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
-
-                if pred1 > pred2:
-                    fw = f1
-                    fw_odds = f1_odds
-                    fw_pred = pred1
-                    fl = f2
-                    fl_odds = f2_odds
-                    fl_pred = pred2
-                else:
-                    fw = f2
-                    fw_odds = f2_odds
-                    fw_pred = pred2
-                    fl = f1
-                    fl_odds = f1_odds
-                    fl_pred = pred1
+                fw_pred = pred1 if is_win_1 else pred2
+                fl_pred = pred2 if not is_win_1 else pred1
 
                 #############################
                 # bet scaling
@@ -273,11 +262,11 @@ def main(bet_params):
                 if 'bet' in fight:
                     is_actual_correct = fight['prediction'] == fw
                     actual = (actual[0] + is_actual_correct, actual[1] + 1)
-                    payout = -fight['bet']
+                    actual_bet = -fight['bet']
                     if is_actual_correct:
-                        w_odds = f1_odds if is_win_1 else f2_odds
-                        payout += w_odds * fight['bet']
-                    tab.append(round(payout, 2))
+                        fw_odds = f1_odds if is_win_1 else f2_odds
+                        actual_bet += fw_odds * fight['bet']
+                    tab.append(round(actual_bet, 2))
 
                 log_balance = f'[{sum(payouts):.0f}|{payout:.0f}]'
                 log_pred = f'[{fw_pred * 100:.0f}% vs {fl_pred * 100:.0f}%]'
