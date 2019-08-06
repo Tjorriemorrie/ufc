@@ -77,12 +77,11 @@ def main(bet_params=None):
     logger.info('Starting main training')
 
     all_data = DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
-    estimators, upsets_cutoff, sets_cutoff, \
+    estimators, upsets_cutoff, \
         bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
         bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, = bet_params
     estimators = int(estimators * 100)
     upsets_cutoff = int(upsets_cutoff)
-    sets_cutoff = int(sets_cutoff)
 
     # init
     reg = None
@@ -91,7 +90,6 @@ def main(bet_params=None):
     start_date = None
     ratings = defaultdict(lambda: Rating())
     upsets = defaultdict(lambda: [])
-    sets = defaultdict(lambda: [])
     training_data = []
     label_data = []
     payouts = []
@@ -129,10 +127,6 @@ def main(bet_params=None):
             p1_upsets = sum(upsets[p1])
             p2_upsets = sum(upsets[p2])
 
-            # sets
-            p1_sets = sum(sets[p1])
-            p2_sets = sum(sets[p2])
-
             match_data = [
                 [
                     win1_prob,
@@ -145,8 +139,6 @@ def main(bet_params=None):
                     1 / match['round'],
                     p1_upsets,
                     p2_upsets,
-                    p1_sets,
-                    p2_sets,
                 ],
                 [
                     win2_prob,
@@ -159,8 +151,6 @@ def main(bet_params=None):
                     1 / match['round'],
                     p2_upsets,
                     p1_upsets,
-                    p2_sets,
-                    p1_sets,
                 ]
             ]
 
@@ -172,16 +162,6 @@ def main(bet_params=None):
                 upset = win2_prob > 0.50
                 upsets[p1] = upsets[p1][-upsets_cutoff:] + [0]
                 upsets[p2] = upsets[p2][-upsets_cutoff:] + [upset]
-
-                # sets
-                try:
-                    p1_new_sets = sum(1 if s[0] > s[1] else -1 for s in match['score'])
-                    p2_new_sets = sum(1 if s[0] < s[1] else -1 for s in match['score'])
-                except Exception as exc:
-                    logger.warning(f'match score is not tuple: {match["score"]}')
-                    raise
-                sets[p1] = sets[p1][-sets_cutoff:] + [p1_new_sets]
-                sets[p2] = sets[p2][-sets_cutoff:] + [p2_new_sets]
 
                 # update ratings
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
@@ -300,17 +280,17 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        8.6283269,
-        # cutoff (upsets, sets)
-        3.81147193, 26.29445041,
+        7.90334588,
+        # cutoff (upsets)
+        6.1019708, 
         # pred lower
-        -17.53711251, 35.11670718,
+        -18.81808089, 35.30739166,
         # pred higher
-        44.52196223, -22.41135501,
+        44.68689883, -20.50015211,
         # round lower
-        -11.58668255, 34.34182915,
+        -11.10391922, 30.27092684,
         # round higher
-        -2.83132541, -22.9955595,
+        -7.19332817, -23.24454579,
     ]
     
     train = 0
