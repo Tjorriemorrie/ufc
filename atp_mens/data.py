@@ -1,6 +1,7 @@
 from men import *
 
 # acc  roi   profit desc
+# 64   11    275    enabled betting on qualifiers
 # 64   11    217    sets handle pos and neg                 [(4, 363), (3, 174)]
 # 60   7.3   141    sets removed (optimized)                [(4, 323), (3, 214)]
 # 58   4.4   83     2018-10-28 Swiss Indoors Basel          [(4, 292), (3, 238)]
