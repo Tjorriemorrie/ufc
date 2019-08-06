@@ -15,17 +15,15 @@ from men import *
 # 64   3.92  90     2019-01-05 Tata Open Maharashtra [(4, 397), (3, 238)]
 # 64   2.85  62     2019-01-12 Sydney International [(4, 386), (3, 207)]
 # 65   13.1  292    games bet amt param adjusted for win prob [(4, 388), (3, 224)]
-# 66   11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
-# 64   6.19  125    2019-01-27 Australian Open
 
+# 66   11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
 # 63   4.24  85     2019-02-10 Cordoba Open
 # 53   2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
 # 64   10.8  503    2019-02-17 ABN AMRO World Tennis Tournament (-3.0, 448), (-4.0, 22), (1.0, 18)
 # 67   3.48  162    2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
 # 69   2.94  368    estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106
-# 69   1.19  681    added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
-# 68  -1.0  2019-02-17 Argentina Open
 
+# 69   1.19  681    added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
 # 67  0.41  skipping bets based on pred (none excluded)
 # 53  -8.45  Plava Laguna Croatia Open Umag
 # 65  -0.0  hamburg updated
