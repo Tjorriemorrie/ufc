@@ -64,8 +64,7 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
         'mu', '~mu', 'sigma', '~sigma',
         'round',
         'upsets', '~upsets',
-        'sets', '~sets',
-        'games', '~games',
+        'odds_scaled',
     ]
     for name, val in zip(feature_names, reg.feature_importances_):
         logger.info(f'{name}: {val}')
@@ -128,6 +127,11 @@ def main(bet_params=None):
             p1_upsets = sum(upsets[p1])
             p2_upsets = sum(upsets[p2])
 
+            # evs
+            odds_sum = p1_odds + p2_odds
+            p1_scaled_odds = p1_odds / odds_sum
+            p2_scaled_odds = p2_odds / odds_sum
+
             match_data = [
                 [
                     win1_prob,
@@ -140,6 +144,7 @@ def main(bet_params=None):
                     match['round'],
                     p1_upsets,
                     p2_upsets,
+                    p1_scaled_odds,
                 ],
                 [
                     win2_prob,
@@ -152,6 +157,7 @@ def main(bet_params=None):
                     match['round'],
                     p2_upsets,
                     p1_upsets,
+                    p2_scaled_odds,
                 ]
             ]
 
@@ -282,17 +288,17 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        5.9900422,
+        3.69153194,
         # cutoff (upsets)
-        6.59458656, 
+        5.44435893,
         # pred lower
-        -18.14527472, 37.05020645,
+        -17.85138193, 37.92317502,
         # pred higher
-        42.27635891, -21.24923186,
+        42.63250795, -20.56734388,
         # round lower
-        -11.02649758, 29.99352419,
+        -13.23398757, 30.31765761,
         # round higher
-        -4.30366947, -19.27396148,
+        -3.24214277, -18.72046181,
     ]
     
     train = 0

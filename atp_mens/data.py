@@ -1,6 +1,8 @@
 from men import *
 
 # acc  roi   profit desc
+# 64   5     139    2018-10-28 Erste Bank Open 500
+# 65   10    269    added scaled odds
 # 64   11    275    enabled betting on qualifiers
 # 64   11    217    sets handle pos and neg                 [(4, 363), (3, 174)]
 # 60   7.3   141    sets removed (optimized)                [(4, 323), (3, 214)]
@@ -15,11 +17,9 @@ from men import *
 # 65   13.1  292    games bet amt param adjusted for win prob [(4, 388), (3, 224)]
 # 66   11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
 # 64   6.19  125    2019-01-27 Australian Open
-# 63   4.24  85     2019-02-10 Cordoba Open
-# 66   4.37  76     fixed cutoff :(
-# 53   2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
-# 65   9.63  458    added net games (-3.0, 429), (-4.0, 19), (1.0, 18), (0.72, 17), (1.92, 16)
 
+# 63   4.24  85     2019-02-10 Cordoba Open
+# 53   2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
 # 64   10.8  503    2019-02-17 ABN AMRO World Tennis Tournament (-3.0, 448), (-4.0, 22), (1.0, 18)
 # 67   3.48  162    2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
 # 69   2.94  368    estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106

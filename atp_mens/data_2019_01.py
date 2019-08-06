@@ -2,6 +2,541 @@ from men import *
 
 DATA_2019_01 = [
     {
+        'name': 'Erste Bank Open 500',
+        'category': 'ATP500',
+        'date': '2018-10-28',
+        'location': 'Vienna, Austria',
+        'matches': [
+
+            # 2018-10-20
+            {
+                'round': 512,
+                'players': [
+                    RUBEN_BEMELMANS,
+                    SEBASTIAN_OFNER
+                ],
+                'score': [(3, 6), (6, 3), (6, 4)],
+                'odds': {
+                    RUBEN_BEMELMANS: 1.41,
+                    SEBASTIAN_OFNER: 2.60
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    SERGIY_STAKHOVSKY,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 7), (6, 4), (6, 4)],
+                'odds': {
+                    SERGIY_STAKHOVSKY: 2.00,
+                    BRADLEY_KLAHN: 1.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CAMERON_NORRIE,
+                    PETER_POLANSKY
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    CAMERON_NORRIE: 1.30,
+                    PETER_POLANSKY: 3.40
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANDREY_RUBLEV,
+                    LUCAS_MIEDLER
+                ],
+                'score': [(6, 1), 96, 2],
+                'odds': {
+                    ANDREY_RUBLEV: 1.16,
+                    LUCAS_MIEDLER: 5.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    VACLAV_SAFRANEK
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.07,
+                    VACLAV_SAFRANEK: 8.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GUIDO_PELLA,
+                    JURGEN_ZOPP
+                ],
+                'score': [(6, 7), (6, 2), (3, 4)],
+                'retired': True,
+                'odds': {
+                    GUIDO_PELLA: 1.32,
+                    JURGEN_ZOPP: 2.80
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DENIS_KUDLA,
+                    MATTHIAS_BACHINGER
+                ],
+                'score': [(7, 6), (4, 6), (6, 3)],
+                'odds': {
+                    DENIS_KUDLA: 1.61,
+                    MATTHIAS_BACHINGER: 2.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    JURIJ_RODIONOV
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.25,
+                    JURIJ_RODIONOV: 3.74
+                }
+            },
+
+            # 2018-10-21
+            {
+                'round': 256,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 2.43,
+                    ANDREY_RUBLEV: 1.47
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    RUBEN_BEMELMANS,
+                    GUIDO_PELLA
+                ],
+                'score': [(6, 4), (6, 0)],
+                'odds': {
+                    RUBEN_BEMELMANS: 2.20,
+                    GUIDO_PELLA: 1.63
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DENIS_KUDLA,
+                    SERGIY_STAKHOVSKY
+                ],
+                'score': [(6, 1), (2, 6), (6, 2)],
+                'odds': {
+                    DENIS_KUDLA: 1.61,
+                    SERGIY_STAKHOVSKY: 2.17
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    CAMERON_NORRIE
+                ],
+                'score': [(4, 6), (7, 6), (7, 5)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.91,
+                    CAMERON_NORRIE: 1.77
+                }
+            },
+
+            # 2018-10-22
+            {
+                'round': 32,
+                'players': [
+                    ANDREY_RUBLEV,
+                    DENIS_KUDLA
+                ],
+                'score': [(7, 6), (6, 0)],
+                'odds': {
+                    ANDREY_RUBLEV: 1.63,
+                    DENIS_KUDLA: 2.15
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JURGEN_MELZER,
+                    MILOS_RAONIC
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    JURGEN_MELZER: 6.00,
+                    MILOS_RAONIC: 1.11
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BORNA_CORIC,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 7), (6, 0), (6, 4)],
+                'odds': {
+                    BORNA_CORIC: 1.09,
+                    ALBERT_RAMOS_VINOLAS: 6.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KEVIN_ANDERSON,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(4, 6), (7, 6), (6, 3)],
+                'odds': {
+                    KEVIN_ANDERSON: 1.36,
+                    NIKOLOZ_BASILASHVILI: 3.01
+                }
+            },
+
+            # 2018-10-23
+
+            {
+                'round': 32,
+                'players': [
+                    DOMINIC_THIEM,
+                    RUBEN_BEMELMANS
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    DOMINIC_THIEM: 1.15,
+                    RUBEN_BEMELMANS: 5.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 7), (6, 3), (6, 4)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.76,
+                    PIERRE_HUGUES_HERBERT: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    JO_WILFRIED_TSONGA
+                ],
+                'score': [(6, 3), (3, 6), (6, 3)],
+                'odds': {
+                    SAM_QUERREY: 2.13,
+                    JO_WILFRIED_TSONGA: 1.63
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LUCAS_POUILLE,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(6, 4), (6, 7), (6, 4)],
+                'odds': {
+                    LUCAS_POUILLE: 2.25,
+                    PHILIPP_KOHLSCHREIBER: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FABIO_FOGNINI,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    FABIO_FOGNINI: 1.63,
+                    DAMIR_DZUMHUR: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KEI_NISHIKORI,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(7, 6), (5, 7), (6, 2)],
+                'odds': {
+                    KEI_NISHIKORI: 1.26,
+                    FRANCES_TIAFOE: 3.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_ISNER,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 7), (6, 4), (7, 6)],
+                'odds': {
+                    JOHN_ISNER: 1.56,
+                    CAMERON_NORRIE: 2.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    GRIGOR_DIMITROV
+                ],
+                'score': [(6, 4), (4, 6), (6, 4)]
+                # no odds
+            },
+
+            # 2018-10-24
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    STEVE_JOHNSON
+                ],
+                'score': [(4, 6), (6, 3), (6, 2)],
+                'odds': {
+                    GAEL_MONFILS: 1.50,
+                    STEVE_JOHNSON: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KAREN_KHACHANOV,
+                    DENNIS_NOVAK
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.17,
+                    DENNIS_NOVAK: 4.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    DENNIS_NOVAK
+                ],
+                'score': [(6, 3), (7, 5)]
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    KYLE_EDMUND,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    KYLE_EDMUND: 1.50,
+                    DIEGO_SCHWARTZMAN: 2.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    FABIO_FOGNINI
+                ],
+                'score': [(4, 6), (6, 3), (6, 2)],
+                'odds': {
+                    MARTON_FUCSOVICS: 2.35,
+                    FABIO_FOGNINI: 1.57
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    BORNA_CORIC,
+                    LUCAS_POUILLE
+                ],
+                'score': [(4, 6), (6, 0), (6, 4)],
+                'odds': {
+                    BORNA_CORIC: 1.53,
+                    LUCAS_POUILLE: 2.40,
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KEVIN_ANDERSON,
+                    JURGEN_MELZER
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    KEVIN_ANDERSON: 1.17,
+                    JURGEN_MELZER: 5.52
+                }
+            },
+
+            # 2018-10-25
+            {
+                'round': 16,
+                'players': [
+                    KEI_NISHIKORI,
+                    KAREN_KHACHANOV
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    KEI_NISHIKORI: 1.59,
+                    KAREN_KHACHANOV: 2.36
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    JOHN_ISNER
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    GAEL_MONFILS: 1.53,
+                    JOHN_ISNER: 2.25
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DOMINIC_THIEM,
+                    SAM_QUERREY
+                ],
+                'score': [(6, 4), (6, 4)]
+            },
+            {
+                'round': 16,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.98,
+                    ANDREY_RUBLEV: 1.77
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    KYLE_EDMUND
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)]
+                # no odds
+            },
+
+            # 2018-10-26
+            {
+                'round': 8,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    GAEL_MONFILS
+                ],
+                'score': [(6, 4), (2, 1)],
+                'retired': True,
+                'odds': {
+                    FERNANDO_VERDASCO: 2.50,
+                    GAEL_MONFILS: 1.51
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(4, 6), (7, 6), (7, 6)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.80,
+                    MARTON_FUCSOVICS: 2.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KEVIN_ANDERSON,
+                    BORNA_CORIC
+                ],
+                'score': [(7, 6), (1, 2)],
+                'retired': True,
+                'odds': {
+                    KEVIN_ANDERSON: 1.71,
+                    BORNA_CORIC: 2.09
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KEI_NISHIKORI,
+                    DOMINIC_THIEM
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    KEI_NISHIKORI: 1.80,
+                    DOMINIC_THIEM: 1.95
+                }
+            },
+
+            # 2018-10-27
+            {
+                'round': 4,
+                'players': [
+                    KEI_NISHIKORI,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    KEI_NISHIKORI: 1.11,
+                    MIKHAIL_KUKUSHKIN: 6.25
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    KEVIN_ANDERSON,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 3), (3, 6), (6, 4)],
+                'odds': {
+                    KEVIN_ANDERSON: 1.50,
+                    FERNANDO_VERDASCO: 2.70
+                }
+            },
+
+            # 2018-10-28
+            {
+                'round': 2,
+                'players': [
+                    KEVIN_ANDERSON,
+                    KEI_NISHIKORI
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    KEVIN_ANDERSON: 2.70,
+                    KEI_NISHIKORI: 1.45
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Swiss Indoors Basel',
         'category': 'ATP500',
         'date': '2018-10-28',
