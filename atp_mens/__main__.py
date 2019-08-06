@@ -130,25 +130,25 @@ def main(bet_params=None):
             match_data = [
                 [
                     win1_prob,
-                    1 / p1_odds,
-                    1 / p2_odds,
+                    p1_odds,
+                    p2_odds,
                     ratings[p1].mu,
                     ratings[p2].mu,
                     ratings[p1].sigma,
                     ratings[p2].sigma,
-                    1 / match['round'],
+                    match['round'],
                     p1_upsets,
                     p2_upsets,
                 ],
                 [
                     win2_prob,
-                    1 / p2_odds,
-                    1 / p1_odds,
+                    p2_odds,
+                    p1_odds,
                     ratings[p2].mu,
                     ratings[p1].mu,
                     ratings[p2].sigma,
                     ratings[p1].sigma,
-                    1 / match['round'],
+                    match['round'],
                     p2_upsets,
                     p1_upsets,
                 ]
@@ -160,8 +160,8 @@ def main(bet_params=None):
 
                 # update upsets
                 upset = win2_prob > 0.50
-                upsets[p1] = upsets[p1][-upsets_cutoff:] + [0]
-                upsets[p2] = upsets[p2][-upsets_cutoff:] + [upset]
+                upsets[p1] = upsets[p1][-upsets_cutoff:] + [1 if upset else 0]
+                upsets[p2] = upsets[p2][-upsets_cutoff:] + [-1 if upset else 0]
 
                 # update ratings
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
@@ -188,17 +188,17 @@ def main(bet_params=None):
                 bet_multi = 1
 
                 # pred
-                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [p1_pred])
-                bet_multi += min(max(int(bet_pred_bot_multi), 0), 1)
-                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [p1_pred])
-                bet_multi += min(max(int(bet_pred_top_multi), 0), 1)
+                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [p1_pred])[0]
+                bet_multi += min(max(round(bet_pred_bot_multi), 0), 1)
+                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [p1_pred])[0]
+                bet_multi += min(max(round(bet_pred_top_multi), 0), 1)
 
                 # round
                 rnd = 1 / match['round']
-                bet_rnd_bot_multi = np.polyval([bet_rnd_bot_a, bet_rnd_bot_b], [rnd])
-                bet_multi += min(max(int(bet_rnd_bot_multi), 0), 1)
-                bet_rnd_top_multi = np.polyval([bet_rnd_top_a, bet_rnd_top_b], [rnd])
-                bet_multi += min(max(int(bet_rnd_top_multi), 0), 1)
+                bet_rnd_bot_multi = np.polyval([bet_rnd_bot_a, bet_rnd_bot_b], [rnd])[0]
+                bet_multi += min(max(round(bet_rnd_bot_multi), 0), 1)
+                bet_rnd_top_multi = np.polyval([bet_rnd_top_a, bet_rnd_top_b], [rnd])[0]
+                bet_multi += min(max(round(bet_rnd_top_multi), 0), 1)
 
                 bet_multis.append(bet_multi)
                 bet_amt = bet_size * bet_multi
@@ -280,9 +280,9 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params = [
         # estimators
-        7.90334588,
+        5.03005564,
         # cutoff (upsets)
-        6.1019708, 
+        8.64636383,
         # pred lower
         -18.81808089, 35.30739166,
         # pred higher

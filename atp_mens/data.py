@@ -1,27 +1,28 @@
 from men import *
 
-# acc  roi   profit  desc
-# 60   7.3   141     sets removed (optimized)               [(4, 323), (3, 214)]
-# 58   4.4   83      2018-10-28 Swiss Indoors Basel         [(4, 292), (3, 238)]
-# 59   6.96  126     optimized      [(4, 283), (3, 225)]
-# 56   -.2   -3      games variable removed
-# 60   4.21  76      2018-10-27 ATP Master 1000 Paris   [(4, 283), (3, 225)]
-# 65   7.60  176     2019-01-05 Qatar ExonMobil Open    [(4, 400), (3, 239)]
-# 65   7.51  173     2019-01-06 Brisbane International      [(4, 394), (3, 241)]
-# 64   3.92  90      2019-01-05 Tata Open Maharashtra [(4, 397), (3, 238)]
-# 64   2.85  62      2019-01-12 Sydney International [(4, 386), (3, 207)]
-# 65   13.1  292     games bet amt param adjusted for win prob [(4, 388), (3, 224)]
-# 66   11.8  265     2019-01-12 ASB Classic [(4, 408), (3, 204)]
-# 64   6.19  125     2019-01-27 Australian Open
-# 63   4.24  85      2019-02-10 Cordoba Open
-# 66   4.37  76      fixed cutoff :(
-# 53   2.37  120     2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
-# 65   9.63  458     added net games (-3.0, 429), (-4.0, 19), (1.0, 18), (0.72, 17), (1.92, 16)
+# acc  roi   profit desc
+# 64   11    217    sets handle pos and neg                 [(4, 363), (3, 174)]
+# 60   7.3   141    sets removed (optimized)                [(4, 323), (3, 214)]
+# 58   4.4   83     2018-10-28 Swiss Indoors Basel          [(4, 292), (3, 238)]
+# 59   6.96  126    optimized                               [(4, 283), (3, 225)]
+# 56   -.2   -3     games variable removed
+# 60   4.21  76     2018-10-27 ATP Master 1000 Paris   [(4, 283), (3, 225)]
+# 65   7.60  176    2019-01-05 Qatar ExonMobil Open    [(4, 400), (3, 239)]
+# 65   7.51  173    2019-01-06 Brisbane International      [(4, 394), (3, 241)]
+# 64   3.92  90     2019-01-05 Tata Open Maharashtra [(4, 397), (3, 238)]
+# 64   2.85  62     2019-01-12 Sydney International [(4, 386), (3, 207)]
+# 65   13.1  292    games bet amt param adjusted for win prob [(4, 388), (3, 224)]
+# 66   11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
+# 64   6.19  125    2019-01-27 Australian Open
+# 63   4.24  85     2019-02-10 Cordoba Open
+# 66   4.37  76     fixed cutoff :(
+# 53   2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
+# 65   9.63  458    added net games (-3.0, 429), (-4.0, 19), (1.0, 18), (0.72, 17), (1.92, 16)
 
-# 64   10.8  503     2019-02-17 ABN AMRO World Tennis Tournament (-3.0, 448), (-4.0, 22), (1.0, 18)
-# 67   3.48  162     2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
-# 69   2.94  368     estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106
-# 69   1.19  681     added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
+# 64   10.8  503    2019-02-17 ABN AMRO World Tennis Tournament (-3.0, 448), (-4.0, 22), (1.0, 18)
+# 67   3.48  162    2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
+# 69   2.94  368    estimators added to params (11, 271), (15, 248), (14, 174), (6, 119), (13, 106
+# 69   1.19  681    added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
 # 68  -1.0  2019-02-17 Argentina Open
 
 # 67  0.41  skipping bets based on pred (none excluded)
