@@ -1,6 +1,7 @@
 from men import *
 
 # acc  roi   profit  desc
+# 58   4.4   83      2018-10-28 Swiss Indoors Basel         [(4, 292), (3, 238)]
 # 59   6.96  126     optimized      [(4, 283), (3, 225)]
 # 56   -.2   -3      games variable removed
 # 60   4.21  76      2018-10-27 ATP Master 1000 Paris   [(4, 283), (3, 225)]

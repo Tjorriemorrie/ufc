@@ -2,7 +2,532 @@ from men import *
 
 DATA_2019_01 = [
     {
-        'name': 'ATP Master 1000 Paris',
+        'name': 'Swiss Indoors Basel',
+        'category': 'ATP500',
+        'date': '2018-10-28',
+        'location': 'Basel, Switzerland',
+        'matches': [
+
+            # 2018-10-20
+            {
+                'round': 512,
+                'players': [
+                    LASLO_DJERE,
+                    EVGENY_DONSKOY
+                ],
+                'score': [(6, 0), (4, 6), (6, 3)],
+                'odds': {
+                    LASLO_DJERE: 2.00,
+                    EVGENY_DONSKOY: 1.63
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MACKENZIE_MCDONALD,
+                    MARCEL_GRANOLLERS
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    MACKENZIE_MCDONALD: 1.70,
+                    MARCEL_GRANOLLERS: 1.91
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    VASEK_POSPISIL,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    VASEK_POSPISIL: 1.33,
+                    GUILLERMO_GARCIA_LOPEZ: 2.85
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARIUS_COPIL,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    MARIUS_COPIL: 1.67,
+                    MISCHA_ZVEREV: 2.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TARO_DANIEL,
+                    SANDRO_EHRAT
+                ],
+                'score': [(6, 1), (7, 5)],
+                'odds': {
+                    TARO_DANIEL: 1.30,
+                    SANDRO_EHRAT: 3.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    ALEXEI_POPYRIN: 3.00,
+                    BENOIT_PAIRE: 1.31
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MALEK_JAZIRI,
+                    MARC_ANDREA_HUESLER
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MALEK_JAZIRI: 1.18,
+                    MARC_ANDREA_HUESLER: 4.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.55,
+                    DENIS_ISTOMIN: 2.05
+                }
+            },
+
+            # 2018-10-21
+            {
+                'round': 256,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(6, 4), (4, 6), (6, 4)],
+                'odds': {
+                    ALEXEI_POPYRIN: 2.65,
+                    MACKENZIE_MCDONALD: 1.40
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    TARO_DANIEL,
+                    VASEK_POSPISIL
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    TARO_DANIEL: 3.15,
+                    VASEK_POSPISIL: 1.28
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    LASLO_DJERE,
+                    MALEK_JAZIRI
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    LASLO_DJERE: 1.83,
+                    MALEK_JAZIRI: 1.83
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARIUS_COPIL,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MARIUS_COPIL: 1.95,
+                    DUSAN_LAJOVIC: 1.71
+                }
+            },
+
+            # 2018-10-22
+            {
+                'round': 32,
+                'players': [
+                    TAYLOR_FRITZ,
+                    LASLO_DJERE
+                ],
+                'score': [(6, 0), (7, 5)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.61,
+                    LASLO_DJERE: 2.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARIUS_COPIL,
+                    RYAN_HARRISON
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    MARIUS_COPIL: 1.50,
+                    RYAN_HARRISON: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    HENRI_LAAKSONEN: 2.25,
+                    MARCO_CECCHINATO: 1.61
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARIN_CILIC,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MARIN_CILIC: 1.40,
+                    DENIS_SHAPOVALOV: 2.75
+                }
+            },
+
+            # 2018-10-23
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    JOHN_MILLMAN
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.87,
+                    JOHN_MILLMAN: 1.85
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
+                    LEONARDO_MAYER
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    GILLES_SIMON: 2.75,
+                    LEONARDO_MAYER: 2.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDREAS_SEPPI,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 0), (6, 4)],
+                'odds': {
+                    ANDREAS_SEPPI: 1.50,
+                    TARO_DANIEL: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    MATTHEW_EBDEN
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ALEXEI_POPYRIN: 2.10,
+                    MATTHEW_EBDEN: 1.67
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 7), (6, 1), (6, 2)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    PETER_GOJOWCZYK,
+                    NICOLAS_JARRY
+                ],
+                'score': [(1, 6), (7, 5), (6, 3)],
+                'odds': {
+                    PETER_GOJOWCZYK: 1.86,
+                    NICOLAS_JARRY: 1.88
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 4), (6, 3)]
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.25,
+                    MAXIMILIAN_MARTERER: 3.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ERNESTS_GULBIS,
+                    JACK_SOCK
+                ],
+                'score': [(7, 5), (6, 4)]
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    JEREMY_CHARDY
+                ],
+                'score': [(6, 2), (7, 6)]
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 4), (7, 5)]
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROGER_FEDERER,
+                    FILIP_KRAJINOVIC
+                ],
+                'score': [(6, 2), (4, 6), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.08,
+                    FILIP_KRAJINOVIC: 7.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GILLES_SIMON,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(7, 6), (7, 6)]
+                # no odds
+            },
+
+            # 2018-10-24
+            {
+                'round': 16,
+                'players': [
+                    TAYLOR_FRITZ,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.30,
+                    HENRI_LAAKSONEN: 3.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARIUS_COPIL,
+                    MARIN_CILIC
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    MARIUS_COPIL: 4.20,
+                    MARIN_CILIC: 1.21
+                }
+            },
+
+            # 2018-10-25
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 7), (6, 3), (6, 3)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.33,
+                    DUSAN_LAJOVIC: 3.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.33,
+                    ANDREAS_SEPPI: 3.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.26,
+                    PETER_GOJOWCZYK: 3.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ALEXEI_POPYRIN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.10,
+                    ALEXEI_POPYRIN: 6.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROGER_FEDERER,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    ROGER_FEDERER: 1.16,
+                    JAN_LENNARD_STRUFF: 5.00
+                }
+            },
+
+            # 2018-10-26
+            {
+                'round': 8,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    DANILL_MEDVEDEV: 2.20,
+                    STEFANOS_TSITSIPAS: 1.63
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ROBERTO_BAUTISTA_AGUT
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.26,
+                    ROBERTO_BAUTISTA_AGUT: 3.45
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROGER_FEDERER,
+                    GILLES_SIMON
+                ],
+                'score': [(7, 6), (4, 6), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.18,
+                    GILLES_SIMON: 4.75
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARIUS_COPIL,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    MARIUS_COPIL: 1.83,
+                    TAYLOR_FRITZ: 1.83
+                }
+            },
+
+            # 2018-10-27
+            {
+                'round': 4,
+                'players': [
+                    MARIUS_COPIL,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(6, 3), (6, 7), (6, 4)],
+                'odds': {
+                    MARIUS_COPIL: 4.75,
+                    ALEXANDER_ZVEREV: 1.16
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    ROGER_FEDERER,
+                    DANILL_MEDVEDEV
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.33,
+                    DANILL_MEDVEDEV: 3.10
+                }
+            },
+
+            # 2018-10-28
+            {
+                'round': 2,
+                'players': [
+                    ROGER_FEDERER,
+                    MARIUS_COPIL
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.12,
+                    MARIUS_COPIL: 6.00
+                }
+            }
+        ]
+    },
+
+    {
+        'name': 'Role Paris Masters',
         'category': 'ATP1000',
         'date': '2018-10-27',
         'location': 'Paris, France',
@@ -834,7 +1359,7 @@ DATA_2019_01 = [
                     RICARDAS_BERANKIS,
                     DENNIS_NOVAK
                 ],
-                'score': [(6, 4 , (6, 3))]
+                'score': [(6, 4), (6, 3)]
             },
             {
                 'round': 512,
@@ -1180,7 +1705,7 @@ DATA_2019_01 = [
                     YASUTAKA_UCHIYAMA,
                     BJORN_FRATANGELO
                 ],
-                'score': [(7 ,6), (6, 4)],
+                'score': [(7, 6), (6, 4)],
                 # no odds
             },
             {
@@ -2884,7 +3409,7 @@ DATA_2019_01 = [
                 'odds': {
                     LEONARDO_MAYER: 2.44,
                     MATTEO_BERRETTINI: 1.59
-            }
+                }
             },
             {
                 'round': 16,
