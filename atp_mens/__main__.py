@@ -96,6 +96,7 @@ def main(bet_params=None):
     bet_amts = []
     accuracy = (0, 0)
     tab = []
+    tab_amts = []
     actual = (0, 0)
     bet_multis = []
 
@@ -168,8 +169,8 @@ def main(bet_params=None):
 
             ###################################
             # cannot bet on qualifiers
-            if match['round'] >= 256:
-                continue
+            # if match['round'] >= 256:
+            #     continue
 
             ###################################
             # train
@@ -241,6 +242,7 @@ def main(bet_params=None):
                     if is_actual_correct:
                         cash += p1_odds * match['bet']
                     tab.append(round(cash, 2))
+                    tab_amts.append(match['bet'])
 
                 log_balance = f'[{sum(payouts):.0f}|{payout:.0f}]'
                 log_pred = f'[{p1_pred * 100:.0f}% vs {p2_pred * 100:.0f}%]'
@@ -269,10 +271,10 @@ def main(bet_params=None):
         logger.info('')
         logger.info('Actual:')
         logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
-        logger.info(f'Profit ${sum(tab):.0f} per bet: {tab.mean():.2f}')
-        logger.info(f'tab: max={tab.max()} min={tab.min()}')
-        logger.info(f'Most common: {Counter(tab).most_common(5)}')
+        logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
+        logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
+    logger.info('')
     logger.info(f'Done')
     return -(sum(payouts) / sum(bet_amts))
 
