@@ -1,6 +1,8 @@
 from men import *
 
 # acc  roi   profit desc
+# 64   7     187    2018-10-21 Intrum Stockholm Open
+# 66   8     216    optimized
 # 64   5     139    2018-10-28 Erste Bank Open 500
 # 65   10    269    added scaled odds
 # 64   11    275    enabled betting on qualifiers
@@ -13,9 +15,8 @@ from men import *
 # 65   7.60  176    2019-01-05 Qatar ExonMobil Open    [(4, 400), (3, 239)]
 # 65   7.51  173    2019-01-06 Brisbane International      [(4, 394), (3, 241)]
 # 64   3.92  90     2019-01-05 Tata Open Maharashtra [(4, 397), (3, 238)]
-# 64   2.85  62     2019-01-12 Sydney International [(4, 386), (3, 207)]
-# 65   13.1  292    games bet amt param adjusted for win prob [(4, 388), (3, 224)]
 
+# 64   2.85  62     2019-01-12 Sydney International [(4, 386), (3, 207)]
 # 66   11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
 # 63   4.24  85     2019-02-10 Cordoba Open
 # 53   2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
@@ -28,8 +29,8 @@ from men import *
 # 53  -8.45  Plava Laguna Croatia Open Umag
 # 65  -0.0  hamburg updated
 # 61  -24  diff set to absolute
+
 # 62  2.51  2019-06-29 Turkish Airlines Open Antalya
-# 62  1.96  2019-02-24 Delray Beach Open by VITACOST.com
 
 
 DATA = [
@@ -9966,25 +9967,27 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    MARIN_CILIC,
-                    BRADLEY_KLAHN
+                    DIEGO_SCHWARTZMAN,
+                    MARCO_CECCHINATO,
                 ],
+                'score': [(3, 6), (7, 6), (6, 4)],
                 'odds': {
-                    MARIN_CILIC: 1.28,
-                    BRADLEY_KLAHN: 3.60,
+                    DIEGO_SCHWARTZMAN: 1.22,
+                    MARCO_CECCHINATO: 4.20,
                 },
-                'prediction': MARIN_CILIC,
-                'bet': 4,
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 3,
             },
             {
                 'round': 64,
                 'players': [
+                    DANIEL_EVANS,
                     ALEX_DE_MINAUR,
-                    DANIEL_EVANS
                 ],
+                'score': [(6, 4), (7, 6)],
                 'odds': {
-                    ALEX_DE_MINAUR: 1.52,
                     DANIEL_EVANS: 2.50,
+                    ALEX_DE_MINAUR: 1.52,
                 },
                 'prediction': ALEX_DE_MINAUR,
                 'bet': 4,
@@ -9992,22 +9995,10 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    JORDAN_THOMPSON,
-                    JOHN_ISNER
-                ],
-                'odds': {
-                    JORDAN_THOMPSON: 2.70,
-                    JOHN_ISNER: 1.45,
-                },
-                'prediction': JOHN_ISNER,
-                'bet': 3,
-            },
-            {
-                'round': 64,
-                'players': [
                     FELIX_AUGER_ALIASSIME,
                     VASEK_POSPISIL
                 ],
+                'score': [(6, 2), (6, 7), (7, 6)],
                 'odds': {
                     FELIX_AUGER_ALIASSIME: 1.16,
                     VASEK_POSPISIL: 5.00,
@@ -10018,15 +10009,14 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    MARCO_CECCHINATO,
-                    DIEGO_SCHWARTZMAN
+                    RADU_ALBOT,
+                    GILLES_SIMON
                 ],
+                'score': [(6, 4), (6, 2)],
                 'odds': {
-                    MARCO_CECCHINATO: 4.20,
-                    DIEGO_SCHWARTZMAN: 1.22,
+                    RADU_ALBOT: 2.00,
+                    GILLES_SIMON: 1.71,
                 },
-                'prediction': DIEGO_SCHWARTZMAN,
-                'bet': 3,
             },
             {
                 'round': 64,
@@ -10034,6 +10024,7 @@ DATA = [
                     GUIDO_PELLA,
                     DAVID_GOFFIN
                 ],
+                'score': [(6, 4), (7, 6)],
                 'odds': {
                     GUIDO_PELLA: 2.80,
                     DAVID_GOFFIN: 1.42,
@@ -10041,6 +10032,49 @@ DATA = [
                 'prediction': GUIDO_PELLA,
                 'bet': 4,
             },
+            {
+                'round': 64,
+                'players': [
+                    MARIN_CILIC,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    MARIN_CILIC: 1.28,
+                    BRADLEY_KLAHN: 3.60,
+                },
+                'prediction': MARIN_CILIC,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    JOHN_ISNER,
+                    JORDAN_THOMPSON,
+                ],
+                'score': [(3, 6), (6, 3), (7, 6)],
+                'odds': {
+                    JOHN_ISNER: 1.45,
+                    JORDAN_THOMPSON: 2.70,
+                },
+                'prediction': JOHN_ISNER,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    JOHN_MILLMAN,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [(6, 7), (7, 6), (6, 3)],
+                'odds': {
+                    JOHN_MILLMAN: 1.59,
+                    FELICIANO_LOPEZ: 2.30,
+                },
+            },
+
+
+            # ??
             {
                 'round': 64,
                 'players': [
@@ -10107,14 +10141,6 @@ DATA = [
                 'bet': 3,
             },
 
-            {
-                'round': 64,
-                'players': [
-                    JOHN_MILLMAN,
-                    FELICIANO_LOPEZ
-                ],
-                'prediction': None,
-            },
         ]
     },
 
