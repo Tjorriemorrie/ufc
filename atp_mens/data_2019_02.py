@@ -2264,12 +2264,12 @@ DATA_2019_02 = [
                 'round': 32,
                 'players': [
                     REILLY_OPELKA,
-                    ANDRIAN_MANNARINO
+                    ADRIAN_MANNARINO
                 ],
                 'score': [(2, 6), (7, 6), (6, 4)],
                 'odds': {
                     REILLY_OPELKA: 1.63,
-                    ANDRIAN_MANNARINO: 2.25
+                    ADRIAN_MANNARINO: 2.25
                 }
             },
 

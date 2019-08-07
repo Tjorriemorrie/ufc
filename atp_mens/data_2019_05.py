@@ -230,12 +230,12 @@ DATA_2019_05 = [
                 'round': 256,
                 'players': [
                     MARTIN_KLIZAN,
-                    ANDRIAN_MANNARINO
+                    ADRIAN_MANNARINO
                 ],
                 'score': [(6, 3), (6, 2)],
                 'odds': {
                     MARTIN_KLIZAN: 1.33,
-                    ANDRIAN_MANNARINO: 3.00
+                    ADRIAN_MANNARINO: 3.00
                 }
             },
             {
@@ -693,12 +693,12 @@ DATA_2019_05 = [
                 'round': 32,
                 'players': [
                     STEFANOS_TSITSIPAS,
-                    ANDRIAN_MANNARINO
+                    ADRIAN_MANNARINO
                 ],
                 'score': [(6, 2), (7, 5)],
                 'odds': {
                     STEFANOS_TSITSIPAS: 1.11,
-                    ANDRIAN_MANNARINO: 6.00
+                    ADRIAN_MANNARINO: 6.00
                 }
             },
             {

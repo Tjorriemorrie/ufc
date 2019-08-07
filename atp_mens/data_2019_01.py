@@ -1432,12 +1432,12 @@ DATA_2019_01 = [
                 'round': 32,
                 'players': [
                     JORDAN_THOMPSON,
-                    ANDRIAN_MANNARINO
+                    ADRIAN_MANNARINO
                 ],
                 'score': [(6, 3), (6, 3)],
                 'odds': {
                     JORDAN_THOMPSON: 1.62,
-                    ANDRIAN_MANNARINO: 2.35
+                    ADRIAN_MANNARINO: 2.35
                 }
             },
             {
