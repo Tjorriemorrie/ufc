@@ -282,7 +282,7 @@ def main(bet_params=None):
         payouts = np.array(payouts)
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%  reg: {reg.score(X_test, y_test)*100:.0f}%')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%  reg: {reg.score(X_test, y_test)*100:.1f}%')
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
@@ -294,7 +294,7 @@ def main(bet_params=None):
         tab = np.array(tab)
         logger.info('')
         logger.info('Actual:')
-        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.0f}%')
+        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
@@ -308,9 +308,8 @@ if __name__ == '__main__':
                         'pred highter a', 'pred highter b',
                         'round lower a', 'round higher b',
                         'round highter a', 'round higher b']
-    bet_params = [6.1657487, 4.22845701, 7.14881648, -19.18266834, 35.10498863,
-                  42.57342467, -21.3686223, -12.19797003, 34.79195702, -6.28161902,
-                  -15.42984353]
+    # bet_params = [5.96800774420489, 3.6262913948200115, 5.151445873078705, -16.60771834405974, 35.45504696447727, 43.17167824838199, -20.682719171734902, -14.197411080920052, 35.320080655673685, -3.3559852562528034, -17.11938327622211]
+    bet_params = [6.212875430987969, 3.5657405584762936, 5.085201701450234, -20.430869044580376, 35.704762404116984, 44.335782377277354, -21.473041422282613, -15.595653512255737, 35.44651763970099, -0.5744519165325092, -22.720027175448266]
     assert len(bet_params) == len(bet_params_names)
 
     train = 0

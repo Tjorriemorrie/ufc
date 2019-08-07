@@ -2,6 +2,495 @@ from men import *
 
 DATA_2018_10 = [
     {
+        'name': 'European Open',
+        'category': 'ATP250',
+        'date': '2018-10-21',
+        'location': 'Antwerp, Belgium',
+        'matches': [
+
+            # 2018-10-14
+            {
+                'round': 512,
+                'players': [
+                    SALVATORE_CARUSO,
+                    SCOTT_TALON_GRIEKSPOOR
+                ],
+                'score': [(6, 7), (6, 3), (6, 2)],
+                'odds': {
+                    SALVATORE_CARUSO: 1.63,
+                    SCOTT_TALON_GRIEKSPOOR: 2.08
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEPHANE_ROBERT,
+                    FREDERICO_FERREIRA_SILVA
+                ],
+                'score': [(7, 5), (5, 7), (6, 4)],
+                'odds': {
+                    STEPHANE_ROBERT: 2.30,
+                    FREDERICO_FERREIRA_SILVA: 1.57
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CONSTANT_LESTIENNE,
+                    NICOLAS_MAHUT
+                ],
+                'score': [(6, 2), (4, 6), (7, 6)],
+                'odds': {
+                    CONSTANT_LESTIENNE: 1.63,
+                    NICOLAS_MAHUT: 2.18
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    SERGIY_STAKHOVSKY,
+                    KENNY_DE_SCHEPPER
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    SERGIY_STAKHOVSKY: 2.06,
+                    KENNY_DE_SCHEPPER: 1.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    ZIZOU_BERGS
+                ],
+                'score': [(5, 7), (6, 3), (7, 6)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.10,
+                    ZIZOU_BERGS: 5.52
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    SCOTT_TALON_GRIEKSPOOR,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    SCOTT_TALON_GRIEKSPOOR: 1.96,
+                    CORENTIN_MOUTET: 1.71
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ILYA_IVASHKA,
+                    ANTOINE_HOANG
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    ILYA_IVASHKA: 1.57,
+                    ANTOINE_HOANG: 2.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    YANNICK_MERTENS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 1.14,
+                    YANNICK_MERTENS: 5.30
+                }
+            },
+
+            # 2018-10-15
+            {
+                'round': 256,
+                'players': [
+                    SCOTT_TALON_GRIEKSPOOR,
+                    STEPHANE_ROBERT
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    SCOTT_TALON_GRIEKSPOOR: 1.33,
+                    STEPHANE_ROBERT: 3.20
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    SERGIY_STAKHOVSKY,
+                    FELIX_AUGER_ALIASSIME
+                ],
+                'score': [(6, 2), (3, 0)],
+                'retired': True,
+                'odds': {
+                    SERGIY_STAKHOVSKY: 1.83,
+                    FELIX_AUGER_ALIASSIME: 1.83
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ILYA_IVASHKA,
+                    CONSTANT_LESTIENNE
+                ],
+                'score': [(4, 6), (7, 6), (6, 3)],
+                'odds': {
+                    ILYA_IVASHKA: 1.48,
+                    CONSTANT_LESTIENNE: 2.55
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    SALVATORE_CARUSO
+                ],
+                'score': [(6, 4), (5, 7), (6, 2)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 1.33,
+                    SALVATORE_CARUSO: 3.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JIRI_VESELY,
+                    JAUME_MUNAR
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JIRI_VESELY: 1.74,
+                    JAUME_MUNAR: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    VASEK_POSPISIL,
+                    LEONARDO_MAYER
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    VASEK_POSPISIL: 1.69,
+                    LEONARDO_MAYER: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MACKENZIE_MCDONALD,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    MACKENZIE_MCDONALD: 1.93,
+                    NICOLAS_JARRY: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    FELICIANO_LOPEZ: 2.64,
+                    FRANCES_TIAFOE: 1.47
+                }
+            },
+
+            # 2018-10-16
+            {
+                'round': 32,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    GUIDO_PELLA
+                ],
+                'score': [(7, 5), (5, 7), (7, 6)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.53,
+                    GUIDO_PELLA: 2.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    CONSTANT_LESTIENNE
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.43,
+                    CONSTANT_LESTIENNE: 2.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    STEPHANE_ROBERT
+                ],
+                'score': [(6, 4), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    RUBEN_BEMELMANS
+                ],
+                'score': [(6, 0), (6, 3)],
+                'odds': {
+                    GAEL_MONFILS: 1.39,
+                    RUBEN_BEMELMANS: 3.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ILYA_IVASHKA,
+                    ROBIN_HAASE
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    ILYA_IVASHKA: 1.91,
+                    ROBIN_HAASE: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
+                    SERGIY_STAKHOVSKY
+                ],
+                'score': [(6, 0), (6, 4)],
+                'odds': {
+                    GILLES_SIMON: 1.33,
+                    SERGIY_STAKHOVSKY: 3.30
+                }
+            },
+
+            # 2018-10-17
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    MARCEL_GRANOLLERS
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    CAMERON_NORRIE: 1.83,
+                    MARCEL_GRANOLLERS: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SALVATORE_CARUSO,
+                    YUKI_BHAMBRI
+                ],
+                'score': [(7, 6), (5, 7), (6, 1)],
+                'odds': {
+                    SALVATORE_CARUSO: 1.40,
+                    YUKI_BHAMBRI: 2.53
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [(6, 1), (3, 6), (7, 6)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.59,
+                    FELICIANO_LOPEZ: 2.35
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ILYA_IVASHKA,
+                    SALVATORE_CARUSO
+                ],
+                'score': [(6, 3), (6, 7), (7, 5)],
+                'odds': {
+                    ILYA_IVASHKA: 1.29,
+                    SALVATORE_CARUSO: 3.55
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICHARD_GASQUET,
+                    JIRI_VESELY
+                ],
+                'score': [(6, 3), (4, 6), (6, 3)],
+                'odds': {
+                    RICHARD_GASQUET: 1.24,
+                    JIRI_VESELY: 3.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    VASEK_POSPISIL,
+                    MILOS_RAONIC
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    VASEK_POSPISIL: 3.60,
+                    MILOS_RAONIC: 1.22
+                }
+            },
+
+            # 2018-10-18
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    JO_WILFRIED_TSONGA
+                ],
+                'score': [(6, 4), (3, 6), (6, 4)],
+                'odds': {
+                    GAEL_MONFILS: 1.53,
+                    JO_WILFRIED_TSONGA: 2.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GILLES_SIMON,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(6, 1), (6, 1)],
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    CAMERON_NORRIE
+                ],
+                'score': [(7, 6), (6, 7), (7, 5)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.57,
+                    CAMERON_NORRIE: 2.45
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KYLE_EDMUND,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 0), (6, 2)],
+                'odds': {
+                    KYLE_EDMUND: 1.21,
+                    ALBERT_RAMOS_VINOLAS: 4.35
+                }
+            },
+
+            # 2018-10-19
+            {
+                'round': 8,
+                'players': [
+                    GAEL_MONFILS,
+                    VASEK_POSPISIL
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    GAEL_MONFILS: 1.55,
+                    VASEK_POSPISIL: 2.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RICHARD_GASQUET,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(6, 4), (6, 7), (7, 6)],
+                'odds': {
+                    RICHARD_GASQUET: 1.57,
+                    JAN_LENNARD_STRUFF: 2.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    GILLES_SIMON
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 2.25,
+                    GILLES_SIMON: 1.57
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KYLE_EDMUND,
+                    ILYA_IVASHKA
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    KYLE_EDMUND: 1.21,
+                    ILYA_IVASHKA: 4.30
+                }
+            },
+
+            # 2019-10-20
+            {
+                'round': 4,
+                'players': [
+                    GAEL_MONFILS,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    GAEL_MONFILS: 1.63,
+                    DIEGO_SCHWARTZMAN: 2.30
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    KYLE_EDMUND,
+                    RICHARD_GASQUET
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    KYLE_EDMUND: 1.56,
+                    RICHARD_GASQUET: 2.30
+                }
+            },
+
+            # 2018-10-21
+            {
+                'round': 2,
+                'players': [
+                    KYLE_EDMUND,
+                    GAEL_MONFILS
+                ],
+                'score': [(3, 6), (7, 6), (7, 6)],
+                'odds': {
+                    KYLE_EDMUND: 1.71,
+                    GAEL_MONFILS: 1.99
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Intrum Stockholm Open',
         'category': 'ATP250',
         'date': '2018-10-21',
