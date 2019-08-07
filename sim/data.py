@@ -1,6 +1,7 @@
 from .fighters import *
 
 # acc  roi   profit  desc
+# 64.7 55    7013    added max depth (optimized)
 # 67   12.09 415     removed max bet of 10 (no diff)
 # 67   12.09 415     fixed cutoff with all_data :(
 # 59   7.87  709     add estimators number as parameter (1, 707), (2, 78), (3, 70), (4, 44), (5, 36), (6, 18), (7, 16), (8, 8), (9, 4), (11, 3)

@@ -229,7 +229,7 @@ def main(bet_params=None):
                     continue
 
                 # add data for test of classifier
-                X_test.extend(match_data)
+                X_test.extend(scaled_match_data)
                 y_test.extend([1, 0])
 
                 # testing outcome
@@ -282,7 +282,7 @@ def main(bet_params=None):
         payouts = np.array(payouts)
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%  reg: {reg.score(X_test, y_test)*100:.1f}%')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%')
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
@@ -296,6 +296,7 @@ def main(bet_params=None):
         logger.info('Actual:')
         logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
+        days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
     return -(sum(payouts) / sum(bet_amts))
