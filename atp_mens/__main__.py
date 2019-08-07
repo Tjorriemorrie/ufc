@@ -28,7 +28,7 @@ def win_probability(team1, team2):
     return ts.cdf(delta_mu / denom)
 
 
-def get_regressor(training_data, label_data, scaler, estimators=100):
+def get_regressor(training_data, label_data, scaler, estimators=100, max_depth=3):
     """get regressor"""
     logger.info('')
     logger.info('Training model...')
@@ -49,26 +49,18 @@ def get_regressor(training_data, label_data, scaler, estimators=100):
     # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
-    reg = XGBRegressor(n_estimators=estimators, objective='reg:squarederror', n_jobs=4)
+    reg = XGBRegressor(n_estimators=estimators, max_depth=max_depth, objective='reg:squarederror', n_jobs=4)
     reg = reg.fit(X_train, y_train)
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
     # accuracy = accuracy_score(y_test, y_pred_bin)
+    # score = reg.score(X_test, )
     # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # mse = mean_squared_error(y_test, y_pred)
     # logger.info(f'MSE: {mse:.2f}')
     # sleep(3)
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
-    feature_names = [
-        'win%', 'odds', '~odds',
-        'mu', '~mu', 'sigma', '~sigma',
-        'round',
-        'upsets', '~upsets',
-        'odds_scaled',
-    ]
-    for name, val in zip(feature_names, reg.feature_importances_):
-        logger.info(f'{name}: {val}')
 
     return reg
 
@@ -77,11 +69,13 @@ def main(bet_params=None):
     logger.info('Starting main training')
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
-    estimators, upsets_cutoff, \
+    # all_data = DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
+    estimators, max_depth, upsets_cutoff, \
         bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
         bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, = bet_params
-    estimators = int(estimators * 100)
-    upsets_cutoff = int(upsets_cutoff)
+    estimators = int(round(estimators * 100))
+    max_depth = int(round(max_depth))
+    upsets_cutoff = int(round(upsets_cutoff))
 
     # init
     reg = None
@@ -92,6 +86,8 @@ def main(bet_params=None):
     upsets = defaultdict(lambda: [])
     training_data = []
     label_data = []
+    X_test = []
+    y_test = []
     payouts = []
     bet_amts = []
     accuracy = (0, 0)
@@ -107,7 +103,7 @@ def main(bet_params=None):
         if not is_training:
             if not reg:
                 start_date = datetime.strptime(event['date'], '%Y-%m-%d')
-                reg = get_regressor(training_data, label_data, scaler, estimators=estimators)
+                reg = get_regressor(training_data, label_data, scaler, estimators=estimators, max_depth=max_depth)
             logger.info('')
         logger.info(f'{event["date"]} {event["name"]}')
 
@@ -232,6 +228,10 @@ def main(bet_params=None):
                     logger.warning(f'Pending {p1} vs {p2}')
                     continue
 
+                # add data for test of classifier
+                X_test.extend(match_data)
+                y_test.extend([1, 0])
+
                 # testing outcome
                 correct = 0
                 payout = -bet_amt
@@ -261,11 +261,28 @@ def main(bet_params=None):
     ###################################
     # Summary
 
+    logger.info('')
+    logger.info('Tree info:')
+    params = reg.get_params()
+    logger.info(f'Num estimators: {params["n_estimators"]}')
+    logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
+    logger.info(f'Max depth: {params["max_depth"]}')
+    logger.info(f'Accuracy: {reg.score(X_test, y_test)*100:.0f}%')
+    feature_names = [
+        'win%', 'odds', '~odds',
+        'mu', '~mu', 'sigma', '~sigma',
+        'round',
+        'upsets', '~upsets',
+        'odds_scaled',
+    ]
+    features = {k: round(v, 2) for k, v in zip(feature_names, reg.feature_importances_)}
+    logger.info(f'Features: {features}')
+
     if accuracy[1]:
         payouts = np.array(payouts)
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.0f}%  reg: {reg.score(X_test, y_test)*100:.0f}%')
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
@@ -281,29 +298,23 @@ def main(bet_params=None):
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
-    logger.info('')
-    logger.info(f'Done')
     return -(sum(payouts) / sum(bet_amts))
 
 
 if __name__ == '__main__':
-    bet_params = [
-        # estimators
-        4.51490253,
-        # cutoff (upsets)
-        8.66075383,
-        # pred lower
-        -18.54238758, 36.62696974,
-        # pred higher
-        42.48024571, -20.57253307,
-        # round lower
-        -13.85853611, 35.40600213,
-        # round higher
-        -6.08415214, -14.81572926,
-    ]
-    
+    bet_params_names = ['estimators', 'max_depth',
+                        'upsets cutoff',
+                        'pred lower a', 'pred lower b',
+                        'pred highter a', 'pred highter b',
+                        'round lower a', 'round higher b',
+                        'round highter a', 'round higher b']
+    bet_params = [6.1657487, 4.22845701, 7.14881648, -19.18266834, 35.10498863,
+                  42.57342467, -21.3686223, -12.19797003, 34.79195702, -6.28161902,
+                  -15.42984353]
+    assert len(bet_params) == len(bet_params_names)
+
     train = 0
-    
+
     if not train:
         main(bet_params)
     else:
@@ -313,8 +324,16 @@ if __name__ == '__main__':
             fitness = [main(x) for x in solutions]
             es.tell(solutions, fitness)
             es.disp()
-            print(es.result[0])
+            print(list(es.result[0]))
+            print(list(es.result[5]))
         es.result_pretty()
-        
+
+        print(f'finished after {es.result[3]} evaluations and {es.result[4]} iterations')
+
         print('')
-        print(es.result[0])
+        print('best')
+        print(list(es.result[0]))
+
+        print('')
+        print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        print(list(es.result[5]))

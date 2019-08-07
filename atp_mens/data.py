@@ -1,6 +1,7 @@
 from men import *
 
 # acc  roi   profit desc
+# 66   12    305    optimized
 # 64   7     187    2018-10-21 Intrum Stockholm Open
 # 66   8     216    optimized
 # 64   5     139    2018-10-28 Erste Bank Open 500
