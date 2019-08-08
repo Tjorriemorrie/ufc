@@ -1,6 +1,8 @@
 from men import *
 
 # acc   roi   profit desc
+# 66.0  11.6  327    optimized
+# 62.5  3.3   93     2018-10-21 VTB Kremlin Cup
 # 64.0  4     125    optimized with favourite with new match
 # 64.0  5     129    optimized best with new match
 # 65    9     238    optimized favourite
@@ -13,23 +15,18 @@ from men import *
 # 64    11    217    sets handle pos and neg                 [(4, 363), (3, 174)]
 # 60    7.3   141    sets removed (optimized)                [(4, 323), (3, 214)]
 # 58    4.4   83     2018-10-28 Swiss Indoors Basel          [(4, 292), (3, 238)]
-# 59    6.96  126    optimized                               [(4, 283), (3, 225)]
-# 56    -.2   -3     games variable removed
-# 60    4.21  76     2018-10-27 ATP Master 1000 Paris   [(4, 283), (3, 225)]
-# 65    7.60  176    2019-01-05 Qatar ExonMobil Open    [(4, 400), (3, 239)]
 
+# 59    6.96  126    optimized                               [(4, 283), (3, 225)]
+# 60    4.21  76     2018-10-27 ATP Master 1000 Paris   [(4, 283), (3, 225)]
 # 65    7.51  173    2019-01-06 Brisbane International      [(4, 394), (3, 241)]
 # 64    2.85  62     2019-01-12 Sydney International [(4, 386), (3, 207)]
-# 66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
-# 63    4.24  85     2019-02-10 Cordoba Open
-# 53    2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
-# 64    10.8  503    2019-02-17 ABN AMRO World Tennis Tournament (-3.0, 448), (-4.0, 22), (1.0, 18)
 
+# 66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
+# 53    2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
 # 67    3.48  162    2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
 # 69   1.19  681    added upsets and retireds cutoff (21, 517), (1, 505), (11, 3), (7, 1)
-# 67  0.41  skipping bets based on pred (none excluded)
-# 53  -8.45  Plava Laguna Croatia Open Umag
 
+# 67  0.41  skipping bets based on pred (none excluded)
 # 65  -0.0  hamburg updated
 # 62  2.51  2019-06-29 Turkish Airlines Open Antalya
 
@@ -10148,122 +10145,16 @@ DATA = [
             {
                 'round': 32,
                 'players': [
+                    GUIDO_PELLA,
                     RADU_ALBOT,
-                    GUIDO_PELLA
                 ],
+                'score': [(6, 3), (2, 6), (7, 6)],
                 'odds': {
-                    RADU_ALBOT: 2.25,
                     GUIDO_PELLA: 1.65,
+                    RADU_ALBOT: 2.25,
                 },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    MARIN_CILIC,
-                    JOHN_MILLMAN
-                ],
-                'odds': {
-                    MARIN_CILIC: 1.32,
-                    JOHN_MILLMAN: 3.30,
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    RICHARD_GASQUET,
-                    KEI_NISHIKORI
-                ],
-                'odds': {
-                    RICHARD_GASQUET: 3.60,
-                    KEI_NISHIKORI: 1.28,
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    RAFAEL_NADAL,
-                    DANIEL_EVANS
-                ],
-                'odds': {
-                    RAFAEL_NADAL: 1.08,
-                    DANIEL_EVANS: 7.50,
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    ROBERTO_BAUTISTA_AGUT,
-                    DIEGO_SCHWARTZMAN
-                ],
-                'odds': {
-                    ROBERTO_BAUTISTA_AGUT: 1.42,
-                    DIEGO_SCHWARTZMAN: 2.90,
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    CHRISTIAN_GARIN,
-                    JOHN_ISNER
-                ],
-                'odds': {
-                    CHRISTIAN_GARIN: 3.20,
-                    JOHN_ISNER: 1.34,
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    DANILL_MEDVEDEV,
-                    KYLE_EDMUND
-                ],
-                'odds': {
-                    DANILL_MEDVEDEV: 1.48,
-                    KYLE_EDMUND: 2.50,
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    DENIS_SHAPOVALOV,
-                    DOMINIC_THIEM
-                ],
-                'odds': {
-                    DENIS_SHAPOVALOV: 2.30,
-                    DOMINIC_THIEM: 1.60,
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    ILYA_IVASHKA,
-                    GAEL_MONFILS
-                ],
-                'odds': {
-                    ILYA_IVASHKA: 4.00,
-                    GAEL_MONFILS: 1.24
-                },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    BORNA_CORIC,
-                    ADRIAN_MANNARINO
-                ],
-                'odds': {
-                    BORNA_CORIC: 1.40,
-                    ADRIAN_MANNARINO: 2.90,
-                },
-                'prediction': None,
+                'prediction': GUIDO_PELLA,
+                'bet': 3,
             },
             {
                 'round': 32,
@@ -10271,11 +10162,147 @@ DATA = [
                     FELIX_AUGER_ALIASSIME,
                     MILOS_RAONIC
                 ],
+                'score': [(6, 3), (3, 6), (0, 0)],
+                'retired': True,
                 'odds': {
                     FELIX_AUGER_ALIASSIME: 2.30,
                     MILOS_RAONIC: 1.60,
                 },
-                'prediction': None,
+                # bet refunded
+            },
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    ILYA_IVASHKA,
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    GAEL_MONFILS: 1.24,
+                    ILYA_IVASHKA: 4.00,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARIN_CILIC,
+                    JOHN_MILLMAN
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MARIN_CILIC: 1.32,
+                    JOHN_MILLMAN: 3.30,
+                },
+                'prediction': MARIN_CILIC,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    CHRISTIAN_GARIN,
+                    JOHN_ISNER
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    CHRISTIAN_GARIN: 3.20,
+                    JOHN_ISNER: 1.34,
+                },
+                'prediction': JOHN_ISNER,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    BORNA_CORIC,
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    ADRIAN_MANNARINO: 2.90,
+                    BORNA_CORIC: 1.40,
+                },
+                'prediction': BORNA_CORIC,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.42,
+                    DIEGO_SCHWARTZMAN: 2.90,
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    KYLE_EDMUND
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.48,
+                    KYLE_EDMUND: 2.50,
+                },
+                'prediction': DANILL_MEDVEDEV,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICHARD_GASQUET,
+                    KEI_NISHIKORI
+                ],
+                'score': [(6, 7), (6, 2), (7, 6)],
+                'odds': {
+                    RICHARD_GASQUET: 3.60,
+                    KEI_NISHIKORI: 1.28,
+                },
+                'prediction': KEI_NISHIKORI,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    HUBERT_HURKACZ,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+            },
+            {
+                'round': 32,
+                'players': [
+                    DOMINIC_THIEM,
+                    DENIS_SHAPOVALOV,
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    DOMINIC_THIEM: 1.60,
+                    DENIS_SHAPOVALOV: 2.30,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    RAFAEL_NADAL,
+                    DANIEL_EVANS
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    RAFAEL_NADAL: 1.08,
+                    DANIEL_EVANS: 7.50,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 4,
             },
             {
                 'round': 32,
@@ -10283,23 +10310,94 @@ DATA = [
                     KAREN_KHACHANOV,
                     STAN_WAWRINKA
                 ],
+                'score': [(6, 4), (6, 7), (6, 2)],
                 'odds': {
                     KAREN_KHACHANOV: 2.30,
                     STAN_WAWRINKA: 1.60
                 },
-                'prediction': None,
+                'prediction': STAN_WAWRINKA,
+                'bet': 3,
             },
             {
                 'round': 32,
                 'players': [
+                    FABIO_FOGNINI,
                     TOMMY_PAUL,
-                    FABIO_FOGNINI
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    FABIO_FOGNINI: 1.62,
+                    TOMMY_PAUL: 2.25,
+                },
+                'prediction': TOMMY_PAUL,
+                'bet': 4,
+            },
+
+            # 2019-08-08
+            {
+                'round': 16,
+                'players': [
+                    MARIN_CILIC,
+                    DOMINIC_THIEM
                 ],
                 'odds': {
-                    TOMMY_PAUL: 2.25,
-                    FABIO_FOGNINI: 1.62,
+                    MARIN_CILIC: 2.05,
+                    DOMINIC_THIEM: 1.75
                 },
-                'prediction': None,
+                'prediction': MARIN_CILIC,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    CHRISTIAN_GARIN
+                ],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.16,
+                    CHRISTIAN_GARIN: 5.00,
+                },
+                'prediction': DANILL_MEDVEDEV,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    ALEXANDER_ZVEREV
+                ],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.80,
+                    ALEXANDER_ZVEREV: 1.42,
+                },
+                'prediction': ALEXANDER_ZVEREV,
+                'bet': 3,
+            },
+            {
+                'round': 16,
+                'players': [
+                    RAFAEL_NADAL,
+                    GUIDO_PELLA,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.05,
+                    GUIDO_PELLA: 9.00,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    RICHARD_GASQUET,
+                ],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.26,
+                    RICHARD_GASQUET: 3.80,
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 4,
             },
         ]
     },

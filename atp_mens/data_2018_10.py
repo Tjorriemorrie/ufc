@@ -2,6 +2,504 @@ from men import *
 
 DATA_2018_10 = [
     {
+        'name': 'VTB Kremlin Cup',
+        'category': 'ATP250',
+        'date': '2018-10-21',
+        'location': 'Moscow, Russia',
+        'matches': [
+
+            # 2018-10-13
+            {
+                'round': 512,
+                'players': [
+                    FILIP_HORANSKY,
+                    VIKTOR_GALOVIC
+                ],
+                'score': [(6, 7), (6, 4), (6, 2)],
+                'odds': {
+                    FILIP_HORANSKY: 2.00,
+                    VIKTOR_GALOVIC: 1.61
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXANDER_BUBLIK,
+                    RUDOLF_MOLLEKER
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    ALEXANDER_BUBLIK: 1.54,
+                    RUDOLF_MOLLEKER: 2.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JURIJ_RODIONOV,
+                    ULADZIMIR_IGNATIK
+                ],
+                'score': [(2, 6), (6, 4), (6, 2)],
+                'odds': {
+                    JURIJ_RODIONOV: 1.59,
+                    ULADZIMIR_IGNATIK: 2.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TEYMURAZ_GABASHVILI,
+                    DANIEL_BRANDS
+                ],
+                'score': [(4, 6), (7, 6), (6, 3)],
+                'odds': {
+                    TEYMURAZ_GABASHVILI: 2.40,
+                    DANIEL_BRANDS: 1.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    EGOR_GERASIMOV,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.60,
+                    ALEXEY_VATUTIN: 2.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEFANO_NAPOLITANO,
+                    NIKOLA_MILOJEVIC
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    STEFANO_NAPOLITANO: 1.83,
+                    NIKOLA_MILOJEVIC: 1.80
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LUKAS_ROSOL,
+                    IVAN_GAKHOV
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    LUKAS_ROSOL: 1.16,
+                    IVAN_GAKHOV: 4.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    BLAZ_KAVCIC
+                ],
+                'score': [(6, 4), (4, 6), (7, 5)],
+                'odds': {
+                    RICARDAS_BERANKIS: 1.40,
+                    BLAZ_KAVCIC: 2.70
+                }
+            },
+
+            # 2018-10-14
+            {
+                'round': 256,
+                'players': [
+                    FILIP_HORANSKY,
+                    STEFANO_NAPOLITANO
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    FILIP_HORANSKY: 2.35,
+                    STEFANO_NAPOLITANO: 1.53
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    EGOR_GERASIMOV,
+                    TEYMURAZ_GABASHVILI
+                ],
+                'score': [(7, 6), (6, 0)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.34,
+                    TEYMURAZ_GABASHVILI: 2.90
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    LUKAS_ROSOL,
+                    JURIJ_RODIONOV
+                ],
+                'score': [(6, 2), (2, 0)],
+                'retired': True,
+                'odds': {
+                    LUKAS_ROSOL: 1.61,
+                    JURIJ_RODIONOV: 2.10
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALEXANDER_BUBLIK,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    ALEXANDER_BUBLIK: 2.15,
+                    RICARDAS_BERANKIS: 1.61
+                }
+            },
+
+            # 2018-10-15
+            {
+                'round': 32,
+                'players': [
+                    LUKAS_ROSOL,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(6, 3), (4, 6), (6, 4)],
+                'odds': {
+                    LUKAS_ROSOL: 2.90,
+                    MATTEO_BERRETTINI: 1.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    EVGENY_KARLOVSKIY
+                ],
+                'score': [(3, 6), (6, 4), (7, 6)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.37,
+                    EVGENY_KARLOVSKIY: 2.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    LASLO_DJERE
+                ],
+                'score': [(5, 7), (6, 4), (7, 6)],
+                'odds': {
+                    ALJAZ_BEDENE: 1.23,
+                    LASLO_DJERE: 3.80
+                }
+            },
+
+            # 2018-10-16
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(7, 6), (2, 6), (6, 1)],
+                'odds': {
+                    BENOIT_PAIRE: 1.47,
+                    MISCHA_ZVEREV: 2.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    FILIP_HORANSKY
+                ],
+                'score': [(6, 4), (2, 6), (6, 3)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.21,
+                    FILIP_HORANSKY: 3.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    EVGENY_DONSKOY,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    EVGENY_DONSKOY: 2.75,
+                    MIKHAIL_KUKUSHKIN: 1.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 4), (5, 4)],
+                'retired': True,
+                'odds': {
+                    RICARDAS_BERANKIS: 2.30,
+                    DENIS_ISTOMIN: 1.53
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIRZA_BASIC,
+                    MALEK_JAZIRI
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    MIRZA_BASIC: 2.10,
+                    MALEK_JAZIRI: 1.67
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDREAS_SEPPI,
+                    MARTIN_KLIZAN
+                ],
+                'score': [(6, 1), (7, 6)],
+                'odds': {
+                    ANDREAS_SEPPI: 2.35,
+                    MARTIN_KLIZAN: 1.51
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    EGOR_GERASIMOV,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 1), (6, 7), (6, 2)],
+                'odds': {
+                    EGOR_GERASIMOV: 2.05,
+                    DAMIR_DZUMHUR: 1.59
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICK_KYRGIOS,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(6, 3), (4, 6), (6, 4)],
+                'odds': {
+                    NICK_KYRGIOS: 1.59,
+                    ANDREY_RUBLEV: 2.23
+                }
+            },
+
+            # 2018-10-17
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    ALEXANDER_BUBLIK
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.55,
+                    ALEXANDER_BUBLIK: 2.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    EGOR_GERASIMOV,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    EGOR_GERASIMOV: 2.25,
+                    BENOIT_PAIRE: 1.62
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    ALJAZ_BEDENE
+                ],
+                'score': [(3, 6), (7, 6), (7, 6)],
+                'odds': {
+                    RICARDAS_BERANKIS: 2.20,
+                    ALJAZ_BEDENE: 1.63
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KAREN_KHACHANOV,
+                    LUKAS_ROSOL
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.14,
+                    LUKAS_ROSOL: 5.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.61,
+                    MARCO_CECCHINATO: 2.20
+                }
+            },
+
+            # 2018-10-18
+            {
+                'round': 16,
+                'players': [
+                    ANDREAS_SEPPI,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    ANDREAS_SEPPI: 1.91,
+                    PIERRE_HUGUES_HERBERT: 1.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MIRZA_BASIC,
+                    NICK_KYRGIOS
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    MIRZA_BASIC: 4.20,
+                    NICK_KYRGIOS: 1.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    EVGENY_DONSKOY
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.38,
+                    EVGENY_DONSKOY: 2.75
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.32,
+                    DUSAN_LAJOVIC: 3.20
+                }
+            },
+
+            # 2018-10-19
+            {
+                'round': 8,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.74,
+                    EGOR_GERASIMOV: 2.05
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ANDREAS_SEPPI,
+                    FILIP_KRAJINOVIC
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    ANDREAS_SEPPI: 2.20,
+                    FILIP_KRAJINOVIC: 1.59
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KAREN_KHACHANOV,
+                    MIRZA_BASIC
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.10,
+                    MIRZA_BASIC: 6.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(6, 2), (1, 6), (6, 4)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.15,
+                    RICARDAS_BERANKIS: 5.00
+                }
+            },
+
+            # 2018-10-20
+            {
+                'round': 4,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    ADRIAN_MANNARINO: 2.10,
+                    ANDREAS_SEPPI: 1.67
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    KAREN_KHACHANOV,
+                    DANILL_MEDVEDEV
+                ],
+                'score': [(6, 1), (6, 7), (6, 3)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.88,
+                    DANILL_MEDVEDEV: 1.87
+                }
+            },
+
+            # 2018-10-21
+            {
+                'round': 2,
+                'players': [
+                    KAREN_KHACHANOV,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.18,
+                    ADRIAN_MANNARINO: 3.90
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'European Open',
         'category': 'ATP250',
         'date': '2018-10-21',

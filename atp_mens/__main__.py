@@ -283,11 +283,9 @@ def main(bet_params=None):
         logger.info('')
         logger.info('Testing:')
         logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%')
-        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.2f}%  Profit ${sum(payouts):.0f}')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
-        logger.info(f'Payouts: max={payouts.max()} min={payouts.min()}')
-        logger.info(f'Most common: {Counter(payouts).most_common(3)}')
         logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
 
     if actual[1]:
@@ -309,8 +307,9 @@ if __name__ == '__main__':
                         'pred highter a', 'pred highter b',
                         'round lower a', 'round higher b',
                         'round highter a', 'round higher b']
-    # bet_params = [5.96800774420489, 3.6262913948200115, 5.151445873078705, -16.60771834405974, 35.45504696447727, 43.17167824838199, -20.682719171734902, -14.197411080920052, 35.320080655673685, -3.3559852562528034, -17.11938327622211]
-    bet_params = [6.212875430987969, 3.5657405584762936, 5.085201701450234, -20.430869044580376, 35.704762404116984, 44.335782377277354, -21.473041422282613, -15.595653512255737, 35.44651763970099, -0.5744519165325092, -22.720027175448266]
+    # bet_params = [10.082903911702275, 3.869989799718258, 3.0135043965375337, -19.204300581800386, 34.812524615827286, 44.30030226384012, -21.747153788292984, -16.77053431327639, 35.23408085279844, -1.037212765476975, -22.040156421000287]
+    bet_params = [10.097938684172085, 4.440947260097155, 2.7986654773249975, -19.194326254202736, 36.18586488784004, 45.44043642096367, -22.303614505006287, -15.859656622725607, 35.12502991926313, -1.336550064750914, -22.43509022495746]
+
     assert len(bet_params) == len(bet_params_names)
 
     train = 0
