@@ -72,7 +72,8 @@ def main(bet_params=None):
     # all_data = DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
     estimators, max_depth, upsets_cutoff, \
         bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
-        bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, = bet_params
+        bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, \
+        bet_upset_bot_a, bet_upset_bot_b, bet_upset_top_a, bet_upset_top_b, = bet_params
     estimators = int(round(estimators * 100))
     max_depth = int(round(max_depth))
     upsets_cutoff = int(round(upsets_cutoff))
@@ -204,6 +205,13 @@ def main(bet_params=None):
                 bet_rnd_top_multi = np.polyval([bet_rnd_top_a, bet_rnd_top_b], [rnd])[0]
                 bet_multi += min(max(round(bet_rnd_top_multi), 0), 1)
 
+                # upset
+                total_upsets = sum(upsets[p1]) + sum(upsets[p2])
+                bet_upset_bot_multi = np.polyval([bet_upset_bot_a, bet_upset_bot_b], [total_upsets])[0]
+                bet_multi += min(max(round(bet_upset_bot_multi), 0), 1)
+                bet_upset_top_multi = np.polyval([bet_upset_top_a, bet_upset_top_b], [total_upsets])[0]
+                bet_multi += min(max(round(bet_upset_top_multi), 0), 1)
+
                 bet_multis.append(bet_multi)
                 bet_amt = bet_size * bet_multi
                 bet_amts.append(bet_amt)
@@ -306,9 +314,11 @@ if __name__ == '__main__':
                         'pred lower a', 'pred lower b',
                         'pred highter a', 'pred highter b',
                         'round lower a', 'round higher b',
-                        'round highter a', 'round higher b']
-    # bet_params = [10.082903911702275, 3.869989799718258, 3.0135043965375337, -19.204300581800386, 34.812524615827286, 44.30030226384012, -21.747153788292984, -16.77053431327639, 35.23408085279844, -1.037212765476975, -22.040156421000287]
-    bet_params = [10.097938684172085, 4.440947260097155, 2.7986654773249975, -19.194326254202736, 36.18586488784004, 45.44043642096367, -22.303614505006287, -15.859656622725607, 35.12502991926313, -1.336550064750914, -22.43509022495746]
+                        'round highter a', 'round higher b',
+                        'upset lower a', 'upset higher b',
+                        'upset highter a', 'upset higher b']
+    # bet_params = [10.082903911702275, 3.869989799718258, 3.0135043965375337, -19.204300581800386, 34.812524615827286, 44.30030226384012, -21.747153788292984, -16.77053431327639, 35.23408085279844, -1.037212765476975, -22.040156421000287, -15.859656622725607, 35.12502991926313, -1.336550064750914, -22.43509022495746]
+    bet_params = [9.89124304587057, 4.105711802302772, 2.7982434376798175, -16.377576805127003, 35.68277141597596, 46.9652216386256, -23.36541254071933, -11.433383785603342, 35.911703324685625, -0.6901816808222626, -22.790770222940914, -21.43798611924857, 33.615895570559985, -1.3024792529812363, -19.588972058883634]
 
     assert len(bet_params) == len(bet_params_names)
 

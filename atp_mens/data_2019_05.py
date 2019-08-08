@@ -892,7 +892,7 @@ DATA_2019_05 = [
                     MARIN_CILIC
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     NOVAK_DJOKOVIC: 1.14,
                     MARIN_CILIC: 5.50
@@ -1803,7 +1803,7 @@ DATA_2019_05 = [
                     ROGER_FEDERER
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     STEFANOS_TSITSIPAS: 1.69,
                     ROGER_FEDERER: 2.15
@@ -2683,7 +2683,7 @@ DATA_2019_05 = [
                     RICHARD_GASQUET
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     TAYLOR_FRITZ: 1.54,
                     RICHARD_GASQUET: 2.30

@@ -1,6 +1,8 @@
 from men import *
 
 # acc   roi   profit desc
+# 65.7  9.7   335    upsets bet param added
+# 65.7  11.3  320    2019-08-08
 # 66.0  11.6  327    optimized
 # 62.5  3.3   93     2018-10-21 VTB Kremlin Cup
 # 64.0  4     125    optimized with favourite with new match
@@ -13,9 +15,8 @@ from men import *
 # 65    10    269    added scaled odds
 # 64    11    275    enabled betting on qualifiers
 # 64    11    217    sets handle pos and neg                 [(4, 363), (3, 174)]
-# 60    7.3   141    sets removed (optimized)                [(4, 323), (3, 214)]
-# 58    4.4   83     2018-10-28 Swiss Indoors Basel          [(4, 292), (3, 238)]
 
+# 60    7.3   141    sets removed (optimized)                [(4, 323), (3, 214)]
 # 59    6.96  126    optimized                               [(4, 283), (3, 225)]
 # 60    4.21  76     2018-10-27 ATP Master 1000 Paris   [(4, 283), (3, 225)]
 # 65    7.51  173    2019-01-06 Brisbane International      [(4, 394), (3, 241)]
@@ -518,7 +519,7 @@ DATA = [
                     MILOS_RAONIC
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     FELIX_AUGER_ALIASSIME: 2.84,
                     MILOS_RAONIC: 1.44
@@ -1336,7 +1337,7 @@ DATA = [
                     JUAN_MARTIN_DEL_POTRO
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     FELICIANO_LOPEZ: 2.85,
                     JUAN_MARTIN_DEL_POTRO: 1.38

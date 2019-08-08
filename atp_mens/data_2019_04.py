@@ -960,7 +960,7 @@ DATA_2019_04 = [
                     JIRI_VESELY
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     PABLO_ANDUJAR: 1.77,
                     JIRI_VESELY: 2.05
@@ -1205,7 +1205,7 @@ DATA_2019_04 = [
                     MARCO_TRUNGELLITI
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 # no odds
             },
 
@@ -1693,7 +1693,7 @@ DATA_2019_04 = [
                     GILLES_SIMON
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     FABIO_FOGNINI: 1.91,
                     GILLES_SIMON: 1.87

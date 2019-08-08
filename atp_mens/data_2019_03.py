@@ -699,7 +699,7 @@ DATA_2019_03 = [
                     BERNARD_TOMIC
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     ALEXEI_POPYRIN: 2.03,
                     BERNARD_TOMIC: 1.63
@@ -946,7 +946,7 @@ DATA_2019_03 = [
                     FELICIANO_LOPEZ
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     ALEX_DE_MINAUR: 1.28,
                     FELICIANO_LOPEZ: 3.80
@@ -3106,7 +3106,7 @@ DATA_2019_03 = [
                     GAEL_MONFILS
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     DOMINIC_THIEM: 2.20,
                     GAEL_MONFILS: 1.65
@@ -3159,7 +3159,7 @@ DATA_2019_03 = [
                     RAFAEL_NADAL
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     ROGER_FEDERER: 1.44,
                     RAFAEL_NADAL: 2.80
@@ -3511,7 +3511,7 @@ DATA_2019_03 = [
                     DENIS_ISTOMIN
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     LUKAS_LACKO: 2.40,
                     DENIS_ISTOMIN: 1.54
@@ -4139,7 +4139,7 @@ DATA_2019_03 = [
                     MAXIMILIAN_MARTERER
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     MILOS_RAONIC: 1.20,
                     MAXIMILIAN_MARTERER: 4.84
@@ -4310,7 +4310,7 @@ DATA_2019_03 = [
                     DAMIR_DZUMHUR
                 ],
                 'score': [],
-                'wo': True,
+                'retired': True,
                 'odds': {
                     MARCO_CECCHINATO: 1.71,
                     DAMIR_DZUMHUR: 2.17
