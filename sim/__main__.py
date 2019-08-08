@@ -81,7 +81,9 @@ def main(bet_params):
 
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
     estimators, max_depth, bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b = bet_params
-    estimators = int(round(estimators * 100))
+    if estimators > 5:
+        estimators = 5 - (estimators - 5)
+    estimators = max(int(round(estimators * 100)), 10)
     max_depth = int(round(max_depth))
 
     # init
@@ -321,7 +323,10 @@ if __name__ == '__main__':
     bet_params_names = ['estimators', 'max depth',
                         'pred lower a', 'pred lower b',
                         'pred higher a', 'pred highter b']
-    bet_params = [9.68404797, 4.74872174, -21.36317812, -65.4707605, 65.44325358, -31.75033329]
+
+    # bet_params = [6.657812324037517, 6.185272681053787, -27.03905101675358, -70.18561085198924, 68.93502768636357, -33.354171027525204]
+    bet_params = [6.662585974532449, 6.197220182453941, -26.923570538389505, -70.06982132376757, 68.7959143768123, -33.28732462855588]
+
     assert len(bet_params) == len(bet_params_names)
 
     train = 0

@@ -30,8 +30,8 @@ def win_probability(team1, team2):
 
 def get_regressor(training_data, label_data, scaler, estimators=100, max_depth=3):
     """get regressor"""
-    #logger.info('')
-    #logger.info('Training model...')
+    logger.info('')
+    logger.info('Training model...')
 
     # scale
     scaler.partial_fit(training_data)
@@ -42,11 +42,11 @@ def get_regressor(training_data, label_data, scaler, estimators=100, max_depth=3
     # reg = GradientBoostingRegressor(n_estimators=1000)
     # reg = reg.fit(X_train, y_train)
     # # mse = mean_squared_error(y_test, reg.predict(X_test))
-    # # #logger.info(f'MSE: {mse:.2f}')
+    # # logger.info(f'MSE: {mse:.2f}')
     # y_pred = reg.predict(X_test)
     # y_pred_bin = [round(value) for value in y_pred]
     # accuracy = accuracy_score(y_test, y_pred_bin)
-    # #logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # sleep(2)
 
     reg = XGBRegressor(n_estimators=estimators, max_depth=max_depth, objective='reg:squarederror', n_jobs=4)
@@ -55,9 +55,9 @@ def get_regressor(training_data, label_data, scaler, estimators=100, max_depth=3
     # y_pred_bin = [round(value) for value in y_pred]
     # accuracy = accuracy_score(y_test, y_pred_bin)
     # score = reg.score(X_test, )
-    # #logger.info(f'Accuracy score: {accuracy*100:.0f}%')
+    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
     # mse = mean_squared_error(y_test, y_pred)
-    # #logger.info(f'MSE: {mse:.2f}')
+    # logger.info(f'MSE: {mse:.2f}')
     # sleep(3)
     # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
     # pyplot.show()
@@ -66,7 +66,7 @@ def get_regressor(training_data, label_data, scaler, estimators=100, max_depth=3
 
 
 def main(bet_params=None):
-    #logger.info('Starting main training')
+    logger.info('Starting main training')
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
     # all_data = DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
@@ -74,7 +74,9 @@ def main(bet_params=None):
         bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b, \
         bet_rnd_bot_a, bet_rnd_bot_b, bet_rnd_top_a, bet_rnd_top_b, \
         bet_upset_bot_a, bet_upset_bot_b, bet_upset_top_a, bet_upset_top_b, = bet_params
-    estimators = int(round(estimators * 100))
+    if estimators > 5:
+        estimators = 5 - (estimators - 5)
+    estimators = max(int(round(estimators * 100)), 10)
     max_depth = int(round(max_depth))
     upsets_cutoff = int(round(upsets_cutoff))
 
@@ -105,8 +107,8 @@ def main(bet_params=None):
             if not reg:
                 start_date = datetime.strptime(event['date'], '%Y-%m-%d')
                 reg = get_regressor(training_data, label_data, scaler, estimators=estimators, max_depth=max_depth)
-            #logger.info('')
-        #logger.info(f'{event["date"]} {event["name"]}')
+            logger.info('')
+        logger.info(f'{event["date"]} {event["name"]}')
 
         for match in event['matches']:
             # skip if no odds:
@@ -237,12 +239,12 @@ def main(bet_params=None):
                         pw = p2
                         predl = p1_pred
                         pl = p1
-                    #logger.warning(f'[{predw*100:.0f}% vs {predl*100:.0f}%] Bet x{bet_multi} on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.warning(f'[{predw*100:.0f}% vs {predl*100:.0f}%] Bet x{bet_multi} on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # prediction bet on
                 elif 'score' not in match:
-                    #logger.warning(f'Pending {p1} vs {p2}')
+                    logger.warning(f'Pending {p1} vs {p2}')
                     continue
 
                 # add data for test of classifier
@@ -273,18 +275,18 @@ def main(bet_params=None):
                 log_players = f'x{bet_multi} {p1} {match.get("score")} {p2}'
                 log_odds = f'[{p1_odds:.2f} vs {p2_odds:.2f}]'
                 log_trueskill = f'[{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]'
-                #logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
+                logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
 
     ###################################
     # Summary
 
-    #logger.info('')
-    #logger.info('Tree info:')
+    logger.info('')
+    logger.info('Tree info:')
     params = reg.get_params()
-    #logger.info(f'Num estimators: {params["n_estimators"]}')
-    #logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
-    #logger.info(f'Max depth: {params["max_depth"]}')
-    #logger.info(f'Accuracy: {reg.score(X_test, y_test)*100:.0f}%')
+    logger.info(f'Num estimators: {params["n_estimators"]}')
+    logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
+    logger.info(f'Max depth: {params["max_depth"]}')
+    logger.info(f'Accuracy: {reg.score(X_test, y_test)*100:.0f}%')
     feature_names = [
         'win%', 'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
@@ -293,26 +295,26 @@ def main(bet_params=None):
         'odds_scaled',
     ]
     features = {k: round(v, 2) for k, v in zip(feature_names, reg.feature_importances_)}
-    #logger.info(f'Features: {features}')
+    logger.info(f'Features: {features}')
 
     if accuracy[1]:
         payouts = np.array(payouts)
-        #logger.info('')
-        #logger.info('Testing:')
-        #logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%')
+        logger.info('')
+        logger.info('Testing:')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%')
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
-        #logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
-        #logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
+        logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
+        logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
 
     if actual[1]:
         tab = np.array(tab)
-        #logger.info('')
-        #logger.info('Actual:')
-        #logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
-        #logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
+        logger.info('')
+        logger.info('Actual:')
+        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
+        logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
-        #logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
+        logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
     return -(sum(payouts) / sum(bet_amts))
 
@@ -326,19 +328,12 @@ if __name__ == '__main__':
                         'round highter a', 'round higher b',
                         'upset lower a', 'upset higher b',
                         'upset highter a', 'upset higher b']
-    # bet_params = [10.082903911702275, 3.869989799718258, 3.0135043965375337, -19.204300581800386, 34.812524615827286, 44.30030226384012, -21.747153788292984, -16.77053431327639, 35.23408085279844, -1.037212765476975, -22.040156421000287, -15.859656622725607, 35.12502991926313, -1.336550064750914, -22.43509022495746]
-    bet_params = [9.89124304587057, 4.105711802302772, 2.7982434376798175, -16.377576805127003, 35.68277141597596, 46.9652216386256, -23.36541254071933, -11.433383785603342, 35.911703324685625, -0.6901816808222626, -22.790770222940914, -21.43798611924857, 33.615895570559985, -1.3024792529812363, -19.588972058883634]
-
-    [10.10454848531829, 3.827530900860531, 2.9936980881801882, 80.95353368501652, -39.17896986796353, 19.29923537097806,
-     -51.77454436957093, -37.56874936915167, -6.00489111651426, 52.06225544015326, -80.7288615322545,
-     -55.933789170080125, 41.86255991266292, -45.346516706067504, -180.54341840304]
-    [10.081026108603481, 3.926814147452584, 2.7711688582979157, 83.70153838952294, -39.91866661861638,
-     15.99916892392161, -50.80535343484398, -37.277388164345616, -5.229713887641487, 46.92658295843296,
-     -84.76051216531731, -59.318792241193925, 41.41766454410793, -50.72899919458938, -189.46963614649573]
+    bet_params = [5.123248431158846, 2.309121938896886, 5.083795741492823, 83.67261100824891, -40.78535450479765, 13.700230440656233, -61.62217483614453, -34.50322651090568, -1.032014234723834, 38.841348057895246, -77.91972576382933, -59.89647216639294, 42.54565700639217, -54.513849767922665, -183.9259781984919]
+    bet_params = [5.125487339500436, 1.806220199841675, 5.064738656163249, 83.89779438171087, -41.067244546842005, 13.866611661609447, -60.20238154447279, -36.16989434474649, -1.5825075026821844, 38.37588649993351, -78.81826457589437, -58.67442445068153, 41.090915190782745, -54.70298072920294, -184.5697121570442]
 
     assert len(bet_params) == len(bet_params_names)
 
-    train = 1
+    train = 0
 
     if not train:
         main(bet_params)

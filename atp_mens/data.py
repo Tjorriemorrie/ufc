@@ -1,6 +1,7 @@
 from men import *
 
 # acc   roi   profit desc
+# 63.5  21.5  740    estimator cap 500 and limited regressos
 # 65.7  9.7   335    upsets bet param added
 # 65.7  11.3  320    2019-08-08
 # 66.0  11.6  327    optimized
