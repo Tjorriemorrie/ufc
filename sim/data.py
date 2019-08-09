@@ -1,6 +1,9 @@
 from .fighters import *
 
 # acc  roi   profit  desc
+# 65.8 10.1  285     removed redundant gradients!               (2, 196), (1, 172)
+# 64.1 46.9  2891    multi changed to 4                         (5, 206), (1, 141)
+# 64.1 54.1  6186    bet gradients not to be combined           [(11, 155), (1, 141), (5, 10), (10, 10)]
 # 65.8 54.1  6716    estimators capped to 500
 # 64.7 55    7013    added max depth (optimized)
 # 67   12.09 415     removed max bet of 10 (no diff)
@@ -9,24 +12,23 @@ from .fighters import *
 # 60   5.94  536     1x3    removed prob scaling (1, 507), (2, 246), (3, 149)
 # 60   3.11  596     2x3    reduced pred (bad?) and added prob scaling (4, 262), (3, 258), (5, 183)
 # 60   5.67  734     1-5-5  linear bet scaling for max pred
-# 55  1.3  101  ufc 240
-# 55  1.4  bet updating fixed
 
+# 55  1.3  101  ufc 240
 # 65  13.1  bet multi for LOWER pred
 # 65  1.55  bet unit fixed at 5
 # 63 7.44 <- scaling bets on diff?
 # 70 0.83 <- xgb50
-# 67 1.08 <- xgb1k
-# 66 1.17 <- xgb2k
 
+# 67 1.08 <- xgb1k
 # 64 0.66
 # 63 -0.48
 # 59 -1.16
 # 92.0 6.53
 # 92 6.49
 # 90 5.83 <- xgb1500
+
 # 88 5.37 <- 1000 estimators
-# 74 1.68
+
 
 DATA = [
     {

@@ -80,11 +80,11 @@ def main(bet_params):
     logger.info('Starting main training')
 
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
-    estimators, max_depth, bet_pred_bot_a, bet_pred_bot_b, bet_pred_top_a, bet_pred_top_b = bet_params
+    estimators, max_depth, bet_pred_a, bet_pred_b = bet_params
     if estimators > 5:
-        estimators = 5 - (estimators - 5)
+        estimators = 5 - (estimators - 5) * 2
     estimators = max(int(round(estimators * 100)), 10)
-    max_depth = int(round(max_depth))
+    max_depth = max(int(round(max_depth)), 1)
 
     # init
     reg = None
@@ -205,18 +205,16 @@ def main(bet_params):
             else:
                 scaled_fight_data = scaler.transform(fight_data)
                 pred1, pred2 = reg.predict(scaled_fight_data)
-                fw_pred = pred1 if is_win_1 else pred2
-                fl_pred = pred2 if not is_win_1 else pred1
 
                 #############################
                 # bet scaling
                 bet_multi = 1
 
                 # pred
-                bet_pred_bot_multi = np.polyval([bet_pred_bot_a, bet_pred_bot_b], [fw_pred])[0]
-                bet_multi += min(max(int(round(bet_pred_bot_multi)), 0), 10)
-                bet_pred_top_multi = np.polyval([bet_pred_top_a, bet_pred_top_b], [fw_pred])[0]
-                bet_multi += min(max(int(round(bet_pred_top_multi)), 0), 10)
+                pred_max = max(pred1, pred2)
+                bet_pred_multi = np.polyval([bet_pred_a, bet_pred_b], [pred_max])[0]
+                bet_pred_multi = int(min(max(round(bet_pred_multi), 0), 4))
+                bet_multi += bet_pred_multi
 
                 bet_multis.append(bet_multi)
                 bet_size *= bet_multi
@@ -225,7 +223,17 @@ def main(bet_params):
 
                 # prediction made
                 if 'prediction' in fight and fight['prediction'] is None:
-                    logger.warning(f'[{fw_pred * 100:.0f}% vs {fl_pred * 100:.0f}%] Bet x{bet_multi} on {fw} to beat {fl} [{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]')
+                    if pred1 > pred2:
+                        exp_winner = f1
+                        pred_exp_winner = pred1
+                        exp_loser = f2
+                        pred_exp_loser = pred2
+                    else:
+                        exp_winner = f2
+                        pred_exp_winner = pred2
+                        exp_loser = f2
+                        pred_exp_loser = pred1
+                    logger.warning(f'[{pred_exp_winner * 100:.0f}% vs {pred_exp_loser * 100:.0f}%] Bet x{bet_multi} on {exp_winner} to beat {exp_loser} [{ratings[exp_winner].mu:.0f} vs {ratings[exp_loser].mu:.0f}]')
                     continue
 
                 # good luck with your bets
@@ -233,16 +241,16 @@ def main(bet_params):
                     logger.warning(f'Pending {f1} vs {f2}')
                     continue
 
-                # add test data
-                X_test.extend(scaled_fight_data)
-                y_test.extend([is_win_1, not is_win_1])
-
                 if is_win_1:
                     fw_pred = pred1
                     fl_pred = pred2
                 else:
                     fw_pred = pred2
                     fl_pred = pred1
+
+                # add test data
+                X_test.extend(scaled_fight_data)
+                y_test.extend([is_win_1, not is_win_1])
 
                 # testing outcome
                 correct = 0
@@ -321,11 +329,11 @@ def main(bet_params):
 
 if __name__ == '__main__':
     bet_params_names = ['estimators', 'max depth',
-                        'pred lower a', 'pred lower b',
-                        'pred higher a', 'pred highter b']
+                        'pred a', 'pred b',
+                        ]
 
-    # bet_params = [6.657812324037517, 6.185272681053787, -27.03905101675358, -70.18561085198924, 68.93502768636357, -33.354171027525204]
-    bet_params = [6.662585974532449, 6.197220182453941, -26.923570538389505, -70.06982132376757, 68.7959143768123, -33.28732462855588]
+    # bet_params = [3.640572464631272, 7.412140255929247, 2.4432947032639696, -0.9560821416378082]
+    bet_params = [4.435930060312256, 5.911364087229136, 1.630943358373012, -0.6400536424727375]
 
     assert len(bet_params) == len(bet_params_names)
 
