@@ -2,6 +2,1085 @@ from men import *
 
 DATA_2018_10 = [
     {
+        'name': 'China Open',
+        'category': 'ATP500',
+        'date': '2018-10-07',
+        'location': 'Beijing, China',
+        'matches': [
+
+            # 2018-09-29
+            {
+                'round': 512,
+                'players': [
+                    VIKTOR_TROICKI,
+                    ZHE_LI
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    VIKTOR_TROICKI: 1.31,
+                    ZHE_LI: 3.62
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RADU_ALBOT,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    RADU_ALBOT: 2.40,
+                    MIKHAIL_KUKUSHKIN: 1.56
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    VASEK_POSPISIL,
+                    RIGELE_TE
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    VASEK_POSPISIL: 1.19,
+                    RIGELE_TE: 4.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ZHIZHEN_ZHANG
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.11,
+                    ZHIZHEN_ZHANG: 5.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TENNYS_SANDGREN,
+                    RAMKUMAR_RAMANATHAN
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    TENNYS_SANDGREN: 1.59,
+                    RAMKUMAR_RAMANATHAN: 2.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    DI_WU
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.15,
+                    DI_WU: 4.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JIRI_VESELY,
+                    EVGENY_DONSKOY
+                ],
+                'score': [(7, 6), (6, 3)]
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    CAMERON_NORRIE,
+                    ILYA_IVASHKA
+                ],
+                'score': [(6, 3), (7, 5)]
+                # no odds
+            },
+
+            # 2018-09-30
+            {
+                'round': 256,
+                'players': [
+                    RADU_ALBOT,
+                    VIKTOR_TROICKI
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    RADU_ALBOT: 1.57,
+                    VIKTOR_TROICKI: 2.15
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    JIRI_VESELY
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.43,
+                    JIRI_VESELY: 2.50
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    VASEK_POSPISIL,
+                    TENNYS_SANDGREN
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    VASEK_POSPISIL: 1.74,
+                    TENNYS_SANDGREN: 1.94
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.67,
+                    CAMERON_NORRIE: 1.89
+                }
+            },
+
+            # 2018-10-01
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    GAEL_MONFILS
+                ],
+                'score': [(2, 6), (7, 6), (7, 6)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.91,
+                    GAEL_MONFILS: 1.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    VASEK_POSPISIL
+                ],
+                'score': [(2, 6), (6, 4), (6, 4)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.63,
+                    VASEK_POSPISIL: 2.19
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KAREN_KHACHANOV,
+                    SAM_QUERREY
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    KAREN_KHACHANOV: 1.57,
+                    SAM_QUERREY: 2.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MALEK_JAZIRI,
+                    YIBING_WU
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    MALEK_JAZIRI: 1.68,
+                    YIBING_WU: 2.22
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.80,
+                    ANDREAS_SEPPI: 2.02
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    LEONARDO_MAYER
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.43,
+                    LEONARDO_MAYER: 2.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    BORNA_CORIC
+                ],
+                'score': [(7, 5), (5, 7), (7, 5)],
+                'odds': {
+                    FELICIANO_LOPEZ: 4.00,
+                    BORNA_CORIC: 1.23
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KYLE_EDMUND,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(3, 6), (6, 1), (6, 2)],
+                'odds': {
+                    KYLE_EDMUND: 1.43,
+                    PETER_GOJOWCZYK: 2.66
+                }
+            },
+
+            # 2018-10-02
+            {
+                'round': 32,
+                'players': [
+                    ANDREY_RUBLEV,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 0), (6, 4)],
+                'odds': {
+                    ANDREY_RUBLEV: 1.71,
+                    JOAO_SOUSA: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(6, 1), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCO_CECCHINATO,
+                    MARCOS_BAGHDATIS
+                ],
+                'score': [(1, 6), (6, 4), (7, 5)],
+                'odds': {
+                    MARCO_CECCHINATO: 2.24,
+                    MARCOS_BAGHDATIS: 1.67
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    JACK_SOCK
+                ],
+                'score': [(6, 7), (7, 5), (6, 2)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.79,
+                    JACK_SOCK: 1.95
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FABIO_FOGNINI,
+                    RADU_ALBOT
+                ],
+                'score': [(1, 6), (6, 3), (6, 3)],
+                'odds': {
+                    FABIO_FOGNINI: 1.40,
+                    RADU_ALBOT: 2.85
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    TENNYS_SANDGREN
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.22,
+                    TENNYS_SANDGREN: 4.18
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ROBERTO_BAUTISTA_AGUT
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.36,
+                    ROBERTO_BAUTISTA_AGUT: 3.36
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.11,
+                    ALBERT_RAMOS_VINOLAS: 6.50
+                }
+            },
+
+            # 2018-10-03
+            {
+                'round': 16,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.50,
+                    FELICIANO_LOPEZ: 2.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KYLE_EDMUND,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(7, 5), (6, 7), (7, 5)],
+                'odds': {
+                    KYLE_EDMUND: 1.71,
+                    MATTEO_BERRETTINI: 2.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    GRIGOR_DIMITROV
+                ],
+                'score': [(6, 4), (2, 6), (6, 4)],
+                'odds': {
+                    DUSAN_LAJOVIC: 3.40,
+                    GRIGOR_DIMITROV: 1.32
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    KAREN_KHACHANOV
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.38,
+                    KAREN_KHACHANOV: 3.00
+                }
+            },
+
+            # 2018-10-04
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.25,
+                    FERNANDO_VERDASCO: 1.57
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.45,
+                    MARCO_CECCHINATO: 2.80
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FABIO_FOGNINI,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    FABIO_FOGNINI: 1.83,
+                    ANDREY_RUBLEV: 1.91
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MALEK_JAZIRI,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(7, 6), (2, 6), (6, 4)],
+                'odds': {
+                    MALEK_JAZIRI: 9.00,
+                    ALEXANDER_ZVEREV: 1.07
+                }
+            },
+
+            # 2018-10-05
+            {
+                'round': 8,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    MALEK_JAZIRI
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.50,
+                    MALEK_JAZIRI: 2.40
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KYLE_EDMUND,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    KYLE_EDMUND: 1.61,
+                    DUSAN_LAJOVIC: 2.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FABIO_FOGNINI,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    FABIO_FOGNINI: 1.50,
+                    MARTON_FUCSOVICS: 2.55
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    FILIP_KRAJINOVIC
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.14,
+                    FILIP_KRAJINOVIC: 5.75
+                }
+            },
+
+            # 2018-10-06
+            {
+                'round': 4,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    KYLE_EDMUND
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.45,
+                    KYLE_EDMUND: 1.50
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    FABIO_FOGNINI
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.19,
+                    FABIO_FOGNINI: 4.75
+                }
+            },
+
+            # 2018-10-07
+            {
+                'round': 2,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    JUAN_MARTIN_DEL_POTRO
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 5.40,
+                    JUAN_MARTIN_DEL_POTRO: 1.14
+                }
+            },
+        ]
+    },
+
+    {
+        'name': 'Rakuten Japan Open Tennis Championships',
+        'category': 'ATP500',
+        'date': '2018-10-06',
+        'location': 'Tokyo, Japan',
+        'matches': [
+
+            # 2018-09-28
+            {
+                'round': 512,
+                'players': [
+                    YOSUKE_WATANUKI,
+                    TIM_SMYCZEK
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    YOSUKE_WATANUKI: 1.74,
+                    TIM_SMYCZEK: 1.95
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YASUTAKA_UCHIYAMA,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    YASUTAKA_UCHIYAMA: 2.25,
+                    HUBERT_HURKACZ: 1.61
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BRADLEY_KLAHN,
+                    RUBEN_BEMELMANS
+                ],
+                'score': [(2, 6), (6, 3), (7, 6)],
+                'odds': {
+                    BRADLEY_KLAHN: 1.74,
+                    RUBEN_BEMELMANS: 1.92,
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TATSUMA_ITO,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(6, 4), (1, 6), (6, 3)],
+                'odds': {
+                    TATSUMA_ITO: 2.27,
+                    MACKENZIE_MCDONALD: 1.53
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DENIS_KUDLA,
+                    HORACIO_ZEBALLOS
+                ],
+                'score': [(6, 2), (3, 6), (6, 4)],
+                'odds': {
+                    DENIS_KUDLA: 1.33,
+                    HORACIO_ZEBALLOS: 3.08
+                }
+            },
+
+            # 2018-09-29
+            {
+                'round': 512,
+                'players': [
+                    EGOR_GERASIMOV,
+                    MARIUS_COPIL
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    EGOR_GERASIMOV: 2.05,
+                    MARIUS_COPIL: 1.69
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARTIN_KLIZAN,
+                    PRAJNESH_GUNNESWARAN
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.22,
+                    PRAJNESH_GUNNESWARAN: 4.17
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    HIROKI_MORIYA
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.11,
+                    HIROKI_MORIYA: 5.20
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    YOSUKE_WATANUKI,
+                    TATSUMA_ITO
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    YOSUKE_WATANUKI: 1.69,
+                    TATSUMA_ITO: 2.05
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DENIS_KUDLA,
+                    YASUTAKA_UCHIYAMA
+                ],
+                'score': [(6, 3), (1, 6), (6, 3)],
+                'odds': {
+                    DENIS_KUDLA: 1.67,
+                    YASUTAKA_UCHIYAMA: 2.10
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARTIN_KLIZAN,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.37,
+                    BRADLEY_KLAHN: 2.90
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(6, 7), (6, 3), (6, 3)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.27,
+                    EGOR_GERASIMOV: 3.59
+                }
+            },
+
+            # 2018-09-30
+            {
+                'round': 32,
+                'players': [
+                    YOSUKE_WATANUKI,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 7), (6, 4), (6, 1)],
+                'odds': {
+                    YOSUKE_WATANUKI: 2.45,
+                    ROBIN_HAASE: 1.59
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    BENOIT_PAIRE: 1.50,
+                    NICOLAS_JARRY: 2.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    HYEON_CHUNG
+                ],
+                'score': [(6, 3), (3, 6), (6, 2)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.63,
+                    HYEON_CHUNG: 2.31
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MILOS_RAONIC,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MILOS_RAONIC: 1.24,
+                    ADRIAN_MANNARINO: 4.25
+                }
+            },
+
+            # 2018-10-01
+            {
+                'round': 32,
+                'players': [
+                    STAN_WAWRINKA,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    STAN_WAWRINKA: 1.42,
+                    TAYLOR_FRITZ: 2.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FRANCES_TIAFOE,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    FRANCES_TIAFOE: 1.59,
+                    MAXIMILIAN_MARTERER: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTIN_KLIZAN,
+                    STEVE_JOHNSON
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.69,
+                    STEVE_JOHNSON: 2.12
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JEREMY_CHARDY,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(4, 6), (6, 3), (6, 3)],
+                'odds': {
+                    JEREMY_CHARDY: 2.00,
+                    DAMIR_DZUMHUR: 1.71
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICHARD_GASQUET,
+                    DENIS_KUDLA
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    RICHARD_GASQUET: 1.38,
+                    DENIS_KUDLA: 2.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.67,
+                    DIEGO_SCHWARTZMAN: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KEI_NISHIKORI,
+                    YUICHI_SUGITA
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    KEI_NISHIKORI: 1.11,
+                    YUICHI_SUGITA: 7.00
+                }
+            },
+
+            # 2018-10-02
+            {
+                'round': 32,
+                'players': [
+                    NICK_KYRGIOS,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    NICK_KYRGIOS: 1.34,
+                    YOSHIHITO_NISHIOKA: 3.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    GILLES_SIMON
+                ],
+                'score': [(6, 7), (7, 6), (6, 2)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.98,
+                    GILLES_SIMON: 1.74
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.36,
+                    TARO_DANIEL: 3.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KEVIN_ANDERSON,
+                    MATTHEW_EBDEN
+                ],
+                'score': [(4, 6), (7, 6), (6, 2)],
+                'odds': {
+                    KEVIN_ANDERSON: 1.17,
+                    MATTHEW_EBDEN: 4.43
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    MARIN_CILIC
+                ],
+                'score': [(3, 6), (6, 4), (7, 6)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 4.25,
+                    MARIN_CILIC: 1.22
+                }
+            },
+
+            # 2018-10-03
+            {
+                'round': 16,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    JEREMY_CHARDY
+                ],
+                'score': [(7, 6), (6, 7), (6, 4)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.71,
+                    JEREMY_CHARDY: 2.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    STAN_WAWRINKA
+                ],
+                'score': [(4, 6), (6, 1), (6, 4)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 2.28,
+                    STAN_WAWRINKA: 1.61
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    MARTIN_KLIZAN
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.67,
+                    MARTIN_KLIZAN: 2.05
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MILOS_RAONIC,
+                    YOSUKE_WATANUKI
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    MILOS_RAONIC: 1.11,
+                    YOSUKE_WATANUKI: 6.25
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KEI_NISHIKORI,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    KEI_NISHIKORI: 1.24,
+                    BENOIT_PAIRE: 3.80
+                }
+            },
+
+            # 2018-10-04
+            {
+                'round': 16,
+                'players': [
+                    RICHARD_GASQUET,
+                    NICK_KYRGIOS
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    RICHARD_GASQUET: 2.40,
+                    NICK_KYRGIOS: 1.51
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(6, 3), (5, 7), (6, 1)],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.63,
+                    ALEX_DE_MINAUR: 2.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KEVIN_ANDERSON,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 3), (3, 6), (6, 2)],
+                'odds': {
+                    KEVIN_ANDERSON: 1.42,
+                    FRANCES_TIAFOE: 2.75
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(4, 6), (7, 6), (6, 4)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.43,
+                    JAN_LENNARD_STRUFF: 2.80
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    MILOS_RAONIC
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    DANILL_MEDVEDEV: 2.65,
+                    MILOS_RAONIC: 1.43
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KEI_NISHIKORI,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    KEI_NISHIKORI: 1.42,
+                    STEFANOS_TSITSIPAS: 2.90
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RICHARD_GASQUET,
+                    KEVIN_ANDERSON
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    RICHARD_GASQUET: 2.10,
+                    KEVIN_ANDERSON: 1.71
+                }
+            },
+
+            # 2018-10-06
+            {
+                'round': 4,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.73,
+                    DENIS_SHAPOVALOV: 1.98
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    KEI_NISHIKORI,
+                    RICHARD_GASQUET
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    KEI_NISHIKORI: 1.38,
+                    RICHARD_GASQUET: 2.94
+                }
+            },
+
+            # 2018-10-07
+            {
+                'round': 2,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    KEI_NISHIKORI
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    DANILL_MEDVEDEV: 3.00,
+                    KEI_NISHIKORI: 1.35
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'Rolex Shanghai Masters',
         'category': 'ATP1000',
         'date': '2018-10-13',

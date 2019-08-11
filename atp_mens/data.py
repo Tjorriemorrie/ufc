@@ -1,34 +1,31 @@
 from men import *
 
 # acc   roi   profit desc
+# 68.1  7.4   105    optimized
+# 67.1  2.5   49     2018-10-07 China Open
+# 67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
+# 66.1  -.9   -14    2018-10-06 Rakuten Japan Open Tennis Championships (1, 385), (3, 261), (2, 131), (4, 46)
+# 68.6  6.2   101    optimized
+# 69.0  6.5   97     2019-08-11
 # 69.1  6.9   99     optimized                              (1, 413), (3, 213), (2, 128), (4, 30)
 # 68.7  7.3   104    added 3rd bet param                    (1, 412), (3, 212), (2, 130), (4, 30)
 # 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
 # 67.7  5.6   91     fixed pred and replaced rnd with odds
 # 66.5  16.7  219    removed upset bet param                (2, 514), (1, 262)
 # 65.3  8.2   173    2019-08-09
+
 # 65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
-# 66.2  13.2  274    removed duplicate gradients!           (3, 478), (2, 286)
 # 63.5  21.5  740    bet gradients intersecting but with max makes no difference (4, 350), (7, 254), (1, 150)
-# 63.5  21.5  740    estimator cap 500 and limited regressos
 # 65.7  9.7   335    upsets bet param added
-# 65.7  11.3  320    2019-08-08
-
 # 66.0  11.6  327    optimized
+
 # 64.0  4     125    optimized with favourite with new match
-# 65    9     238    optimized favourite
 # 64    7     187    2018-10-21 Intrum Stockholm Open
-# 64    5     139    2018-10-28 Erste Bank Open 500
-
 # 64    11    275    enabled betting on qualifiers
-# 59    6.96  126    optimized                               [(4, 283), (3, 225)]
-# 65    7.51  173    2019-01-06 Brisbane International      [(4, 394), (3, 241)]
-# 66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
-# 53    2.37  120    2019-02-10 Sofia Open  (-3.0, 613), (-4.0, 45), (2.68, 17), (0.96, 15)
 
+# 59    6.96  126    optimized                               [(4, 283), (3, 225)]
+# 66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
 # 67    3.48  162    2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
-# 67  0.41  skipping bets based on pred (none excluded)
-# 65  -0.0  hamburg updated
 
 
 DATA = [
