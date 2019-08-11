@@ -17,6 +17,7 @@ from .data_2019_02 import DATA_2019_02
 from .data_2019_03 import DATA_2019_03
 from .data_2019_04 import DATA_2019_04
 from .data_2019_05 import DATA_2019_05
+from .data_2019_06 import DATA_2019_06
 
 
 def win_probability(team1, team2):
@@ -68,15 +69,14 @@ def get_regressor(training_data, label_data, scaler, estimators=100, max_depth=3
 def main(bet_params=None):
     logger.info('Starting main training')
 
-    all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
+    all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
     # all_data = DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA
     estimators, max_depth, \
         upsets_cutoff, \
-        bet_pred_a, bet_pred_b, \
-        bet_rnd_a, bet_rnd_b, \
-        bet_upset_a, bet_upset_b = bet_params
-    if estimators > 5:
-        estimators = 5 - (estimators - 5) * 2
+        bet_pred_a, bet_pred_b, bet_pred_c, \
+        bet_odds_a, bet_odds_b, bet_odds_c = bet_params
+    if estimators > 10:
+        return -estimators * 100
     estimators = max(int(round(estimators * 100)), 10)
     max_depth = max(int(round(max_depth)), 1)
     upsets_cutoff = int(round(upsets_cutoff))
@@ -197,24 +197,18 @@ def main(bet_params=None):
                 bet_multi = 1
 
                 # pred
-                bet_pred_multi = np.polyval([bet_pred_a, bet_pred_a], [p1_pred])[0]
+                pred_max = max(p1_pred, p2_pred)
+                bet_pred_multi = np.polyval([bet_pred_a, bet_pred_b, bet_pred_c], [pred_max])[0]
                 bet_pred_multi = int(min(max(round(bet_pred_multi), 0), 3))
                 bet_multi += bet_pred_multi
                 bet_multis_cat.append(f'bet_pred_multi-{bet_pred_multi}')
 
-                # round
-                rnd = 1 / match['round']
-                bet_rnd_multi = np.polyval([bet_rnd_a, bet_rnd_b], [rnd])[0]
-                bet_rnd_multi = int(min(max(round(bet_rnd_multi), 0), 3))
-                bet_multi += bet_rnd_multi
-                bet_multis_cat.append(f'bet_rnd_multi-{bet_rnd_multi}')
-
-                # upset
-                total_upsets = sum(upsets[p1]) + sum(upsets[p2])
-                bet_upset_multi = np.polyval([bet_upset_a, bet_upset_b], [total_upsets])[0]
-                bet_upset_multi = int(min(max(round(bet_upset_multi), 0), 3))
-                bet_multi += bet_upset_multi
-                bet_multis_cat.append(f'bet_upset_multi-{bet_upset_multi}')
+                # odds
+                odds_diff = abs(1 / p1_odds - 1 / p2_odds)
+                bet_odds_multi = np.polyval([bet_odds_a, bet_odds_b, bet_odds_c], [odds_diff])[0]
+                bet_odds_multi = int(min(max(round(bet_odds_multi), 0), 3))
+                bet_multi += bet_odds_multi
+                bet_multis_cat.append(f'bet_odds_multi-{bet_odds_multi}')
 
                 bet_amt = bet_size * bet_multi
                 bet_amts.append(bet_amt)
@@ -316,11 +310,10 @@ def main(bet_params=None):
 if __name__ == '__main__':
     bet_params_names = ['estimators', 'max_depth',
                         'upsets cutoff',
-                        'pred a', 'pred b',
-                        'round a', 'round b',
-                        'upset a', 'upset b']
-    # bet_params = [3.7681689719271922, 4.365844027776482, 3.223161140656567, 0.9966015046596399, -2.4798455851574985, 6.758757314430135, -1.8364660512778817, 1.1579310243435188, -7.362036361246911]
-    bet_params = [3.749055256450084, 4.416565977923752, 3.026670526839089, 0.9921067695677083, -2.6145936599045867, 6.908238367010562, -1.8332061692816344, 1.1436053631196612, -7.485919901370383]
+                        'pred a', 'pred b', 'pred c',
+                        'odds a', 'odds b', 'odds c']
+    # bet_params = [3.0199561142477824, 2.231023519112437, 11.447972705822218, 6.568648728339736, -7.446412018264099, -7.001451985962891, -10.280363793093283, -4.193312214045972, 2.619120934196736]
+    bet_params = [3.0220663202526508, 2.3285461013998883, 11.467360256444653, 6.56281890787927, -7.454518968086031, -6.979435110333805, -10.316794258141716, -4.192478708010047, 2.6205898666700143]
 
     assert len(bet_params) == len(bet_params_names)
 

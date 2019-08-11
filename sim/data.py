@@ -1,33 +1,34 @@
 from .fighters import *
 
-# acc  roi   profit  desc
-# 65.8 10.1  285     removed redundant gradients!               (2, 196), (1, 172)
-# 64.1 46.9  2891    multi changed to 4                         (5, 206), (1, 141)
-# 64.1 54.1  6186    bet gradients not to be combined           [(11, 155), (1, 141), (5, 10), (10, 10)]
-# 65.8 54.1  6716    estimators capped to 500
-# 64.7 55    7013    added max depth (optimized)
-# 67   12.09 415     removed max bet of 10 (no diff)
-# 67   12.09 415     fixed cutoff with all_data :(
-# 59   7.87  709     add estimators number as parameter (1, 707), (2, 78), (3, 70), (4, 44), (5, 36), (6, 18), (7, 16), (8, 8), (9, 4), (11, 3)
-# 60   5.94  536     1x3    removed prob scaling (1, 507), (2, 246), (3, 149)
-# 60   3.11  596     2x3    reduced pred (bad?) and added prob scaling (4, 262), (3, 258), (5, 183)
-# 60   5.67  734     1-5-5  linear bet scaling for max pred
+# acc   roi   profit  desc
+# 69.1  20.6  897     optimized                             (1, 154), (4, 108), (3, 73), (2, 34)
+# 67.4  17.4  770     reverted back to 3 params             (1, 138), (4, 103), (3, 81), (2, 46)
+# 67.4  17.5  801     added exponential param                (1, 138), (4, 125), (3, 65), (2, 40)
+# 67.4  16.5  524     added odds diff
+# 65.8  10.1  285     removed redundant gradients!               (2, 196), (1, 172)
+# 64.1  46.9  2891    multi changed to 4                         (5, 206), (1, 141)
+# 64.1  54.1  6186    bet gradients not to be combined           [(11, 155), (1, 141), (5, 10), (10, 10)]
+# 65.8  54.1  6716    estimators capped to 500
+# 64.7  55    7013    added max depth (optimized)
+# 67    12.09 415     removed max bet of 10 (no diff)
+# 67    12.09 415     fixed cutoff with all_data :(
+# 59    7.87  709     add estimators number as parameter (1, 707), (2, 78), (3, 70), (4, 44), (5, 36), (6, 18), (7, 16), (8, 8), (9, 4), (11, 3)
+# 60    5.94  536     1x3    removed prob scaling (1, 507), (2, 246), (3, 149)
 
-# 55  1.3  101  ufc 240
-# 65  13.1  bet multi for LOWER pred
-# 65  1.55  bet unit fixed at 5
-# 63 7.44 <- scaling bets on diff?
-# 70 0.83 <- xgb50
+# 60    3.11  596     2x3    reduced pred (bad?) and added prob scaling (4, 262), (3, 258), (5, 183)
+# 55    1.3   101     ufc 240
+# 65    13.1          bet multi for LOWER pred
+# 65    1.55          bet unit fixed at 5
+# 63    7.44          <- scaling bets on diff?
+# 70    0.83          <- xgb50
 
-# 67 1.08 <- xgb1k
-# 64 0.66
-# 63 -0.48
-# 59 -1.16
-# 92.0 6.53
-# 92 6.49
-# 90 5.83 <- xgb1500
+# 67    1.08          <- xgb1k
+# 64    0.66
+# 63    -0.48
 
-# 88 5.37 <- 1000 estimators
+# 59    -1.16
+# 92    6.49
+# 88    5.37          <- 1000 estimators
 
 
 DATA = [
@@ -7439,6 +7440,240 @@ DATA = [
                 'prediction': COLBY_COVINGTON,
                 'bet': 20,
             }
+        ]
+    },
+
+    {
+        'date': '2019-08-11',
+        'name': 'UFC Fight Night: Shevchenko vs Carmouche',
+        'location': 'Montevideo Uruguay',
+        'venue': 'Antel Arena',
+        'fights': [
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': POLYANA_VIANA,
+                        'stats': '10-3-0'
+                    },
+                    {
+                        'name': VERONICA_MACEDO,
+                        'stats': '5-3-1'
+                    }
+                ],
+                'odds': {
+                    POLYANA_VIANA: 2.10,
+                    VERONICA_MACEDO: 1.72
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': GILBERT_BURNS,
+                        'stats': '15-3-0'
+                    },
+                    {
+                        'name': ALEKSEI_KUNCHENKO,
+                        'stats': '20-0-0'
+                    },
+                ],
+                'odds': {
+                    GILBERT_BURNS: 2.10,
+                    ALEKSEI_KUNCHENKO: 1.72
+                },
+                'prediction': None,
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': ALEX_DA_SILVA,
+                        'stats': '20-2-0',
+                    },
+                    {
+                        'name': KAZULA_VARGAS,
+                        'stats': '10-2-0'
+                    },
+                ],
+                'odds': {
+                    ALEX_DA_SILVA: 1.36,
+                    KAZULA_VARGAS: 3.00
+                },
+                'prediction': None,
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': CHRIS_GUTIERREZ,
+                        'stats': '13-4-1'
+                    },
+                    {
+                        'name': GERALDO_DE_FREITAS,
+                        'stats': '12-4-0'
+                    }
+                ],
+                'odds': {
+                    CHRIS_GUTIERREZ: 2.05,
+                    GERALDO_DE_FREITAS: 1.75
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': RAULIAN_PAIVA,
+                        'stats': '18-2-0'
+                    },
+                    {
+                        'name': ROGERIO_BONTORIN,
+                        'stats': '15-1-0'
+                    }
+                ],
+                'odds': {
+                    RAULIAN_PAIVA: 1.95,
+                    ROGERIO_BONTORIN: 1.85
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': MARINA_RODRIGUEZ,
+                        'stats': '11-0-1'
+                    },
+                    {
+                        'name': TECIA_TORRES,
+                        'stats': '10-4-0'
+                    }
+                ],
+                'odds': {
+                    MARINA_RODRIGUEZ: 2.25,
+                    TECIA_TORRES: 1.65
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': CIRYL_GANE,
+                        'stats': '3-0-0'
+                    },
+                    {
+                        'name': RAPHAEL_PESSOA_NUNES,
+                        'stats': '9-0-0'
+                    }
+                ],
+                'odds': {
+                    CIRYL_GANE: 1.20,
+                    RAPHAEL_PESSOA_NUNES: 4.20
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': BOBBY_MOFFETT,
+                        'stats': '14-4-0'
+                    },
+                    {
+                        'name': ENRIQUE_BARZOLA,
+                        'stats': '15-4-1'
+                    }
+                ],
+                'odds': {
+                    BOBBY_MOFFETT: 2.10,
+                    ENRIQUE_BARZOLA: 1.72
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': OSKAR_PIECHOTA,
+                        'stats': '11-1-1'
+                    },
+                    {
+                        'name': RODOLFO_VIEIRA,
+                        'stats': '5-0-0'
+                    }
+                ],
+                'odds': {
+                    OSKAR_PIECHOTA: 2.85,
+                    RODOLFO_VIEIRA: 1.40
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': ILIR_LATIFI,
+                        'stats': '14-6-0'
+                    },
+                    {
+                        'name': VOLKAN_OEZDEMIR,
+                        'stats': '15-4-0'
+                    }
+                ],
+                'odds': {
+                    ILIR_LATIFI: 2.25,
+                    VOLKAN_OEZDEMIR: 1.65
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': HUMBERTO_BANDENAY,
+                        'stats': '14-6-0'
+                    },
+                    {
+                        'name': EDUARDO_GARAGORRI,
+                        'stats': '12-0-0'
+                    }
+                ],
+                'odds': {
+                    HUMBERTO_BANDENAY: 2.00,
+                    EDUARDO_GARAGORRI: 1.80
+                },
+                'prediction': None,
+            },
+
+            {
+                'fighters': [
+                    {
+                        'name': MIKE_PERRY,
+                        'stats': '13-4-0'
+                    },
+                    {
+                        'name': VICENTE_LUQUE,
+                        'stats': '16-6-1'
+                    }
+                ],
+                'odds': {
+                    MIKE_PERRY: 2.75,
+                    VICENTE_LUQUE: 1.45
+                },
+                'prediction': None,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': VALENTINA_SHEVCHENKO,
+                        'stats': '17-3-0'
+                    },
+                    {
+                        'name': LIZ_CARMOUCHE,
+                        'stats': '13-6-0'
+                    }
+                ],
+                'odds': {
+                    VALENTINA_SHEVCHENKO: 1.08,
+                    LIZ_CARMOUCHE: 7.50
+                },
+                'prediction': None,
+            },
         ]
     }
 
