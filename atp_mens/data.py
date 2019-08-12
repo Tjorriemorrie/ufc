@@ -6520,10 +6520,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'name': 'Coupe Rogers',
         'category': 'ATP1000',
@@ -7509,9 +7505,25 @@ DATA = [
                 }
             },
 
-            #
+            # 2019-08-11
+            {
+                'round': 2,
+                'players': [
+                    RAFAEL_NADAL,
+                    DANILL_MEDVEDEV,
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    RAFAEL_NADAL: 1.40,
+                    DANILL_MEDVEDEV: 2.90,
+                },
+            }
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'name': 'Western & Southern Open',
@@ -7695,12 +7707,13 @@ DATA = [
             {
                 'round': 256,
                 'players': [
+                    DENIS_KUDLA,
                     ALEXEI_POPYRIN,
-                    DENIS_KUDLA
                 ],
+                'score': [(6, 3), (4, 6), (6, 3)],
                 'odds': {
+                    DENIS_KUDLA: 2.60,
                     ALEXEI_POPYRIN: 1.46,
-                    DENIS_KUDLA: 2.60
                 },
                 'prediction': ALEXEI_POPYRIN,
                 'bet': 2,
@@ -7711,6 +7724,7 @@ DATA = [
                     CASPER_RUUD,
                     FEDERICO_DELBONIS
                 ],
+                'score': [(6, 7), (7, 5), (6, 3)],
                 'odds': {
                     CASPER_RUUD: 1.46,
                     FEDERICO_DELBONIS: 2.40
@@ -7724,6 +7738,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                     JJ_WOLF
                 ],
+                'score': [(6, 3), (4, 6), (6, 2)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 1.22,
                     JJ_WOLF: 4.00,
@@ -7737,6 +7752,7 @@ DATA = [
                     MIOMIR_KECMANOVIC,
                     FELICIANO_LOPEZ
                 ],
+                'score': [(7, 6), (6, 0)],
                 'odds': {
                     MIOMIR_KECMANOVIC: 1.62,
                     FELICIANO_LOPEZ: 2.20
@@ -7747,22 +7763,24 @@ DATA = [
             {
                 'round': 256,
                 'players': [
+                    YOSHIHITO_NISHIOKA,
                     JOAO_SOUSA,
-                    YOSHIHITO_NISHIOKA
                 ],
+                'score': [(6, 4), (0, 6), (6, 4)],
                 'odds': {
+                    YOSHIHITO_NISHIOKA: 1.62,
                     JOAO_SOUSA: 2.20,
-                    YOSHIHITO_NISHIOKA: 1.62
                 },
                 'prediction': JOAO_SOUSA,
                 'bet': 6,
             },
             {
-                'round': 256,
+                'round': 64,
                 'players': [
                     ALEX_DE_MINAUR,
                     MARCO_CECCHINATO
                 ],
+                'score': [(6, 7), (6, 1), (6, 2)],
                 'odds': {
                     ALEX_DE_MINAUR: 1.18,
                     MARCO_CECCHINATO: 4.60
@@ -7773,55 +7791,177 @@ DATA = [
             {
                 'round': 256,
                 'players': [
+                    ANDREY_RUBLEV,
                     MIKHAIL_KUKUSHKIN,
-                    ANDREY_RUBLEV
                 ],
+                'score': [(3, 6), (6, 4), (6, 3)],
                 'odds': {
-                    MIKHAIL_KUKUSHKIN: 2.10,
                     ANDREY_RUBLEV: 1.75,
+                    MIKHAIL_KUKUSHKIN: 2.10,
                 },
                 'prediction': ANDREY_RUBLEV,
                 'bet': 6,
             },
             {
-                'round': 256,
+                'round': 64,
                 'players': [
+                    JOHN_ISNER,
                     DUSAN_LAJOVIC,
-                    JOHN_ISNER
                 ],
+                'score': [(7, 6), (1, 6), (7, 5)],
                 'odds': {
-                    DUSAN_LAJOVIC: 3.60,
                     JOHN_ISNER: 1.28,
+                    DUSAN_LAJOVIC: 3.60,
                 },
                 'prediction': JOHN_ISNER,
                 'bet': 2,
             },
             {
-                'round': 256,
+                'round': 512,
                 'players': [
-                    MATTEO_BERRETTINI,
-                    JUAN_IGNACIO_LONDERO
+                    IVO_KARLOVIC,
+                    PHILIPP_KOHLSCHREIBER,
                 ],
+                'score': [(7, 6), (6, 7), (6, 4)],
                 'odds': {
+                    IVO_KARLOVIC: 2.55,
+                    PHILIPP_KOHLSCHREIBER: 1.41,
+                },
+            },
+
+            # 2018-08-12
+            {
+                'round': 64,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    MATTEO_BERRETTINI,
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 3.00,
                     MATTEO_BERRETTINI: 1.38,
-                    JUAN_IGNACIO_LONDERO: 3.00
                 },
                 'prediction': MATTEO_BERRETTINI,
                 'bet': 2,
             },
             {
-                'round': 256,
+                'round': 64,
                 'players': [
+                    RADU_ALBOT,
                     MARIN_CILIC,
-                    RADU_ALBOT
                 ],
+                'score': [(6, 4), (7, 6)],
                 'odds': {
-                    MARIN_CILIC: 1.32,
                     RADU_ALBOT: 3.30,
+                    MARIN_CILIC: 1.32,
                 },
                 'prediction': MARIN_CILIC,
                 'bet': 2,
             },
+            {
+                'round': 64,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    CHRISTIAN_GARIN,
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.80,
+                    CHRISTIAN_GARIN: 2.00,
+                },
+                'prediction': ADRIAN_MANNARINO,
+                'bet': 6,
+            },
+            {
+                'round': 64,
+                'players': [
+                    RICHARD_GASQUET,
+                    ANDY_MURRAY,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    RICHARD_GASQUET: 1.55,
+                    ANDY_MURRAY: 2.40,
+                },
+                'prediction': RICHARD_GASQUET,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    SAM_QUERREY,
+                    PIERRE_HUGUES_HERBERT,
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    SAM_QUERREY: 1.62,
+                    PIERRE_HUGUES_HERBERT: 2.25,
+                },
+                'prediction': SAM_QUERREY,
+                'bet': 6,
+            },
+            {
+                'round': 64,
+                'players': [
+                    LUCAS_POUILLE,
+                    DENIS_KUDLA,
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    LUCAS_POUILLE: 1.53,
+                    DENIS_KUDLA: 2.35,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    GUIDO_PELLA,
+                    CASPER_RUUD,
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    GUIDO_PELLA: 1.50,
+                    CASPER_RUUD: 2.00,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    JORDAN_THOMPSON,
+                ],
+                'score': [(7, 5), (5, 7), (6, 4)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.65,
+                    JORDAN_THOMPSON: 2.10,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    FELIX_AUGER_ALIASSIME,
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 2.25,
+                    FELIX_AUGER_ALIASSIME: 1.57,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    IVO_KARLOVIC,
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.33,
+                    IVO_KARLOVIC: 3.00,
+                },
+            },
+
+            # ?
             {
                 'round': 256,
                 'players': [
@@ -7860,19 +8000,6 @@ DATA = [
                 },
                 'prediction': DENIS_SHAPOVALOV,
                 'bet': 4,
-            },
-            {
-                'round': 256,
-                'players': [
-                    CHRISTIAN_GARIN,
-                    ADRIAN_MANNARINO
-                ],
-                'odds': {
-                    CHRISTIAN_GARIN: 2.00,
-                    ADRIAN_MANNARINO: 1.80
-                },
-                'prediction': ADRIAN_MANNARINO,
-                'bet': 6,
             },
             {
                 'round': 256,
@@ -7942,19 +8069,6 @@ DATA = [
             {
                 'round': 256,
                 'players': [
-                    ANDY_MURRAY,
-                    RICHARD_GASQUET,
-                ],
-                'odds': {
-                    ANDY_MURRAY: 2.40,
-                    RICHARD_GASQUET: 1.55,
-                },
-                'prediction': RICHARD_GASQUET,
-                'bet': 4,
-            },
-            {
-                'round': 256,
-                'players': [
                     REILLY_OPELKA,
                     BORNA_CORIC,
                 ],
@@ -7963,19 +8077,6 @@ DATA = [
                     BORNA_CORIC: 2.05,
                 },
                 'prediction': REILLY_OPELKA,
-                'bet': 6,
-            },
-            {
-                'round': 256,
-                'players': [
-                    SAM_QUERREY,
-                    PIERRE_HUGUES_HERBERT,
-                ],
-                'odds': {
-                    SAM_QUERREY: 1.62,
-                    PIERRE_HUGUES_HERBERT: 2.25,
-                },
-                'prediction': SAM_QUERREY,
                 'bet': 6,
             },
             {
@@ -7991,8 +8092,6 @@ DATA = [
                 'prediction': BENOIT_PAIRE,
                 'bet': 6,
             },
-
-            #
         ]
     }
 ]
