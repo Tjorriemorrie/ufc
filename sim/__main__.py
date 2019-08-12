@@ -40,53 +40,34 @@ def to_implied_odds(us_odds: float) -> float:
         return 1
 
 
-def get_regressor(training_data, label_data, scaler, estimators=100, max_depth=3):
+def get_regressor(X_train, y_train, X_test=None, y_test=None, estimators=100, max_depth=3):
     """get regressor"""
     logger.info('')
     logger.info('Training model...')
 
-    # scale
-    scaler.partial_fit(training_data)
-    X_train = scaler.transform(training_data)
-    y_train = label_data
+    eval_set = [(np.array(X_train), y_train)]
+    if X_test and y_test:
+        eval_set.append((np.array(X_test), y_test))
 
-    # train
-    # reg = GradientBoostingRegressor(n_estimators=1000)
-    # reg = reg.fit(X_train, y_train)
-    # # mse = mean_squared_error(y_test, reg.predict(X_test))
-    # # logger.info(f'MSE: {mse:.2f}')
-    # y_pred = reg.predict(X_test)
-    # y_pred_bin = [round(value) for value in y_pred]
-    # accuracy = accuracy_score(y_test, y_pred_bin)
-    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
-    # sleep(2)
-
-    reg = XGBRegressor(n_estimators=estimators, max_depth=max_depth, objective='reg:squarederror', n_jobs=4)
-    reg = reg.fit(X_train, y_train)
-    # y_pred = reg.predict(X_test)
-    # y_pred_bin = [round(value) for value in y_pred]
-    # accuracy = accuracy_score(y_test, y_pred_bin)
-    # logger.info(f'Accuracy score: {accuracy*100:.0f}%')
-    # mse = mean_squared_error(y_test, y_pred)
-    # logger.info(f'MSE: {mse:.2f}')
-    # sleep(3)
-    # pyplot.bar(range(len(model.feature_importances_)), model.feature_importances_)
-    # pyplot.show()
+    reg = XGBRegressor(n_estimators=estimators, max_depth=max_depth, objective='reg:squarederror', n_jobs=4, )
+    reg = reg.fit(X_train, y_train, eval_set=eval_set, eval_metric='auc', verbose=0)
 
     return reg
 
 
-def main(bet_params):
+def main(hyper_params, bet_params, train=''):
     logger.info('Starting main training')
 
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
-    estimators, max_depth, \
-        bet_pred_a, bet_pred_b, bet_pred_c, \
-        bet_odds_a, bet_odds_b, bet_odds_c = bet_params
-    if estimators > 5:
-        estimators = 5 - (estimators - 5) * 2
+
+    estimators, max_depth = hyper_params
     estimators = max(int(round(estimators * 100)), 10)
     max_depth = max(int(round(max_depth)), 1)
+    if estimators > 1000:
+        return 1
+
+    bet_pred_a, bet_pred_b, bet_pred_c, \
+        bet_odds_a, bet_odds_b, bet_odds_c = bet_params
 
     # init
     reg = None
@@ -96,8 +77,8 @@ def main(bet_params):
     ratings = defaultdict(lambda: Rating())
     early_fights = defaultdict(lambda: 0.5)
     last_fights = defaultdict(lambda: 0.5)
-    training_data = []
-    label_data = []
+    X_train = []
+    y_train = []
     X_test = []
     y_test = []
     payouts = []
@@ -108,6 +89,7 @@ def main(bet_params):
     actual = (0, 0)
     bet_multis = []
     bet_multis_cat = []
+    preds_flipped = []
 
     # loop through scenes
     for i, scene in enumerate(all_data):
@@ -115,7 +97,10 @@ def main(bet_params):
         if not is_training:
             if not reg:
                 start_date = datetime.strptime(scene['date'], '%Y-%m-%d')
-                reg = get_regressor(training_data, label_data, scaler, estimators=estimators, max_depth=max_depth)
+                # scale
+                scaler.partial_fit(X_train)
+                X_train = scaler.transform(X_train)
+                reg = get_regressor(X_train, y_train, estimators=estimators, max_depth=max_depth)
             logger.info('')
         logger.info(f'{scene["date"]} {scene["name"]}')
 
@@ -201,8 +186,8 @@ def main(bet_params):
             # train
             if is_training:
                 if 'winner' in fight:
-                    training_data.extend(fight_data)
-                    label_data.extend([is_win_1, not is_win_1])
+                    X_train.extend(fight_data)
+                    y_train.extend([is_win_1, not is_win_1])
 
             ###################################
             # test
@@ -243,7 +228,7 @@ def main(bet_params):
                     else:
                         exp_winner = f2
                         pred_exp_winner = pred2
-                        exp_loser = f2
+                        exp_loser = f1
                         pred_exp_loser = pred1
                     logger.warning(f'[{pred_exp_winner * 100:.0f}% vs {pred_exp_loser * 100:.0f}%] Bet x{bet_multi} on {exp_winner} to beat {exp_loser} [{ratings[exp_winner].mu:.0f} vs {ratings[exp_loser].mu:.0f}]')
                     continue
@@ -277,6 +262,7 @@ def main(bet_params):
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
                 # actual outcome
+                pred_flipped = False
                 if 'bet' in fight:
                     is_actual_correct = fight['prediction'] == fw
                     actual = (actual[0] + is_actual_correct, actual[1] + 1)
@@ -286,8 +272,12 @@ def main(bet_params):
                         cash += fw_odds * fight['bet']
                     tab.append(round(cash, 2))
                     tab_amts.append(fight['bet'])
+                    # pred flipped?
+                    pred_flipped = (pred1 > pred2 and fight['prediction'] != f1) or (
+                        pred2 > pred1 and fight['prediction'] != f2)
+                preds_flipped.append(int(pred_flipped))
 
-                log_balance = f'[{sum(payouts):.0f}|{payout:.0f}]'
+                log_balance = f'{"!!" if pred_flipped else "  "}[{sum(payouts):.0f}|{payout:.0f}]'
                 log_pred = f'[{fw_pred * 100:.0f}% vs {fl_pred * 100:.0f}%]'
                 log_fight = f'x{bet_multi} {fw} {fight["winner"]["by"]} {fl}'
                 log_ratings = f'[{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]'
@@ -298,11 +288,13 @@ def main(bet_params):
 
     logger.info('')
     logger.info('Tree info:')
+    reg = get_regressor(X_train, y_train, X_test, y_test, estimators=estimators, max_depth=max_depth)
+    reg_score = reg.evals_result()
     params = reg.get_params()
     logger.info(f'Num estimators: {params["n_estimators"]}')
     logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
     logger.info(f'Max depth: {params["max_depth"]}')
-    logger.info(f'Accuracy: {reg.score(X_test, y_test)*100:.0f}%')
+    logger.info(f'Accuracy: training={reg_score["validation_0"]["auc"][-1]*100:.0f}% testing={reg_score["validation_1"]["auc"][-1]*100:.0f}%')
     feature_names = [
         'win%',
         'odds', '~odds',
@@ -313,7 +305,7 @@ def main(bet_params):
         'wins', '~wins',
         'losses', '~losses',
     ]
-    features = {k: round(v, 2) for k, v in zip(feature_names, reg.feature_importances_)}
+    features = {k: int(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
     logger.info(f'Features: {features}')
 
     if accuracy[1]:
@@ -336,29 +328,49 @@ def main(bet_params):
         days = (datetime.now() - datetime(2019, 7, 13)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
-    logger.info('Done')
-    return -(sum(payouts) / sum(bet_amts))
+    if train == 'hyper':
+        auc_score = reg_score['validation_1']['auc'][-1]
+        return -auc_score
+    elif train == 'bet':
+        return -(sum(payouts) / sum(bet_amts))
 
 
 if __name__ == '__main__':
-    bet_params_names = ['estimators', 'max depth',
-                        'pred a', 'pred b', 'pred c',
-                        'odds a', 'odds b', 'odds c']
+    hyper_flag = 0
+    hyper_names = ['estimators', 'max depth']
+    hyper_params = [0.4578661081627181, 2.8669732638381498]
+    assert len(hyper_params) == len(hyper_names)
 
-    # bet_params = [0.8232631127900935, 5.097681001610484, -1.9298559069959293, -10.79470270765352, -9.12403248237909, -7.9758223838657125, -8.447699441318543, 4.013223555144603]
-    bet_params = [0.812379965944111, 5.124086979634627, -2.138715857357848, -10.651878785773182, -8.949202078372036, -7.975339858775524, -8.498111208690416, 4.0274869667408275]
+    bet_flag = 0
+    bet_names = ['pred a', 'pred b', 'pred c',
+                 'odds a', 'odds b', 'odds c']
+    bet_params = [-3.5593760484773904, -17.93424439517361, -2.7073747762723555, -12.444287120215446, -16.179599063909983, 3.8586041364734887]
+    assert len(bet_params) == len(bet_names)
 
-    assert len(bet_params) == len(bet_params_names)
+    if hyper_flag:
+        es = CMAEvolutionStrategy(hyper_params, 1)
+        while not es.stop():
+            solutions = es.ask()
+            fitness = [main(x, bet_params, train='hyper') for x in solutions]
+            es.tell(solutions, fitness)
+            es.disp()
+            print(list(es.result[0]))
+            print(list(es.result[5]))
+        es.result_pretty()
 
-    train = 0
+        print('')
+        print('best')
+        print(list(es.result[0]))
 
-    if not train:
-        main(bet_params)
-    else:
+        print('')
+        print(
+            'xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        print(list(es.result[5]))
+    elif bet_flag:
         es = CMAEvolutionStrategy(bet_params, 1)
         while not es.stop():
             solutions = es.ask()
-            fitness = [main(x) for x in solutions]
+            fitness = [main(hyper_params, x, train='bet') for x in solutions]
             es.tell(solutions, fitness)
             es.disp()
             print(list(es.result[0]))
@@ -372,3 +384,5 @@ if __name__ == '__main__':
         print('')
         print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
         print(list(es.result[5]))
+    else:
+        main(hyper_params, bet_params)
