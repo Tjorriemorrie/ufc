@@ -32,7 +32,6 @@ DOHA = {
     'category': 'ATP250',
     'location': 'Doha, Qatar',
     'outdoor': True,
-    'surface': 
 }
 
 MOSCOW = {

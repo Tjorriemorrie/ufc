@@ -7961,6 +7961,18 @@ DATA = [
             {
                 'round': 64,
                 'players': [
+                    PABLO_CARRENO_BUSTA,
+                    GILLES_SIMON,
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.65,
+                    GILLES_SIMON: 2.25
+                }
+            },
+            {
+                'round': 64,
+                'players': [
                     NICK_KYRGIOS,
                     LORENZO_SONEGO,
                 ],
@@ -7972,39 +7984,29 @@ DATA = [
                 'prediction': NICK_KYRGIOS,
                 'bet': 2,
             },
+
+            # 2019-08-13
             {
                 'round': 64,
                 'players': [
-                    PABLO_CARRENO_BUSTA,
-                    GILLES_SIMON,
-                ],
-                'score': [(7, 5), (7, 6)],
-                'odds': {
-                    PABLO_CARRENO_BUSTA: 1.65,
-                    GILLES_SIMON: 2.25
-                }
-            },
-
-            # ?
-            {
-                'round': 256,
-                'players': [
+                    STAN_WAWRINKA,
                     GRIGOR_DIMITROV,
-                    STAN_WAWRINKA
                 ],
+                'score': [(5, 7), (6, 4), (7, 6)],
                 'odds': {
+                    STAN_WAWRINKA: 1.36,
                     GRIGOR_DIMITROV: 3.10,
-                    STAN_WAWRINKA: 1.36
                 },
                 'prediction': STAN_WAWRINKA,
                 'bet': 2,
             },
             {
-                'round': 256,
+                'round': 64,
                 'players': [
                     DAVID_GOFFIN,
                     TAYLOR_FRITZ
                 ],
+                'score': [(6, 4), (4, 6), (6, 4)],
                 'odds': {
                     DAVID_GOFFIN: 1.70,
                     TAYLOR_FRITZ: 2.10,
@@ -8013,57 +8015,106 @@ DATA = [
                 'bet': 6,
             },
             {
-                'round': 256,
+                'round': 64,
                 'players': [
-                    FERNANDO_VERDASCO,
-                    BENOIT_PAIRE,
-                ],
-                'odds': {
-                    FERNANDO_VERDASCO: 2.00,
-                    BENOIT_PAIRE: 1.80,
-                },
-                'prediction': BENOIT_PAIRE,
-                'bet': 6,
-            },
-            {
-                'round': 256,
-                'players': [
+                    DIEGO_SCHWARTZMAN,
                     LASLO_DJERE,
-                    DIEGO_SCHWARTZMAN
                 ],
+                'score': [(7, 6), (6, 3)],
                 'odds': {
-                    LASLO_DJERE: 4.40,
                     DIEGO_SCHWARTZMAN: 1.20,
+                    LASLO_DJERE: 4.40,
                 },
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 2,
             },
             {
-                'round': 256,
-                'players': [
-                    GAEL_MONFILS,
-                    FRANCES_TIAFOE,
-                ],
-                'odds': {
-                    GAEL_MONFILS: 1.85,
-                    FRANCES_TIAFOE: 1.95,
-                },
-                'prediction': GAEL_MONFILS,
-                'bet': 6,
-            },
-            {
-                'round': 256,
+                'round': 64,
                 'players': [
                     DANILL_MEDVEDEV,
                     KYLE_EDMUND,
                 ],
+                'score': [(6, 2), (7, 5)],
                 'odds': {
                     DANILL_MEDVEDEV: 1.32,
                     KYLE_EDMUND: 2.80,
                 },
-                'prediction': DANILL_MEDVEDEV,
-                'bet': 2,
+                # 'prediction': DANILL_MEDVEDEV,
+                # 'bet': 2,
             },
+            {
+                'round': 64,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    FABIO_FOGNINI,
+                ],
+                'score': [(2, 6), (6, 3), (6, 2)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.52,
+                    FABIO_FOGNINI: 2.50,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 0,  # 4 refunded
+            },
+            {
+                'round': 64,
+                'players': [
+                    FRANCES_TIAFOE,
+                    GAEL_MONFILS,
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    FRANCES_TIAFOE: 1.95,
+                    GAEL_MONFILS: 1.85,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 0,  # 6 refunded
+            },
+            {
+                'round': 64,
+                'players': [
+                    BENOIT_PAIRE,
+                    FERNANDO_VERDASCO,
+                ],
+                'score': [(6, 4), (0, 0)],
+                'retired': True,
+                'odds': {
+                    BENOIT_PAIRE: 1.80,
+                    FERNANDO_VERDASCO: 2.00,
+                },
+                'prediction': BENOIT_PAIRE,
+                'bet': 0,  # refunded
+            },
+            {
+                'round': 256,
+                'players': [
+                    REILLY_OPELKA,
+                    BORNA_CORIC,
+                ],
+                'score': [(4, 6), (6, 3), (7, 5)],
+                'odds': {
+                    REILLY_OPELKA: 1.75,
+                    BORNA_CORIC: 2.05,
+                },
+                'prediction': REILLY_OPELKA,
+                'bet': 6,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ANDREY_RUBLEV,
+                    NIKOLOZ_BASILASHVILI,
+                ],
+                'score': [(6, 7), (6, 3), (7, 5)],
+                'odds': {
+                    ANDREY_RUBLEV: 2.15,
+                    NIKOLOZ_BASILASHVILI: 1.68,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 4,
+            },
+
+            # ?
             {
                 'round': 256,
                 'players': [
@@ -8075,48 +8126,6 @@ DATA = [
                     ROBERTO_BAUTISTA_AGUT: 1.52
                 },
                 'prediction': ROBERTO_BAUTISTA_AGUT,
-                'bet': 4,
-            },
-
-            {
-                'round': 256,
-                'players': [
-                    FABIO_FOGNINI,
-                    DENIS_SHAPOVALOV
-                ],
-                'odds': {
-                    FABIO_FOGNINI: 2.50,
-                    DENIS_SHAPOVALOV: 1.52
-                },
-                'prediction': DENIS_SHAPOVALOV,
-                'bet': 4,
-            },
-            {
-                'round': 256,
-                'players': [
-                    REILLY_OPELKA,
-                    BORNA_CORIC,
-                ],
-                'odds': {
-                    REILLY_OPELKA: 1.75,
-                    BORNA_CORIC: 2.05,
-                },
-                'prediction': REILLY_OPELKA,
-                'bet': 6,
-            },
-
-            # new
-            {
-                'round': 64,
-                'players': [
-                    ANDREY_RUBLEV,
-                    NIKOLOZ_BASILASHVILI,
-                ],
-                'odds': {
-                    ANDREY_RUBLEV: 2.15,
-                    NIKOLOZ_BASILASHVILI: 1.68,
-                },
-                'prediction': ANDREY_RUBLEV,
                 'bet': 4,
             },
             {

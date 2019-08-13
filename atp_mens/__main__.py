@@ -83,6 +83,7 @@ def main(hyper_params, bet_params, train=''):
     tab = []
     tab_amts = []
     actual = (0, 0)
+    actual_debug = []
     bet_multis = []
     bet_multis_cat = []
 
@@ -249,10 +250,13 @@ def main(hyper_params, bet_params, train=''):
                     is_actual_correct = match['prediction'] == p1
                     actual = (actual[0] + is_actual_correct, actual[1] + 1)
                     cash = -match['bet']
+                    pred_odds = p2_odds
                     if is_actual_correct:
+                        pred_odds = p1_odds
                         cash += p1_odds * match['bet']
                     tab.append(round(cash, 2))
                     tab_amts.append(match['bet'])
+                    actual_debug.append(f'{match["prediction"]} {match["bet"]} {pred_odds:.2f}: {cash:.2f}')
 
                 log_balance = f'[{sum(payouts):.0f}|{payout:.0f}]'
                 log_pred = f'[{p1_pred * 100:.0f}% vs {p2_pred * 100:.0f}%]'
@@ -302,6 +306,11 @@ def main(hyper_params, bet_params, train=''):
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
+        sheet = 0.72
+        if sum(tab) - sheet > 0.01:
+            for l in actual_debug:
+                logger.warning(l)
+            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
     if train == 'hyper':
         print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
@@ -323,7 +332,7 @@ if __name__ == '__main__':
     # rested
     # weather
     hyper_flag = 0
-    hyper_names = ['upsets cutoff', 'whitewashes_cutoff', 'estimators',  # size  100
+    hyper_names = ['upsets cutoff', 'whitewashes_cutoff', 'estimators',  # size ? ? 100
                    'max_depth', 'gamma', 'min_child_weight',  # overfitting  3, 0, 1,
                    'learning_rate/eta', 'scale_pos_weight'  # noise robustness  0.1, 1
                    ]
