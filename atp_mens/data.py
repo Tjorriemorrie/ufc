@@ -1,28 +1,28 @@
 from men import *
 
-# rmse  acc   roi   profit desc
-# 4568  66.8  -3.1  -40    2018-09-30 Shenzhen              (1, 659), (4, 136), (2, 20), (3, 15)
-# 4561  67.4  1.1   15     optimized
-# 4558  66.7  -4.1  -56    2019-08-12
-#       67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
-#       66.0  -5.2  -75    splitted hyper and bet params          (1, 451), (3, 211), (2, 152), (4, 9)
-#       68.1  7.4   105    optimized
-#       67.1  2.5   49     2018-10-07 China Open
-#       67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
-#       66.1  -.9   -14    2018-10-06 Rakuten Japan Open Tennis Championships (1, 385), (3, 261), (2, 131), (4, 46)
+# acc   roi   profit desc
+# 67.2  9.7   139    optimized params
+# 66.8  -3.1  -40    2018-09-30 Shenzhen              (1, 659), (4, 136), (2, 20), (3, 15)
+# 67.4  1.1   15     optimized
+# 66.7  -4.1  -56    2019-08-12
+# 67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
+# 66.0  -5.2  -75    splitted hyper and bet params          (1, 451), (3, 211), (2, 152), (4, 9)
+# 68.1  7.4   105    optimized
+# 67.1  2.5   49     2018-10-07 China Open
 
-#       68.6  6.2   101    optimized
-#       69.1  6.9   99     optimized                              (1, 413), (3, 213), (2, 128), (4, 30)
-#       68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
-#       66.5  16.7  219    removed upset bet param                (2, 514), (1, 262)
+# 67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
+# 68.6  6.2   101    optimized
+# 69.1  6.9   99     optimized                              (1, 413), (3, 213), (2, 128), (4, 30)
+# 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
+# 66.5  16.7  219    removed upset bet param                (2, 514), (1, 262)
 
-#       65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
-#       65.7  9.7   335    upsets bet param added
-#       64.0  4     125    optimized with favourite with new match
+# 65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
+# 65.7  9.7   335    upsets bet param added
+# 64.0  4     125    optimized with favourite with new match
 
-#       64    7     187    2018-10-21 Intrum Stockholm Open
-#       59    6.96  126    optimized                               [(4, 283), (3, 225)]
-#       66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
+# 64    7     187    2018-10-21 Intrum Stockholm Open
+# 59    6.96  126    optimized                               [(4, 283), (3, 225)]
+# 66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
 
 
 DATA = [
@@ -7958,6 +7958,32 @@ DATA = [
                     IVO_KARLOVIC: 3.00,
                 },
             },
+            {
+                'round': 64,
+                'players': [
+                    NICK_KYRGIOS,
+                    LORENZO_SONEGO,
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    NICK_KYRGIOS: 1.32,
+                    LORENZO_SONEGO: 3.30,
+                },
+                'prediction': NICK_KYRGIOS,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    GILLES_SIMON,
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.65,
+                    GILLES_SIMON: 2.25
+                }
+            },
 
             # ?
             {
@@ -7976,32 +8002,6 @@ DATA = [
             {
                 'round': 256,
                 'players': [
-                    LASLO_DJERE,
-                    DIEGO_SCHWARTZMAN
-                ],
-                'odds': {
-                    LASLO_DJERE: 4.40,
-                    DIEGO_SCHWARTZMAN: 1.20,
-                },
-                'prediction': DIEGO_SCHWARTZMAN,
-                'bet': 2,
-            },
-            {
-                'round': 256,
-                'players': [
-                    FABIO_FOGNINI,
-                    DENIS_SHAPOVALOV
-                ],
-                'odds': {
-                    FABIO_FOGNINI: 2.50,
-                    DENIS_SHAPOVALOV: 1.52
-                },
-                'prediction': DENIS_SHAPOVALOV,
-                'bet': 4,
-            },
-            {
-                'round': 256,
-                'players': [
                     DAVID_GOFFIN,
                     TAYLOR_FRITZ
                 ],
@@ -8015,40 +8015,27 @@ DATA = [
             {
                 'round': 256,
                 'players': [
-                    HUBERT_HURKACZ,
-                    ROBERTO_BAUTISTA_AGUT,
+                    FERNANDO_VERDASCO,
+                    BENOIT_PAIRE,
                 ],
                 'odds': {
-                    HUBERT_HURKACZ: 2.50,
-                    ROBERTO_BAUTISTA_AGUT: 1.52
+                    FERNANDO_VERDASCO: 2.00,
+                    BENOIT_PAIRE: 1.80,
                 },
-                'prediction': ROBERTO_BAUTISTA_AGUT,
-                'bet': 4,
+                'prediction': BENOIT_PAIRE,
+                'bet': 6,
             },
             {
                 'round': 256,
                 'players': [
-                    NICK_KYRGIOS,
-                    LORENZO_SONEGO,
+                    LASLO_DJERE,
+                    DIEGO_SCHWARTZMAN
                 ],
                 'odds': {
-                    NICK_KYRGIOS: 1.32,
-                    LORENZO_SONEGO: 3.30,
+                    LASLO_DJERE: 4.40,
+                    DIEGO_SCHWARTZMAN: 1.20,
                 },
-                'prediction': NICK_KYRGIOS,
-                'bet': 2,
-            },
-            {
-                'round': 256,
-                'players': [
-                    DANILL_MEDVEDEV,
-                    KYLE_EDMUND,
-                ],
-                'odds': {
-                    DANILL_MEDVEDEV: 1.32,
-                    KYLE_EDMUND: 2.80,
-                },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 2,
             },
             {
@@ -8067,6 +8054,46 @@ DATA = [
             {
                 'round': 256,
                 'players': [
+                    DANILL_MEDVEDEV,
+                    KYLE_EDMUND,
+                ],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.32,
+                    KYLE_EDMUND: 2.80,
+                },
+                'prediction': DANILL_MEDVEDEV,
+                'bet': 2,
+            },
+            {
+                'round': 256,
+                'players': [
+                    HUBERT_HURKACZ,
+                    ROBERTO_BAUTISTA_AGUT,
+                ],
+                'odds': {
+                    HUBERT_HURKACZ: 2.50,
+                    ROBERTO_BAUTISTA_AGUT: 1.52
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 4,
+            },
+
+            {
+                'round': 256,
+                'players': [
+                    FABIO_FOGNINI,
+                    DENIS_SHAPOVALOV
+                ],
+                'odds': {
+                    FABIO_FOGNINI: 2.50,
+                    DENIS_SHAPOVALOV: 1.52
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 4,
+            },
+            {
+                'round': 256,
+                'players': [
                     REILLY_OPELKA,
                     BORNA_CORIC,
                 ],
@@ -8077,18 +8104,72 @@ DATA = [
                 'prediction': REILLY_OPELKA,
                 'bet': 6,
             },
+
+            # new
             {
-                'round': 256,
+                'round': 64,
                 'players': [
-                    FERNANDO_VERDASCO,
-                    BENOIT_PAIRE,
+                    ANDREY_RUBLEV,
+                    NIKOLOZ_BASILASHVILI,
                 ],
                 'odds': {
-                    FERNANDO_VERDASCO: 2.00,
-                    BENOIT_PAIRE: 1.80,
+                    ANDREY_RUBLEV: 2.15,
+                    NIKOLOZ_BASILASHVILI: 1.68,
                 },
-                'prediction': BENOIT_PAIRE,
-                'bet': 6,
+                'prediction': ANDREY_RUBLEV,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    JOAO_SOUSA,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    JOAO_SOUSA: 2.60,
+                    DENIS_SHAPOVALOV: 1.48,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    SAM_QUERREY,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.09,
+                    SAM_QUERREY: 7.00,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ROGER_FEDERER,
+                    JUAN_IGNACIO_LONDERO,
+                ],
+                'odds': {
+                    ROGER_FEDERER: 1.03,
+                    JUAN_IGNACIO_LONDERO: 11.00,
+                },
+                'prediction': ROGER_FEDERER,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    JOHN_ISNER,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 2.20,
+                    JOHN_ISNER: 1.65,
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 2,
             },
         ]
     }

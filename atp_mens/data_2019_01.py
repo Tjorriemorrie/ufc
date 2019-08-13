@@ -2,10 +2,7 @@ from men import *
 
 DATA_2019_01 = [
     {
-        'name': 'Qatar ExonMobil Open',
-        'category': 'ATP250',
         'date': '2019-01-05',
-        'location': 'Doha, Qatar',
         'matches': [
 
             # 2018-12-29

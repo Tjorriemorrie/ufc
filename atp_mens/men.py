@@ -1,3 +1,6 @@
+SURFACE_HARD = 1
+SURFACE_CLAY = 2
+
 ADAM_EL_MIHDAWY = 'Adam El Mihdawy'
 ADAM_MOUNDIR = 'Adam Moundir'
 ADHAM_GABER = 'Adham Gabr'

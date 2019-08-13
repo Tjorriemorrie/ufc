@@ -1,11 +1,11 @@
 from men import *
+from location import *
+
 
 DATA_2018_10 = [
     {
-        'name': 'Shenzhen',
-        'category': 'ATP250',
+        'location': SHENZHEN,
         'date': '2018-09-30',
-        'location': 'Shenzhen, China',
         'matches': [
 
             # 2018-09-22
@@ -497,10 +497,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'China Open',
-        'category': 'ATP500',
+        'location': BEIJING,
         'date': '2018-10-07',
-        'location': 'Beijing, China',
         'matches': [
 
             # 2018-09-29
@@ -1033,10 +1031,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'Rakuten Japan Open Tennis Championships',
-        'category': 'ATP500',
+        'location': TOKYO,
         'date': '2018-10-06',
-        'location': 'Tokyo, Japan',
         'matches': [
 
             # 2018-09-28
@@ -1576,10 +1572,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'Rolex Shanghai Masters',
-        'category': 'ATP1000',
+        'location': SHANGAI,
         'date': '2018-10-13',
-        'location': 'Shanghai, China',
         'matches': [
 
             # 2018-10-05
@@ -2505,10 +2499,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'VTB Kremlin Cup',
-        'category': 'ATP250',
+        'location': MOSCOW,
         'date': '2018-10-21',
-        'location': 'Moscow, Russia',
         'matches': [
 
             # 2018-10-13
@@ -3003,10 +2995,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'European Open',
-        'category': 'ATP250',
+        'location': ANTWERP,
         'date': '2018-10-21',
-        'location': 'Antwerp, Belgium',
         'matches': [
 
             # 2018-10-14
@@ -3492,10 +3482,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'Intrum Stockholm Open',
-        'category': 'ATP250',
+        'location': STOCKHOLM,
         'date': '2018-10-21',
-        'location': 'Stockholm, Sweden',
         'matches': [
 
             # 2018-10-14
@@ -3985,10 +3973,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'Erste Bank Open 500',
-        'category': 'ATP500',
+        'location': VIENNA,
         'date': '2018-10-28',
-        'location': 'Vienna, Austria',
         'matches': [
 
             # 2018-10-20
@@ -4520,10 +4506,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'Swiss Indoors Basel',
-        'category': 'ATP500',
+        'location': BASEL,
         'date': '2018-10-28',
-        'location': 'Basel, Switzerland',
         'matches': [
 
             # 2018-10-20
@@ -5045,10 +5029,8 @@ DATA_2018_10 = [
     },
 
     {
-        'name': 'Role Paris Masters',
-        'category': 'ATP1000',
+        'location': PARIS,
         'date': '2018-10-27',
-        'location': 'Paris, France',
         'matches': [
 
             # 2018-10-27
