@@ -29,7 +29,7 @@ def win_probability(team1, team2):
     return ts.cdf(delta_mu / denom)
 
 
-def get_regressor(X_train, y_train, X_test=None, y_test=None, estimators=100, max_depth=3, gamma=0, min_child_weight=1):
+def get_regressor(X_train, y_train, X_test=None, y_test=None, **params):
     """get regressor"""
     #logger.info('')
     #logger.info('Training model...')
@@ -38,9 +38,7 @@ def get_regressor(X_train, y_train, X_test=None, y_test=None, estimators=100, ma
     if X_test and y_test:
         eval_set.append((np.array(X_test), y_test))
 
-    reg = XGBRegressor(n_estimators=estimators,
-                       max_depth=max_depth, gamma=gamma, min_child_weight=min_child_weight,
-                       objective='reg:squarederror', n_jobs=4, )
+    reg = XGBRegressor(objective='reg:squarederror', n_jobs=4, **params)
     reg = reg.fit(X_train, y_train, eval_set=eval_set, eval_metric='rmse', verbose=0)
 
     return reg
@@ -51,26 +49,21 @@ def main(hyper_params, bet_params, train=''):
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
-    estimators, max_depth, gamma, min_child_weight = hyper_params
+    upsets_cutoff, whitewashes_cutoff, \
+        estimators, max_depth, gamma, min_child_weight, learning_rate, scale_pos_weight = hyper_params
+    upsets_cutoff = int(round(upsets_cutoff))
+    whitewashes_cutoff = int(round(whitewashes_cutoff))
     reg_params = {
         'estimators': int(round(estimators * 100)),
         'max_depth': int(round(max_depth)),
         'gamma': gamma,
         'min_child_weight': int(round(min_child_weight)),
+        'learning_rate': learning_rate,
+        'scale_pos_weight': scale_pos_weight,
     }
-    if reg_params['estimators'] > 1000 or reg_params['estimators'] < 10:
-        return 1
-    if reg_params['max_depth'] < 1:
-        return 1
-    if reg_params['gamma'] < 0:
-        return 1
-    if reg_params['min_child_weight'] < 0:
-        return 1
 
-    upsets_cutoff, \
-        bet_pred_a, bet_pred_b, bet_pred_c, \
+    bet_pred_a, bet_pred_b, bet_pred_c, \
         bet_odds_a, bet_odds_b, bet_odds_c = bet_params
-    upsets_cutoff = int(round(upsets_cutoff))
 
     # init
     reg = None
@@ -79,6 +72,7 @@ def main(hyper_params, bet_params, train=''):
     start_date = None
     ratings = defaultdict(lambda: Rating())
     upsets = defaultdict(lambda: [])
+    whitewashes = defaultdict(lambda: [])
     X_train = []
     y_train = []
     X_test = []
@@ -119,6 +113,10 @@ def main(hyper_params, bet_params, train=''):
             win1_prob = win_probability([ratings[p1]], [ratings[p2]])
             win2_prob = win_probability([ratings[p2]], [ratings[p1]])
 
+            # comebacks
+            p1_whitewashes = sum(whitewashes[p1])
+            p2_whitewashes = sum(whitewashes[p2])
+
             # upsets
             p1_upsets = sum(upsets[p1])
             p2_upsets = sum(upsets[p2])
@@ -131,6 +129,7 @@ def main(hyper_params, bet_params, train=''):
             match_data = [
                 [
                     win1_prob,
+                    p1_scaled_odds,
                     p1_odds,
                     p2_odds,
                     ratings[p1].mu,
@@ -140,10 +139,12 @@ def main(hyper_params, bet_params, train=''):
                     match['round'],
                     p1_upsets,
                     p2_upsets,
-                    p1_scaled_odds,
+                    p1_whitewashes,
+                    p2_whitewashes,
                 ],
                 [
                     win2_prob,
+                    p2_scaled_odds,
                     p2_odds,
                     p1_odds,
                     ratings[p2].mu,
@@ -153,13 +154,20 @@ def main(hyper_params, bet_params, train=''):
                     match['round'],
                     p2_upsets,
                     p1_upsets,
-                    p2_scaled_odds,
+                    p2_whitewashes,
+                    p1_whitewashes,
                 ]
             ]
 
             #########################################
             # update here as next sections can skip ahead
             if 'score' in match:
+
+                # update whitewashes
+                # if not match.get('retired'):
+                whitewash = all(g[0] > g[1] for g in match['score'])
+                whitewashes[p1] = whitewashes[p1][-whitewashes_cutoff:] + [1 if whitewash else 0]
+                whitewashes[p2] = whitewashes[p2][-whitewashes_cutoff:] + [-1 if whitewash else 0]
 
                 # update upsets
                 upset = win2_prob > 0.50
@@ -168,11 +176,6 @@ def main(hyper_params, bet_params, train=''):
 
                 # update ratings
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
-
-            ###################################
-            # cannot bet on qualifiers
-            # if match['round'] >= 256:
-            #     continue
 
             ###################################
             # train
@@ -263,21 +266,22 @@ def main(hyper_params, bet_params, train=''):
 
     #logger.info('')
     #logger.info('Tree info:')
-    reg = get_regressor(X_train, y_train, X_test, y_test, **reg_params)
+    # reg = get_regressor(X_train, y_train, X_test, y_test, **reg_params)
     reg_score = reg.evals_result()
     params = reg.get_params()
     #logger.info(f'Num estimators: {params["n_estimators"]}')
     #logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
     #logger.info(f'Max depth: {params["max_depth"]}')
-    #logger.info(f'Accuracy: training={reg_score["validation_0"]["rmse"][-1]:.3f}% testing={reg_score["validation_1"]["rmse"][-1]:.3f}%')
+    #logger.info(f'Accuracy: training={reg_score["validation_0"]["rmse"][-1]:.4f}% testing={reg_score["validation_1"]["rmse"][-1]:.4f}%')
     feature_names = [
-        'win%', 'odds', '~odds',
+        'win%', 'odds_scaled',
+        'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
         'round',
         'upsets', '~upsets',
-        'odds_scaled',
+        'whitewashes', '~whitewashes',
     ]
-    features = {k: int(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
+    features = {k: round(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
     #logger.info(f'Features: {features}')
 
     if accuracy[1]:
@@ -285,7 +289,7 @@ def main(hyper_params, bet_params, train=''):
         #logger.info('')
         #logger.info('Testing:')
         #logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%')
-        # logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
+        #logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         #logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
         #logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
@@ -301,32 +305,45 @@ def main(hyper_params, bet_params, train=''):
         #logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
     if train == 'hyper':
-        rmse_train = reg_score['validation_0']['rmse'][-1]
-        rmse_test = reg_score['validation_1']['rmse'][-1]
-        print(f'RMSE: train={rmse_train:.3f} test={rmse_test:.3f}')
-        return rmse_test
+        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
+        return -(sum(payouts) / sum(bet_amts))
+        # rmse_train = reg_score['validation_0']['rmse'][-1]
+        # rmse_test = reg_score['validation_1']['rmse'][-1]
+        # print(f'RMSE: train={rmse_train:.4f} test={rmse_test:.4f}')
+        # return rmse_test + rmse_train / 10
     elif train == 'bet':
         print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         return -(sum(payouts) / sum(bet_amts))
 
 
 if __name__ == '__main__':
+    # add
+    # age
+    # court surface
+    # serve strength
+    # rested
+    # weather
     hyper_flag = 1
-    hyper_names = ['estimators',
-                   'max_depth', 'gamma', 'min_child_weight',  # overfitting
+    hyper_names = ['upsets cutoff', 'whitewashes_cutoff', 'estimators',  # size  100
+                   'max_depth', 'gamma', 'min_child_weight',  # overfitting  3, 0, 1,
+                   'learning_rate/eta', 'scale_pos_weight'  # noise robustness  0.1, 1
                    ]
-    hyper_params = [0.993818911753593, 1.7335505780547737, 0.2863562032744721, 1.3555364003371444]
+    [9.042564756925078, 15.542885368208834, 1.5639593104751492, 6.835386084613393,
+     1.2964123313731617, 8.211606571200019, 0.9281251435466975, 2.942233168900167]
+    hyper_params = [9.705877804071598, 13.233952458847869, 2.0816843771245583, 6.5953568386070645, 4.3182143716209085, 6.842954977459012, 0.6793899674698676, 1.000948313799765]
+    hyper_bounds = [[0, 0, 0.01, 1, 0, 0, 0, 0],
+                    [100, 100, 10, 10, 10, 10, 1, 10]]
     assert len(hyper_params) == len(hyper_names)
 
     bet_flag = 0
-    bet_names = ['upsets cutoff',
-                'pred a', 'pred b', 'pred c',
-                'odds a', 'odds b', 'odds c']
-    bet_params = [6.204758415416216, 5.227511718244461, -13.04157613818179, 2.466444508645768, -10.57579181288428, -32.778563811999696, 5.823803276033563]
+    bet_names = ['pred a', 'pred b', 'pred c',
+                 'odds a', 'odds b', 'odds c']
+    bet_params = [47.40052102580894, -28.754717986288373, -32.57767911821454, -21.09265569173918, -66.15453983752992, 9.085218344300873]
+    bet_bounds = [[-100], [100]]
     assert len(bet_params) == len(bet_names)
 
     if hyper_flag:
-        es = CMAEvolutionStrategy(hyper_params, 1)
+        es = CMAEvolutionStrategy(hyper_params, 0.5, {'bounds': hyper_bounds})
         while not es.stop():
             solutions = es.ask()
             fitness = [main(x, bet_params, train='hyper') for x in solutions]
@@ -346,7 +363,7 @@ if __name__ == '__main__':
         print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
         print(list(es.result[5]))
     elif bet_flag:
-        es = CMAEvolutionStrategy(bet_params, 1)
+        es = CMAEvolutionStrategy(bet_params, 1, {'bounds': bet_bounds})
         while not es.stop():
             solutions = es.ask()
             fitness = [main(hyper_params, x, train='bet') for x in solutions]

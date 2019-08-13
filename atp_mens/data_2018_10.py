@@ -2,6 +2,501 @@ from men import *
 
 DATA_2018_10 = [
     {
+        'name': 'Shenzhen',
+        'category': 'ATP250',
+        'date': '2018-09-30',
+        'location': 'Shenzhen, China',
+        'matches': [
+
+            # 2018-09-22
+            {
+                'round': 512,
+                'players': [
+                    BRADLEY_MOUSLEY,
+                    FAJING_SUN
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    BRADLEY_MOUSLEY: 1.69,
+                    FAJING_SUN: 2.23
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YECONG_HE,
+                    MOHAMED_SAFWAT,
+                ],
+                'score': [(3, 6), (6, 6)],
+                'retired': True,
+                'odds': {
+                    YECONG_HE: 2.90,
+                    MOHAMED_SAFWAT: 1.33
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FILIP_PELIWO,
+                    ZHE_LI
+                ],
+                'score': [(6, 2), (5, 7), (6, 2)],
+                'odds': {
+                    FILIP_PELIWO: 2.00,
+                    ZHE_LI: 1.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TATSUMA_ITO,
+                    FEDERICO_GAIO
+                ],
+                'score': [(4, 6), (6, 3), (6, 1)],
+                'odds': {
+                    TATSUMA_ITO: 1.83,
+                    FEDERICO_GAIO: 1.83
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    ALEXANDER_BUBLIK
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.36,
+                    ALEXANDER_BUBLIK: 2.90
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    MAX_PURCELL
+                ],
+                'score': [(3, 6), (6, 3), (7, 6)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 1.63,
+                    MAX_PURCELL: 2.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JASON_JUNG,
+                    JAMES_WARD
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    JASON_JUNG: 1.54,
+                    JAMES_WARD: 2.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    GO_SOEDA
+                ],
+                'score': [(6, 4), (7, 5)]
+                # no odds
+            },
+
+
+            # 2018-09-23
+            {
+                'round': 256,
+                'players': [
+                    TATSUMA_ITO,
+                    BRADLEY_MOUSLEY
+                ],
+                'score': [(6, 2), (2, 0)],
+                'retired': True,
+                'odds': {
+                    TATSUMA_ITO: 1.38,
+                    BRADLEY_MOUSLEY: 2.75
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    FILIP_PELIWO
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.18,
+                    FILIP_PELIWO: 4.30
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    YECONG_HE
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 1.12,
+                    YECONG_HE: 5.50
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JASON_JUNG,
+                    BRAYDEN_SCHNUR
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    JASON_JUNG: 1.63,
+                    BRAYDEN_SCHNUR: 2.10
+                }
+            },
+
+            # 2018-09-24
+            {
+                'round': 32,
+                'players': [
+                    VIKTOR_TROICKI,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(5, 3)],
+                'retired': True,
+                'odds': {
+                    VIKTOR_TROICKI: 2.55,
+                    GUILLERMO_GARCIA_LOPEZ: 1.48
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    DI_WU
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    CAMERON_NORRIE: 1.30,
+                    DI_WU: 3.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    DENIS_KUDLA
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.74,
+                    DENIS_KUDLA: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.25,
+                    DUSAN_LAJOVIC: 1.62
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 7), (7, 6), (6, 3)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 2.40,
+                    ANDREAS_SEPPI: 1.51
+                }
+            },
+
+            # 2018-09-25
+            {
+                'round': 32,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    JIRI_VESELY
+                ],
+                'score': [(7, 5), (6, 1)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 2.40,
+                    JIRI_VESELY: 1.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDY_MURRAY,
+                    ZHIZHEN_ZHANG
+                ],
+                'score': [(6, 3), (6, 7), (4, 2)],
+                'retired': True,
+                'odds': {
+                    ANDY_MURRAY: 1.10,
+                    ZHIZHEN_ZHANG: 6.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MACKENZIE_MCDONALD,
+                    LUKAS_LACKO
+                ],
+                'score': [(5, 7), (6, 0), (5, 0)],
+                'retired': True,
+                'odds': {
+                    MACKENZIE_MCDONALD: 1.69,
+                    LUKAS_LACKO: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    TATSUMA_ITO
+                ],
+                'score': [(2, 6), (7, 5), (7, 6)],
+                'odds': {
+                    TARO_DANIEL: 1.54,
+                    TATSUMA_ITO: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    YUICHI_SUGITA
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.27,
+                    YUICHI_SUGITA: 3.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    ILYA_IVASHKA
+                ],
+                'score': [(7, 5), (2, 6), (6, 3)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.33,
+                    ILYA_IVASHKA: 3.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    JASON_JUNG
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.33,
+                    JASON_JUNG: 3.00
+                }
+            },
+
+            # 2018-09-26
+            {
+                'round': 16,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    VIKTOR_TROICKI
+                ],
+                'score': [(7, 6), (4, 6), (7, 6)],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.53,
+                    VIKTOR_TROICKI: 2.45
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(7, 6), (3, 6), (7, 5)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 2.55,
+                    DENIS_SHAPOVALOV: 1.50
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CAMERON_NORRIE,
+                    BORNA_CORIC
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    CAMERON_NORRIE: 3.20,
+                    BORNA_CORIC: 1.32
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.40,
+                    STEFANOS_TSITSIPAS: 1.53
+                }
+            },
+
+            # 2018-09-27
+            {
+                'round': 16,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(1, 6), (7, 6), (6, 0)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.29,
+                    MACKENZIE_MCDONALD: 3.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    RAMKUMAR_RAMANATHAN
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.40,
+                    RAMKUMAR_RAMANATHAN: 2.90
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ANDY_MURRAY,
+                    DAVID_GOFFIN
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    ANDY_MURRAY: 2.20,
+                    DAVID_GOFFIN: 1.61
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    TARO_DANIEL
+                ],
+                'score': [(3, 6), (6, 2), (7, 5)]
+                # no odds
+            },
+
+            # 2018-09-28
+            {
+                'round': 8,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    CAMERON_NORRIE
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 2.05,
+                    CAMERON_NORRIE: 1.71
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 7), (7, 6), (6, 4)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.49,
+                    ALBERT_RAMOS_VINOLAS: 2.55
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    ANDY_MURRAY
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    FERNANDO_VERDASCO: 2.45,
+                    ANDY_MURRAY: 1.53
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.60,
+                    DAMIR_DZUMHUR: 2.20
+                }
+            },
+
+            # 2018-09-29
+            {
+                'round': 4,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(7, 5), (2, 6), (7, 6)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.70,
+                    ALEX_DE_MINAUR: 1.45
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(1, 6), (6, 3), (7, 6)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 2.30,
+                    FERNANDO_VERDASCO: 1.55
+                }
+            },
+
+            # 2018-09-30
+            {
+                'round': 2,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(7, 5), (2, 6), (6, 4)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.75,
+                    PIERRE_HUGUES_HERBERT: 2.00
+                }
+            }
+        ]
+    },
+
+    {
         'name': 'China Open',
         'category': 'ATP500',
         'date': '2018-10-07',
@@ -3539,7 +4034,7 @@ DATA_2018_10 = [
                     ANDREY_RUBLEV,
                     LUCAS_MIEDLER
                 ],
-                'score': [(6, 1), 96, 2],
+                'score': [(6, 1), (6, 2)],
                 'odds': {
                     ANDREY_RUBLEV: 1.16,
                     LUCAS_MIEDLER: 5.00

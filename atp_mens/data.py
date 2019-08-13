@@ -1,30 +1,28 @@
 from men import *
 
-# acc   roi   profit desc
-# 67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
-# 66.0  -5.2  -75    splitted hyper and bet params          (1, 451), (3, 211), (2, 152), (4, 9)
-# 68.1  7.4   105    optimized
-# 67.1  2.5   49     2018-10-07 China Open
-# 67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
-# 66.1  -.9   -14    2018-10-06 Rakuten Japan Open Tennis Championships (1, 385), (3, 261), (2, 131), (4, 46)
-# 68.6  6.2   101    optimized
-# 69.0  6.5   97     2019-08-11
-# 69.1  6.9   99     optimized                              (1, 413), (3, 213), (2, 128), (4, 30)
-# 68.7  7.3   104    added 3rd bet param                    (1, 412), (3, 212), (2, 130), (4, 30)
+# rmse  acc   roi   profit desc
+# 4568  66.8  -3.1  -40    2018-09-30 Shenzhen              (1, 659), (4, 136), (2, 20), (3, 15)
+# 4561  67.4  1.1   15     optimized
+# 4558  66.7  -4.1  -56    2019-08-12
+#       67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
+#       66.0  -5.2  -75    splitted hyper and bet params          (1, 451), (3, 211), (2, 152), (4, 9)
+#       68.1  7.4   105    optimized
+#       67.1  2.5   49     2018-10-07 China Open
+#       67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
+#       66.1  -.9   -14    2018-10-06 Rakuten Japan Open Tennis Championships (1, 385), (3, 261), (2, 131), (4, 46)
 
-# 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
-# 66.5  16.7  219    removed upset bet param                (2, 514), (1, 262)
-# 65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
-# 63.5  21.5  740    bet gradients intersecting but with max makes no difference (4, 350), (7, 254), (1, 150)
+#       68.6  6.2   101    optimized
+#       69.1  6.9   99     optimized                              (1, 413), (3, 213), (2, 128), (4, 30)
+#       68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
+#       66.5  16.7  219    removed upset bet param                (2, 514), (1, 262)
 
-# 65.7  9.7   335    upsets bet param added
-# 64.0  4     125    optimized with favourite with new match
-# 64    7     187    2018-10-21 Intrum Stockholm Open
-# 64    11    275    enabled betting on qualifiers
+#       65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
+#       65.7  9.7   335    upsets bet param added
+#       64.0  4     125    optimized with favourite with new match
 
-# 59    6.96  126    optimized                               [(4, 283), (3, 225)]
-# 66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
-# 67    3.48  162    2019-02-17 New York Open (-3.0, 386), (-4.0, 37), (1.44, 22), (2.0, 17)
+#       64    7     187    2018-10-21 Intrum Stockholm Open
+#       59    6.96  126    optimized                               [(4, 283), (3, 225)]
+#       66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
 
 
 DATA = [
