@@ -2,15 +2,15 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
-#                    hyper updated
+# 66.1  2.1   22     added doors                        (1, 730), (4, 43), (2, 35), (3, 28)
+# 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
 # 67.9  5.5   81     fixed n_estimators typo, fixed scale_pos_weight and learning_rate and capped bet params at 40
 # 67.2  9.7   139    optimized params
 # 66.8  -3.1  -40    2018-09-30 Shenzhen              (1, 659), (4, 136), (2, 20), (3, 15)
 # 67.4  1.1   15     optimized
 # 66.7  -4.1  -56    2019-08-12
-# 67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
-# 66.0  -5.2  -75    splitted hyper and bet params          (1, 451), (3, 211), (2, 152), (4, 9)
 
+# 67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
 # 68.1  7.4   105    optimized
 # 67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
 # 68.6  6.2   101    optimized

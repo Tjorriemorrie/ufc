@@ -64,18 +64,19 @@ def main(hyper_params, bet_params, train=''):
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
-    upsets_cutoff, whitewashes_cutoff, \
-        estimators, max_depth, gamma = hyper_params
-    upsets_cutoff = int(round(upsets_cutoff))
-    whitewashes_cutoff = int(round(whitewashes_cutoff))
+    estimators, max_depth, gamma = hyper_params
     reg_params = {
         'n_estimators': int(round(estimators * 100)),
         'max_depth': int(round(max_depth)),
         'gamma': gamma,
     }
 
-    bet_pred_a, bet_pred_b, bet_pred_c, \
+    upsets_cutoff, whitewashes_cutoff, doors_cutoff, \
+        bet_pred_a, bet_pred_b, bet_pred_c, \
         bet_odds_a, bet_odds_b, bet_odds_c = bet_params
+    upsets_cutoff = int(round(upsets_cutoff))
+    whitewashes_cutoff = int(round(whitewashes_cutoff))
+    doors_cutoff = int(round(doors_cutoff))
 
     # init
     reg = None
@@ -84,7 +85,9 @@ def main(hyper_params, bet_params, train=''):
     start_date = None
     ratings = defaultdict(lambda: Rating())
     upsets = defaultdict(lambda: [])
-    whitewashes = defaultdict(lambda: [])
+    whitewashes = defaultdict(lambda: [0])
+    indoors = defaultdict(lambda: [0])
+    outdoors = defaultdict(lambda: [0])
     X_train = []
     y_train = []
     X_test = []
@@ -126,9 +129,17 @@ def main(hyper_params, bet_params, train=''):
             win1_prob = win_probability([ratings[p1]], [ratings[p2]])
             win2_prob = win_probability([ratings[p2]], [ratings[p1]])
 
-            # comebacks
-            p1_whitewashes = sum(whitewashes[p1])
-            p2_whitewashes = sum(whitewashes[p2])
+            # outdoors
+            if event['location']['outdoor']:
+                p1_doors = np.average(outdoors[p1])
+                p2_doors = np.average(outdoors[p2])
+            else:
+                p1_doors = np.average(indoors[p1])
+                p2_doors = np.average(indoors[p2])
+
+            # whitewashes
+            p1_whitewashes = np.average(whitewashes[p1])
+            p2_whitewashes = np.average(whitewashes[p2])
 
             # upsets
             p1_upsets = sum(upsets[p1])
@@ -154,6 +165,8 @@ def main(hyper_params, bet_params, train=''):
                     p2_upsets,
                     p1_whitewashes,
                     p2_whitewashes,
+                    p1_doors,
+                    p2_doors,
                 ],
                 [
                     win2_prob,
@@ -169,6 +182,8 @@ def main(hyper_params, bet_params, train=''):
                     p1_upsets,
                     p2_whitewashes,
                     p1_whitewashes,
+                    p2_doors,
+                    p1_doors,
                 ]
             ]
 
@@ -176,8 +191,12 @@ def main(hyper_params, bet_params, train=''):
             # update here as next sections can skip ahead
             if 'score' in match:
 
+                # update doors
+                doors = outdoors if event['location']['outdoor'] else indoors
+                doors[p1] = doors[p1][-doors_cutoff:] + [1]
+                doors[p2] = doors[p2][-doors_cutoff:] + [-1]
+
                 # update whitewashes
-                # if not match.get('retired'):
                 whitewash = all(g[0] > g[1] for g in match['score'])
                 whitewashes[p1] = whitewashes[p1][-whitewashes_cutoff:] + [1 if whitewash else 0]
                 whitewashes[p2] = whitewashes[p2][-whitewashes_cutoff:] + [-1 if whitewash else 0]
@@ -339,23 +358,28 @@ if __name__ == '__main__':
     # weather
     # days since last played?
     hyper_flag = 0
-    hyper_names = ['upsets cutoff', 'whitewashes_cutoff', 'estimators',  # size ? ? 100
+    hyper_names = ['estimators',  # size 100
                    'max_depth', 'gamma',  # overfitting  3, 0
                    ]
     hyper_params = [7.993216164727351, 19.054714731738546, 1.9384016583772172, 9.316076407315348, 1.2876512021985618, 9.28842733662485]
     hyper_params = [7.993216164727351, 19.054714731738546, 1.9384016583772172, 9.316076407315348, 1.2876512021985618]
     hyper_params = [8.445625877488059, 18.617827218860544, 1.6198814628594378, 9.840710599907027, 0.9646040681566556]
-    hyper_bounds = [[0,   0,   0.01, 1,  0],
-                    [100, 100, 10,   10, 10]]
+    hyper_params = [1.6198814628594378, 9.840710599907027, 0.9646040681566556]
+    hyper_bounds = [[0.01, 1,  0],
+                    [10,   10, 10]]
     assert len(hyper_params) == len(hyper_names)
     assert len(hyper_params) == len(hyper_bounds[0])
 
     bet_flag = 0
-    bet_names = ['pred a', 'pred b', 'pred c',
+    bet_names = ['upsets cutoff', 'whitewashes_cutoff', 'doors_cutoff',
+                 'pred a', 'pred b', 'pred c',
                  'odds a', 'odds b', 'odds c']
     bet_params = [38.57200826189837, -27.689830890775536, -32.95073218457772, -18.413952390959462, -38.91018681989929, 8.127657997976655]
     bet_params = [25.26534539880518, -18.087943766529122, -26.102658059552958, -23.40442287410035, -42.464643207412955, 9.245276551883126]
-    bet_bounds = [[-40], [40]]
+    bet_params = [8.445625877488059, 18.617827218860544, 25.26534539880518, -18.087943766529122, -26.102658059552958, -23.40442287410035, -42.464643207412955, 9.245276551883126]
+    bet_params = [7.63390398664159, 18.70277045755154, 22.514914669044447, -17.85253664891062, -26.50797637788852, -22.095840399123983, -43.32709183022323, 9.758600202158075]
+    bet_params = [7.0926671741047524, 15.262497670214545, 49.949945349508596, 25.118127458362277, -18.190705724720733, -21.569824371539983, -9.773821477378064, -48.745638776800945, 4.126224374246627]
+    bet_bounds = [[-100], [100]]
     assert len(bet_params) == len(bet_names)
 
     if hyper_flag:
