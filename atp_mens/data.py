@@ -2,28 +2,27 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 66.2  6.1   59     merged params
+# 66.2  1.6   18     added surface
 # 66.1  2.1   22     added doors                        (1, 730), (4, 43), (2, 35), (3, 28)
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
 # 67.9  5.5   81     fixed n_estimators typo, fixed scale_pos_weight and learning_rate and capped bet params at 40
 # 67.2  9.7   139    optimized params
 # 66.8  -3.1  -40    2018-09-30 Shenzhen              (1, 659), (4, 136), (2, 20), (3, 15)
-# 67.4  1.1   15     optimized
-# 66.7  -4.1  -56    2019-08-12
 
+# 67.4  1.1   15     optimized
 # 67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
 # 68.1  7.4   105    optimized
 # 67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
-# 68.6  6.2   101    optimized
-# 69.1  6.9   99     optimized                              (1, 413), (3, 213), (2, 128), (4, 30)
 
+# 68.6  6.2   101    optimized
 # 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
 # 65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
-# 65.7  9.7   335    upsets bet param added
-# 64.0  4     125    optimized with favourite with new match
 
+# 65.7  9.7   335    upsets bet param added
 # 64    7     187    2018-10-21 Intrum Stockholm Open
+
 # 59    6.96  126    optimized                               [(4, 283), (3, 225)]
-# 66    11.8  265    2019-01-12 ASB Classic [(4, 408), (3, 204)]
 
 
 DATA = [

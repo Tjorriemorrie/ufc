@@ -10,6 +10,7 @@ from sklearn.preprocessing import MinMaxScaler
 from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
+from location import SURFACE_HARD, SURFACE_CLAY, SURFACE_GRASS
 from .data import DATA
 from .data_2018_10 import DATA_2018_10
 from .data_2019_01 import DATA_2019_01
@@ -53,30 +54,34 @@ def get_regressor(X_train, y_train, X_test=None, y_test=None, **params):
         # simply corresponds to minimum number of instances needed to be in each node. The larger 
         # min_child_weight is, the more conservative the algorithm will be.
         min_child_weight=9,  # default 1
+        # Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger gamma is, 
+        # the more conservative the algorithm will be.
+        gamma=0,  # default 0
         **params)
     reg = reg.fit(X_train, y_train, eval_set=eval_set, eval_metric='rmse', verbose=0)
 
     return reg
 
 
-def main(hyper_params, bet_params, train=''):
+def main(params, train=0):
     logger.info('Starting main training')
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
-    estimators, max_depth, gamma = hyper_params
+    estimators, max_depth, \
+        upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, \
+        bet_pred_a, bet_pred_b, bet_pred_c, \
+        bet_odds_a, bet_odds_b, bet_odds_c = params
+    
     reg_params = {
         'n_estimators': int(round(estimators * 100)),
         'max_depth': int(round(max_depth)),
-        'gamma': gamma,
     }
 
-    upsets_cutoff, whitewashes_cutoff, doors_cutoff, \
-        bet_pred_a, bet_pred_b, bet_pred_c, \
-        bet_odds_a, bet_odds_b, bet_odds_c = bet_params
-    upsets_cutoff = int(round(upsets_cutoff))
-    whitewashes_cutoff = int(round(whitewashes_cutoff))
-    doors_cutoff = int(round(doors_cutoff))
+    upsets_cutoff = int(round(upsets_cutoff * 10))
+    whitewashes_cutoff = int(round(whitewashes_cutoff * 10))
+    doors_cutoff = int(round(doors_cutoff * 10))
+    surface_cutoff = int(round(surface_cutoff * 10))
 
     # init
     reg = None
@@ -88,6 +93,9 @@ def main(hyper_params, bet_params, train=''):
     whitewashes = defaultdict(lambda: [0])
     indoors = defaultdict(lambda: [0])
     outdoors = defaultdict(lambda: [0])
+    hards = defaultdict(lambda: [0])
+    clays = defaultdict(lambda: [0])
+    grasses = defaultdict(lambda: [0])
     X_train = []
     y_train = []
     X_test = []
@@ -129,17 +137,31 @@ def main(hyper_params, bet_params, train=''):
             win1_prob = win_probability([ratings[p1]], [ratings[p2]])
             win2_prob = win_probability([ratings[p2]], [ratings[p1]])
 
+            # surface
+            if event['location']['surface'] == SURFACE_HARD:
+                p1_surface = sum(hards[p1])
+                p2_surface = sum(hards[p2])
+                surface = hards
+            if event['location']['surface'] == SURFACE_CLAY:
+                p1_surface = sum(clays[p1])
+                p2_surface = sum(clays[p2])
+                surface = clays
+            if event['location']['surface'] == SURFACE_GRASS:
+                p1_surface = sum(grasses[p1])
+                p2_surface = sum(grasses[p2])
+                surface = grasses
+
             # outdoors
             if event['location']['outdoor']:
-                p1_doors = np.average(outdoors[p1])
-                p2_doors = np.average(outdoors[p2])
+                p1_doors = sum(outdoors[p1])
+                p2_doors = sum(outdoors[p2])
             else:
-                p1_doors = np.average(indoors[p1])
-                p2_doors = np.average(indoors[p2])
+                p1_doors = sum(indoors[p1])
+                p2_doors = sum(indoors[p2])
 
             # whitewashes
-            p1_whitewashes = np.average(whitewashes[p1])
-            p2_whitewashes = np.average(whitewashes[p2])
+            p1_whitewashes = sum(whitewashes[p1])
+            p2_whitewashes = sum(whitewashes[p2])
 
             # upsets
             p1_upsets = sum(upsets[p1])
@@ -167,6 +189,8 @@ def main(hyper_params, bet_params, train=''):
                     p2_whitewashes,
                     p1_doors,
                     p2_doors,
+                    p1_surface,
+                    p2_surface,
                 ],
                 [
                     win2_prob,
@@ -184,12 +208,18 @@ def main(hyper_params, bet_params, train=''):
                     p1_whitewashes,
                     p2_doors,
                     p1_doors,
+                    p2_surface,
+                    p1_surface,
                 ]
             ]
 
             #########################################
             # update here as next sections can skip ahead
             if 'score' in match:
+
+                # update surface
+                surface[p1] = surface[p1][-surface_cutoff:] + [1]
+                surface[p2] = surface[p2][-surface_cutoff:] + [-1]
 
                 # update doors
                 doors = outdoors if event['location']['outdoor'] else indoors
@@ -315,6 +345,8 @@ def main(hyper_params, bet_params, train=''):
         'round',
         'upsets', '~upsets',
         'whitewashes', '~whitewashes',
+        'doors', '~doors',
+        'surface', '~surface',
     ]
     features = {k: round(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
     logger.info(f'Features: {features}')
@@ -357,36 +389,26 @@ if __name__ == '__main__':
     # rested
     # weather
     # days since last played?
-    hyper_flag = 0
-    hyper_names = ['estimators',  # size 100
-                   'max_depth', 'gamma',  # overfitting  3, 0
-                   ]
-    hyper_params = [7.993216164727351, 19.054714731738546, 1.9384016583772172, 9.316076407315348, 1.2876512021985618, 9.28842733662485]
-    hyper_params = [7.993216164727351, 19.054714731738546, 1.9384016583772172, 9.316076407315348, 1.2876512021985618]
-    hyper_params = [8.445625877488059, 18.617827218860544, 1.6198814628594378, 9.840710599907027, 0.9646040681566556]
-    hyper_params = [1.6198814628594378, 9.840710599907027, 0.9646040681566556]
-    hyper_bounds = [[0.01, 1,  0],
-                    [10,   10, 10]]
-    assert len(hyper_params) == len(hyper_names)
-    assert len(hyper_params) == len(hyper_bounds[0])
+    
+    train = 0
+    
+    names = [
+        'estimators', 'max_depth',
+        'upsets cutoff', 'whitewashes_cutoff', 'doors_cutoff', 'surface_cutoff',
+        'pred a', 'pred b', 'pred c',
+        'odds a', 'odds b', 'odds c',
+    ]
+    params = [2.00379081867129, 8.677376255448147, 0.39663760868774767, 0.04068751936981757, 4.852958470023094, 7.2664623755108835, 26.55728133571167, -13.342104073315578, -22.6969446355299, -4.942592748067904, -49.245940321964824, 3.078281082269243]
+    bounds = [[0.01, 1,  0,  0,  0,  0,  -50, -50, -50, -50, -50, -50],
+              [10,   10, 10, 10, 10, 10, 50,  50,  50,  50,  50,  50]]
+    assert len(params) == len(names)
+    assert len(params) == len(bounds[0])
 
-    bet_flag = 0
-    bet_names = ['upsets cutoff', 'whitewashes_cutoff', 'doors_cutoff',
-                 'pred a', 'pred b', 'pred c',
-                 'odds a', 'odds b', 'odds c']
-    bet_params = [38.57200826189837, -27.689830890775536, -32.95073218457772, -18.413952390959462, -38.91018681989929, 8.127657997976655]
-    bet_params = [25.26534539880518, -18.087943766529122, -26.102658059552958, -23.40442287410035, -42.464643207412955, 9.245276551883126]
-    bet_params = [8.445625877488059, 18.617827218860544, 25.26534539880518, -18.087943766529122, -26.102658059552958, -23.40442287410035, -42.464643207412955, 9.245276551883126]
-    bet_params = [7.63390398664159, 18.70277045755154, 22.514914669044447, -17.85253664891062, -26.50797637788852, -22.095840399123983, -43.32709183022323, 9.758600202158075]
-    bet_params = [7.0926671741047524, 15.262497670214545, 49.949945349508596, 25.118127458362277, -18.190705724720733, -21.569824371539983, -9.773821477378064, -48.745638776800945, 4.126224374246627]
-    bet_bounds = [[-100], [100]]
-    assert len(bet_params) == len(bet_names)
-
-    if hyper_flag:
-        es = CMAEvolutionStrategy(hyper_params, 0.5, {'bounds': hyper_bounds})
+    if train:
+        es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
         while not es.stop():
             solutions = es.ask()
-            fitness = [main(x, bet_params, train='hyper') for x in solutions]
+            fitness = [main(x, train) for x in solutions]
             es.tell(solutions, fitness)
             es.disp()
             print(list(es.result[0]))
@@ -400,23 +422,5 @@ if __name__ == '__main__':
         print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
         print(list(es.result[5]))
 
-    elif bet_flag:
-        es = CMAEvolutionStrategy(bet_params, 1, {'bounds': bet_bounds})
-        while not es.stop():
-            solutions = es.ask()
-            fitness = [main(hyper_params, x, train='bet') for x in solutions]
-            es.tell(solutions, fitness)
-            es.disp()
-            print(list(es.result[0]))
-            print(list(es.result[5]))
-        es.result_pretty()
-        print(f'finished after {es.result[3]} evaluations and {es.result[4]} iterations')
-        print('')
-        print('best')
-        print(list(es.result[0]))
-        # print('')
-        # print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
-        # print(list(es.result[5]))
-
     else:
-        main(hyper_params, bet_params)
+        main(params)
