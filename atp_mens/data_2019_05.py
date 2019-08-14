@@ -1,10 +1,11 @@
 from men import *
+from location import *
+
 
 DATA_2019_05 = [
     {
-        'name': 'Mutua Madrid Open',
+        'location': MADRID,
         'date': '2019-05-05',
-        'location': 'Madrid, Spain',
         'matches': [
 
             # 2019-05-04
@@ -942,9 +943,8 @@ DATA_2019_05 = [
     },
 
     {
-        'name': 'Internazionali BNL d\'Italia',
+        'location': ROME,
         'date': '2019-05-12',
-        'location': 'Rome, Italy',
         'matches': [
 
             # 2019-05-11
@@ -1877,9 +1877,8 @@ DATA_2019_05 = [
     },
 
     {
-        'name': 'Banque Eric Sturdza Geneva Open',
+        'location': GENEVA,
         'date': '2019-05-19',
-        'location': 'Geneva, Switzerland',
         'matches': [
 
             # 2019-05-18
@@ -2345,9 +2344,8 @@ DATA_2019_05 = [
     },
 
     {
-        'name': 'Open Parc Auvergne-Rhone-Alpes Lyon',
+        'location': LYON,
         'date': '2019-05-19',
-        'location': 'Lyon, France',
         'matches': [
 
             # 2019-05-18
@@ -2819,9 +2817,8 @@ DATA_2019_05 = [
     },
 
     {
-        'name': 'Roland Garros',
+        'location': ROLAND_GARROS,
         'date': '2019-05-26',
-        'location': 'Paris, France',
         'matches': [
             {
                 'round': 128,

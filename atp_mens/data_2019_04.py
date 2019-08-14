@@ -1,11 +1,10 @@
 from men import *
+from location import *
 
 DATA_2019_04 = [
     {
-        'name': 'Fayez Sarofim & Co US Mens Clay Court Championship',
-        'category': 'ATP250',
+        'location': HOUSTON,
         'date': '2019-04-14',
-        'location': 'Houston, United States',
         'matches': [
 
             # 2019-04-06
@@ -483,10 +482,8 @@ DATA_2019_04 = [
     },
 
     {
-        'name': 'Grand Prix Hassan II',
-        'category': 'ATP250',
+        'location': MARRAKECH,
         'date': '2019-04-14',
-        'location': 'Marrakech, Morocco',
         'matches': [
 
             # 2019-04-07
@@ -1022,10 +1019,8 @@ DATA_2019_04 = [
     },
 
     {
-        'name': 'Rolex Monte-Carlo Masters',
-        'category': 'ATP1000',
+        'location': MONTE_CARLO,
         'date': '2019-04-21',
-        'location': 'Monte Carlo, Monaco',
         'matches': [
 
             # 2019-04-13
@@ -1964,10 +1959,8 @@ DATA_2019_04 = [
     },
 
     {
-        'name': 'Barcelona Open Banc Sabadell',
-        'category': 'ATP500',
+        'location': BARCELONA,
         'date': '2019-04-28',
-        'location': 'Barcelona, Spain',
         'matches': [
 
             # 2019-04-20
@@ -2761,9 +2754,8 @@ DATA_2019_04 = [
     },
 
     {
-        'name': 'Hungarian Open',
+        'location': BUDAPEST,
         'date': '2019-04-22',
-        'location': 'Budapest, Hungary',
         'matches': [
 
             # 2019-04-20
@@ -3250,9 +3242,8 @@ DATA_2019_04 = [
     },
 
     {
-        'name': 'BMW Open by FWU',
+        'location': MUNICH,
         'date': '2019-04-29',
-        'location': 'Munich, Germany',
         'matches': [
 
             # 2019-04-27
@@ -3744,9 +3735,8 @@ DATA_2019_04 = [
     },
 
     {
-        'name': 'Millennium Estoril Open',
+        'location': ESTORIL,
         'date': '2019-04-29',
-        'location': 'Estoril, Portugal',
         'matches': [
 
             # 2019-04-27

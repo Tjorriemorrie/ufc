@@ -1,11 +1,11 @@
 from men import *
+from location import *
+
 
 DATA_2019_03 = [
     {
-        'name': 'Dubai Duty Free Tennis Championships',
-        'category': 'ATP500',
+        'location': DUBAI,
         'date': '2019-03-02',
-        'location': 'Dubai, United Arab Emirates',
         'matches': [
             {
                 'round': 512,
@@ -553,10 +553,8 @@ DATA_2019_03 = [
     },
 
     {
-        'name': 'Abierto Mexicano Telcel presentado por HSBC',
-        'category': 'ATP500',
+        'location': ACAPULCO,
         'date': '2019-03-02',
-        'location': 'Acapulco, Mexico',
         'matches': [
 
             # 2019-02-23
@@ -1082,10 +1080,8 @@ DATA_2019_03 = [
     },
 
     {
-        'name': 'Brasil Open',
-        'category': 'ATP250',
+        'location': SAO_PAULO,
         'date': '2019-03-03',
-        'location': 'Sao Paulo, Brazil',
         'matches': [
 
             # 2019-02-23
@@ -1574,10 +1570,8 @@ DATA_2019_03 = [
     },
 
     {
-        'name': 'BNP Paribas Open',
-        'category': 'ATP1000',
+        'location': INDIAN_WELLS,
         'date': '2019-03-17',
-        'location': 'Indian Wells, United States',
         'matches': [
 
             # 2019-03-05
@@ -3183,10 +3177,8 @@ DATA_2019_03 = [
     },
 
     {
-        'name': 'Miami Open presented by Itau',
-        'category': 'ATP1000',
+        'location': MIAMI,
         'date': '2019-03-31',
-        'location': 'Miami, United States',
         'matches': [
 
             # 2019-03-18

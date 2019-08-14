@@ -1,11 +1,11 @@
 from men import *
+from location import *
 
 
 DATA_2019_06 = [
     {
-        'name': 'MercedesCup',
+        'location': STUTTGART,
         'date': '2019-06-10',
-        'location': 'Stuttgart, Germany',
         'matches': [
             {
                 'round': 512,
@@ -511,10 +511,8 @@ DATA_2019_06 = [
     },
 
     {
-        'name': 'Libema Open',
-        'category': 'ATP250',
+        'location': S_HERTOGENBOSCH,
         'date': '2019-06-16',
-        'location': 's-Hertogenbosch, Netherlands',
         'matches': [
 
             # 2019-06-08
@@ -986,10 +984,8 @@ DATA_2019_06 = [
     },
 
     {
-        'name': 'Fever-Tree Championships',
-        'category': 'ATP500',
+        'location': LONDON,
         'date': '2019-06-23',
-        'location': 'London, Great Britain',
         'matches': [
 
             # 2019-06-15
@@ -1525,10 +1521,8 @@ DATA_2019_06 = [
     },
 
     {
-        'name': 'Noventi Open',
-        'category': 'ATP500',
+        'location': HALLE,
         'date': '2019-06-23',
-        'location': 'Halle, Germany',
         'matches': [
 
             # 2019-06-15
@@ -2065,10 +2059,8 @@ DATA_2019_06 = [
     },
 
     {
-        'name': 'Turkish Airlines Open Antalya',
-        'category': 'ATP250',
+        'location': ANTALYA,
         'date': '2019-06-29',
-        'location': 'Antalya, Turkey',
         'matches': [
 
             # 2019-06-22
@@ -2529,10 +2521,8 @@ DATA_2019_06 = [
     },
 
     {
-        'name': 'Nature Valley International',
-        'category': 'ATP250',
+        'location': EASTBOURNE,
         'date': '2019-06-29',
-        'location': 'Eastbourne, Great Britain',
         'matches': [
 
             # 2019-06-22

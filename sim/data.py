@@ -1,6 +1,7 @@
 from .fighters import *
 
 # acc   roi   profit  desc
+# 70.7  22.7  741     added learning rate and gamma
 # 68.0  12.5  408     optimized bets                        (1, 237), (4, 54), (3, 43), (2, 35)
 # 68.0  10.0  438     splitted hyper and bet params         (1, 154), (4, 108), (3, 73), (2, 34)
 # 69.4  21.2  927     2019-08-11 UFC Fight Night: Shevchenko vs Carmouche (1, 154), (4, 108)

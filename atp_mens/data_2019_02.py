@@ -1,11 +1,11 @@
 from men import *
+from location import *
+
 
 DATA_2019_02 = [
     {
-        'name': 'Cordoba Open',
-        'category': 'ATP250',
+        'location': CORDOBA,
         'date': '2019-02-10',
-        'location': 'Cordoba, Argentina',
         'matches': [
 
             # 2019-02-02
@@ -484,10 +484,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'Open Sud de France',
-        'category': 'ATP250',
+        'location': MONTPELLIER,
         'date': '2019-02-10',
-        'location': 'Montpellier, France',
         'matches': [
 
             # 2019-02-03
@@ -972,10 +970,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'Sofia Open',
-        'category': 'ATP250',
+        'location': SOFIA,
         'date': '2019-02-10',
-        'location': 'Sofia, Bulgaria',
         'matches': [
 
             # 2019-02-03
@@ -1466,10 +1462,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'ABN AMRO World Tennis Tournament',
-        'category': 'ATP500',
+        'location': ROTTERDAM,
         'date': '2019-02-17',
-        'location': 'Rotterdam, Netherlands',
         'matches': [
 
             # 2019-02-09
@@ -1997,10 +1991,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'New York Open',
-        'category': 'ATP250',
+        'location': NEW_YORK,
         'date': '2019-02-17',
-        'location': 'New York, United States',
         'matches': [
 
             # 2019-02-10
@@ -2491,10 +2483,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'Argentina Open',
-        'category': 'ATP250',
+        'location': BUENOS_AIRES,
         'date': '2019-02-17',
-        'location': 'Buenos Aires, Argentina',
         'matches': [
 
             # 2019-02-09
@@ -2988,10 +2978,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'Rio Open presented by Claro',
-        'category': 'ATP500',
+        'location': RIO_DE_JANEIRO,
         'date': '2019-02-24',
-        'location': 'Rio de Janeiro, Brazil',
         'matches': [
 
             # 2019-02-16
@@ -3516,10 +3504,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'Open 13 Provence',
-        'category': 'ATP250',
+        'location': MARSEILLE,
         'date': '2019-02-24',
-        'location': 'Marseille, France',
         'matches': [
 
             # 2019-02-17
@@ -4010,10 +3996,8 @@ DATA_2019_02 = [
     },
 
     {
-        'name': 'Delray Beach Open by VITACOST.com',
-        'category': 'ATP250',
+        'location': DELRAY_BEACH,
         'date': '2019-02-24',
-        'location': 'Delray Beach, United States',
         'matches': [
 
             # 2019-02-16

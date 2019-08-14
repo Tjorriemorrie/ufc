@@ -1,21 +1,22 @@
 from men import *
+from location import *
 
 # acc   roi   profit desc
+#                    hyper updated
+# 67.9  5.5   81     fixed n_estimators typo, fixed scale_pos_weight and learning_rate and capped bet params at 40
 # 67.2  9.7   139    optimized params
 # 66.8  -3.1  -40    2018-09-30 Shenzhen              (1, 659), (4, 136), (2, 20), (3, 15)
 # 67.4  1.1   15     optimized
 # 66.7  -4.1  -56    2019-08-12
 # 67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
 # 66.0  -5.2  -75    splitted hyper and bet params          (1, 451), (3, 211), (2, 152), (4, 9)
-# 68.1  7.4   105    optimized
-# 67.1  2.5   49     2018-10-07 China Open
 
+# 68.1  7.4   105    optimized
 # 67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
 # 68.6  6.2   101    optimized
 # 69.1  6.9   99     optimized                              (1, 413), (3, 213), (2, 128), (4, 30)
-# 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
-# 66.5  16.7  219    removed upset bet param                (2, 514), (1, 262)
 
+# 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
 # 65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
 # 65.7  9.7   335    upsets bet param added
 # 64.0  4     125    optimized with favourite with new match
@@ -27,10 +28,8 @@ from men import *
 
 DATA = [
     {
-        'name': 'Wimbledon',
-        'category': 'ATP2000',
+        'location': WIMBLEDON,
         'date': '2019-07-14',
-        'location': 'London, Great Britian',
         'matches': [
 
             # 2019-07-01
@@ -1570,10 +1569,8 @@ DATA = [
     },
 
     {
-        'name': 'Hall of Fame Open',
-        'category': 'ATP250',
+        'location': NEWPORT,
         'date': '2019-07-21',
-        'location': 'Newport, United States',
         'matches': [
 
             # 2019-07-14
@@ -2026,10 +2023,8 @@ DATA = [
     },
 
     {
-        'name': 'Plava Laguna Croatia Open Umag',
-        'category': 'ATP250',
+        'location': UMAG,
         'date': '2019-07-21',
-        'location': 'Umag, Croatia',
         'matches': [
 
             # 2019-07-14
@@ -2521,10 +2516,8 @@ DATA = [
     },
 
     {
-        'name': 'Swedish Open',
-        'category': 'ATP250',
+        'location': BASTAD,
         'date': '2019-07-21',
-        'location': 'Bastad, Sweden',
         'matches': [
 
             # 2019-07-14
@@ -3015,9 +3008,8 @@ DATA = [
     },
 
     {
-        'name': 'BB&T Atlanta Open',
+        'location': ATLANTA,
         'date': '2019-07-28',
-        'location': 'Atlanta, United States',
         'matches': [
 
             # 2019-07-20
@@ -3520,9 +3512,8 @@ DATA = [
     },
 
     {
-        'name': 'J Safra Sarasin Swiss Open Gstaad',
+        'location': GSTAAD,
         'date': '2019-07-28',
-        'location': 'Gstaad, Switzerland',
         'matches': [
 
             # 2019-07-20
@@ -4025,9 +4016,8 @@ DATA = [
     },
 
     {
-        'name': 'Hamburg European Open',
+        'location': HAMBURG,
         'date': '2019-07-28',
-        'location': 'Hamburg, Germany',
         'matches': [
 
             # 2019-07-20
@@ -4581,10 +4571,8 @@ DATA = [
     },
 
     {
-        'name': 'Citi Open',
-        'category': 'ATP500',
+        'location': WASHINGTON,
         'date': '2019-08-04',
-        'location': 'Washington, United States',
         'matches': [
 
             # 2019-07-27
@@ -5390,10 +5378,8 @@ DATA = [
     },
 
     {
-        'name': 'Abierto Mexicano de Tenis Mifel',
-        'category': 'ATP250',
+        'location': LOS_CABOS,
         'date': '2019-08-03',
-        'location': 'Los Cabos, Mexico',
         'matches': [
 
             # 2019-07-27
@@ -5996,10 +5982,8 @@ DATA = [
     },
 
     {
-        'name': 'Generali Open',
-        'category': 'ATP250',
+        'location': KITZBUHEL,
         'date': '2019-08-03',
-        'location': 'Kitzbuhel, Austria',
         'matches': [
 
             # 2019-07-27
@@ -6519,10 +6503,8 @@ DATA = [
     },
 
     {
-        'name': 'Coupe Rogers',
-        'category': 'ATP1000',
+        'location': MONTREAL,
         'date': '2019-08-11',
-        'location': 'Montreal, Canada',
         'matches': [
 
             # 2019-08-03
@@ -7524,10 +7506,8 @@ DATA = [
     ###############################################################################
 
     {
-        'name': 'Western & Southern Open',
-        'category': 'ATP1000',
+        'location': CINCINNATI,
         'date': '2019-08-18',
-        'location': 'Cincinnati, United States',
         'matches': [
 
             # 2019-08-10

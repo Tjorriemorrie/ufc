@@ -38,7 +38,22 @@ def get_regressor(X_train, y_train, X_test=None, y_test=None, **params):
     if X_test and y_test:
         eval_set.append((np.array(X_test), y_test))
 
-    reg = XGBRegressor(objective='reg:squarederror', n_jobs=4, **params)
+    reg = XGBRegressor(
+        objective='reg:squarederror', n_jobs=4,
+        # Step size shrinkage used in update to prevents overfitting. After each boosting step, we
+        # can directly get the weights of new features, and eta shrinks the feature weights to make
+        # the boosting process more conservative.
+        learning_rate=0.34,  # default 0.3
+        # Control the balance of positive and negative weights, useful for unbalanced classes. A
+        # typical value to consider: sum(negative instances) / sum(positive instances).
+        scale_pos_weight=6.9,  # default 1
+        # Minimum sum of instance weight (hessian) needed in a child. If the tree partition step 
+        # results in a leaf node with the sum of instance weight less than min_child_weight, then 
+        # the building process will give up further partitioning. In linear regression task, this 
+        # simply corresponds to minimum number of instances needed to be in each node. The larger 
+        # min_child_weight is, the more conservative the algorithm will be.
+        min_child_weight=9,  # default 1
+        **params)
     reg = reg.fit(X_train, y_train, eval_set=eval_set, eval_metric='rmse', verbose=0)
 
     return reg
@@ -50,16 +65,13 @@ def main(hyper_params, bet_params, train=''):
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
     upsets_cutoff, whitewashes_cutoff, \
-        estimators, max_depth, gamma, min_child_weight, learning_rate, scale_pos_weight = hyper_params
+        estimators, max_depth, gamma = hyper_params
     upsets_cutoff = int(round(upsets_cutoff))
     whitewashes_cutoff = int(round(whitewashes_cutoff))
     reg_params = {
-        'estimators': int(round(estimators * 100)),
+        'n_estimators': int(round(estimators * 100)),
         'max_depth': int(round(max_depth)),
         'gamma': gamma,
-        'min_child_weight': int(round(min_child_weight)),
-        'learning_rate': learning_rate,
-        'scale_pos_weight': scale_pos_weight,
     }
 
     bet_pred_a, bet_pred_b, bet_pred_c, \
@@ -99,7 +111,7 @@ def main(hyper_params, bet_params, train=''):
                 X_train = scaler.transform(X_train)
                 reg = get_regressor(X_train, y_train, **reg_params)
             logger.info('')
-        logger.info(f'{event["date"]} {event.get("name")}')
+        logger.info(f'{event["date"]} {event["location"]["name"]}')
 
         for match in event['matches']:
             # skip if no odds:
@@ -275,6 +287,7 @@ def main(hyper_params, bet_params, train=''):
     logger.info(f'Num estimators: {params["n_estimators"]}')
     logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
     logger.info(f'Max depth: {params["max_depth"]}')
+    logger.info(f'Scale pos weight: {params["scale_pos_weight"]:.2f}')
     logger.info(f'Accuracy: training={reg_score["validation_0"]["rmse"][-1]:.4f}%')
     feature_names = [
         'win%', 'odds_scaled',
@@ -306,20 +319,13 @@ def main(hyper_params, bet_params, train=''):
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        sheet = 0.72
-        if sum(tab) - sheet > 0.01:
-            for l in actual_debug:
-                logger.warning(l)
-            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        # sheet = 0.72
+        # if sum(tab) - sheet > 0.01:
+        #     for l in actual_debug:
+        #         logger.warning(l)
+        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
-    if train == 'hyper':
-        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
-        return -(sum(payouts) / sum(bet_amts))
-        # rmse_train = reg_score['validation_0']['rmse'][-1]
-        # rmse_test = reg_score['validation_1']['rmse'][-1]
-        # print(f'RMSE: train={rmse_train:.4f} test={rmse_test:.4f}')
-        # return rmse_test + rmse_train / 10
-    elif train == 'bet':
+    if train:
         print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         return -(sum(payouts) / sum(bet_amts))
 
@@ -331,21 +337,25 @@ if __name__ == '__main__':
     # serve strength
     # rested
     # weather
+    # days since last played?
     hyper_flag = 0
     hyper_names = ['upsets cutoff', 'whitewashes_cutoff', 'estimators',  # size ? ? 100
-                   'max_depth', 'gamma', 'min_child_weight',  # overfitting  3, 0, 1,
-                   'learning_rate/eta', 'scale_pos_weight'  # noise robustness  0.1, 1
+                   'max_depth', 'gamma',  # overfitting  3, 0
                    ]
-    hyper_params = [9.042564756925078, 15.542885368208834, 1.5639593104751492, 6.835386084613393, 1.2964123313731617, 8.211606571200019, 0.9281251435466975, 2.942233168900167]
-    hyper_bounds = [[0, 0, 0.01, 1, 0, 0, 0, 0],
-                    [100, 100, 10, 10, 10, 10, 1, 10]]
+    hyper_params = [7.993216164727351, 19.054714731738546, 1.9384016583772172, 9.316076407315348, 1.2876512021985618, 9.28842733662485]
+    hyper_params = [7.993216164727351, 19.054714731738546, 1.9384016583772172, 9.316076407315348, 1.2876512021985618]
+    hyper_params = [8.445625877488059, 18.617827218860544, 1.6198814628594378, 9.840710599907027, 0.9646040681566556]
+    hyper_bounds = [[0,   0,   0.01, 1,  0],
+                    [100, 100, 10,   10, 10]]
     assert len(hyper_params) == len(hyper_names)
+    assert len(hyper_params) == len(hyper_bounds[0])
 
     bet_flag = 0
     bet_names = ['pred a', 'pred b', 'pred c',
                  'odds a', 'odds b', 'odds c']
-    bet_params = [48.57200826189837, -27.689830890775536, -32.95073218457772, -18.413952390959462, -48.91018681989929, 8.127657997976655]
-    bet_bounds = [[-50], [50]]
+    bet_params = [38.57200826189837, -27.689830890775536, -32.95073218457772, -18.413952390959462, -38.91018681989929, 8.127657997976655]
+    bet_params = [25.26534539880518, -18.087943766529122, -26.102658059552958, -23.40442287410035, -42.464643207412955, 9.245276551883126]
+    bet_bounds = [[-40], [40]]
     assert len(bet_params) == len(bet_names)
 
     if hyper_flag:
@@ -356,15 +366,15 @@ if __name__ == '__main__':
             es.tell(solutions, fitness)
             es.disp()
             print(list(es.result[0]))
-            # print(list(es.result[5]))
+            print(list(es.result[5]))
         es.result_pretty()
         print(f'finished after {es.result[3]} evaluations and {es.result[4]} iterations')
         print('')
         print('best')
         print(list(es.result[0]))
-        # print('')
-        # print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
-        # print(list(es.result[5]))
+        print('')
+        print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        print(list(es.result[5]))
 
     elif bet_flag:
         es = CMAEvolutionStrategy(bet_params, 1, {'bounds': bet_bounds})
@@ -374,7 +384,7 @@ if __name__ == '__main__':
             es.tell(solutions, fitness)
             es.disp()
             print(list(es.result[0]))
-            # print(list(es.result[5]))
+            print(list(es.result[5]))
         es.result_pretty()
         print(f'finished after {es.result[3]} evaluations and {es.result[4]} iterations')
         print('')

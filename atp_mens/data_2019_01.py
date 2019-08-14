@@ -1,7 +1,10 @@
 from men import *
+from location import *
+
 
 DATA_2019_01 = [
     {
+        'location': DOHA,
         'date': '2019-01-05',
         'matches': [
 
@@ -369,10 +372,8 @@ DATA_2019_01 = [
     },
 
     {
-        'name': 'Brisbane International',
-        'category': 'ATP250',
+        'location': BRISBANE,
         'date': '2019-01-06',
-        'location': 'Brisbane, Australia',
         'matches': [
 
             # 2018-12-29
@@ -790,10 +791,8 @@ DATA_2019_01 = [
     },
 
     {
-        'name': 'Tata Open Maharashtra',
-        'category': 'ATP250',
+        'location': PUNE,
         'date': '2019-01-05',
-        'location': 'Pune, India',
         'matches': [
 
             # 2018-12-29
@@ -1281,10 +1280,8 @@ DATA_2019_01 = [
     },
 
     {
-        'name': 'Sydney International',
-        'category': 'ATP250',
+        'location': SYDNEY,
         'date': '2019-01-12',
-        'location': 'Sydney, australia',
         'matches': [
 
             # 2019-01-05
@@ -1751,10 +1748,8 @@ DATA_2019_01 = [
     },
 
     {
-        'name': 'ASB Classic',
-        'category': 'ATP250',
+        'location': AUCKLAND,
         'date': '2019-01-12',
-        'location': 'Auckland, New Zealand',
         'matches': [
 
             # 2019-01-04
@@ -2243,10 +2238,8 @@ DATA_2019_01 = [
     },
 
     {
-        'name': 'Australian Open',
-        'category': 'ATP2000',
+        'location': AUSTRALIAN_OPEN,
         'date': '2019-01-27',
-        'location': 'Melbourne, Australia',
         'matches': [
 
             # 2019-01-14

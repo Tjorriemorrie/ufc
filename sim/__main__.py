@@ -40,7 +40,7 @@ def to_implied_odds(us_odds: float) -> float:
         return 1
 
 
-def get_regressor(X_train, y_train, X_test=None, y_test=None, estimators=100, max_depth=3):
+def get_regressor(X_train, y_train, X_test=None, y_test=None, **reg_params):
     """get regressor"""
     logger.info('')
     logger.info('Training model...')
@@ -49,7 +49,7 @@ def get_regressor(X_train, y_train, X_test=None, y_test=None, estimators=100, ma
     if X_test and y_test:
         eval_set.append((np.array(X_test), y_test))
 
-    reg = XGBRegressor(n_estimators=estimators, max_depth=max_depth, objective='reg:squarederror', n_jobs=4, )
+    reg = XGBRegressor(objective='reg:squarederror', n_jobs=4, **reg_params)
     reg = reg.fit(X_train, y_train, eval_set=eval_set, eval_metric='auc', verbose=0)
 
     return reg
@@ -60,11 +60,13 @@ def main(hyper_params, bet_params, train=''):
 
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
 
-    estimators, max_depth = hyper_params
-    estimators = max(int(round(estimators * 100)), 10)
-    max_depth = max(int(round(max_depth)), 1)
-    if estimators > 1000:
-        return 1
+    estimators, max_depth, learning_rate, gamma = hyper_params
+    reg_params = {
+        'n_estimators': int(round(estimators * 100)),
+        'max_depth': int(round(max_depth)),
+        'gamma': gamma,
+        'learning_rate': learning_rate,
+    }
 
     bet_pred_a, bet_pred_b, bet_pred_c, \
         bet_odds_a, bet_odds_b, bet_odds_c = bet_params
@@ -100,7 +102,7 @@ def main(hyper_params, bet_params, train=''):
                 # scale
                 scaler.partial_fit(X_train)
                 X_train = scaler.transform(X_train)
-                reg = get_regressor(X_train, y_train, estimators=estimators, max_depth=max_depth)
+                reg = get_regressor(X_train, y_train, **reg_params)
             logger.info('')
         logger.info(f'{scene["date"]} {scene["name"]}')
 
@@ -288,13 +290,13 @@ def main(hyper_params, bet_params, train=''):
 
     logger.info('')
     logger.info('Tree info:')
-    reg = get_regressor(X_train, y_train, X_test, y_test, estimators=estimators, max_depth=max_depth)
+    # reg = get_regressor(X_train, y_train, X_test, y_test, estimators=estimators, max_depth=max_depth)
     reg_score = reg.evals_result()
     params = reg.get_params()
     logger.info(f'Num estimators: {params["n_estimators"]}')
     logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
     logger.info(f'Max depth: {params["max_depth"]}')
-    logger.info(f'Accuracy: training={reg_score["validation_0"]["auc"][-1]*100:.0f}% testing={reg_score["validation_1"]["auc"][-1]*100:.0f}%')
+    logger.info(f'Accuracy: training={reg_score["validation_0"]["auc"][-1]*100:.0f}%')
     feature_names = [
         'win%',
         'odds', '~odds',
@@ -328,18 +330,23 @@ def main(hyper_params, bet_params, train=''):
         days = (datetime.now() - datetime(2019, 7, 13)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
-    if train == 'hyper':
-        auc_score = reg_score['validation_1']['auc'][-1]
-        return -auc_score
-    elif train == 'bet':
+    if train:
+        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         return -(sum(payouts) / sum(bet_amts))
 
 
 if __name__ == '__main__':
     hyper_flag = 0
-    hyper_names = ['estimators', 'max depth']
-    hyper_params = [0.4578661081627181, 2.8669732638381498]
+    hyper_names = ['estimators',  # 100
+                   'max depth',  # 3
+                   'learning_rate',  # 0.1
+                   'gamma'  # 0
+                   ]
+    hyper_params = [0.8844565933947343, 2.5506573766936533, 0.24678854038938264, 0.0012826703538762253]
+    hyper_bounds = [[0.01, 1, 0.001, 0],
+                    [10, 10, 1, 10]]
     assert len(hyper_params) == len(hyper_names)
+    assert len(hyper_params) == len(hyper_bounds[0])
 
     bet_flag = 0
     bet_names = ['pred a', 'pred b', 'pred c',
@@ -348,24 +355,22 @@ if __name__ == '__main__':
     assert len(bet_params) == len(bet_names)
 
     if hyper_flag:
-        es = CMAEvolutionStrategy(hyper_params, 1)
+        es = CMAEvolutionStrategy(hyper_params, 0.5, {'bounds': hyper_bounds})
         while not es.stop():
             solutions = es.ask()
             fitness = [main(x, bet_params, train='hyper') for x in solutions]
             es.tell(solutions, fitness)
             es.disp()
             print(list(es.result[0]))
-            print(list(es.result[5]))
+            # print(list(es.result[5]))
         es.result_pretty()
-
         print('')
         print('best')
         print(list(es.result[0]))
-
-        print('')
-        print(
-            'xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
-        print(list(es.result[5]))
+        # print('')
+        # print(
+        #     'xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        # print(list(es.result[5]))
     elif bet_flag:
         es = CMAEvolutionStrategy(bet_params, 1)
         while not es.stop():
@@ -373,16 +378,14 @@ if __name__ == '__main__':
             fitness = [main(hyper_params, x, train='bet') for x in solutions]
             es.tell(solutions, fitness)
             es.disp()
-            print(list(es.result[0]))
+            # print(list(es.result[0]))
             print(list(es.result[5]))
         es.result_pretty()
-
         print('')
         print('best')
         print(list(es.result[0]))
-
-        print('')
-        print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
-        print(list(es.result[5]))
+        # print('')
+        # print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        # print(list(es.result[5]))
     else:
         main(hyper_params, bet_params)
