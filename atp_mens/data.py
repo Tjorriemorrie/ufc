@@ -2,27 +2,28 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 68.9  8.7   217    opt pred, odds poly                (1, 452), (4, 161), (7, 135)
+# 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
+# 63.0  -1.4  -14    optimized max_delta_step, subsample, scale_pos_weight  (1, 766)
+# 67.5  7.5   72     optimized L1/2 regulazations       (1, 784)
+# 64.9  2.1   21     optimized colsamples               (1, 775)
 # 66.2  6.1   59     merged params
 # 66.2  1.6   18     added surface
+
 # 66.1  2.1   22     added doors                        (1, 730), (4, 43), (2, 35), (3, 28)
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
 # 67.9  5.5   81     fixed n_estimators typo, fixed scale_pos_weight and learning_rate and capped bet params at 40
-# 67.2  9.7   139    optimized params
-# 66.8  -3.1  -40    2018-09-30 Shenzhen              (1, 659), (4, 136), (2, 20), (3, 15)
 
+# 67.2  9.7   139    optimized params
 # 67.4  1.1   15     optimized
 # 67.4  1.8   24     optimized bet params               (1, 609), (4, 136), (2, 41), (3, 37)
-# 68.1  7.4   105    optimized
-# 67.8  5.4   103    optmized                               (1, 332), (4, 241), (3, 150), (2, 100)
 
+# 68.1  7.4   105    optimized
 # 68.6  6.2   101    optimized
+
 # 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
-# 65.3  8.3   173    2018-10-13 Rolex Shanghai Masters      (3, 491), (2, 273)
 
 # 65.7  9.7   335    upsets bet param added
-# 64    7     187    2018-10-21 Intrum Stockholm Open
-
-# 59    6.96  126    optimized                               [(4, 283), (3, 225)]
 
 
 DATA = [
@@ -8024,20 +8025,6 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    DENIS_SHAPOVALOV,
-                    FABIO_FOGNINI,
-                ],
-                'score': [(2, 6), (6, 3), (6, 2)],
-                'odds': {
-                    DENIS_SHAPOVALOV: 1.52,
-                    FABIO_FOGNINI: 2.50,
-                },
-                'prediction': DENIS_SHAPOVALOV,
-                'bet': 0,  # 4 refunded
-            },
-            {
-                'round': 64,
-                'players': [
                     FRANCES_TIAFOE,
                     GAEL_MONFILS,
                 ],
@@ -8065,7 +8052,7 @@ DATA = [
                 'bet': 0,  # refunded
             },
             {
-                'round': 256,
+                'round': 64,
                 'players': [
                     REILLY_OPELKA,
                     BORNA_CORIC,
@@ -8092,17 +8079,16 @@ DATA = [
                 'prediction': ANDREY_RUBLEV,
                 'bet': 4,
             },
-
-            # ?
             {
-                'round': 256,
+                'round': 64,
                 'players': [
-                    HUBERT_HURKACZ,
                     ROBERTO_BAUTISTA_AGUT,
+                    HUBERT_HURKACZ,
                 ],
+                'score': [(7, 6), (6, 3)],
                 'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.52,
                     HUBERT_HURKACZ: 2.50,
-                    ROBERTO_BAUTISTA_AGUT: 1.52
                 },
                 'prediction': ROBERTO_BAUTISTA_AGUT,
                 'bet': 4,
@@ -8110,15 +8096,17 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    JOAO_SOUSA,
                     DENIS_SHAPOVALOV,
+                    JOAO_SOUSA,
                 ],
+                'score': [(2, 6), (6, 3), (6, 2)],
                 'odds': {
-                    JOAO_SOUSA: 2.60,
                     DENIS_SHAPOVALOV: 1.48,
+                    JOAO_SOUSA: 2.60,
                 },
                 'prediction': DENIS_SHAPOVALOV,
                 'bet': 2,
+                # previous opponent refunded
             },
             {
                 'round': 64,
@@ -8126,6 +8114,7 @@ DATA = [
                     NOVAK_DJOKOVIC,
                     SAM_QUERREY,
                 ],
+                'score': [(7, 5), (6, 1)],
                 'odds': {
                     NOVAK_DJOKOVIC: 1.09,
                     SAM_QUERREY: 7.00,
@@ -8139,6 +8128,7 @@ DATA = [
                     ROGER_FEDERER,
                     JUAN_IGNACIO_LONDERO,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
                     ROGER_FEDERER: 1.03,
                     JUAN_IGNACIO_LONDERO: 11.00,
@@ -8152,6 +8142,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                     JOHN_ISNER,
                 ],
+                'score': [(6, 4), (6, 7), (7, 6)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 2.20,
                     JOHN_ISNER: 1.65,
@@ -8159,6 +8150,259 @@ DATA = [
                 'prediction': PABLO_CARRENO_BUSTA,
                 'bet': 2,
             },
+
+            # 2018-08-14
+            {
+                'round': 32,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.62,
+                    RADU_ALBOT: 2.15
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.54,
+                    MIKHAIL_KUKUSHKIN: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICHARD_GASQUET,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    RICHARD_GASQUET: 1.30,
+                    FEDERICO_DELBONIS: 3.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    REILLY_OPELKA
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.65,
+                    REILLY_OPELKA: 2.10
+
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDREY_RUBLEV,
+                    STAN_WAWRINKA
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ANDREY_RUBLEV: 2.30,
+                    STAN_WAWRINKA: 1.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAVID_GOFFIN,
+                    GUIDO_PELLA
+                ],
+                'score': [(6, 1), (7, 5)],
+                'odds': {
+                    DAVID_GOFFIN: 1.53,
+                    GUIDO_PELLA: 2.35
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    BENOIT_PAIRE
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.25,
+                    BENOIT_PAIRE: 3.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    ALEXANDER_ZVEREV
+                ],
+                'score': [(6, 7), (6, 2), (6, 4)],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 2.30,
+                    ALEXANDER_ZVEREV: 1.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    KEI_NISHIKORI
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 3.20,
+                    KEI_NISHIKORI: 1.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    STEFANOS_TSITSIPAS
+                ],
+                'score': [(6, 4), (6, 7), (7, 6)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 2.30,
+                    STEFANOS_TSITSIPAS: 1.51
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LUCAS_POUILLE,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    LUCAS_POUILLE: 2.40,
+                    DENIS_SHAPOVALOV: 1.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    FRANCES_TIAFOE,
+                ],
+                'score': [(6, 3), (3, 6), (6, 1)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    KAREN_KHACHANOV,
+                    NICK_KYRGIOS
+                ],
+                'score': [(6, 7), (7, 6), (6, 2)]
+                # no odds
+            },
+
+            # 2018-08-15
+            {
+                'round': 16,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    ALEX_DE_MINAUR
+                ],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 2.70,
+                    ALEX_DE_MINAUR: 1.45,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    RICHARD_GASQUET
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.55,
+                    RICHARD_GASQUET: 2.40,
+                },
+                'predicton': None,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAVID_GOFFIN,
+                    ADRIAN_MANNARINO,
+                ],
+                'odds': {
+                    DAVID_GOFFIN: 1.42,
+                    ADRIAN_MANNARINO: 2.80,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    JAN_LENNARD_STRUFF,
+                ],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.38,
+                    JAN_LENNARD_STRUFF: 3.00,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROGER_FEDERER,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    ROGER_FEDERER: 1.10,
+                    ANDREY_RUBLEV: 6.50,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 16,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    ROBERTO_BAUTISTA_AGUT,
+                ],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 3.20,
+                    ROBERTO_BAUTISTA_AGUT: 1.34,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 16,
+                'players': [
+                    LUCAS_POUILLE,
+                    KAREN_KHACHANOV,
+                ],
+                'odds': {
+                    LUCAS_POUILLE: 2.35,
+                    KAREN_KHACHANOV: 1.58,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 16,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    PABLO_CARRENO_BUSTA,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.01,
+                    PABLO_CARRENO_BUSTA: 14.00,
+                },
+                'prediction': None,
+            },
+
+            #
         ]
     }
 ]

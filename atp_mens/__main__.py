@@ -30,7 +30,7 @@ def win_probability(team1, team2):
     return ts.cdf(delta_mu / denom)
 
 
-def get_regressor(X_train, y_train, X_test=None, y_test=None, **params):
+def get_regressor(X_train, y_train, X_test=None, y_test=None, **reg_params):
     """get regressor"""
     logger.info('')
     logger.info('Training model...')
@@ -41,47 +41,117 @@ def get_regressor(X_train, y_train, X_test=None, y_test=None, **params):
 
     reg = XGBRegressor(
         objective='reg:squarederror', n_jobs=4,
+
         # Step size shrinkage used in update to prevents overfitting. After each boosting step, we
         # can directly get the weights of new features, and eta shrinks the feature weights to make
         # the boosting process more conservative.
-        learning_rate=0.34,  # default 0.3
+        # learning_rate=0.3,
+
+        # Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger gamma is,
+        # the more conservative the algorithm will be.
+        # gamma=0,
+
+        # Maximum depth of a tree. Increasing this value will make the model more complex and more
+        # likely to overfit. 0 is only accepted in lossguided growing policy when tree_method is
+        # set as hist and it indicates no limit on depth. Beware that XGBoost aggressively consumes
+        # memory when training a deep tree.
+        # max_depth=3,
+
+        # Minimum sum of instance weight (hessian) needed in a child. If the tree partition step
+        # results in a leaf node with the sum of instance weight less than min_child_weight, then
+        # the building process will give up further partitioning. In linear regression task, this
+        # simply corresponds to minimum number of instances needed to be in each node. The larger
+        # min_child_weight is, the more conservative the algorithm will be.
+        # min_child_weight=1,
+
+        # Maximum delta step we allow each leaf output to be. If the value is set to 0, it means
+        # there is no constraint. If it is set to a positive value, it can help making the update
+        # step more conservative. Usually this parameter is not needed, but it might help in
+        # logistic regression when class is extremely imbalanced. Set it to value of 1-10 might
+        # help control the update.
+        # max_delta_step=0,
+
+        # Subsample ratio of the training instances. Setting it to 0.5 means that XGBoost would
+        # randomly sample half of the training data prior to growing trees. and this will prevent
+        # overfitting. Subsampling will occur once in every boosting iteration.
+        # subsample=1,
+
         # Control the balance of positive and negative weights, useful for unbalanced classes. A
         # typical value to consider: sum(negative instances) / sum(positive instances).
-        scale_pos_weight=6.9,  # default 1
-        # Minimum sum of instance weight (hessian) needed in a child. If the tree partition step 
-        # results in a leaf node with the sum of instance weight less than min_child_weight, then 
-        # the building process will give up further partitioning. In linear regression task, this 
-        # simply corresponds to minimum number of instances needed to be in each node. The larger 
-        # min_child_weight is, the more conservative the algorithm will be.
-        min_child_weight=9,  # default 1
-        # Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger gamma is, 
-        # the more conservative the algorithm will be.
-        gamma=0,  # default 0
-        **params)
+        # scale_pos_weight=1,
+
+        ############################################
+        # Regularization
+
+        # L2 regularization term on weights. Increasing this value will make model more conservative.
+        # reg_lambda=1,
+
+        # L1 regularization term on weights. Increasing this value will make model more conservative.
+        # reg_alpha=0,
+
+        ############################################
+        # This is a family of parameters for subsampling of columns.. colsample_by* parameters
+        # work cumulatively
+
+        # is the subsample ratio of columns when constructing each tree. Subsampling occurs once
+        # for every tree constructed.
+        # colsample_bytree=1,
+
+        # is the subsample ratio of columns for each level. Subsampling occurs once for every new
+        # depth level reached in a tree. Columns are subsampled from the set of columns chosen for
+        # the current tree.
+        # colsample_bylevel=1,
+
+        # is the subsample ratio of columns for each node (split). Subsampling occurs once every
+        # time a new split is evaluated. Columns are subsampled from the set of columns chosen for
+        # the current level.
+        # colsample_bynode=1,
+
+        **reg_params)
     reg = reg.fit(X_train, y_train, eval_set=eval_set, eval_metric='rmse', verbose=0)
 
     return reg
 
 
-def main(params, train=0):
+def main(hyper_params, train=0):
     logger.info('Starting main training')
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
-    estimators, max_depth, \
-        upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, \
-        bet_pred_a, bet_pred_b, bet_pred_c, \
-        bet_odds_a, bet_odds_b, bet_odds_c = params
+    # upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, \
+    # reg_lambda, reg_alpha, \
+    # estimators, \
+    # learning_rate, gamma, max_depth, min_child_weight = hyper_params
+    # max_delta_step, subsample, scale_pos_weight = hyper_params
+    bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
     
     reg_params = {
-        'n_estimators': int(round(estimators * 100)),
-        'max_depth': int(round(max_depth)),
+        'n_estimators': int(round(2.0522392669791523 * 100)),
+        'learning_rate': 0.5076077518679596,
+        'gamma': 1.0931334779261526,
+        'max_depth': int(round(2.605884221401324)),
+        'min_child_weight': 0.86383038291261,
+        'max_delta_step': 0.19995566873577586,
+        'subsample': 0.9922978010805564,
+        'scale_pos_weight': 0.8825017324048802,
+        'reg_lambda': 0.7106544893592536,
+        'reg_alpha': 0.010303112390348092,
+        'colsample_bytree': 0.999790544478916,
+        'colsample_bylevel': 0.9999562489678556,
+        'colsample_bynode': 0.98799098337194,
     }
 
-    upsets_cutoff = int(round(upsets_cutoff * 10))
-    whitewashes_cutoff = int(round(whitewashes_cutoff * 10))
-    doors_cutoff = int(round(doors_cutoff * 10))
-    surface_cutoff = int(round(surface_cutoff * 10))
+    upsets_cutoff = int(round(0.4702930317774987 * 10))
+    whitewashes_cutoff = int(round(0.011659368158834161 * 10))
+    doors_cutoff = int(round(4.87763773370548 * 10))
+    surface_cutoff = int(round(7.336277654001927 * 10))
+
+    bet_pred_a = -57.72765234484444
+    bet_pred_b = -35.12339940099521
+    bet_pred_c = 42.20397841611924
+    bet_odds_a = -6.625846643088274
+    bet_odds_b = -44.60842535679358
+    bet_odds_c = 9.50444367073803
 
     # init
     reg = None
@@ -326,18 +396,24 @@ def main(params, train=0):
                 log_trueskill = f'[{ratings[p1].mu:.0f}.{ratings[p1].sigma:.0f} vs {ratings[p2].mu:.0f}.{ratings[p2].sigma:.0f}]'
                 logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
 
-    ###################################
-    # Summary
+    if train:
+        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
+        return -(sum(payouts) / sum(bet_amts))
+    else:
+        summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_multis, bet_multis_cat, actual_debug)
 
+
+def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_multis, bet_multis_cat, actual_debug):
     logger.info('')
     logger.info('Tree info:')
     reg_score = reg.evals_result()
     params = reg.get_params()
     logger.info(f'Num estimators: {params["n_estimators"]}')
     logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
+    logger.info(f'Gamma: {params["gamma"]}')
     logger.info(f'Max depth: {params["max_depth"]}')
     logger.info(f'Scale pos weight: {params["scale_pos_weight"]:.2f}')
-    logger.info(f'Accuracy: training={reg_score["validation_0"]["rmse"][-1]:.4f}%')
+    logger.info(f'Accuracy: training={reg_score["validation_0"]["rmse"][-1]:.4f}')
     feature_names = [
         'win%', 'odds_scaled',
         'odds', '~odds',
@@ -367,21 +443,17 @@ def main(params, train=0):
         logger.info('')
         logger.info('Actual:')
         logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
-        logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
+        logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        # sheet = 0.72
-        # if sum(tab) - sheet > 0.01:
-        #     for l in actual_debug:
-        #         logger.warning(l)
-        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
-
-    if train:
-        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
-        return -(sum(payouts) / sum(bet_amts))
+        sheet = 7.24
+        if abs(sum(tab) - sheet) > 0.01:
+            for l in actual_debug:
+                logger.warning(l)
+            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
-if __name__ == '__main__':
+def run():
     # add
     # age
     # court surface
@@ -389,20 +461,29 @@ if __name__ == '__main__':
     # rested
     # weather
     # days since last played?
-    
+    # win-loss record
+    # games and set record
+    # tie-break record
+    # 1st serve conversion rate
+
     train = 0
-    
+
     names = [
-        'estimators', 'max_depth',
-        'upsets cutoff', 'whitewashes_cutoff', 'doors_cutoff', 'surface_cutoff',
+        # 'estimators',
+        # 'learning_rate', 'gamma', 'max_depth', 'min_child_weight',
+        # 'max_delta_step', 'subsample', 'scale_pos_weight',
+        # 'reg_lambda', 'reg_alpha',
+        # 'upsets cutoff', 'whitewashes_cutoff', 'doors_cutoff', 'surface_cutoff',
         'pred a', 'pred b', 'pred c',
         'odds a', 'odds b', 'odds c',
     ]
-    params = [2.00379081867129, 8.677376255448147, 0.39663760868774767, 0.04068751936981757, 4.852958470023094, 7.2664623755108835, 26.55728133571167, -13.342104073315578, -22.6969446355299, -4.942592748067904, -49.245940321964824, 3.078281082269243]
-    bounds = [[0.01, 1,  0,  0,  0,  0,  -50, -50, -50, -50, -50, -50],
-              [10,   10, 10, 10, 10, 10, 50,  50,  50,  50,  50,  50]]
+    params = [
+        0, 0, 0, 0, 0, 0
+    ]
+    bounds = [[-np.inf],
+              [np.inf]]
     assert len(params) == len(names)
-    assert len(params) == len(bounds[0])
+    # assert len(params) == len(bounds[0])
 
     if train:
         es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
@@ -419,8 +500,13 @@ if __name__ == '__main__':
         print('best')
         print(list(es.result[0]))
         print('')
-        print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        print(
+            'xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
         print(list(es.result[5]))
 
     else:
         main(params)
+
+
+if __name__ == '__main__':
+    run()
