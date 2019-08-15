@@ -2,14 +2,15 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 68.0  5.7   141
+# 68.7  8.4   209    added wins and losses
+# 67.4  2.2   57     2019-08-15                         (1, 465), (7, 152), (4, 143)
 # 68.9  8.7   217    opt pred, odds poly                (1, 452), (4, 161), (7, 135)
 # 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
 # 63.0  -1.4  -14    optimized max_delta_step, subsample, scale_pos_weight  (1, 766)
-# 67.5  7.5   72     optimized L1/2 regulazations       (1, 784)
-# 64.9  2.1   21     optimized colsamples               (1, 775)
-# 66.2  6.1   59     merged params
-# 66.2  1.6   18     added surface
 
+# 67.5  7.5   72     optimized L1/2 regulazations       (1, 784)
+# 66.2  6.1   59     merged params
 # 66.1  2.1   22     added doors                        (1, 730), (4, 43), (2, 35), (3, 28)
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
 # 67.9  5.5   81     fixed n_estimators typo, fixed scale_pos_weight and learning_rate and capped bet params at 40
@@ -8016,11 +8017,11 @@ DATA = [
                 ],
                 'score': [(6, 2), (7, 5)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.32,
+                    DANILL_MEDVEDEV: 1.42,
                     KYLE_EDMUND: 2.80,
                 },
-                # 'prediction': DANILL_MEDVEDEV,
-                # 'bet': 2,
+                'prediction': DANILL_MEDVEDEV,
+                'bet': 2,
             },
             {
                 'round': 64,
@@ -8315,7 +8316,8 @@ DATA = [
                     YOSHIHITO_NISHIOKA: 2.70,
                     ALEX_DE_MINAUR: 1.45,
                 },
-                'prediction': None,
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 2,
             },
             {
                 'round': 16,
@@ -8327,7 +8329,8 @@ DATA = [
                     DIEGO_SCHWARTZMAN: 1.55,
                     RICHARD_GASQUET: 2.40,
                 },
-                'predicton': None,
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 8,
             },
             {
                 'round': 16,
@@ -8339,7 +8342,8 @@ DATA = [
                     DAVID_GOFFIN: 1.42,
                     ADRIAN_MANNARINO: 2.80,
                 },
-                'prediction': None,
+                'prediction': DAVID_GOFFIN,
+                'bet': 2,
             },
             {
                 'round': 16,
@@ -8348,10 +8352,11 @@ DATA = [
                     JAN_LENNARD_STRUFF,
                 ],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.38,
-                    JAN_LENNARD_STRUFF: 3.00,
+                    DANILL_MEDVEDEV: 1.40,
+                    JAN_LENNARD_STRUFF: 2.80,
                 },
-                'prediction': None,
+                'prediction': DANILL_MEDVEDEV,
+                'bet': 2,
             },
             {
                 'round': 16,
@@ -8363,7 +8368,8 @@ DATA = [
                     ROGER_FEDERER: 1.10,
                     ANDREY_RUBLEV: 6.50,
                 },
-                'prediction': None,
+                'prediction': ROGER_FEDERER,
+                'bet': 2,
             },
             {
                 'round': 16,
@@ -8375,7 +8381,8 @@ DATA = [
                     MIOMIR_KECMANOVIC: 3.20,
                     ROBERTO_BAUTISTA_AGUT: 1.34,
                 },
-                'prediction': None,
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 2,
             },
             {
                 'round': 16,
@@ -8384,10 +8391,11 @@ DATA = [
                     KAREN_KHACHANOV,
                 ],
                 'odds': {
-                    LUCAS_POUILLE: 2.35,
-                    KAREN_KHACHANOV: 1.58,
+                    LUCAS_POUILLE: 2.50,
+                    KAREN_KHACHANOV: 1.52,
                 },
-                'prediction': None,
+                'prediction': KAREN_KHACHANOV,
+                'bet': 2,
             },
             {
                 'round': 16,
@@ -8396,10 +8404,11 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                 ],
                 'odds': {
-                    NOVAK_DJOKOVIC: 1.01,
-                    PABLO_CARRENO_BUSTA: 14.00,
+                    NOVAK_DJOKOVIC: 1.02,
+                    PABLO_CARRENO_BUSTA: 12.00,
                 },
-                'prediction': None,
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 2,
             },
 
             #

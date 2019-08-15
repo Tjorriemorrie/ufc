@@ -118,12 +118,12 @@ def main(hyper_params, train=0):
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
-    # upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, \
     # reg_lambda, reg_alpha, \
     # estimators, \
     # learning_rate, gamma, max_depth, min_child_weight = hyper_params
     # max_delta_step, subsample, scale_pos_weight = hyper_params
-    bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
+    # upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, wnl_cutoff = hyper_params
+    # bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
     
     reg_params = {
         'n_estimators': int(round(2.0522392669791523 * 100)),
@@ -140,11 +140,11 @@ def main(hyper_params, train=0):
         'colsample_bylevel': 0.9999562489678556,
         'colsample_bynode': 0.98799098337194,
     }
-
-    upsets_cutoff = int(round(0.4702930317774987 * 10))
-    whitewashes_cutoff = int(round(0.011659368158834161 * 10))
-    doors_cutoff = int(round(4.87763773370548 * 10))
-    surface_cutoff = int(round(7.336277654001927 * 10))
+ 
+    upsets_cutoff = int(round(1.3627577408735392 * 10))
+    whitewashes_cutoff = int(round(1.568914833462892 * 10))
+    doors_cutoff = int(round(3.3125585097853985 * 10))
+    surface_cutoff = int(round(2.192441090904198 * 10))
 
     bet_pred_a = -57.72765234484444
     bet_pred_b = -35.12339940099521
@@ -152,6 +152,12 @@ def main(hyper_params, train=0):
     bet_odds_a = -6.625846643088274
     bet_odds_b = -44.60842535679358
     bet_odds_c = 9.50444367073803
+
+    # bet_wnl_a, bet_wnl_b, bet_wnl_c, wnl_cutoff = hyper_params
+    bet_wnl_a = -1.660212423115955
+    bet_wnl_b = -3.6347848208701032
+    bet_wnl_c = -1.9577446106885568
+    wnl_cutoff = int(round(1.792873146895406 * 10))
 
     # init
     reg = None
@@ -166,6 +172,7 @@ def main(hyper_params, train=0):
     hards = defaultdict(lambda: [0])
     clays = defaultdict(lambda: [0])
     grasses = defaultdict(lambda: [0])
+    wins_losses = defaultdict(lambda: [])
     X_train = []
     y_train = []
     X_test = []
@@ -206,6 +213,10 @@ def main(hyper_params, train=0):
                 raise ValueError(f'surely these odds are wrong? {p1_odds} {p2_odds}')
             win1_prob = win_probability([ratings[p1]], [ratings[p2]])
             win2_prob = win_probability([ratings[p2]], [ratings[p1]])
+
+            # wins losses
+            p1_wins_losses = Counter(wins_losses[p1])
+            p2_wins_losses = Counter(wins_losses[p2])
 
             # surface
             if event['location']['surface'] == SURFACE_HARD:
@@ -261,6 +272,10 @@ def main(hyper_params, train=0):
                     p2_doors,
                     p1_surface,
                     p2_surface,
+                    p1_wins_losses[1],
+                    p2_wins_losses[1],
+                    p1_wins_losses[-1],
+                    p2_wins_losses[-1],
                 ],
                 [
                     win2_prob,
@@ -280,12 +295,20 @@ def main(hyper_params, train=0):
                     p1_doors,
                     p2_surface,
                     p1_surface,
+                    p2_wins_losses[1],
+                    p1_wins_losses[1],
+                    p2_wins_losses[-1],
+                    p1_wins_losses[-1],
                 ]
             ]
 
             #########################################
             # update here as next sections can skip ahead
             if 'score' in match:
+
+                # update wins losses
+                wins_losses[p1] = wins_losses[p1][-wnl_cutoff:] + [1]
+                wins_losses[p2] = wins_losses[p2][-wnl_cutoff:] + [-1]
 
                 # update surface
                 surface[p1] = surface[p1][-surface_cutoff:] + [1]
@@ -324,6 +347,14 @@ def main(hyper_params, train=0):
                 ###############################
                 # bet scaling
                 bet_multi = 1
+
+                # wins and losses
+                p_wnl = p1_wins_losses if p1_pred > p2_pred else p2_wins_losses
+                p_wnl = p_wnl[1] / p_wnl[-1] if p_wnl[-1] else p_wnl[1]
+                bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b, bet_wnl_c], [p_wnl])[0]
+                bet_wnl_multi = int(min(max(round(bet_wnl_multi), 0), 3))
+                bet_multi += bet_wnl_multi
+                bet_multis_cat.append(f'bet_wnl_multi-{bet_wnl_multi}')
 
                 # pred
                 pred_max = max(p1_pred, p2_pred)
@@ -446,11 +477,11 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        sheet = 7.24
-        if abs(sum(tab) - sheet) > 0.01:
-            for l in actual_debug:
-                logger.warning(l)
-            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        # sheet = 7.24
+        # if abs(sum(tab) - sheet) > 0.01:
+        #     for l in actual_debug:
+        #         logger.warning(l)
+        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 def run():
@@ -474,14 +505,15 @@ def run():
         # 'max_delta_step', 'subsample', 'scale_pos_weight',
         # 'reg_lambda', 'reg_alpha',
         # 'upsets cutoff', 'whitewashes_cutoff', 'doors_cutoff', 'surface_cutoff',
-        'pred a', 'pred b', 'pred c',
-        'odds a', 'odds b', 'odds c',
+        # 'pred a', 'pred b', 'pred c',
+        # 'odds a', 'odds b', 'odds c',
+        'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff',
     ]
     params = [
-        0, 0, 0, 0, 0, 0
+        0, 0, 0, 1
     ]
-    bounds = [[-np.inf],
-              [np.inf]]
+    bounds = [[-np.inf, -np.inf, -np.inf,    0],
+              [np.inf, np.inf, np.inf, np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 
@@ -500,8 +532,7 @@ def run():
         print('best')
         print(list(es.result[0]))
         print('')
-        print(
-            'xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
         print(list(es.result[5]))
 
     else:
