@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 69.4  20.5  783    added sets
 # 71.8  23.2  865    2019-08-16
 # 66.1  7.0   259    added court speed                      (2, 311), (5, 196), (4, 109), (7, 81)
 # 70.9  22.7  821    opt gamma/max_depth/min_child_weight   (2, 334), (5, 154), (4, 139), (7, 111)

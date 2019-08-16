@@ -175,6 +175,12 @@ def main(hyper_params, train=0):
     bet_spd_c = -1.9732000152355365
     speed_cutoff = int(round(20.18577871958604 * 10))
 
+    # bet_set_a, bet_set_b, bet_set_c, sets_cutoff = hyper_params
+    bet_set_a = 5.693199788273852
+    bet_set_b = -2.326855621895103
+    bet_set_c = 0.2513640348838548, 
+    sets_cutoff = int(round(10.683875218378896 * 10))
+
     # init
     reg = None
     scaler = MinMaxScaler()
@@ -187,6 +193,7 @@ def main(hyper_params, train=0):
     speeds = defaultdict(lambda: [100, 0])
     upsets = defaultdict(lambda: [])
     whitewashes = defaultdict(lambda: [0])
+    sets = defaultdict(lambda: [])
     X_train = []
     y_train = []
     X_test = []
@@ -276,6 +283,16 @@ def main(hyper_params, train=0):
             p1_scaled_odds = p1_odds / odds_sum
             p2_scaled_odds = p2_odds / odds_sum
 
+            # sets
+            p1_sets = Counter(sets[p1])
+            p1_sets_wins = p1_sets[1]
+            p1_sets_losses = p1_sets[-1]
+            p1_sets_winrate = p1_sets[1] / max(1, len(sets[p1]))
+            p2_sets = Counter(sets[p2])
+            p2_sets_wins = p2_sets[1]
+            p2_sets_losses = p2_sets[-1]
+            p2_sets_winrate = p2_sets[1] / max(1, len(sets[p2]))
+
             match_data = [
                 [
                     win1_prob,
@@ -311,6 +328,12 @@ def main(hyper_params, train=0):
                     p2_whitewashes,
                     p1_speed_lin.slope,
                     p2_speed_lin.slope,
+                    p1_sets_wins,
+                    p1_sets_losses,
+                    p1_sets_winrate,
+                    p2_sets_wins,
+                    p2_sets_losses,
+                    p2_sets_winrate,
                 ],
                 [
                     win2_prob,
@@ -346,6 +369,12 @@ def main(hyper_params, train=0):
                     p1_whitewashes,
                     p2_speed_lin.slope,
                     p1_speed_lin.slope,
+                    p2_sets_wins,
+                    p2_sets_losses,
+                    p2_sets_winrate,
+                    p1_sets_wins,
+                    p1_sets_losses,
+                    p1_sets_winrate,
                 ]
             ]
 
@@ -378,6 +407,10 @@ def main(hyper_params, train=0):
                 upset = win2_prob > 0.50
                 upsets[p1] = upsets[p1][-upsets_cutoff:] + [1 if upset else 0]
                 upsets[p2] = upsets[p2][-upsets_cutoff:] + [-1 if upset else 0]
+                
+                # update sets
+                sets[p1] = sets[p1][-sets_cutoff:] + [1 if v[0] > v[1] else -1 for v in match['score']]
+                sets[p2] = sets[p2][-sets_cutoff:] + [1 if v[1] > v[0] else -1 for v in match['score']]
 
                 # update ratings
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
@@ -453,6 +486,16 @@ def main(hyper_params, train=0):
                 bet_odds_multi = int(min(max(round(bet_odds_multi), 0), 3))
                 bet_multi += bet_odds_multi
                 bet_multis_cat.append(f'bet_odds_multi-{bet_odds_multi}')
+
+                # sets
+                if p1_pred > p2_pred:
+                    p_set = p1_sets_winrate - p2_sets_winrate
+                else:
+                    p_set = p2_sets_winrate - p1_sets_winrate
+                bet_set_multi = np.polyval([bet_set_a, bet_set_b, bet_set_c], [p_set])[0]
+                bet_set_multi = int(min(max(round(bet_set_multi), 0), 1))
+                bet_multi += bet_set_multi
+                bet_multis_cat.append(f'bet_set_multi-{bet_set_multi}')
 
                 bet_amt = bet_size * bet_multi
                 bet_amts.append(bet_amt)
@@ -566,22 +609,23 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        sheet = -4.4
-        if abs(sum(tab) - sheet) > 0.01:
-            for l in actual_debug:
-                logger.warning(l)
-            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        # sheet = -4.4
+        # if abs(sum(tab) - sheet) > 0.01:
+        #     for l in actual_debug:
+        #         logger.warning(l)
+        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 def run():
     # age
     # serve strength
-    # rested
     # weather
+    # rested
     # days since last played?
     # games and set record
     # tie-break record
     # 1st serve conversion rate
+    # FIX EVs
 
     train = 0
 
@@ -596,18 +640,19 @@ def run():
         # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c', 'surface_cutoff',
         # 'gamma', 'max_depth', 'min_child_weight',
         # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
-        'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
+        # 'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
+        'bet_set_a', 'bet_set_b', 'bet_set_c', 'sets_cutoff',
     ]
     params = [
-        0, 1, 1
+        0, 0, 0, 10
     ]
-    bounds = [[0,       0, 0],
-              [np.inf,  1, np.inf]]
+    bounds = [[-np.inf, -np.inf, -np.inf, 0],
+              [np.inf,  np.inf,  np.inf,  np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 
     if train:
-        es = CMAEvolutionStrategy(params, 0.5, {'bounds': bounds})
+        es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
         while not es.stop():
             solutions = es.ask()
             try:
