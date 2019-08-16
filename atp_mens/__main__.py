@@ -6,11 +6,11 @@ import numpy as np
 from cma import CMAEvolutionStrategy
 from loguru import logger
 from math import sqrt
+from scipy.stats import linregress
 from sklearn.preprocessing import MinMaxScaler
 from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
-from location import SURFACE_HARD, SURFACE_CLAY, SURFACE_GRASS
 from .data import DATA
 from .data_2018_10 import DATA_2018_10
 from .data_2019_01 import DATA_2019_01
@@ -119,18 +119,17 @@ def main(hyper_params, train=0):
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
     # reg_lambda, reg_alpha, \
-    # estimators, \
     # learning_rate, gamma, max_depth, min_child_weight = hyper_params
     # max_delta_step, subsample, scale_pos_weight = hyper_params
-    # upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, wnl_cutoff = hyper_params
-    # bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
-    
+
+    # estimators, learning_rate = hyper_params
+    # gamma, max_depth, min_child_weight = hyper_params
     reg_params = {
-        'n_estimators': int(round(2.0522392669791523 * 100)),
-        'learning_rate': 0.5076077518679596,
-        'gamma': 1.0931334779261526,
-        'max_depth': int(round(2.605884221401324)),
-        'min_child_weight': 0.86383038291261,
+        'n_estimators': int(round(2.1788282223375672 * 100)),
+        'learning_rate': 0.31052718461617523,
+        'gamma': 0.1480916400109764,  # 1.0931334779261526,
+        'max_depth': int(round(4.59282984572512)),  # 2.605884221401324)),
+        'min_child_weight': 1.0956345040972018,  # 0.86383038291261,
         'max_delta_step': 0.19995566873577586,
         'subsample': 0.9922978010805564,
         'scale_pos_weight': 0.8825017324048802,
@@ -140,12 +139,12 @@ def main(hyper_params, train=0):
         'colsample_bylevel': 0.9999562489678556,
         'colsample_bynode': 0.98799098337194,
     }
- 
+
+    # upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, wnl_cutoff = hyper_params
     upsets_cutoff = int(round(1.3627577408735392 * 10))
     whitewashes_cutoff = int(round(1.568914833462892 * 10))
-    doors_cutoff = int(round(3.3125585097853985 * 10))
-    surface_cutoff = int(round(2.192441090904198 * 10))
 
+    # bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
     bet_pred_a = -57.72765234484444
     bet_pred_b = -35.12339940099521
     bet_pred_c = 42.20397841611924
@@ -154,10 +153,28 @@ def main(hyper_params, train=0):
     bet_odds_c = 9.50444367073803
 
     # bet_wnl_a, bet_wnl_b, bet_wnl_c, wnl_cutoff = hyper_params
-    bet_wnl_a = -1.660212423115955
-    bet_wnl_b = -3.6347848208701032
-    bet_wnl_c = -1.9577446106885568
-    wnl_cutoff = int(round(1.792873146895406 * 10))
+    bet_wnl_a = 112.93331722962265
+    bet_wnl_b = -274.4787183334988
+    bet_wnl_c = -5.239133097906791
+    wnl_cutoff = int(round(184.7912281857989 * 10))
+
+    # bet_drs_a, bet_drs_b, bet_drs_c, doors_cutoff = hyper_params
+    bet_drs_a = -21.440152399884028
+    bet_drs_b = 9.162822051826854
+    bet_drs_c = -15.863824751108206
+    doors_cutoff = int(round(0.3588956879099647 * 10))
+
+    # bet_sfc_a, bet_sfc_b, bet_sfc_c, surface_cutoff = hyper_params
+    bet_sfc_a = 0.6653265485318403
+    bet_sfc_b = -0.9177815683601153
+    bet_sfc_c = 1.036855102957022
+    surface_cutoff = int(round(4.5970976121640295 * 10))  # 2.192441090904198
+
+    # bet_spd_a, bet_spd_b, bet_spd_c, speed_cutoff = hyper_params
+    bet_spd_a = 3.3990105003184974
+    bet_spd_b = -7.193927630039531
+    bet_spd_c = -1.9732000152355365
+    speed_cutoff = int(round(20.18577871958604 * 10))
 
     # init
     reg = None
@@ -165,14 +182,12 @@ def main(hyper_params, train=0):
     cutoff = int(len(all_data) * 0.7)
     start_date = None
     ratings = defaultdict(lambda: Rating())
+    wins_losses = defaultdict(lambda: [])
+    doors = defaultdict(lambda: [])
+    surfaces = defaultdict(lambda: [])
+    speeds = defaultdict(lambda: [100, 0])
     upsets = defaultdict(lambda: [])
     whitewashes = defaultdict(lambda: [0])
-    indoors = defaultdict(lambda: [0])
-    outdoors = defaultdict(lambda: [0])
-    hards = defaultdict(lambda: [0])
-    clays = defaultdict(lambda: [0])
-    grasses = defaultdict(lambda: [0])
-    wins_losses = defaultdict(lambda: [])
     X_train = []
     y_train = []
     X_test = []
@@ -216,29 +231,38 @@ def main(hyper_params, train=0):
 
             # wins losses
             p1_wins_losses = Counter(wins_losses[p1])
+            p1_wnl_winrate = p1_wins_losses[1] / max(1, len(wins_losses[p1]))
             p2_wins_losses = Counter(wins_losses[p2])
-
-            # surface
-            if event['location']['surface'] == SURFACE_HARD:
-                p1_surface = sum(hards[p1])
-                p2_surface = sum(hards[p2])
-                surface = hards
-            if event['location']['surface'] == SURFACE_CLAY:
-                p1_surface = sum(clays[p1])
-                p2_surface = sum(clays[p2])
-                surface = clays
-            if event['location']['surface'] == SURFACE_GRASS:
-                p1_surface = sum(grasses[p1])
-                p2_surface = sum(grasses[p2])
-                surface = grasses
+            p2_wnl_winrate = p2_wins_losses[1] / max(1, len(wins_losses[p2]))
 
             # outdoors
-            if event['location']['outdoor']:
-                p1_doors = sum(outdoors[p1])
-                p2_doors = sum(outdoors[p2])
-            else:
-                p1_doors = sum(indoors[p1])
-                p2_doors = sum(indoors[p2])
+            match_door = event['location']['outdoor']
+            p1_doors = Counter(doors[p1])
+            p1_doors_wins = p1_doors[match_door]
+            p1_doors_losses = p1_doors[-match_door]
+            p1_doors_winrate = p1_doors_wins / max(1, len(doors[p1]))
+            p2_doors = Counter(doors[p2])
+            p2_doors_wins = p2_doors[match_door]
+            p2_doors_losses = p2_doors[-match_door]
+            p2_doors_winrate = p2_doors_wins / max(1, len(doors[p2]))
+
+            # surface
+            match_surface = event['location']['surface']
+            p1_surface = Counter(surfaces[p1])
+            p1_surface_wins = p1_surface[match_surface]
+            p1_surface_losses = p1_surface[-match_surface]
+            p1_surface_winrate = p1_surface_wins / max(1, p1_surface_wins + p1_surface_losses)
+            p2_surface = Counter(surfaces[p1])
+            p2_surface_wins = p2_surface[match_surface]
+            p2_surface_losses = p2_surface[-match_surface]
+            p2_surface_winrate = p2_surface_wins / max(1, p2_surface_wins + p2_surface_losses)
+
+            # speed
+            match_speed = event['location']['speed']
+            p1_speed_prs = [(abs(v), 1 if v > 0 else -1) for v in speeds[p1]]
+            p1_speed_lin = linregress([v[0] for v in p1_speed_prs], [v[1] for v in p1_speed_prs])
+            p2_speed_prs = [(abs(v), 1 if v > 0 else -1) for v in speeds[p2]]
+            p2_speed_lin = linregress([v[0] for v in p2_speed_prs], [v[1] for v in p2_speed_prs])
 
             # whitewashes
             p1_whitewashes = sum(whitewashes[p1])
@@ -264,18 +288,30 @@ def main(hyper_params, train=0):
                     ratings[p1].sigma,
                     ratings[p2].sigma,
                     match['round'],
+                    p1_wins_losses[1],
+                    p1_wins_losses[-1],
+                    p1_wnl_winrate,
+                    p2_wins_losses[1],
+                    p2_wins_losses[-1],
+                    p2_wnl_winrate,
+                    p1_doors_wins,
+                    p1_doors_losses,
+                    p1_doors_winrate,
+                    p2_doors_wins,
+                    p2_doors_losses,
+                    p2_doors_winrate,
+                    p1_surface_wins,
+                    p1_surface_losses,
+                    p1_surface_winrate,
+                    p2_surface_wins,
+                    p2_surface_losses,
+                    p2_surface_winrate,
                     p1_upsets,
                     p2_upsets,
                     p1_whitewashes,
                     p2_whitewashes,
-                    p1_doors,
-                    p2_doors,
-                    p1_surface,
-                    p2_surface,
-                    p1_wins_losses[1],
-                    p2_wins_losses[1],
-                    p1_wins_losses[-1],
-                    p2_wins_losses[-1],
+                    p1_speed_lin.slope,
+                    p2_speed_lin.slope,
                 ],
                 [
                     win2_prob,
@@ -287,18 +323,30 @@ def main(hyper_params, train=0):
                     ratings[p2].sigma,
                     ratings[p1].sigma,
                     match['round'],
+                    p2_wins_losses[1],
+                    p2_wins_losses[-1],
+                    p2_wnl_winrate,
+                    p1_wins_losses[1],
+                    p1_wins_losses[-1],
+                    p1_wnl_winrate,
+                    p2_doors_wins,
+                    p2_doors_losses,
+                    p2_doors_winrate,
+                    p1_doors_wins,
+                    p1_doors_losses,
+                    p1_doors_winrate,
+                    p2_surface_wins,
+                    p2_surface_losses,
+                    p2_surface_winrate,
+                    p1_surface_wins,
+                    p1_surface_losses,
+                    p1_surface_winrate,
                     p2_upsets,
                     p1_upsets,
                     p2_whitewashes,
                     p1_whitewashes,
-                    p2_doors,
-                    p1_doors,
-                    p2_surface,
-                    p1_surface,
-                    p2_wins_losses[1],
-                    p1_wins_losses[1],
-                    p2_wins_losses[-1],
-                    p1_wins_losses[-1],
+                    p2_speed_lin.slope,
+                    p1_speed_lin.slope,
                 ]
             ]
 
@@ -310,14 +358,17 @@ def main(hyper_params, train=0):
                 wins_losses[p1] = wins_losses[p1][-wnl_cutoff:] + [1]
                 wins_losses[p2] = wins_losses[p2][-wnl_cutoff:] + [-1]
 
-                # update surface
-                surface[p1] = surface[p1][-surface_cutoff:] + [1]
-                surface[p2] = surface[p2][-surface_cutoff:] + [-1]
-
                 # update doors
-                doors = outdoors if event['location']['outdoor'] else indoors
-                doors[p1] = doors[p1][-doors_cutoff:] + [1]
-                doors[p2] = doors[p2][-doors_cutoff:] + [-1]
+                doors[p1] = doors[p1][-doors_cutoff:] + [match_door]
+                doors[p2] = doors[p2][-doors_cutoff:] + [-match_door]
+
+                # update surface
+                surfaces[p1] = surfaces[p1][-surface_cutoff:] + [match_surface]
+                surfaces[p2] = surfaces[p2][-surface_cutoff:] + [-match_surface]
+
+                # update speeds
+                speeds[p1] = speeds[p1][-speed_cutoff:] + [match_speed]
+                speeds[p2] = speeds[p2][-speed_cutoff:] + [-match_speed]
 
                 # update whitewashes
                 whitewash = all(g[0] > g[1] for g in match['score'])
@@ -349,12 +400,46 @@ def main(hyper_params, train=0):
                 bet_multi = 1
 
                 # wins and losses
-                p_wnl = p1_wins_losses if p1_pred > p2_pred else p2_wins_losses
-                p_wnl = p_wnl[1] / p_wnl[-1] if p_wnl[-1] else p_wnl[1]
+                if p1_pred > p2_pred:
+                    p_wnl = p1_wnl_winrate - p2_wnl_winrate
+                else:
+                    p_wnl = p2_wnl_winrate - p1_wnl_winrate
                 bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b, bet_wnl_c], [p_wnl])[0]
-                bet_wnl_multi = int(min(max(round(bet_wnl_multi), 0), 3))
+                bet_wnl_multi = int(min(max(round(bet_wnl_multi), 0), 2))
                 bet_multi += bet_wnl_multi
                 bet_multis_cat.append(f'bet_wnl_multi-{bet_wnl_multi}')
+
+                # doors
+                if p1_pred > p2_pred:
+                    p_drs = p1_doors_winrate - p2_doors_winrate
+                else:
+                    p_drs = p2_doors_winrate - p1_doors_winrate
+                bet_drs_multi = np.polyval([bet_drs_a, bet_drs_b, bet_drs_c], [p_drs])[0]
+                bet_drs_multi = int(min(max(round(bet_drs_multi), 0), 1))
+                bet_multi += bet_drs_multi
+                bet_multis_cat.append(f'bet_drs_multi-{bet_drs_multi}')
+
+                # surface
+                if p1_pred > p2_pred:
+                    p_sfc = p1_surface_winrate - p2_surface_winrate
+                else:
+                    p_sfc = p2_surface_winrate - p1_surface_winrate
+                bet_sfc_multi = np.polyval([bet_sfc_a, bet_sfc_b, bet_sfc_c], [p_sfc])[0]
+                bet_sfc_multi = int(min(max(round(bet_sfc_multi), 0), 1))
+                bet_multi += bet_sfc_multi
+                bet_multis_cat.append(f'bet_sfc_multi-{bet_sfc_multi}')
+
+                # speed
+                p1_speed = p1_speed_lin.intercept + p1_speed_lin.slope * match_speed
+                p2_speed = p2_speed_lin.intercept + p2_speed_lin.slope * match_speed
+                if p1_pred > p2_pred:
+                    p_spd = p1_speed - p2_speed
+                else:
+                    p_spd = p2_speed - p1_speed
+                bet_spd_multi = np.polyval([bet_spd_a, bet_spd_b, bet_spd_c], [p_spd])[0]
+                bet_spd_multi = int(min(max(round(bet_spd_multi), 0), 1))
+                bet_multi += bet_spd_multi
+                bet_multis_cat.append(f'bet_spd_multi-{bet_spd_multi}')
 
                 # pred
                 pred_max = max(p1_pred, p2_pred)
@@ -450,10 +535,15 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         'odds', '~odds',
         'mu', '~mu', 'sigma', '~sigma',
         'round',
+        'wins', 'losses', 'winrate',
+        '~wins', '~losses', '~winrate',
+        'drs_wins', 'drs_losses', 'drs_wr',
+        '~drs_wins', '~drs_losses', '~drs_wr',
+        'sfc_wins', 'sfc_losses', 'sfc_wr',
+        '~sfc_wins', '~sfc_losses', '~sfc_wr',
         'upsets', '~upsets',
         'whitewashes', '~whitewashes',
-        'doors', '~doors',
-        'surface', '~surface',
+        'slope', '~slope',
     ]
     features = {k: round(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
     logger.info(f'Features: {features}')
@@ -466,7 +556,7 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
-        logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
+        logger.info(f'Common multis: {Counter(bet_multis).most_common(4)}')
         logger.info(f'cat multis: {Counter(bet_multis_cat).most_common()}')
 
     if actual[1]:
@@ -485,14 +575,11 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
 
 
 def run():
-    # add
     # age
-    # court surface
     # serve strength
     # rested
     # weather
     # days since last played?
-    # win-loss record
     # games and set record
     # tie-break record
     # 1st serve conversion rate
@@ -500,19 +587,22 @@ def run():
     train = 0
 
     names = [
-        # 'estimators',
-        # 'learning_rate', 'gamma', 'max_depth', 'min_child_weight',
         # 'max_delta_step', 'subsample', 'scale_pos_weight',
         # 'reg_lambda', 'reg_alpha',
-        # 'upsets cutoff', 'whitewashes_cutoff', 'doors_cutoff', 'surface_cutoff',
+        # 'upsets cutoff', 'whitewashes_cutoff',
         # 'pred a', 'pred b', 'pred c',
         # 'odds a', 'odds b', 'odds c',
-        'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff',
+        # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff',
+        # 'bet_drs_a', 'bet_drs_b', 'bet_drs_c', 'doors_cutoff',
+        # 'estimators', 'learning_rate'
+        # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c', 'surface_cutoff',
+        # 'gamma', 'max_depth', 'min_child_weight',
+        'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
     ]
     params = [
-        0, 0, 0, 1
+        0, 0, 0, 10
     ]
-    bounds = [[-np.inf, -np.inf, -np.inf,    0],
+    bounds = [[-np.inf, -np.inf, -np.inf, 0],
               [np.inf, np.inf, np.inf, np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
@@ -521,7 +611,11 @@ def run():
         es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
         while not es.stop():
             solutions = es.ask()
-            fitness = [main(x, train) for x in solutions]
+            try:
+                fitness = [main(x, train) for x in solutions]
+            except ValueError as exc:
+                print(str(exc))
+                continue
             es.tell(solutions, fitness)
             es.disp()
             print(list(es.result[0]))
