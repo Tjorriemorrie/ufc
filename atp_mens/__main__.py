@@ -119,20 +119,19 @@ def main(hyper_params, train=0):
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
     # reg_lambda, reg_alpha, \
-    # learning_rate, gamma, max_depth, min_child_weight = hyper_params
-    # max_delta_step, subsample, scale_pos_weight = hyper_params
 
     # estimators, learning_rate = hyper_params
     # gamma, max_depth, min_child_weight = hyper_params
+    # max_delta_step, subsample, scale_pos_weight = hyper_params
     reg_params = {
         'n_estimators': int(round(2.1788282223375672 * 100)),
         'learning_rate': 0.31052718461617523,
         'gamma': 0.1480916400109764,  # 1.0931334779261526,
         'max_depth': int(round(4.59282984572512)),  # 2.605884221401324)),
         'min_child_weight': 1.0956345040972018,  # 0.86383038291261,
-        'max_delta_step': 0.19995566873577586,
-        'subsample': 0.9922978010805564,
-        'scale_pos_weight': 0.8825017324048802,
+        'max_delta_step': 0.5808271528189928,  # 0.19995566873577586,
+        'subsample': 0.8792477583008574,  # 0.9922978010805564,
+        'scale_pos_weight': 0.49606238825608306,  # 0.8825017324048802,
         'reg_lambda': 0.7106544893592536,
         'reg_alpha': 0.010303112390348092,
         'colsample_bytree': 0.999790544478916,
@@ -567,11 +566,11 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        # sheet = 7.24
-        # if abs(sum(tab) - sheet) > 0.01:
-        #     for l in actual_debug:
-        #         logger.warning(l)
-        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        sheet = -4.4
+        if abs(sum(tab) - sheet) > 0.01:
+            for l in actual_debug:
+                logger.warning(l)
+            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 def run():
@@ -587,7 +586,6 @@ def run():
     train = 0
 
     names = [
-        # 'max_delta_step', 'subsample', 'scale_pos_weight',
         # 'reg_lambda', 'reg_alpha',
         # 'upsets cutoff', 'whitewashes_cutoff',
         # 'pred a', 'pred b', 'pred c',
@@ -597,18 +595,19 @@ def run():
         # 'estimators', 'learning_rate'
         # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c', 'surface_cutoff',
         # 'gamma', 'max_depth', 'min_child_weight',
-        'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
+        # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
+        'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
     ]
     params = [
-        0, 0, 0, 10
+        0, 1, 1
     ]
-    bounds = [[-np.inf, -np.inf, -np.inf, 0],
-              [np.inf, np.inf, np.inf, np.inf]]
+    bounds = [[0,       0, 0],
+              [np.inf,  1, np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 
     if train:
-        es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
+        es = CMAEvolutionStrategy(params, 0.5, {'bounds': bounds})
         while not es.stop():
             solutions = es.ask()
             try:

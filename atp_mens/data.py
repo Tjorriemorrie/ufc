@@ -2,14 +2,14 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 71.8  23.2  865    2019-08-16
 # 66.1  7.0   259    added court speed                      (2, 311), (5, 196), (4, 109), (7, 81)
 # 70.9  22.7  821    opt gamma/max_depth/min_child_weight   (2, 334), (5, 154), (4, 139), (7, 111)
 # 67.5  4.7   184    added surface                          (2, 316), (5, 139), (7, 121), (4, 119)
 # 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
 # 68.7  8.4   209    added wins and losses                  (1, 454), (4, 155), (7, 146)
-# 67.4  2.2   57     2019-08-15                             (1, 465), (7, 152), (4, 143)
-# 68.9  8.7   217    opt pred, odds poly                    (1, 452), (4, 161), (7, 135)
 
+# 67.4  2.2   57     2019-08-15                             (1, 465), (7, 152), (4, 143)
 # 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
 # 67.5  7.5   72     optimized L1/2 regulazations           (1, 784)
 # 66.2  6.1   59     merged params
@@ -8313,6 +8313,7 @@ DATA = [
                     YOSHIHITO_NISHIOKA,
                     ALEX_DE_MINAUR
                 ],
+                'score': [(7, 5), (6, 4)],
                 'odds': {
                     YOSHIHITO_NISHIOKA: 2.70,
                     ALEX_DE_MINAUR: 1.45,
@@ -8323,12 +8324,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
+                    RICHARD_GASQUET,
                     DIEGO_SCHWARTZMAN,
-                    RICHARD_GASQUET
                 ],
+                'score': [(7, 6), (6, 3)],
                 'odds': {
-                    DIEGO_SCHWARTZMAN: 1.55,
                     RICHARD_GASQUET: 2.40,
+                    DIEGO_SCHWARTZMAN: 1.55,
                 },
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 8,
@@ -8339,6 +8341,7 @@ DATA = [
                     DAVID_GOFFIN,
                     ADRIAN_MANNARINO,
                 ],
+                'score': [(7, 6), (6, 2)],
                 'odds': {
                     DAVID_GOFFIN: 1.42,
                     ADRIAN_MANNARINO: 2.80,
@@ -8352,6 +8355,7 @@ DATA = [
                     DANILL_MEDVEDEV,
                     JAN_LENNARD_STRUFF,
                 ],
+                'score': [(6, 2), (6, 1)],
                 'odds': {
                     DANILL_MEDVEDEV: 1.40,
                     JAN_LENNARD_STRUFF: 2.80,
@@ -8362,12 +8366,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    ROGER_FEDERER,
                     ANDREY_RUBLEV,
+                    ROGER_FEDERER,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
-                    ROGER_FEDERER: 1.10,
                     ANDREY_RUBLEV: 6.50,
+                    ROGER_FEDERER: 1.10,
                 },
                 'prediction': ROGER_FEDERER,
                 'bet': 2,
@@ -8375,12 +8380,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    MIOMIR_KECMANOVIC,
                     ROBERTO_BAUTISTA_AGUT,
+                    MIOMIR_KECMANOVIC,
                 ],
+                'score': [(6, 1), (6, 2)],
                 'odds': {
-                    MIOMIR_KECMANOVIC: 3.20,
                     ROBERTO_BAUTISTA_AGUT: 1.34,
+                    MIOMIR_KECMANOVIC: 3.20,
                 },
                 'prediction': ROBERTO_BAUTISTA_AGUT,
                 'bet': 2,
@@ -8391,6 +8397,7 @@ DATA = [
                     LUCAS_POUILLE,
                     KAREN_KHACHANOV,
                 ],
+                'score': [(6, 7), (6, 4), (6, 2)],
                 'odds': {
                     LUCAS_POUILLE: 2.50,
                     KAREN_KHACHANOV: 1.52,
@@ -8404,6 +8411,7 @@ DATA = [
                     NOVAK_DJOKOVIC,
                     PABLO_CARRENO_BUSTA,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
                     NOVAK_DJOKOVIC: 1.02,
                     PABLO_CARRENO_BUSTA: 12.00,
@@ -8412,7 +8420,59 @@ DATA = [
                 'bet': 2,
             },
 
-            #
+            # 2018-08-16
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    RICHARD_GASQUET,
+                ],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.24,
+                    RICHARD_GASQUET: 3.80,
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 4,
+            },
+            {
+                'round': 8,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    DAVID_GOFFIN,
+                ],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 2.60,
+                    DAVID_GOFFIN: 1.48,
+                },
+                'prediction': DAVID_GOFFIN,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    ANDREY_RUBLEV,
+                    DANILL_MEDVEDEV,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 3.40,
+                    DANILL_MEDVEDEV: 1.30,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 10,
+            },
+            {
+                'round': 8,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    LUCAS_POUILLE,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.04,
+                    LUCAS_POUILLE: 10.00,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 4,
+            }
         ]
     }
 ]
