@@ -1,19 +1,21 @@
 from .fighters import *
 
 # acc   roi   profit  desc
+# 68.3  7.7   100     bet size changed to 1                 (3, 220), (6, 45), (4, 39), (5, 38)
+# 68.3  7.7   502     opt gamma/max depth                   (3, 220), (6, 45), (4, 39), (5, 38)
+# 63.4  2.2   143     added wins and losses                 (3, 220), (6, 46), (5, 40), (4, 37)
 # 70.7  22.7  741     added learning rate and gamma
 # 68.0  12.5  408     optimized bets                        (1, 237), (4, 54), (3, 43), (2, 35)
 # 68.0  10.0  438     splitted hyper and bet params         (1, 154), (4, 108), (3, 73), (2, 34)
 # 69.4  21.2  927     2019-08-11 UFC Fight Night: Shevchenko vs Carmouche (1, 154), (4, 108)
 # 69.1  20.6  897     optimized                             (1, 154), (4, 108), (3, 73), (2, 34)
+
 # 67.4  17.4  770     reverted back to 3 params             (1, 138), (4, 103), (3, 81), (2, 46)
-# 67.4  17.5  801     added exponential param                (1, 138), (4, 125), (3, 65), (2, 40)
 # 67.4  16.5  524     added odds diff
-# 65.8  10.1  285     removed redundant gradients!               (2, 196), (1, 172)
 # 64.1  46.9  2891    multi changed to 4                         (5, 206), (1, 141)
-# 64.1  54.1  6186    bet gradients not to be combined           [(11, 155), (1, 141), (5, 10), (10, 10)]
 # 65.8  54.1  6716    estimators capped to 500
 # 64.7  55    7013    added max depth (optimized)
+
 # 67    12.09 415     removed max bet of 10 (no diff)
 # 67    12.09 415     fixed cutoff with all_data :(
 
@@ -6857,8 +6859,8 @@ DATA = [
     {
         'date': '2019-07-28',
         'name': 'UFC 240: Edmonton 2019',
-        'location': '',
-        'venue': '',
+        'location': 'Edmonton, Canada',
+        'venue': 'Rogers Place',
         'fights': [
             {
                 'weight_class': MENS_WELTERWEIGHT,
@@ -7766,6 +7768,235 @@ DATA = [
                 'prediction': VALENTINA_SHEVCHENKO,
                 'by': 5,
             },
+        ]
+    },
+
+    {
+        'date': '2019-08-17',
+        'name': 'UFC 241: Cormier vs Miocic 2',
+        'location': 'California, United States',
+        'venue': 'Honda Center',
+        'fights': [
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': SABINA_MAZO_ISAZA,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': SHANA_DOBSON,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'odds': {
+                    SABINA_MAZO_ISAZA: 1.80,
+                    SHANA_DOBSON: 2.00,
+                },
+                'prediction': SABINA_MAZO_ISAZA,
+                'bet': 8,
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': BRANDON_DAVIS,
+                        'stats': '9-5-0',
+                    },
+                    {
+                        'name': KYUNG_HO_KANG,
+                        'stats': '15-8-0',
+                    }
+                ],
+                'odds': {
+                    BRANDON_DAVIS: 2.45,
+                    KYUNG_HO_KANG: 1.54,
+                },
+                'prediction': KYUNG_HO_KANG,
+                'bet': 6,
+            },
+            {
+                'weight_class': WOMANS_STRAWWEIGHT,
+                'fighters': [
+                    {
+                        'name': HANNA_CIFERS,
+                        'stats': '9-3-0',
+                    },
+                    {
+                        'name': JODIE_ESQUIBEL,
+                        'stats': '6-4-0',
+                    }
+                ],
+                'odds': {
+                    HANNA_CIFERS: 1.36,
+                    JODIE_ESQUIBEL: 3.10,
+                },
+                'prediction': HANNA_CIFERS,
+                'bet': 6,
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': DRAKKAR_KLOSE,
+                        'stats': '16-7-0',
+                    },
+                    {
+                        'name': CHRISTOS_GIAGOS,
+                        'stats': '10-1-1',
+                    }
+                ],
+                'odds': {
+                    DRAKKAR_KLOSE: 1.62,
+                    CHRISTOS_GIAGOS: 2.30,
+                },
+                'prediction': DRAKKAR_KLOSE,
+                'bet': 6,
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': MANNY_BERMUDEZ,
+                        'stats': '14-0-0',
+                    },
+                    {
+                        'name': CASEY_KENNEY,
+                        'stats': '8-1-1',
+                    }
+                ],
+                'odds': {
+                    MANNY_BERMUDEZ: 1.66,
+                    CASEY_KENNEY: 2.20,
+                },
+                'prediction': MANNY_BERMUDEZ,
+                'bet': 8,
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': CORY_SANDHAGEN,
+                        'stats': '10-1-0',
+                    },
+                    {
+                        'name': RAPHAEL_ASSUNCAO,
+                        'stats': '27-6-0',
+                    }
+                ],
+                'odds': {
+                    CORY_SANDHAGEN: 1.50,
+                    RAPHAEL_ASSUNCAO: 2.60,
+                },
+                'prediction': RAPHAEL_ASSUNCAO,
+                'bet': 6,
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': KHAMA_WORTHY,
+                        'stats': '14-6-0',
+                    },
+                    {
+                        'name': DEVONTE_SMITH,
+                        'stats': '10-1-0',
+                    }
+                ],
+                'odds': {
+                    KHAMA_WORTHY: 5.75,
+                    DEVONTE_SMITH: 1.13,
+                },
+                'prediction': DEVONTE_SMITH,
+                'bet': 6,
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': DEREK_BRUNSON,
+                        'stats': '18-7-0',
+                    },
+                    {
+                        'name': IAN_HEINISCH,
+                        'stats': '12-1-0',
+                    }
+                ],
+                'odds': {
+                    DEREK_BRUNSON: 2.20,
+                    IAN_HEINISCH: 1.67,
+                },
+                'prediction': DEREK_BRUNSON,
+                'bet': 4,
+            },
+            {
+                'weight_class': MENS_FEATHERWEIGHT,
+                'fighters': [
+                    {
+                        'name': GABRIEL_BENITEZ,
+                        'stats': '21-7-0',
+                    },
+                    {
+                        'name': SODIQ_YUSUFF,
+                        'stats': '9-1-0',
+                    }
+                ],
+                'odds': {
+                    GABRIEL_BENITEZ: 3.15,
+                    SODIQ_YUSUFF: 1.35,
+                },
+                'prediction': SODIQ_YUSUFF,
+                'bet': 6,
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': YOEL_ROMERO,
+                        'stats': '13-3-0',
+                    },
+                    {
+                        'name': PAULO_COSTA,
+                        'stats': '12-0-0',
+                    }
+                ],
+                # no odds??
+                'prediction': None,
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': NATE_DIAZ,
+                        'stats': '20-11-0',
+                    },
+                    {
+                        'name': ANTHONY_PETTIS,
+                        'stats': '22-8-0',
+                    }
+                ],
+                # no odds ??
+                'prediction': None,
+            },
+            {
+                'weight_class': MENS_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DANIEL_CORMIER,
+                        'stats': '22-1-0',
+                    },
+                    {
+                        'name': STIPE_MIOCIC,
+                        'stats': '18-3-0',
+                    }
+                ],
+                'odds': {
+                    DANIEL_CORMIER: 1.73,
+                    STIPE_MIOCIC: 2.10,
+                },
+                'prediction': DANIEL_CORMIER,
+                'bet': 10,
+            }
         ]
     }
 

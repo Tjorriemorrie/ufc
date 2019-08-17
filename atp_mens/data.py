@@ -8425,12 +8425,13 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    ROBERTO_BAUTISTA_AGUT,
                     RICHARD_GASQUET,
+                    ROBERTO_BAUTISTA_AGUT,
                 ],
+                'score': [(7, 6), (3, 6), (6, 2)],
                 'odds': {
-                    ROBERTO_BAUTISTA_AGUT: 1.24,
                     RICHARD_GASQUET: 3.80,
+                    ROBERTO_BAUTISTA_AGUT: 1.24,
                 },
                 'prediction': ROBERTO_BAUTISTA_AGUT,
                 'bet': 4,
@@ -8438,25 +8439,28 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    YOSHIHITO_NISHIOKA,
                     DAVID_GOFFIN,
+                    YOSHIHITO_NISHIOKA,
                 ],
+                'score': [],
+                'retired': True,
                 'odds': {
-                    YOSHIHITO_NISHIOKA: 2.60,
                     DAVID_GOFFIN: 1.48,
+                    YOSHIHITO_NISHIOKA: 2.60,
                 },
                 'prediction': DAVID_GOFFIN,
-                'bet': 10,
+                'bet': 0,  # refunded 10,
             },
             {
                 'round': 8,
                 'players': [
-                    ANDREY_RUBLEV,
                     DANILL_MEDVEDEV,
+                    ANDREY_RUBLEV,
                 ],
+                'score': [(6, 2), (6, 3)],
                 'odds': {
-                    ANDREY_RUBLEV: 3.40,
                     DANILL_MEDVEDEV: 1.30,
+                    ANDREY_RUBLEV: 3.40,
                 },
                 'prediction': ANDREY_RUBLEV,
                 'bet': 10,
@@ -8467,9 +8471,38 @@ DATA = [
                     NOVAK_DJOKOVIC,
                     LUCAS_POUILLE,
                 ],
+                'score': [(7, 6), (6, 1)],
                 'odds': {
-                    NOVAK_DJOKOVIC: 1.04,
+                    NOVAK_DJOKOVIC: 1.03,
                     LUCAS_POUILLE: 10.00,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 4,
+            },
+
+            # 2019-08-17
+            {
+                'round': 4,
+                'players': [
+                    RICHARD_GASQUET,
+                    DAVID_GOFFIN,
+                ],
+                'odds': {
+                    RICHARD_GASQUET: 2.80,
+                    DAVID_GOFFIN: 1.42,
+                },
+                'prediction': DAVID_GOFFIN,
+                'bet': 10,
+            },
+            {
+                'round': 4,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    DANILL_MEDVEDEV,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.30,
+                    DANILL_MEDVEDEV: 3.40,
                 },
                 'prediction': NOVAK_DJOKOVIC,
                 'bet': 4,

@@ -609,7 +609,7 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        # sheet = -4.4
+        # sheet = -18.28
         # if abs(sum(tab) - sheet) > 0.01:
         #     for l in actual_debug:
         #         logger.warning(l)

@@ -55,21 +55,34 @@ def get_regressor(X_train, y_train, X_test=None, y_test=None, **reg_params):
     return reg
 
 
-def main(hyper_params, bet_params, train=''):
+def main(hyper_params, train=0):
     logger.info('Starting main training')
 
     all_data = DATA_2016 + DATA_2017 + DATA_2018 + DATA
 
-    estimators, max_depth, learning_rate, gamma = hyper_params
+    # estimators, learning_rate = hyper_params
+    # gamma, max_depth, min_child_weight = hyper_params
     reg_params = {
-        'n_estimators': int(round(estimators * 100)),
-        'max_depth': int(round(max_depth)),
-        'gamma': gamma,
-        'learning_rate': learning_rate,
+        'n_estimators': int(round(2.1418721633783804 * 100)),  # 0.8844565933947343
+        'learning_rate': 0.09426181829690375,  # 0.24678854038938264
+        'gamma': 0.1860088097748791,  # 0.0012826703538762253,
+        'max_depth': int(round(2.1956102758009424)),  # 2.5506573766936533)),
+        'min_child_weight': 3.5802932556001426,
     }
 
-    bet_pred_a, bet_pred_b, bet_pred_c, \
-        bet_odds_a, bet_odds_b, bet_odds_c = bet_params
+    # bet_wnl_a, bet_wnl_b, bet_wnl_c, wnl_cutoff = hyper_params
+    bet_wnl_a = -8.012210880048535
+    bet_wnl_b = 2.5088843631312976
+    bet_wnl_c = 7.9520665992548185
+    wnl_cutoff = int(round(11.139996105926942 * 10))
+
+    # bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
+    bet_pred_a = -3.5593760484773904
+    bet_pred_b = -17.93424439517361
+    bet_pred_c = -2.7073747762723555
+    bet_odds_a = -12.444287120215446
+    bet_odds_b = -16.179599063909983
+    bet_odds_c = 3.8586041364734887
 
     # init
     reg = None
@@ -77,6 +90,7 @@ def main(hyper_params, bet_params, train=''):
     cutoff = int(len(all_data) * 0.7)
     start_date = None
     ratings = defaultdict(lambda: Rating())
+    wins_losses = defaultdict(lambda: [])
     early_fights = defaultdict(lambda: 0.5)
     last_fights = defaultdict(lambda: 0.5)
     X_train = []
@@ -107,7 +121,7 @@ def main(hyper_params, bet_params, train=''):
         logger.info(f'{scene["date"]} {scene["name"]}')
 
         for fight in scene['fights']:
-            bet_size = 5
+            bet_size = 1
             # skip if no odds:
             if 'odds' not in fight:
                 continue
@@ -123,9 +137,11 @@ def main(hyper_params, bet_params, train=''):
             win1_prob = win_probability([ratings[f1]], [ratings[f2]])
             win2_prob = win_probability([ratings[f2]], [ratings[f1]])
 
-            # wins and losses
-            wins_and_losses_1 = fight['fighters'][0]['stats'].split('-')
-            wins_and_losses_2 = fight['fighters'][1]['stats'].split('-')
+            # wins losses
+            f1_wins_losses = Counter(wins_losses[f1])
+            f1_wnl_winrate = f1_wins_losses[1] / max(1, len(wins_losses[f1]))
+            f2_wins_losses = Counter(wins_losses[f2])
+            f2_wnl_winrate = f2_wins_losses[1] / max(1, len(wins_losses[f2]))
 
             fight_data = [
                 [
@@ -140,10 +156,12 @@ def main(hyper_params, bet_params, train=''):
                     last_fights[f2],
                     early_fights[f1],
                     early_fights[f2],
-                    wins_and_losses_1[0],
-                    wins_and_losses_2[0],
-                    wins_and_losses_1[1],
-                    wins_and_losses_2[1],
+                    f1_wins_losses[1],
+                    f1_wins_losses[-1],
+                    f1_wnl_winrate,
+                    f2_wins_losses[1],
+                    f2_wins_losses[-1],
+                    f2_wnl_winrate,
                 ],
                 [
                     win2_prob,
@@ -157,10 +175,12 @@ def main(hyper_params, bet_params, train=''):
                     last_fights[f1],
                     early_fights[f2],
                     early_fights[f1],
-                    wins_and_losses_2[0],
-                    wins_and_losses_1[0],
-                    wins_and_losses_2[1],
-                    wins_and_losses_1[1],
+                    f2_wins_losses[1],
+                    f2_wins_losses[-1],
+                    f2_wnl_winrate,
+                    f1_wins_losses[1],
+                    f1_wins_losses[-1],
+                    f1_wnl_winrate,
                 ]
             ]
 
@@ -174,6 +194,10 @@ def main(hyper_params, bet_params, train=''):
                 if not is_win_1 and fw != f2 and fw is not None:
                     raise ValueError(f'unknown winner {fw}')
                 drawn = fw is None
+
+                # update wins losses
+                wins_losses[f1] = wins_losses[f1][-wnl_cutoff:] + [1]
+                wins_losses[f2] = wins_losses[f2][-wnl_cutoff:] + [-1]
 
                 # update fights
                 early_fights[fw] = last_fights[fw]
@@ -200,6 +224,16 @@ def main(hyper_params, bet_params, train=''):
                 #############################
                 # bet scaling
                 bet_multi = 1
+
+                # wins and losses
+                if pred1 > pred2:
+                    p_wnl = f1_wnl_winrate - f2_wnl_winrate
+                else:
+                    p_wnl = f2_wnl_winrate - f1_wnl_winrate
+                bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b, bet_wnl_c], [p_wnl])[0]
+                bet_wnl_multi = int(min(max(round(bet_wnl_multi), 0), 2))
+                bet_multi += bet_wnl_multi
+                bet_multis_cat.append(f'bet_wnl_multi-{bet_wnl_multi}')
 
                 # pred max
                 pred_max = max(pred1, pred2)
@@ -285,9 +319,14 @@ def main(hyper_params, bet_params, train=''):
                 log_ratings = f'[{ratings[fw].mu:.0f} vs {ratings[fl].mu:.0f}]'
                 logger.info(f'{log_balance} {log_pred} {log_fight} {log_ratings}')
 
-    ###################################
-    # Summary
+    if train:
+        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
+        return -(sum(payouts) / sum(bet_amts))
+    else:
+        summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis_cat, actual, tab, tab_amts)
 
+
+def summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis_cat, actual, tab, tab_amts):
     logger.info('')
     logger.info('Tree info:')
     # reg = get_regressor(X_train, y_train, X_test, y_test, estimators=estimators, max_depth=max_depth)
@@ -304,8 +343,7 @@ def main(hyper_params, bet_params, train=''):
         'sigma', '~sigma',
         'last', '~last',
         'early', '~early',
-        'wins', '~wins',
-        'losses', '~losses',
+        'wins', '~wins', 'losses', '~losses', 'winrate', '~winrate',
     ]
     features = {k: int(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
     logger.info(f'Features: {features}')
@@ -330,62 +368,44 @@ def main(hyper_params, bet_params, train=''):
         days = (datetime.now() - datetime(2019, 7, 13)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
 
+
+def run():
+    train = 0
+    
+    names = [
+        # 'estimators', 'learning_rate',
+        # 'gamma', 'max depth',
+        # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff'
+        'gamma', 'max_depth', 'min_child_weight',
+    ]
+    params = [
+        0, 3, 1
+    ]
+    bounds = [[0, 0, 0],
+              [np.inf,  np.inf,  np.inf]]
+    assert len(params) == len(names)
+    assert len(params) == len(bounds[0])
+
     if train:
-        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
-        return -(sum(payouts) / sum(bet_amts))
-
-
-if __name__ == '__main__':
-    hyper_flag = 0
-    hyper_names = ['estimators',  # 100
-                   'max depth',  # 3
-                   'learning_rate',  # 0.1
-                   'gamma'  # 0
-                   ]
-    hyper_params = [0.8844565933947343, 2.5506573766936533, 0.24678854038938264, 0.0012826703538762253]
-    hyper_bounds = [[0.01, 1, 0.001, 0],
-                    [10, 10, 1, 10]]
-    assert len(hyper_params) == len(hyper_names)
-    assert len(hyper_params) == len(hyper_bounds[0])
-
-    bet_flag = 0
-    bet_names = ['pred a', 'pred b', 'pred c',
-                 'odds a', 'odds b', 'odds c']
-    bet_params = [-3.5593760484773904, -17.93424439517361, -2.7073747762723555, -12.444287120215446, -16.179599063909983, 3.8586041364734887]
-    assert len(bet_params) == len(bet_names)
-
-    if hyper_flag:
-        es = CMAEvolutionStrategy(hyper_params, 0.5, {'bounds': hyper_bounds})
+        es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
         while not es.stop():
             solutions = es.ask()
-            fitness = [main(x, bet_params, train='hyper') for x in solutions]
+            fitness = [main(x, train=1) for x in solutions]
             es.tell(solutions, fitness)
             es.disp()
             print(list(es.result[0]))
-            # print(list(es.result[5]))
-        es.result_pretty()
-        print('')
-        print('best')
-        print(list(es.result[0]))
-        # print('')
-        # print(
-        #     'xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
-        # print(list(es.result[5]))
-    elif bet_flag:
-        es = CMAEvolutionStrategy(bet_params, 1)
-        while not es.stop():
-            solutions = es.ask()
-            fitness = [main(hyper_params, x, train='bet') for x in solutions]
-            es.tell(solutions, fitness)
-            es.disp()
-            # print(list(es.result[0]))
             print(list(es.result[5]))
         es.result_pretty()
         print('')
         print('best')
         print(list(es.result[0]))
-        # print('')
-        # print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
-        # print(list(es.result[5]))
+        print('')
+        print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
+        print(list(es.result[5]))
+
     else:
-        main(hyper_params, bet_params)
+        main(params)
+
+
+if __name__ == '__main__':
+    run()
