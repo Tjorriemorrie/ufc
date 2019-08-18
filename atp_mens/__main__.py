@@ -143,10 +143,12 @@ def main(hyper_params, train=0):
     # upsets_cutoff, doors_cutoff, surface_cutoff, wnl_cutoff = hyper_params
     upsets_cutoff = int(round(1.3627577408735392 * 10))
 
+    # bet_pred_a, bet_pred_b, bet_pred_c = hyper_params
+    bet_pred_a = 0.059097530057455994  # -57.72765234484444
+    bet_pred_b = 0.04455113833445356  # -35.12339940099521
+    bet_pred_c = 0.026434992993526196  # 42.20397841611924
+
     # bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
-    bet_pred_a = -57.72765234484444
-    bet_pred_b = -35.12339940099521
-    bet_pred_c = 42.20397841611924
     bet_odds_a = -6.625846643088274
     bet_odds_b = -44.60842535679358
     bet_odds_c = 9.50444367073803
@@ -234,7 +236,7 @@ def main(hyper_params, train=0):
                 continue
 
             # add noise (skip 20% during training)
-            if not is_training and train and random() > 0.80:
+            if not is_training and train and random() > 0.90:
                 continue
 
             p1, p2 = match['players']
@@ -325,7 +327,6 @@ def main(hyper_params, train=0):
                     p1_doors_winrate,
                     p2_doors_wins,
                     p2_doors_losses,
-                    p2_doors_winrate,
                     p1_surface_wins,
                     p1_surface_losses,
                     p1_surface_winrate,
@@ -366,7 +367,6 @@ def main(hyper_params, train=0):
                     p2_doors_winrate,
                     p1_doors_wins,
                     p1_doors_losses,
-                    p1_doors_winrate,
                     p2_surface_wins,
                     p2_surface_losses,
                     p2_surface_winrate,
@@ -599,7 +599,7 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         'wins', 'losses', 'winrate',
         '~wins', '~losses', '~winrate',
         'drs_wins', 'drs_losses', 'drs_wr',
-        '~drs_wins', '~drs_losses', '~drs_wr',
+        '~drs_wins', '~drs_losses',
         'sfc_wins', 'sfc_losses', 'sfc_wr',
         '~sfc_wins', '~sfc_losses', '~sfc_wr',
         'upsets', '~upsets',
@@ -660,7 +660,6 @@ def run():
 
     names = [
         # 'upsets cutoff',
-        # 'pred a', 'pred b', 'pred c',
         # 'odds a', 'odds b', 'odds c',
         # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff',
         # 'bet_drs_a', 'bet_drs_b', 'bet_drs_c', 'doors_cutoff',
@@ -671,13 +670,14 @@ def run():
         # 'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
         # 'bet_set_a', 'bet_set_b', 'bet_set_c', 'sets_cutoff',
         # 'reg_lambda', 'reg_alpha',
-        'bet_gms_a', 'bet_gms_b', 'bet_gms_c', 'games_cutoff',
+        # 'bet_gms_a', 'bet_gms_b', 'bet_gms_c', 'games_cutoff',
+        'pred a', 'pred b', 'pred c',
     ]
     params = [
-        0, 0, 0, 20
+        0, 0, 0
     ]
-    bounds = [[-np.inf, -np.inf, -np.inf, 0],
-              [np.inf, np.inf, np.inf, np.inf]]
+    bounds = [[-np.inf, -np.inf, -np.inf],
+              [np.inf, np.inf, np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 

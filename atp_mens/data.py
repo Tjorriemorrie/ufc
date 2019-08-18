@@ -2,19 +2,18 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 70.0  18.7  627    opt bet_pred_a, bet_pred_b, bet_pred_c (2, 371), (5, 183), (4, 89), (6, 65)
 # 69.9  17.5  743    added games param
 # 68.1  14.8  643    added 20% droprate                     (2, 266), (5, 187), (8, 103), (7, 79)
 # 67.5  14.1  555    removed whitewashes 1% useful
 # 69.4  20.5  783    added sets
-# 71.8  23.2  865    2019-08-16
-# 66.1  7.0   259    added court speed                      (2, 311), (5, 196), (4, 109), (7, 81)
 
+# 71.8  23.2  865    2019-08-16
 # 70.9  22.7  821    opt gamma/max_depth/min_child_weight   (2, 334), (5, 154), (4, 139), (7, 111)
 # 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
 # 67.4  2.2   57     2019-08-15                             (1, 465), (7, 152), (4, 143)
-# 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
-# 67.5  7.5   72     optimized L1/2 regulazations           (1, 784)
 
+# 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
 # 66.2  6.1   59     merged params
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
 # 67.2  9.7   139    optimized params
