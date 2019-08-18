@@ -1,21 +1,21 @@
 from .fighters import *
 
 # acc   roi   profit  desc
+# 65.1  3.0   39      opt max_delta_step/subsample/scale_pos_weight (3, 221), (6, 42), (4, 41), (5, 39)
+# 64.3  -0.6  -8      2019-08-17 UFC 241: Cormier vs Miocic 2
 # 68.3  7.7   100     bet size changed to 1                 (3, 220), (6, 45), (4, 39), (5, 38)
 # 68.3  7.7   502     opt gamma/max depth                   (3, 220), (6, 45), (4, 39), (5, 38)
 # 63.4  2.2   143     added wins and losses                 (3, 220), (6, 46), (5, 40), (4, 37)
 # 70.7  22.7  741     added learning rate and gamma
 # 68.0  12.5  408     optimized bets                        (1, 237), (4, 54), (3, 43), (2, 35)
 # 68.0  10.0  438     splitted hyper and bet params         (1, 154), (4, 108), (3, 73), (2, 34)
-# 69.4  21.2  927     2019-08-11 UFC Fight Night: Shevchenko vs Carmouche (1, 154), (4, 108)
-# 69.1  20.6  897     optimized                             (1, 154), (4, 108), (3, 73), (2, 34)
 
+# 69.4  21.2  927     2019-08-11 UFC Fight Night: Shevchenko vs Carmouche (1, 154), (4, 108)
 # 67.4  17.4  770     reverted back to 3 params             (1, 138), (4, 103), (3, 81), (2, 46)
 # 67.4  16.5  524     added odds diff
 # 64.1  46.9  2891    multi changed to 4                         (5, 206), (1, 141)
-# 65.8  54.1  6716    estimators capped to 500
-# 64.7  55    7013    added max depth (optimized)
 
+# 65.8  54.1  6716    estimators capped to 500
 # 67    12.09 415     removed max bet of 10 (no diff)
 # 67    12.09 415     fixed cutoff with all_data :(
 
@@ -7789,6 +7789,12 @@ DATA = [
                         'stats': '0-0-0',
                     },
                 ],
+                'winner': {
+                    'fighter': SABINA_MAZO_ISAZA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     SABINA_MAZO_ISAZA: 1.80,
                     SHANA_DOBSON: 2.00,
@@ -7808,6 +7814,12 @@ DATA = [
                         'stats': '15-8-0',
                     }
                 ],
+                'winner': {
+                    'fighter': KYUNG_HO_KANG,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     BRANDON_DAVIS: 2.45,
                     KYUNG_HO_KANG: 1.54,
@@ -7827,6 +7839,12 @@ DATA = [
                         'stats': '6-4-0',
                     }
                 ],
+                'winner': {
+                    'fighter': HANNA_CIFERS,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     HANNA_CIFERS: 1.36,
                     JODIE_ESQUIBEL: 3.10,
@@ -7846,6 +7864,12 @@ DATA = [
                         'stats': '10-1-1',
                     }
                 ],
+                'winner': {
+                    'fighter': DRAKKAR_KLOSE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     DRAKKAR_KLOSE: 1.62,
                     CHRISTOS_GIAGOS: 2.30,
@@ -7865,6 +7889,12 @@ DATA = [
                         'stats': '8-1-1',
                     }
                 ],
+                'winner': {
+                    'fighter': CASEY_KENNEY,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     MANNY_BERMUDEZ: 1.66,
                     CASEY_KENNEY: 2.20,
@@ -7884,6 +7914,12 @@ DATA = [
                         'stats': '27-6-0',
                     }
                 ],
+                'winner': {
+                    'fighter': CORY_SANDHAGEN,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     CORY_SANDHAGEN: 1.50,
                     RAPHAEL_ASSUNCAO: 2.60,
@@ -7903,6 +7939,12 @@ DATA = [
                         'stats': '10-1-0',
                     }
                 ],
+                'winner': {
+                    'fighter': KHAMA_WORTHY,
+                    'by': 'tko',
+                    'round': 1,
+                    'time': '4:15',
+                },
                 'odds': {
                     KHAMA_WORTHY: 5.75,
                     DEVONTE_SMITH: 1.13,
@@ -7922,6 +7964,12 @@ DATA = [
                         'stats': '12-1-0',
                     }
                 ],
+                'winner': {
+                    'fighter': DEREK_BRUNSON,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     DEREK_BRUNSON: 2.20,
                     IAN_HEINISCH: 1.67,
@@ -7941,6 +7989,12 @@ DATA = [
                         'stats': '9-1-0',
                     }
                 ],
+                'winner': {
+                    'fighter': SODIQ_YUSUFF,
+                    'by': 'tko',
+                    'round': 1,
+                    'time': '4.14',
+                },
                 'odds': {
                     GABRIEL_BENITEZ: 3.15,
                     SODIQ_YUSUFF: 1.35,
@@ -7960,8 +8014,13 @@ DATA = [
                         'stats': '12-0-0',
                     }
                 ],
+                'winner': {
+                    'fighter': PAULO_COSTA,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 # no odds??
-                'prediction': None,
             },
             {
                 'weight_class': MENS_WELTERWEIGHT,
@@ -7975,8 +8034,12 @@ DATA = [
                         'stats': '22-8-0',
                     }
                 ],
-                # no odds ??
-                'prediction': None,
+                'winner': {
+                    'fighter': NATE_DIAZ,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
             },
             {
                 'weight_class': MENS_HEAVYWEIGHT,
@@ -7990,6 +8053,12 @@ DATA = [
                         'stats': '18-3-0',
                     }
                 ],
+                'winner': {
+                    'fighter': STIPE_MIOCIC,
+                    'by': 'tko',
+                    'round': 4,
+                    'time': '4:09',
+                },
                 'odds': {
                     DANIEL_CORMIER: 1.73,
                     STIPE_MIOCIC: 2.10,

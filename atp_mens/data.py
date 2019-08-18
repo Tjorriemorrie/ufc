@@ -2,25 +2,24 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 69.9  17.5  743    added games param
+# 68.1  14.8  643    added 20% droprate                     (2, 266), (5, 187), (8, 103), (7, 79)
+# 67.5  14.1  555    removed whitewashes 1% useful
 # 69.4  20.5  783    added sets
 # 71.8  23.2  865    2019-08-16
 # 66.1  7.0   259    added court speed                      (2, 311), (5, 196), (4, 109), (7, 81)
-# 70.9  22.7  821    opt gamma/max_depth/min_child_weight   (2, 334), (5, 154), (4, 139), (7, 111)
-# 67.5  4.7   184    added surface                          (2, 316), (5, 139), (7, 121), (4, 119)
-# 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
-# 68.7  8.4   209    added wins and losses                  (1, 454), (4, 155), (7, 146)
 
+# 70.9  22.7  821    opt gamma/max_depth/min_child_weight   (2, 334), (5, 154), (4, 139), (7, 111)
+# 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
 # 67.4  2.2   57     2019-08-15                             (1, 465), (7, 152), (4, 143)
 # 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
 # 67.5  7.5   72     optimized L1/2 regulazations           (1, 784)
-# 66.2  6.1   59     merged params
-# 66.1  2.1   22     added doors                            (1, 730), (4, 43), (2, 35), (3, 28)
 
+# 66.2  6.1   59     merged params
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
 # 67.2  9.7   139    optimized params
-# 67.4  1.1   15     optimized
-# 67.4  1.8   24     optimized bet params                   (1, 609), (4, 136), (2, 41), (3, 37)
 
+# 67.4  1.1   15     optimized
 # 68.1  7.4   105    optimized
 # 68.6  6.2   101    optimized
 
@@ -8484,12 +8483,13 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    RICHARD_GASQUET,
                     DAVID_GOFFIN,
+                    RICHARD_GASQUET,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
-                    RICHARD_GASQUET: 2.80,
                     DAVID_GOFFIN: 1.42,
+                    RICHARD_GASQUET: 2.80,
                 },
                 'prediction': DAVID_GOFFIN,
                 'bet': 10,
@@ -8497,14 +8497,30 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    NOVAK_DJOKOVIC,
                     DANILL_MEDVEDEV,
+                    NOVAK_DJOKOVIC,
                 ],
+                'score': [(3, 6), (6, 3), (6, 3)],
                 'odds': {
-                    NOVAK_DJOKOVIC: 1.30,
                     DANILL_MEDVEDEV: 3.40,
+                    NOVAK_DJOKOVIC: 1.30,
                 },
                 'prediction': NOVAK_DJOKOVIC,
+                'bet': 4,
+            },
+
+            # 2019-08-18
+            {
+                'round': 2,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    DAVID_GOFFIN,
+                ],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.40,
+                    DAVID_GOFFIN: 2.90,
+                },
+                'prediction': DANILL_MEDVEDEV,
                 'bet': 4,
             }
         ]

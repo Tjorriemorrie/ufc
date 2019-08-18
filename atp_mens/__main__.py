@@ -1,6 +1,7 @@
 from collections import Counter, defaultdict
 from datetime import datetime
 from itertools import chain
+from random import random
 
 import numpy as np
 from cma import CMAEvolutionStrategy
@@ -8,6 +9,7 @@ from loguru import logger
 from math import sqrt
 from scipy.stats import linregress
 from sklearn.preprocessing import MinMaxScaler
+from sortedcontainers import SortedDict
 from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
@@ -118,11 +120,10 @@ def main(hyper_params, train=0):
 
     all_data = DATA_2018_10 + DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
 
-    # reg_lambda, reg_alpha, \
-
     # estimators, learning_rate = hyper_params
     # gamma, max_depth, min_child_weight = hyper_params
     # max_delta_step, subsample, scale_pos_weight = hyper_params
+    # reg_lambda, reg_alpha = hyper_params
     reg_params = {
         'n_estimators': int(round(2.1788282223375672 * 100)),
         'learning_rate': 0.31052718461617523,
@@ -132,16 +133,15 @@ def main(hyper_params, train=0):
         'max_delta_step': 0.5808271528189928,  # 0.19995566873577586,
         'subsample': 0.8792477583008574,  # 0.9922978010805564,
         'scale_pos_weight': 0.49606238825608306,  # 0.8825017324048802,
-        'reg_lambda': 0.7106544893592536,
-        'reg_alpha': 0.010303112390348092,
+        'reg_lambda': 3.2648130839099574,  # 0.7106544893592536,
+        'reg_alpha': 1.9485388354932445,  # 0.010303112390348092,
         'colsample_bytree': 0.999790544478916,
         'colsample_bylevel': 0.9999562489678556,
         'colsample_bynode': 0.98799098337194,
     }
 
-    # upsets_cutoff, whitewashes_cutoff, doors_cutoff, surface_cutoff, wnl_cutoff = hyper_params
+    # upsets_cutoff, doors_cutoff, surface_cutoff, wnl_cutoff = hyper_params
     upsets_cutoff = int(round(1.3627577408735392 * 10))
-    whitewashes_cutoff = int(round(1.568914833462892 * 10))
 
     # bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
     bet_pred_a = -57.72765234484444
@@ -181,6 +181,12 @@ def main(hyper_params, train=0):
     bet_set_c = 0.2513640348838548, 
     sets_cutoff = int(round(10.683875218378896 * 10))
 
+    # bet_gms_a, bet_gms_b, bet_gms_c, games_cutoff = hyper_params
+    bet_gms_a = -1.8382634565516396
+    bet_gms_b = 1.508125616202233
+    bet_gms_c = -1.0207211503677005 
+    games_cutoff = int(round(19.120925194269542 * 10))
+
     # init
     reg = None
     scaler = MinMaxScaler()
@@ -192,8 +198,8 @@ def main(hyper_params, train=0):
     surfaces = defaultdict(lambda: [])
     speeds = defaultdict(lambda: [100, 0])
     upsets = defaultdict(lambda: [])
-    whitewashes = defaultdict(lambda: [0])
     sets = defaultdict(lambda: [])
+    games = defaultdict(lambda: [0])
     X_train = []
     y_train = []
     X_test = []
@@ -225,6 +231,10 @@ def main(hyper_params, train=0):
         for match in event['matches']:
             # skip if no odds:
             if 'odds' not in match:
+                continue
+
+            # add noise (skip 20% during training)
+            if not is_training and train and random() > 0.80:
                 continue
 
             p1, p2 = match['players']
@@ -270,15 +280,11 @@ def main(hyper_params, train=0):
             p2_speed_prs = [(abs(v), 1 if v > 0 else -1) for v in speeds[p2]]
             p2_speed_lin = linregress([v[0] for v in p2_speed_prs], [v[1] for v in p2_speed_prs])
 
-            # whitewashes
-            p1_whitewashes = sum(whitewashes[p1])
-            p2_whitewashes = sum(whitewashes[p2])
-
             # upsets
             p1_upsets = sum(upsets[p1])
             p2_upsets = sum(upsets[p2])
 
-            # evs
+            # scaled odds
             odds_sum = p1_odds + p2_odds
             p1_scaled_odds = p1_odds / odds_sum
             p2_scaled_odds = p2_odds / odds_sum
@@ -292,6 +298,10 @@ def main(hyper_params, train=0):
             p2_sets_wins = p2_sets[1]
             p2_sets_losses = p2_sets[-1]
             p2_sets_winrate = p2_sets[1] / max(1, len(sets[p2]))
+
+            # games
+            p1_games = np.average(games[p1])
+            p2_games = np.average(games[p2])
 
             match_data = [
                 [
@@ -324,8 +334,6 @@ def main(hyper_params, train=0):
                     p2_surface_winrate,
                     p1_upsets,
                     p2_upsets,
-                    p1_whitewashes,
-                    p2_whitewashes,
                     p1_speed_lin.slope,
                     p2_speed_lin.slope,
                     p1_sets_wins,
@@ -334,6 +342,8 @@ def main(hyper_params, train=0):
                     p2_sets_wins,
                     p2_sets_losses,
                     p2_sets_winrate,
+                    p1_games,
+                    p2_games,
                 ],
                 [
                     win2_prob,
@@ -365,8 +375,6 @@ def main(hyper_params, train=0):
                     p1_surface_winrate,
                     p2_upsets,
                     p1_upsets,
-                    p2_whitewashes,
-                    p1_whitewashes,
                     p2_speed_lin.slope,
                     p1_speed_lin.slope,
                     p2_sets_wins,
@@ -375,6 +383,8 @@ def main(hyper_params, train=0):
                     p1_sets_wins,
                     p1_sets_losses,
                     p1_sets_winrate,
+                    p2_games,
+                    p1_games,
                 ]
             ]
 
@@ -398,11 +408,6 @@ def main(hyper_params, train=0):
                 speeds[p1] = speeds[p1][-speed_cutoff:] + [match_speed]
                 speeds[p2] = speeds[p2][-speed_cutoff:] + [-match_speed]
 
-                # update whitewashes
-                whitewash = all(g[0] > g[1] for g in match['score'])
-                whitewashes[p1] = whitewashes[p1][-whitewashes_cutoff:] + [1 if whitewash else 0]
-                whitewashes[p2] = whitewashes[p2][-whitewashes_cutoff:] + [-1 if whitewash else 0]
-
                 # update upsets
                 upset = win2_prob > 0.50
                 upsets[p1] = upsets[p1][-upsets_cutoff:] + [1 if upset else 0]
@@ -411,6 +416,10 @@ def main(hyper_params, train=0):
                 # update sets
                 sets[p1] = sets[p1][-sets_cutoff:] + [1 if v[0] > v[1] else -1 for v in match['score']]
                 sets[p2] = sets[p2][-sets_cutoff:] + [1 if v[1] > v[0] else -1 for v in match['score']]
+
+                # update games
+                games[p1] = games[p1][-games_cutoff:] + [sum(v[0] for v in match['score'])]
+                games[p2] = games[p2][-games_cutoff:] + [sum(v[1] for v in match['score'])]
 
                 # update ratings
                 ratings[p1], ratings[p2] = rate_1vs1(ratings[p1], ratings[p2])
@@ -496,6 +505,16 @@ def main(hyper_params, train=0):
                 bet_set_multi = int(min(max(round(bet_set_multi), 0), 1))
                 bet_multi += bet_set_multi
                 bet_multis_cat.append(f'bet_set_multi-{bet_set_multi}')
+
+                # games
+                if p1_pred > p2_pred:
+                    p_game = p1_games - p2_games
+                else:
+                    p_game = p2_games - p1_games
+                bet_game_multi = np.polyval([bet_gms_a, bet_gms_b, bet_gms_c], [p_game])[0]
+                bet_game_multi = int(min(max(round(bet_game_multi), 0), 1))
+                bet_multi += bet_game_multi
+                bet_multis_cat.append(f'bet_game_multi-{bet_game_multi}')
 
                 bet_amt = bet_size * bet_multi
                 bet_amts.append(bet_amt)
@@ -584,11 +603,21 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         'sfc_wins', 'sfc_losses', 'sfc_wr',
         '~sfc_wins', '~sfc_losses', '~sfc_wr',
         'upsets', '~upsets',
-        'whitewashes', '~whitewashes',
         'slope', '~slope',
+        'sets_wins', 'sets_losses', 'sets_wr',
+        '~sets_wins', '~sets_losses', '~sets_wr',
+        'games', '~games',
     ]
-    features = {k: round(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
-    logger.info(f'Features: {features}')
+    assert len(feature_names) == len(reg.feature_importances_), f'{len(feature_names)} features vs {len(reg.feature_importances_)} reg values'
+    logger.info('')
+    logger.info(f'Features:')
+    features = SortedDict({v: k for k, v in zip(feature_names, reg.feature_importances_)})
+    for k in features.keys()[:5]:
+        logger.info(f'{features[k]}: {k:.3f}')
+        continue
+    for k in features.keys()[-5:]:
+        logger.info(f'{features[k]}: {k:.3f}')
+        continue
 
     if accuracy[1]:
         payouts = np.array(payouts)
@@ -609,7 +638,7 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        # sheet = -18.28
+        # sheet = -18.08
         # if abs(sum(tab) - sheet) > 0.01:
         #     for l in actual_debug:
         #         logger.warning(l)
@@ -630,8 +659,7 @@ def run():
     train = 0
 
     names = [
-        # 'reg_lambda', 'reg_alpha',
-        # 'upsets cutoff', 'whitewashes_cutoff',
+        # 'upsets cutoff',
         # 'pred a', 'pred b', 'pred c',
         # 'odds a', 'odds b', 'odds c',
         # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff',
@@ -641,18 +669,20 @@ def run():
         # 'gamma', 'max_depth', 'min_child_weight',
         # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
         # 'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
-        'bet_set_a', 'bet_set_b', 'bet_set_c', 'sets_cutoff',
+        # 'bet_set_a', 'bet_set_b', 'bet_set_c', 'sets_cutoff',
+        # 'reg_lambda', 'reg_alpha',
+        'bet_gms_a', 'bet_gms_b', 'bet_gms_c', 'games_cutoff',
     ]
     params = [
-        0, 0, 0, 10
+        0, 0, 0, 20
     ]
     bounds = [[-np.inf, -np.inf, -np.inf, 0],
-              [np.inf,  np.inf,  np.inf,  np.inf]]
+              [np.inf, np.inf, np.inf, np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 
     if train:
-        es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
+        es = CMAEvolutionStrategy(params, .1, {'bounds': bounds})
         while not es.stop():
             solutions = es.ask()
             try:

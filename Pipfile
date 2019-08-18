@@ -13,6 +13,7 @@ xgboost = "*"
 keras-rl = "*"
 tensorflow = "*"
 cma = "*"
+sortedcontainers = "*"
 
 [requires]
 python_version = "3.7"

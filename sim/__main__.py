@@ -1,6 +1,7 @@
 from datetime import datetime
 from collections import Counter, defaultdict, OrderedDict
 from itertools import chain
+from random import random
 
 import numpy as np
 from cma import CMAEvolutionStrategy
@@ -62,12 +63,16 @@ def main(hyper_params, train=0):
 
     # estimators, learning_rate = hyper_params
     # gamma, max_depth, min_child_weight = hyper_params
+    # max_delta_step, subsample, scale_pos_weight = hyper_params
     reg_params = {
         'n_estimators': int(round(2.1418721633783804 * 100)),  # 0.8844565933947343
         'learning_rate': 0.09426181829690375,  # 0.24678854038938264
         'gamma': 0.1860088097748791,  # 0.0012826703538762253,
         'max_depth': int(round(2.1956102758009424)),  # 2.5506573766936533)),
         'min_child_weight': 3.5802932556001426,
+        'max_delta_step': 0.10779250505931337,
+        'subsample': 0.9859889452465481,
+        'scale_pos_weight': 1.2283288967549404,
     }
 
     # bet_wnl_a, bet_wnl_b, bet_wnl_c, wnl_cutoff = hyper_params
@@ -124,6 +129,10 @@ def main(hyper_params, train=0):
             bet_size = 1
             # skip if no odds:
             if 'odds' not in fight:
+                continue
+
+            # add noise (skip 20% during training)
+            if not is_training and train and random() > 0.90:
                 continue
 
             f1 = fight['fighters'][0]['name']
@@ -376,18 +385,19 @@ def run():
         # 'estimators', 'learning_rate',
         # 'gamma', 'max depth',
         # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff'
-        'gamma', 'max_depth', 'min_child_weight',
+        # 'gamma', 'max_depth', 'min_child_weight',
+        'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
     ]
     params = [
-        0, 3, 1
+        0, 1, 1
     ]
-    bounds = [[0, 0, 0],
-              [np.inf,  np.inf,  np.inf]]
+    bounds = [[0,      0, 0],
+              [np.inf, 1, np.inf]]
     assert len(params) == len(names)
     assert len(params) == len(bounds[0])
 
     if train:
-        es = CMAEvolutionStrategy(params, 1, {'bounds': bounds})
+        es = CMAEvolutionStrategy(params, 0.1, {'bounds': bounds})
         while not es.stop():
             solutions = es.ask()
             fitness = [main(x, train=1) for x in solutions]
