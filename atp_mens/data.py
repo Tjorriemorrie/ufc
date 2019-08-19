@@ -2,30 +2,27 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 70.5  17.8  408    opt estimators and learning rate           (2, 673), (3, 90), (6, 62), (5, 51)
 # 69.4  17.0  389    opt win and loss ('bet_wnl_multi-2', 110)  (2, 675), (3, 87), (6, 61), (5, 52)
 # 69.9  16.0  462    opt odds hypers                        (2, 623), (4, 144), (5, 96), (6, 77)
 # 69.9  14.9  550    opt upsets                             (2, 446), (5, 197), (4, 107), (6, 71)
 # 70.5  15.4  561    2018-09-30 Chengdu                     (2, 459), (5, 193), (4, 100), (6, 73)
 # 68.6  17.9  590    added tie-breaker                      (2, 373), (5, 195), (4, 85), (6, 65)
 # 70.0  18.7  627    opt bet_pred_a, bet_pred_b, bet_pred_c (2, 371), (5, 183), (4, 89), (6, 65)
-# 69.9  17.5  743    added games param
-# 68.1  14.8  643    added 20% droprate                     (2, 266), (5, 187), (8, 103), (7, 79)
 
+# 69.9  17.5  743    added games param
 # 67.5  14.1  555    removed whitewashes 1% useful
 # 71.8  23.2  865    2019-08-16
 # 70.9  22.7  821    opt gamma/max_depth/min_child_weight   (2, 334), (5, 154), (4, 139), (7, 111)
-# 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
-# 67.4  2.2   57     2019-08-15                             (1, 465), (7, 152), (4, 143)
 
+# 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
 # 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
 # 66.2  6.1   59     merged params
+
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
-# 67.2  9.7   139    optimized params
-
 # 67.4  1.1   15     optimized
-# 68.1  7.4   105    optimized
-# 68.6  6.2   101    optimized
 
+# 68.1  7.4   105    optimized
 # 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
 
 # 65.7  9.7   335    upsets bet param added

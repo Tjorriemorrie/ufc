@@ -122,19 +122,15 @@ def main(hyper_params, train=0):
     all_data = DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
     if train:
-        new_all_data = []
-        for event in all_data:
-            if random() > 0.5:
-                new_all_data.append(event)
-        all_data = new_all_data
+        all_data = [e for e in all_data if random() < 0.9]
 
-    # estimators, learning_rate = hyper_params
     # gamma, max_depth, min_child_weight = hyper_params
     # max_delta_step, subsample, scale_pos_weight = hyper_params
     # reg_lambda, reg_alpha = hyper_params
+    # estimators, learning_rate = hyper_params
     reg_params = {
-        'n_estimators': int(round(2.1788282223375672 * 100)),
-        'learning_rate': 0.31052718461617523,
+        'n_estimators': int(round(0.9051461723227451 * 100)),  # 2.1788282223375672
+        'learning_rate': 0.2598862779876376,  # 0.31052718461617523,
         'gamma': 0.1480916400109764,  # 1.0931334779261526,
         'max_depth': int(round(4.59282984572512)),  # 2.605884221401324)),
         'min_child_weight': 1.0956345040972018,  # 0.86383038291261,
@@ -184,13 +180,13 @@ def main(hyper_params, train=0):
     # bet_set_a, bet_set_b, bet_set_c, sets_cutoff = hyper_params
     bet_set_a = 5.693199788273852
     bet_set_b = -2.326855621895103
-    bet_set_c = 0.2513640348838548, 
+    bet_set_c = 0.2513640348838548,
     sets_cutoff = int(round(10.683875218378896 * 10))
 
     # bet_gms_a, bet_gms_b, bet_gms_c, games_cutoff = hyper_params
     bet_gms_a = -1.8382634565516396
     bet_gms_b = 1.508125616202233
-    bet_gms_c = -1.0207211503677005 
+    bet_gms_c = -1.0207211503677005
     games_cutoff = int(round(19.120925194269542 * 10))
 
     # bet_tie_a, bet_tie_b, bet_tie_c, ties_cutoff = hyper_params
@@ -470,9 +466,9 @@ def main(hyper_params, train=0):
                 games[p2] = games[p2][-games_cutoff:] + [sum(v[1] for v in match['score'])]
 
                 # update ties
-                ties[p1] = ties[p1][-ties_cutoff:] + [1 if v[0] == 7 else -1 
+                ties[p1] = ties[p1][-ties_cutoff:] + [1 if v[0] == 7 else -1
                                                       for v in match['score'] if 7 in v]
-                ties[p2] = ties[p2][-ties_cutoff:] + [1 if v[1] == 7 else -1 
+                ties[p2] = ties[p2][-ties_cutoff:] + [1 if v[1] == 7 else -1
                                                       for v in match['score'] if 7 in v]
 
                 # update upsets
@@ -733,11 +729,9 @@ def run():
     # rested
     # days since last played?
     # 1st serve conversion rate
-    # FIX EVs
 
     names = [
         # 'bet_drs_a', 'bet_drs_b', 'bet_drs_c', 'doors_cutoff',
-        # 'estimators', 'learning_rate'
         # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c', 'surface_cutoff',
         # 'gamma', 'max_depth', 'min_child_weight',
         # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
@@ -749,18 +743,19 @@ def run():
         # 'bet_tie_a', 'bet_tie_b', 'bet_tie_c', 'ties_cutoff',
         # 'bet_upset_a', 'bet_upset_b', 'bet_upset_c', 'upsets_cutoff',
         # 'odds_a', 'odds_b', 'odds_c',
-        'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c',
+        # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c',
+        'estimators', 'learning_rate'
     ]
     params = [
-        0, 0, 0
+        1, 0.1
     ]
-    bounds = [[-np.inf, -np.inf, -np.inf],
-              [np.inf,  np.inf,  np.inf]]
+    bounds = [[.1, 0],
+              [10, 1]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 
     if train:
-        sigma = 1
+        sigma = 0.5
         opts = CMAOptions()
         # opts['tolx'] = 1E-2
         opts['bounds'] = bounds
