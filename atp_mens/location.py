@@ -102,6 +102,14 @@ BUDAPEST = {
     'surface': SURFACE_CLAY,
     'speed': 36,
 }
+CHENGDU = {
+    'name': 'Chengdu',
+    'category': 'ATP250',
+    'location': 'Chengdu, China',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 69,
+}
 BUENOS_AIRES = {
     'name': 'Argentina Open',
     'category': 'ATP250',
@@ -485,4 +493,12 @@ WIMBLEDON = {
     'outdoor': OUTDOOR,
     'surface': SURFACE_GRASS,
     'speed': 69,
+}
+WINSTON_SALEM = {
+    'name': 'Winston-Salem Open',
+    'category': 'ATP250',
+    'location': 'Winston-Salem, United States',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 63,
 }

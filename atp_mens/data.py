@@ -2,12 +2,16 @@ from men import *
 from location import *
 
 # acc   roi   profit desc
+# 69.4  17.0  389    opt win and loss ('bet_wnl_multi-2', 110)  (2, 675), (3, 87), (6, 61), (5, 52)
+# 69.9  16.0  462    opt odds hypers                        (2, 623), (4, 144), (5, 96), (6, 77)
+# 69.9  14.9  550    opt upsets                             (2, 446), (5, 197), (4, 107), (6, 71)
+# 70.5  15.4  561    2018-09-30 Chengdu                     (2, 459), (5, 193), (4, 100), (6, 73)
+# 68.6  17.9  590    added tie-breaker                      (2, 373), (5, 195), (4, 85), (6, 65)
 # 70.0  18.7  627    opt bet_pred_a, bet_pred_b, bet_pred_c (2, 371), (5, 183), (4, 89), (6, 65)
 # 69.9  17.5  743    added games param
 # 68.1  14.8  643    added 20% droprate                     (2, 266), (5, 187), (8, 103), (7, 79)
-# 67.5  14.1  555    removed whitewashes 1% useful
-# 69.4  20.5  783    added sets
 
+# 67.5  14.1  555    removed whitewashes 1% useful
 # 71.8  23.2  865    2019-08-16
 # 70.9  22.7  821    opt gamma/max_depth/min_child_weight   (2, 334), (5, 154), (4, 139), (7, 111)
 # 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
@@ -7502,10 +7506,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': CINCINNATI,
         'date': '2019-08-18',
@@ -8515,6 +8515,7 @@ DATA = [
                     DANILL_MEDVEDEV,
                     DAVID_GOFFIN,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
                     DANILL_MEDVEDEV: 1.40,
                     DAVID_GOFFIN: 2.90,
@@ -8523,5 +8524,377 @@ DATA = [
                 'bet': 4,
             }
         ]
-    }
+    },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
+
+    {
+        'location': WINSTON_SALEM,
+        'date': '2019-08-24',
+        'matches': [
+
+            # 2019-08-17
+            {
+                'round': 512,
+                'players': [
+                    STRONG_KIRCHHEIMER,
+                    KEVIN_KRAWIETZ,
+                ],
+                'score': [(4, 6), (6, 2), (6, 4)],
+                'odds': {
+                    STRONG_KIRCHHEIMER: 2.60,
+                    KEVIN_KRAWIETZ: 1.44
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BORNA_GOJO,
+                    TAHA_BAADI
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    BORNA_GOJO: 1.02,
+                    TAHA_BAADI: 7.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_NGUYEN,
+                    MARCELO_AREVALO
+                ],
+                'score': [(6, 4), (4, 6), (7, 6)],
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    PETROS_CHRYSOCHOS,
+                    FILIP_PELIWO
+                ],
+                'score': [(6, 1), (6, 0)],
+                'odds': {
+                    PETROS_CHRYSOCHOS: 1.61,
+                    FILIP_PELIWO: 2.15
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RAYMOND_SARMIENTO,
+                    CHRISTOPHER_EUBANKS,
+                ],
+                'score': [(3, 6), (6, 4), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCOS_GIRON,
+                    ROY_SMITH
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    MARCOS_GIRON: 1.18,
+                    ROY_SMITH: 4.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BJORN_FRATANGELO,
+                    JURGEN_MELZER
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    BJORN_FRATANGELO: 1.22,
+                    JURGEN_MELZER: 3.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    KEVIN_KING
+                ],
+                'score': [(6, 4), (2, 6), (6, 1)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.25,
+                    KEVIN_KING: 3.47
+                }
+            },
+
+            # 2019-08-18
+            {
+                'round': 256,
+                'players': [
+                    RAYMOND_SARMIENTO,
+                    DANIEL_NGUYEN
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    RAYMOND_SARMIENTO: 1.69,
+                    DANIEL_NGUYEN: 1.95
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARCOS_GIRON,
+                    BORNA_GOJO
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    MARCOS_GIRON: 1.45,
+                    BORNA_GOJO: 2.45
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    BJORN_FRATANGELO,
+                    PETROS_CHRYSOCHOS
+                ],
+                'score': [(7, 5), (4, 6), (6, 1)],
+                'odds': {
+                    BJORN_FRATANGELO: 1.25,
+                    PETROS_CHRYSOCHOS: 3.30
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    STRONG_KIRCHHEIMER
+                ],
+                'score': [(4, 6), (6, 2), (6, 1)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.10,
+                    STRONG_KIRCHHEIMER: 5.50
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    LLOYD_HARRIS,
+                    JAUME_MUNAR
+                ],
+                'score': [(7, 6), (4, 6), (6, 1)],
+                'odds': {
+                    LLOYD_HARRIS: 1.65,
+                    JAUME_MUNAR: 2.01
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    ROBIN_HAASE,
+                    DENIS_KUDLA
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    ROBIN_HAASE: 1.96,
+                    DENIS_KUDLA: 1.70
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    PRAJNESH_GUNNESWARAN,
+                    CEDRIC_MARCEL_STEBE
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    PRAJNESH_GUNNESWARAN: 1.60,
+                    CEDRIC_MARCEL_STEBE: 2.16
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    TOMAS_BERDYCH,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 1), (3, 6), (6, 3)],
+                'odds': {
+                    TOMAS_BERDYCH: 1.71,
+                    ANDREAS_SEPPI: 1.95
+                }
+            },
+
+            #
+            {
+                'round': 64,
+                'players': [
+                    PABLO_ANDUJAR,
+                    NICOLAS_JARRY,
+                ],
+                'odds': {
+                    PABLO_ANDUJAR: 3.10,
+                    NICOLAS_JARRY: 1.36,
+                },
+                'prediction': PABLO_ANDUJAR,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    MARCO_CECCHINATO,
+                    ALEXANDER_BUBLIK,
+                ],
+                'odds': {
+                    MARCO_CECCHINATO: 2.10,
+                    ALEXANDER_BUBLIK: 1.70,
+                },
+                'prediction': ALEXANDER_BUBLIK,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    DUCKHEE_LEE,
+                    HENRI_LAAKSONEN,
+                ],
+                'odds': {
+                    DUCKHEE_LEE: 1.95,
+                    HENRI_LAAKSONEN: 1.85,
+                },
+                'prediction': DUCKHEE_LEE,
+                'bet': 5,
+            },
+            {
+                'round': 64,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    ALEXEI_POPYRIN,
+                ],
+                'odds': {
+                    THIAGO_MONTEIRO: 3.20,
+                    ALEXEI_POPYRIN: 1.34,
+                },
+                'prediction': ALEXEI_POPYRIN,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    MARCOS_GIRON,
+                    ROBERTO_CARBALLES_BAENA,
+                ],
+                'odds': {
+                    MARCOS_GIRON: 1.55,
+                    ROBERTO_CARBALLES_BAENA: 2.40,
+                },
+                'prediction': ROBERTO_CARBALLES_BAENA,
+                'bet': 5,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ANTOINE_HOANG,
+                    DAMIR_DZUMHUR,
+                ],
+                'odds': {
+                    ANTOINE_HOANG: 2.30,
+                    DAMIR_DZUMHUR: 1.60,
+                },
+                'prediction': DAMIR_DZUMHUR,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    STEVE_JOHNSON,
+                    CORENTIN_MOUTET,
+                ],
+                'odds': {
+                    STEVE_JOHNSON: 1.34,
+                    CORENTIN_MOUTET: 3.20,
+                },
+                'prediction': STEVE_JOHNSON,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    RAYMOND_SARMIENTO,
+                    JEREMY_CHARDY,
+                ],
+                'odds': {
+                    RAYMOND_SARMIENTO: 3.80,
+                    JEREMY_CHARDY: 1.26,
+                },
+                'prediction': RAYMOND_SARMIENTO,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    AMIR_WEINTRAUB,
+                    BJORN_FRATANGELO,
+                ],
+                'odds': {
+                    AMIR_WEINTRAUB: 7.00,
+                    BJORN_FRATANGELO: 1.09,
+                },
+                'prediction': BJORN_FRATANGELO,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    THOMAS_FABBIANO,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    THOMAS_FABBIANO: 3.30,
+                    ANDREY_RUBLEV: 1.32,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    CASPER_RUUD,
+                    LLOYD_HARRIS,
+                ],
+                'odds': {
+                    CASPER_RUUD: 1.58,
+                    LLOYD_HARRIS: 2.35,
+                },
+                'prediction': CASPER_RUUD,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    TENNYS_SANDGREN,
+                    ANDY_MURRAY,
+                ],
+                'odds': {
+                    TENNYS_SANDGREN: 2.15,
+                    ANDY_MURRAY: 1.68,
+                },
+                'prediction': TENNYS_SANDGREN,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    BENOIT_PAIRE,
+                    PRAJNESH_GUNNESWARAN,
+                ],
+                'odds': {
+                    BENOIT_PAIRE: 1.48,
+                    PRAJNESH_GUNNESWARAN: 2.60,
+                },
+                'prediction': BENOIT_PAIRE,
+                'bet': 2,
+            },
+        ]
+    },
 ]
