@@ -1,8 +1,9 @@
 from men import *
 from location import *
 
-# acc   roi   profit desc
-# 70.5  17.8  408    opt estimators and learning rate           (2, 673), (3, 90), (6, 62), (5, 51)
+# acc   roi     profit  desc
+# 69.5  22.8    554     opt doors 0:740 1: 148
+# 69.8  19.7    452     opt estimators and learning rate           (2, 673), (3, 90), (6, 62), (5, 51)
 # 69.4  17.0  389    opt win and loss ('bet_wnl_multi-2', 110)  (2, 675), (3, 87), (6, 61), (5, 52)
 # 69.9  16.0  462    opt odds hypers                        (2, 623), (4, 144), (5, 96), (6, 77)
 # 69.9  14.9  550    opt upsets                             (2, 446), (5, 197), (4, 107), (6, 71)

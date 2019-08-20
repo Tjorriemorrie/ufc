@@ -122,15 +122,15 @@ def main(hyper_params, train=0):
     all_data = DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + DATA
     if train:
-        all_data = [e for e in all_data if random() < 0.9]
+        all_data = [e for e in all_data if random() < 0.99]
 
     # gamma, max_depth, min_child_weight = hyper_params
     # max_delta_step, subsample, scale_pos_weight = hyper_params
     # reg_lambda, reg_alpha = hyper_params
     # estimators, learning_rate = hyper_params
     reg_params = {
-        'n_estimators': int(round(0.9051461723227451 * 100)),  # 2.1788282223375672
-        'learning_rate': 0.2598862779876376,  # 0.31052718461617523,
+        'n_estimators': int(round(3.0757781441149525 * 100)),  # 0.9051461723227451
+        'learning_rate': 0.38318976066403954,  # 0.2598862779876376
         'gamma': 0.1480916400109764,  # 1.0931334779261526,
         'max_depth': int(round(4.59282984572512)),  # 2.605884221401324)),
         'min_child_weight': 1.0956345040972018,  # 0.86383038291261,
@@ -159,11 +159,10 @@ def main(hyper_params, train=0):
     bet_wnl_b = -39.84123646309891  # 1.3400360245124745
     bet_wnl_c = -4.900945161634794  # -2.1335167369811048
 
-    # bet_drs_a, bet_drs_b, bet_drs_c, doors_cutoff = hyper_params
-    bet_drs_a = -21.440152399884028
-    bet_drs_b = 9.162822051826854
-    bet_drs_c = -15.863824751108206
-    doors_cutoff = int(round(0.3588956879099647 * 10))
+    # bet_drs_a, bet_drs_b, bet_drs_c = hyper_params
+    bet_drs_a = -4.980624329178044  # -21.440152399884028
+    bet_drs_b = -4.879994486203875  # 9.162822051826854
+    bet_drs_c = -0.16544259209568696  # -15.863824751108206
 
     # bet_sfc_a, bet_sfc_b, bet_sfc_c, surface_cutoff = hyper_params
     bet_sfc_a = 0.6653265485318403
@@ -446,8 +445,8 @@ def main(hyper_params, train=0):
                 wins_losses[p2] += [-1]
 
                 # update doors
-                doors[p1] = doors[p1][-doors_cutoff:] + [match_door]
-                doors[p2] = doors[p2][-doors_cutoff:] + [-match_door]
+                doors[p1] += [match_door]
+                doors[p2] += [-match_door]
 
                 # update surface
                 surfaces[p1] = surfaces[p1][-surface_cutoff:] + [match_surface]
@@ -731,7 +730,6 @@ def run():
     # 1st serve conversion rate
 
     names = [
-        # 'bet_drs_a', 'bet_drs_b', 'bet_drs_c', 'doors_cutoff',
         # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c', 'surface_cutoff',
         # 'gamma', 'max_depth', 'min_child_weight',
         # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
@@ -744,20 +742,21 @@ def run():
         # 'bet_upset_a', 'bet_upset_b', 'bet_upset_c', 'upsets_cutoff',
         # 'odds_a', 'odds_b', 'odds_c',
         # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c',
-        'estimators', 'learning_rate'
+        # 'estimators', 'learning_rate'
+        'bet_drs_a', 'bet_drs_b', 'bet_drs_c',
     ]
     params = [
-        1, 0.1
+        0, 0, 0
     ]
-    bounds = [[.1, 0],
-              [10, 1]]
+    bounds = [[-np.inf],
+              [np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 
     if train:
-        sigma = 0.5
+        sigma = 1
         opts = CMAOptions()
-        # opts['tolx'] = 1E-2
+        opts['tolx'] = 1E-2
         opts['bounds'] = bounds
         es = CMAEvolutionStrategy(params, sigma, inopts=opts)
         while not es.stop():
