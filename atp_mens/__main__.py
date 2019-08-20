@@ -124,16 +124,16 @@ def main(hyper_params, train=0):
     if train:
         all_data = [e for e in all_data if random() < 0.99]
 
-    # gamma, max_depth, min_child_weight = hyper_params
     # max_delta_step, subsample, scale_pos_weight = hyper_params
     # reg_lambda, reg_alpha = hyper_params
     # estimators, learning_rate = hyper_params
+    # gamma, max_depth, min_child_weight = hyper_params
     reg_params = {
         'n_estimators': int(round(3.0757781441149525 * 100)),  # 0.9051461723227451
         'learning_rate': 0.38318976066403954,  # 0.2598862779876376
-        'gamma': 0.1480916400109764,  # 1.0931334779261526,
-        'max_depth': int(round(4.59282984572512)),  # 2.605884221401324)),
-        'min_child_weight': 1.0956345040972018,  # 0.86383038291261,
+        'gamma': 0.028048213377950385,  # 0.1480916400109764,  # 1.0931334779261526,
+        'max_depth': int(round(5.504350192703311)),  # 4.59282984572512)),  # 2.605884221401324)),
+        'min_child_weight': 7.326173754497638,  # 1.0956345040972018,  # 0.86383038291261,
         'max_delta_step': 0.5808271528189928,  # 0.19995566873577586,
         'subsample': 0.8792477583008574,  # 0.9922978010805564,
         'scale_pos_weight': 0.49606238825608306,  # 0.8825017324048802,
@@ -164,11 +164,10 @@ def main(hyper_params, train=0):
     bet_drs_b = 0.09026727794855582  # -4.879994486203875  # 9.162822051826854
     bet_drs_c = -0.4235464556276341  # -0.16544259209568696  # -15.863824751108206
 
-    # bet_sfc_a, bet_sfc_b, bet_sfc_c, surface_cutoff = hyper_params
-    bet_sfc_a = 0.6653265485318403
-    bet_sfc_b = -0.9177815683601153
-    bet_sfc_c = 1.036855102957022
-    surface_cutoff = int(round(4.5970976121640295 * 10))  # 2.192441090904198
+    bet_sfc_a, bet_sfc_b, bet_sfc_c = hyper_params
+    bet_sfc_a = 0.5556170264982178  # 0.6653265485318403
+    bet_sfc_b = 1.6008084410296202  # -0.9177815683601153
+    bet_sfc_c = -0.05668551915818678  # 1.036855102957022
 
     # bet_spd_a, bet_spd_b, bet_spd_c, speed_cutoff = hyper_params
     bet_spd_a = 3.3990105003184974
@@ -449,8 +448,8 @@ def main(hyper_params, train=0):
                 doors[p2] += [-match_door]
 
                 # update surface
-                surfaces[p1] = surfaces[p1][-surface_cutoff:] + [match_surface]
-                surfaces[p2] = surfaces[p2][-surface_cutoff:] + [-match_surface]
+                surfaces[p1] += [match_surface]
+                surfaces[p2] += [-match_surface]
 
                 # update speeds
                 speeds[p1] = speeds[p1][-speed_cutoff:] + [match_speed]
@@ -520,7 +519,7 @@ def main(hyper_params, train=0):
                 else:
                     p_sfc = p2_surface_winrate - p1_surface_winrate
                 bet_sfc_multi = np.polyval([bet_sfc_a, bet_sfc_b, bet_sfc_c], [p_sfc])[0]
-                bet_sfc_multi = int(min(max(round(bet_sfc_multi), 0), 1))
+                bet_sfc_multi = int(min(max(round(bet_sfc_multi), 0), 2))
                 bet_multi += bet_sfc_multi
                 bet_multis_cat.append(f'bet_sfc_multi-{bet_sfc_multi}')
 
@@ -730,8 +729,6 @@ def run():
     # 1st serve conversion rate
 
     names = [
-        # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c', 'surface_cutoff',
-        # 'gamma', 'max_depth', 'min_child_weight',
         # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c', 'speed_cutoff',
         # 'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
         # 'bet_set_a', 'bet_set_b', 'bet_set_c', 'sets_cutoff',
@@ -743,7 +740,9 @@ def run():
         # 'odds_a', 'odds_b', 'odds_c',
         # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c',
         # 'estimators', 'learning_rate'
-        'bet_drs_a', 'bet_drs_b', 'bet_drs_c',
+        # 'bet_drs_a', 'bet_drs_b', 'bet_drs_c',
+        # 'gamma', 'max_depth', 'min_child_weight',
+        'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c',
     ]
     params = [
         0, 0, 0
