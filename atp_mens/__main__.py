@@ -160,9 +160,9 @@ def main(hyper_params, train=0):
     bet_wnl_c = -4.900945161634794  # -2.1335167369811048
 
     # bet_drs_a, bet_drs_b, bet_drs_c = hyper_params
-    bet_drs_a = -4.980624329178044  # -21.440152399884028
-    bet_drs_b = -4.879994486203875  # 9.162822051826854
-    bet_drs_c = -0.16544259209568696  # -15.863824751108206
+    bet_drs_a = 0.0876974291704225  # -4.980624329178044  # -21.440152399884028
+    bet_drs_b = 0.09026727794855582  # -4.879994486203875  # 9.162822051826854
+    bet_drs_c = -0.4235464556276341  # -0.16544259209568696  # -15.863824751108206
 
     # bet_sfc_a, bet_sfc_b, bet_sfc_c, surface_cutoff = hyper_params
     bet_sfc_a = 0.6653265485318403
@@ -510,7 +510,7 @@ def main(hyper_params, train=0):
                 else:
                     p_drs = p2_doors_winrate - p1_doors_winrate
                 bet_drs_multi = np.polyval([bet_drs_a, bet_drs_b, bet_drs_c], [p_drs])[0]
-                bet_drs_multi = int(min(max(round(bet_drs_multi), 0), 1))
+                bet_drs_multi = int(min(max(round(bet_drs_multi), 0), 2))
                 bet_multi += bet_drs_multi
                 bet_multis_cat.append(f'bet_drs_multi-{bet_drs_multi}')
 
