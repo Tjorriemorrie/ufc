@@ -179,11 +179,10 @@ def main(hyper_params, train=0):
     bet_set_b = -15.83691764357804  # -2.326855621895103
     bet_set_c = -0.1548440594953348  # 0.2513640348838548
 
-    # bet_gms_a, bet_gms_b, bet_gms_c, games_cutoff = hyper_params
-    bet_gms_a = -1.8382634565516396
-    bet_gms_b = 1.508125616202233
-    bet_gms_c = -1.0207211503677005
-    games_cutoff = int(round(19.120925194269542 * 10))
+    # bet_gms_a, bet_gms_b, bet_gms_c = hyper_params
+    bet_gms_a = 8.624997939509418       # -1.8382634565516396
+    bet_gms_b = -42.5755998749252       # 1.508125616202233
+    bet_gms_c = -26.64519741409297      # -1.0207211503677005
 
     # bet_tie_a, bet_tie_b, bet_tie_c, ties_cutoff = hyper_params
     bet_tie_a = 5.665689864718495
@@ -459,8 +458,8 @@ def main(hyper_params, train=0):
                 sets[p2] += [1 if v[1] > v[0] else -1 for v in match['score']]
 
                 # update games
-                games[p1] = games[p1][-games_cutoff:] + [sum(v[0] for v in match['score'])]
-                games[p2] = games[p2][-games_cutoff:] + [sum(v[1] for v in match['score'])]
+                games[p1] += [sum(v[0] - v[1] for v in match['score'])]
+                games[p2] += [sum(v[1] - v[0] for v in match['score'])]
 
                 # update ties
                 ties[p1] = ties[p1][-ties_cutoff:] + [1 if v[0] == 7 else -1
@@ -536,13 +535,13 @@ def main(hyper_params, train=0):
                 bet_multi += bet_set_multi
                 bet_multis_cat.append(f'bet_set_multi-{bet_set_multi}')
 
-                # games
+                # games     0:658  3:244  1:5  2:2
                 if p1_pred > p2_pred:
                     p_game = p1_games - p2_games
                 else:
                     p_game = p2_games - p1_games
                 bet_game_multi = np.polyval([bet_gms_a, bet_gms_b, bet_gms_c], [p_game])[0]
-                bet_game_multi = int(min(max(round(bet_game_multi), 0), 1))
+                bet_game_multi = int(min(max(round(bet_game_multi), 0), 3))
                 bet_multi += bet_game_multi
                 bet_multis_cat.append(f'bet_game_multi-{bet_game_multi}')
 
@@ -736,7 +735,6 @@ def run():
     # 1st serve conversion rate
 
     names = [
-        # 'bet_gms_a', 'bet_gms_b', 'bet_gms_c', 'games_cutoff',
         # 'pred a', 'pred b', 'pred c',
         # 'bet_tie_a', 'bet_tie_b', 'bet_tie_c', 'ties_cutoff',
         # 'bet_upset_a', 'bet_upset_b', 'bet_upset_c', 'upsets_cutoff',
@@ -749,7 +747,8 @@ def run():
         # 'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
         # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c',
         # 'reg_lambda', 'reg_alpha',  # 1 0
-        'bet_set_a', 'bet_set_b', 'bet_set_c',
+        # 'bet_set_a', 'bet_set_b', 'bet_set_c',
+        'bet_gms_a', 'bet_gms_b', 'bet_gms_c',
     ]
     params = [
         0, 0, 0

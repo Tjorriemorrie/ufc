@@ -2,26 +2,23 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
-# 69.6  20.8    302     opt sets        0:655 1:254
+# 68.5  21.9    477     opt games       0:658  3:244  1:5  2:2
+# 69.6  20.8    302     opt sets        0:655  1:254
 # 67.7  17.8    244     opt speed       0:100%
 # 67.7  19.4    288     opt step/subsample/scale
 # 67.8  20.0    283     opt surface     0:100%
-# 68.0  17.0    393     opt gamma/mdepth/mchildw            (2, 689), (3, 80), (6, 60), (5, 56)
-# 67.8  14.7    341     2019-08-20
-# 69.5  22.8    554     opt doors   0:740 1:148
-# 69.8  19.7    452     opt estimators and learning rate           (2, 673), (3, 90), (6, 62), (5, 51)
 
+# 68.0  17.0    393     opt gamma/mdepth/mchildw            (2, 689), (3, 80), (6, 60), (5, 56)
+# 69.5  22.8    554     opt doors   0:740 1:148
 # 69.4  17.0  389    opt win and loss ('bet_wnl_multi-2', 110)  (2, 675), (3, 87), (6, 61), (5, 52)
 # 69.9  14.9  550    opt upsets                             (2, 446), (5, 197), (4, 107), (6, 71)
 # 68.6  17.9  590    added tie-breaker                      (2, 373), (5, 195), (4, 85), (6, 65)
-# 69.9  17.5  743    added games param
-# 67.5  14.1  555    removed whitewashes 1% useful
 
+# 69.9  17.5  743    added games param
 # 71.8  23.2  865    2019-08-16
 # 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
-# 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
-# 66.2  6.1   59     merged params
 
+# 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
 # 67.4  1.1   15     optimized
 
