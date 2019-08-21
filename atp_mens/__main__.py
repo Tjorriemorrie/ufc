@@ -174,11 +174,10 @@ def main(hyper_params, train=0):
     bet_spd_b = 0.6844247136331222  # -7.193927630039531
     bet_spd_c = -0.32766876994508726  # -1.9732000152355365
 
-    # bet_set_a, bet_set_b, bet_set_c, sets_cutoff = hyper_params
-    bet_set_a = 5.693199788273852
-    bet_set_b = -2.326855621895103
-    bet_set_c = 0.2513640348838548,
-    sets_cutoff = int(round(10.683875218378896 * 10))
+    # bet_set_a, bet_set_b, bet_set_c = hyper_params
+    bet_set_a = 4.975684517502831  # 5.693199788273852
+    bet_set_b = -15.83691764357804  # -2.326855621895103
+    bet_set_c = -0.1548440594953348  # 0.2513640348838548
 
     # bet_gms_a, bet_gms_b, bet_gms_c, games_cutoff = hyper_params
     bet_gms_a = -1.8382634565516396
@@ -456,8 +455,8 @@ def main(hyper_params, train=0):
                 speeds[p2] += [-match_speed]
 
                 # update sets
-                sets[p1] = sets[p1][-sets_cutoff:] + [1 if v[0] > v[1] else -1 for v in match['score']]
-                sets[p2] = sets[p2][-sets_cutoff:] + [1 if v[1] > v[0] else -1 for v in match['score']]
+                sets[p1] += [1 if v[0] > v[1] else -1 for v in match['score']]
+                sets[p2] += [1 if v[1] > v[0] else -1 for v in match['score']]
 
                 # update games
                 games[p1] = games[p1][-games_cutoff:] + [sum(v[0] for v in match['score'])]
@@ -719,11 +718,11 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        sheet = 5.71
-        if abs(sum(tab) - sheet) > 0.01:
-            for l in actual_debug:
-                logger.warning(l)
-            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        # sheet = 5.71
+        # if abs(sum(tab) - sheet) > 0.01:
+        #     for l in actual_debug:
+        #         logger.warning(l)
+        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 def run():
@@ -737,7 +736,6 @@ def run():
     # 1st serve conversion rate
 
     names = [
-        # 'bet_set_a', 'bet_set_b', 'bet_set_c', 'sets_cutoff',
         # 'bet_gms_a', 'bet_gms_b', 'bet_gms_c', 'games_cutoff',
         # 'pred a', 'pred b', 'pred c',
         # 'bet_tie_a', 'bet_tie_b', 'bet_tie_c', 'ties_cutoff',
@@ -750,13 +748,14 @@ def run():
         # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c',
         # 'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
         # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c',
-        'reg_lambda', 'reg_alpha',  # 1 0
+        # 'reg_lambda', 'reg_alpha',  # 1 0
+        'bet_set_a', 'bet_set_b', 'bet_set_c',
     ]
     params = [
-        1, 0
+        0, 0, 0
     ]
-    bounds = [[0, 0],
-              [np.inf, np.inf]]
+    bounds = [[-np.inf, -np.inf, -np.inf],
+              [np.inf, np.inf, np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 

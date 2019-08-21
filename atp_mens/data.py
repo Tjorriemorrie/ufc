@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 69.6  20.8    302     opt sets        0:655 1:254
 # 67.7  17.8    244     opt speed       0:100%
 # 67.7  19.4    288     opt step/subsample/scale
 # 67.8  20.0    283     opt surface     0:100%
