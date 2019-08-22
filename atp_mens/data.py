@@ -2,32 +2,30 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 77.5  39.6    259     opt speed                           (1, 92), (3, 87), (2, 54), (4, 33)
+# 73.5  40.6    254     opt surface                         (3, 94), (1, 88), (2, 37), (4, 32)
+# 73.5  40.6    254     opt outdoors                        (3, 94), (1, 88), (2, 37), (4, 32)
+# 73    39.9    234     opt max depth & mdeltastep          (3, 115), (1, 90), (2, 31), (4, 12)
+# 71.3  35.3    218     opt wins and losses                 (3, 127), (1, 84), (2, 34), (0, 20)
 # 76.8  40.7    571     opt gamma and min child weight      (4, 69), (2, 68), (6, 59), (3, 59)
 # 73.2  32.7    462     opt upsets                          (4, 71), (2, 71), (3, 61), (6, 58)
-# 68.1  24.4    570     tie breakers removed                (1, 498), (7, 76), (4, 75), (5, 75)
-# 70.4  31.9    727     opt estimators and learning rate    (1, 490), (7, 78), (4, 69), (5, 64)
-# 67.9  24.5    571     opt odds/pred                       (1, 487), (4, 83), (7, 72), (5, 67)
-# 68.5  21.9    477     opt games       0:658  3:244  1:5  2:2
 
+# 68.1  24.4    570     tie breakers removed                (1, 498), (7, 76), (4, 75), (5, 75)
+# 67.9  24.5    571     opt odds/pred                       (1, 487), (4, 83), (7, 72), (5, 67)
 # 69.6  20.8    302     opt sets        0:655  1:254
 # 67.7  19.4    288     opt step/subsample/scale
 # 68.0  17.0    393     opt gamma/mdepth/mchildw            (2, 689), (3, 80), (6, 60), (5, 56)
-# 69.5  22.8    554     opt doors   0:740 1:148
-# 69.4  17.0  389    opt win and loss ('bet_wnl_multi-2', 110)  (2, 675), (3, 87), (6, 61), (5, 52)
 
+# 69.5  22.8    554     opt doors   0:740 1:148
 # 69.9  14.9  550    opt upsets                             (2, 446), (5, 197), (4, 107), (6, 71)
 # 69.9  17.5  743    added games param
-# 71.8  23.2  865    2019-08-16
-# 68.4  7.6   228    added drs_bet, drs_cutoff              (1, 368), (3, 108), (7, 108), (4, 95)
 
+# 71.8  23.2  865    2019-08-16
 # 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
+
 # 66.2  -1.2  -19    hyper updated and cutoffs moved to bet params, bounds within 50
-# 67.4  1.1   15     optimized
 
 # 68.1  7.4   105    optimized
-# 68.8  6.2   75     optimized                              (1, 480), (2, 184), (3, 120)
-
-# 65.7  9.7   335    upsets bet param added
 
 
 DATA = [
@@ -4559,24 +4557,26 @@ DATA = [
 
             # 2019-08-21
             {
-                'round': 32,
+                'round': 16,
                 'players': [
-                    ROBIN_HAASE,
                     JOHN_MILLMAN,
+                    ROBIN_HAASE,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
-                    ROBIN_HAASE: 2.50,
                     JOHN_MILLMAN: 1.52,
+                    ROBIN_HAASE: 2.50,
                 },
                 'prediction': ROBIN_HAASE,
                 'bet': 2,
             },
             {
-                'round': 32,
+                'round': 16,
                 'players': [
                     BENOIT_PAIRE,
                     UGO_HUMBERT,
                 ],
+                'score': [(3, 6), (7, 6), (6, 3)],
                 'odds': {
                     BENOIT_PAIRE: 1.90,
                     UGO_HUMBERT: 1.90,
@@ -4585,14 +4585,15 @@ DATA = [
                 'bet': 2,
             },
             {
-                'round': 32,
+                'round': 16,
                 'players': [
-                    CASPER_RUUD,
                     STEVE_JOHNSON,
+                    CASPER_RUUD,
                 ],
+                'score': [(6, 2), (7, 6)],
                 'odds': {
-                    CASPER_RUUD: 2.80,
                     STEVE_JOHNSON: 1.42,
+                    CASPER_RUUD: 2.80,
                 },
                 'prediction': CASPER_RUUD,
                 'bet': 2,
@@ -4603,6 +4604,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                     LORENZO_SONEGO,
                 ],
+                'score': [(7, 6), (6, 0)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 1.68,
                     LORENZO_SONEGO: 2.15,
@@ -4613,12 +4615,13 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    MIOMIR_KECMANOVIC,
                     DENIS_SHAPOVALOV,
+                    MIOMIR_KECMANOVIC,
                 ],
+                'score': [(6, 2), (6, 3)],
                 'odds': {
-                    MIOMIR_KECMANOVIC: 2.10,
                     DENIS_SHAPOVALOV: 1.70,
+                    MIOMIR_KECMANOVIC: 2.10,
                 },
                 'prediction': MIOMIR_KECMANOVIC,
                 'bet': 2,
@@ -4626,41 +4629,85 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    FELICIANO_LOPEZ,
                     HUBERT_HURKACZ,
+                    FELICIANO_LOPEZ,
                 ],
+                'score': [(6, 3), (3, 1)],
+                'retired': True,
                 'odds': {
-                    FELICIANO_LOPEZ: 2.80,
                     HUBERT_HURKACZ: 1.42,
+                    FELICIANO_LOPEZ: 2.80,
                 },
                 'prediction': HUBERT_HURKACZ,
-                'bet': 2,
+                'bet': 0,  # refunded 2,
             },
             {
-                'round': 32,
+                'round': 16,
                 'players': [
-                    FILIP_KRAJINOVIC,
                     FRANCES_TIAFOE,
+                    FILIP_KRAJINOVIC,
                 ],
+                'score': [(6, 2), (0, 0)],
+                'retired': True,
                 'odds': {
-                    FILIP_KRAJINOVIC: 2.20,
                     FRANCES_TIAFOE: 1.65,
+                    FILIP_KRAJINOVIC: 2.20,
                 },
                 'prediction': FRANCES_TIAFOE,
-                'bet': 8,
+                'bet': 0,  # refunded 8,
             },
             {
                 'round': 32,
                 'players': [
-                    SAM_QUERREY,
                     ANDREY_RUBLEV,
+                    SAM_QUERREY,
                 ],
+                'score': [(7, 6), (7, 6)],
                 'odds': {
-                    SAM_QUERREY: 1.70,
                     ANDREY_RUBLEV: 2.10,
+                    SAM_QUERREY: 1.70,
                 },
                 'prediction': ANDREY_RUBLEV,
                 'bet': 2,
+            },
+
+            # 2019-08-22
+            {
+                'round': 8,
+                'players': [
+                    JOHN_MILLMAN,
+                    STEVE_JOHNSON,
+                ],
+                'odds': {
+                    JOHN_MILLMAN: 2.50,
+                    STEVE_JOHNSON: 1.52,
+                },
+                'prediction': STEVE_JOHNSON,
+                'bet': 2,
+            },
+            {
+                'round': 8,
+                'players': [
+                    ANDREY_RUBLEV,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 1.95,
+                    DENIS_SHAPOVALOV: 1.85,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    FRANCES_TIAFOE,
+                    HUBERT_HURKACZ,
+                ],
+                'odds': {
+                    FRANCES_TIAFOE: 2.00,
+                    HUBERT_HURKACZ: 1.80,
+                },
+                'prediction': FRANCES_TIAFOE,
+                'bet': 4,
             },
 
             #

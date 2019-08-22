@@ -124,20 +124,20 @@ def main(hyper_params, train=0):
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA
 
-    # gamma, max_depth, min_child_weight = hyper_params
-    # max_delta_step, subsample, scale_pos_weight = hyper_params
     # reg_lambda, reg_alpha = hyper_params
     # estimators, learning_rate = hyper_params
     # gamma, min_child_weight = hyper_params
+    # max_depth, max_delta_step = hyper_params
+    # subsample, scale_pos_weight = hyper_params
     reg_params = {
         'n_estimators': int(round(1.2841295131685229 * 100)),   # 3.0757781441149525    # 0.9051461723227451
         'learning_rate': 0.3472250034933531,     # 0.38318976066403954,  # 0.2598862779876376
         'gamma': 0.0009620232968908353,  # 0.028048213377950385,  # 0.1480916400109764,  # 1.0931334779261526,
-        'max_depth': int(round(5.504350192703311)),  # 4.59282984572512)),  # 2.605884221401324)),
+        'max_depth': int(round(2.6177648638879334)),     # 5.504350192703311)),  # 4.59282984572512)),  # 2.605884221401324)),
         'min_child_weight': 0.9643745172377024,  # 7.326173754497638,  # 1.0956345040972018,  # 0.86383038291261,
-        'max_delta_step': 0.18550905863181466,  # 0.5808271528189928,  # 0.19995566873577586,
-        'subsample': 0.838276910827906,  # 0.8792477583008574,  # 0.9922978010805564,
-        'scale_pos_weight': 0.9489016265397816,  # 0.49606238825608306,  # 0.8825017324048802,
+        'max_delta_step': 0.5421241640022615,       # 0.18550905863181466,  # 0.5808271528189928,  # 0.19995566873577586,
+        'subsample': 1,                         # 0.838276910827906,  # 0.8792477583008574,  # 0.9922978010805564,
+        'scale_pos_weight': 0.518193649602282,  # 0.9489016265397816,  # 0.49606238825608306,  # 0.8825017324048802,
         'reg_lambda': 3.7690405921484866,  # 3.2648130839099574,  # 0.7106544893592536,
         'reg_alpha': 3.4166438754657866,  # 1.9485388354932445,  # 0.010303112390348092,
         'colsample_bytree': 0.999790544478916,
@@ -153,25 +153,22 @@ def main(hyper_params, train=0):
     bet_odds_b = 34.207734246228185     # -9.541499990829124
     bet_odds_c = 8.323602184494991      # -2.546800244233854
 
-    # bet_wnl_a, bet_wnl_b, bet_wnl_c = hyper_params
-    bet_wnl_a = -11.565669938287991 # 0.9761688149655727
-    bet_wnl_b = -39.84123646309891  # 1.3400360245124745
-    bet_wnl_c = -4.900945161634794  # -2.1335167369811048
+    # bet_wnl_a, bet_wnl_b = hyper_params
+    bet_wnl_a = 6.370072182738196       #-11.565669938287991 # 0.9761688149655727
+    bet_wnl_b = -1.5568193398609196     # -39.84123646309891  # 1.3400360245124745
+    # bet_wnl_c = -4.900945161634794  # -2.1335167369811048
 
-    # bet_drs_a, bet_drs_b, bet_drs_c = hyper_params
-    bet_drs_a = 0.0876974291704225  # -4.980624329178044  # -21.440152399884028
-    bet_drs_b = 0.09026727794855582  # -4.879994486203875  # 9.162822051826854
-    bet_drs_c = -0.4235464556276341  # -0.16544259209568696  # -15.863824751108206
+    # bet_drs_a, bet_drs_b = hyper_params
+    bet_drs_a = -5.512606284208406  # 0.0876974291704225  # -4.980624329178044  # -21.440152399884028
+    bet_drs_b = -1.5899553334356054  # 0.09026727794855582  # -4.879994486203875  # 9.162822051826854
 
-    # bet_sfc_a, bet_sfc_b, bet_sfc_c = hyper_params
-    bet_sfc_a = 5.034983976648297  # 0.5556170264982178  # 0.6653265485318403
-    bet_sfc_b = -0.5867731523741728  # 1.6008084410296202  # -0.9177815683601153
-    bet_sfc_c = -6.570530766192834  # -0.05668551915818678  # 1.036855102957022
+    # bet_sfc_a, bet_sfc_b = hyper_params
+    bet_sfc_a = 1.6333141987438788      # 5.034983976648297  # 0.5556170264982178  # 0.6653265485318403
+    bet_sfc_b = -1.2662003413643186     # -0.5867731523741728  # 1.6008084410296202  # -0.9177815683601153
 
-    # bet_spd_a, bet_spd_b, bet_spd_c = hyper_params
-    bet_spd_a = -0.29716557168782437  # 3.3990105003184974
-    bet_spd_b = 0.6844247136331222  # -7.193927630039531
-    bet_spd_c = -0.32766876994508726  # -1.9732000152355365
+    # bet_spd_a, bet_spd_b = hyper_params
+    bet_spd_a = 5.673874020818951       # -0.29716557168782437  # 3.3990105003184974
+    bet_spd_b = -1.7829575567634168     # 0.6844247136331222  # -7.193927630039531
 
     # bet_set_a, bet_set_b, bet_set_c = hyper_params
     bet_set_a = 4.975684517502831  # 5.693199788273852
@@ -492,14 +489,20 @@ def main(hyper_params, train=0):
                 bet_multi = 1
 
                 # pred  -1:778  1:113  0:9  -0:9
-                p_pred = max(p1_pred, p2_pred) - min(p1_pred, p2_pred)
+                if p1_pred > p2_pred:
+                    p_pred = p1_pred - p2_pred
+                else:
+                    p_pred = p2_pred - p1_pred
                 bet_pred_multi = np.polyval([bet_pred_a, bet_pred_b, bet_pred_c], [p_pred])[0]
                 bet_pred_multi = min(1, max(-1, bet_pred_multi))
                 bet_multi += bet_pred_multi
                 bet_multis_cat.append(f'bet_pred_multi:{round(bet_pred_multi):.0f}')
 
                 # odds  1:859  -1:50
-                p_odds = max(p1_odds, p2_odds) - min(p1_odds, p2_odds)
+                if p1_pred > p2_pred:
+                    p_odds = p1_odds - p2_odds
+                else:
+                    p_odds = p2_odds - p1_odds                    
                 bet_odds_multi = np.polyval([bet_odds_a, bet_odds_b, bet_odds_c], [p_odds])[0]
                 bet_odds_multi = min(1, max(-1, bet_odds_multi))
                 bet_multi += bet_odds_multi
@@ -510,20 +513,10 @@ def main(hyper_params, train=0):
                     p_wnl = p1_wnl_winrate - p2_wnl_winrate
                 else:
                     p_wnl = p2_wnl_winrate - p1_wnl_winrate
-                bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b, bet_wnl_c], [p_wnl])[0]
-                bet_wnl_multi = int(min(max(round(bet_wnl_multi), 0), 2))
+                bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b], [p_wnl])[0]
+                bet_wnl_multi = min(1, max(-1, bet_wnl_multi))
                 bet_multi += bet_wnl_multi
-                bet_multis_cat.append(f'bet_wnl_multi:{bet_wnl_multi}')
-
-                # doors
-                if p1_pred > p2_pred:
-                    p_drs = p1_doors_winrate - p2_doors_winrate
-                else:
-                    p_drs = p2_doors_winrate - p1_doors_winrate
-                bet_drs_multi = np.polyval([bet_drs_a, bet_drs_b, bet_drs_c], [p_drs])[0]
-                bet_drs_multi = int(min(max(round(bet_drs_multi), 0), 2))
-                bet_multi += bet_drs_multi
-                bet_multis_cat.append(f'bet_drs_multi:{bet_drs_multi}')
+                bet_multis_cat.append(f'bet_wnl_multi:{round(bet_wnl_multi):.0f}')
 
                 # sets
                 if p1_pred > p2_pred:
@@ -553,41 +546,54 @@ def main(hyper_params, train=0):
                 # bet_multis_cat.append(f'bet_tie_multi:{round(bet_tie_multi):.0f}')
 
                 # upsets
-                p_upset = max(p1_upsets_win_avg, p2_upsets_win_avg) - min(p1_upsets_win_avg, p2_upsets_win_avg)
+                if p1_pred > p2_pred:
+                    p_upset = p1_upsets_win_avg - p2_upsets_win_avg
+                else:
+                    p_upset = p2_upsets_win_avg - p1_upsets_win_avg
                 bet_upset_multi = np.polyval([bet_upset_a, bet_upset_b, bet_upset_c], [p_upset])[0]
                 bet_upset_multi = min(1, max(-1, bet_upset_multi))
                 bet_multi += bet_upset_multi
                 bet_multis_cat.append(f'bet_upset_multi:{round(bet_upset_multi):.0f}')
 
-                # surface   0:100%
-                # if p1_pred > p2_pred:
-                #     p_sfc = p1_surface_winrate - p2_surface_winrate
-                # else:
-                #     p_sfc = p2_surface_winrate - p1_surface_winrate
-                # bet_sfc_multi = np.polyval([bet_sfc_a, bet_sfc_b, bet_sfc_c], [p_sfc])[0]
-                # bet_sfc_multi = int(min(max(round(bet_sfc_multi), 0), 2))
-                # bet_multi += bet_sfc_multi
-                # bet_multis_cat.append(f'bet_sfc_multi-{bet_sfc_multi}')
+                # doors  842:44
+                if p1_pred > p2_pred:
+                    p_drs = p1_doors_winrate - p2_doors_winrate
+                else:
+                    p_drs = p2_doors_winrate - p1_doors_winrate
+                bet_drs_multi = np.polyval([bet_drs_a, bet_drs_b], [p_drs])[0]
+                bet_drs_multi = min(1, max(0, bet_drs_multi))
+                bet_multi += bet_drs_multi
+                bet_multis_cat.append(f'bet_drs_multi:{round(bet_drs_multi):.0f}')
 
-                # speed     0:100%
-                # p1_speed = p1_speed_lin.intercept + p1_speed_lin.slope * match_speed
-                # p2_speed = p2_speed_lin.intercept + p2_speed_lin.slope * match_speed
-                # if p1_pred > p2_pred:
-                #     p_spd = p1_speed - p2_speed
-                # else:
-                #     p_spd = p2_speed - p1_speed
-                # bet_spd_multi = np.polyval([bet_spd_a, bet_spd_b, bet_spd_c], [p_spd])[0]
-                # bet_spd_multi = int(min(max(round(bet_spd_multi), 0), 1))
-                # bet_multi += bet_spd_multi
-                # bet_multis_cat.append(f'bet_spd_multi-{bet_spd_multi}')
+                # surface  0:886
+                if p1_pred > p2_pred:
+                    p_sfc = p1_surface_winrate - p2_surface_winrate
+                else:
+                    p_sfc = p2_surface_winrate - p1_surface_winrate
+                bet_sfc_multi = np.polyval([bet_sfc_a, bet_sfc_b], [p_sfc])[0]
+                bet_sfc_multi = min(1, max(0, bet_sfc_multi))
+                bet_multi += bet_sfc_multi
+                bet_multis_cat.append(f'bet_sfc_multi-{round(bet_sfc_multi):.0f}')
+
+                # speed  757:132
+                p1_speed = p1_speed_lin.intercept + p1_speed_lin.slope * match_speed
+                p2_speed = p2_speed_lin.intercept + p2_speed_lin.slope * match_speed
+                if p1_pred > p2_pred:
+                    p_spd = p1_speed - p2_speed
+                else:
+                    p_spd = p2_speed - p1_speed
+                bet_spd_multi = np.polyval([bet_spd_a, bet_spd_b], [p_spd])[0]
+                bet_spd_multi = min(1, max(0, bet_spd_multi))
+                bet_multi += bet_spd_multi
+                bet_multis_cat.append(f'bet_spd_multi-{round(bet_spd_multi):.0f}')
 
                 # no bet if multi is negative  19
                 log_players = f'x{round(bet_multi):.0f} {p1} {match.get("score")} {p2}'
-                if bet_multi <= 0:
+                bet_amt = round(bet_size * bet_multi)
+                if bet_amt < 1:
                     logger.info(f'BAD BET! {log_pred} {log_players} {log_odds} {log_trueskill}')
                     bet_multis_cat.append(f'bet_bad_multi:<=0')
                     continue
-                bet_amt = round(bet_size * bet_multi)
                 bet_amts.append(bet_amt)
                 bet_multis.append(int(round(bet_multi)))
                 ###############################
@@ -731,12 +737,6 @@ def run():
     # 1st serve conversion rate
 
     names = [
-        # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c',
-        # 'bet_drs_a', 'bet_drs_b', 'bet_drs_c',
-        # 'gamma', 'max_depth', 'min_child_weight',
-        # 'bet_sfc_a', 'bet_sfc_b', 'bet_sfc_c',
-        # 'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
-        # 'bet_spd_a', 'bet_spd_b', 'bet_spd_c',
         # 'reg_lambda', 'reg_alpha',  # 1 0
         # 'bet_set_a', 'bet_set_b', 'bet_set_c',
         # 'bet_gms_a', 'bet_gms_b', 'bet_gms_c',
@@ -745,18 +745,24 @@ def run():
         # 'estimators', 'learning_rate'
         # 'bet_tie_a', 'bet_tie_b', 'bet_tie_c',
         # 'bet_upset_a', 'bet_upset_b', 'bet_upset_c',
-        'gamma', 'min_child_weight',    # 0-0-i     -i-1-i
+        # 'gamma', 'min_child_weight',    # 0-0-i     -i-1-i
+        # 'bet_wnl_a', 'bet_wnl_b',
+        # 'max_depth', 'max_delta_step',      # 0-3-i  0-0-i
+        # 'bet_drs_a', 'bet_drs_b',
+        # 'bet_sfc_a', 'bet_sfc_b',
+        # 'subsample', 'scale_pos_weight',  # 0-1-1 0-1-i
+        'bet_spd_a', 'bet_spd_b',
     ]
     params = [
-        0, 1
+        0, 0
     ]
-    bounds = [[0, -np.inf],
-              [np.inf, np.inf]]
+    bounds = [[-np.inf],
+              [np.inf]]
     assert len(params) == len(names)
     # assert len(params) == len(bounds[0])
 
     if train:
-        sigma = .1
+        sigma = 1
         opts = CMAOptions()
         # opts['tolx'] = 1E-2
         opts['bounds'] = bounds
