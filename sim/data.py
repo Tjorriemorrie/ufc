@@ -6959,8 +6959,8 @@ DATA = [
                     GAVIN_TUCKER: 1.90,
                     SEUNGWOO_CHOI: 1.90
                 },
-                'prediction': GAVIN_TUCKER,
-                'bet': 0,
+                'prediction': SEUNGWOO_CHOI,
+                'bet': 20,
             },
             {
                 'weight_class': MENS_FEATHERWEIGHT,

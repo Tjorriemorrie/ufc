@@ -171,7 +171,7 @@ DATA_2019_01 = [
                 'round': 32,
                 'players': [
                     GUIDO_PELLA,
-                    CERN_ILKEL
+                    CEM_ILKEL
                 ],
                 'score': [(7, 6), (6, 3)]
             },

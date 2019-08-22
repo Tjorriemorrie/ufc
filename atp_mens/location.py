@@ -470,6 +470,14 @@ UMAG = {
     'surface': SURFACE_CLAY,
     'speed': 25,
 }
+US_OPEN = {
+    'name': 'US Open',
+    'category': 'ATP2000',
+    'location': 'New York, USA',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 54,
+}
 VIENNA = {
     'name': 'Erste Bank Open 500',
     'category': 'ATP500',
