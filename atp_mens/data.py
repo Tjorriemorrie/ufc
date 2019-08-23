@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 69.3  22.4    264     opt max & drs & sfc & spd           (1, 619), (2, 251), (3, 19)
 # 68.6  16.4    227     opt gamma & mchildw & winloss       (1, 472), (2, 352), (3, 54), (4, 11)
 # 68.6  16.2    238     opt pred & odds & muted estimators  (1, 424), (2, 365), (3, 83), (4, 17)
 # 65.7  17.2    327     opt lambda & tie & ups              (2, 387), (1, 233), (3, 196), (4, 59)
@@ -4722,12 +4723,12 @@ DATA = [
             {
                 'round': 512,
                 'players': [
-                    SALVATORE_CARUSO,
                     LUKAS_ROSOL,
+                    SALVATORE_CARUSO,
                 ],
                 'odds': {
-                    SALVATORE_CARUSO: 1.38,
                     LUKAS_ROSOL: 2.90,
+                    SALVATORE_CARUSO: 1.38,
                 },
                 'prediction': LUKAS_ROSOL,
                 'bet': 6,
@@ -4913,7 +4914,180 @@ DATA = [
                 },
                 'prediction': JAMES_WARD,
                 'bet': 3,
-            }
+            },
+
+            # 2019-08-23
+            {
+                'round': 256,
+                'players': [
+                    ELLIOT_BENCHETRIT,
+                    KIMMER_COPPEJANS,
+                ],
+                'odds': {
+                    ELLIOT_BENCHETRIT: 2.15,
+                    KIMMER_COPPEJANS: 1.65,
+                },
+                'prediction': KIMMER_COPPEJANS,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    TOBIAS_KAMKE,
+                    LUKAS_LACKO,
+                ],
+                'odds': {
+                    TOBIAS_KAMKE: 2.60,
+                    LUKAS_LACKO: 1.46,
+                },
+                'prediction': TOBIAS_KAMKE,
+                'bet': 2,
+            },
+            {
+                'round': 256,
+                'players': [
+                    SOONWOO_KWON,
+                    STEVEN_DIEZ,
+                ],
+                'odds': {
+                    SOONWOO_KWON: 1.26,
+                    STEVEN_DIEZ: 3.60,
+                },
+                'prediction': SOONWOO_KWON,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    SCOTT_TALON_GRIEKSPOOR,
+                    MARCO_TRUNGELLITI,
+                ],
+                'odds': {
+                    SCOTT_TALON_GRIEKSPOOR: 1.44,
+                    MARCO_TRUNGELLITI: 2.70,
+                },
+                'prediction': SCOTT_TALON_GRIEKSPOOR,
+                'bet': 2,
+            },
+            {
+                'round': 256,
+                'players': [
+                    DOMINIK_KOEPFER,
+                    YASUTAKA_UCHIYAMA,
+                ],
+                'odds': {
+                    DOMINIK_KOEPFER: 1.52,
+                    YASUTAKA_UCHIYAMA: 2.40,
+                },
+                'prediction': DOMINIK_KOEPFER,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    PAOLO_LORENZI,
+                    JIRI_VESELY,
+                ],
+                'odds': {
+                    PAOLO_LORENZI: 3.00,
+                    JIRI_VESELY: 1.36,
+                },
+                'prediction': JIRI_VESELY,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    KAMIL_MAJCHRZAK,
+                    ILYA_IVASHKA,
+                ],
+                'odds': {
+                    KAMIL_MAJCHRZAK: 2.10,
+                    ILYA_IVASHKA: 1.68,
+                },
+                'prediction': ILYA_IVASHKA,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    JOAO_MENEZES,
+                    SUMIT_NAGAL,
+                ],
+                'odds': {
+                    JOAO_MENEZES: 1.50,
+                    SUMIT_NAGAL: 2.50,
+                },
+                'prediction': JOAO_MENEZES,
+                'bet': 3,
+            },
+            {
+                'round': 256,
+                'players': [
+                    LUKAS_ROSOL,
+                    EGOR_GERASIMOV,
+                ],
+                'odds': {
+                    LUKAS_ROSOL: 2.15,
+                    EGOR_GERASIMOV: 1.65,
+                },
+                'prediction': EGOR_GERASIMOV,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    MIKAEL_YMER,
+                    HYEON_CHUNG,
+                ],
+                'odds': {
+                    MIKAEL_YMER: 3.00,
+                    HYEON_CHUNG: 1.36,
+                },
+                'prediction': HYEON_CHUNG,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    DARIAN_KING,
+                    EVGENY_DONSKOY,
+                ],
+                'odds': {
+                    DARIAN_KING: 2.25,
+                    EVGENY_DONSKOY: 1.60,
+                },
+                'prediction': EVGENY_DONSKOY,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    CONSTANT_LESTIENNE,
+                    GUILLERMO_GARCIA_LOPEZ,
+                ],
+                'odds': {
+                    CONSTANT_LESTIENNE: 1.87,
+                    GUILLERMO_GARCIA_LOPEZ: 1.87,
+                },
+                'prediction': CONSTANT_LESTIENNE,
+                'bet': 1,
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARIO_VILELLA_MARTINEZ,
+                    JANNIK_SINNER,
+                ],
+                'odds': {
+                    MARIO_VILELLA_MARTINEZ: 2.80,
+                    JANNIK_SINNER: 1.40,
+                },
+                'prediction': MARIO_VILELLA_MARTINEZ,
+                'bet': 2,
+            },
+
+            #
         ]
     }
 ]
