@@ -2,24 +2,23 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 68.6  16.4    227     opt gamma & mchildw & winloss       (1, 472), (2, 352), (3, 54), (4, 11)
+# 68.6  16.2    238     opt pred & odds & muted estimators  (1, 424), (2, 365), (3, 83), (4, 17)
+# 65.7  17.2    327     opt lambda & tie & ups              (2, 387), (1, 233), (3, 196), (4, 59)
+# 69.2  15.2    234     removed negative mutli gearing      (1, 402), (2, 357), (3, 99), (4, 26)
+# 94.6  50.0    64      opt sets & games                    (1, 41), (2, 24), (3, 6), (4, 5)
 # 77.5  39.6    259     opt speed                           (1, 92), (3, 87), (2, 54), (4, 33)
+
 # 73.5  40.6    254     opt surface                         (3, 94), (1, 88), (2, 37), (4, 32)
-# 73.5  40.6    254     opt outdoors                        (3, 94), (1, 88), (2, 37), (4, 32)
 # 73    39.9    234     opt max depth & mdeltastep          (3, 115), (1, 90), (2, 31), (4, 12)
-# 71.3  35.3    218     opt wins and losses                 (3, 127), (1, 84), (2, 34), (0, 20)
 # 76.8  40.7    571     opt gamma and min child weight      (4, 69), (2, 68), (6, 59), (3, 59)
-# 73.2  32.7    462     opt upsets                          (4, 71), (2, 71), (3, 61), (6, 58)
-
 # 68.1  24.4    570     tie breakers removed                (1, 498), (7, 76), (4, 75), (5, 75)
+
 # 67.9  24.5    571     opt odds/pred                       (1, 487), (4, 83), (7, 72), (5, 67)
-# 69.6  20.8    302     opt sets        0:655  1:254
 # 67.7  19.4    288     opt step/subsample/scale
-# 68.0  17.0    393     opt gamma/mdepth/mchildw            (2, 689), (3, 80), (6, 60), (5, 56)
-
 # 69.5  22.8    554     opt doors   0:740 1:148
-# 69.9  14.9  550    opt upsets                             (2, 446), (5, 197), (4, 107), (6, 71)
-# 69.9  17.5  743    added games param
 
+# 69.9  14.9  550    opt upsets                             (2, 446), (5, 197), (4, 107), (6, 71)
 # 71.8  23.2  865    2019-08-16
 # 68.9  4.7   45     opt learning_rate, gamma, max_depth, min_child_weight  (1, 784)
 
