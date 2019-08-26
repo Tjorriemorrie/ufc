@@ -278,6 +278,14 @@ MARSEILLE = {
     'surface': SURFACE_HARD,
     'speed': 75,
 }
+METZ = {
+    'name': 'Moselle Open',
+    'category': 'ATP250',
+    'location': 'Metz, France',
+    'outdoor': INDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 72,
+}
 MIAMI = {
     'name': 'Miami Open presented by Itau',
     'category': 'ATP1000',

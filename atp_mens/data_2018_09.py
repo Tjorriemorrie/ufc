@@ -4,6 +4,488 @@ from location import *
 
 DATA_2018_09 = [
     {
+        'location': METZ,
+        'date': '2018-09-23',
+        'matches': [
+
+            # 2018-09-16
+            {
+                'round': 512,
+                'players': [
+                    KENNY_DE_SCHEPPER,
+                    DUSTIN_BROWN,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    KENNY_DE_SCHEPPER: 1.67,
+                    DUSTIN_BROWN: 1.95,
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CONSTANT_LESTIENNE,
+                    BORIS_FASSBENDER,
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    CONSTANT_LESTIENNE: 1.04,
+                    BORIS_FASSBENDER: 8.50,
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATS_MORAING,
+                    TOBIAS_KAMKE,
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    MATS_MORAING: 1.87,
+                    TOBIAS_KAMKE: 1.77
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    NORBERT_GOMBOS,
+                ],
+                'score': [(7, 6), (6, 7), (6, 3)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.80,
+                    NORBERT_GOMBOS: 1.74
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GREGOIRE_BARRERE,
+                    ARTHUR_RINDERKNECH,
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    GREGOIRE_BARRERE: 1.25,
+                    ARTHUR_RINDERKNECH: 3.45
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MAXIME_JANVIER,
+                    SERGIY_STAKHOVSKY,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MAXIME_JANVIER: 2.00,
+                    SERGIY_STAKHOVSKY: 1.65
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BERNARD_TOMIC,
+                    ANTE_PAVIC,
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    BERNARD_TOMIC: 1.19,
+                    ANTE_PAVIC: 3.95
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YANNICK_MADEN,
+                    OSCAR_OTTE,
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    YANNICK_MADEN: 1.53,
+                    OSCAR_OTTE: 2.35,
+                }
+            },
+
+            # 2018-09-17
+            {
+                'round': 256,
+                'players': [
+                    CONSTANT_LESTIENNE,
+                    MAXIME_JANVIER,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    CONSTANT_LESTIENNE: 1.61,
+                    MAXIME_JANVIER: 2.10
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    KENNY_DE_SCHEPPER,
+                    GREGOIRE_BARRERE,
+                ],
+                'score': [(7, 6), (6, 7), (7, 6)],
+                'odds': {
+                    KENNY_DE_SCHEPPER: 1.70,
+                    GREGOIRE_BARRERE: 1.95
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    BERNARD_TOMIC,
+                    MATS_MORAING,
+                ],
+                'score': [(7, 6), (3, 6), (6, 3)],
+                'odds': {
+                    BERNARD_TOMIC: 1.50,
+                    MATS_MORAING: 2.40
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    YANNICK_MADEN,
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 2.15,
+                    YANNICK_MADEN: 1.57
+                }
+            },
+
+            # 2018-09-18
+            {
+                'round': 32,
+                'players': [
+                    CONSTANT_LESTIENNE,
+                    JURGEN_ZOPP,
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    CONSTANT_LESTIENNE: 1.43,
+                    JURGEN_ZOPP: 2.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    UGO_HUMBERT,
+                    BERNARD_TOMIC,
+                ],
+                'score': [(6, 7), (6, 3), (6, 4)],
+                'odds': {
+                    UGO_HUMBERT: 1.88,
+                    BERNARD_TOMIC: 1.67
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PETER_GOJOWCZYK,
+                    JO_WILFRIED_TSONGA,
+                ],
+                'score': [(6, 7), (6, 3), (6, 4)],
+                'odds': {
+                    PETER_GOJOWCZYK: 1.69,
+                    JO_WILFRIED_TSONGA: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    JAUME_MUNAR,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.74,
+                    JAUME_MUNAR: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RADU_ALBOT,
+                    PIERRE_HUGUES_HERBERT,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    RADU_ALBOT: 2.18,
+                    PIERRE_HUGUES_HERBERT: 1.61
+                }
+            },
+
+            # 2018-09-19
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
+                    JIRI_VESELY,
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    GILLES_SIMON: 1.28,
+                    JIRI_VESELY: 3.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    QUENTIN_HALYS,
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    BENOIT_PAIRE: 1.36,
+                    QUENTIN_HALYS: 3.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    CORENTIN_MOUTET,
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.60,
+                    CORENTIN_MOUTET: 2.20,
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    ADRIAN_MANNARINO,
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.77,
+                    ADRIAN_MANNARINO: 1.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    KENNY_DE_SCHEPPER,
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.71,
+                    KENNY_DE_SCHEPPER: 2.05
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    GREGOIRE_BARRERE,
+                ],
+                'score': [(6, 0), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICHARD_GASQUET,
+                    CONSTANT_LESTIENNE,
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    RICHARD_GASQUET: 1.27,
+                    CONSTANT_LESTIENNE: 3.55
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KEI_NISHIKORI,
+                    PETER_GOJOWCZYK,
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    KEI_NISHIKORI: 1.28,
+                    PETER_GOJOWCZYK: 3.55
+                }
+            },
+
+            # 2018-09-20
+            {
+                'round': 32,
+                'players': [
+                    YANNICK_MADEN,
+                    MISCHA_ZVEREV,
+                ],
+                'score': [(7, 5), (4, 6), (6, 1)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    MAXIMILIAN_MARTERER,
+                ],
+                'score': [(7, 6), (6, 7), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    YANNICK_MADEN,
+                    BENOIT_PAIRE,
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    YANNICK_MADEN: 3.15,
+                    BENOIT_PAIRE: 1.34
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RADU_ALBOT,
+                    MARTON_FUCSOVICS,
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    RADU_ALBOT: 3.20,
+                    MARTON_FUCSOVICS: 1.33
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GILLES_SIMON,
+                    FILIP_KRAJINOVIC,
+                ],
+                'score': [(4, 6), (7, 5), (7, 5)],
+                'odds': {
+                    GILLES_SIMON: 1.64,
+                    FILIP_KRAJINOVIC: 2.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    UGO_HUMBERT,
+                ],
+                'score': [(6, 7), (7, 6), (6, 3)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.64,
+                    UGO_HUMBERT: 2.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'score': [(6, 7), (7, 6), (6, 3)],
+                'odds': {
+                    RICARDAS_BERANKIS: 3.25,
+                    STEFANOS_TSITSIPAS: 1.28
+                }
+            },
+
+            # 2018-09-21
+            {
+                'round': 8,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    YANNICK_MADEN,
+                ],
+                'score': [(6, 3), (2, 6), (6, 4)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.88,
+                    YANNICK_MADEN: 1.77
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RADU_ALBOT,
+                    RICARDAS_BERANKIS,
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    RADU_ALBOT: 1.95,
+                    RICARDAS_BERANKIS: 1.77
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    GILLES_SIMON,
+                    RICHARD_GASQUET,
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    GILLES_SIMON: 2.35,
+                    RICHARD_GASQUET: 1.57
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    KEI_NISHIKORI,
+                    NIKOLOZ_BASILASHVILI,
+                ],
+                'score': [(6, 3), (4, 6), (6, 4)],
+                'odds': {
+                    KEI_NISHIKORI: 1.22,
+                    NIKOLOZ_BASILASHVILI: 4.35
+                }
+            },
+
+            # 2018-09-22
+            {
+                'round': 4,
+                'players': [
+                    GILLES_SIMON,
+                    RADU_ALBOT,
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    GILLES_SIMON: 1.35,
+                    RADU_ALBOT: 3.10
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    KEI_NISHIKORI,
+                ],
+                'score': [(2, 6), (6, 4), (7, 5)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 5.50,
+                    KEI_NISHIKORI: 1.14
+                }
+            },
+
+            #
+            {
+                'round': 2,
+                'players': [
+                    GILLES_SIMON,
+                    MATTHIAS_BACHINGER,
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    GILLES_SIMON: 1.27,
+                    MATTHIAS_BACHINGER: 3.55
+                }
+            },
+        ]
+    },
+
+    {
         'location': CHENGDU,
         'date': '2018-09-30',
         'matches': [
