@@ -4,6 +4,483 @@ from location import *
 
 DATA_2018_09 = [
     {
+        'location': ST_PETERSBURG,
+        'date': '2018-09-23',
+        'matches': [
+
+            # 2018-09-16
+            {
+                'round': 512,
+                'players': [
+                    ULADZIMIR_IGNATIK,
+                    ALEXEY_VATUTIN,
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    ULADZIMIR_IGNATIK: 2.10,
+                    ALEXEY_VATUTIN: 1.57
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LUCA_VANNI,
+                    DANIEL_BRANDS,
+                ],
+                'score': [(6, 4), (4, 6), (7, 5)],
+                'odds': {
+                    LUCA_VANNI: 2.35,
+                    DANIEL_BRANDS: 1.53
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    EVGENII_TIURNEV,
+                    STEPHANE_ROBERT,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    EVGENII_TIURNEV: 2.30,
+                    STEPHANE_ROBERT: 1.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    IVAN_NEDELKO,
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 1.12,
+                    IVAN_NEDELKO: 5.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LUCAS_MIEDLER,
+                    VIKTOR_TROICKI,
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    LUCAS_MIEDLER: 2.25,
+                    VIKTOR_TROICKI: 1.53
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RUBEN_BEMELMANS,
+                    EGOR_GERASIMOV,
+                ],
+                'score': [(6, 2), (4, 6), (7, 6)],
+                'odds': {
+                    RUBEN_BEMELMANS: 1.53,
+                    EGOR_GERASIMOV: 2.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ILYA_IVASHKA,
+                    EVGENY_KARLOVSKIY,
+                ],
+                'score': [(2, 6), (7, 6), (6, 4)],
+                'odds': {
+                    ILYA_IVASHKA: 1.36,
+                    EVGENY_KARLOVSKIY: 2.75
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ROMAN_SAFIULLIN,
+                    LORENZO_SONEGO,
+                ],
+                'score': [(3, 6), (6, 4), (7, 5)],
+                'odds': {
+                    ROMAN_SAFIULLIN: 3.15,
+                    LORENZO_SONEGO: 1.29
+                }
+            },
+
+            # 2018-09-17
+            {
+                'round': 256,
+                'players': [
+                    LUCAS_MIEDLER,
+                    ULADZIMIR_IGNATIK,
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    LUCAS_MIEDLER: 1.95,
+                    ULADZIMIR_IGNATIK: 1.54
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    LUCA_VANNI,
+                    ROMAN_SAFIULLIN,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    LUCA_VANNI: 1.62,
+                    ROMAN_SAFIULLIN: 2.10
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    RUBEN_BEMELMANS,
+                ],
+                'score': [(4, 6), (6, 2), (6, 3)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 2.40,
+                    RUBEN_BEMELMANS: 1.45
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ILYA_IVASHKA,
+                    EVGENII_TIURNEV,
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    ILYA_IVASHKA: 1.20,
+                    EVGENII_TIURNEV: 4.00
+                }
+            },
+
+            # 2018-09-18
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    ANDREY_RUBLEV,
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 2.10,
+                    ANDREY_RUBLEV: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LUKAS_LACKO,
+                    RUBEN_BEMELMANS,
+                ],
+                'score': [(6, 2), (4, 6), (7, 5)],
+                'odds': {
+                    LUKAS_LACKO: 2.45,
+                    RUBEN_BEMELMANS: 1.56
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    GUILLERMO_GARCIA_LOPEZ,
+                ],
+                'score': [(7, 6), (2, 6), (6, 3)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.50,
+                    GUILLERMO_GARCIA_LOPEZ: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    JOAO_SOUSA,
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.63,
+                    JOAO_SOUSA: 2.20
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    LUCAS_MIEDLER,
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.36,
+                    LUCAS_MIEDLER: 3.10
+                }
+            },
+
+            # 2018-09-19
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_YOUZHNY,
+                    MIRZA_BASIC,
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    MIKHAIL_YOUZHNY: 1.63,
+                    MIRZA_BASIC: 2.15
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STAN_WAWRINKA,
+                    ALJAZ_BEDENE,
+                ],
+                'score': [(7, 5), (7, 6)]
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_PELLA,
+                    ILYA_IVASHKA,
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)],
+                'odds': {
+                    GUIDO_PELLA: 2.10,
+                    ILYA_IVASHKA: 1.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    DENIS_ISTOMIN,
+                ],
+                'score': [(7, 5), (2, 4)],
+                'retired': True,
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.60,
+                    DENIS_ISTOMIN: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTIN_KLIZAN,
+                    EVGENY_DONSKOY,
+                ],
+                'score': [(6, 4), (6, 4)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.14,
+                    ADRIAN_MENENDEZ_MACEIRAS: 5.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    LUCA_VANNI,
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.16,
+                    LUCA_VANNI: 5.15
+                }
+            },
+
+            # 2018-09-20
+            {
+                'round': 16,
+                'players': [
+                    DANILL_MEDVEDEV,
+                    MIKHAIL_KUKUSHKIN,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    DANILL_MEDVEDEV: 1.44,
+                    MIKHAIL_KUKUSHKIN: 2.75
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    MATTEO_BERRETTINI,
+                ],
+                'score': [(7, 6), (4, 6), (6, 0)]
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    GUIDO_PELLA,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.61,
+                    GUIDO_PELLA: 2.10
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    MIKHAIL_YOUZHNY
+                ],
+                'score': [(7, 6), (3, 6), (6, 3)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.18,
+                    MIKHAIL_YOUZHNY: 4.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STAN_WAWRINKA,
+                    KAREN_KHACHANOV,
+                ],
+                'score': [(7, 6), (7, 6)]
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCO_CECCHINATO,
+                    LUKAS_LACKO,
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    MARCO_CECCHINATO: 2.20,
+                    LUKAS_LACKO: 1.64
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARTIN_KLIZAN,
+                    FABIO_FOGNINI,
+                ],
+                'score': [(6, 3), (6, 4)]
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    DOMINIC_THIEM,
+                    JAN_LENNARD_STRUFF,
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    DOMINIC_THIEM: 1.38,
+                    JAN_LENNARD_STRUFF: 2.90
+                }
+            },
+
+            # 2018-09-21
+            {
+                'round': 8,
+                'players': [
+                    MARTIN_KLIZAN,
+                    DENIS_SHAPOVALOV,
+                ],
+                'score': [(3, 6), (7, 5), (6, 3)],
+                'odds': {
+                    MARTIN_KLIZAN: 2.45,
+                    DENIS_SHAPOVALOV: 1.48
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    STAN_WAWRINKA,
+                    DAMIR_DZUMHUR,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    STAN_WAWRINKA: 1.44,
+                    DAMIR_DZUMHUR: 2.70
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    MARCO_CECCHINATO,
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.27,
+                    MARCO_CECCHINATO: 3.74
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DOMINIC_THIEM,
+                    DANILL_MEDVEDEV,
+                ],
+                'score': [(6, 2), (3, 6), (7, 6)],
+                'odds': {
+                    DOMINIC_THIEM: 1.54,
+                    DANILL_MEDVEDEV: 2.30
+                }
+            },
+
+            # 2018-09-22
+            {
+                'round': 4,
+                'players': [
+                    MARTIN_KLIZAN,
+                    STAN_WAWRINKA,
+                ],
+                'score': [(4, 6), (6, 3), (7, 5)],
+                'odds': {
+                    MARTIN_KLIZAN: 2.75,
+                    STAN_WAWRINKA: 1.42
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    DOMINIC_THIEM,
+                    ROBERTO_BAUTISTA_AGUT,
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    DOMINIC_THIEM: 1.52,
+                    ROBERTO_BAUTISTA_AGUT: 2.45
+                }
+            },
+
+            # 2018-09-23
+            {
+                'round': 2,
+                'players': [
+                    DOMINIC_THIEM,
+                    MARTIN_KLIZAN,
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    DOMINIC_THIEM: 1.36,
+                    MARTIN_KLIZAN: 3.10
+                }
+            }
+        ]
+    },
+
+    {
         'location': METZ,
         'date': '2018-09-23',
         'matches': [

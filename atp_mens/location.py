@@ -438,6 +438,14 @@ SOFIA = {
     'surface': SURFACE_HARD,
     'speed': 69,
 }
+ST_PETERSBURG = {
+    'name': 'St. Petersburg Open',
+    'category': 'ATP250',
+    'location': 'St. Petersburg, Russia',
+    'outdoor': INDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 55,
+}
 STOCKHOLM = {
     'name': 'Intrum Stockholm Open',
     'category': 'ATP250',

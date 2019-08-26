@@ -2,14 +2,14 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 68.6  26.2    459     sst petersburg 2018                 (2, 436), (1, 385), (3, 127), (4, 28)
 # 66.7  26.2    442     opt upd and ties                    (2, 415), (1, 379), (3, 127), (4, 23)
 # 66.7  36.5    703     opt set & gms                       (1, 439), (2, 200), (3, 192), (4, 70)
 # 66.7  35.9    698     opt drs & sfc & spd                 (1, 432), (2, 197), (3, 192), (4, 87)
 # 66.7  35.3    967     opt pred & odds & wnl               (1, 398), (3, 175), (4, 148), (6, 59)
 # 65.6  26.2    822     opt tie and upsets                  (3, 299), (1, 201), (5, 112), (2, 94)
-# 65.4  21.4    676     opt speed & sets & games            (3, 252), (1, 206), (5, 175), (2, 90)
-# 65.4  20.7    610     opt outdoors and surface            (3, 264), (1, 213), (5, 184), (2, 97)
 
+# 65.4  21.4    676     opt speed & sets & games            (3, 252), (1, 206), (5, 175), (2, 90)
 # 65.4  20.6    551     opt win losses                      (3, 277), (1, 249), (5, 185), (2, 103)
 # 61.8  15.0    228     opt estimators/gamma & pred & odds  (1, 600), (3, 253), (4, 32), (2, 17)
 # 69.0  30.8    383     opt subsample * lr & set & gms      (1, 589), (2, 287), (3, 25), (4, 1)
