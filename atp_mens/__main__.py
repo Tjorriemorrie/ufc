@@ -168,15 +168,11 @@ def main(hyper_params, train=0):
     bet_gms_a = -3.609425158741926   # -4.11    # -7.595500659696808  # -0.09150815566456832
     bet_gms_b = -53.424625099684064  # 0.40  # 11.477758336728444  # -6.762735375844737
 
-    # bet_tie_a, bet_tie_b, bet_tie_c = hyper_params
-    bet_tie_a = 29.1669440115038      # 57.50193827879752   # -2.883405239397985      # 0.4172972634262
-    bet_tie_b = -81.77144118048908    # 104.97860195306609  # 0.46135229384319754     # -0.09979683170330936    # -1.1307830521851296
-    bet_tie_c = -0.07910277688233368  # 0.07513909011908997
-
-    # bet_ups_a, bet_ups_b, bet_ups_c = hyper_params
-    bet_ups_a = 3.7797034883125975   # 30.354441474757888  # -15.3330836557841
-    bet_ups_b = 8.947528153923809    # 43.594727875509385  # -4.5704529715566675
-    bet_ups_c = -1.9136698321952568  # -38.93875470372037
+    # bet_tie_a, bet_tie_b, bet_ups_a, bet_ups_b = hyper_params
+    bet_tie_a = 6.567282919522458    # 29.16      # 57.50193827879752   # -2.883405239397985      # 0.4172972634262
+    bet_tie_b = 0.49068927011783753  # -81.77    # 104.97860195306609  # 0.46135229384319754     # -0.09979683170330936
+    bet_ups_a = 6.065608099428523    # 3.77   # 30.354441474757888  # -15.3330836557841
+    bet_ups_b = -1.1235452608356777  # 8.94    # 43.594727875509385  # -4.5704529715566675
 
     # init
     reg = None
@@ -563,20 +559,20 @@ def main(hyper_params, train=0):
                     p_tie = p1_ties_winrate - p2_ties_winrate
                 else:
                     p_tie = p2_ties_winrate - p2_ties_winrate
-                bet_tie_multi = np.polyval([bet_tie_a, bet_tie_b, bet_tie_c], [p_tie])[0]
-                bet_tie_multi = min(2, max(0, bet_tie_multi))
+                bet_tie_multi = np.polyval([bet_tie_a, bet_tie_b], [p_tie])[0]
+                bet_tie_multi = round(min(1, max(0, bet_tie_multi)))
                 bet_multi += bet_tie_multi
-                bet_multis_cat.append(f'tie:{round(bet_tie_multi):.0f}')
+                bet_multis_cat.append(f'tie:{bet_tie_multi:.0f}')
 
                 # upsets   840:50:16
                 if p1_pred > p2_pred:
                     p_upset = p1_upsets_win_avg - p2_upsets_win_avg
                 else:
                     p_upset = p2_upsets_win_avg - p1_upsets_win_avg
-                bet_ups_multi = np.polyval([bet_ups_a, bet_ups_b, bet_ups_c], [p_upset])[0]
-                bet_ups_multi = min(2, max(0, bet_ups_multi))
+                bet_ups_multi = np.polyval([bet_ups_a, bet_ups_b], [p_upset])[0]
+                bet_ups_multi = round(min(1, max(0, bet_ups_multi)))
                 bet_multi += bet_ups_multi
-                bet_multis_cat.append(f'ups:{round(bet_ups_multi):.0f}')
+                bet_multis_cat.append(f'ups:{bet_ups_multi:.0f}')
 
                 log_players = f'x{round(bet_multi):.0f} {p1} {match.get("score")} {p2}'
                 bet_amt = round(bet_size * bet_multi)
@@ -596,7 +592,7 @@ def main(hyper_params, train=0):
                         pw = p2
                         predl = p1_pred
                         pl = p1
-                        logger.warning(f'[{predw*100:.0f}% vs {predl*100:.0f}%] Bet x{round(bet_multi):.0f} on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.warning(f'[{predw*100:.0f}% vs {predl*100:.0f}%] Bet x{round(bet_multi):.0f} on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # prediction bet on
@@ -721,11 +717,10 @@ def run():
     train = 0
 
     names = [
-        # 'bet_tie_a', 'bet_tie_b', 'bet_tie_c',
-        # 'bet_ups_a', 'bet_ups_b', 'bet_ups_c',
         # 'pred_a', 'pred_b', 'odds_a', 'odds_b', 'bet_wnl_a', 'bet_wnl_b',
         # 'bet_drs_a', 'bet_drs_b', 'bet_sfc_a', 'bet_sfc_b', 'bet_spd_a', 'bet_spd_b',
-        'bet_set_a', 'bet_set_b', 'bet_gms_a', 'bet_gms_b',
+        # 'bet_set_a', 'bet_set_b', 'bet_gms_a', 'bet_gms_b',
+        'bet_tie_a', 'bet_tie_b', 'bet_ups_a', 'bet_ups_b',
     ]
     params = [
         0, 0, 0, 0,
