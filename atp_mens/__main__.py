@@ -484,9 +484,9 @@ def main(hyper_params, train=0):
 
                 # odds  695:247
                 if p1_pred > p2_pred:
-                    p_odds = p1_odds - p2_odds
+                    p_odds = 1 / p1_odds - 1 / p2_odds
                 else:
-                    p_odds = p2_odds - p1_odds                    
+                    p_odds = 1 / p2_odds - 1 / p1_odds
                 bet_odds_multi = np.polyval([bet_odds_a, bet_odds_b], [p_odds])[0]
                 bet_odds_multi = round(min(1, max(0, bet_odds_multi)))
                 bet_multi += bet_odds_multi

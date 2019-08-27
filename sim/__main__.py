@@ -4,10 +4,11 @@ from itertools import chain
 from random import random
 
 import numpy as np
-from cma import CMAEvolutionStrategy
+from cma import CMAEvolutionStrategy, CMAOptions
 from loguru import logger
 from math import sqrt
 from sklearn.preprocessing import MinMaxScaler
+from sortedcontainers import SortedDict
 from trueskill import BETA, global_env, rate_1vs1, Rating
 from xgboost import XGBRegressor
 
@@ -65,34 +66,36 @@ def main(hyper_params, train=0):
     # gamma, max_depth, min_child_weight = hyper_params
     # max_delta_step, subsample, scale_pos_weight = hyper_params
     reg_params = {
-        'n_estimators': int(round(2.1418721633783804 * 100)),  # 0.8844565933947343
-        'learning_rate': 0.09426181829690375,  # 0.24678854038938264
-        'gamma': 0.1860088097748791,  # 0.0012826703538762253,
-        'max_depth': int(round(2.1956102758009424)),  # 2.5506573766936533)),
-        'min_child_weight': 3.5802932556001426,
-        'max_delta_step': 0.10779250505931337,
-        'subsample': 0.9859889452465481,
-        'scale_pos_weight': 1.2283288967549404,
+        'n_estimators': 100 if train else 1000,
+        # 'learning_rate': 0.09426181829690375,  # 0.24678854038938264
+        # 'gamma': 0.1860088097748791,  # 0.0012826703538762253,
+        # 'max_depth': int(round(2.1956102758009424)),  # 2.5506573766936533)),
+        # 'min_child_weight': 3.5802932556001426,
+        # 'max_delta_step': 0.10779250505931337,
+        # 'subsample': 0.9859889452465481,
+        # 'scale_pos_weight': 1.2283288967549404,
     }
 
-    # bet_wnl_a, bet_wnl_b, bet_wnl_c, wnl_cutoff = hyper_params
-    bet_wnl_a = -8.012210880048535
-    bet_wnl_b = 2.5088843631312976
-    bet_wnl_c = 7.9520665992548185
-    wnl_cutoff = int(round(11.139996105926942 * 10))
+    # bet_pred_a, bet_pred_b, bet_odds_a, bet_odds_b, bet_wnl_a, bet_wnl_b = hyper_params
+    bet_pred_a = 1.713980438805089   # -3.55
+    bet_pred_b = -4.065137791049565  # -17.93
+    bet_odds_a = 3.122323263774503   # -12.44
+    bet_odds_b = 0.0837110561236318  # -16.17
+    bet_wnl_a = 15.100288654913749   # -3.52   # -8.01
+    bet_wnl_b = -10.111913271763338  # -4.96    # 2.50
 
-    # bet_pred_a, bet_pred_b, bet_pred_c, bet_odds_a, bet_odds_b, bet_odds_c = hyper_params
-    bet_pred_a = -3.5593760484773904
-    bet_pred_b = -17.93424439517361
-    bet_pred_c = -2.7073747762723555
-    bet_odds_a = -12.444287120215446
-    bet_odds_b = -16.179599063909983
-    bet_odds_c = 3.8586041364734887
-
+    # bet_ts_a, bet_ts_b, bet_tmi_a, bet_tmi_b, bet_tma_a, bet_tma_b = hyper_params
+    bet_ts_a = -50.59979897765422  # -26.88   # -3.52   # -8.01
+    bet_ts_b = -69.5794588139756   # -72.60   # -3.52   # -8.01
+    bet_tmi_a = -45.94904856923797
+    bet_tmi_b = -1.128236337281963
+    bet_tma_a = -28.62283185173976
+    bet_tma_b = -26.933801584409544
+    
     # init
     reg = None
     scaler = MinMaxScaler()
-    cutoff = int(len(all_data) * 0.7)
+    cutoff = int(len(all_data) * 0.6)
     start_date = None
     ratings = defaultdict(lambda: Rating())
     wins_losses = defaultdict(lambda: [])
@@ -111,6 +114,7 @@ def main(hyper_params, train=0):
     bet_multis = []
     bet_multis_cat = []
     preds_flipped = []
+    odds_outcomes = []
 
     # loop through scenes
     for i, scene in enumerate(all_data):
@@ -131,13 +135,20 @@ def main(hyper_params, train=0):
             if 'odds' not in fight:
                 continue
 
-            # add noise (skip 20% during training)
-            if not is_training and train and random() > 0.90:
-                continue
-
             f1 = fight['fighters'][0]['name']
             f2 = fight['fighters'][1]['name']
 
+            # trueskill data
+            f1_ts = ratings[f1].mu
+            f1_sigma = ratings[f1].sigma
+            f2_ts = ratings[f2].mu
+            f2_sigma = ratings[f2].sigma
+            f1_ts_min = f1_ts - f1_sigma * 2
+            f2_ts_min = f2_ts - f2_sigma * 2
+            f1_ts_max = f1_ts + f1_sigma * 2
+            f2_ts_max = f2_ts + f2_sigma * 2
+
+            # odds data
             f1_odds = fight['odds'][f1]
             f2_odds = fight['odds'][f2]
             if not -50 < f1_odds < 50 or not -50 < f2_odds < 50:
@@ -146,7 +157,7 @@ def main(hyper_params, train=0):
             win1_prob = win_probability([ratings[f1]], [ratings[f2]])
             win2_prob = win_probability([ratings[f2]], [ratings[f1]])
 
-            # wins losses
+            # wins losses data
             f1_wins_losses = Counter(wins_losses[f1])
             f1_wnl_winrate = f1_wins_losses[1] / max(1, len(wins_losses[f1]))
             f2_wins_losses = Counter(wins_losses[f2])
@@ -157,10 +168,13 @@ def main(hyper_params, train=0):
                     win1_prob,
                     f1_odds,
                     f2_odds,
-                    ratings[f1].mu,
-                    ratings[f2].mu,
-                    ratings[f1].sigma,
-                    ratings[f2].sigma,
+                    f1_ts,
+                    f2_ts,
+                    f1_sigma,
+                    f2_sigma,
+                    f1_ts_min - f2_ts_min,
+                    f1_ts - f2_ts,
+                    f1_ts_max - f2_ts_max,
                     last_fights[f1],
                     last_fights[f2],
                     early_fights[f1],
@@ -176,10 +190,13 @@ def main(hyper_params, train=0):
                     win2_prob,
                     f2_odds,
                     f1_odds,
-                    ratings[f2].mu,
-                    ratings[f1].mu,
-                    ratings[f2].sigma,
-                    ratings[f1].sigma,
+                    f2_ts,
+                    f1_ts,
+                    f2_sigma,
+                    f1_sigma,
+                    f2_ts_min - f1_ts_min,
+                    f2_ts - f1_ts,
+                    f2_ts_max - f1_ts_max,
                     last_fights[f2],
                     last_fights[f1],
                     early_fights[f2],
@@ -205,8 +222,8 @@ def main(hyper_params, train=0):
                 drawn = fw is None
 
                 # update wins losses
-                wins_losses[f1] = wins_losses[f1][-wnl_cutoff:] + [1]
-                wins_losses[f2] = wins_losses[f2][-wnl_cutoff:] + [-1]
+                wins_losses[f1] += [1]
+                wins_losses[f2] += [-1]
 
                 # update fights
                 early_fights[fw] = last_fights[fw]
@@ -228,53 +245,91 @@ def main(hyper_params, train=0):
             # test
             else:
                 scaled_fight_data = scaler.transform(fight_data)
-                pred1, pred2 = reg.predict(scaled_fight_data)
+                f1_pred, f2_pred = reg.predict(scaled_fight_data)
 
                 #############################
                 # bet scaling
                 bet_multi = 1
 
-                # wins and losses
-                if pred1 > pred2:
-                    p_wnl = f1_wnl_winrate - f2_wnl_winrate
-                else:
-                    p_wnl = f2_wnl_winrate - f1_wnl_winrate
-                bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b, bet_wnl_c], [p_wnl])[0]
-                bet_wnl_multi = int(min(max(round(bet_wnl_multi), 0), 2))
-                bet_multi += bet_wnl_multi
-                bet_multis_cat.append(f'bet_wnl_multi-{bet_wnl_multi}')
-
                 # pred max
-                pred_max = max(pred1, pred2)
-                bet_pred_multi = np.polyval([bet_pred_a, bet_pred_b, bet_pred_c], [pred_max])[0]
-                bet_pred_multi = int(min(max(round(bet_pred_multi), 0), 3))
+                if f1_pred > f2_pred:
+                    f_pred = f1_pred - f2_pred
+                else:
+                    f_pred = f2_pred - f1_pred
+                bet_pred_multi = np.polyval([bet_pred_a, bet_pred_b], [f_pred])[0]
+                bet_pred_multi = round(min(1, max(0, bet_pred_multi)))
                 bet_multi += bet_pred_multi
-                bet_multis_cat.append(f'bet_pred_multi-{bet_pred_multi}')
+                bet_multis_cat.append(f'pred:{bet_pred_multi:.0f}')
 
                 # odds diff
-                odds_diff = abs(1 / f1_odds - 1 / f2_odds)
-                bet_odds_multi = np.polyval([bet_odds_a, bet_odds_b, bet_odds_c], [odds_diff])[0]
-                bet_odds_multi = int(min(max(round(bet_odds_multi), 0), 3))
+                if f1_pred > f2_pred:
+                    f_odds = 1 / f1_odds - 1 / f2_odds
+                else:
+                    f_odds = 1 / f2_odds - 1 / f1_odds
+                bet_odds_multi = np.polyval([bet_odds_a, bet_odds_b], [f_odds])[0]
+                bet_odds_multi = round(min(1, max(0, bet_odds_multi)))
                 bet_multi += bet_odds_multi
-                bet_multis_cat.append(f'bet_odds_multi-{bet_odds_multi}')
+                bet_multis_cat.append(f'odds:{bet_odds_multi:.0f}')
 
-                bet_multis.append(bet_multi)
-                bet_size *= bet_multi
+                # wins and losses
+                if f1_pred > f2_pred:
+                    f_wnl = f1_wnl_winrate - f2_wnl_winrate
+                else:
+                    f_wnl = f2_wnl_winrate - f1_wnl_winrate
+                bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b], [f_wnl])[0]
+                bet_wnl_multi = round(min(1, max(0, bet_wnl_multi)))
+                bet_multi += bet_wnl_multi
+                bet_multis_cat.append(f'wnl:{bet_wnl_multi:.0f}')
+
+                # trueskill mu
+                if f1_pred > f2_pred:
+                    f_ts = f1_ts - f2_ts
+                else:
+                    f_ts = f2_ts - f1_ts
+                bet_ts_multi = np.polyval([bet_ts_a, bet_ts_b], [f_ts])[0]
+                bet_ts_multi = round(min(1, max(0, bet_ts_multi)))
+                bet_multi += bet_ts_multi
+                bet_multis_cat.append(f'ts:{bet_ts_multi:.0f}')
+
+                # trueskill min
+                if f1_pred > f2_pred:
+                    f_ts_min = f1_ts_min - f2_ts_min
+                else:
+                    f_ts_min = f2_ts_min - f1_ts_min
+                bet_tmi_multi = np.polyval([bet_tmi_a, bet_tmi_b], [f_ts_min])[0]
+                bet_tmi_multi = round(min(1, max(0, bet_tmi_multi)))
+                bet_multi += bet_tmi_multi
+                bet_multis_cat.append(f'tmi:{bet_tmi_multi:.0f}')
+
+                # trueskill max
+                if f1_pred > f2_pred:
+                    f_ts_max = f1_ts_max - f2_ts_max
+                else:
+                    f_ts_max = f2_ts_max - f1_ts_max
+                bet_tma_multi = np.polyval([bet_tma_a, bet_tma_b], [f_ts_max])[0]
+                bet_tma_multi = round(min(1, max(0, bet_tma_multi)))
+                bet_multi += bet_tma_multi
+                bet_multis_cat.append(f'tma:{bet_tma_multi:.0f}')
+
+                bet_size *= round(bet_multi)
+                bet_amt = round(bet_size * bet_multi)
+                assert bet_amt >= 1, f'bet multi is fucked: {bet_multi}'
                 bet_amts.append(bet_size)
+                bet_multis.append(int(round(bet_multi)))
                 #############################
 
                 # prediction made
                 if 'prediction' in fight and fight['prediction'] is None:
-                    if pred1 > pred2:
+                    if f1_pred > f2_pred:
                         exp_winner = f1
-                        pred_exp_winner = pred1
+                        pred_exp_winner = f1_pred
                         exp_loser = f2
-                        pred_exp_loser = pred2
+                        pred_exp_loser = f2_pred
                     else:
                         exp_winner = f2
-                        pred_exp_winner = pred2
+                        pred_exp_winner = f2_pred
                         exp_loser = f1
-                        pred_exp_loser = pred1
+                        pred_exp_loser = f1_pred
                     logger.warning(f'[{pred_exp_winner * 100:.0f}% vs {pred_exp_loser * 100:.0f}%] Bet x{bet_multi} on {exp_winner} to beat {exp_loser} [{ratings[exp_winner].mu:.0f} vs {ratings[exp_loser].mu:.0f}]')
                     continue
 
@@ -284,11 +339,11 @@ def main(hyper_params, train=0):
                     continue
 
                 if is_win_1:
-                    fw_pred = pred1
-                    fl_pred = pred2
+                    fw_pred = f1_pred
+                    fl_pred = f2_pred
                 else:
-                    fw_pred = pred2
-                    fl_pred = pred1
+                    fw_pred = f2_pred
+                    fl_pred = f1_pred
 
                 # add test data
                 X_test.extend(scaled_fight_data)
@@ -297,12 +352,13 @@ def main(hyper_params, train=0):
                 # testing outcome
                 correct = 0
                 payout = -bet_size
-                if is_win_1 and pred1 > pred2:
+                if is_win_1 and f1_pred > f2_pred:
                     correct = 1
                     payout += f1_odds * bet_size
-                elif not is_win_1 and pred2 > pred1:
+                elif not is_win_1 and f2_pred > f1_pred:
                     correct = 1
                     payout += f2_odds * bet_size
+                odds_outcomes.append(int((f1_odds < f2_odds and is_win_1) or (f2_odds > f1_odds and not is_win_1)))
                 payouts.append(round(payout, 2))
                 accuracy = (accuracy[0] + correct, accuracy[1] + 1)
 
@@ -318,8 +374,8 @@ def main(hyper_params, train=0):
                     tab.append(round(cash, 2))
                     tab_amts.append(fight['bet'])
                     # pred flipped?
-                    pred_flipped = (pred1 > pred2 and fight['prediction'] != f1) or (
-                        pred2 > pred1 and fight['prediction'] != f2)
+                    pred_flipped = (f1_pred > f2_pred and fight['prediction'] != f1) or (
+                        f2_pred > f1_pred and fight['prediction'] != f2)
                 preds_flipped.append(int(pred_flipped))
 
                 log_balance = f'{"!!" if pred_flipped else "  "}[{sum(payouts):.0f}|{payout:.0f}]'
@@ -329,13 +385,16 @@ def main(hyper_params, train=0):
                 logger.info(f'{log_balance} {log_pred} {log_fight} {log_ratings}')
 
     if train:
-        print(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
-        return -(sum(payouts) / sum(bet_amts))
+        total_payouts = sum(payouts)
+        roi = total_payouts / sum(bet_amts)
+        res = -roi - (total_payouts / 5000)
+        print(f'Score: {-res*100:.2f}  ROI {roi * 100:.1f}%  Profit ${total_payouts:.0f}')
+        return res
     else:
-        summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis_cat, actual, tab, tab_amts)
+        summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis_cat, actual, tab, tab_amts, odds_outcomes)
 
 
-def summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis_cat, actual, tab, tab_amts):
+def summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis_cat, actual, tab, tab_amts, odds_outcomes):
     logger.info('')
     logger.info('Tree info:')
     # reg = get_regressor(X_train, y_train, X_test, y_test, estimators=estimators, max_depth=max_depth)
@@ -348,20 +407,26 @@ def summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis
     feature_names = [
         'win%',
         'odds', '~odds',
-        'mu', '~mu',
-        'sigma', '~sigma',
+        'ts', '~ts', 'sigma', '~sigma',
+        'ts_min_diff', 'ts_diff', 'ts_max_diff',
         'last', '~last',
         'early', '~early',
         'wins', '~wins', 'losses', '~losses', 'winrate', '~winrate',
     ]
-    features = {k: int(v * 100) for k, v in zip(feature_names, reg.feature_importances_)}
-    logger.info(f'Features: {features}')
+    assert len(feature_names) == len(reg.feature_importances_), f'{len(feature_names)} features vs {len(reg.feature_importances_)} reg values'
+    logger.info('')
+    logger.info(f'Features:')
+    features = SortedDict({v: k for k, v in zip(feature_names, reg.feature_importances_)})
+    for k in features.keys():
+        logger.info(f'{features[k]}: {k*1000:.0f}')
+        continue
 
     if accuracy[1]:
         payouts = np.array(payouts)
         logger.info('')
         logger.info('Testing:')
-        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%')
+        odds_acc = sum([t for t in odds_outcomes if t > 0]) / len(odds_outcomes)
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%  Odds: {odds_acc*100:.1f}%')
         logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
@@ -382,22 +447,23 @@ def run():
     train = 0
     
     names = [
-        # 'estimators', 'learning_rate',
-        # 'gamma', 'max depth',
-        # 'bet_wnl_a', 'bet_wnl_b', 'bet_wnl_c', 'wnl_cutoff'
-        # 'gamma', 'max_depth', 'min_child_weight',
-        'max_delta_step', 'subsample', 'scale_pos_weight',  # 0-0-i 0-1-1 0-1-i
+        # 'bet_pred_a', 'bet_pred_b', 'bet_odds_a', 'bet_odds_b', 'bet_wnl_a', 'bet_wnl_b',
+        'bet_ts_a', 'bet_ts_b', 'bet_tmi_a', 'bet_tmi_b', 'bet_tma_a', 'bet_tma_b',
     ]
     params = [
-        0, 1, 1
+        0, 0, 0, 0, 0, 0
     ]
-    bounds = [[0,      0, 0],
-              [np.inf, 1, np.inf]]
+    bounds = [[-np.inf],
+              [np.inf]]
     assert len(params) == len(names)
-    assert len(params) == len(bounds[0])
+    # assert len(params) == len(bounds[0])
 
     if train:
-        es = CMAEvolutionStrategy(params, 0.1, {'bounds': bounds})
+        sigma = 1
+        opts = CMAOptions()
+        # opts['tolx'] = 1E-2
+        opts['bounds'] = bounds
+        es = CMAEvolutionStrategy(params, sigma, inopts=opts)
         while not es.stop():
             solutions = es.ask()
             fitness = [main(x, train=1) for x in solutions]

@@ -1,20 +1,20 @@
 from .fighters import *
 
-# acc   roi   profit  desc
+# acc   roi     profit  desc
+# 62.9  8.9     121     cutoff fixed to 60%                 (2, 178), (3, 96), (1, 88), (4, 82)
+# 56.1  -1.5    -17     added trueskill sigma scaling       (2, 336), (1, 201), (3.0, 74), (4, 8)
+# 60.5  13.8    110     added trueskill scaling                 (3, 145), (2, 134), (1, 91)
+# 61.1  0.4     2       removed random, opt pred & odds & wnl   (1, 266), (2, 104)
 # 65.1  3.0   39      opt max_delta_step/subsample/scale_pos_weight (3, 221), (6, 42), (4, 41), (5, 39)
 # 64.3  -0.6  -8      2019-08-17 UFC 241: Cormier vs Miocic 2
-# 68.3  7.7   100     bet size changed to 1                 (3, 220), (6, 45), (4, 39), (5, 38)
-# 68.3  7.7   502     opt gamma/max depth                   (3, 220), (6, 45), (4, 39), (5, 38)
-# 63.4  2.2   143     added wins and losses                 (3, 220), (6, 46), (5, 40), (4, 37)
-# 70.7  22.7  741     added learning rate and gamma
-# 68.0  12.5  408     optimized bets                        (1, 237), (4, 54), (3, 43), (2, 35)
-# 68.0  10.0  438     splitted hyper and bet params         (1, 154), (4, 108), (3, 73), (2, 34)
 
+# 68.3  7.7   100     bet size changed to 1                 (3, 220), (6, 45), (4, 39), (5, 38)
+# 63.4  2.2   143     added wins and losses                 (3, 220), (6, 46), (5, 40), (4, 37)
+# 68.0  12.5  408     optimized bets                        (1, 237), (4, 54), (3, 43), (2, 35)
 # 69.4  21.2  927     2019-08-11 UFC Fight Night: Shevchenko vs Carmouche (1, 154), (4, 108)
 # 67.4  17.4  770     reverted back to 3 params             (1, 138), (4, 103), (3, 81), (2, 46)
-# 67.4  16.5  524     added odds diff
-# 64.1  46.9  2891    multi changed to 4                         (5, 206), (1, 141)
 
+# 67.4  16.5  524     added odds diff
 # 65.8  54.1  6716    estimators capped to 500
 # 67    12.09 415     removed max bet of 10 (no diff)
 # 67    12.09 415     fixed cutoff with all_data :(
