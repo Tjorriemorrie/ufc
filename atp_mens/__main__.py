@@ -154,6 +154,14 @@ def main(hyper_params, train=0):
     bet_wnl_a = -37.066463357667345   # -0.4929481517139193   # 6.370072182738196       #-11.565669938287991
     bet_wnl_b = -69.59580419311959    # -0.1611129331251365   # -1.5568193398609196     # -39.84123646309891
 
+    # bet_ts_a, bet_ts_b, bet_tmi_a, bet_tmi_b, bet_tma_a, bet_tma_b = hyper_params
+    bet_ts_a = -7.406374954672103
+    bet_ts_b = 9.511462858950916
+    bet_tmi_a = -6.613483852552951
+    bet_tmi_b = 4.885771442053525
+    bet_tma_a = -14.141558321834657
+    bet_tma_b = 4.8358084053299715
+
     # bet_drs_a, bet_drs_b, bet_sfc_a, bet_sfc_b, bet_spd_a, bet_spd_b = hyper_params
     bet_drs_a = 9.764003899248907    # 0.50   # 2.93881738898117     # -5.512606284208406
     bet_drs_b = -3.7139970039337182  # -16.57  # -3.7681698240703465  # -1.5899553334356054
@@ -229,6 +237,16 @@ def main(hyper_params, train=0):
                 raise ValueError(f'surely these odds are wrong? {p1_odds} {p2_odds}')
             win1_prob = win_probability([ratings[p1]], [ratings[p2]])
             win2_prob = win_probability([ratings[p2]], [ratings[p1]])
+
+            # trueskill data
+            p1_ts = ratings[p1].mu
+            p1_sigma = ratings[p1].sigma
+            p2_ts = ratings[p2].mu
+            p2_sigma = ratings[p2].sigma
+            p1_ts_min = p1_ts - p1_sigma * 2
+            p2_ts_min = p2_ts - p2_sigma * 2
+            p1_ts_max = p1_ts + p1_sigma * 2
+            p2_ts_max = p2_ts + p2_sigma * 2
 
             # wins losses
             p1_wins_losses = Counter(wins_losses[p1])
@@ -312,10 +330,13 @@ def main(hyper_params, train=0):
                     p1_scaled_odds,
                     p1_odds,
                     p2_odds,
-                    ratings[p1].mu,
-                    ratings[p2].mu,
-                    ratings[p1].sigma,
-                    ratings[p2].sigma,
+                    p1_ts,
+                    p2_ts,
+                    p1_sigma,
+                    p2_sigma,
+                    p1_ts_min - p2_ts_min,
+                    p1_ts - p2_ts,
+                    p1_ts_max - p2_ts_max,
                     match['round'],
                     p1_wins_losses[1],
                     p1_wins_losses[-1],
@@ -364,10 +385,13 @@ def main(hyper_params, train=0):
                     p2_scaled_odds,
                     p2_odds,
                     p1_odds,
-                    ratings[p2].mu,
-                    ratings[p1].mu,
-                    ratings[p2].sigma,
-                    ratings[p1].sigma,
+                    p2_ts,
+                    p1_ts,
+                    p2_sigma,
+                    p1_sigma,
+                    p2_ts_min - p1_ts_min,
+                    p2_ts - p1_ts,
+                    p2_ts_max - p1_ts_max,
                     match['round'],
                     p2_wins_losses[1],
                     p2_wins_losses[-1],
@@ -501,6 +525,36 @@ def main(hyper_params, train=0):
                 bet_wnl_multi = round(min(1, max(0, bet_wnl_multi)))
                 bet_multi += bet_wnl_multi
                 bet_multis_cat.append(f'wnl:{bet_wnl_multi:.0f}')
+
+                # trueskill mu
+                if p1_pred > p2_pred:
+                    f_ts = p1_ts - p2_ts
+                else:
+                    f_ts = p2_ts - p1_ts
+                bet_ts_multi = np.polyval([bet_ts_a, bet_ts_b], [f_ts])[0]
+                bet_ts_multi = round(min(1, max(0, bet_ts_multi)))
+                bet_multi += bet_ts_multi
+                bet_multis_cat.append(f'ts:{bet_ts_multi:.0f}')
+
+                # trueskill min
+                if p1_pred > p2_pred:
+                    f_ts_min = p1_ts_min - p2_ts_min
+                else:
+                    f_ts_min = p2_ts_min - p1_ts_min
+                bet_tmi_multi = np.polyval([bet_tmi_a, bet_tmi_b], [f_ts_min])[0]
+                bet_tmi_multi = round(min(1, max(0, bet_tmi_multi)))
+                bet_multi += bet_tmi_multi
+                bet_multis_cat.append(f'tmi:{bet_tmi_multi:.0f}')
+
+                # trueskill max
+                if p1_pred > p2_pred:
+                    f_ts_max = p1_ts_max - p2_ts_max
+                else:
+                    f_ts_max = p2_ts_max - p1_ts_max
+                bet_tma_multi = np.polyval([bet_tma_a, bet_tma_b], [f_ts_max])[0]
+                bet_tma_multi = round(min(1, max(0, bet_tma_multi)))
+                bet_multi += bet_tma_multi
+                bet_multis_cat.append(f'tma:{bet_tma_multi:.0f}')
 
                 # doors
                 if p1_pred > p2_pred:
@@ -654,7 +708,8 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
     feature_names = [
         'win%', 'odds_scaled',
         'odds', '~odds',
-        'mu', '~mu', 'sigma', '~sigma',
+        'ts', '~ts', 'sigma', '~sigma',
+        'ts_min_diff', 'ts_diff', 'ts_max_diff',
         'round',
         'wins', 'losses', 'winrate',
         '~wins', '~losses', '~winrate',
@@ -699,11 +754,11 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        # sheet = -12.78
-        # if abs(sum(tab) - sheet) > 0.01:
-        #     for l in actual_debug:
-        #         logger.warning(l)
-        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        sheet = -29.97
+        if abs(sum(tab) - sheet) > 0.01:
+            for l in actual_debug:
+                logger.warning(l)
+            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 # age
@@ -720,10 +775,11 @@ def run():
         # 'pred_a', 'pred_b', 'odds_a', 'odds_b', 'bet_wnl_a', 'bet_wnl_b',
         # 'bet_drs_a', 'bet_drs_b', 'bet_sfc_a', 'bet_sfc_b', 'bet_spd_a', 'bet_spd_b',
         # 'bet_set_a', 'bet_set_b', 'bet_gms_a', 'bet_gms_b',
-        'bet_tie_a', 'bet_tie_b', 'bet_ups_a', 'bet_ups_b',
+        # 'bet_tie_a', 'bet_tie_b', 'bet_ups_a', 'bet_ups_b',
+        'bet_ts_a', 'bet_ts_b', 'bet_tmi_a', 'bet_tmi_b', 'bet_tma_a', 'bet_tma_b',
     ]
     params = [
-        0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0
     ]
     bounds = [[-np.inf],
               [np.inf]]
