@@ -36,8 +36,8 @@ def win_probability(team1, team2):
 
 def get_regressor(X_train, y_train, X_test=None, y_test=None, **reg_params):
     """get regressor"""
-    #logger.info('')
-    #logger.info('Training model...')
+    logger.info('')
+    logger.info('Training model...')
 
     eval_set = [(np.array(X_train), y_train)]
     if X_test and y_test:
@@ -118,7 +118,7 @@ def get_regressor(X_train, y_train, X_test=None, y_test=None, **reg_params):
 
 
 def main(hyper_params, train=0):
-    #logger.info('Starting main training')
+    logger.info('Starting main training')
 
     all_data = DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
@@ -242,8 +242,8 @@ def main(hyper_params, train=0):
                 scaler.partial_fit(X_train)
                 X_train = scaler.transform(X_train)
                 reg = get_regressor(X_train, y_train, **reg_params)
-            #logger.info('')
-        #logger.info(f'{event["date"]} {event["location"]["name"]}')
+            logger.info('')
+        logger.info(f'{event["date"]} {event["location"]["name"]}')
 
         for match in event['matches']:
             # skip if no odds:
@@ -666,12 +666,12 @@ def main(hyper_params, train=0):
                         pw = p2
                         predl = p1_pred
                         pl = p1
-                    #logger.warning(f'[{predw*100:.0f}% vs {predl*100:.0f}%] Bet x{round(bet_multi):.0f} on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
+                    logger.warning(f'[{predw*100:.0f}% vs {predl*100:.0f}%] Bet x{round(bet_multi):.0f} on {pw} to beat {pl} [{ratings[pw].mu:.0f} vs {ratings[pl].mu:.0f}]')
                     continue
 
                 # prediction bet on
                 elif 'score' not in match:
-                    #logger.warning(f'Pending {p1} vs {p2}')
+                    logger.warning(f'Pending {p1} vs {p2}')
                     continue
 
                 # add data for test of classifier
@@ -700,9 +700,9 @@ def main(hyper_params, train=0):
                         cash += p1_odds * match['bet']
                     tab.append(round(cash, 2))
                     tab_amts.append(match['bet'])
-                    actual_debug.append(f'{match["prediction"]} {match["bet"]} {pred_odds:.2f}: {cash:.2f}')
+                    actual_debug.append(f'${match["bet"]} {pred_odds:.2f}: {cash:.2f} {match["prediction"]} {event["location"]["name"]}:{match["round"]}')
 
-                #logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
+                logger.info(f'{log_balance} {log_pred} {log_players} {log_odds} {log_trueskill}')
 
     if train:
         total_payouts = sum(payouts)
@@ -715,16 +715,16 @@ def main(hyper_params, train=0):
 
 
 def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_multis, bet_multis_cat, actual_debug, odds_outcomes):
-    #logger.info('')
-    #logger.info('Tree info:')
+    logger.info('')
+    logger.info('Tree info:')
     reg_score = reg.evals_result()
     params = reg.get_params()
-    #logger.info(f'Num estimators: {params["n_estimators"]}')
-    #logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
-    #logger.info(f'Gamma: {params["gamma"]}')
-    #logger.info(f'Max depth: {params["max_depth"]}')
-    #logger.info(f'Scale pos weight: {params["scale_pos_weight"]:.2f}')
-    #logger.info(f'Accuracy: training={reg_score["validation_0"]["rmse"][-1]:.4f}')
+    logger.info(f'Num estimators: {params["n_estimators"]}')
+    logger.info(f'Learning rate: {params["learning_rate"]:.2f}')
+    logger.info(f'Gamma: {params["gamma"]}')
+    logger.info(f'Max depth: {params["max_depth"]}')
+    logger.info(f'Scale pos weight: {params["scale_pos_weight"]:.2f}')
+    logger.info(f'Accuracy: training={reg_score["validation_0"]["rmse"][-1]:.4f}')
     feature_names = [
         'win%', 'odds_scaled',
         'odds', '~odds',
@@ -747,38 +747,38 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         '~upsets_wins', '~upsets_losses', '~upsets_wr', '~upsets_lr',
     ]
     assert len(feature_names) == len(reg.feature_importances_), f'{len(feature_names)} features vs {len(reg.feature_importances_)} reg values'
-    #logger.info('')
-    #logger.info(f'Features:')
+    logger.info('')
+    logger.info(f'Features:')
     features = SortedDict({v: k for k, v in zip(feature_names, reg.feature_importances_)})
     for k in features.keys():
-        #logger.info(f'{features[k]}: {k*1000:.0f}')
+        logger.info(f'{features[k]}: {k*1000:.0f}')
         continue
 
     if accuracy[1]:
         payouts = np.array(payouts)
-        #logger.info('')
-        #logger.info('Testing:')
+        logger.info('')
+        logger.info('Testing:')
         odds_acc = sum([t for t in odds_outcomes if t > 0]) / len(odds_outcomes)
-        #logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%  Odds: {odds_acc*100:.1f}%')
-        #logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
+        logger.info(f'Accuracy {accuracy[0]}/{accuracy[1]} = {accuracy[0]/accuracy[1]*100:.1f}%  Odds: {odds_acc*100:.1f}%')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
-        #logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
-        #logger.info(f'Common multis: {Counter(bet_multis).most_common(4)}')
-        #logger.info(f'cat multis: {Counter(bet_multis_cat).most_common()}')
+        logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
+        logger.info(f'Common multis: {Counter(bet_multis).most_common(4)}')
+        logger.info(f'cat multis: {Counter(bet_multis_cat).most_common()}')
 
     if actual[1]:
         tab = np.array(tab)
-        #logger.info('')
-        #logger.info('Actual:')
-        #logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
-        #logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
+        logger.info('')
+        logger.info('Actual:')
+        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
+        logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
-        #logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        # sheet = -29.97
-        # if abs(sum(tab) - sheet) > 0.01:
-        #     for l in actual_debug:
-        #         #logger.warning(l)
-        #     #logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
+        sheet = -37.81
+        if abs(sum(tab) - sheet) > 0.01:
+            for l in actual_debug:
+                logger.warning(l)
+            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 # age
@@ -789,7 +789,7 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
 # 1st serve conversion rate
 
 def run():
-    train = 1
+    train = 0
 
     names = [
         # 'bet_drs_a', 'bet_drs_b', 'bet_sfc_a', 'bet_sfc_b', 'bet_spd_a', 'bet_spd_b',

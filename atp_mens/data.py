@@ -5622,6 +5622,7 @@ DATA = [
                     MATTEO_BERRETTINI,
                     RICHARD_GASQUET,
                 ],
+                'score': [(6, 4), (6, 3), (2, 6), (6, 2)],
                 'odds': {
                     MATTEO_BERRETTINI: 2.40,
                     RICHARD_GASQUET: 1.55,
@@ -5635,6 +5636,7 @@ DATA = [
                     ALEXANDER_BUBLIK,
                     SANTIAGO_GIRALDO,
                 ],
+                'score': [(2, 6), (6, 0), (7, 5), (3, 6), (6, 4)],
                 'odds': {
                     ALEXANDER_BUBLIK: 1.62,
                     SANTIAGO_GIRALDO: 2.20,
@@ -5662,6 +5664,7 @@ DATA = [
                     MIKHAIL_KUKUSHKIN,
                     ROBERTO_BAUTISTA_AGUT,
                 ],
+                'score': [(3, 6), (6, 1), (6, 4), (3, 6), (6, 3)],
                 'odds': {
                     MIKHAIL_KUKUSHKIN: 8.00,
                     ROBERTO_BAUTISTA_AGUT: 1.07,
@@ -5700,12 +5703,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    STEFANOS_TSITSIPAS,
                     ANDREY_RUBLEV,
+                    STEFANOS_TSITSIPAS,
                 ],
+                'score': [(6, 4), (6, 7), (7, 6), (7, 5)],
                 'odds': {
-                    STEFANOS_TSITSIPAS: 1.40,
                     ANDREY_RUBLEV: 2.90,
+                    STEFANOS_TSITSIPAS: 1.40,
                 },
                 'prediction': STEFANOS_TSITSIPAS,
                 'bet': 3,
@@ -5713,12 +5717,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    KYLE_EDMUND,
                     PABLO_ANDUJAR,
+                    KYLE_EDMUND,
                 ],
+                'score': [(3, 6), (7, 6), (7, 5), (5, 7), (6, 2)],
                 'odds': {
-                    KYLE_EDMUND: 1.20,
                     PABLO_ANDUJAR: 4.40,
+                    KYLE_EDMUND: 1.20,
                 },
                 'prediction': KYLE_EDMUND,
                 'bet': 2,
@@ -5729,6 +5734,7 @@ DATA = [
                     JOHN_ISNER,
                     GUILLERMO_GARCIA_LOPEZ,
                 ],
+                'score': [(6, 3), (6, 4), (6, 4)],
                 'odds': {
                     JOHN_ISNER: 1.18,
                     GUILLERMO_GARCIA_LOPEZ: 5.00,
@@ -5739,12 +5745,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    MARTIN_KLIZAN,
                     MARIN_CILIC,
+                    MARTIN_KLIZAN,
                 ],
+                'score': [(6, 3), (6, 2), (7, 6)],
                 'odds': {
-                    MARTIN_KLIZAN: 5.50,
                     MARIN_CILIC: 1.14,
+                    MARTIN_KLIZAN: 5.50,
                 },
                 'prediction': MARIN_CILIC,
                 'bet': 2,
@@ -5769,6 +5776,7 @@ DATA = [
                     FERNANDO_VERDASCO,
                     TOBIAS_KAMKE,
                 ],
+                'score': [(6, 3), (3, 6), (6, 1), (6, 2)],
                 'odds': {
                     FERNANDO_VERDASCO: 1.26,
                     TOBIAS_KAMKE: 3.80,
@@ -5796,6 +5804,7 @@ DATA = [
                     VASEK_POSPISIL,
                     KAREN_KHACHANOV,
                 ],
+                'score': [(4, 6), (7, 5), (7, 5), (4, 6), (6, 3)],
                 'odds': {
                     VASEK_POSPISIL: 6.50,
                     KAREN_KHACHANOV: 1.10,
@@ -5809,6 +5818,7 @@ DATA = [
                     THOMAS_FABBIANO,
                     DOMINIC_THIEM,
                 ],
+                'score': [(6, 4), (3, 6), (6, 3), (6, 2)],
                 'odds': {
                     THOMAS_FABBIANO: 5.50,
                     DOMINIC_THIEM: 1.14,
@@ -5822,6 +5832,7 @@ DATA = [
                     HYEON_CHUNG,
                     ERNESTO_ESCOBEDO,
                 ],
+                'score': [(3, 6), (6, 4), (6, 7), (6, 4), (6, 2)],
                 'odds': {
                     HYEON_CHUNG: 1.22,
                     ERNESTO_ESCOBEDO: 4.20,
@@ -5849,6 +5860,7 @@ DATA = [
                     ALEXANDER_ZVEREV,
                     RADU_ALBOT,
                 ],
+                'score': [(6, 1), (6, 3), (3, 6), (4, 6), (6, 2)],
                 'odds': {
                     ALEXANDER_ZVEREV: 1.38,
                     RADU_ALBOT: 3.00,
@@ -5860,25 +5872,26 @@ DATA = [
                 'round': 128,
                 'players': [
                     EGOR_GERASIMOV,
-                    GEORGE_HARRIS,
+                    LLOYD_HARRIS,
                 ],
-                'score': [()]
+                'score': [(7, 5), (7, 6), (7, 6)],
                 'odds': {
                     EGOR_GERASIMOV: 1.55,
-                    GEORGE_HARRIS: 2.40,
+                    LLOYD_HARRIS: 2.40,
                 },
-                'prediction': GEORGE_HARRIS,
+                'prediction': LLOYD_HARRIS,
                 'bet': 4,
             },
             {
                 'round': 128,
                 'players': [
-                    UGO_HUMBERT,
                     MARIUS_COPIL,
+                    UGO_HUMBERT,
                 ],
+                'score': [(6, 3), (5, 7), (7, 6), (4, 6), (6, 1)],
                 'odds': {
-                    UGO_HUMBERT: 1.40,
                     MARIUS_COPIL: 2.90,
+                    UGO_HUMBERT: 1.40,
                 },
                 'prediction': UGO_HUMBERT,
                 'bet': 3,
@@ -5889,6 +5902,7 @@ DATA = [
                     DIEGO_SCHWARTZMAN,
                     ROBIN_HAASE,
                 ],
+                'score': [(6, 3), (7, 6), (6, 0)],
                 'odds': {
                     DIEGO_SCHWARTZMAN: 1.24,
                     ROBIN_HAASE: 4.00,
@@ -5956,12 +5970,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    JOZEF_KOVALIK,
                     ALJAZ_BEDENE,
+                    JOZEF_KOVALIK,
                 ],
+                'score': [(6, 3), (6, 4), (7, 5)],
                 'odds': {
-                    JOZEF_KOVALIK: 4.20,
                     ALJAZ_BEDENE: 1.22,
+                    JOZEF_KOVALIK: 4.20,
                 },
                 'prediction': JOZEF_KOVALIK,
                 'bet': 6,
@@ -5986,6 +6001,7 @@ DATA = [
                     GAEL_MONFILS,
                     ALBERT_RAMOS_VINOLAS,
                 ],
+                'score': [(7, 6), (6, 4), (6, 3)],
                 'odds': {
                     GAEL_MONFILS: 1.24,
                     ALBERT_RAMOS_VINOLAS: 4.00,
@@ -5996,12 +6012,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    BRAYDEN_SCHNUR,
                     BENOIT_PAIRE,
+                    BRAYDEN_SCHNUR,
                 ],
+                'score': [(6, 2), (6, 4), (6, 4)],
                 'odds': {
-                    BRAYDEN_SCHNUR: 4.00,
                     BENOIT_PAIRE: 1.24,
+                    BRAYDEN_SCHNUR: 4.00,
                 },
                 'prediction': BENOIT_PAIRE,
                 'bet': 2,
@@ -6012,6 +6029,7 @@ DATA = [
                     DENIS_SHAPOVALOV,
                     FELIX_AUGER_ALIASSIME,
                 ],
+                'score': [(6, 1), (6, 1), (6, 4)],
                 'odds': {
                     DENIS_SHAPOVALOV: 1.85,
                     FELIX_AUGER_ALIASSIME: 1.90,
@@ -6022,12 +6040,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    JOHN_MILLMAN,
                     RAFAEL_NADAL,
+                    JOHN_MILLMAN,
                 ],
+                'score': [(6, 3), (6, 2), (6, 2)],
                 'odds': {
-                    JOHN_MILLMAN: 14.00,
                     RAFAEL_NADAL: 1.01,
+                    JOHN_MILLMAN: 14.00,
                 },
                 'prediction': JOHN_MILLMAN,
                 'bet': 6,
@@ -6035,28 +6054,17 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    STEVE_JOHNSON,
                     NICK_KYRGIOS,
+                    STEVE_JOHNSON,
                 ],
+                'score': [(6, 3), (7, 6), (6, 4)],
                 'odds': {
-                    STEVE_JOHNSON: 3.30,
                     NICK_KYRGIOS: 1.32,
+                    STEVE_JOHNSON: 3.30,
                 },
                 'prediction': NICK_KYRGIOS,
                 'bet': 2,
             },
-            {
-                'round': 128,
-                'players': [
-                    EGOR_GERASIMOV,
-                    LLOYD_HARRIS
-                ],
-                'score': [(7, 5), (7, 6), (7, 6)],
-                'odds': {
-                    EGOR_GERASIMOV: 1.56,
-                    LLOYD_HARRIS: 2.35
-                }
-            }
 
             # {
             #     'round': 128,
