@@ -6066,40 +6066,186 @@ DATA = [
                 'bet': 2,
             },
 
-            # {
-            #     'round': 128,
-            #     'players': [
-            #         GREGOIRE_BARRERE,
-            #         DAVID_GOFFIN,
-            #     ],
-            #     'odds': {
-            #         GREGOIRE_BARRERE: 7.50,
-            #         DAVID_GOFFIN: 1.08,
-            #     },
-            # },
-            # {
-            #     'round': 128,
-            #     'players': [
-            #         BROOKSBY_JENSON,
-            #         NIKOLOZ_BASILASHVILI,
-            #     ],
-            #     'odds': {
-            #         BROOKSBY_JENSON: 4.00,
-            #         NIKOLOZ_BASILASHVILI: 1.24,
-            #     },
-            # },
-            # {
-            #     'round': 128,
-            #     'players': [
-            #         PABLO_CARRENO_BUSTA,
-            #         RICARDAS_BERANKIS,
-            #     ],
-            #     'odds': {
-            #         PABLO_CARRENO_BUSTA: 1.32,
-            #         RICARDAS_BERANKIS: 3.30,
-            #     },
-            # },
-
+            # 2019-08-28
+            {
+                'round': 64,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    BORNA_CORIC
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    GRIGOR_DIMITROV: 2.15,
+                    BORNA_CORIC: 1.55
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    KEI_NISHIKORI,
+                    BRADLEY_KLAHN
+                ],
+                'score': [(6, 2), (4, 6), (6, 3), (7, 5)],
+                'odds': {
+                    KEI_NISHIKORI: 1.11,
+                    BRADLEY_KLAHN: 6.00
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    ROGER_FEDERER,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(3, 6), (6, 2), (6, 3), (6, 4)],
+                'odds': {
+                    ROGER_FEDERER: 1.04,
+                    DAMIR_DZUMHUR: 10.00
+                }
+            },
+            {
+                'round': 64,
+                'players': [
+                    PABLO_CUEVAS,
+                    KAMIL_MAJCHRZAK,
+                ],
+                'odds': {
+                    PABLO_CUEVAS: 1.68,
+                    KAMIL_MAJCHRZAK: 2.15,
+                },
+                'prediction': PABLO_CUEVAS,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    HUGO_DELLIEN,
+                    DANILL_MEDVEDEV,
+                ],
+                'odds': {
+                    HUGO_DELLIEN: 12.00,
+                    DANILL_MEDVEDEV: 1.02,
+                },
+                'prediction': HUGO_DELLIEN,
+                'bet': 5,
+            },
+            {
+                'round': 64,
+                'players': [
+                    DANIEL_EVANS,
+                    LUCAS_POUILLE,
+                ],
+                'odds': {
+                    DANIEL_EVANS: 1.95,
+                    LUCAS_POUILLE: 1.85,
+                },
+                'prediction': LUCAS_POUILLE,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    PAOLO_LORENZI,
+                ],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 1.05,
+                    PAOLO_LORENZI: 9.00,
+                },
+                'prediction': MIOMIR_KECMANOVIC,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    YOSHIHITO_NISHIOKA,
+                ],
+                'odds': {
+                    FELICIANO_LOPEZ: 2.80,
+                    YOSHIHITO_NISHIOKA: 1.42,
+                },
+                'prediction': YOSHIHITO_NISHIOKA,
+                'bet': 1,
+            },
+            {
+                'round': 64,
+                'players': [
+                    STAN_WAWRINKA,
+                    JEREMY_CHARDY,
+                ],
+                'odds': {
+                    STAN_WAWRINKA: 1.30,
+                    JEREMY_CHARDY: 3.40,
+                },
+                'prediction': STAN_WAWRINKA,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    RICARDAS_BERANKIS,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.24,
+                    RICARDAS_BERANKIS: 4.00,
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    JUAN_IGNACIO_LONDERO,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.00,
+                    JUAN_IGNACIO_LONDERO: 17.00,
+                },
+                # pred na
+            },
+            {
+                'round': 64,
+                'players': [
+                    GREGOIRE_BARRERE,
+                    DAVID_GOFFIN,
+                ],
+                'odds': {
+                    GREGOIRE_BARRERE: 9.00,
+                    DAVID_GOFFIN: 1.05,
+                },
+                'prediction': DAVID_GOFFIN,
+                'bet': 1,
+            },
+            {
+                'round': 64,
+                'players': [
+                    JENSON_BROOKSBY,
+                    NIKOLOZ_BASILASHVILI,
+                ],
+                'odds': {
+                    JENSON_BROOKSBY: 4.20,
+                    NIKOLOZ_BASILASHVILI: 1.22,
+                },
+                'prediction': JENSON_BROOKSBY,
+                'bet': 5,
+            },
+            {
+                'round': 64,
+                'players': [
+                    REILLY_OPELKA,
+                    DOMINIK_KOEPFER,
+                ],
+                'odds': {
+                    REILLY_OPELKA: 1.38,
+                    DOMINIK_KOEPFER: 3.00,
+                },
+                'prediction': REILLY_OPELKA,
+                'bet': 3,
+            },
         ]
     }
 ]
