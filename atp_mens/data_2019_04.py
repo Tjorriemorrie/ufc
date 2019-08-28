@@ -3816,12 +3816,12 @@ DATA_2019_04 = [
                 'round': 512,
                 'players': [
                     DANIEL_EVANS,
-                    LORENZO_GUISTINO
+                    LORENZO_GIUSTINO
                 ],
                 'score': [(6, 3), (7, 5)],
                 'odds': {
                     DANIEL_EVANS: 1.87,
-                    LORENZO_GUISTINO: 1.80
+                    LORENZO_GIUSTINO: 1.80
                 }
             },
             {

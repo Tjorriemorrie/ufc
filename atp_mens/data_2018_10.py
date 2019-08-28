@@ -2511,12 +2511,12 @@ DATA_2018_10 = [
                 'round': 512,
                 'players': [
                     SALVATORE_CARUSO,
-                    SCOTT_TALON_GRIEKSPOOR
+                    TALLON_GRIEKSPOOR
                 ],
                 'score': [(6, 7), (6, 3), (6, 2)],
                 'odds': {
                     SALVATORE_CARUSO: 1.63,
-                    SCOTT_TALON_GRIEKSPOOR: 2.08
+                    TALLON_GRIEKSPOOR: 2.08
                 }
             },
             {
@@ -2570,12 +2570,12 @@ DATA_2018_10 = [
             {
                 'round': 512,
                 'players': [
-                    SCOTT_TALON_GRIEKSPOOR,
+                    TALLON_GRIEKSPOOR,
                     CORENTIN_MOUTET
                 ],
                 'score': [(6, 2), (6, 1)],
                 'odds': {
-                    SCOTT_TALON_GRIEKSPOOR: 1.96,
+                    TALLON_GRIEKSPOOR: 1.96,
                     CORENTIN_MOUTET: 1.71
                 }
             },
@@ -2608,12 +2608,12 @@ DATA_2018_10 = [
             {
                 'round': 256,
                 'players': [
-                    SCOTT_TALON_GRIEKSPOOR,
+                    TALLON_GRIEKSPOOR,
                     STEPHANE_ROBERT
                 ],
                 'score': [(7, 6), (6, 3)],
                 'odds': {
-                    SCOTT_TALON_GRIEKSPOOR: 1.33,
+                    TALLON_GRIEKSPOOR: 1.33,
                     STEPHANE_ROBERT: 3.20
                 }
             },

@@ -2,12 +2,14 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 65.2  13.0    648     2018 us open 3rd qual               (6, 243), (4, 212), (3, 179), (5, 152)
+# 66.0  13.2    646     2018 us open 2nd qual               (6, 241), (4, 231), (3, 183), (5, 154)
+# 66.7  14.2    717     2018 us open 1st qualification      (4, 233), (6, 204), (3, 181), (7, 180)
 # 68.6  16.1    535     added trueskill data & scaling      (4, 262), (3, 246), (2, 186), (5, 156)
 # 68.6  26.2    459     sst petersburg 2018                 (2, 436), (1, 385), (3, 127), (4, 28)
 # 66.7  26.2    442     opt upd and ties                    (2, 415), (1, 379), (3, 127), (4, 23)
-# 66.7  36.5    703     opt set & gms                       (1, 439), (2, 200), (3, 192), (4, 70)
-# 66.7  35.9    698     opt drs & sfc & spd                 (1, 432), (2, 197), (3, 192), (4, 87)
 
+# 66.7  36.5    703     opt set & gms                       (1, 439), (2, 200), (3, 192), (4, 70)
 # 66.7  35.3    967     opt pred & odds & wnl               (1, 398), (3, 175), (4, 148), (6, 59)
 # 65.4  21.4    676     opt speed & sets & games            (3, 252), (1, 206), (5, 175), (2, 90)
 # 65.4  20.6    551     opt win losses                      (3, 277), (1, 249), (5, 185), (2, 103)
@@ -4893,15 +4895,15 @@ DATA = [
             {
                 'round': 512,
                 'players': [
-                    SCOTT_TALON_GRIEKSPOOR,
+                    TALLON_GRIEKSPOOR,
                     CEM_ILKEL,
                 ],
                 'score': [(7, 5), (6, 3)],
                 'odds': {
-                    SCOTT_TALON_GRIEKSPOOR: 1.65,
+                    TALLON_GRIEKSPOOR: 1.65,
                     CEM_ILKEL: 2.15,
                 },
-                'prediction': SCOTT_TALON_GRIEKSPOOR,
+                'prediction': TALLON_GRIEKSPOOR,
                 'bet': 2,
             },
             {
@@ -5030,14 +5032,14 @@ DATA = [
                 'round': 256,
                 'players': [
                     MARCO_TRUNGELLITI,
-                    SCOTT_TALON_GRIEKSPOOR,
+                    TALLON_GRIEKSPOOR,
                 ],
                 'score': [(4, 6), (6, 3), (6, 2)],
                 'odds': {
                     MARCO_TRUNGELLITI: 2.70,
-                    SCOTT_TALON_GRIEKSPOOR: 1.44,
+                    TALLON_GRIEKSPOOR: 1.44,
                 },
-                'prediction': SCOTT_TALON_GRIEKSPOOR,
+                'prediction': TALLON_GRIEKSPOOR,
                 'bet': 2,
             },
             {
@@ -5171,12 +5173,12 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    BROOKSBY_JENSON,
+                    JENSON_BROOKSBY,
                     TOMAS_BERDYCH,
                 ],
                 'score': [(6, 1), (2, 6), (6, 4), (6, 4)],
                 'odds': {
-                    BROOKSBY_JENSON: 3.80,
+                    JENSON_BROOKSBY: 3.80,
                     TOMAS_BERDYCH: 1.28,
                 },
                 'prediction': TOMAS_BERDYCH,
@@ -5643,12 +5645,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    BJORN_FRATANGELO,
                     GILLES_SIMON,
+                    BJORN_FRATANGELO,
                 ],
+                'score': [(5, 7), (7, 5), (7, 5), (7, 5)],
                 'odds': {
-                    BJORN_FRATANGELO: 2.80,
                     GILLES_SIMON: 1.42,
+                    BJORN_FRATANGELO: 2.80,
                 },
                 'prediction': GILLES_SIMON,
                 'bet': 3,
@@ -5672,6 +5675,7 @@ DATA = [
                     ALEXEI_POPYRIN,
                     FEDERICO_DELBONIS,
                 ],
+                'score': [(6, 1), (7, 5), (7, 6)],
                 'odds': {
                     ALEXEI_POPYRIN: 1.52,
                     FEDERICO_DELBONIS: 2.50,
@@ -5685,6 +5689,7 @@ DATA = [
                     LORENZO_SONEGO,
                     MARCEL_GRANOLLERS,
                 ],
+                'score': [(6, 3), (6, 4), (6, 4)],
                 'odds': {
                     LORENZO_SONEGO: 1.48,
                     MARCEL_GRANOLLERS: 2.60,
@@ -5747,12 +5752,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    JOAO_SOUSA,
                     JORDAN_THOMPSON,
+                    JOAO_SOUSA,
                 ],
+                'score': [(6, 3), (6, 2), (6, 4)],
                 'odds': {
-                    JOAO_SOUSA: 2.20,
                     JORDAN_THOMPSON: 1.68,
+                    JOAO_SOUSA: 2.20,
                 },
                 'prediction': JOAO_SOUSA,
                 'bet': 4,
@@ -5773,12 +5779,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    FILIP_KRAJINOVIC,
                     CEDRIC_MARCEL_STEBE,
+                    FILIP_KRAJINOVIC,
                 ],
+                'score': [(6, 3), (4, 6), (6, 4), (7, 6)],
                 'odds': {
-                    FILIP_KRAJINOVIC: 1.22,
                     CEDRIC_MARCEL_STEBE: 4.00,
+                    FILIP_KRAJINOVIC: 1.22,
                 },
                 'prediction': FILIP_KRAJINOVIC,
                 'bet': 3,
@@ -5828,6 +5835,7 @@ DATA = [
                     JAN_LENNARD_STRUFF,
                     CASPER_RUUD,
                 ],
+                'score': [(6, 4), (6, 4), (6, 2)],
                 'odds': {
                     JAN_LENNARD_STRUFF: 1.32,
                     CASPER_RUUD: 3.30,
@@ -5851,12 +5859,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    GEORGE_HARRIS,
                     EGOR_GERASIMOV,
+                    GEORGE_HARRIS,
                 ],
+                'score': [()]
                 'odds': {
-                    GEORGE_HARRIS: 2.40,
                     EGOR_GERASIMOV: 1.55,
+                    GEORGE_HARRIS: 2.40,
                 },
                 'prediction': GEORGE_HARRIS,
                 'bet': 4,
@@ -5890,12 +5899,13 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    JO_WILFRIED_TSONGA,
                     TENNYS_SANDGREN,
+                    JO_WILFRIED_TSONGA,
                 ],
+                'score': [(1, 6), (6, 7), (6, 4), (7, 6), (7, 5)],
                 'odds': {
-                    JO_WILFRIED_TSONGA: 1.40,
                     TENNYS_SANDGREN: 3.00,
+                    JO_WILFRIED_TSONGA: 1.40,
                 },
                 'prediction': JO_WILFRIED_TSONGA,
                 'bet': 3,
@@ -5906,6 +5916,7 @@ DATA = [
                     ANTOINE_HOANG,
                     LEONARDO_MAYER,
                 ],
+                'score': [(3, 6), (6, 2), (6, 7), (6, 1), (6, 3)],
                 'odds': {
                     ANTOINE_HOANG: 2.35,
                     LEONARDO_MAYER: 1.58,
@@ -5916,15 +5927,17 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    IVO_KARLOVIC,
                     FRANCES_TIAFOE,
+                    IVO_KARLOVIC,
                 ],
+                'score': [(6, 2), (6, 3), (1, 2)],
+                'retired': True,
                 'odds': {
-                    IVO_KARLOVIC: 3.80,
                     FRANCES_TIAFOE: 1.26,
+                    IVO_KARLOVIC: 3.80,
                 },
                 'prediction': FRANCES_TIAFOE,
-                'bet': 2,
+                'bet': 0,  # refunded 2,
             },
             {
                 'round': 128,
@@ -5932,6 +5945,7 @@ DATA = [
                     THANASI_KOKKINAKIS,
                     ILYA_IVASHKA,
                 ],
+                'score': [(6, 3), (7, 6), (6, 7), (6, 2)],
                 'odds': {
                     THANASI_KOKKINAKIS: 1.85,
                     ILYA_IVASHKA: 2.00,
@@ -5958,6 +5972,7 @@ DATA = [
                     HENRI_LAAKSONEN,
                     MARCO_CECCHINATO,
                 ],
+                'score': [(7, 6), (7, 6), (2, 6), (3, 6), (7, 6)],
                 'odds': {
                     HENRI_LAAKSONEN: 2.35,
                     MARCO_CECCHINATO: 1.58,
@@ -6030,6 +6045,18 @@ DATA = [
                 'prediction': NICK_KYRGIOS,
                 'bet': 2,
             },
+            {
+                'round': 128,
+                'players': [
+                    EGOR_GERASIMOV,
+                    LLOYD_HARRIS
+                ],
+                'score': [(7, 5), (7, 6), (7, 6)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.56,
+                    LLOYD_HARRIS: 2.35
+                }
+            }
 
             # {
             #     'round': 128,

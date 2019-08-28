@@ -1531,12 +1531,12 @@ DATA_2019_02 = [
                 'round': 512,
                 'players': [
                     MARIUS_COPIL,
-                    SCOTT_TALON_GRIEKSPOOR
+                    TALLON_GRIEKSPOOR
                 ],
                 'score': [(6, 7), (7, 6), (7, 6)],
                 'odds': {
                     MARIUS_COPIL: 1.20,
-                    SCOTT_TALON_GRIEKSPOOR: 4.20
+                    TALLON_GRIEKSPOOR: 4.20
                 }
             },
             {
@@ -1728,12 +1728,12 @@ DATA_2019_02 = [
             {
                 'round': 32,
                 'players': [
-                    SCOTT_TALON_GRIEKSPOOR,
+                    TALLON_GRIEKSPOOR,
                     KAREN_KHACHANOV
                 ],
                 'score': [(3, 6), (6, 3), (6, 2)],
                 'odds': {
-                    SCOTT_TALON_GRIEKSPOOR: 7.50,
+                    TALLON_GRIEKSPOOR: 7.50,
                     KAREN_KHACHANOV: 1.07
                 }
             },
@@ -1841,12 +1841,12 @@ DATA_2019_02 = [
                 'round': 16,
                 'players': [
                     JO_WILFRIED_TSONGA,
-                    SCOTT_TALON_GRIEKSPOOR
+                    TALLON_GRIEKSPOOR
                 ],
                 'score': [(7, 6), (6, 1)],
                 'odds': {
                     JO_WILFRIED_TSONGA: 1.08,
-                    SCOTT_TALON_GRIEKSPOOR: 7.00
+                    TALLON_GRIEKSPOOR: 7.00
                 }
             },
             {
