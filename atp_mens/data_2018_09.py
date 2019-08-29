@@ -4,6 +4,110 @@ from location import *
 
 DATA_2018_09 = [
     {
+        'location': WINSTON_SALEM,
+        'date': '2018-08-19',
+        'matches': [
+
+            # 2018-08-18
+            {
+                'round': 512,
+                'players': [
+                    LUKE_SAVILLE,
+                    JULIAN_ZLOBINSKY
+                ],
+                'score': [(6, 1), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    TOMMY_PAUL,
+                    MAXIMILIAN_NEUCHRIST
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    TOMMY_PAUL: 1.25,
+                    MAXIMILIAN_NEUCHRIST: 3.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BRAYDEN_SCHNUR,
+                    JAMES_DUCKWORTH
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    BRAYDEN_SCHNUR: 2.75,
+                    JAMES_DUCKWORTH: 1.36
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DOMINIK_KOEPFER,
+                    THOMAZ_BELLUCCI
+                ],
+                'score': [(6, 2), (1, 6), (6, 2)],
+                'odds': {
+                    DOMINIK_KOEPFER: 1.67,
+                    THOMAZ_BELLUCCI: 1.83
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    HORACIO_ZEBALLOS,
+                    SKANDER_MANSOURI
+                ],
+                'score': [(6, 4), (2, 6), (6, 4)],
+                'odds': {
+                    HORACIO_ZEBALLOS: 1.11,
+                    SKANDER_MANSOURI: 5.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GUIDO_ANDREOZZI,
+                    KARUE_SELL
+                ],
+                'score': [(3, 6), (6, 3), (6, 2)],
+                'odds': {
+                    GUIDO_ANDREOZZI: 1.57,
+                    KARUE_SELL: 2.25
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FRANKO_SKUGOR,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    FRANKO_SKUGOR: 2.35,
+                    CORENTIN_MOUTET: 1.53
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RADU_ALBOT,
+                    PETROS_CHRYSOCHOS
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    RADU_ALBOT: 1.28,
+                    PETROS_CHRYSOCHOS: 3.30
+                }
+            },
+
+            #
+        ]
+    },
+
+    {
         'location': US_OPEN,
         'date': '2018-09-09',
         'matches': [

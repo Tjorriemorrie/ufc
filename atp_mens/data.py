@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 68.7  24.6    1050    2018 salem 512                      (3, 328), (2, 280), (4, 136), (5, 90)
 # 68.3  27.3    1025    2018 us open final                  (3, 272), (2, 264), (4, 130), (5, 119)
 # 67.7  25.3    954     2018 us open r16 p1                 (3, 272), (2, 234), (4, 140), (5, 133)
 # 66.8  22.2    825     2018 us open r32 p1                 (2, 270), (3, 269), (4, 138), (5, 136)
@@ -6242,6 +6243,36 @@ DATA = [
                 'prediction': REILLY_OPELKA,
                 'bet': 3,
             },
+
+            # 2019-08-30
+            {
+                'round': 64,
+                'players': [
+                    GREGOIRE_BARRERE,
+                    DAVID_GOFFIN,
+                ],
+                'odds': {
+                    GREGOIRE_BARRERE: 10.00,
+                    DAVID_GOFFIN: 1.04,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    PABLO_CUEVAS,
+                    KAMIL_MAJCHRZAK,
+                ],
+                'odds': {
+                    PABLO_CUEVAS: 1.68,
+                    KAMIL_MAJCHRZAK: 2.15,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+
+                ]
+            }
         ]
     }
 ]

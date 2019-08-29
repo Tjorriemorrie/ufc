@@ -175,6 +175,13 @@ def main(hyper_params, train=0):
     # bet_ts_a = -7.406374954672103
     # bet_ts_b = 9.511462858950916
 
+    # bet_set_a, bet_set_b = hyper_params
+    # 1.0   927:219   23.6(957) -> 24.6(1050)
+    bet_set_a = -14.388802334529785
+    bet_set_b = -0.49889845101382346
+    # bet_set_a = -50.24863019301904   # 3.60  # 9.164289878026928   # 0.782462521879341
+    # bet_set_b = -16.45858096616354   # 22.35  # 1.5797297743260086  # -0.7848240797607134
+
     # bet_spd_a, bet_spd_b = hyper_params
     # 0.8   896:127   26.5(963) -> 27.3(1025)
     bet_spd_a = -3.02823569575999
@@ -211,8 +218,6 @@ def main(hyper_params, train=0):
     # bet_sfc_b = -1.1635041360264686  # -0.15  # -0.5308780245959728   # -1.2662003413643186
 
     # bet_set_a, bet_set_b, bet_gms_a, bet_gms_b = hyper_params
-    bet_set_a = -50.24863019301904   # 3.60  # 9.164289878026928   # 0.782462521879341
-    bet_set_b = -16.45858096616354   # 22.35  # 1.5797297743260086  # -0.7848240797607134
     bet_gms_a = -3.609425158741926   # -4.11    # -7.595500659696808  # -0.09150815566456832
     bet_gms_b = -53.424625099684064  # 0.40  # 11.477758336728444  # -6.762735375844737
 
@@ -628,7 +633,7 @@ def main(hyper_params, train=0):
                 bet_multi += bet_spd_multi
                 bet_multis_cat.append(f'spd:{bet_spd_multi:.0f}')
 
-                # sets   906:39
+                # sets
                 if p1_pred > p2_pred:
                     p_set = p1_sets_winrate - p2_sets_winrate
                 else:
@@ -816,7 +821,8 @@ def run():
         # 'odds_a', 'odds_b',
         # 'bet_wnl_a', 'bet_wnl_b',
         # 'bet_ts_a', 'bet_ts_b',
-        'bet_spd_a', 'bet_spd_b',
+        'bet_set_a', 'bet_set_b',       # 1.0
+        # 'bet_spd_a', 'bet_spd_b',     # 0.8
         # 'bet_drs_a', 'bet_drs_b',
         # 'bet_tma_a', 'bet_tma_b',
         # 'bet_tmi_a', 'bet_tmi_b',
