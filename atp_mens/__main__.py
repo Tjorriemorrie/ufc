@@ -7,6 +7,7 @@ import numpy as np
 from cma import CMAEvolutionStrategy, CMAOptions
 from loguru import logger
 from math import sqrt
+from scipy.optimize import minimize
 from scipy.stats import linregress
 from sklearn.preprocessing import MinMaxScaler
 from sortedcontainers import SortedDict
@@ -149,7 +150,7 @@ def main(hyper_params, train=0):
     # bet_pred_a, bet_pred_b = hyper_params
     # 358:651
     bet_pred_a = 3.7065474117806234     
-    bet_pred_b = -0.6653074665192613  
+    bet_pred_b = -0.6653074665192613
     # 11.3  # -28.73  # 1.80  # 0.6856235616721187     # 15.016285526993597
     # -1.8  # -49.87  # 4.04  # -6.498159274389197     # 1.9283642764714313
 
@@ -161,7 +162,7 @@ def main(hyper_params, train=0):
     # bet_odds_b = 1.4676149747678495   # -15.86  # -1.8030234836015318    # 34.207734246228185
 
     # bet_wnl_a, bet_wnl_b = hyper_params
-    # 1009
+    # 1009:0
     bet_wnl_a = 0.5654514217142471
     bet_wnl_b = -1.4060917645166904
     # bet_wnl_a = 9.311648663592006     # -37.06  # -0.4929481517139193   # 6.370072182738196
@@ -174,21 +175,40 @@ def main(hyper_params, train=0):
     # bet_ts_a = -7.406374954672103
     # bet_ts_b = 9.511462858950916
 
-    bet_tmi_a, bet_tmi_b = hyper_params
+    # bet_spd_a, bet_spd_b = hyper_params
+    # 0.8   896:127   26.5(963) -> 27.3(1025)
+    bet_spd_a = -3.02823569575999
+    bet_spd_b = -0.397569194062298
+    # bet_spd_a = -7.938008692553112   # 10.56  # -1.0934665990307584  # 5.673874020818951
+    # bet_spd_b = -3.355911663762627   # -6.84  # -1.8911000017334616  # -1.7829575567634168
+
+    # bet_drs_a, bet_drs_b = hyper_params
+    # 0.7   866:157   21.5(765) -> 22.2(825)
+    bet_drs_a = -1.500885012950977
+    bet_drs_b = 0.2582469626944018
+    # bet_drs_a = 9.764003899248907    # 0.50   # 2.93881738898117     # -5.512606284208406
+    # bet_drs_b = -3.7139970039337182  # -16.57  # -3.7681698240703465  # -1.5899553334356054
+
+    # bet_tma_a, bet_tma_b = hyper_params
+    # 0.4   762:261   24.9(821) -> 25.3(899)
+    bet_tma_a = -2.578165297188432
+    bet_tma_b = -4.173401422622542
+    # bet_tma_a = -14.141558321834657
+    # bet_tma_b = 4.8358084053299715
+
+    # bet_tmi_a, bet_tmi_b = hyper_params
+    # 0.1   696:327   25.2(813) -> 25.3(899)
+    bet_tmi_a = -2.291653188662517
+    bet_tmi_b = -1.7927916772609696
     # bet_tmi_a = -6.613483852552951
     # bet_tmi_b = 4.885771442053525
-    
-    # bet_ts_a, bet_ts_b, bet_tmi_a, bet_tmi_b, bet_tma_a, bet_tma_b = hyper_params
-    bet_tma_a = -14.141558321834657
-    bet_tma_b = 4.8358084053299715
 
-    # bet_drs_a, bet_drs_b, bet_sfc_a, bet_sfc_b, bet_spd_a, bet_spd_b = hyper_params
-    bet_drs_a = 9.764003899248907    # 0.50   # 2.93881738898117     # -5.512606284208406
-    bet_drs_b = -3.7139970039337182  # -16.57  # -3.7681698240703465  # -1.5899553334356054
-    bet_sfc_a = 16.151022486277647   # -0.33   # -1.5656463020300377   # 1.6333141987438788
-    bet_sfc_b = -1.1635041360264686  # -0.15  # -0.5308780245959728   # -1.2662003413643186
-    bet_spd_a = -7.938008692553112   # 10.56  # -1.0934665990307584  # 5.673874020818951
-    bet_spd_b = -3.355911663762627   # -6.84  # -1.8911000017334616  # -1.7829575567634168
+    # bet_sfc_a, bet_sfc_b = hyper_params
+    # 0.0   1023:0   25.3(954) -> 25.3(954)
+    bet_sfc_a = -1.1049253843439304
+    bet_sfc_b = -2.07704694249136
+    # bet_sfc_a = 16.151022486277647   # -0.33   # -1.5656463020300377   # 1.6333141987438788
+    # bet_sfc_b = -1.1635041360264686  # -0.15  # -0.5308780245959728   # -1.2662003413643186
 
     # bet_set_a, bet_set_b, bet_gms_a, bet_gms_b = hyper_params
     bet_set_a = -50.24863019301904   # 3.60  # 9.164289878026928   # 0.782462521879341
@@ -708,7 +728,7 @@ def main(hyper_params, train=0):
         total_payouts = sum(payouts)
         roi = total_payouts / sum(bet_amts)
         res = -roi - (total_payouts / 5000)
-        print(f'Score: {-res*100:.2f}  ROI {roi * 100:.1f}%  Profit ${total_payouts:.0f}')
+        print(f'Score: {-res*100:.2f}  ROI {roi * 100:.1f}%  Profit ${total_payouts:.0f} {hyper_params}')
         return res
     else:
         summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_multis, bet_multis_cat, actual_debug, odds_outcomes)
@@ -774,11 +794,11 @@ def summary(reg, accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts,
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
-        sheet = -37.81
-        if abs(sum(tab) - sheet) > 0.01:
-            for l in actual_debug:
-                logger.warning(l)
-            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        # sheet = -37.81
+        # if abs(sum(tab) - sheet) > 0.01:
+        #     for l in actual_debug:
+        #         logger.warning(l)
+        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 # age
@@ -792,23 +812,29 @@ def run():
     train = 0
 
     names = [
-        # 'bet_drs_a', 'bet_drs_b', 'bet_sfc_a', 'bet_sfc_b', 'bet_spd_a', 'bet_spd_b',
-        # 'bet_set_a', 'bet_set_b', 'bet_gms_a', 'bet_gms_b',
-        # 'bet_tie_a', 'bet_tie_b', 'bet_ups_a', 'bet_ups_b',
-        # 'bet_ts_a', 'bet_ts_b', 'bet_tmi_a', 'bet_tmi_b', 'bet_tma_a', 'bet_tma_b',
         # 'pred_a', 'pred_b',
         # 'odds_a', 'odds_b',
         # 'bet_wnl_a', 'bet_wnl_b',
         # 'bet_ts_a', 'bet_ts_b',
-        'bet_tmi_a', 'bet_tmi_b',
+        'bet_spd_a', 'bet_spd_b',
+        # 'bet_drs_a', 'bet_drs_b',
+        # 'bet_tma_a', 'bet_tma_b',
+        # 'bet_tmi_a', 'bet_tmi_b',
+        # 'bet_sfc_a', 'bet_sfc_b',
+
+        # 'bet_set_a', 'bet_set_b', 'bet_gms_a', 'bet_gms_b',
+        # 'bet_tie_a', 'bet_tie_b', 'bet_ups_a', 'bet_ups_b',
     ]
     params = [
-        0, 0
+        0,
+        0
     ]
-    bounds = [[-np.inf],
-              [np.inf]]
+    bounds = [
+        [-np.inf], 
+        [np.inf]
+    ]
     assert len(params) == len(names)
-    # assert len(params) == len(bounds[0])
+    assert len(params) == len(bounds)
 
     if train:
         sigma = 1
@@ -835,6 +861,13 @@ def run():
         print('')
         print('xfavorite: distribution mean in "phenotype" space, to be considered as current best estimate of the optimum')
         print(list(es.result[5]))
+
+        # res = minimize(main, params, (train,), bounds=bounds)
+        # print('')
+        # print(f'{res.nit} iterations')
+        # print(f'Success: {res.success} {res.message}')
+        # print(f'Solution: {res.x}')
+        # return
 
     else:
         main(params)
