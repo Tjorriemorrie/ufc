@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 68.6  24.1    1050    2018-09-30                          (3, 337), (2, 288), (4, 138), (5, 91)
 # 68.7  24.6    1050    2018 salem 512                      (3, 328), (2, 280), (4, 136), (5, 90)
 # 68.3  27.3    1025    2018 us open final                  (3, 272), (2, 264), (4, 130), (5, 119)
 # 67.7  25.3    954     2018 us open r16 p1                 (3, 272), (2, 234), (4, 140), (5, 133)
@@ -6104,12 +6105,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    PABLO_CUEVAS,
                     KAMIL_MAJCHRZAK,
+                    PABLO_CUEVAS,
                 ],
+                'score': [(6, 7), (6, 4), (2, 6), (6, 4), (6, 1)],
                 'odds': {
-                    PABLO_CUEVAS: 1.68,
                     KAMIL_MAJCHRZAK: 2.15,
+                    PABLO_CUEVAS: 1.68,
                 },
                 'prediction': PABLO_CUEVAS,
                 'bet': 3,
@@ -6159,6 +6161,7 @@ DATA = [
                     FELICIANO_LOPEZ,
                     YOSHIHITO_NISHIOKA,
                 ],
+                'score': [(6, 7), (6, 0), (6, 4), (6, 4)],
                 'odds': {
                     FELICIANO_LOPEZ: 2.80,
                     YOSHIHITO_NISHIOKA: 1.42,
@@ -6185,6 +6188,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                     RICARDAS_BERANKIS,
                 ],
+                'score': [(6, 4), (6, 7), (6, 2), (6, 0)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 1.24,
                     RICARDAS_BERANKIS: 4.00,
@@ -6198,6 +6202,7 @@ DATA = [
                     NOVAK_DJOKOVIC,
                     JUAN_IGNACIO_LONDERO,
                 ],
+                'score': [(6, 4), (7, 6), (6, 1)],
                 'odds': {
                     NOVAK_DJOKOVIC: 1.00,
                     JUAN_IGNACIO_LONDERO: 17.00,
@@ -6236,6 +6241,7 @@ DATA = [
                     REILLY_OPELKA,
                     DOMINIK_KOEPFER,
                 ],
+                'score': [(6, 4), (6, 4), (7, 6)],
                 'odds': {
                     REILLY_OPELKA: 1.38,
                     DOMINIK_KOEPFER: 3.00,
@@ -6244,16 +6250,31 @@ DATA = [
                 'bet': 3,
             },
 
+            # 2019-08-29
+            {
+                'round': 64,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    CHRISTIAN_GARIN
+                ],
+                'score': [(6, 3), (7, 5), (6, 3)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.20,
+                    CHRISTIAN_GARIN: 4.00
+                }
+            },
+
             # 2019-08-30
             {
                 'round': 64,
                 'players': [
-                    GREGOIRE_BARRERE,
                     DAVID_GOFFIN,
+                    GREGOIRE_BARRERE,
                 ],
+                'score': [(6, 2), (6, 2), (6, 2)],
                 'odds': {
-                    GREGOIRE_BARRERE: 10.00,
                     DAVID_GOFFIN: 1.05,
+                    GREGOIRE_BARRERE: 10.00,
                 },
                 'prediction': DAVID_GOFFIN,
                 'bet': 1,
@@ -6277,6 +6298,7 @@ DATA = [
                     DANIEL_EVANS,
                     LUCAS_POUILLE,
                 ],
+                'score': [(6, 4), (6, 3), (6, 7), (6, 4)],
                 'odds': {
                     DANIEL_EVANS: 2.05,
                     LUCAS_POUILLE: 1.80,
@@ -6290,11 +6312,12 @@ DATA = [
                     DENIS_KUDLA,
                     DUSAN_LAJOVIC,
                 ],
+                'score': [(7, 5), (7, 5), (0, 6), (6, 3)],
                 'odds': {
                     DENIS_KUDLA: 2.70,
                     DUSAN_LAJOVIC: 1.45,
                 },
-                'prediction': None,
+                # na
             },
             {
                 'round': 64,
@@ -6302,6 +6325,7 @@ DATA = [
                     ALEXANDER_ZVEREV,
                     FRANCES_TIAFOE,
                 ],
+                'score': [(6, 3), (3, 6), (6, 2), (2, 6), (6, 3)],
                 'odds': {
                     ALEXANDER_ZVEREV: 1.55,
                     FRANCES_TIAFOE: 2.50,
@@ -6315,6 +6339,7 @@ DATA = [
                     MATTEO_BERRETTINI,
                     JORDAN_THOMPSON,
                 ],
+                'score': [(7, 5), (7, 6), (4, 6), (6, 1)],
                 'odds': {
                     MATTEO_BERRETTINI: 1.52,
                     JORDAN_THOMPSON: 2.50,
@@ -6325,12 +6350,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    JENSON_BROOKSBY,
                     NIKOLOZ_BASILASHVILI,
+                    JENSON_BROOKSBY,
                 ],
+                'score': [(3, 6), (7, 6), (7, 5), (6, 2)],
                 'odds': {
-                    JENSON_BROOKSBY: 4.20,
                     NIKOLOZ_BASILASHVILI: 1.22,
+                    JENSON_BROOKSBY: 4.20,
                 },
                 'prediction': JENSON_BROOKSBY,
                 'bet': 7,
@@ -6351,12 +6377,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    HUGO_DELLIEN,
                     DANILL_MEDVEDEV,
+                    HUGO_DELLIEN,
                 ],
+                'score': [(6, 3), (7, 5), (5, 7), (6, 3)],
                 'odds': {
-                    HUGO_DELLIEN: 11.00,
                     DANILL_MEDVEDEV: 1.02,
+                    HUGO_DELLIEN: 11.00,
                 },
                 'prediction': DANILL_MEDVEDEV,
                 'bet': 1,
@@ -6393,6 +6420,7 @@ DATA = [
                     STAN_WAWRINKA,
                     JEREMY_CHARDY,
                 ],
+                'score': [(6, 4), (6, 3), (6, 7), (6, 3)],
                 'odds': {
                     STAN_WAWRINKA: 1.30,
                     JEREMY_CHARDY: 3.40,
@@ -6406,6 +6434,7 @@ DATA = [
                     ALJAZ_BEDENE,
                     BENOIT_PAIRE,
                 ],
+                'score': [(4, 6), (6, 7), (6, 2), (7, 5), (7, 6)],
                 'odds': {
                     ALJAZ_BEDENE: 3.00,
                     BENOIT_PAIRE: 1.38,
@@ -6432,6 +6461,7 @@ DATA = [
                     JOHN_ISNER,
                     JAN_LENNARD_STRUFF,
                 ],
+                'score': [(6, 3), (7, 6), (7, 6)],
                 'odds': {
                     JOHN_ISNER: 1.70,
                     JAN_LENNARD_STRUFF: 2.00,
