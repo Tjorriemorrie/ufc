@@ -6244,13 +6244,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    REILLY_OPELKA,
                     DOMINIK_KOEPFER,
+                    REILLY_OPELKA,
                 ],
                 'score': [(6, 4), (6, 4), (7, 6)],
                 'odds': {
-                    REILLY_OPELKA: 1.38,
                     DOMINIK_KOEPFER: 3.00,
+                    REILLY_OPELKA: 1.38,
                 },
                 'prediction': REILLY_OPELKA,
                 'bet': 3,
@@ -6635,6 +6635,112 @@ DATA = [
                 },
                 'prediction': MARIN_CILIC,
                 'bet': 2,
+            },
+
+            # 2019-08-31
+            {
+                'round': 32,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    KEI_NISHIKORI,
+                ],
+                'odds': {
+                    ALEX_DE_MINAUR: 2.40,
+                    KEI_NISHIKORI: 1.55,
+                },
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 9,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROGER_FEDERER,
+                    DANIEL_EVANS,
+                ],
+                'odds': {
+                    ROGER_FEDERER: 1.14,
+                    DANIEL_EVANS: 5.50,
+                },
+                'prediction': ROGER_FEDERER,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    DAVID_GOFFIN,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 2.90,
+                    DAVID_GOFFIN: 1.40,
+                },
+                'prediction': DAVID_GOFFIN,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    KAMIL_MAJCHRZAK,
+                ],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.24,
+                    KAMIL_MAJCHRZAK: 4.00,
+                },
+                'prediction': GRIGOR_DIMITROV,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    STAN_WAWRINKA,
+                    PAOLO_LORENZI,
+                ],
+                'odds': {
+                    STAN_WAWRINKA: 1.03,
+                    PAOLO_LORENZI: 11.00,
+                },
+                'prediction': STAN_WAWRINKA,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DOMINIK_KOEPFER,
+                    NIKOLOZ_BASILASHVILI,
+                ],
+                'odds': {
+                    DOMINIK_KOEPFER: 2.20,
+                    NIKOLOZ_BASILASHVILI: 1.65,
+                },
+                'prediction': NIKOLOZ_BASILASHVILI,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    DENIS_KUDLA,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.05,
+                    DENIS_KUDLA: 9.00,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    DANIIL_MEDVEDEV,
+                ],
+                'odds': {
+                    FELICIANO_LOPEZ: 3.00,
+                    DANIIL_MEDVEDEV: 1.38,
+                },
+                'prediction': FELICIANO_LOPEZ,
+                'bet': 9,
             },
 
             #
