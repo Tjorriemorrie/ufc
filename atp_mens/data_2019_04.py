@@ -1499,12 +1499,12 @@ DATA_2019_04 = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     JOAO_SOUSA
                 ],
                 'score': [(6, 1), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.54,
+                    DANIIL_MEDVEDEV: 1.54,
                     JOAO_SOUSA: 2.49
                 }
             },
@@ -1697,12 +1697,12 @@ DATA_2019_04 = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     RADU_ALBOT
                 ],
                 'score': [(6, 1), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.43,
+                    DANIIL_MEDVEDEV: 1.43,
                     RADU_ALBOT: 2.75
                 }
             },
@@ -1807,12 +1807,12 @@ DATA_2019_04 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     STEFANOS_TSITSIPAS
                 ],
                 'score': [(6, 2), (1, 6), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 2.00,
+                    DANIIL_MEDVEDEV: 2.00,
                     STEFANOS_TSITSIPAS: 1.79
                 }
             },
@@ -1905,12 +1905,12 @@ DATA_2019_04 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     NOVAK_DJOKOVIC
                 ],
                 'score': [(6, 3), (4, 6), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 4.40,
+                    DANIIL_MEDVEDEV: 4.40,
                     NOVAK_DJOKOVIC: 1.20
                 }
             },
@@ -1920,12 +1920,12 @@ DATA_2019_04 = [
                 'round': 4,
                 'players': [
                     DUSAN_LAJOVIC,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(7, 5), (6, 1)],
                 'odds': {
                     DUSAN_LAJOVIC: 2.75,
-                    DANILL_MEDVEDEV: 1.42
+                    DANIIL_MEDVEDEV: 1.42
                 }
             },
             {
@@ -2533,12 +2533,12 @@ DATA_2019_04 = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     ALBERT_RAMOS_VINOLAS
                 ],
                 'score': [(6, 3), (2, 6), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.44,
+                    DANIIL_MEDVEDEV: 1.44,
                     ALBERT_RAMOS_VINOLAS: 2.60
                 }
             },
@@ -2607,12 +2607,12 @@ DATA_2019_04 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MACKENZIE_MCDONALD
                 ],
                 'score': [(6, 3), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.17,
+                    DANIIL_MEDVEDEV: 1.17,
                     MACKENZIE_MCDONALD: 4.60
                 }
             },
@@ -2669,12 +2669,12 @@ DATA_2019_04 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     NICOLAS_JARRY
                 ],
                 'score': [(6, 3), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.29,
+                    DANIIL_MEDVEDEV: 1.29,
                     NICOLAS_JARRY: 3.83
                 }
             },
@@ -2719,12 +2719,12 @@ DATA_2019_04 = [
             {
                 'round': 4,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     KEI_NISHIKORI
                 ],
                 'score': [(6, 4), (3, 6), (7, 5)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.95,
+                    DANIIL_MEDVEDEV: 1.95,
                     KEI_NISHIKORI: 1.80
                 }
             },
@@ -2746,7 +2746,7 @@ DATA_2019_04 = [
                 'round': 2,
                 'players': [
                     DOMINIC_THIEM,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 4), (6, 0)]
             }

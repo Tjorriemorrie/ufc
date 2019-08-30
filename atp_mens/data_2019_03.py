@@ -305,12 +305,12 @@ DATA_2019_03 = [
                 'round': 32,
                 'players': [
                     RICARDAS_BERANKIS,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 3), (6, 3)],
                 'odds': {
                     RICARDAS_BERANKIS: 5.00,
-                    DANILL_MEDVEDEV: 1.13
+                    DANIIL_MEDVEDEV: 1.13
                 }
             },
             {
@@ -2706,12 +2706,12 @@ DATA_2019_03 = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MACKENZIE_MCDONALD
                 ],
                 'score': [(7, 5), (6, 0)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.23,
+                    DANIIL_MEDVEDEV: 1.23,
                     MACKENZIE_MCDONALD: 4.13
                 }
             },
@@ -2891,12 +2891,12 @@ DATA_2019_03 = [
                 'round': 32,
                 'players': [
                     FILIP_KRAJINOVIC,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 3), (6, 2)],
                 'odds': {
                     FILIP_KRAJINOVIC: 3.35,
-                    DANILL_MEDVEDEV: 1.34
+                    DANIIL_MEDVEDEV: 1.34
                 }
             },
             {
@@ -4311,12 +4311,12 @@ DATA_2019_03 = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     ADRIAN_MANNARINO
                 ],
                 'score': [(6, 2), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.31,
+                    DANIIL_MEDVEDEV: 1.31,
                     ADRIAN_MANNARINO: 3.49
                 }
             },
@@ -4543,12 +4543,12 @@ DATA_2019_03 = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     REILLY_OPELKA
                 ],
                 'score': [(7, 6), (6, 7), (7, 6)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.29,
+                    DANIIL_MEDVEDEV: 1.29,
                     REILLY_OPELKA: 3.80
                 }
             },
@@ -4680,12 +4680,12 @@ DATA_2019_03 = [
                 'round': 16,
                 'players': [
                     ROGER_FEDERER,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 4), (6, 2)],
                 'odds': {
                     ROGER_FEDERER: 1.31,
-                    DANILL_MEDVEDEV: 3.50
+                    DANIIL_MEDVEDEV: 3.50
                 }
             },
             {

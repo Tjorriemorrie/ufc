@@ -323,12 +323,12 @@ DATA_2019_07 = [
             {
                 'round': 128,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     PAOLO_LORENZI
                 ],
                 'score': [(6, 3), (7, 6), (7, 6)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.01,
+                    DANIIL_MEDVEDEV: 1.01,
                     PAOLO_LORENZI: 33.64
                 }
             },
@@ -929,12 +929,12 @@ DATA_2019_07 = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     ALEXEI_POPYRIN
                 ],
                 'score': [(6, 7), (6, 1), (6, 4), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.21,
+                    DANIIL_MEDVEDEV: 1.21,
                     ALEXEI_POPYRIN: 4.30
                 }
             },
@@ -1222,12 +1222,12 @@ DATA_2019_07 = [
                 'round': 32,
                 'players': [
                     DAVID_GOFFIN,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(4, 6), (6, 2), (3, 6), (6, 3), (7, 5)],
                 'odds': {
                     DAVID_GOFFIN: 1.91,
-                    DANILL_MEDVEDEV: 1.91
+                    DANIIL_MEDVEDEV: 1.91
                 }
             },
             {

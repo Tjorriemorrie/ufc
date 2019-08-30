@@ -2,19 +2,19 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
-# 68.6  24.1    1050    2018-09-30                          (3, 337), (2, 288), (4, 138), (5, 91)
+# 71.3  30.2    1306    2018 winston done                   (2, 444), (3, 166), (1, 115), (4, 110)
+# 68.5  25.7    1202    2018 winston r32                    (2, 375), (3, 243), (4, 112), (5, 86)
+# 68.6  26.5    1312    2018 winston r64                    (3, 319), (2, 253), (4, 129), (5, 98)
+# 68.6  24.1    1050    2019-09-30                          (3, 337), (2, 288), (4, 138), (5, 91)
 # 68.7  24.6    1050    2018 salem 512                      (3, 328), (2, 280), (4, 136), (5, 90)
 # 68.3  27.3    1025    2018 us open final                  (3, 272), (2, 264), (4, 130), (5, 119)
-# 67.7  25.3    954     2018 us open r16 p1                 (3, 272), (2, 234), (4, 140), (5, 133)
-# 66.8  22.2    825     2018 us open r32 p1                 (2, 270), (3, 269), (4, 138), (5, 136)
-# 68.4  25.2    908     2018 us open r64                    (3, 313), (2, 248), (4, 203), (5, 136)
-# 69.0  19.4    643     2018-08-28 results                  (3, 320), (2, 272), (4, 213), (5, 129)
 
+# 67.7  25.3    954     2018 us open r16 p1                 (3, 272), (2, 234), (4, 140), (5, 133)
+# 68.4  25.2    908     2018 us open r64                    (3, 313), (2, 248), (4, 203), (5, 136)
 # 65.2  13.0    648     2018 us open 3rd qual               (6, 243), (4, 212), (3, 179), (5, 152)
 # 66.7  14.2    717     2018 us open 1st qualification      (4, 233), (6, 204), (3, 181), (7, 180)
+#
 # 68.6  26.2    459     sst petersburg 2018                 (2, 436), (1, 385), (3, 127), (4, 28)
-# 66.7  36.5    703     opt set & gms                       (1, 439), (2, 200), (3, 192), (4, 70)
-
 # 66.7  35.3    967     opt pred & odds & wnl               (1, 398), (3, 175), (4, 148), (6, 59)
 # 65.4  20.6    551     opt win losses                      (3, 277), (1, 249), (5, 185), (2, 103)
 # 69.0  30.8    383     opt subsample * lr & set & gms      (1, 589), (2, 287), (3, 25), (4, 1)
@@ -454,15 +454,15 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     BJORN_FRATANGELO,
                 ],
                 'score': [(6, 3), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.22,
+                    DANIIL_MEDVEDEV: 1.22,
                     BJORN_FRATANGELO: 4.20,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 11,
             },
             {
@@ -695,15 +695,15 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     FRANCES_TIAFOE,
                 ],
                 'score': [(6, 2), (7, 5)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.45,
+                    DANIIL_MEDVEDEV: 1.45,
                     FRANCES_TIAFOE: 2.70,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 3,
             },
             {
@@ -749,12 +749,12 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MARIN_CILIC,
                 ],
                 'score': [(6, 4), (7, 6)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.68,
+                    DANIIL_MEDVEDEV: 1.68,
                     MARIN_CILIC: 2.15,
                 },
                 'prediction': MARIN_CILIC,
@@ -793,12 +793,12 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     PETER_GOJOWCZYK
                 ],
                 'score': [(6, 2), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.16,
+                    DANIIL_MEDVEDEV: 1.16,
                     PETER_GOJOWCZYK: 5.00,
                 },
                 'prediction': PETER_GOJOWCZYK,
@@ -824,12 +824,12 @@ DATA = [
                 'round': 2,
                 'players': [
                     NICK_KYRGIOS,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(7, 6), (7, 6)],
                 'odds': {
                     NICK_KYRGIOS: 2.10,
-                    DANILL_MEDVEDEV: 1.65,
+                    DANIIL_MEDVEDEV: 1.65,
                 },
             }
         ]
@@ -2660,15 +2660,15 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     KYLE_EDMUND
                 ],
                 'score': [(6, 3), (6, 0)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.48,
+                    DANIIL_MEDVEDEV: 1.48,
                     KYLE_EDMUND: 2.50,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 4,
             },
             {
@@ -2768,15 +2768,15 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     CHRISTIAN_GARIN
                 ],
                 'score': [(6, 3), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.16,
+                    DANIIL_MEDVEDEV: 1.16,
                     CHRISTIAN_GARIN: 5.00,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 4,
             },
             {
@@ -2862,15 +2862,15 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     DOMINIC_THIEM
                 ],
                 'score': [(6, 3), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.60,
+                    DANIIL_MEDVEDEV: 1.60,
                     DOMINIC_THIEM: 2.30,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 2,
             },
             {
@@ -2920,12 +2920,12 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     KAREN_KHACHANOV
                 ],
                 'score': [(6, 1), (7, 6)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.49,
+                    DANIIL_MEDVEDEV: 1.49,
                     KAREN_KHACHANOV: 2.55
                 }
             },
@@ -2948,12 +2948,12 @@ DATA = [
                 'round': 2,
                 'players': [
                     RAFAEL_NADAL,
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                 ],
                 'score': [(6, 3), (6, 0)],
                 'odds': {
                     RAFAEL_NADAL: 1.40,
-                    DANILL_MEDVEDEV: 2.90,
+                    DANIIL_MEDVEDEV: 2.90,
                 },
             }
         ]
@@ -3465,15 +3465,15 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     KYLE_EDMUND,
                 ],
                 'score': [(6, 2), (7, 5)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.42,
+                    DANIIL_MEDVEDEV: 1.42,
                     KYLE_EDMUND: 2.80,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 2,
             },
             {
@@ -3682,12 +3682,12 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     BENOIT_PAIRE
                 ],
                 'score': [(7, 6), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.25,
+                    DANIIL_MEDVEDEV: 1.25,
                     BENOIT_PAIRE: 3.45
                 }
             },
@@ -3804,15 +3804,15 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     JAN_LENNARD_STRUFF,
                 ],
                 'score': [(6, 2), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.40,
+                    DANIIL_MEDVEDEV: 1.40,
                     JAN_LENNARD_STRUFF: 2.80,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 2,
             },
             {
@@ -3905,12 +3905,12 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     ANDREY_RUBLEV,
                 ],
                 'score': [(6, 2), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.30,
+                    DANIIL_MEDVEDEV: 1.30,
                     ANDREY_RUBLEV: 3.40,
                 },
                 'prediction': ANDREY_RUBLEV,
@@ -3949,12 +3949,12 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     NOVAK_DJOKOVIC,
                 ],
                 'score': [(3, 6), (6, 3), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 3.40,
+                    DANIIL_MEDVEDEV: 3.40,
                     NOVAK_DJOKOVIC: 1.30,
                 },
                 'prediction': NOVAK_DJOKOVIC,
@@ -3965,15 +3965,15 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     DAVID_GOFFIN,
                 ],
                 'score': [(7, 6), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.40,
+                    DANIIL_MEDVEDEV: 1.40,
                     DAVID_GOFFIN: 2.90,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 4,
             }
         ]
@@ -5284,12 +5284,12 @@ DATA = [
             {
                 'round': 128,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     PRAJNESH_GUNNESWARAN,
                 ],
                 'score': [(6, 4), (6, 1), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.00,
+                    DANIIL_MEDVEDEV: 1.00,
                     PRAJNESH_GUNNESWARAN: 21.00,
                 }
             },
@@ -6119,12 +6119,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
+                    DANIIL_MEDVEDEV,
                     HUGO_DELLIEN,
-                    DANILL_MEDVEDEV,
                 ],
+                'score': [(6, 3), (7, 5), (5, 7), (6, 3)],
                 'odds': {
+                    DANIIL_MEDVEDEV: 1.02,
                     HUGO_DELLIEN: 12.00,
-                    DANILL_MEDVEDEV: 1.02,
                 },
                 'prediction': HUGO_DELLIEN,
                 'bet': 5,
@@ -6135,6 +6136,7 @@ DATA = [
                     DANIEL_EVANS,
                     LUCAS_POUILLE,
                 ],
+                'score': [(6, 4), (6, 3), (6, 7), (6, 4)],
                 'odds': {
                     DANIEL_EVANS: 1.95,
                     LUCAS_POUILLE: 1.85,
@@ -6145,12 +6147,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    MIOMIR_KECMANOVIC,
                     PAOLO_LORENZI,
+                    MIOMIR_KECMANOVIC,
                 ],
+                'score': [(7, 6), (6, 7), (7, 6), (3, 6), (6, 3)],
                 'odds': {
-                    MIOMIR_KECMANOVIC: 1.05,
                     PAOLO_LORENZI: 9.00,
+                    MIOMIR_KECMANOVIC: 1.05,
                 },
                 'prediction': MIOMIR_KECMANOVIC,
                 'bet': 3,
@@ -6175,6 +6178,7 @@ DATA = [
                     STAN_WAWRINKA,
                     JEREMY_CHARDY,
                 ],
+                'score': [(6, 4), (6, 3), (6, 7), (6, 3)],
                 'odds': {
                     STAN_WAWRINKA: 1.30,
                     JEREMY_CHARDY: 3.40,
@@ -6212,12 +6216,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    GREGOIRE_BARRERE,
                     DAVID_GOFFIN,
+                    GREGOIRE_BARRERE,
                 ],
+                'score': [(6, 2), (6, 2), (6, 2)],
                 'odds': {
-                    GREGOIRE_BARRERE: 9.00,
                     DAVID_GOFFIN: 1.05,
+                    GREGOIRE_BARRERE: 9.00,
                 },
                 'prediction': DAVID_GOFFIN,
                 'bet': 1,
@@ -6225,12 +6230,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    JENSON_BROOKSBY,
                     NIKOLOZ_BASILASHVILI,
+                    JENSON_BROOKSBY,
                 ],
+                'score': [(3, 6), (7, 6), (7, 5), (6, 2)],
                 'odds': {
-                    JENSON_BROOKSBY: 4.20,
                     NIKOLOZ_BASILASHVILI: 1.22,
+                    JENSON_BROOKSBY: 4.20,
                 },
                 'prediction': JENSON_BROOKSBY,
                 'bet': 5,
@@ -6282,12 +6288,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    PABLO_CUEVAS,
                     KAMIL_MAJCHRZAK,
+                    PABLO_CUEVAS,
                 ],
+                'score': [(6, 7), (6, 4), (2, 6), (6, 4), (6, 1)],
                 'odds': {
-                    PABLO_CUEVAS: 1.75,
                     KAMIL_MAJCHRZAK: 2.15,
+                    PABLO_CUEVAS: 1.75,
                 },
                 'prediction': PABLO_CUEVAS,
                 'bet': 3,
@@ -6367,6 +6374,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                     RICARDAS_BERANKIS,
                 ],
+                'score': [(6, 4), (6, 7), (6, 2), (6, 0)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 1.24,
                     RICARDAS_BERANKIS: 4.00,
@@ -6377,26 +6385,27 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     HUGO_DELLIEN,
                 ],
                 'score': [(6, 3), (7, 5), (5, 7), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.02,
+                    DANIIL_MEDVEDEV: 1.02,
                     HUGO_DELLIEN: 11.00,
                 },
-                'prediction': DANILL_MEDVEDEV,
+                'prediction': DANIIL_MEDVEDEV,
                 'bet': 1,
             },
             {
                 'round': 64,
                 'players': [
-                    MIOMIR_KECMANOVIC,
                     PAOLO_LORENZI,
+                    MIOMIR_KECMANOVIC,
                 ],
+                'score': [(7, 6), (6, 7), (7, 6), (3, 6), (6, 3)],
                 'odds': {
-                    MIOMIR_KECMANOVIC: 1.05,
                     PAOLO_LORENZI: 9.00,
+                    MIOMIR_KECMANOVIC: 1.05,
                 },
                 'prediction': MIOMIR_KECMANOVIC,
                 'bet': 3,
@@ -6407,6 +6416,7 @@ DATA = [
                     FELICIANO_LOPEZ,
                     YOSHIHITO_NISHIOKA,
                 ],
+                'score': [(6, 7), (6, 0), (6, 4), (6, 4)],
                 'odds': {
                     FELICIANO_LOPEZ: 2.90,
                     YOSHIHITO_NISHIOKA: 1.40,
@@ -6448,6 +6458,7 @@ DATA = [
                     ALEXEI_POPYRIN,
                     MIKHAIL_KUKUSHKIN,
                 ],
+                'score': [(2, 6), (7, 5), (6, 3), (6, 2)],
                 'odds': {
                     ALEXEI_POPYRIN: 2.05,
                     MIKHAIL_KUKUSHKIN: 1.75,
@@ -6475,6 +6486,7 @@ DATA = [
                     PABLO_ANDUJAR,
                     LORENZO_SONEGO,
                 ],
+                'score': [(6, 2), (6, 4), (6, 2)],
                 'odds': {
                     PABLO_ANDUJAR: 3.60,
                     LORENZO_SONEGO: 1.28,
@@ -6488,6 +6500,7 @@ DATA = [
                     ALEXANDER_BUBLIK,
                     THOMAS_FABBIANO,
                 ],
+                'score': [(6, 7), (5, 7), (6, 4), (6, 3), (6, 3)],
                 'odds': {
                     ALEXANDER_BUBLIK: 2.50,
                     THOMAS_FABBIANO: 1.52,
@@ -6501,12 +6514,14 @@ DATA = [
                     ANDREY_RUBLEV,
                     GILLES_SIMON,
                 ],
+                'score': [(6, 2)],
+                'retired': True,
                 'odds': {
                     ANDREY_RUBLEV: 1.28,
                     GILLES_SIMON: 3.80,
                 },
                 'prediction': ANDREY_RUBLEV,
-                'bet': 3,
+                'bet': 0,  # refunded 3,
             },
             {
                 'round': 64,
@@ -6514,6 +6529,7 @@ DATA = [
                     TENNYS_SANDGREN,
                     VASEK_POSPISIL,
                 ],
+                'score': [(6, 3), (6, 7), (6, 3), (6, 4)],
                 'odds': {
                     TENNYS_SANDGREN: 1.52,
                     VASEK_POSPISIL: 2.50,
@@ -6524,12 +6540,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    ANTOINE_HOANG,
                     NICK_KYRGIOS,
+                    ANTOINE_HOANG,
                 ],
+                'score': [(6, 4 , (6, 2), (6, 4))],
                 'odds': {
-                    ANTOINE_HOANG: 7.50,
                     NICK_KYRGIOS: 1.08,
+                    ANTOINE_HOANG: 7.50,
                 },
                 'prediction': NICK_KYRGIOS,
                 'bet': 2,
@@ -6537,12 +6554,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    HENRI_LAAKSONEN,
                     DENIS_SHAPOVALOV,
+                    HENRI_LAAKSONEN,
                 ],
+                'score': [(6, 4), (7, 6), (6, 2)],
                 'odds': {
-                    HENRI_LAAKSONEN: 8.00,
                     DENIS_SHAPOVALOV: 1.07,
+                    HENRI_LAAKSONEN: 8.00,
                 },
                 'prediction': DENIS_SHAPOVALOV,
                 'bet': 2,
@@ -6553,6 +6571,7 @@ DATA = [
                     DIEGO_SCHWARTZMAN,
                     EGOR_GERASIMOV,
                 ],
+                'score': [(6, 4), (6, 2), (6, 0)],
                 'odds': {
                     DIEGO_SCHWARTZMAN: 1.12,
                     EGOR_GERASIMOV: 5.50,
@@ -6566,6 +6585,7 @@ DATA = [
                     GAEL_MONFILS,
                     MARIUS_COPIL,
                 ],
+                'score': [(6, 3), (6, 2), (6, 2)],
                 'odds': {
                     GAEL_MONFILS: 1.14,
                     MARIUS_COPIL: 5.50,
@@ -6576,12 +6596,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    FERNANDO_VERDASCO,
                     HYEON_CHUNG,
+                    FERNANDO_VERDASCO,
                 ],
+                'score': [(1, 6), (2, 6), (7, 5), (6, 3), (7, 6)],
                 'odds': {
-                    FERNANDO_VERDASCO: 2.05,
                     HYEON_CHUNG: 1.75,
+                    FERNANDO_VERDASCO: 2.05,
                 },
                 'prediction': FERNANDO_VERDASCO,
                 'bet': 4,
@@ -6589,25 +6610,28 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    THANASI_KOKKINAKIS,
                     RAFAEL_NADAL,
+                    THANASI_KOKKINAKIS,
                 ],
+                'score': [],
+                'retired': True,
                 'odds': {
-                    THANASI_KOKKINAKIS: 10.00,
                     RAFAEL_NADAL: 1.04,
+                    THANASI_KOKKINAKIS: 10.00,
                 },
                 'prediction': THANASI_KOKKINAKIS,
-                'bet': 10,
+                'bet': 0,  # refunded 10,
             },
             {
                 'round': 64,
                 'players': [
-                    CEDRIC_MARCEL_STEBE,
                     MARIN_CILIC,
+                    CEDRIC_MARCEL_STEBE,
                 ],
+                'score': [(4, 6), (6, 3), (7, 5), (6, 3)],
                 'odds': {
-                    CEDRIC_MARCEL_STEBE: 7.50,
                     MARIN_CILIC: 1.08,
+                    CEDRIC_MARCEL_STEBE: 7.50,
                 },
                 'prediction': MARIN_CILIC,
                 'bet': 2,

@@ -632,12 +632,12 @@ DATA_2018_10 = [
             {
                 'round': 512,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     HIROKI_MORIYA
                 ],
                 'score': [(6, 3), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.11,
+                    DANIIL_MEDVEDEV: 1.11,
                     HIROKI_MORIYA: 5.20
                 }
             },
@@ -680,12 +680,12 @@ DATA_2018_10 = [
             {
                 'round': 256,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     EGOR_GERASIMOV
                 ],
                 'score': [(6, 7), (6, 3), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.27,
+                    DANIIL_MEDVEDEV: 1.27,
                     EGOR_GERASIMOV: 3.59
                 }
             },
@@ -804,12 +804,12 @@ DATA_2018_10 = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     DIEGO_SCHWARTZMAN
                 ],
                 'score': [(6, 4), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.67,
+                    DANIIL_MEDVEDEV: 1.67,
                     DIEGO_SCHWARTZMAN: 2.10
                 }
             },
@@ -916,12 +916,12 @@ DATA_2018_10 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MARTIN_KLIZAN
                 ],
                 'score': [(6, 4), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.67,
+                    DANIIL_MEDVEDEV: 1.67,
                     MARTIN_KLIZAN: 2.05
                 }
             },
@@ -1002,12 +1002,12 @@ DATA_2018_10 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MILOS_RAONIC
                 ],
                 'score': [(7, 6), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 2.65,
+                    DANIIL_MEDVEDEV: 2.65,
                     MILOS_RAONIC: 1.43
                 }
             },
@@ -1040,12 +1040,12 @@ DATA_2018_10 = [
             {
                 'round': 4,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     DENIS_SHAPOVALOV
                 ],
                 'score': [(6, 3), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.73,
+                    DANIIL_MEDVEDEV: 1.73,
                     DENIS_SHAPOVALOV: 1.98
                 }
             },
@@ -1066,12 +1066,12 @@ DATA_2018_10 = [
             {
                 'round': 2,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     KEI_NISHIKORI
                 ],
                 'score': [(6, 2), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 3.00,
+                    DANIIL_MEDVEDEV: 3.00,
                     KEI_NISHIKORI: 1.35
                 }
             }
@@ -1490,12 +1490,12 @@ DATA_2018_10 = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     ZE_ZHANG
                 ],
                 'score': [(3, 6), (7, 6), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.12,
+                    DANIIL_MEDVEDEV: 1.12,
                     ZE_ZHANG: 5.88
                 }
             },
@@ -1805,12 +1805,12 @@ DATA_2018_10 = [
                 'round': 32,
                 'players': [
                     ROGER_FEDERER,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 4), (4, 6), (6, 4)],
                 'odds': {
                     ROGER_FEDERER: 1.19,
-                    DANILL_MEDVEDEV: 4.10
+                    DANIIL_MEDVEDEV: 4.10
                 }
             },
 
@@ -2399,12 +2399,12 @@ DATA_2018_10 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     DUSAN_LAJOVIC
                 ],
                 'score': [(6, 2), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.32,
+                    DANIIL_MEDVEDEV: 1.32,
                     DUSAN_LAJOVIC: 3.20
                 }
             },
@@ -2449,12 +2449,12 @@ DATA_2018_10 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     RICARDAS_BERANKIS
                 ],
                 'score': [(6, 2), (1, 6), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.15,
+                    DANIIL_MEDVEDEV: 1.15,
                     RICARDAS_BERANKIS: 5.00
                 }
             },
@@ -2476,12 +2476,12 @@ DATA_2018_10 = [
                 'round': 4,
                 'players': [
                     KAREN_KHACHANOV,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 1), (6, 7), (6, 3)],
                 'odds': {
                     KAREN_KHACHANOV: 1.88,
-                    DANILL_MEDVEDEV: 1.87
+                    DANIIL_MEDVEDEV: 1.87
                 }
             },
 
@@ -4297,12 +4297,12 @@ DATA_2018_10 = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MAXIMILIAN_MARTERER
                 ],
                 'score': [(6, 3), (7, 5)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.25,
+                    DANIIL_MEDVEDEV: 1.25,
                     MAXIMILIAN_MARTERER: 3.80
                 }
             },
@@ -4397,12 +4397,12 @@ DATA_2018_10 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     ANDREAS_SEPPI
                 ],
                 'score': [(7, 6), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.33,
+                    DANIIL_MEDVEDEV: 1.33,
                     ANDREAS_SEPPI: 3.10
                 }
             },
@@ -4447,12 +4447,12 @@ DATA_2018_10 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     STEFANOS_TSITSIPAS
                 ],
                 'score': [(6, 4), (3, 6), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 2.20,
+                    DANIIL_MEDVEDEV: 2.20,
                     STEFANOS_TSITSIPAS: 1.63
                 }
             },
@@ -4510,12 +4510,12 @@ DATA_2018_10 = [
                 'round': 4,
                 'players': [
                     ROGER_FEDERER,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 1), (6, 4)],
                 'odds': {
                     ROGER_FEDERER: 1.33,
-                    DANILL_MEDVEDEV: 3.10
+                    DANIIL_MEDVEDEV: 3.10
                 }
             },
 
@@ -4822,12 +4822,12 @@ DATA_2018_10 = [
             {
                 'round': 64,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     PABLO_CARRENO_BUSTA
                 ],
                 'score': [(6, 2), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.29,
+                    DANIIL_MEDVEDEV: 1.29,
                     PABLO_CARRENO_BUSTA: 3.50
                 }
             },
@@ -5023,12 +5023,12 @@ DATA_2018_10 = [
                 'round': 32,
                 'players': [
                     BORNA_CORIC,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 4), (6, 4)],
                 'odds': {
                     BORNA_CORIC: 1.81,
-                    DANILL_MEDVEDEV: 1.87
+                    DANIIL_MEDVEDEV: 1.87
                 }
             },
             {

@@ -1346,12 +1346,12 @@ DATA_2019_02 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     ROBIN_HAASE
                 ],
                 'score': [(5, 7), (6, 2), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.20,
+                    DANIIL_MEDVEDEV: 1.20,
                     ROBIN_HAASE: 4.00
                 }
             },
@@ -1397,12 +1397,12 @@ DATA_2019_02 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MARTIN_KLIZAN
                 ],
                 'score': [(6, 4), (6, 1)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.26,
+                    DANIIL_MEDVEDEV: 1.26,
                     MARTIN_KLIZAN: 3.60
                 }
             },
@@ -1435,12 +1435,12 @@ DATA_2019_02 = [
             {
                 'round': 4,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     GAEL_MONFILS
                 ],
                 'score': [(6, 2), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.69,
+                    DANIIL_MEDVEDEV: 1.69,
                     GAEL_MONFILS: 2.20
                 }
             },
@@ -1449,12 +1449,12 @@ DATA_2019_02 = [
             {
                 'round': 2,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     MARTON_FUCSOVICS
                 ],
                 'score': [(6, 4), (6, 3)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.15,
+                    DANIIL_MEDVEDEV: 1.15,
                     MARTON_FUCSOVICS: 5.25
                 }
             }
@@ -1778,12 +1778,12 @@ DATA_2019_02 = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     JEREMY_CHARDY
                 ],
                 'score': [(7, 6), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.25,
+                    DANIIL_MEDVEDEV: 1.25,
                     JEREMY_CHARDY: 3.89
                 }
             },
@@ -1876,12 +1876,12 @@ DATA_2019_02 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     FERNANDO_VERDASCO
                 ],
                 'score': [(6, 2), (7, 5)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.32,
+                    DANIIL_MEDVEDEV: 1.32,
                     FERNANDO_VERDASCO: 3.30
                 }
             },
@@ -1926,12 +1926,12 @@ DATA_2019_02 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     JO_WILFRIED_TSONGA
                 ],
                 'score': [(6, 4), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.59,
+                    DANIIL_MEDVEDEV: 1.59,
                     JO_WILFRIED_TSONGA: 2.20
                 }
             },
@@ -1953,12 +1953,12 @@ DATA_2019_02 = [
                 'round': 4,
                 'players': [
                     GAEL_MONFILS,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(4, 6), (6, 3), (6, 4)],
                 'odds': {
                     GAEL_MONFILS: 2.85,
-                    DANILL_MEDVEDEV: 1.43
+                    DANIIL_MEDVEDEV: 1.43
                 }
             },
             {

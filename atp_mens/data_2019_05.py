@@ -535,12 +535,12 @@ DATA_2019_05 = [
                 'round': 64,
                 'players': [
                     GUIDO_PELLA,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 2), (1, 6), (6, 3)],
                 'odds': {
                     GUIDO_PELLA: 2.40,
-                    DANILL_MEDVEDEV: 1.56
+                    DANIIL_MEDVEDEV: 1.56
                 }
             },
             {
@@ -1471,12 +1471,12 @@ DATA_2019_05 = [
                 'round': 64,
                 'players': [
                     NICK_KYRGIOS,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 3), (3, 6), (6, 3)],
                 'odds': {
                     NICK_KYRGIOS: 2.99,
-                    DANILL_MEDVEDEV: 1.39
+                    DANIIL_MEDVEDEV: 1.39
                 }
             },
             {
@@ -3293,12 +3293,12 @@ DATA_2019_05 = [
                 'round': 128,
                 'players': [
                     PIERRE_HUGUES_HERBERT,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(4, 6), (4, 6), (6, 3), (6, 2), (7, 5)],
                 'odds': {
                     PIERRE_HUGUES_HERBERT: 3.43,
-                    DANILL_MEDVEDEV: 1.33
+                    DANIIL_MEDVEDEV: 1.33
                 }
             },
             {

@@ -387,12 +387,12 @@ DATA_2019_06 = [
                 'round': 16,
                 'players': [
                     LUCAS_POUILLE,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(7, 6), (4, 6), (6, 2)],
                 'odds': {
                     LUCAS_POUILLE: 2.66,
-                    DANILL_MEDVEDEV: 1.48
+                    DANIIL_MEDVEDEV: 1.48
                 }
             },
             {
@@ -1188,12 +1188,12 @@ DATA_2019_06 = [
             {
                 'round': 32,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     FERNANDO_VERDASCO
                 ],
                 'score': [(6, 2), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.40,
+                    DANIIL_MEDVEDEV: 1.40,
                     FERNANDO_VERDASCO: 2.95
                 }
             },
@@ -1394,12 +1394,12 @@ DATA_2019_06 = [
             {
                 'round': 16,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     LUCAS_POUILLE
                 ],
                 'score': [(7, 6), (6, 7), (6, 4)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.48,
+                    DANIIL_MEDVEDEV: 1.48,
                     LUCAS_POUILLE: 2.60
                 }
             },
@@ -1456,12 +1456,12 @@ DATA_2019_06 = [
             {
                 'round': 8,
                 'players': [
-                    DANILL_MEDVEDEV,
+                    DANIIL_MEDVEDEV,
                     DIEGO_SCHWARTZMAN
                 ],
                 'score': [(6, 2), (6, 2)],
                 'odds': {
-                    DANILL_MEDVEDEV: 1.27,
+                    DANIIL_MEDVEDEV: 1.27,
                     DIEGO_SCHWARTZMAN: 3.85
                 }
             },
@@ -1495,12 +1495,12 @@ DATA_2019_06 = [
                 'round': 4,
                 'players': [
                     GILLES_SIMON,
-                    DANILL_MEDVEDEV
+                    DANIIL_MEDVEDEV
                 ],
                 'score': [(6, 7), (6, 4), (6, 3)],
                 'odds': {
                     GILLES_SIMON: 4.50,
-                    DANILL_MEDVEDEV: 1.18
+                    DANIIL_MEDVEDEV: 1.18
                 }
             },
 
