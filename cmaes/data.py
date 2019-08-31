@@ -5209,7 +5209,7 @@ DATA = [
                 'weight_class': MENS_WELTERWEIGHT,
                 'fighters': [
                     {
-                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'name': ELIZEU_DOS_SANTOS,
                         'stats': '20-5-0',
                     },
                     {
@@ -5218,14 +5218,14 @@ DATA = [
                     },
                 ],
                 'winner': {
-                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'fighter': ELIZEU_DOS_SANTOS,
                     'by': 'ko/tko',
                     'round': 1,
                     'time': '3:12',
                 },
                 'time': '20:00',
                 'odds': {
-                    ELIZEU_ZALESKI_DOS_SANTOS: -101,
+                    ELIZEU_DOS_SANTOS: -101,
                     SEAN_STRICKLAND: -111,
                 },
             },
@@ -9097,19 +9097,19 @@ DATA = [
                         'stats': '8-0-0',
                     },
                     {
-                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'name': ELIZEU_DOS_SANTOS,
                         'stats': '20-5-0',
                     },
                 ],
                 'winner': {
-                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'fighter': ELIZEU_DOS_SANTOS,
                     'by': 'ko/tko',
                     'round': 2,
                     'time': '1:20',
                 },
                 'time': '19:00',
                 'odds': {
-                    ELIZEU_ZALESKI_DOS_SANTOS: -1200,
+                    ELIZEU_DOS_SANTOS: -1200,
                     LUIGI_VENDRAMINI: 843,
                 },
             },
@@ -14502,18 +14502,18 @@ DATA = [
                         'stats': '17-4-0',
                     },
                     {
-                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'name': ELIZEU_DOS_SANTOS,
                         'stats': '20-5-0',
                     },
                 ],
                 'winner': {
-                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'fighter': ELIZEU_DOS_SANTOS,
                     'by': 'submission',
                     'round': 1,
                     'time': '2:35',
                 },
                 'odds': {
-                    ELIZEU_ZALESKI_DOS_SANTOS: 105,
+                    ELIZEU_DOS_SANTOS: 105,
                     CURTIS_MILLENDER: -118,
                 },
             },

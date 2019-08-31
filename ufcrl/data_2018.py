@@ -3475,7 +3475,7 @@ DATA_2018 = [
                 'weight_class': MENS_WELTERWEIGHT,
                 'fighters': [
                     {
-                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'name': ELIZEU_DOS_SANTOS,
                         'stats': '20-5-0',
                     },
                     {
@@ -3484,14 +3484,14 @@ DATA_2018 = [
                     },
                 ],
                 'winner': {
-                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'fighter': ELIZEU_DOS_SANTOS,
                     'by': 'ko/tko',
                     'round': 1,
                     'time': '3:12',
                 },
                 'time': '20:00',
                 'odds': {
-                    ELIZEU_ZALESKI_DOS_SANTOS: 1.95,
+                    ELIZEU_DOS_SANTOS: 1.95,
                     SEAN_STRICKLAND: 1.80,
                 },
             },
@@ -7363,19 +7363,19 @@ DATA_2018 = [
                         'stats': '8-0-0',
                     },
                     {
-                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'name': ELIZEU_DOS_SANTOS,
                         'stats': '20-5-0',
                     },
                 ],
                 'winner': {
-                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'fighter': ELIZEU_DOS_SANTOS,
                     'by': 'ko/tko',
                     'round': 2,
                     'time': '1:20',
                 },
                 'time': '19:00',
                 'odds': {
-                    ELIZEU_ZALESKI_DOS_SANTOS: 1.08,
+                    ELIZEU_DOS_SANTOS: 1.08,
                     LUIGI_VENDRAMINI: 8.00,
                 },
             },

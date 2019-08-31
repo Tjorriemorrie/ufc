@@ -2116,18 +2116,18 @@ DATA = [
                         'stats': '17-4-0',
                     },
                     {
-                        'name': ELIZEU_ZALESKI_DOS_SANTOS,
+                        'name': ELIZEU_DOS_SANTOS,
                         'stats': '20-5-0',
                     },
                 ],
                 'winner': {
-                    'fighter': ELIZEU_ZALESKI_DOS_SANTOS,
+                    'fighter': ELIZEU_DOS_SANTOS,
                     'by': 'submission',
                     'round': 1,
                     'time': '2:35',
                 },
                 'odds': {
-                    ELIZEU_ZALESKI_DOS_SANTOS: 1.92,
+                    ELIZEU_DOS_SANTOS: 1.92,
                     CURTIS_MILLENDER: 1.77,
                 },
             },
@@ -8065,6 +8065,221 @@ DATA = [
                 },
                 'prediction': DANIEL_CORMIER,
                 'bet': 10,
+            }
+        ]
+    },
+
+    {
+        'date': '2019-08-31',
+        'name': 'UFC Fight Night',
+        'location': '',
+        'venue': '',
+        'fights': [
+            {
+                'weight_class': WOMANS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': KAROL_ROSA,
+                        'stats': '0-0-0',
+                    },
+                    {
+                        'name': LARA_PROCOPIO,
+                        'stats': '0-0-0',
+                    },
+                ],
+                'odds': {
+                    KAROL_ROSA: 1.80,
+                    LARA_PROCOPIO: 2.00,
+                },
+                'prediction': KAROL_ROSA,
+                'bet': 1,
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': HEILI_ALATENG,
+                        'stats': '12-7-1',
+                    },
+                    {
+                        'name': DANAA_BATGEREL,
+                        'stats': '6-1-0',
+                    },
+                ],
+                'odds': {
+                    HEILI_ALATENG: 1.80,
+                    DANAA_BATGEREL: 2.00,
+                },
+                'prediction': HEILI_ALATENG,
+                'bet': 1,
+            },
+            {
+                'weight_class': MENS_LIGHTWEIGHT,
+                'fighters': [
+                    {
+                        'name': DAMIR_ISMAGULOV,
+                        'stats': '18-2-0',
+                    },
+                    {
+                        'name': THIAGO_MOISES,
+                        'stats': '12-3-0',
+                    },
+                ],
+                'odds': {
+                    DAMIR_ISMAGULOV: 1.53,
+                    THIAGO_MOISES: 2.45,
+                },
+                'prediction': DAMIR_ISMAGULOV,
+                'bet': 2,
+            },
+            {
+                'weight_class': MENS_LIGHT_HEAVYWEIGHT,
+                'fighters': [
+                    {
+                        'name': DA_UN_JUNG,
+                        'stats': '11-2-0',
+                    },
+                    {
+                        'name': KHADIS_IBRAGIMOV,
+                        'stats': '8-0-0',
+                    },
+                ],
+                'odds': {
+                    DA_UN_JUNG: 3.00,
+                    KHADIS_IBRAGIMOV: 1.37,
+                },
+                'prediction': DA_UN_JUNG,
+                'bet': 1,
+            },
+            {
+                'weight_class': MENS_BANTAMWEIGHT,
+                'fighters': [
+                    {
+                        'name': SU_MUDAERJI,
+                        'stats': '10-4-0',
+                    },
+                    {
+                        'name': ANDRE_SOUKHAMTHATH,
+                        'stats': '13-7-0',
+                    },
+                ],
+                'odds': {
+                    SU_MUDAERJI: 2.40,
+                    ANDRE_SOUKHAMTHATH: 1.56,
+                },
+                'prediction': ANDRE_SOUKHAMTHATH,
+                'bet': 4,
+            },
+            {
+                'weight_class': MENS_MIDDLEWEIGHT,
+                'fighters': [
+                    {
+                        'name': JUN_YONG_PARK,
+                        'stats': '10-3-0',
+                    },
+                    {
+                        'name': ANTHONY_HERNANDEZ,
+                        'stats': '7-1-0',
+                    },
+                ],
+                'odds': {
+                    JUN_YONG_PARK: 2.20,
+                    ANTHONY_HERNANDEZ: 1.66,
+                },
+                'prediction': JUN_YONG_PARK,
+                'bet': 1,
+            },
+            {
+                'weight_class': WOMANS_FLYWEIGHT,
+                'fighters': [
+                    {
+                        'name': WU_YANAN,
+                        'stats': '10-2-0',
+                    },
+                    {
+                        'name': MIZUKI_INOUE,
+                        'stats': '13-5-0',
+                    },
+                ],
+                'odds': {
+                    WU_YANAN: 2.20,
+                    MIZUKI_INOUE: 1.66,
+                },
+                'prediction': WU_YANAN,
+                'bet': 3,
+            },
+            {
+                'weight_class': MENS_WELTERWEIGHT,
+                'fighters': [
+                    {
+                        'name': SONG_KENAN,
+                        'stats': '14-5-0',
+                    },
+                    {
+                        'name': DERRICK_KRANTZ,
+                        'stats': '24-11-0',
+                    },
+                ],
+                'odds': {
+                    SONG_KENAN: 1.80,
+                    DERRICK_KRANTZ: 2.00,
+                },
+                'prediction': SONG_KENAN,
+                'bet': 2,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': KAI_KARA_FRANCE,
+                        'stats': '19-7-0',
+                    },
+                    {
+                        'name': MARK_DE_LA_ROSA,
+                        'stats': '11-2-0',
+                    },
+                ],
+                'odds': {
+                    KAI_KARA_FRANCE: 1.48,
+                    MARK_DE_LA_ROSA: 2.65,
+                },
+                'prediction': MARK_DE_LA_ROSA,
+                'bet': 4,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': LI_JINGLIANG,
+                        'stats': '16-5-0',
+                    },
+                    {
+                        'name': ELIZEU_DOS_SANTOS,
+                        'stats': '21-5-0',
+                    },
+                ],
+                'odds': {
+                    LI_JINGLIANG: 3.10,
+                    ELIZEU_DOS_SANTOS: 1.37,
+                },
+                'prediction': ELIZEU_DOS_SANTOS,
+                'bet': 2,
+            },
+            {
+                'fighters': [
+                    {
+                        'name': JESSICA_ANDRADE,
+                        'stats': '20-6-0',
+                    },
+                    {
+                        'name': ZHANG_WEILI,
+                        'stats': '19-1-0',
+                    },
+                ],
+                'odds': {
+                    JESSICA_ANDRADE: 1.50,
+                    ZHANG_WEILI: 2.60,
+                },
+                'prediction': JESSICA_ANDRADE,
+                'bet': 2,
             }
         ]
     }
