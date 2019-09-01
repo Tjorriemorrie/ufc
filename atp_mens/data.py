@@ -2,13 +2,13 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 61.3  2.9     130     2019-08-31                          (2, 332), (1, 230), (3, 187), (4, 94)
 # 71.3  30.2    1306    2018 winston done                   (2, 444), (3, 166), (1, 115), (4, 110)
 # 68.5  25.7    1202    2018 winston r32                    (2, 375), (3, 243), (4, 112), (5, 86)
 # 68.6  26.5    1312    2018 winston r64                    (3, 319), (2, 253), (4, 129), (5, 98)
-# 68.6  24.1    1050    2019-09-30                          (3, 337), (2, 288), (4, 138), (5, 91)
-# 68.7  24.6    1050    2018 salem 512                      (3, 328), (2, 280), (4, 136), (5, 90)
-# 68.3  27.3    1025    2018 us open final                  (3, 272), (2, 264), (4, 130), (5, 119)
+# 68.6  24.1    1050    2019-08-30                          (3, 337), (2, 288), (4, 138), (5, 91)
 
+# 68.7  24.6    1050    2018 salem 512                      (3, 328), (2, 280), (4, 136), (5, 90)
 # 67.7  25.3    954     2018 us open r16 p1                 (3, 272), (2, 234), (4, 140), (5, 133)
 # 68.4  25.2    908     2018 us open r64                    (3, 313), (2, 248), (4, 203), (5, 136)
 # 65.2  13.0    648     2018 us open 3rd qual               (6, 243), (4, 212), (3, 179), (5, 152)
@@ -6637,13 +6637,14 @@ DATA = [
                 'bet': 2,
             },
 
-            # 2019-08-31
+            # 2019-08-30
             {
                 'round': 32,
                 'players': [
                     ALEX_DE_MINAUR,
                     KEI_NISHIKORI,
                 ],
+                'score': [(6, 2), (6, 4), (2, 6), (6, 3)],
                 'odds': {
                     ALEX_DE_MINAUR: 2.40,
                     KEI_NISHIKORI: 1.55,
@@ -6657,6 +6658,7 @@ DATA = [
                     ROGER_FEDERER,
                     DANIEL_EVANS,
                 ],
+                'score': [(6, 2), (6, 2), (6, 1)],
                 'odds': {
                     ROGER_FEDERER: 1.14,
                     DANIEL_EVANS: 5.50,
@@ -6667,12 +6669,13 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    PABLO_CARRENO_BUSTA,
                     DAVID_GOFFIN,
+                    PABLO_CARRENO_BUSTA,
                 ],
+                'score': [(7, 6), (7, 6), (7, 5)],
                 'odds': {
-                    PABLO_CARRENO_BUSTA: 2.90,
                     DAVID_GOFFIN: 1.40,
+                    PABLO_CARRENO_BUSTA: 2.90,
                 },
                 'prediction': DAVID_GOFFIN,
                 'bet': 1,
@@ -6683,6 +6686,7 @@ DATA = [
                     GRIGOR_DIMITROV,
                     KAMIL_MAJCHRZAK,
                 ],
+                'score': [(7, 5), (7, 6), (6, 2)],
                 'odds': {
                     GRIGOR_DIMITROV: 1.24,
                     KAMIL_MAJCHRZAK: 4.00,
@@ -6696,6 +6700,7 @@ DATA = [
                     STAN_WAWRINKA,
                     PAOLO_LORENZI,
                 ],
+                'score': [(6, 4), (7, 6), (7, 6)],
                 'odds': {
                     STAN_WAWRINKA: 1.03,
                     PAOLO_LORENZI: 11.00,
@@ -6709,6 +6714,7 @@ DATA = [
                     DOMINIK_KOEPFER,
                     NIKOLOZ_BASILASHVILI,
                 ],
+                'score': [(6, 3), (7, 6), (4, 6), (6, 1)],
                 'odds': {
                     DOMINIK_KOEPFER: 2.20,
                     NIKOLOZ_BASILASHVILI: 1.65,
@@ -6722,6 +6728,7 @@ DATA = [
                     NOVAK_DJOKOVIC,
                     DENIS_KUDLA,
                 ],
+                'score': [(6, 3), (6, 4), (6, 2)],
                 'odds': {
                     NOVAK_DJOKOVIC: 1.05,
                     DENIS_KUDLA: 9.00,
@@ -6732,15 +6739,114 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    FELICIANO_LOPEZ,
                     DANIIL_MEDVEDEV,
+                    FELICIANO_LOPEZ,
                 ],
+                'score': [(7, 6), (4, 6), (7, 6), (6, 4)],
                 'odds': {
-                    FELICIANO_LOPEZ: 3.00,
                     DANIIL_MEDVEDEV: 1.38,
+                    FELICIANO_LOPEZ: 3.00,
                 },
                 'prediction': FELICIANO_LOPEZ,
                 'bet': 9,
+            },
+
+            # 2019-08-31
+            {
+                'round': 32,
+                'players': [
+                    HYEON_CHUNG,
+                    RAFAEL_NADAL,
+                ],
+                'odds': {
+                    HYEON_CHUNG: 14.00,
+                    RAFAEL_NADAL: 1.01,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_ANDUJAR,
+                    ALEXANDER_BUBLIK,
+                ],
+                'odds': {
+                    PABLO_ANDUJAR: 1.62,
+                    ALEXANDER_BUBLIK: 2.25,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_ISNER,
+                    MARIN_CILIC,
+                ],
+                'odds': {
+                    JOHN_ISNER: 1.80,
+                    MARIN_CILIC: 2.00,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ALJAZ_BEDENE,
+                ],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.22,
+                    ALJAZ_BEDENE: 4.20,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ALEXEI_POPYRIN,
+                ],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.36,
+                    ALEXEI_POPYRIN: 3.10,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    TENNYS_SANDGREN,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.30,
+                    TENNYS_SANDGREN: 3.40,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.68,
+                    DENIS_SHAPOVALOV: 2.15,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDREY_RUBLEV,
+                    NICK_KYRGIOS,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 2.60,
+                    NICK_KYRGIOS: 1.48,
+                },
+                'prediction': None,
             },
 
             #
