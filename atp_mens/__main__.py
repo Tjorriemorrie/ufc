@@ -43,7 +43,19 @@ def main(hyper_params, train=0):
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA
 
-    bet_rnd_a, bet_rnd_b, bet_sfc_a, bet_sfc_b, bet_gms_a, bet_gms_b = hyper_params
+    bet_wnlw_a, bet_wnlw_b, bet_wnlr_a, bet_wnlr_b, bet_ups_a, bet_ups_b = hyper_params
+    # bet_wnl_a = -0.12579947286600013
+    # bet_wnl_b = -3.8682243443122397
+    # bet_ups_a = 0.08640461747069611
+    # bet_ups_b = 0.5574899450457671
+
+    # bet_rnd_a, bet_rnd_b, bet_sfc_a, bet_sfc_b, bet_gms_a, bet_gms_b = hyper_params
+    bet_rnd_a = -16.888147967805413
+    bet_rnd_b = -14.468986485854419
+    bet_sfc_a = -3.0002585822347734
+    bet_sfc_b = -5.31971382571193
+    bet_gms_a = -10.43458700122973
+    bet_gms_b = -30.97885452888516
     
     # bet_tmi_a, bet_tmi_b, bet_tsq_a, bet_tsq_b, bet_set_a, bet_set_b = hyper_params
     bet_tmi_a = -2.7111669469579924
@@ -61,10 +73,6 @@ def main(hyper_params, train=0):
     bet_drs_a = 0.05791963825088652
     bet_drs_b = 0.08722669357053417
 
-    # bet_odds_a, bet_odds_b, bet_wnl_a, bet_wnl_b = hyper_params
-    bet_wnl_a = -0.12579947286600013
-    bet_wnl_b = -3.8682243443122397
-
     # bet_ts_a, bet_ts_b, bet_tma_a, bet_tma_b = hyper_params
     bet_tma_a = -0.01789469044693269
     bet_tma_b = -1.8455239626477637
@@ -77,9 +85,7 @@ def main(hyper_params, train=0):
     bet_tie_a = 270.4904778034906
     bet_tie_b = -0.5099392191447849
 
-    # bet_ups_a, bet_ups_b, bet_age_a, bet_age_b = hyper_params
-    bet_ups_a = 0.08640461747069611
-    bet_ups_b = 0.5574899450457671
+    # bet_age_a, bet_age_b = hyper_params
     bet_age_a = 2.140408404626399
     bet_age_b = 2.0050856871071363
 
@@ -146,9 +152,11 @@ def main(hyper_params, train=0):
 
             # wins losses
             p1_wins_losses = Counter(wins_losses[p1])
-            p1_wnl_winrate = p1_wins_losses[1] / max(1, len(wins_losses[p1]))
+            p1_wins = p1_wins_losses[1]
+            p1_wnl_winrate = p1_wins / max(1, len(wins_losses[p1]))
             p2_wins_losses = Counter(wins_losses[p2])
-            p2_wnl_winrate = p2_wins_losses[1] / max(1, len(wins_losses[p2]))
+            p2_wins = p2_wins_losses[1]
+            p2_wnl_winrate = p2_wins / max(1, len(wins_losses[p2]))
 
             # outdoors
             match_door = event['location']['outdoor']
@@ -281,16 +289,6 @@ def main(hyper_params, train=0):
             bet_multi += bet_odds_multi
             bet_multis_cat.append(f'odds:{round(abs(bet_odds_multi)):.0f}')
 
-            # wins and losses
-            if p1_odds < p2_odds:
-                p_wnl = p1_wnl_winrate - p2_wnl_winrate
-            else:
-                p_wnl = p2_wnl_winrate - p1_wnl_winrate
-            bet_wnl_multi = np.polyval([bet_wnl_a, bet_wnl_b], [p_wnl])[0]
-            bet_wnl_multi = min(1, max(-.1, bet_wnl_multi))
-            bet_multi += bet_wnl_multi
-            bet_multis_cat.append(f'wnl:{round(abs(bet_wnl_multi)):.0f}')
-
             # trueskill mu
             if p1_odds < p2_odds:
                 f_ts = p1_ts - p2_ts
@@ -326,6 +324,26 @@ def main(hyper_params, train=0):
             bet_tsq_multi = min(2, max(-.2, bet_tsq_multi))
             bet_multi += bet_tsq_multi
             bet_multis_cat.append(f'tsq:{round(abs(bet_tsq_multi)):.0f}')
+
+            # wins and losses wins
+            if p1_odds < p2_odds:
+                p_wnlw = p1_wins - p2_wins
+            else:
+                p_wnlw = p2_wins - p1_wins
+            bet_wnlw_multi = np.polyval([bet_wnlw_a, bet_wnlw_b], [p_wnlw])[0]
+            bet_wnlw_multi = min(2, max(-.2, bet_wnlw_multi))
+            bet_multi += bet_wnlw_multi
+            bet_multis_cat.append(f'wnlw:{round(abs(bet_wnlw_multi)):.0f}')
+
+            # wins and losses winrate
+            if p1_odds < p2_odds:
+                p_wnlr = p1_wnl_winrate - p2_wnl_winrate
+            else:
+                p_wnlr = p2_wnl_winrate - p1_wnl_winrate
+            bet_wnlr_multi = np.polyval([bet_wnlr_a, bet_wnlr_b], [p_wnlr])[0]
+            bet_wnlr_multi = min(2, max(-.2, bet_wnlr_multi))
+            bet_multi += bet_wnlr_multi
+            bet_multis_cat.append(f'wnl:{round(abs(bet_wnlr_multi)):.0f}')
 
             # round
             bet_rnd_multi = np.polyval([bet_rnd_a, bet_rnd_b], [1 / match['round']])[0]
@@ -401,7 +419,7 @@ def main(hyper_params, train=0):
             else:
                 p_upset = p2_upsets_win_avg - p1_upsets_win_avg
             bet_ups_multi = np.polyval([bet_ups_a, bet_ups_b], [p_upset])[0]
-            bet_ups_multi = min(1, max(-.1, bet_ups_multi))
+            bet_ups_multi = min(2, max(-.2, bet_ups_multi))
             bet_multi += bet_ups_multi
             bet_multis_cat.append(f'ups:{round(abs(bet_ups_multi)):.0f}')
 
@@ -438,7 +456,7 @@ def main(hyper_params, train=0):
                     w = p2
                     l_odds = p1_odds
                     l = p1
-                #logger.warning(f'[{w_odds*100:.0f}% vs {l_odds*100:.0f}%] Bet x{round(bet_multi):.0f} on {w} to beat {l} [{ratings[w].mu:.0f} vs {ratings[l].mu:.0f}]')
+                #logger.warning(f'[{w_odds:.2f} vs {l_odds:.2f}] Bet x{round(bet_multi):.0f} on {w} to beat {l} [{ratings[w].mu:.0f} vs {ratings[l].mu:.0f}]')
                 continue
 
             # prediction bet on
@@ -485,7 +503,7 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
         #logger.info('')
         #logger.info('Testing:')
         accuracy_wins = sum([t for t in accuracy if t > 0])
-        #logger.info(f'Accuracy {accuracy_wins}/{len(accuracy)} = {accuracy_wins/len(accuracy)*100:.0f}%   Matches: {len(accuracy)/max(1, matches)*100:.0f}%')
+        #logger.info(f'Accuracy {accuracy_wins}/{len(accuracy)} = {accuracy_wins/len(accuracy)*100:.1f}%   Matches: {len(accuracy)/max(1, matches)*100:.1f}%')
         #logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
         #logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
@@ -518,15 +536,6 @@ def run():
     train = 1
     
     names = [
-        # 'bet_wnl_a', 'bet_wnl_b',
-        # -1.0(-108)   odds:3566:0   wnl:3566:0
-        # 0.0   3566:0   -1.4(-163) -> -1.4(-163)
-        # 2.1   978:193   31.6(993) -> 33.7(1125)
-        # 624:385
-        # 0.1   3540:26   -1.3(-138) -> -1.2(-135)
-        # 1.2   923:248   31.6(993) -> 32.8(1113)
-        # 1009:0
-    
         # 'bet_tma_a', 'bet_tma_b',
         # -1.5(-148)   2641:900   3510:46   3566:0
         # 3514:52   -1.0(-105)
@@ -550,10 +559,11 @@ def run():
         # -0.2   809:362   26.7(1227) -> 26.5(1312)
         # 4.1   831:340   21.6(935) -> 25.7(1202)
 
-        # 'bet_ups_a', 'bet_ups_b', 'bet_age_a', 'bet_age_b',
+        # 'bet_age_a', 'bet_age_b',
         # 9.3(514)    ups:82:3484    age:1754:1812
         # -0.2   1106:65   30.4(1293) -> 30.2(1306)
         # -2.5   557:602   36.0(1173) -> 33.5(1295)
+
 
         # 76    69     14.7     616
         # 'odds_a', 'odds_b',  # 3573::
@@ -565,7 +575,14 @@ def run():
         # 'bet_tmi_a', 'bet_tmi_b',  # 3549:1:23
         # 'bet_tsq_a', 'bet_tsq_b',  # 3573::
 
-        'bet_rnd_a', 'bet_rnd_b', 'bet_sfc_a', 'bet_sfc_b', 'bet_gms_a', 'bet_gms_b',
+        # 76    68      11.8    407
+        # 'bet_rnd_a', 'bet_rnd_b',  # 3573::
+        # 'bet_sfc_a', 'bet_sfc_b',  # 3573::
+        # 'bet_gms_a', 'bet_gms_b',  # 3445:6:122
+
+        'bet_wnlw_a', 'bet_wnlw_b',
+        'bet_wnlr_a', 'bet_wnlr_b',
+        'bet_ups_a', 'bet_ups_b',
     ]
     params = [0, 0, 0, 0, 0, 0]
     bounds = [

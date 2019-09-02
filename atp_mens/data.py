@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 75.8  11.8    407     2019-09-02 bets in                  (1, 1661), (0, 1086), (2, 642), (-1, 58)
 # 72.9  7.9     349     2019-08-31                          (1, 1534), (2, 974), (0, 819), (3, 160)
 # 61.3  2.9     130     2019-08-31                          (2, 332), (1, 230), (3, 187), (4, 94)
 # 71.3  30.2    1306    2018 winston done                   (2, 444), (3, 166), (1, 115), (4, 110)
@@ -6924,6 +6925,54 @@ DATA = [
             },
             {
                 'round': 16,
+                'players': [
+                    MARIN_CILIC,
+                    RAFAEL_NADAL,
+                ],
+                'odds': {
+                    MARIN_CILIC: 6.50,
+                    RAFAEL_NADAL: 1.10,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 1,
+            },
+
+            # 2019-09-02
+            {
+                'round': 8,
+                'players': [
+                    ANDREY_RUBLEV,
+                    MATTEO_BERRETTINI,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 1.45,
+                    MATTEO_BERRETTINI: 2.70,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    DIEGO_SCHWARTZMAN,
+                ],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.80,
+                    DIEGO_SCHWARTZMAN: 2.00,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    GAEL_MONFILS,
+                    PABLO_ANDUJAR,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.16,
+                    PABLO_ANDUJAR: 5.00,
+                },
+            },
+            {
+                'round': 8,
                 'players': [
                     MARIN_CILIC,
                     RAFAEL_NADAL,
