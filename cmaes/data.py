@@ -155,7 +155,7 @@ DATA = [
                 'weight_class': MENS_WELTERWEIGHT,
                 'fighters': [
                     {
-                        'name': SONG_KENAN,
+                        'name': KENAN_SONG,
                         'stats': '13-5-0',
                     },
                     {
@@ -164,14 +164,14 @@ DATA = [
                     },
                 ],
                 'winner': {
-                    'fighter': SONG_KENAN,
+                    'fighter': KENAN_SONG,
                     'by': 'ko/tko',
                     'round': 1,
                     'time': '0:15',
                 },
                 'time': '6:00',
                 'odds': {
-                    SONG_KENAN: 261,
+                    KENAN_SONG: 261,
                     BOBBY_NASH: -304,
                 },
             },
@@ -6712,19 +6712,19 @@ DATA = [
                         'stats': '4-3-0',
                     },
                     {
-                        'name': SONG_KENAN,
+                        'name': KENAN_SONG,
                         'stats': '13-5-0',
                     },
                 ],
                 'winner': {
-                    'fighter': SONG_KENAN,
+                    'fighter': KENAN_SONG,
                     'by': 'ko/tko',
                     'round': 2,
                     'time': '4:45',
                 },
                 'time': '18:00',
                 'odds': {
-                    SONG_KENAN: -300,
+                    KENAN_SONG: -300,
                     HECTOR_ALDANA: 258,
                 },
             },
@@ -10770,7 +10770,7 @@ DATA = [
                 'weight_class': MENS_WELTERWEIGHT,
                 'fighters': [
                     {
-                        'name': SONG_KENAN,
+                        'name': KENAN_SONG,
                         'stats': '13-5-0',
                     },
                     {
@@ -10787,7 +10787,7 @@ DATA = [
                 'time': '19:00',
                 'odds': {
                     ALEX_MORONO: 123,
-                    SONG_KENAN: -138,
+                    KENAN_SONG: -138,
                 },
             },
             {

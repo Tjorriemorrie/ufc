@@ -8087,6 +8087,12 @@ DATA = [
                         'stats': '0-0-0',
                     },
                 ],
+                'winner': {
+                    'fighter': KAROL_ROSA,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     KAROL_ROSA: 1.80,
                     LARA_PROCOPIO: 2.00,
@@ -8106,6 +8112,12 @@ DATA = [
                         'stats': '6-1-0',
                     },
                 ],
+                'winner': {
+                    'fighter': HEILI_ALATENG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     HEILI_ALATENG: 1.80,
                     DANAA_BATGEREL: 2.00,
@@ -8125,6 +8137,12 @@ DATA = [
                         'stats': '12-3-0',
                     },
                 ],
+                'winner': {
+                    'fighter': DAMIR_ISMAGULOV,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     DAMIR_ISMAGULOV: 1.53,
                     THIAGO_MOISES: 2.45,
@@ -8144,6 +8162,12 @@ DATA = [
                         'stats': '8-0-0',
                     },
                 ],
+                'winner': {
+                    'fighter': DA_UN_JUNG,
+                    'by': 'sub',
+                    'round': 3,
+                    'time': '2:00',
+                },
                 'odds': {
                     DA_UN_JUNG: 3.00,
                     KHADIS_IBRAGIMOV: 1.37,
@@ -8163,6 +8187,12 @@ DATA = [
                         'stats': '13-7-0',
                     },
                 ],
+                'winner': {
+                    'fighter': SU_MUDAERJI,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     SU_MUDAERJI: 2.40,
                     ANDRE_SOUKHAMTHATH: 1.56,
@@ -8182,6 +8212,12 @@ DATA = [
                         'stats': '7-1-0',
                     },
                 ],
+                'winner': {
+                    'fighter': ANTHONY_HERNANDEZ,
+                    'by': 'sub',
+                    'round': 2,
+                    'time': '4:39',
+                },
                 'odds': {
                     JUN_YONG_PARK: 2.20,
                     ANTHONY_HERNANDEZ: 1.66,
@@ -8201,6 +8237,12 @@ DATA = [
                         'stats': '13-5-0',
                     },
                 ],
+                'winner': {
+                    'fighter': MIZUKI_INOUE,
+                    'by': 's.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     WU_YANAN: 2.20,
                     MIZUKI_INOUE: 1.66,
@@ -8212,7 +8254,7 @@ DATA = [
                 'weight_class': MENS_WELTERWEIGHT,
                 'fighters': [
                     {
-                        'name': SONG_KENAN,
+                        'name': KENAN_SONG,
                         'stats': '14-5-0',
                     },
                     {
@@ -8220,11 +8262,17 @@ DATA = [
                         'stats': '24-11-0',
                     },
                 ],
+                'winner': {
+                    'fighter': KENAN_SONG,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
-                    SONG_KENAN: 1.80,
+                    KENAN_SONG: 1.80,
                     DERRICK_KRANTZ: 2.00,
                 },
-                'prediction': SONG_KENAN,
+                'prediction': KENAN_SONG,
                 'bet': 2,
             },
             {
@@ -8238,6 +8286,12 @@ DATA = [
                         'stats': '11-2-0',
                     },
                 ],
+                'winner': {
+                    'fighter': KAI_KARA_FRANCE,
+                    'by': 'u.dec',
+                    'round': 3,
+                    'time': '5:00',
+                },
                 'odds': {
                     KAI_KARA_FRANCE: 1.48,
                     MARK_DE_LA_ROSA: 2.65,
@@ -8256,6 +8310,12 @@ DATA = [
                         'stats': '21-5-0',
                     },
                 ],
+                'winner': {
+                    'fighter': LI_JINGLIANG,
+                    'by': 'tko',
+                    'round': 3,
+                    'time': '4:51',
+                },
                 'odds': {
                     LI_JINGLIANG: 3.10,
                     ELIZEU_DOS_SANTOS: 1.37,
@@ -8274,6 +8334,12 @@ DATA = [
                         'stats': '19-1-0',
                     },
                 ],
+                'winner': {
+                    'fighter': ZHANG_WEILI,
+                    'by': 'tko',
+                    'round': 1,
+                    'time': '0:42',
+                },
                 'odds': {
                     JESSICA_ANDRADE: 1.50,
                     ZHANG_WEILI: 2.60,

@@ -111,6 +111,7 @@ def main(hyper_params, train=0):
     tab = []
     tab_amts = []
     actual = (0, 0)
+    actual_debug = []
     bet_multis = []
     bet_multis_cat = []
     preds_flipped = []
@@ -371,11 +372,14 @@ def main(hyper_params, train=0):
                     if is_actual_correct:
                         fw_odds = f1_odds if is_win_1 else f2_odds
                         cash += fw_odds * fight['bet']
+                    else:
+                        fw_odds = f2_odds if is_win_1 else f1_odds
                     tab.append(round(cash, 2))
                     tab_amts.append(fight['bet'])
                     # pred flipped?
                     pred_flipped = (f1_pred > f2_pred and fight['prediction'] != f1) or (
                         f2_pred > f1_pred and fight['prediction'] != f2)
+                    actual_debug.append(f'${fight["bet"]} {fw_odds:.2f}: {cash:.2f} {fight["prediction"]} {fight["date"]}')
                 preds_flipped.append(int(pred_flipped))
 
                 log_balance = f'{"!!" if pred_flipped else "  "}[{sum(payouts):.0f}|{payout:.0f}]'
@@ -441,6 +445,12 @@ def summary(reg, accuracy, payouts, start_date, bet_amts, bet_multis, bet_multis
         logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.0f}')
         days = (datetime.now() - datetime(2019, 7, 13)).days
         logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
+        sheet = -62.62
+        if abs(sum(tab) - sheet) > 0.01:
+            for l in actual_debug:
+                logger.warning(l)
+            logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+
 
 
 def run():

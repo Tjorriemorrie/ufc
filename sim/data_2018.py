@@ -4978,19 +4978,19 @@ DATA_2018 = [
                         'stats': '4-3-0',
                     },
                     {
-                        'name': SONG_KENAN,
+                        'name': KENAN_SONG,
                         'stats': '13-5-0',
                     },
                 ],
                 'winner': {
-                    'fighter': SONG_KENAN,
+                    'fighter': KENAN_SONG,
                     'by': 'ko/tko',
                     'round': 2,
                     'time': '4:45',
                 },
                 'time': '18:00',
                 'odds': {
-                    SONG_KENAN: 1.33,
+                    KENAN_SONG: 1.33,
                     HECTOR_ALDANA: 3.35,
                 },
             },
@@ -9036,7 +9036,7 @@ DATA_2018 = [
                 'weight_class': MENS_WELTERWEIGHT,
                 'fighters': [
                     {
-                        'name': SONG_KENAN,
+                        'name': KENAN_SONG,
                         'stats': '13-5-0',
                     },
                     {
@@ -9053,7 +9053,7 @@ DATA_2018 = [
                 'time': '19:00',
                 'odds': {
                     ALEX_MORONO: 2.14,
-                    SONG_KENAN: 1.69,
+                    KENAN_SONG: 1.69,
                 },
             },
             {

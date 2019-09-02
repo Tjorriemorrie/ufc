@@ -9673,7 +9673,7 @@ DATA_2017 = [
                 'weight_class': MENS_WELTERWEIGHT,
                 'fighters': [
                     {
-                        'name': SONG_KENAN,
+                        'name': KENAN_SONG,
                         'stats': '13-5-0',
                     },
                     {
@@ -9682,14 +9682,14 @@ DATA_2017 = [
                     },
                 ],
                 'winner': {
-                    'fighter': SONG_KENAN,
+                    'fighter': KENAN_SONG,
                     'by': 'ko/tko',
                     'round': 1,
                     'time': '0:15',
                 },
                 'time': '6:00',
                 'odds': {
-                    SONG_KENAN: 3.30,
+                    KENAN_SONG: 3.30,
                     BOBBY_NASH: 1.30,
                 },
             },

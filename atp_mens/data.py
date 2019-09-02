@@ -2,23 +2,21 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 72.9  7.9     349     2019-08-31                          (1, 1534), (2, 974), (0, 819), (3, 160)
 # 61.3  2.9     130     2019-08-31                          (2, 332), (1, 230), (3, 187), (4, 94)
 # 71.3  30.2    1306    2018 winston done                   (2, 444), (3, 166), (1, 115), (4, 110)
 # 68.5  25.7    1202    2018 winston r32                    (2, 375), (3, 243), (4, 112), (5, 86)
-# 68.6  26.5    1312    2018 winston r64                    (3, 319), (2, 253), (4, 129), (5, 98)
-# 68.6  24.1    1050    2019-08-30                          (3, 337), (2, 288), (4, 138), (5, 91)
 
+# 68.6  26.5    1312    2018 winston r64                    (3, 319), (2, 253), (4, 129), (5, 98)
 # 68.7  24.6    1050    2018 salem 512                      (3, 328), (2, 280), (4, 136), (5, 90)
 # 67.7  25.3    954     2018 us open r16 p1                 (3, 272), (2, 234), (4, 140), (5, 133)
 # 68.4  25.2    908     2018 us open r64                    (3, 313), (2, 248), (4, 203), (5, 136)
+
 # 65.2  13.0    648     2018 us open 3rd qual               (6, 243), (4, 212), (3, 179), (5, 152)
-# 66.7  14.2    717     2018 us open 1st qualification      (4, 233), (6, 204), (3, 181), (7, 180)
-#
 # 68.6  26.2    459     sst petersburg 2018                 (2, 436), (1, 385), (3, 127), (4, 28)
 # 66.7  35.3    967     opt pred & odds & wnl               (1, 398), (3, 175), (4, 148), (6, 59)
-# 65.4  20.6    551     opt win losses                      (3, 277), (1, 249), (5, 185), (2, 103)
-# 69.0  30.8    383     opt subsample * lr & set & gms      (1, 589), (2, 287), (3, 25), (4, 1)
 
+# 65.4  20.6    551     opt win losses                      (3, 277), (1, 249), (5, 185), (2, 103)
 # 65.7  17.2    327     opt lambda & tie & ups              (2, 387), (1, 233), (3, 196), (4, 59)
 # 76.8  40.7    571     opt gamma and min child weight      (4, 69), (2, 68), (6, 59), (3, 59)
 
@@ -6540,13 +6538,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    NICK_KYRGIOS,
                     ANTOINE_HOANG,
+                    NICK_KYRGIOS,
                 ],
-                'score': [(6, 4 , (6, 2), (6, 4))],
+                'score': [(6, 4), (6, 2), (6, 4)],
                 'odds': {
-                    NICK_KYRGIOS: 1.08,
                     ANTOINE_HOANG: 7.50,
+                    NICK_KYRGIOS: 1.08,
                 },
                 'prediction': NICK_KYRGIOS,
                 'bet': 2,
@@ -6755,14 +6753,14 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    HYEON_CHUNG,
                     RAFAEL_NADAL,
+                    HYEON_CHUNG,
                 ],
+                'score': [(6, 3), (6, 4), (6, 2)],
                 'odds': {
-                    HYEON_CHUNG: 14.00,
                     RAFAEL_NADAL: 1.01,
+                    HYEON_CHUNG: 14.00,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -6770,23 +6768,23 @@ DATA = [
                     PABLO_ANDUJAR,
                     ALEXANDER_BUBLIK,
                 ],
+                'score': [(6, 4), (6, 3), (6, 2)],
                 'odds': {
                     PABLO_ANDUJAR: 1.62,
                     ALEXANDER_BUBLIK: 2.25,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
                 'players': [
-                    JOHN_ISNER,
                     MARIN_CILIC,
+                    JOHN_ISNER,
                 ],
+                'score': [(7, 5), (3, 6), (7, 6), (6, 4)],
                 'odds': {
-                    JOHN_ISNER: 1.80,
                     MARIN_CILIC: 2.00,
+                    JOHN_ISNER: 1.80,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -6794,11 +6792,11 @@ DATA = [
                     ALEXANDER_ZVEREV,
                     ALJAZ_BEDENE,
                 ],
+                'score': [(6, 7), (7, 6), (6, 3), (6, 7)],
                 'odds': {
                     ALEXANDER_ZVEREV: 1.22,
                     ALJAZ_BEDENE: 4.20,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -6806,11 +6804,11 @@ DATA = [
                     MATTEO_BERRETTINI,
                     ALEXEI_POPYRIN,
                 ],
+                'score': [(6, 4), (6, 4), (6, 7), (7, 6)],
                 'odds': {
                     MATTEO_BERRETTINI: 1.36,
                     ALEXEI_POPYRIN: 3.10,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -6818,11 +6816,11 @@ DATA = [
                     DIEGO_SCHWARTZMAN,
                     TENNYS_SANDGREN,
                 ],
+                'score': [(6, 4), (6, 1), (6, 3)],
                 'odds': {
                     DIEGO_SCHWARTZMAN: 1.30,
                     TENNYS_SANDGREN: 3.40,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -6830,11 +6828,11 @@ DATA = [
                     GAEL_MONFILS,
                     DENIS_SHAPOVALOV,
                 ],
+                'score': [(6, 7), (7, 6), (6, 4), (6, 7), (6, 3)],
                 'odds': {
                     GAEL_MONFILS: 1.68,
                     DENIS_SHAPOVALOV: 2.15,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -6842,11 +6840,100 @@ DATA = [
                     ANDREY_RUBLEV,
                     NICK_KYRGIOS,
                 ],
+                'score': [(7, 6), (7, 6), (6, 3)],
                 'odds': {
                     ANDREY_RUBLEV: 2.60,
                     NICK_KYRGIOS: 1.48,
                 },
-                'prediction': None,
+            },
+
+            # 2019-09-01
+            {
+                'round': 16,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    ALEX_DE_MINAUR,
+                ],
+                'score': [(7, 5), (6, 3), (6, 4)],
+                'odds': {
+                    GRIGOR_DIMITROV: 2.75,
+                    ALEX_DE_MINAUR: 1.42,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROGER_FEDERER,
+                    DAVID_GOFFIN,
+                ],
+                'score': [(6, 2), (6, 2), (6, 0)],
+                'odds': {
+                    ROGER_FEDERER: 1.16,
+                    DAVID_GOFFIN: 5.00,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    STAN_WAWRINKA,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.18,
+                    STAN_WAWRINKA: 4.60,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ANDREY_RUBLEV,
+                    MATTEO_BERRETTINI,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 1.48,
+                    MATTEO_BERRETTINI: 2.60,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 2,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    DIEGO_SCHWARTZMAN,
+                ],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.85,
+                    DIEGO_SCHWARTZMAN: 1.95,
+                },
+                'prediction': ALEXANDER_ZVEREV,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    PABLO_ANDUJAR,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.18,
+                    PABLO_ANDUJAR: 4.60,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARIN_CILIC,
+                    RAFAEL_NADAL,
+                ],
+                'odds': {
+                    MARIN_CILIC: 6.50,
+                    RAFAEL_NADAL: 1.10,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 1,
             },
 
             #
