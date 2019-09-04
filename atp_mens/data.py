@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 75.1  12.6    1009    2019-09-03 results and bets         (2, 1351), (5, 621), (3, 295), (7, 53)
 # 75.8  11.8    407     2019-09-02 bets in                  (1, 1661), (0, 1086), (2, 642), (-1, 58)
 # 72.9  7.9     349     2019-08-31                          (1, 1534), (2, 974), (0, 819), (3, 160)
 # 61.3  2.9     130     2019-08-31                          (2, 332), (1, 230), (3, 187), (4, 94)
@@ -6876,25 +6877,28 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    NOVAK_DJOKOVIC,
                     STAN_WAWRINKA,
+                    NOVAK_DJOKOVIC,
                 ],
+                'score': [(6, 4), (7, 5), (2, 1)],
+                'retired': True,
                 'odds': {
-                    NOVAK_DJOKOVIC: 1.18,
                     STAN_WAWRINKA: 4.60,
+                    NOVAK_DJOKOVIC: 1.18,
                 },
                 'prediction': NOVAK_DJOKOVIC,
-                'bet': 1,
+                'bet': 0,  # refunded 1,
             },
             {
                 'round': 16,
                 'players': [
-                    ANDREY_RUBLEV,
                     MATTEO_BERRETTINI,
+                    ANDREY_RUBLEV,
                 ],
+                'score': [(6, 1), (6, 4), (7, 6)],
                 'odds': {
-                    ANDREY_RUBLEV: 1.48,
                     MATTEO_BERRETTINI: 2.60,
+                    ANDREY_RUBLEV: 1.48,
                 },
                 'prediction': ANDREY_RUBLEV,
                 'bet': 2,
@@ -6902,12 +6906,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    ALEXANDER_ZVEREV,
                     DIEGO_SCHWARTZMAN,
+                    ALEXANDER_ZVEREV,
                 ],
+                'score': [(3, 6), (6, 2), (6, 4), (6, 3)],
                 'odds': {
-                    ALEXANDER_ZVEREV: 1.85,
                     DIEGO_SCHWARTZMAN: 1.95,
+                    ALEXANDER_ZVEREV: 1.85,
                 },
                 'prediction': ALEXANDER_ZVEREV,
                 'bet': 1,
@@ -6918,6 +6923,7 @@ DATA = [
                     GAEL_MONFILS,
                     PABLO_ANDUJAR,
                 ],
+                'score': [(6, 1), (6, 2), (6, 2)],
                 'odds': {
                     GAEL_MONFILS: 1.18,
                     PABLO_ANDUJAR: 4.60,
@@ -6926,12 +6932,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    MARIN_CILIC,
                     RAFAEL_NADAL,
+                    MARIN_CILIC,
                 ],
+                'score': [(6, 3), (3, 6), (6, 1), (6, 2)],
                 'odds': {
-                    MARIN_CILIC: 6.50,
                     RAFAEL_NADAL: 1.10,
+                    MARIN_CILIC: 6.50,
                 },
                 'prediction': RAFAEL_NADAL,
                 'bet': 1,
@@ -6939,53 +6946,111 @@ DATA = [
 
             # 2019-09-02
             {
-                'round': 8,
+                'round': 16,
                 'players': [
-                    ANDREY_RUBLEV,
                     MATTEO_BERRETTINI,
+                    ANDREY_RUBLEV,
                 ],
+                'score': [(6, 1), (6, 4), (7, 6)],
                 'odds': {
-                    ANDREY_RUBLEV: 1.45,
                     MATTEO_BERRETTINI: 2.70,
+                    ANDREY_RUBLEV: 1.45,
                 },
             },
             {
-                'round': 8,
+                'round': 16,
                 'players': [
-                    ALEXANDER_ZVEREV,
                     DIEGO_SCHWARTZMAN,
+                    ALEXANDER_ZVEREV,
                 ],
+                'score': [(3, 6), (6, 2), (6, 4), (6, 3)],
                 'odds': {
-                    ALEXANDER_ZVEREV: 1.80,
                     DIEGO_SCHWARTZMAN: 2.00,
+                    ALEXANDER_ZVEREV: 1.80,
                 },
             },
             {
-                'round': 8,
+                'round': 16,
                 'players': [
                     GAEL_MONFILS,
                     PABLO_ANDUJAR,
                 ],
+                'score': [(6, 1), (6, 2), (6, 2)],
                 'odds': {
                     GAEL_MONFILS: 1.16,
                     PABLO_ANDUJAR: 5.00,
                 },
             },
             {
-                'round': 8,
+                'round': 16,
                 'players': [
-                    MARIN_CILIC,
                     RAFAEL_NADAL,
+                    MARIN_CILIC,
                 ],
+                'score': [(6, 3), (3, 6), (6, 1), (6, 2)],
                 'odds': {
-                    MARIN_CILIC: 6.50,
                     RAFAEL_NADAL: 1.10,
+                    MARIN_CILIC: 6.50,
                 },
                 'prediction': RAFAEL_NADAL,
                 'bet': 1,
             },
 
-            #
+            # 2019-09-03
+            {
+                'round': 8,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    STAN_WAWRINKA,
+                ],
+                'score': [(7, 6), (6, 3), (3, 6), (6, 1)],
+                'odds': {
+                    DANIIL_MEDVEDEV: 2.05,
+                    STAN_WAWRINKA: 1.75,
+                },
+                'prediction': STAN_WAWRINKA,
+                'bet': 4,
+            },
+            {
+                'round': 8,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    ROGER_FEDERER,
+                ],
+                'score': [(3, 6), (6, 4), (3, 6), (6, 4), (6, 2)],
+                'odds': {
+                    GRIGOR_DIMITROV: 8.00,
+                    ROGER_FEDERER: 1.07,
+                },
+                'prediction': ROGER_FEDERER,
+                'bet': 9,
+            },
+
+            # 2019-09-04
+            {
+                'round': 8,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    GAEL_MONFILS,
+                ],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.60,
+                    GAEL_MONFILS: 1.48,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    RAFAEL_NADAL,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 10.00,
+                    RAFAEL_NADAL: 1.04,
+                },
+                'prediction': None,
+            }
         ]
     }
 ]
