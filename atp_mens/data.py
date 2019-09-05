@@ -7033,24 +7033,53 @@ DATA = [
                     MATTEO_BERRETTINI,
                     GAEL_MONFILS,
                 ],
+                'score': [(3, 6), (6, 3), (6, 2), (3, 6), (7, 6)],
                 'odds': {
                     MATTEO_BERRETTINI: 2.60,
                     GAEL_MONFILS: 1.48,
                 },
-                'prediction': None,
             },
             {
                 'round': 8,
                 'players': [
+                    RAFAEL_NADAL,
                     DIEGO_SCHWARTZMAN,
+                ],
+                'score': [(6, 4), (7, 5), (6, 2)],
+                'odds': {
+                    RAFAEL_NADAL: 1.04,
+                    DIEGO_SCHWARTZMAN: 10.00,
+                },
+            },
+
+            # 2019-09-05
+            {
+                'round': 4,
+                'players': [
+                    MATTEO_BERRETTINI,
                     RAFAEL_NADAL,
                 ],
                 'odds': {
-                    DIEGO_SCHWARTZMAN: 10.00,
-                    RAFAEL_NADAL: 1.04,
+                    MATTEO_BERRETTINI: 9.00,
+                    RAFAEL_NADAL: 1.05,
                 },
                 'prediction': None,
-            }
+            },
+            {
+                'round': 4,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.52,
+                    GRIGOR_DIMITROV: 2.50,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 4,
+            },
+
+            #
         ]
     }
 ]
