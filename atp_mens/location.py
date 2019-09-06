@@ -478,6 +478,14 @@ TOKYO = {
     'surface': SURFACE_HARD,
     'speed': 57,
 }
+TORONTO = {
+    'name': 'ATP Masters 1000 Canada',
+    'category': 'ATP1000',
+    'location': 'Toronto, Canada',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 59,
+}
 UMAG = {
     'name': 'Plava Laguna Croatia Open Umag',
     'category': 'ATP250',

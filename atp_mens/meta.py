@@ -302,6 +302,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    BENJAMIN_SIGOUIN: {
+        'born_at': (1999, 6, 3),
+        'height': 193,
+        'forehand': RH,
+        'backhand': THB,
+    },
     BENOIT_PAIRE: {
         'born_at': (1989, 5, 8),
         'height': 196,
@@ -873,6 +879,12 @@ META = {
         'height': 185,
         'forehand': RH,
         'backhand': THB,
+    },
+    FRANK_DANCEVIC: {
+        'born_at': (1984, 9, 26),
+        'height': 185,
+        'forehand': RH,
+        'backhand': OHB,
     },
     FRANKO_SKUGOR: {
         'born_at': (1987, 9, 20),
