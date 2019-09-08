@@ -4,6 +4,496 @@ from location import *
 
 DATA_2018_08 = [
     {
+        'location': KITZBUHEL,
+        'date': '2018-08-04',
+        'matches': [
+
+            # 2018-07-28
+            {
+                'round': 512,
+                'players': [
+                    LORENZO_SONEGO,
+                    MATTHIAS_HAIM
+                ],
+                'score': [(6, 7), (6, 3), (6, 4)],
+                'odds': {
+                    LORENZO_SONEGO: 1.19,
+                    MATTHIAS_HAIM: 4.33
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YANNICK_MADEN,
+                    VIKTOR_GALOVIC
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    YANNICK_MADEN: 1.38,
+                    VIKTOR_GALOVIC: 2.85
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(3, 6), (6, 4), (7, 5)],
+                'odds': {
+                    THIAGO_MONTEIRO: 1.89,
+                    GUIDO_ANDREOZZI: 1.74
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARTIN_KLIZAN,
+                    FACUNDO_BAGNIS
+                ],
+                'score': [(4, 6), (6, 4), (7, 6)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.38,
+                    FACUNDO_BAGNIS: 2.85
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JURIJ_RODIONOV,
+                    ERNESTS_GULBIS
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    JURIJ_RODIONOV: 1.83,
+                    ERNESTS_GULBIS: 1.83
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    GERALD_MELZER,
+                    BLAZ_ROLA
+                ],
+                'score': [(6, 4), (0, 1)],
+                'retired': True,
+                'odds': {
+                    GERALD_MELZER: 1.95,
+                    BLAZ_ROLA: 1.66
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YANNICK_HANFMANN,
+                    THIAGO_SEYBOTH_WILD
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    YANNICK_HANFMANN: 1.14,
+                    THIAGO_SEYBOTH_WILD: 5.17
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DENIS_ISTOMIN,
+                    ELLIOT_BENCHETRIT
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    DENIS_ISTOMIN: 1.74,
+                    ELLIOT_BENCHETRIT: 1.95
+                }
+            },
+
+            # 2018-07-29
+            {
+                'round': 256,
+                'players': [
+                    JURIJ_RODIONOV,
+                    LORENZO_SONEGO
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    JURIJ_RODIONOV: 1.59,
+                    LORENZO_SONEGO: 2.30
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARTIN_KLIZAN,
+                    GERALD_MELZER
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.55,
+                    GERALD_MELZER: 2.20
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    YANNICK_HANFMANN,
+                    YANNICK_MADEN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    YANNICK_HANFMANN: 1.58,
+                    YANNICK_MADEN: 2.25
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    DENIS_ISTOMIN,
+                    THIAGO_MONTEIRO
+                ],
+                'score': [(6, 1), (6, 7), (7, 5)],
+                'odds': {
+                    DENIS_ISTOMIN: 1.91,
+                    THIAGO_MONTEIRO: 1.77
+                }
+            },
+
+            # 2018-07-30
+            {
+                'round': 32,
+                'players': [
+                    DENNIS_NOVAK,
+                    JURIJ_RODIONOV
+                ],
+                'score': [(6, 4), (0, 6), (6, 1)],
+                'odds': {
+                    DENNIS_NOVAK: 1.78,
+                    JURIJ_RODIONOV: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAUME_MUNAR,
+                    YANNICK_HANFMANN
+                ],
+                'score': [(2, 6), (7, 6), (6, 1)],
+                'odds': {
+                    JAUME_MUNAR: 2.03,
+                    YANNICK_HANFMANN: 1.77
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.83,
+                    CORENTIN_MOUTET: 1.91
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTIN_KLIZAN,
+                    SEBASTIAN_OFNER
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.38,
+                    SEBASTIAN_OFNER: 2.97
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_ISTOMIN,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    DENIS_ISTOMIN: 2.59,
+                    FEDERICO_DELBONIS: 1.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LASLO_DJERE,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    LASLO_DJERE: 1.67,
+                    NIKOLOZ_BASILASHVILI: 2.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RADU_ALBOT,
+                    JOZEF_KOVALIK
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    RADU_ALBOT: 3.19,
+                    JOZEF_KOVALIK: 1.37
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.43,
+                    GUILLERMO_GARCIA_LOPEZ: 2.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    TARO_DANIEL: 2.31,
+                    JAN_LENNARD_STRUFF: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MAXIMILIAN_MARTERER,
+                    JURGEN_ZOPP
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    MAXIMILIAN_MARTERER: 1.54,
+                    JURGEN_ZOPP: 2.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    GILLES_SIMON
+                ],
+                'score': [(1, 6), (6, 3), (6, 4)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.77,
+                    GILLES_SIMON: 2.00
+                }
+            },
+
+            # 2018-07-31
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_JARRY,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(7, 6), (6, 7), (6, 4)],
+                'odds': {
+                    NICOLAS_JARRY: 1.54,
+                    ROBERTO_CARBALLES_BAENA: 2.55
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    TARO_DANIEL,
+                    LASLO_DJERE
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    TARO_DANIEL: 2.15,
+                    LASLO_DJERE: 1.69
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 3), (6, 7), (6, 1)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.43,
+                    RADU_ALBOT: 2.88
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    DENNIS_NOVAK
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.36,
+                    DENNIS_NOVAK: 3.27
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MAXIMILIAN_MARTERER,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MAXIMILIAN_MARTERER: 1.65,
+                    MIKHAIL_KUKUSHKIN: 2.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JAUME_MUNAR,
+                    ROBIN_HAASE
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    JAUME_MUNAR: 2.05,
+                    ROBIN_HAASE: 1.76
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NICOLAS_JARRY,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 7), (7, 5), (6, 3)],
+                'odds': {
+                    NICOLAS_JARRY: 2.04,
+                    FERNANDO_VERDASCO: 1.76
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DENIS_ISTOMIN,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(5, 7), (6, 3), (6, 1)],
+                'odds': {
+                    DENIS_ISTOMIN: 3.43,
+                    PHILIPP_KOHLSCHREIBER: 1.31
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARTIN_KLIZAN,
+                    DOMINIC_THIEM
+                ],
+                'score': [(6, 1), (1, 6), (7, 5)],
+                'odds': {
+                    MARTIN_KLIZAN: 4.14,
+                    DOMINIC_THIEM: 1.24
+                }
+            },
+
+            # 2018-08-02
+            {
+                'round': 8,
+                'players': [
+                    JAUME_MUNAR,
+                    TARO_DANIEL
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    JAUME_MUNAR: 1.83,
+                    TARO_DANIEL: 1.94
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    NICOLAS_JARRY,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    NICOLAS_JARRY: 1.96,
+                    MATTEO_BERRETTINI: 1.84
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARTIN_KLIZAN,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(4, 6), (7, 6), (6, 2)],
+                'odds': {
+                    MARTIN_KLIZAN: 2.20,
+                    DUSAN_LAJOVIC: 1.71
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DENIS_ISTOMIN,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    DENIS_ISTOMIN: 2.40,
+                    MAXIMILIAN_MARTERER: 1.53
+                }
+            },
+
+            # 2018-08-03
+            {
+                'round': 4,
+                'players': [
+                    MARTIN_KLIZAN,
+                    JAUME_MUNAR
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.67,
+                    JAUME_MUNAR: 2.24
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    DENIS_ISTOMIN,
+                    NICOLAS_JARRY
+                ],
+                'score': [(7, 5), (6, 7), (6, 4)],
+                'odds': {
+                    DENIS_ISTOMIN: 2.50,
+                    NICOLAS_JARRY: 1.56
+                }
+            },
+
+            # 2018-08-04
+            {
+                'round': 2,
+                'players': [
+                    MARTIN_KLIZAN,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.56,
+                    DENIS_ISTOMIN: 2.50
+                }
+            }
+        ]
+    },
+
+    {
         'location': TORONTO,
         'date': '2018-08-12',
         'matches': [

@@ -7053,18 +7053,20 @@ DATA = [
                 },
             },
 
-            # 2019-09-05
+            # 2019-09-06
             {
                 'round': 4,
                 'players': [
-                    MATTEO_BERRETTINI,
                     RAFAEL_NADAL,
+                    MATTEO_BERRETTINI,
                 ],
+                'score': [(7, 6), (6, 4), (6, 1)],
                 'odds': {
+                    RAFAEL_NADAL: 1.06,
                     MATTEO_BERRETTINI: 9.00,
-                    RAFAEL_NADAL: 1.05,
                 },
-                'prediction': None,
+                'prediction': RAFAEL_NADAL,
+                'bet': 2,
             },
             {
                 'round': 4,
@@ -7072,6 +7074,7 @@ DATA = [
                     DANIIL_MEDVEDEV,
                     GRIGOR_DIMITROV,
                 ],
+                'score': [(7, 6), (6, 4), (6, 3)],
                 'odds': {
                     DANIIL_MEDVEDEV: 1.52,
                     GRIGOR_DIMITROV: 2.50,
@@ -7079,8 +7082,6 @@ DATA = [
                 'prediction': DANIIL_MEDVEDEV,
                 'bet': 4,
             },
-
-            #
         ]
     }
 ]

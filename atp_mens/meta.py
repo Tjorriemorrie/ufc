@@ -1747,6 +1747,12 @@ META = {
         'height': 188,
         'forehand': RH,
     },
+    MATTHIAS_HAIM: {
+        'born_at': (1998, 1, 11),
+        'height': 196,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     MATS_MORAING: {
         'born_at': (1992, 6, 20),
         'height': 198,
