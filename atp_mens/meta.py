@@ -92,6 +92,9 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    ALAN_MAGADAN: {
+        'born_at': (2001, 5, 26),
+    },
     ALASTAIR_GRAY: {
         'born_at': (1998, 6, 22),
         'height': 188,
@@ -113,6 +116,12 @@ META = {
     ALEJANDRO_DAVIDOVICH_FOKINA: {
         'born_at': (1999, 6, 5),
         'height': 183,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    ALEKSANDAR_VUKIC: {
+        'born_at': (1996, 4, 6),
+        'height': 188,
         'forehand': RH,
         'backhand': THB,
     },
@@ -294,6 +303,12 @@ META = {
         'born_at': (1988, 9, 27),
         'height': 180,
         'forehand': RH,
+        'backhand': THB,
+    },
+    AUSTIN_KRAJICEK: {
+        'born_at': (1990, 6, 16),
+        'height': 188,
+        'forehand': LH,
         'backhand': THB,
     },
     BENJAMIN_BONZI: {
@@ -1798,6 +1813,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    MIGUEL_ANGEL_REYES_VARELA: {
+        'born_at': (1987, 6, 21),
+        'height': 175,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     MIKAEL_TORPEGAARD: {
         'born_at': (1994, 5, 8),
         'height': 193,
@@ -2430,6 +2451,12 @@ META = {
         'born_at': (2001, 7, 19),
         'forehand': RH,
     },
+    TAKANYI_GARANGANGA: {
+        'born_at': (1990, 9, 6),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
     TALLON_GRIEKSPOOR: {
         'born_at': (1996, 7, 2),
         'height': 188,
@@ -2507,6 +2534,11 @@ META = {
         'height': 188,
         'forehand': LH,
         'backhand': THB,
+    },
+    TIGRE_HANK: {
+        'born_at': (1991, 9, 30),
+        'height': 188,
+        'forehand': LH,
     },
     TIM_PUETZ: {
         'born_at': (1987, 11, 19),

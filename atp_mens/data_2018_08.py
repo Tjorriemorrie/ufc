@@ -4,6 +4,485 @@ from location import *
 
 DATA_2018_08 = [
     {
+        'location': LOS_CABOS,
+        'date': '2018-07-30',
+        'matches': [
+
+            # 2018-07-28
+            {
+                'round': 512,
+                'players': [
+                    LUIS_PATINO,
+                    AUSTIN_KRAJICEK
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    LUIS_PATINO: 5.25,
+                    AUSTIN_KRAJICEK: 1.12
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEKSANDAR_VUKIC,
+                    JACOB_GRILLS
+                ],
+                'score': [(3, 6), (6, 2), (6, 3)],
+                'odds': {
+                    ALEKSANDAR_VUKIC: 1.51,
+                    JACOB_GRILLS: 2.68
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    EVAN_SONG,
+                    TIGRE_HANK
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    EVAN_SONG: 1.28,
+                    TIGRE_HANK: 3.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCOS_GIRON,
+                    BRADLEY_MOUSLEY
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    MARCOS_GIRON: 1.50,
+                    BRADLEY_MOUSLEY: 2.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TAKANYI_GARANGANGA,
+                    EVAN_KING
+                ],
+                'score': [(7, 6), (4, 6), (7, 6)],
+                'odds': {
+                    TAKANYI_GARANGANGA: 3.35,
+                    EVAN_KING: 1.32
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PRAJNESH_GUNNESWARAN,
+                    MIGUEL_ANGEL_REYES_VARELA
+                ],
+                'score': [(6, 4), (6, 0)],
+                'odds': {
+                    PRAJNESH_GUNNESWARAN: 1.06,
+                    MIGUEL_ANGEL_REYES_VARELA: 8.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MOHAMED_SAFWAT,
+                    ALAN_MAGADAN
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    MOHAMED_SAFWAT: 1.03,
+                    ALAN_MAGADAN: 9.00
+                }
+            },
+
+            # 2018-07-29
+            {
+                'round': 512,
+                'players': [
+                    TAKANYI_GARANGANGA,
+                    LUIS_PATINO
+                ],
+                'score': [(6, 2), (0, 6), (7, 6)],
+                'odds': {
+                    TAKANYI_GARANGANGA: 1.50,
+                    LUIS_PATINO: 2.40
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PRAJNESH_GUNNESWARAN,
+                    EVAN_SONG
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    PRAJNESH_GUNNESWARAN: 1.25,
+                    EVAN_SONG: 3.45
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MOHAMED_SAFWAT,
+                    ALEKSANDAR_VUKIC
+                ],
+                'score': [(2, 6), (7, 6), (6, 4)],
+                'odds': {
+                    MOHAMED_SAFWAT: 1.63,
+                    ALEKSANDAR_VUKIC: 2.10
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCOS_GIRON,
+                    DANIEL_ELAHI_GALAN
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    MARCOS_GIRON: 2.00,
+                    DANIEL_ELAHI_GALAN: 1.63
+                }
+            },
+
+            # 2018-07-30
+            {
+                'round': 32,
+                'players': [
+                    ELIAS_YMER,
+                    IVO_KARLOVIC
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    ELIAS_YMER: 2.55,
+                    IVO_KARLOVIC: 1.49
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    GASTAO_ELIAS
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.28,
+                    GASTAO_ELIAS: 3.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MICHAEL_MMOH,
+                    ERNESTO_ESCOBEDO
+                ],
+                'score': [(6, 3), (4, 6), (6, 1)],
+                'odds': {
+                    MICHAEL_MMOH: 1.95,
+                    ERNESTO_ESCOBEDO: 1.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TAYLOR_FRITZ,
+                    THANASI_KOKKINAKIS
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.70,
+                    THANASI_KOKKINAKIS: 2.05
+                }
+            },
+
+            # 2018-07-31
+            {
+                'round': 32,
+                'players': [
+                    PETER_POLANSKY,
+                    DANIEL_ELAHI_GALAN
+                ],
+                'score': [(6, 4), (3, 6), (6, 2)],
+                'odds': {
+                    PETER_POLANSKY: 1.53,
+                    DANIEL_ELAHI_GALAN: 2.45
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    PRAJNESH_GUNNESWARAN
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    CAMERON_NORRIE: 1.25,
+                    PRAJNESH_GUNNESWARAN: 3.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    QUENTIN_HALYS,
+                    GILLES_MULLER
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    QUENTIN_HALYS: 2.00,
+                    GILLES_MULLER: 1.71
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCOS_GIRON,
+                    MARCELO_AREVALO
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    MARCOS_GIRON: 1.73,
+                    MARCELO_AREVALO: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    EGOR_GERASIMOV,
+                    BERNARD_TOMIC
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    EGOR_GERASIMOV: 2.87,
+                    BERNARD_TOMIC: 1.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    THOMAS_FABBIANO,
+                    TAKANYI_GARANGANGA
+                ],
+                'score': [(5, 7), (6, 2), (7, 5)],
+                'odds': {
+                    THOMAS_FABBIANO: 1.14,
+                    TAKANYI_GARANGANGA: 5.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    MOHAMED_SAFWAT
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    FELICIANO_LOPEZ: 1.28,
+                    MOHAMED_SAFWAT: 3.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    LUCAS_GOMEZ
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    SAM_QUERREY: 1.03,
+                    LUCAS_GOMEZ: 11.00
+                }
+            },
+
+            # 2018-08-01
+            {
+                'round': 16,
+                'players': [
+                    MICHAEL_MMOH,
+                    PETER_POLANSKY
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    MICHAEL_MMOH: 1.61,
+                    PETER_POLANSKY: 2.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CAMERON_NORRIE,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    CAMERON_NORRIE: 1.75,
+                    FELICIANO_LOPEZ: 2.00
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 2.70,
+                    TAYLOR_FRITZ: 1.43
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    EGOR_GERASIMOV,
+                    SAM_QUERREY
+                ],
+                'score': [(7, 5), (5, 7), (7, 6)],
+                'odds': {
+                    EGOR_GERASIMOV: 4.50,
+                    SAM_QUERREY: 1.17
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    ELIAS_YMER
+                ],
+                'score': [(6, 0), (6, 2)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.49,
+                    ELIAS_YMER: 2.55
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    THOMAS_FABBIANO
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.57,
+                    THOMAS_FABBIANO: 2.35
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FABIO_FOGNINI,
+                    QUENTIN_HALYS
+                ],
+                'score': [(2, 6), (6, 4), (6, 0)],
+                'odds': {
+                    FABIO_FOGNINI: 1.49,
+                    QUENTIN_HALYS: 2.67
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    MARCOS_GIRON
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.03,
+                    MARCOS_GIRON: 11.00
+                }
+            },
+
+            # 2018-08-02
+            {
+                'round': 8,
+                'players': [
+                    CAMERON_NORRIE,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    CAMERON_NORRIE: 1.80,
+                    ADRIAN_MANNARINO: 1.95,
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    MICHAEL_MMOH
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.59,
+                    MICHAEL_MMOH: 2.25
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FABIO_FOGNINI,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    FABIO_FOGNINI: 1.58,
+                    YOSHIHITO_NISHIOKA: 2.40,
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    EGOR_GERASIMOV
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.08,
+                    EGOR_GERASIMOV: 7.50
+                }
+            },
+
+            # 2018-08-03
+            {
+                'round': 4,
+                'players': [
+                    FABIO_FOGNINI,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    FABIO_FOGNINI: 1.77,
+                    CAMERON_NORRIE: 2.00
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    JUAN_MARTIN_DEL_POTRO,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    JUAN_MARTIN_DEL_POTRO: 1.14,
+                    DAMIR_DZUMHUR: 5.50
+                }
+            },
+
+            # 2018-08-04
+            {
+                'round': 2,
+                'players': [
+                    FABIO_FOGNINI,
+                    JUAN_MARTIN_DEL_POTRO
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    FABIO_FOGNINI: 3.75,
+                    JUAN_MARTIN_DEL_POTRO: 1.24
+                }
+            }
+        ]
+    },
+
+    {
         'location': KITZBUHEL,
         'date': '2018-08-04',
         'matches': [
