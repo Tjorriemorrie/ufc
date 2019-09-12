@@ -281,6 +281,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ANTOINE_ESCOFFIER: {
+        'born_at': (1992, 2, 29),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
     ANTOINE_HOANG: {
         'born_at': (1995, 11, 4),
         'height': 183,
@@ -574,6 +580,12 @@ META = {
         'born_at': (1992, 1, 24),
         'height': 203,
         'forehand': RH,
+        'backhand': THB,
+    },
+    DANNY_THOMAS: {
+        'born_at': (1999, 11, 22),
+        'height': 183,
+        'forehand': LH,
         'backhand': THB,
     },
     DARIAN_KING: {
@@ -1071,6 +1083,8 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    HUNTER_KOONTZ: {
+    },
     HYEON_CHUNG: {
         'born_at': (1996, 5, 19),
         'height': 188,
@@ -1183,6 +1197,12 @@ META = {
     JARED_DONALDSON: {
         'born_at': (1996, 10, 9),
         'height': 188,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    JARED_HILTZIK: {
+        'born_at': (1994, 7, 8),
+        'height': 185,
         'forehand': RH,
         'backhand': THB,
     },
@@ -2002,6 +2022,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    PATRICK_KYPSON: {
+        'born_at': (1999, 10, 28),
+        'height': 188,
+        'forehand': RH,
+        'backhand': THB,
+    },
     PAUL_JUBB: {
         'born_at': (1999, 10, 31),
         'height': 180,
@@ -2285,6 +2311,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    RYAN_SHANE: {
+        'born_at': (1994, 4, 15),
+        'height': 193,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     SAKETH_MYNENI: {
         'born_at': (1987, 10, 19),
         'height': 193,
@@ -2387,6 +2419,12 @@ META = {
         'height': 183,
         'forehand': RH,
         'backhand': OHB,
+    },
+    STEFAN_KOZLOV: {
+        'born_at': (1998, 2, 1),
+        'height': 183,
+        'forehand': RH,
+        'backhand': THB,
     },
     STEFANO_NAPOLITANO: {
         'born_at': (1995, 4, 11),
@@ -2643,6 +2681,12 @@ META = {
         'born_at': (1986, 2, 10),
         'height': 193,
         'forehand': RH,
+        'backhand': THB,
+    },
+    VINCENT_MILLOT: {
+        'born_at': (1986, 1, 30),
+        'height': 173,
+        'forehand': LH,
         'backhand': THB,
     },
     YANKI_EREL: {
