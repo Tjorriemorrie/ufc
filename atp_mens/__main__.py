@@ -57,13 +57,13 @@ def main(hyper_params, train=0):
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA
 
-    bet_sfcw_a, bet_sfcw_b, bet_drs_a, bet_drs_b, bet_tier_a, bet_tier_b = hyper_params
-    # bet_sfcw_a = 0.1996340140818771
-    # bet_sfcw_b = -5.798918183958375
-    # bet_drs_a = -2.33149605309335
-    # bet_drs_b = -5.6176613236722375
-    # bet_tier_a = 4559.029066788576
-    # bet_tier_b = -5.0213016485737665
+    # bet_sfcw_a, bet_sfcw_b, bet_drs_a, bet_drs_b, bet_tier_a, bet_tier_b = hyper_params
+    bet_sfcw_a = 2726.5232400388554
+    bet_sfcw_b = -712.1968687334224
+    bet_drs_a = -2003.7922837174558
+    bet_drs_b = -3472.193477217294
+    bet_tier_a = 4131.816103646923
+    bet_tier_b = -1.4953158174148562
 
     # bet_drsl_a, bet_drsl_b, bet_tiel_a, bet_tiel_b, bet_tmi_a, bet_tmi_b = hyper_params
     bet_drsl_a = 0.061418556183045245
@@ -151,9 +151,6 @@ def main(hyper_params, train=0):
     actual_debug = []
     bet_multis = []
     bet_multis_cat = []
-
-    bet_multi = 0  # reinit every match
-    up_bet = partial(up_multi_bet, bet_multi, bet_multis_cat)
 
     # loop through scenes
     for i, event in enumerate(all_data):
@@ -323,90 +320,90 @@ def main(hyper_params, train=0):
                 p_odds = 1 / p1_odds - 1 / p2_odds
             else:
                 p_odds = 1 / p2_odds - 1 / p1_odds
-            bet_multi = up_bet([bet_odds_a, bet_odds_b], p_odds, 'odds')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_odds_a, bet_odds_b], p_odds, 'odds')
 
             # trueskill mu
             if p1_odds < p2_odds:
                 f_ts = p1_ts - p2_ts
             else:
                 f_ts = p2_ts - p1_ts
-            bet_multi = up_bet([bet_ts_a, bet_ts_b], f_ts, 'ts')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_ts_a, bet_ts_b], f_ts, 'ts')
 
             # trueskill min
             if p1_odds < p2_odds:
                 f_ts_min = p1_ts_min - p2_ts_min
             else:
                 f_ts_min = p2_ts_min - p1_ts_min
-            bet_multi = up_bet([bet_tmi_a, bet_tmi_b], f_ts_min, 'tmi')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tmi_a, bet_tmi_b], f_ts_min, 'tmi')
 
             # trueskill max
             if p1_odds < p2_odds:
                 f_ts_max = p1_ts_max - p2_ts_max
             else:
                 f_ts_max = p2_ts_max - p1_ts_max
-            bet_multi = up_bet([bet_tma_a, bet_tma_b], f_ts_max, 'tma')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tma_a, bet_tma_b], f_ts_max, 'tma')
 
             # trueskill match quality
-            bet_multi = up_bet([bet_tsq_a, bet_tsq_b], ts_quality, 'tsq')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tsq_a, bet_tsq_b], ts_quality, 'tsq')
 
             # wins and losses wins
             if p1_odds < p2_odds:
                 p_wnlw = p1_wins - p2_wins
             else:
                 p_wnlw = p2_wins - p1_wins
-            bet_multi = up_bet([bet_wnlw_a, bet_wnlw_b], p_wnlw, 'wnlw')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_wnlw_a, bet_wnlw_b], p_wnlw, 'wnlw')
 
             # wins and losses lost
             if p1_odds < p2_odds:
                 p_wnll = p2_losses - p1_losses
             else:
                 p_wnll = p1_losses - p2_losses
-            bet_multi = up_bet([bet_wnll_a, bet_wnll_b], p_wnll, 'wnll')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_wnll_a, bet_wnll_b], p_wnll, 'wnll')
 
             # wins and losses winrate
             if p1_odds < p2_odds:
                 p_wnlr = p1_wnl_winrate - p2_wnl_winrate
             else:
                 p_wnlr = p2_wnl_winrate - p1_wnl_winrate
-            bet_multi = up_bet([bet_wnlr_a, bet_wnlr_b], p_wnlr, 'wnlr')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_wnlr_a, bet_wnlr_b], p_wnlr, 'wnlr')
 
             # round
-            bet_multi = up_bet([bet_rnd_a, bet_rnd_b], 1 / match['round'], 'rnd')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_rnd_a, bet_rnd_b], 1 / match['round'], 'rnd')
 
             # doors wins
             if p1_odds < p2_odds:
                 p_drsw = p1_doors_wins - p2_doors_wins
             else:
                 p_drsw = p2_doors_wins - p1_doors_wins
-            bet_multi = up_bet([bet_drsw_a, bet_drsw_b], p_drsw, 'drsw')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_drsw_a, bet_drsw_b], p_drsw, 'drsw')
 
             # doors losses
             if p1_odds < p2_odds:
                 p_drsl = p2_doors_losses - p1_doors_losses
             else:
                 p_drsl = p1_doors_losses - p2_doors_losses
-            bet_multi = up_bet([bet_drsl_a, bet_drsl_b], p_drsl, 'drsl')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_drsl_a, bet_drsl_b], p_drsl, 'drsl')
 
             # doors winrate
             if p1_odds < p2_odds:
                 p_drs = p1_doors_winrate - p2_doors_winrate
             else:
                 p_drs = p2_doors_winrate - p1_doors_winrate
-            bet_multi = up_bet([bet_drs_a, bet_drs_b], p_drs, 'drs')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_drs_a, bet_drs_b], p_drs, 'drs')
 
             # surface wins
             if p1_odds < p2_odds:
                 p_sfcw = p1_surface_wins - p2_surface_wins
             else:
                 p_sfcw = p2_surface_wins - p1_surface_wins
-            bet_multi = up_bet([bet_sfcw_a, bet_sfcw_b], p_sfcw, 'sfcw')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_sfcw_a, bet_sfcw_b], p_sfcw, 'sfcw')
 
             # surface winrate
             if p1_odds < p2_odds:
                 p_sfcr = p1_surface_winrate - p2_surface_winrate
             else:
                 p_sfcr = p2_surface_winrate - p1_surface_winrate
-            bet_multi = up_bet([bet_sfcr_a, bet_sfcr_b], p_sfcr, 'sfcr')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_sfcr_a, bet_sfcr_b], p_sfcr, 'sfcr')
 
             # speed
             p1_speed = p1_speed_lin.intercept + p1_speed_lin.slope * match_speed
@@ -415,84 +412,84 @@ def main(hyper_params, train=0):
                 p_spd = p1_speed - p2_speed
             else:
                 p_spd = p2_speed - p1_speed
-            bet_multi = up_bet([bet_spd_a, bet_spd_b], p_spd, 'spd')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_spd_a, bet_spd_b], p_spd, 'spd')
 
             # sets wins
             if p1_odds < p2_odds:
                 p_setw = p1_sets_wins - p2_sets_wins
             else:
                 p_setw = p2_sets_wins - p1_sets_wins
-            bet_multi = up_bet([bet_setw_a, bet_setw_b], p_setw, 'setw')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_setw_a, bet_setw_b], p_setw, 'setw')
 
             # sets losses
             if p1_odds < p2_odds:
                 p_setl = p2_sets_losses - p1_sets_losses
             else:
                 p_setl = p1_sets_losses - p2_sets_losses
-            bet_multi = up_bet([bet_setl_a, bet_setl_b], p_setl, 'setl')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_setl_a, bet_setl_b], p_setl, 'setl')
 
             # sets winrate
             if p1_odds < p2_odds:
                 p_setr = p1_sets_winrate - p2_sets_winrate
             else:
                 p_setr = p2_sets_winrate - p1_sets_winrate
-            bet_multi = up_bet([bet_setr_a, bet_setr_b], p_setr, 'setr')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_setr_a, bet_setr_b], p_setr, 'setr')
 
             # games
             if p1_odds < p2_odds:
                 p_gms = p1_gms_avg - p2_gms_avg
             else:
                 p_gms = p2_gms_avg - p1_gms_avg
-            bet_multi = up_bet([bet_gms_a, bet_gms_b], p_gms, 'gms')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_gms_a, bet_gms_b], p_gms, 'gms')
 
             # ties wins
             if p1_odds < p2_odds:
                 p_tiew = p1_ties_wins - p2_ties_wins
             else:
                 p_tiew = p2_ties_wins - p1_ties_wins
-            bet_multi = up_bet([bet_tiew_a, bet_tiew_b], p_tiew, 'tiew')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tiew_a, bet_tiew_b], p_tiew, 'tiew')
 
             # ties losses
             if p1_odds < p2_odds:
                 p_tiel = p2_ties_losses - p1_ties_losses
             else:
                 p_tiel = p1_ties_losses - p2_ties_losses
-            bet_multi = up_bet([bet_tiel_a, bet_tiel_b], p_tiel, 'tiel')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tiel_a, bet_tiel_b], p_tiel, 'tiel')
 
             # ties winrate
             if p1_odds < p2_odds:
                 p_tier = p1_ties_winrate - p2_ties_winrate
             else:
                 p_tier = p2_ties_winrate - p2_ties_winrate
-            bet_multi = up_bet([bet_tier_a, bet_tier_b], p_tier, 'tier')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tier_a, bet_tier_b], p_tier, 'tier')
 
             # upsets wins
             if p1_odds < p2_odds:
                 p_upsw = p1_upsets_wins - p2_upsets_wins
             else:
                 p_upsw = p2_upsets_wins - p1_upsets_wins
-            bet_multi = up_bet([bet_upsw_a, bet_upsw_b], p_upsw, 'upsw')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_upsw_a, bet_upsw_b], p_upsw, 'upsw')
 
             # upsets losess
             if p1_odds < p2_odds:
                 p_upsl = p2_upsets_losses - p1_upsets_losses
             else:
                 p_upsl = p1_upsets_losses - p2_upsets_losses
-            bet_multi = up_bet([bet_upsl_a, bet_upsl_b], p_upsl, 'upsl')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_upsl_a, bet_upsl_b], p_upsl, 'upsl')
 
             # upsets winrate
             if p1_odds < p2_odds:
                 p_upsr = p1_upsets_win_avg - p2_upsets_win_avg
             else:
                 p_upsr = p2_upsets_win_avg - p1_upsets_win_avg
-            bet_multi = up_bet([bet_upsr_a, bet_upsr_b], p_upsr, 'upsr')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_upsr_a, bet_upsr_b], p_upsr, 'upsr')
 
             # age
             if p1_odds < p2_odds:
                 p_age = p1_age - p2_age
             else:
                 p_age = p2_age - p1_age
-            bet_multi = up_bet([bet_age_a, bet_age_b], p_age, 'age')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_age_a, bet_age_b], p_age, 'age')
 
             log_players = f'x{round(bet_multi):.0f} {p1} {match.get("score")} {p2}'
             bet_amt = round(bet_size * bet_multi)
@@ -640,14 +637,14 @@ def run():
         # 'bet_tma_a', 'bet_tma_b',    # 565     7     -     -
 
         # 72.1  75.9    10.0    1191
-        # 'bet_drsl_a', 'bet_drsl_b',    # 288     1     -   498
-        # 'bet_tiel_a', 'bet_tiel_b',    # 342     1     -   229
-        # 'bet_tmi_a', 'bet_tmi_b',      # 615    24    31   884
+        # 'bet_drsl_a', 'bet_drsl_b',  # 288     1     -   498
+        # 'bet_tiel_a', 'bet_tiel_b',  # 342     1     -   229
+        # 'bet_tmi_a', 'bet_tmi_b',    # 615    24    31   884
 
-        # 75.4  68.8    11.9    1221
-        'bet_sfcw_a', 'bet_sfcw_b',  # 576   -   19
-        'bet_drs_a', 'bet_drs_b',       # 639       -
-        'bet_tier_a', 'bet_tier_b',   # 1041  1335    1339
+        # 69.0  86.9    4.9     904
+        'bet_sfcw_a', 'bet_sfcw_b',    # 716     -    19  2174
+        'bet_drs_a', 'bet_drs_b',      # 747     -     -
+        'bet_tier_a', 'bet_tier_b',    # 948  1335  1339  1382
 
     ]
     params = [0, 0, 0, 0, 0, 0]
