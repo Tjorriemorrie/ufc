@@ -4,6 +4,497 @@ from location import *
 
 DATA_2018_08 = [
     {
+        'location': GSTAAD,
+        'date': '2018-07-29',
+        'matches': [
+
+            # 2018-07-21
+            {
+                'round': 512,
+                'players': [
+                    YANN_MARTI,
+                    ADRIAN_BODMER
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    YANN_MARTI: 1.55,
+                    ADRIAN_BODMER: 2.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    VIKTOR_GALOVIC,
+                    GONZALO_ESCOBAR
+                ],
+                'score': [(6, 3), (3, 6), (7, 6)],
+                'odds': {
+                    VIKTOR_GALOVIC: 1.50,
+                    GONZALO_ESCOBAR: 2.15
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ORIOL_ROCA_BATALLA,
+                    KENNY_DE_SCHEPPER
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    ORIOL_ROCA_BATALLA: 2.10,
+                    KENNY_DE_SCHEPPER: 1.67
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JAKUB_PAUL,
+                    MATTEO_DONATI
+                ],
+                'score': [(4, 6), (6, 4), (6, 4)],
+                'odds': {
+                    JAKUB_PAUL: 11.00,
+                    MATTEO_DONATI: 1.04
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    KEVIN_KRAWIETZ
+                ],
+                'score': [(6, 3), (3, 6), (6, 2)],
+                'odds': {
+                    FACUNDO_BAGNIS: 1.27,
+                    KEVIN_KRAWIETZ: 3.15
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    SANTIAGO_GIRALDO
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 2.62,
+                    SANTIAGO_GIRALDO: 1.47
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JURGEN_ZOPP,
+                    ANDRES_MOLTENI
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    JURGEN_ZOPP: 1.10,
+                    ANDRES_MOLTENI: 2.60
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YANNICK_HANFMANN,
+                    LUCA_MARGAROLI
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    YANNICK_HANFMANN: 1.01,
+                    LUCA_MARGAROLI: 14.82
+                }
+            },
+
+            # 2018-07-22
+            {
+                'round': 256,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    YANN_MARTI
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    FACUNDO_BAGNIS: 1.15,
+                    YANN_MARTI: 5.00
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    JAKUB_PAUL
+                ],
+                'score': [(6, 3), (6, 0)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 1.16,
+                    JAKUB_PAUL: 4.80
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JURGEN_ZOPP,
+                    ORIOL_ROCA_BATALLA
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JURGEN_ZOPP: 1.47,
+                    ORIOL_ROCA_BATALLA: 2.63
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    YANNICK_HANFMANN,
+                    VIKTOR_GALOVIC
+                ],
+                'score': [(6, 7), (7, 6), (6, 4)],
+                'odds': {
+                    YANNICK_HANFMANN: 1.24,
+                    VIKTOR_GALOVIC: 3.65
+                }
+            },
+
+            # 2018-07-23
+            {
+                'round': 32,
+                'players': [
+                    JURGEN_ZOPP,
+                    YANNICK_HANFMANN
+                ],
+                'score': [(3, 6), (6, 3), (7, 6)],
+                'odds': {
+                    JURGEN_ZOPP: 2.80,
+                    YANNICK_HANFMANN: 1.38
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAUME_MUNAR,
+                    ADRIAN_MENENDEZ_MACEIRAS
+                ],
+                'score': [(6, 1), (6, 0)],
+                'odds': {
+                    JAUME_MUNAR: 1.36,
+                    ADRIAN_MENENDEZ_MACEIRAS: 2.73
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    ELIAS_YMER
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    TARO_DANIEL: 1.67,
+                    ELIAS_YMER: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.63,
+                    GUIDO_ANDREOZZI: 2.27
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 2.22,
+                    GUILLERMO_GARCIA_LOPEZ: 1.69
+                }
+            },
+
+            # 2018-07-24
+            {
+                'round': 32,
+                'players': [
+                    ORIOL_ROCA_BATALLA,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 4), (6, 7), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARC_ANDREA_HUESLER,
+                    NICOLAS_ALMAGRO
+                ],
+                'score': [(6, 7), (6, 3), (7, 6)],
+                'odds': {
+                    MARC_ANDREA_HUESLER: 3.05,
+                    NICOLAS_ALMAGRO: 1.37
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LASLO_DJERE,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    LASLO_DJERE: 1.48,
+                    DENIS_ISTOMIN: 2.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.57,
+                    RADU_ALBOT: 2.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    FELICIANO_LOPEZ: 2.05,
+                    FEDERICO_DELBONIS: 1.71
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    JOAO_SOUSA
+                ],
+                'score': [(4, 6), (6, 3), (7, 5)],
+                'odds': {
+                    FACUNDO_BAGNIS: 2.43,
+                    JOAO_SOUSA: 1.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    VIKTOR_GALOVIC,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 1), (3, 6), (6, 3)],
+                'odds': {
+                    VIKTOR_GALOVIC: 3.99,
+                    ROBIN_HAASE: 1.24
+                }
+            },
+
+            # 2018-07-25
+            {
+                'round': 16,
+                'players': [
+                    TARO_DANIEL,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(6, 4), (4, 6), (7, 6)],
+                'odds': {
+                    TARO_DANIEL: 2.27,
+                    ROBERTO_CARBALLES_BAENA: 1.67
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    ORIOL_ROCA_BATALLA
+                ],
+                'score': [(4, 6), (7, 6), (6, 4)],
+                'odds': {
+                    FELICIANO_LOPEZ: 1.27,
+                    ORIOL_ROCA_BATALLA: 3.90
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.10,
+                    ANDREY_RUBLEV: 1.69
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    JAUME_MUNAR
+                ],
+                'score': [(2, 6), (6, 3), (6, 2)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.50,
+                    JAUME_MUNAR: 2.60
+                }
+            },
+
+            # 2018-07-26
+            {
+                'round': 16,
+                'players': [
+                    VIKTOR_GALOVIC,
+                    FELIX_AUGER_ALIASSIME
+                ],
+                'score': [(3, 6), (6, 4), (6, 2)],
+                'odds': {
+                    VIKTOR_GALOVIC: 3.00,
+                    FELIX_AUGER_ALIASSIME: 1.39
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FACUNDO_BAGNIS,
+                    MARC_ANDREA_HUESLER
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    FACUNDO_BAGNIS: 1.17,
+                    MARC_ANDREA_HUESLER: 4.57
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    LASLO_DJERE,
+                    BORNA_CORIC
+                ],
+                'score': [(6, 4), (1, 6), (6, 1)],
+                'odds': {
+                    LASLO_DJERE: 3.15,
+                    BORNA_CORIC: 1.29
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JURGEN_ZOPP,
+                    FABIO_FOGNINI
+                ],
+                'score': [(6, 1), (3, 6), (6, 3)],
+                'odds': {
+                    JURGEN_ZOPP: 4.05,
+                    FABIO_FOGNINI: 1.26
+                }
+            },
+
+            # 2018-07-27
+            {
+                'round': 8,
+                'players': [
+                    JURGEN_ZOPP,
+                    FACUNDO_BAGNIS
+                ],
+                'score': [(3, 6), (6, 4), (6, 3)],
+                'odds': {
+                    JURGEN_ZOPP: 2.05,
+                    FACUNDO_BAGNIS: 1.71
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    LASLO_DJERE,
+                    VIKTOR_GALOVIC
+                ],
+                'score': [(6, 7), (6, 3), (7, 6)],
+                'odds': {
+                    LASLO_DJERE: 1.38,
+                    VIKTOR_GALOVIC: 3.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.74,
+                    FELICIANO_LOPEZ: 2.05
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    TARO_DANIEL
+                ],
+                'score': [(7, 5), (6, 1)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.34,
+                    TARO_DANIEL: 3.30
+                }
+            },
+
+            # 2018-07-28
+            {
+                'round': 4,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    JURGEN_ZOPP
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.35,
+                    JURGEN_ZOPP: 3.12
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    LASLO_DJERE
+                ],
+                'score': [(6, 7), (6, 4), (6, 4)],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.32,
+                    LASLO_DJERE: 3.50
+                }
+            },
+
+            # 2018-07-29
+            {
+                'round': 2,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ROBERTO_BAUTISTA_AGUT
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.50,
+                    ROBERTO_BAUTISTA_AGUT: 1.50
+                }
+            }
+        ]
+    },
+
+    {
         'location': WASHINGTON,
         'date': '2018-08-05',
         'matches': [

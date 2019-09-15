@@ -68,6 +68,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ADRIAN_BODMER: {
+        'born_at': (1995, 3, 6),
+        'height': 180,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     ADRIAN_MANNARINO: {
         'born_at': (1988, 6, 29),
         'height': 180,
@@ -252,6 +258,12 @@ META = {
     ANDREJ_MARTIN: {
         'born_at': (1989, 9, 20),
         'height': 183,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    ANDRES_MOLTENI: {
+        'born_at': (1988, 3, 15),
+        'height': 180,
         'forehand': RH,
         'backhand': THB,
     },
@@ -1938,6 +1950,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    NICOLAS_ALMAGRO: {
+        'born_at': (1985, 8, 21),
+        'height': 183,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     NICOLAS_JARRY: {
         'born_at': (1995, 10, 11),
         'height': 198,
@@ -1991,6 +2009,12 @@ META = {
         'height': 188,
         'forehand': RH,
         'backhand': THB,
+    },
+    ORIOL_ROCA_BATALLA: {
+        'born_at': (1993, 4, 30),
+        'height': 173,
+        'forehand': RH,
+        'backhand': OHB,
     },
     OSCAR_OTTE: {
         'born_at': (1993, 7, 16),
@@ -2687,6 +2711,12 @@ META = {
         'born_at': (1986, 1, 30),
         'height': 173,
         'forehand': LH,
+        'backhand': THB,
+    },
+    YANN_MARTI: {
+        'born_at': (1988, 6, 7),
+        'height': 173,
+        'forehand': RH,
         'backhand': THB,
     },
     YANKI_EREL: {
