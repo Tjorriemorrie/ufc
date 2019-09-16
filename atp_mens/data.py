@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 100   40.9    1306    2018 gstaad                         (2, 1013), (3, 385), (1, 1), (5, 1)
 # 72.1  10.0    1191    2018 washington                     (3, 1187), (4, 538), (6, 337), (1, 283)
 # 94.0  33.6    1476    2019 us open                        (3, 1239), (1, 105), (4, 100), (2, 24)
 # 71.5  9.6     1165    2018 los cabollas                   (3, 1598), (6, 1052), (7, 71), (4, 71)
@@ -7094,10 +7095,340 @@ DATA = [
                 }
             }
         ]
-    }
+    },
 
     ###############################################################################
     # Active
     ###############################################################################
 
+    {
+        'location': METZ,
+        'date': '2019-09-22',
+        'matches': [
+
+            # 2019-09-14
+            {
+                'round': 512,
+                'players': [
+                    ADRIAN_MENENDEZ_MACEIRAS,
+                    HARDOLD_MAYOT
+                ],
+                'score': [(3, 6), (6, 3), (7, 6)],
+                'odds': {
+                    ADRIAN_MENENDEZ_MACEIRAS: 1.14,
+                    HARDOLD_MAYOT: 4.70
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JULIAN_LENZ,
+                    CONSTANT_LESTIENNE
+                ],
+                'score': [(4, 6), (6, 3), (7, 5)],
+                'odds': {
+                    JULIAN_LENZ: 3.10,
+                    CONSTANT_LESTIENNE: 1.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MAXIME_JANVIER,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(7, 6), (2, 0)],
+                'retired': True,
+                'odds': {
+                    MAXIME_JANVIER: 1.51,
+                    MISCHA_ZVEREV: 2.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    NICOLAS_MAHUT,
+                    TRISTAN_LAMASINE
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    NICOLAS_MAHUT: 1.38,
+                    TRISTAN_LAMASINE: 2.75
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YANNICK_MADEN,
+                    MANUEL_GUINARD
+                ],
+                'score': [(6, 0), (6, 4)],
+                'odds': {
+                    YANNICK_MADEN: 1.40,
+                    MANUEL_GUINARD: 2.70
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    LUCAS_MIEDLER
+                ],
+                'score': [(4, 6), (6, 4), (6, 3)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.50,
+                    LUCAS_MIEDLER: 2.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    ALBANO_OLIVETTI
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 1.19,
+                    ALBANO_OLIVETTI: 3.75
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    OSCAR_OTTE,
+                    ARTEM_DUBRIVNYY
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    OSCAR_OTTE: 1.26,
+                    ARTEM_DUBRIVNYY: 2.90
+                }
+            },
+
+            # 2019-09-15
+            {
+                'round': 256,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    JULIAN_LENZ
+                ],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.36,
+                    JULIAN_LENZ: 3.10
+                },
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    ADRIAN_MENENDEZ_MACEIRAS
+                ],
+                'odds': {
+                    MARCEL_GRANOLLERS: 1.28,
+                    ADRIAN_MENENDEZ_MACEIRAS: 3.60
+                },
+            },
+            {
+                'round': 256,
+                'players': [
+                    YANNICK_MADEN,
+                    NICOLAS_MAHUT
+                ],
+                'odds': {
+                    YANNICK_MADEN: 2.00,
+                    NICOLAS_MAHUT: 1.80
+                },
+            },
+            {
+                'round': 256,
+                'players': [
+                    OSCAR_OTTE,
+                    MAXIME_JANVIER
+                ],
+                'odds': {
+                    OSCAR_OTTE: 1.90,
+                    MAXIME_JANVIER: 1.90
+                },
+            },
+            {
+                'round': 256,
+                'players': [
+                    ANTOINE_HOANG,
+                    CEDRIC_MARCEL_STEBE
+                ],
+                'odds': {
+                    ANTOINE_HOANG: 1.68,
+                    CEDRIC_MARCEL_STEBE: 2.15,
+                },
+                'prediction': ANTOINE_HOANG,
+                'bet': 3,
+            }
+
+            #
+        ]
+    },
+
+    {
+        'location': ST_PETERSBURG,
+        'date': '2019-09-22',
+        'matches': [
+            # 2019-09-14
+            {
+                'round': 512,
+                'players': [
+                    ROMAN_SAFIULLIN,
+                    KEVIN_KRAWIETZ
+                ],
+                'score': [(6, 4), (6, 1)],
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTEO_VIOLA,
+                    ALEXANDER_VASILENKO
+                ],
+                'score': [(6, 2), (5, 7), (6, 2)],
+                'odds': {
+                    MATTEO_VIOLA: 1.22,
+                    ALEXANDER_VASILENKO: 3.40
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LUKAS_ROSOL,
+                    EVGENY_KARLOVSKIY
+                ],
+                'score': [(6, 4), (3, 6), (6, 4)],
+                'odds': {
+                    LUKAS_ROSOL: 1.53,
+                    EVGENY_KARLOVSKIY: 2.10
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ILYA_IVASHKA,
+                    EVGENII_TIURNEV
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    ILYA_IVASHKA: 1.29,
+                    EVGENII_TIURNEV: 3.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ERNESTS_GULBIS,
+                    AMIR_WEINTRAUB
+                ],
+                'score': [(6, 1), (6, 0)],
+                'odds': {
+                    ERNESTS_GULBIS: 1.04,
+                    AMIR_WEINTRAUB: 7.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    EGOR_GERASIMOV,
+                    ALEJANDRO_TABILO
+                ],
+                'score': [(6, 0), (6, 4)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.12,
+                    ALEJANDRO_TABILO: 3.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    ASLAN_KARATSEV
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.28,
+                    ASLAN_KARATSEV: 3.30
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEY_VATUTIN,
+                    ALEKSANDR_NEDOVYESOV
+                ],
+                'score': [(1, 6), (6, 3), (7, 5)],
+                'odds': {
+                    ALEXEY_VATUTIN: 1.59,
+                    ALEKSANDR_NEDOVYESOV: 2.20
+                }
+            },
+
+            # 2019-09-15
+            {
+                'round': 256,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    LUKAS_ROSOL
+                ],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.34,
+                    LUKAS_ROSOL: 3.20
+                },
+                'prediction': DAMIR_DZUMHUR,
+                'bet': 3,
+            },
+            {
+                'round': 256,
+                'players': [
+                    EGOR_GERASIMOV,
+                    ROMAN_SAFIULLIN
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 1.32,
+                    ROMAN_SAFIULLIN: 3.30
+                },
+            },
+            {
+                'round': 256,
+                'players': [
+                    ILYA_IVASHKA,
+                    MATTEO_VIOLA
+                ],
+                'odds': {
+                    ILYA_IVASHKA: 1.24,
+                    MATTEO_VIOLA: 4.00
+                },
+                'prediction': ILYA_IVASHKA,
+                'bet': 2,
+            },
+            {
+                'round': 256,
+                'players': [
+                    ERNESTS_GULBIS,
+                    ALEXEY_VATUTIN
+                ],
+                'odds': {
+                    ERNESTS_GULBIS: 1.95,
+                    ALEXEY_VATUTIN: 1.85
+                },
+            },
+            {
+                'round': 256,
+                'players': [
+                    STEFANO_TRAVAGLIA,
+                    ADRIAN_MANNARINO
+                ],
+                'odds': {
+                    STEFANO_TRAVAGLIA: 2.40,
+                    ADRIAN_MANNARINO: 1.55
+                },
+            },
+
+            #
+        ]
+    }
 ]

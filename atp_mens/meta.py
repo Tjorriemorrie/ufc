@@ -107,6 +107,12 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    ALBANO_OLIVETTI: {
+        'born_at': (1991, 11, 24),
+        'height': 203,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     ALBERT_RAMOS_VINOLAS: {
         'born_at': (1988, 1, 17),
         'height': 188,
@@ -123,6 +129,12 @@ META = {
         'born_at': (1999, 6, 5),
         'height': 183,
         'forehand': RH,
+        'backhand': THB,
+    },
+    ALEJANDRO_TABILO: {
+        'born_at': (1997, 6, 2),
+        'height': 188,
+        'forehand': LH,
         'backhand': THB,
     },
     ALEKSANDAR_VUKIC: {
@@ -176,6 +188,11 @@ META = {
     ALEXANDER_ERLER: {
         'born_at': (1997, 10, 27),
         'height': 193,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    ALEXANDER_VASILENKO: {
+        'born_at': (1995, 2, 26),
         'forehand': RH,
         'backhand': THB,
     },
@@ -311,9 +328,20 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ARTEM_DUBRIVNYY: {
+        'born_at': (1999, 1, 31),
+        'height': 183,
+        'forehand': RH,
+        'backhand': THB,
+    },
     ARTHUR_RINDERKNECH: {
         'born_at': (1995, 7, 23),
         'height': 196,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    ASLAN_KARATSEV: {
+        'born_at': (1993, 9, 4),
         'forehand': RH,
         'backhand': THB,
     },
@@ -1053,6 +1081,9 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    HARDOLD_MAYOT: {
+        'born_at': (2002, 2, 4),
+    },
     HENRI_LAAKSONEN: {
         'born_at': (1992, 3, 31),
         'height': 185,
@@ -1652,6 +1683,12 @@ META = {
     MALEK_JAZIRI: {
         'born_at': (1984, 1, 20),
         'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    MANUEL_GUINARD: {
+        'born_at': (1995, 11, 15),
+        'height': 196,
         'forehand': RH,
         'backhand': THB,
     },
