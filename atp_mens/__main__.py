@@ -51,19 +51,27 @@ def up_multi_bet(bet_multi, bet_multis_cat, x, y, wrd):
 
 
 def main(hyper_params, train=0):
-    #logger.info('Starting main training')
+    logger.info('Starting main training')
 
     all_data = DATA_2018_08 + DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA
 
-    bet_drsl_a, bet_drsl_b, bet_age_a, bet_age_b, bet_tmi_a, bet_tmi_b = hyper_params
-    # bet_drsl_a = 0.09359111702787337
-    # bet_drsl_b = -2.4428315135714342
-    # bet_age_a = -0.02667976701625063
-    # bet_age_b = -7.618730709102708
-    # bet_tmi_a = -0.20016643013956462
-    # bet_tmi_b = -31.816980133792207
+    # bet_ts_a, bet_ts_b, bet_gms_a, bet_gms_b, bet_tier_a, bet_tier_b = hyper_params
+    bet_ts_a = -0.18430391005058122
+    bet_ts_b = -194.72850706605817
+    bet_gms_a = -20.242477820955944
+    bet_gms_b = -124.71550726415447
+    bet_tier_a = -273.57343768168005
+    bet_tier_b = 0.22610927861655558
+
+    # bet_drsl_a, bet_drsl_b, bet_age_a, bet_age_b, bet_tmi_a, bet_tmi_b = hyper_params
+    bet_drsl_a = 1.6943689951089946
+    bet_drsl_b = -51.895082358812914
+    bet_age_a = 0.15216433148975195
+    bet_age_b = -43.07575832660415
+    bet_tmi_a = -1.7692134617950805
+    bet_tmi_b = -30.260304941281174
 
     # bet_rnd_a, bet_rnd_b, bet_upsr_a, bet_upsr_b, bet_tma_a, bet_tma_b = hyper_params
     bet_rnd_a = 1.4121205723774195
@@ -105,27 +113,21 @@ def main(hyper_params, train=0):
     bet_setw_a = -0.007100363511854948
     bet_setw_b = -4.941502944885391
 
-    # bet_setr_a, bet_setr_b, bet_tier_a, bet_tier_b, bet_tsq_a, bet_tsq_b = hyper_params
+    # bet_setr_a, bet_setr_b, bet_tsq_a, bet_tsq_b = hyper_params
     bet_setr_a = -771.6257784651322
     bet_setr_b = -969.1765376085223
-    bet_tier_a = 2405.9896327618894
-    bet_tier_b = -0.9351979735084908
     bet_tsq_a = -1180.175166736961
     bet_tsq_b = -844.1753243001918
 
-    # bet_drs_a, bet_drs_b, bet_gms_a, bet_gms_b = hyper_params
+    # bet_drs_a, bet_drs_b, 
     bet_drs_a = 0.019483372189245764
     bet_drs_b = -0.2278156783816507
-    bet_gms_a = -0.10508786814087742
-    bet_gms_b = -2.7730109359130166
 
     # bet_upsl_a, bet_upsl_b = hyper_params
     bet_upsl_a = -0.059603147949404016
     bet_upsl_b = -6.961572926368991
 
-    # bet_ts_a, bet_ts_b, bet_upsw_a, bet_upsw_b, 
-    bet_ts_a = -0.18430391005058122
-    bet_ts_b = -2.2611491689873318
+    # bet_upsw_a, bet_upsw_b, 
     bet_upsw_a = 0.004481076791750024
     bet_upsw_b = -1.3869855776386453
 
@@ -157,8 +159,8 @@ def main(hyper_params, train=0):
         bet_size = 1
         if not start_date:
             start_date = datetime.strptime(event['date'], '%Y-%m-%d')
-        #logger.info('')
-        #logger.info(f'{event["date"]} {event["location"]["name"]}')
+        logger.info('')
+        logger.info(f'{event["date"]} {event["location"]["name"]}')
 
         for match in event['matches']:
             # skip if no odds:
@@ -499,7 +501,7 @@ def main(hyper_params, train=0):
             if 'prediction' in match and match['prediction'] is None:
                 # no positive bet
                 if bet_amt < 1:
-                    #logger.warning(f'No bet!  {p1} vs {p2} {log_odds} {log_trueskill}')
+                    logger.warning(f'No bet!  {p1} vs {p2} {log_odds} {log_trueskill}')
                     continue
                 if p1_odds < p2_odds:
                     w_odds = p1_odds
@@ -511,16 +513,16 @@ def main(hyper_params, train=0):
                     w = p2
                     l_odds = p1_odds
                     l = p1
-                #logger.warning(f'[{w_odds:.2f} vs {l_odds:.2f}] Bet x{round(bet_multi):.0f} on {w} to beat {l} [{ratings[w].mu:.0f} vs {ratings[l].mu:.0f}]')
+                logger.warning(f'[{w_odds:.2f} vs {l_odds:.2f}] Bet x{round(bet_multi):.0f} on {w} to beat {l} [{ratings[w].mu:.0f} vs {ratings[l].mu:.0f}]')
                 continue
 
             # prediction bet on
             if 'score' not in match:
-                #logger.warning(f'Pending {p1} vs {p2}')
+                logger.warning(f'Pending {p1} vs {p2}')
                 continue
 
             if bet_amt < 1:
-                #logger.info(f'No bet!  {log_players} {log_odds} {log_trueskill}')
+                logger.info(f'No bet!  {log_players} {log_odds} {log_trueskill}')
                 continue
 
             # testing outcome
@@ -548,7 +550,7 @@ def main(hyper_params, train=0):
                 tab_amts.append(match['bet'])
                 actual_debug.append(f'${match["bet"]} {pred_odds:.2f}: {cash:.2f} {match["prediction"]} {event["location"]["name"]}:{match["round"]}')
 
-            #logger.info(f'{log_balance} {log_players} {log_odds} {log_trueskill}')
+            logger.info(f'{log_balance} {log_players} {log_odds} {log_trueskill}')
 
     if train:
         total_payouts = sum(payouts)
@@ -563,31 +565,31 @@ def main(hyper_params, train=0):
 def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_multis, bet_multis_cat, actual_debug, matches, trueskill):
     if accuracy:
         payouts = np.array(payouts)
-        #logger.info('')
-        #logger.info('Testing:')
+        logger.info('')
+        logger.info('Testing:')
         accuracy_wins = sum([t for t in accuracy if t > 0])
         trueskill_wins = sum([t for t in trueskill if t > 0])
-        #logger.info(f'Matches: {len(accuracy)}/{matches} = {len(accuracy)/max(1, matches)*100:.1f}%')
-        #logger.info(f'Accuracy {accuracy_wins}/{len(accuracy)} = {accuracy_wins/len(accuracy)*100:.1f}% [ts:{trueskill_wins/max(1, len(trueskill))*100:.0f}%]')
-        #logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
+        logger.info(f'Matches: {len(accuracy)}/{matches} = {len(accuracy)/max(1, matches)*100:.1f}%')
+        logger.info(f'Accuracy {accuracy_wins}/{len(accuracy)} = {accuracy_wins/len(accuracy)*100:.1f}% [ts:{trueskill_wins/max(1, len(trueskill))*100:.0f}%]')
+        logger.info(f'ROI {sum(payouts) / sum(bet_amts) * 100:.1f}%  Profit ${sum(payouts):.0f}')
         days = (datetime.now() - start_date).days
-        #logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
-        #logger.info(f'Common multis: {Counter(bet_multis).most_common(4)}')
-        #logger.info(f'cat multis: {Counter(bet_multis_cat).most_common()}')
+        logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
+        logger.info(f'Common multis: {Counter(bet_multis).most_common(4)}')
+        logger.info(f'cat multis: {Counter(bet_multis_cat).most_common()}')
 
     if actual[1]:
         tab = np.array(tab)
-        #logger.info('')
-        #logger.info('Actual:')
-        #logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
-        #logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
+        logger.info('')
+        logger.info('Actual:')
+        logger.info(f'Accuracy {actual[0]}/{actual[1]} = {actual[0]/actual[1] * 100:.1f}%')
+        logger.info(f'ROI {sum(tab) / sum(tab_amts) * 100:.2f}%  Profit ${sum(tab):.2f}')
         days = (datetime.now() - datetime(2019, 7, 24)).days
-        #logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
+        logger.info(f'Profit: per day: ${sum(tab) / days:.2f}  per bet ${tab.mean():.2f}')
         # sheet = -74.59
         # if abs(sum(tab) - sheet) > 0.01:
         #     for l in actual_debug:
-        #         #logger.warning(l)
-        #     #logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
+        #         logger.warning(l)
+        #     logger.error(f'debug! {sheet:.2f} != {sum(tab):.2f} diff {sum(tab) - sheet:.2f}')
 
 
 # serve strength
@@ -600,11 +602,9 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
 # GO ANOTHER ROUND WITH -1 AND SEE IF IT STABILISES
 
 def run():
-    train = 1
+    train = 0
 
     names = [
-        # 99.4  24.9    47.6    1091
-        # 'bet_ts_a', 'bet_ts_b',      # 659     6     3     -    28
         # 'bet_upsw_a', 'bet_upsw_b',  # 649     -     -    28    77
 
         # 74.1  68.8    12.6    1232
@@ -612,11 +612,9 @@ def run():
 
         # 99.8  24.7    47.8    1086
         # 'bet_drs_a', 'bet_drs_b',    # 369     -     -     -     -
-        # 'bet_gms_a', 'bet_gms_b',    # 362    61     4    20     -
 
         # 72.2  24.5    65.7    1419
         # 'bet_setr_a', 'bet_setr_b',  # 366     -     -    26     -
-        # 'bet_tier_a', 'bet_tier_b',  # 813  1339  1382   952  1397
         # 'bet_tsq_a', 'bet_tsq_b',    # 518     -     -     -     -
 
         # THE ISSUE SEEMS TO BE FIXED BY MAKING REWARD MORE PROFIT WEIGHT 10000
@@ -646,10 +644,15 @@ def run():
         # 'bet_upsr_a', 'bet_upsr_b',  # 850     -     -     -     -
         # 'bet_tma_a', 'bet_tma_b',    # 950     -     -     4     5
 
-        # 97.7  26.2    45.9    1116
-        'bet_drsl_a', 'bet_drsl_b',  # 237     -   498     4     -
-        'bet_age_a', 'bet_age_b',    # 564     -  1944  1933     -
-        'bet_tmi_a', 'bet_tmi_b',    # 813    31   884     6     -
+        # 99.8  36.4    40.9    1508
+        # 'bet_drsl_a', 'bet_drsl_b',  # 704   498     4     -     -
+        # 'bet_age_a', 'bet_age_b',    # 867  1944  1933     -     -
+        # 'bet_tmi_a', 'bet_tmi_b',    # 992   884     6     -    20
+
+        # 99.7  24.7    47.0    1258
+        'bet_ts_a', 'bet_ts_b',      # 937     3     -    28     -
+        'bet_gms_a', 'bet_gms_b',    # 789     4    20     -     3
+        'bet_tier_a', 'bet_tier_b',  # 1014 1382   952  1397   968
 
     ]
     params = [0, 0, 0, 0, 0, 0]
