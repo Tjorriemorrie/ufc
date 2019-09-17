@@ -7106,7 +7106,7 @@ DATA = [
         'date': '2019-09-22',
         'matches': [
 
-            # 2019-09-14
+            # 2019-09-15
             {
                 'round': 512,
                 'players': [
@@ -7205,16 +7205,17 @@ DATA = [
                 }
             },
 
-            # 2019-09-15
+            # 2019-09-16
             {
                 'round': 256,
                 'players': [
+                    JULIAN_LENZ,
                     MATTHIAS_BACHINGER,
-                    JULIAN_LENZ
                 ],
+                'score': [(6, 4), (6, 4)],
                 'odds': {
+                    JULIAN_LENZ: 3.10,
                     MATTHIAS_BACHINGER: 1.36,
-                    JULIAN_LENZ: 3.10
                 },
             },
             {
@@ -7223,6 +7224,7 @@ DATA = [
                     MARCEL_GRANOLLERS,
                     ADRIAN_MENENDEZ_MACEIRAS
                 ],
+                'score': [(6, 3), (6, 2)],
                 'odds': {
                     MARCEL_GRANOLLERS: 1.28,
                     ADRIAN_MENENDEZ_MACEIRAS: 3.60
@@ -7234,6 +7236,7 @@ DATA = [
                     YANNICK_MADEN,
                     NICOLAS_MAHUT
                 ],
+                'score': [(6, 3), (7, 6)],
                 'odds': {
                     YANNICK_MADEN: 2.00,
                     NICOLAS_MAHUT: 1.80
@@ -7245,26 +7248,134 @@ DATA = [
                     OSCAR_OTTE,
                     MAXIME_JANVIER
                 ],
+                'score': [(2, 6), (6, 3), (6, 2)],
                 'odds': {
                     OSCAR_OTTE: 1.90,
                     MAXIME_JANVIER: 1.90
                 },
             },
             {
-                'round': 256,
+                'round': 32,
                 'players': [
                     ANTOINE_HOANG,
                     CEDRIC_MARCEL_STEBE
                 ],
+                'score': [(6, 2), (6, 3)],
                 'odds': {
                     ANTOINE_HOANG: 1.68,
                     CEDRIC_MARCEL_STEBE: 2.15,
                 },
                 'prediction': ANTOINE_HOANG,
                 'bet': 3,
-            }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    STEVE_DARCIS,
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.24,
+                    STEVE_DARCIS: 3.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(7, 5), (6, 4)],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.69,
+                    PETER_GOJOWCZYK: 2.10
+                }
+            },
 
             #
+            {
+                'round': 32,
+                'players': [
+                    GREGOIRE_BARRERE,
+                    HUBERT_HURKACZ,
+                ],
+                'odds': {
+                    GREGOIRE_BARRERE: 2.80,
+                    HUBERT_HURKACZ: 1.42,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    PIERRE_HUGUES_HERBERT,
+                ],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.48,
+                    PIERRE_HUGUES_HERBERT: 2.60,
+                },
+                'prediction': JAN_LENNARD_STRUFF,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    RICHARD_GASQUET,
+                ],
+                'odds': {
+                    MARCEL_GRANOLLERS: 3.10,
+                    RICHARD_GASQUET: 1.36,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_ANDUJAR,
+                    JO_WILFRIED_TSONGA,
+                ],
+                'odds': {
+                    PABLO_ANDUJAR: 4.60,
+                    JO_WILFRIED_TSONGA: 1.18,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    LORENZO_SONEGO,
+                    OSCAR_OTTE,
+                ],
+                'odds': {
+                    LORENZO_SONEGO: 1.34,
+                    OSCAR_OTTE: 3.20,
+                },
+                'prediction': LORENZO_SONEGO,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    ROUMANE
+                ],
+                'odds': {
+                    ALJAZ_BEDENE: 1.38,
+                    ROUMANE: 3.00,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    JULIAN_LENZ,
+                    PABLO_CARRENO_BUSTA,
+                ],
+                'odds': {
+                    JULIAN_LENZ: 4.00,
+                    PABLO_CARRENO_BUSTA: 1.24,
+                },
+            },
+
         ]
     },
 
@@ -7272,7 +7383,8 @@ DATA = [
         'location': ST_PETERSBURG,
         'date': '2019-09-22',
         'matches': [
-            # 2019-09-14
+
+            # 2019-09-15
             {
                 'round': 512,
                 'players': [
@@ -7367,16 +7479,17 @@ DATA = [
                 }
             },
 
-            # 2019-09-15
+            # 2019-09-16
             {
                 'round': 256,
                 'players': [
+                    LUKAS_ROSOL,
                     DAMIR_DZUMHUR,
-                    LUKAS_ROSOL
                 ],
+                'score': [(4, 6), (7, 6), (6, 4)],
                 'odds': {
+                    LUKAS_ROSOL: 3.20,
                     DAMIR_DZUMHUR: 1.34,
-                    LUKAS_ROSOL: 3.20
                 },
                 'prediction': DAMIR_DZUMHUR,
                 'bet': 3,
@@ -7387,6 +7500,7 @@ DATA = [
                     EGOR_GERASIMOV,
                     ROMAN_SAFIULLIN
                 ],
+                'score': [(7, 5), (6, 7), (6, 4)],
                 'odds': {
                     EGOR_GERASIMOV: 1.32,
                     ROMAN_SAFIULLIN: 3.30
@@ -7398,6 +7512,7 @@ DATA = [
                     ILYA_IVASHKA,
                     MATTEO_VIOLA
                 ],
+                'score': [(6, 4), (6, 2)],
                 'odds': {
                     ILYA_IVASHKA: 1.24,
                     MATTEO_VIOLA: 4.00
@@ -7408,27 +7523,114 @@ DATA = [
             {
                 'round': 256,
                 'players': [
+                    ALEXEY_VATUTIN,
                     ERNESTS_GULBIS,
-                    ALEXEY_VATUTIN
                 ],
+                'score': [(3, 6), (6, 3), (6, 2)],
                 'odds': {
+                    ALEXEY_VATUTIN: 1.85,
                     ERNESTS_GULBIS: 1.95,
-                    ALEXEY_VATUTIN: 1.85
                 },
             },
             {
-                'round': 256,
+                'round': 32,
                 'players': [
+                    ADRIAN_MANNARINO,
                     STEFANO_TRAVAGLIA,
-                    ADRIAN_MANNARINO
                 ],
+                'score': [(7, 5), (6, 2)],
                 'odds': {
+                    ADRIAN_MANNARINO: 1.55,
                     STEFANO_TRAVAGLIA: 2.40,
-                    ADRIAN_MANNARINO: 1.55
                 },
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    JANNIK_SINNER
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.63,
+                    JANNIK_SINNER: 2.40
+                }
             },
 
             #
+            {
+                'round': 32,
+                'players': [
+                    JANKO_TIPSAREVIC,
+                    DAMIR_DZUMHUR,
+                ],
+                'odds': {
+                    JANKO_TIPSAREVIC: 3.10,
+                    DAMIR_DZUMHUR: 1.36,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    MARTIN_KLIZAN,
+                ],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 2.05,
+                    MARTIN_KLIZAN: 1.75,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    LUKAS_ROSOL,
+                    EGOR_GERASIMOV,
+                ],
+                'odds': {
+                    LUKAS_ROSOL: 2.35,
+                    EGOR_GERASIMOV: 1.58,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    EVGENY_DONSKOY,
+                    MATTEO_VIOLA,
+                ],
+                'odds': {
+                    EVGENY_DONSKOY: 1.30,
+                    MATTEO_VIOLA: 3.40,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ILYA_IVASHKA,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    ILYA_IVASHKA: 3.30,
+                    ANDREY_RUBLEV: 1.32,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    SELA,
+                    RICARDAS_BERANKIS,
+                ],
+                'odds': {
+                    SELA: 3.40,
+                    RICARDAS_BERANKIS: 1.30,
+                },
+                'prediction': None,
+            },
+
         ]
     }
 ]

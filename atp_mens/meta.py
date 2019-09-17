@@ -1993,6 +1993,10 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    ROUMANE: {
+    },
+    SELA: {
+    },
     NICOLAS_JARRY: {
         'born_at': (1995, 10, 11),
         'height': 198,
