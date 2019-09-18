@@ -1,9 +1,6 @@
 SURFACE_HARD = 1
 SURFACE_CLAY = 2
 
-ROUMANE = 'Roumane'
-SELA = 'Sela'
-
 ADAM_EL_MIHDAWY = 'Adam El Mihdawy'
 ADAM_MOUNDIR = 'Adam Moundir'
 ADAM_PAVLASEK = 'Adam Pavlasek'
@@ -122,6 +119,7 @@ DOMINIC_THIEM = 'Dominic Thiem'
 DOMINIK_KOEPFER = 'Dominik Koepfer'
 DONALD_YOUNG = 'Donald Young'
 DUCKHEE_LEE = 'Duckhee Lee'
+DUDI_SELA = 'Dudi Sela'
 DUSAN_LAJOVIC = 'Dusan Lajovic'
 DUSTIN_BROWN = 'Dustin Brown'
 EGOR_GERASIMOV = 'Egor Gerasimov'
@@ -381,6 +379,7 @@ RAFAEL_MATOS = 'Rafael Matos'
 RAFAEL_NADAL = 'Rafael Nadal'
 RAMKUMAR_RAMANATHAN = 'Ramkumar Ramanathan'
 RAPHAEL_BALTENSPERGER = 'Raphael Baltensperger'
+RAYANE_ROUMANE = 'Rayane Roumane'
 RAYMOND_SARMIENTO = 'Raymond Sarmiento'
 REILLY_OPELKA = 'Reilly Opelka'
 RENTA_TOKUDA = 'Renta Tokuda'

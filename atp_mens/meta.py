@@ -718,6 +718,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    DUDI_SELA: {
+        'born_at': (1985, 4, 4),
+        'height': 175,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     DUSAN_LAJOVIC: {
         'born_at': (1990, 6, 30),
         'height': 183,
@@ -1993,10 +1999,6 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
-    ROUMANE: {
-    },
-    SELA: {
-    },
     NICOLAS_JARRY: {
         'born_at': (1995, 10, 11),
         'height': 198,
@@ -2216,6 +2218,12 @@ META = {
     RAPHAEL_BALTENSPERGER: {
         'born_at': (1997, 12, 18),
         'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    RAYANE_ROUMANE: {
+        'born_at': (2000, 9, 11),
+        'height': 193,
         'forehand': RH,
         'backhand': THB,
     },
