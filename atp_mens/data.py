@@ -7568,7 +7568,6 @@ DATA = [
                     JANKO_TIPSAREVIC: 3.10,
                     DAMIR_DZUMHUR: 1.36,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -7580,7 +7579,6 @@ DATA = [
                     ROBERTO_CARBALLES_BAENA: 2.05,
                     MARTIN_KLIZAN: 1.75,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -7592,7 +7590,6 @@ DATA = [
                     LUKAS_ROSOL: 2.35,
                     EGOR_GERASIMOV: 1.58,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -7604,7 +7601,6 @@ DATA = [
                     EVGENY_DONSKOY: 1.30,
                     MATTEO_VIOLA: 3.40,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -7616,7 +7612,6 @@ DATA = [
                     ILYA_IVASHKA: 3.30,
                     ANDREY_RUBLEV: 1.32,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -7628,7 +7623,6 @@ DATA = [
                     SELA: 3.40,
                     RICARDAS_BERANKIS: 1.30,
                 },
-                'prediction': None,
             },
 
         ]
