@@ -7383,16 +7383,17 @@ DATA = [
                 },
             },
 
-            #
+            # 2019-09-18
             {
                 'round': 32,
                 'players': [
-                    MARIUS_COPIL,
                     GILLES_SIMON,
+                    MARIUS_COPIL,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
-                    MARIUS_COPIL: 2.80,
                     GILLES_SIMON: 1.42,
+                    MARIUS_COPIL: 2.80,
                 },
                 'prediction': GILLES_SIMON,
                 'bet': 1,
@@ -7400,33 +7401,36 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    UGO_HUMBERT,
                     YANNICK_MADEN,
+                    UGO_HUMBERT,
                 ],
+                'score': [(6, 4), (6, 7), (6, 4)],
                 'odds': {
-                    UGO_HUMBERT: 1.26,
                     YANNICK_MADEN: 3.80,
+                    UGO_HUMBERT: 1.26,
                 },
             },
             {
-                'round': 32,
+                'round': 16,
                 'players': [
-                    ANTOINE_HOANG,
                     GREGOIRE_BARRERE,
+                    ANTOINE_HOANG,
                 ],
+                'score': [(3, 6), (7, 6), (6, 2)],
                 'odds': {
-                    ANTOINE_HOANG: 2.40,
                     GREGOIRE_BARRERE: 1.55,
+                    ANTOINE_HOANG: 2.40,
                 },
                 'prediction': GREGOIRE_BARRERE,
                 'bet': 1,
             },
             {
-                'round': 32,
+                'round': 16,
                 'players': [
                     BENOIT_PAIRE,
                     RICHARD_GASQUET,
                 ],
+                'score': [(3, 6), (6, 3), (6, 4)],
                 'odds': {
                     BENOIT_PAIRE: 2.30,
                     RICHARD_GASQUET: 1.60,
@@ -7435,17 +7439,79 @@ DATA = [
                 'bet': 5,
             },
             {
-                'round': 32,
+                'round': 16,
                 'players': [
-                    FERNANDO_VERDASCO,
                     FILIP_KRAJINOVIC,
+                    FERNANDO_VERDASCO,
                 ],
+                'score': [(3, 6), (6, 4), (6, 3)],
                 'odds': {
-                    FERNANDO_VERDASCO: 2.00,
                     FILIP_KRAJINOVIC: 1.80,
+                    FERNANDO_VERDASCO: 2.00,
                 },
                 'prediction': FILIP_KRAJINOVIC,
                 'bet': 1,
+            },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    ALJAZ_BEDENE,
+                    GILLES_SIMON,
+                ],
+                'odds': {
+                    ALJAZ_BEDENE: 2.40,
+                    GILLES_SIMON: 1.52,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAVID_GOFFIN,
+                    PABLO_CARRENO_BUSTA,
+                ],
+                'odds': {
+                    DAVID_GOFFIN: 1.48,
+                    PABLO_CARRENO_BUSTA: 2.60,
+                },
+                'prediction': DAVID_GOFFIN,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    LORENZO_SONEGO,
+                    LUCAS_POUILLE,
+                ],
+                'odds': {
+                    LORENZO_SONEGO: 2.15,
+                    LUCAS_POUILLE: 1.68,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    JO_WILFRIED_TSONGA,
+                ],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 3.10,
+                    JO_WILFRIED_TSONGA: 1.36,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    YANNICK_MADEN,
+                ],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.48,
+                    YANNICK_MADEN: 2.60,
+                },
+                'prediction': NIKOLOZ_BASILASHVILI,
+                'bet': 3,
             },
 
         ]
@@ -7704,13 +7770,14 @@ DATA = [
                 },
             },
 
-            #
+            # 2019-09-18
             {
                 'round': 32,
                 'players': [
                     JOAO_SOUSA,
                     JOZEF_KOVALIK,
                 ],
+                'score': [(6, 2), (6, 3)],
                 'odds': {
                     JOAO_SOUSA: 1.28,
                     JOZEF_KOVALIK: 3.60,
@@ -7721,12 +7788,13 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    ALEXEY_VATUTIN,
                     MARTON_FUCSOVICS,
+                    ALEXEY_VATUTIN,
                 ],
+                'score': [(7, 5), (6, 1)],
                 'odds': {
-                    ALEXEY_VATUTIN: 3.00,
                     MARTON_FUCSOVICS: 1.38,
+                    ALEXEY_VATUTIN: 3.00,
                 },
                 'prediction': MARTON_FUCSOVICS,
                 'bet': 4,
@@ -7737,6 +7805,7 @@ DATA = [
                     SALVATORE_CARUSO,
                     THOMAS_FABBIANO,
                 ],
+                'score': [(2, 6), (6, 3), (6, 3)],
                 'odds': {
                     SALVATORE_CARUSO: 2.35,
                     THOMAS_FABBIANO: 1.58,
@@ -7750,6 +7819,7 @@ DATA = [
                     MIKHAIL_KUKUSHKIN,
                     DAMIR_DZUMHUR,
                 ],
+                'score': [(7, 6), (6, 2)],
                 'odds': {
                     MIKHAIL_KUKUSHKIN: 1.60,
                     DAMIR_DZUMHUR: 2.30,
@@ -7763,6 +7833,7 @@ DATA = [
                     CASPER_RUUD,
                     ALEXANDER_BUBLIK,
                 ],
+                'score': [(6, 7), (6, 4), (6, 2)],
                 'odds': {
                     CASPER_RUUD: 2.20,
                     ALEXANDER_BUBLIK: 1.65,
@@ -7771,11 +7842,12 @@ DATA = [
                 'bet': 2,
             },
             {
-                'round': 32,
+                'round': 16,
                 'players': [
                     EGOR_GERASIMOV,
                     ADRIAN_MANNARINO,
                 ],
+                'score': [(6, 3), (6, 1)],
                 'odds': {
                     EGOR_GERASIMOV: 2.15,
                     ADRIAN_MANNARINO: 1.68,
@@ -7783,6 +7855,82 @@ DATA = [
                 'prediction': ADRIAN_MANNARINO,
                 'bet': 1,
             },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    BORNA_CORIC,
+                ],
+                'odds': {
+                    MARTON_FUCSOVICS: 2.25,
+                    BORNA_CORIC: 1.62,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ROBERTO_CARBALLES_BAENA,
+                ],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.24,
+                    ROBERTO_CARBALLES_BAENA: 4.00,
+                },
+                'prediction': MATTEO_BERRETTINI,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    CASPER_RUUD,
+                    SALVATORE_CARUSO,
+                ],
+                'odds': {
+                    CASPER_RUUD: 1.42,
+                    SALVATORE_CARUSO: 2.80,
+                },
+                'prediction': CASPER_RUUD,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    JOAO_SOUSA,
+                    KAREN_KHACHANOV,
+                ],
+                'odds': {
+                    JOAO_SOUSA: 3.30,
+                    KAREN_KHACHANOV: 1.30,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    EVGENY_DONSKOY,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.09,
+                    EVGENY_DONSKOY: 7.00,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 7,
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    RICARDAS_BERANKIS: 3.20,
+                    ANDREY_RUBLEV: 1.34,
+                },
+            },
+
+            #
         ]
     }
 ]
