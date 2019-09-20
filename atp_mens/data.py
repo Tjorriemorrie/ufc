@@ -7,24 +7,20 @@ from location import *
 # 94.0  33.6    1476    2019 us open                        (3, 1239), (1, 105), (4, 100), (2, 24)
 # 71.5  9.6     1165    2018 los cabollas                   (3, 1598), (6, 1052), (7, 71), (4, 71)
 # 99.8  37.0    1483    2018 kitzhbuhel                     (3, 1324), (6, 5), (4, 1)
-# 71.4  11.5    351     2018 toronto                        (1, 1541), (2, 592), (3, 65), (4, 15)
-# 77.7  15.4    356     2018 cincanatti                     (1, 1154), (2, 363), (3, 69), (4, 27)
 
+# 71.4  11.5    351     2018 toronto                        (1, 1541), (2, 592), (3, 65), (4, 15)
 # 75.1  12.6    1009    2019-09-03 results and bets         (2, 1351), (5, 621), (3, 295), (7, 53)
 # 72.9  7.9     349     2019-08-31                          (1, 1534), (2, 974), (0, 819), (3, 160)
 # 71.3  30.2    1306    2018 winston done                   (2, 444), (3, 166), (1, 115), (4, 110)
-# 68.6  26.5    1312    2018 winston r64                    (3, 319), (2, 253), (4, 129), (5, 98)
-# 68.7  24.6    1050    2018 salem 512                      (3, 328), (2, 280), (4, 136), (5, 90)
 
+# 68.6  26.5    1312    2018 winston r64                    (3, 319), (2, 253), (4, 129), (5, 98)
 # 67.7  25.3    954     2018 us open r16 p1                 (3, 272), (2, 234), (4, 140), (5, 133)
 # 65.2  13.0    648     2018 us open 3rd qual               (6, 243), (4, 212), (3, 179), (5, 152)
+
 # 68.6  26.2    459     sst petersburg 2018                 (2, 436), (1, 385), (3, 127), (4, 28)
-# 66.7  35.3    967     opt pred & odds & wnl               (1, 398), (3, 175), (4, 148), (6, 59)
-
 # 65.4  20.6    551     opt win losses                      (3, 277), (1, 249), (5, 185), (2, 103)
-# 65.7  17.2    327     opt lambda & tie & ups              (2, 387), (1, 233), (3, 196), (4, 59)
-# 76.8  40.7    571     opt gamma and min child weight      (4, 69), (2, 68), (6, 59), (3, 59)
 
+# 65.7  17.2    327     opt lambda & tie & ups              (2, 387), (1, 233), (3, 196), (4, 59)
 # 67.7  19.4    288     opt step/subsample/scale
 
 # 71.8  23.2  865    2019-08-16
@@ -7453,13 +7449,14 @@ DATA = [
                 'bet': 1,
             },
 
-            #
+            # 2019-09-19
             {
                 'round': 16,
                 'players': [
                     ALJAZ_BEDENE,
                     GILLES_SIMON,
                 ],
+                'score': [(7, 6), (6, 2)],
                 'odds': {
                     ALJAZ_BEDENE: 2.40,
                     GILLES_SIMON: 1.52,
@@ -7468,12 +7465,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    DAVID_GOFFIN,
                     PABLO_CARRENO_BUSTA,
+                    DAVID_GOFFIN,
                 ],
+                'score': [(6, 3), (6, 2)],
                 'odds': {
-                    DAVID_GOFFIN: 1.48,
                     PABLO_CARRENO_BUSTA: 2.60,
+                    DAVID_GOFFIN: 1.48,
                 },
                 'prediction': DAVID_GOFFIN,
                 'bet': 1,
@@ -7481,23 +7479,25 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    LORENZO_SONEGO,
                     LUCAS_POUILLE,
+                    LORENZO_SONEGO,
                 ],
+                'score': [(6, 1), (6, 4)],
                 'odds': {
-                    LORENZO_SONEGO: 2.15,
                     LUCAS_POUILLE: 1.68,
+                    LORENZO_SONEGO: 2.15,
                 },
             },
             {
                 'round': 16,
                 'players': [
-                    PIERRE_HUGUES_HERBERT,
                     JO_WILFRIED_TSONGA,
+                    PIERRE_HUGUES_HERBERT,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
-                    PIERRE_HUGUES_HERBERT: 3.10,
                     JO_WILFRIED_TSONGA: 1.36,
+                    PIERRE_HUGUES_HERBERT: 3.10,
                 },
             },
             {
@@ -7506,6 +7506,7 @@ DATA = [
                     NIKOLOZ_BASILASHVILI,
                     YANNICK_MADEN,
                 ],
+                'score': [(6, 2), (7, 6)],
                 'odds': {
                     NIKOLOZ_BASILASHVILI: 1.48,
                     YANNICK_MADEN: 2.60,
@@ -7514,6 +7515,7 @@ DATA = [
                 'bet': 3,
             },
 
+            #
         ]
     },
 
@@ -7856,16 +7858,18 @@ DATA = [
                 'bet': 1,
             },
 
-            #
+            # 2019-09-19
             {
                 'round': 16,
                 'players': [
-                    MARTON_FUCSOVICS,
                     BORNA_CORIC,
+                    MARTON_FUCSOVICS,
                 ],
+                'score': [(6, 7), (7, 5), (3, 0)],
+                'retired': True,
                 'odds': {
-                    MARTON_FUCSOVICS: 2.25,
                     BORNA_CORIC: 1.62,
+                    MARTON_FUCSOVICS: 2.25,
                 },
             },
             {
@@ -7874,6 +7878,7 @@ DATA = [
                     MATTEO_BERRETTINI,
                     ROBERTO_CARBALLES_BAENA,
                 ],
+                'score': [(6, 1), (6, 2)],
                 'odds': {
                     MATTEO_BERRETTINI: 1.24,
                     ROBERTO_CARBALLES_BAENA: 4.00,
@@ -7887,6 +7892,7 @@ DATA = [
                     CASPER_RUUD,
                     SALVATORE_CARUSO,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
                     CASPER_RUUD: 1.42,
                     SALVATORE_CARUSO: 2.80,
@@ -7900,6 +7906,7 @@ DATA = [
                     JOAO_SOUSA,
                     KAREN_KHACHANOV,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
                     JOAO_SOUSA: 3.30,
                     KAREN_KHACHANOV: 1.30,
@@ -7911,6 +7918,7 @@ DATA = [
                     DANIIL_MEDVEDEV,
                     EVGENY_DONSKOY,
                 ],
+                'score': [(7, 6), (6, 3)],
                 'odds': {
                     DANIIL_MEDVEDEV: 1.09,
                     EVGENY_DONSKOY: 7.00,
@@ -7921,12 +7929,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    RICARDAS_BERANKIS,
                     ANDREY_RUBLEV,
+                    RICARDAS_BERANKIS,
                 ],
+                'score': [(6, 4), (6, 7), (6, 1)],
                 'odds': {
-                    RICARDAS_BERANKIS: 3.20,
                     ANDREY_RUBLEV: 1.34,
+                    RICARDAS_BERANKIS: 3.20,
                 },
             },
 
