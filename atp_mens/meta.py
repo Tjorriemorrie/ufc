@@ -286,6 +286,12 @@ META = {
     },
     ANDREW_FENTY: {
     },
+    ANDREW_HARRIS: {
+        'born_at': (1994, 3, 7),
+        'height': 183,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     ANDREY_RUBLEV: {
         'born_at': (1997, 10, 20),
         'height': 188,
@@ -1090,6 +1096,12 @@ META = {
     HARDOLD_MAYOT: {
         'born_at': (2002, 2, 4),
     },
+    HARRY_BOURCHIER: {
+        'born_at': (1996, 1, 24),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
     HENRI_LAAKSONEN: {
         'born_at': (1992, 3, 31),
         'height': 185,
@@ -1435,6 +1447,12 @@ META = {
     JUAN_PABLO_FICOVICH: {
         'born_at': (1997, 1, 24),
         'height': 191,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    JIE_CUI: {
+        'born_at': (1998, 1, 24),
+        'height': 183,
         'forehand': RH,
         'backhand': THB,
     },
@@ -2761,6 +2779,14 @@ META = {
         'height': 173,
         'forehand': LH,
         'backhand': THB,
+    },
+    XIN_GAO: {
+        'born_at': (1994, 5, 12),
+        'height': 180,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    Y_BAI: {
     },
     YANN_MARTI: {
         'born_at': (1988, 6, 7),

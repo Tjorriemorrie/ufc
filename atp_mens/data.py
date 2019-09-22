@@ -7515,7 +7515,109 @@ DATA = [
                 'bet': 3,
             },
 
+            # 2019-09-20
+            {
+                'round': 8,
+                'players': [
+                    ALJAZ_BEDENE,
+                    PABLO_CARRENO_BUSTA,
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    ALJAZ_BEDENE: 2.70,
+                    PABLO_CARRENO_BUSTA: 1.45,
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 2,
+            },
+            {
+                'round': 8,
+                'players': [
+                    BENOIT_PAIRE,
+                    GREGOIRE_BARRERE,
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    BENOIT_PAIRE: 1.48,
+                    GREGOIRE_BARRERE: 2.60,
+                },
+                'prediction': BENOIT_PAIRE,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    LUCAS_POUILLE,
+                    FILIP_KRAJINOVIC,
+                ],
+                'score': [(4, 6), (7, 5), (6, 2)],
+                'odds': {
+                    LUCAS_POUILLE: 1.65,
+                    FILIP_KRAJINOVIC: 2.20,
+                },
+                'prediction': LUCAS_POUILLE,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    NIKOLOZ_BASILASHVILI,
+                ],
+                'score': [(5, 7), (6, 3), (4, 1)],
+                'retired': True,
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.45,
+                    NIKOLOZ_BASILASHVILI: 2.70,
+                },
+                'prediction': JO_WILFRIED_TSONGA,
+                'bet': 0,  # refunded 3,
+            },
+
+            # 2019-09-21
+            {
+                'round': 4,
+                'players': [
+                    ALJAZ_BEDENE,
+                    BENOIT_PAIRE,
+                ],
+                'score': [(4, 6), (6, 1), (6, 2)],
+                'odds': {
+                    ALJAZ_BEDENE: 1.80,
+                    BENOIT_PAIRE: 2.00,
+                },
+                'prediction': ALJAZ_BEDENE,
+                'bet': 4,
+            },
+            {
+                'round': 4,
+                'players': [
+                    JO_WILFRIED_TSONGA,
+                    LUCAS_POUILLE,
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    JO_WILFRIED_TSONGA: 1.70,
+                    LUCAS_POUILLE: 2.10,
+                },
+                'prediction': JO_WILFRIED_TSONGA,
+                'bet': 3,
+            },
+
             #
+            {
+                'round': 2,
+                'players': [
+                    ALJAZ_BEDENE,
+                    JO_WILFRIED_TSONGA,
+                ],
+                'odds': {
+                    ALJAZ_BEDENE: 3.10,
+                    JO_WILFRIED_TSONGA: 1.36,
+                },
+                'prediction': JO_WILFRIED_TSONGA,
+                'bet': 1,
+            }
         ]
     },
 
@@ -7939,7 +8041,287 @@ DATA = [
                 },
             },
 
+            # 2019-09-20
+            {
+                'round': 8,
+                'players': [
+                    BORNA_CORIC,
+                    CASPER_RUUD,
+                ],
+                'score': [(3, 6), (7, 5), (6, 3)],
+                'odds': {
+                    BORNA_CORIC: 1.58,
+                    CASPER_RUUD: 2.35,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    JOAO_SOUSA,
+                    MIKHAIL_KUKUSHKIN,
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    JOAO_SOUSA: 1.85,
+                    MIKHAIL_KUKUSHKIN: 1.95,
+                },
+                'prediction': JOAO_SOUSA,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    EGOR_GERASIMOV,
+                    MATTEO_BERRETTINI,
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    EGOR_GERASIMOV: 3.60,
+                    MATTEO_BERRETTINI: 1.28,
+                },
+                'prediction': MATTEO_BERRETTINI,
+                'bet': 2,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    ANDREY_RUBLEV,
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.24,
+                    ANDREY_RUBLEV: 4.00,
+                },
+            },
+
+            # 2019-09-21
+            {
+                'round': 4,
+                'players': [
+                    BORNA_CORIC,
+                    JOAO_SOUSA,
+                ],
+                'score': [(3, 6), (7, 6), (6, 1)],
+                'odds': {
+                    BORNA_CORIC: 1.70,
+                    JOAO_SOUSA: 2.10,
+                },
+            },
+            {
+                'round': 4,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    EGOR_GERASIMOV,
+                ],
+                'score': [(7, 5), (7, 5)],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.14,
+                    EGOR_GERASIMOV: 5.50,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 2,
+            },
+
             #
+            {
+                'round': 2,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    BORNA_CORIC,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.22,
+                    BORNA_CORIC: 4.20,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 2,
+            }
+        ]
+    },
+
+    {
+        'location': CHENGDU,
+        'date': '2019-09-29',
+        'matches': [
+            # 2019-09-23
+            {
+                'round': 512,
+                'players': [
+                    LUKE_SAVILLE,
+                    ANDREW_HARRIS,
+                ],
+                'score': [(6, 4), (7, 5)],
+            },
+            {
+                'round': 512,
+                'players': [
+                    JAMES_DUCKWORTH,
+                    HARRY_BOURCHIER,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JAMES_DUCKWORTH: 1.12,
+                    HARRY_BOURCHIER: 5.95
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JASON_JUNG,
+                    AKIRA_SANTILLAN
+                ],
+                'score': [(7, 5), (3, 6), (7, 6)],
+                'odds': {
+                    JASON_JUNG: 1.77,
+                    AKIRA_SANTILLAN: 1.80,
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LLOYD_HARRIS,
+                    JIE_CUI
+                ],
+                'score': [(6, 7), (6, 3), (6, 0)],
+            },
+            {
+                'round': 512,
+                'players': [
+                    DENIS_ISTOMIN,
+                    BERNARD_TOMIC
+                ],
+                'score': [(6, 1), (3, 1)],
+                'retired': True,
+                'odds': {
+                    DENIS_ISTOMIN: 1.80,
+                    BERNARD_TOMIC: 1.87
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BRADLEY_KLAHN,
+                    HIROKI_MORIYA
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)]
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    XIN_GAO
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.02,
+                    XIN_GAO: 12.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    KAMIL_MAJCHRZAK,
+                    MAX_PURCELL
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    KAMIL_MAJCHRZAK: 1.30,
+                    MAX_PURCELL: 3.45
+                }
+            },
+
+            # 2019-09-24
+            {
+                'round': 256,
+                'players': [
+                    JASON_JUNG,
+                    LUKE_SAVILLE
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    JASON_JUNG: 1.29,
+                    LUKE_SAVILLE: 3.20
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    BRADLEY_KLAHN,
+                    LLOYD_HARRIS
+                ],
+                'score': [(6, 3), (7, 6)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(6, 3), (3, 6), (7, 5)]
+            },
+            {
+                'round': 256,
+                'players': [
+                    KAMIL_MAJCHRZAK,
+                    JAMES_DUCKWORTH
+                ],
+                'score': [(4, 6), (7, 6), (6, 4)],
+                'odds': {
+                    KAMIL_MAJCHRZAK: 1.71,
+                    JAMES_DUCKWORTH: 1.91
+                }
+            },
+
+            #
+            {
+                'round': 32,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    DENIS_SHAPOVALOV
+                ],
+                'odds': {
+                    RICARDAS_BERANKIS: 3.10,
+                    DENIS_SHAPOVALOV: 1.36,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    RADU_ALBOT,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.45,
+                    RADU_ALBOT: 2.70,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    HYEON_CHUNG,
+                    JOAO_SOUSA,
+                ],
+                'odds': {
+                    HYEON_CHUNG: 1.52,
+                    JOAO_SOUSA: 2.50,
+                },
+                'prediction': None,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANIEL_EVANS,
+                    Y_BAI,
+                ],
+                'odds': {
+                    DANIEL_EVANS: 1.18,
+                    Y_BAI: 4.60,
+                },
+                'prediction': None,
+            }
         ]
     }
 ]
