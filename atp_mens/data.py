@@ -7093,10 +7093,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': METZ,
         'date': '2019-09-22',
@@ -7604,16 +7600,17 @@ DATA = [
                 'bet': 3,
             },
 
-            #
+            # 2019-09-22
             {
                 'round': 2,
                 'players': [
-                    ALJAZ_BEDENE,
                     JO_WILFRIED_TSONGA,
+                    ALJAZ_BEDENE,
                 ],
+                'score': [(6, 7), (7, 6), (6, 3)],
                 'odds': {
-                    ALJAZ_BEDENE: 3.10,
                     JO_WILFRIED_TSONGA: 1.36,
+                    ALJAZ_BEDENE: 3.10,
                 },
                 'prediction': JO_WILFRIED_TSONGA,
                 'bet': 1,
@@ -8123,13 +8120,14 @@ DATA = [
                 'bet': 2,
             },
 
-            #
+            # 2019-09-22
             {
                 'round': 2,
                 'players': [
                     DANIIL_MEDVEDEV,
                     BORNA_CORIC,
                 ],
+                'score': [(6, 3), (6, 1)],
                 'odds': {
                     DANIIL_MEDVEDEV: 1.22,
                     BORNA_CORIC: 4.20,
@@ -8139,6 +8137,10 @@ DATA = [
             }
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': CHENGDU,
@@ -8152,6 +8154,7 @@ DATA = [
                     ANDREW_HARRIS,
                 ],
                 'score': [(6, 4), (7, 5)],
+                # no odds
             },
             {
                 'round': 512,
@@ -8184,6 +8187,7 @@ DATA = [
                     JIE_CUI
                 ],
                 'score': [(6, 7), (6, 3), (6, 0)],
+                # no odds
             },
             {
                 'round': 512,
@@ -8204,7 +8208,11 @@ DATA = [
                     BRADLEY_KLAHN,
                     HIROKI_MORIYA
                 ],
-                'score': [(4, 6), (6, 3), (6, 4)]
+                'score': [(4, 6), (6, 3), (6, 4)],
+                'odds': {
+                    BRADLEY_KLAHN: 1.28,
+                    HIROKI_MORIYA: 3.30,
+                }
             },
             {
                 'round': 512,
@@ -8250,7 +8258,11 @@ DATA = [
                     BRADLEY_KLAHN,
                     LLOYD_HARRIS
                 ],
-                'score': [(6, 3), (7, 6)]
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    BRADLEY_KLAHN: 1.70,
+                    LLOYD_HARRIS: 1.86
+                }
             },
             {
                 'round': 256,
@@ -8258,7 +8270,11 @@ DATA = [
                     ALEXEI_POPYRIN,
                     DENIS_ISTOMIN
                 ],
-                'score': [(6, 3), (3, 6), (7, 5)]
+                'score': [(6, 3), (3, 6), (7, 5)],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.63,
+                    DENIS_ISTOMIN: 2.10,
+                }
             },
             {
                 'round': 256,
@@ -8277,38 +8293,24 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    RICARDAS_BERANKIS,
-                    DENIS_SHAPOVALOV
+                    CHRISTIAN_GARIN,
+                    KYLE_EDMUND,
                 ],
                 'odds': {
-                    RICARDAS_BERANKIS: 3.10,
-                    DENIS_SHAPOVALOV: 1.36,
+                    CHRISTIAN_GARIN: 2.90,
+                    KYLE_EDMUND: 1.40,
                 },
-                'prediction': None,
             },
             {
                 'round': 32,
                 'players': [
-                    PABLO_CARRENO_BUSTA,
-                    RADU_ALBOT,
+                    BRADLEY_KLAHN,
+                    JASON_JUNG,
                 ],
                 'odds': {
-                    PABLO_CARRENO_BUSTA: 1.45,
-                    RADU_ALBOT: 2.70,
+                    BRADLEY_KLAHN: 1.60,
+                    JASON_JUNG: 2.25,
                 },
-                'prediction': None,
-            },
-            {
-                'round': 32,
-                'players': [
-                    HYEON_CHUNG,
-                    JOAO_SOUSA,
-                ],
-                'odds': {
-                    HYEON_CHUNG: 1.52,
-                    JOAO_SOUSA: 2.50,
-                },
-                'prediction': None,
             },
             {
                 'round': 32,
@@ -8317,11 +8319,49 @@ DATA = [
                     Y_BAI,
                 ],
                 'odds': {
-                    DANIEL_EVANS: 1.18,
-                    Y_BAI: 4.60,
+                    DANIEL_EVANS: 1.16,
+                    Y_BAI: 5.00,
                 },
-                'prediction': None,
-            }
+                'prediction': DANIEL_EVANS,
+                'bet': 1,
+            },
+
+            # {
+            #     'round': 32,
+            #     'players': [
+            #         RICARDAS_BERANKIS,
+            #         DENIS_SHAPOVALOV
+            #     ],
+            #     'odds': {
+            #         RICARDAS_BERANKIS: 3.10,
+            #         DENIS_SHAPOVALOV: 1.36,
+            #     },
+            #     'prediction': None,
+            # },
+            # {
+            #     'round': 32,
+            #     'players': [
+            #         PABLO_CARRENO_BUSTA,
+            #         RADU_ALBOT,
+            #     ],
+            #     'odds': {
+            #         PABLO_CARRENO_BUSTA: 1.45,
+            #         RADU_ALBOT: 2.70,
+            #     },
+            #     'prediction': None,
+            # },
+            # {
+            #     'round': 32,
+            #     'players': [
+            #         HYEON_CHUNG,
+            #         JOAO_SOUSA,
+            #     ],
+            #     'odds': {
+            #         HYEON_CHUNG: 1.52,
+            #         JOAO_SOUSA: 2.50,
+            #     },
+            #     'prediction': None,
+            # },
         ]
     }
 ]
