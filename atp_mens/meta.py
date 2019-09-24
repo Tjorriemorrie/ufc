@@ -1936,6 +1936,12 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    MILIAAN_NIESTEN: {
+        'born_at': (1988, 6, 27),
+        'height': 183,
+        'forehand': LH,
+        'backhand': THB,
+    },
     MILJAN_ZEKIC: {
         'born_at': (1988, 7, 12),
         'height': 185,
@@ -2876,6 +2882,8 @@ META = {
         'height': 188,
         'forehand': RH,
         'backhand': THB,
+    },
+    ZHAO_ZHAO: {
     },
     ZHE_LI: {
         'born_at': (1986, 9, 20),

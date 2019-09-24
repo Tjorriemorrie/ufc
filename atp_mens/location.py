@@ -534,3 +534,11 @@ WINSTON_SALEM = {
     'surface': SURFACE_HARD,
     'speed': 63,
 }
+ZHUHAI = {
+    'name': 'Huajin Securities Zhuhai Championships',
+    'category': 'ATP250',
+    'location': 'Zhuhai, China',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 63,  # not correct
+}
