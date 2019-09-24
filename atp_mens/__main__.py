@@ -54,20 +54,20 @@ def main(hyper_params, train=0):
                DATA_2019_07 + DATA_2019_08 + DATA
 
     # bet_upsw_a, bet_upsw_b, bet_spd_a, bet_spd_b, bet_wnll_a, bet_wnll_b = hyper_params 
-    bet_upsw_a = 0.04838382212621933
-    bet_upsw_b = 0.659235608023082
-    bet_spd_a = -2.0083479854253694
-    bet_spd_b = -1.2872638115866413
-    bet_wnll_a = 0.05499805382115622
-    bet_wnll_b = -3.4654265792242964
+    bet_upsw_a = 0.36505885428711304
+    bet_upsw_b = -2.287090070245978
+    bet_spd_a = -0.051594360524750915
+    bet_spd_b = -0.896779913310071
+    bet_wnll_a = -0.024362289607474816
+    bet_wnll_b = 0.712528397268077
 
     # bet_odds_a, bet_odds_b, bet_tmi_a, bet_tmi_b, bet_wnlw_a, bet_wnlw_b = hyper_params
-    bet_odds_a = -1.4240082644422367
-    bet_odds_b = 0.12335782627586439
-    bet_tmi_a = -0.39401092778738733
-    bet_tmi_b = -0.8482893593921507
-    bet_wnlw_a = -0.04893004864956106
-    bet_wnlw_b = -1.494112946920087
+    bet_odds_a = -0.919750140540527
+    bet_odds_b = -0.16371656584608987
+    bet_tmi_a = 0.08388354674346983
+    bet_tmi_b = -2.1829675527272867
+    bet_wnlw_a = 0.08033494501194119
+    bet_wnlw_b = -8.466687802913563
 
     # bet_tiew_a, bet_tiew_b, bet_setw_a, bet_setw_b, bet_gms_a, bet_gms_b = hyper_params
     bet_tiew_a = -0.8158914177713138
@@ -655,17 +655,17 @@ def run():
         # 'bet_setw_a', 'bet_setw_b',  # 934      1     -     -     1
         # 'bet_gms_a', 'bet_gms_b',    # 1086     -   292   443     -
 
-        # 81    55      26      1500
-        # 'odds_a', 'odds_b',          # 382     -     -     -     -
-        # 'bet_tmi_a', 'bet_tmi_b',    # 439    21    52     -   399
-        # 'bet_wnlw_a', 'bet_wnlw_b',  # 644     -   785    98     -
-
         # TOLX SET TO 3000
 
-        # 71    79      19      1400
-        'bet_upsw_a', 'bet_upsw_b',  # 668    18   132  1147  3426
-        'bet_spd_a', 'bet_spd_b',    # 686     -     5     -     9
-        'bet_wnll_a', 'bet_wnll_b',  # 696     -     -     -     -
+        # 72    73      21      1400
+        # 'odds_a', 'odds_b',          # 466     -     -     -     -
+        # 'bet_tmi_a', 'bet_tmi_b',    # 494    21    52     -   399
+        # 'bet_wnlw_a', 'bet_wnlw_b',  # 596     -   785    98     -
+
+        # 71    79      20      1400
+        'bet_upsw_a', 'bet_upsw_b',  # 487   132  1147  3426   136
+        'bet_spd_a', 'bet_spd_b',    # 496     5     -     9
+        'bet_wnll_a', 'bet_wnll_b',  # 501     -     -     -  3777
 
     ]
     params = [0, 0, 0, 0, 0, 0]
