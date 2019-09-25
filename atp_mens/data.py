@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 71.4  19.9    1435    2019 metz                           (1, 1672), (4, 872), (3, 412), (2, 154)
 # 100   40.9    1306    2018 gstaad                         (2, 1013), (3, 385), (1, 1), (5, 1)
 # 72.1  10.0    1191    2018 washington                     (3, 1187), (4, 538), (6, 337), (1, 283)
 # 94.0  33.6    1476    2019 us open                        (3, 1239), (1, 105), (4, 100), (2, 24)
@@ -3595,13 +3596,14 @@ DATA = [
                 'bet': 1,
             },
 
-            #
+            # 2019-09-24
             {
                 'round': 32,
                 'players': [
                     PABLO_CARRENO_BUSTA,
                     RADU_ALBOT,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 1.55,
                     RADU_ALBOT: 2.40,
@@ -3613,6 +3615,7 @@ DATA = [
                     DUSAN_LAJOVIC,
                     JUAN_IGNACIO_LONDERO,
                 ],
+                'score': [(6, 2), (4, 6), (6, 4)],
                 'odds': {
                     DUSAN_LAJOVIC: 1.70,
                     JUAN_IGNACIO_LONDERO: 2.10,
@@ -3621,37 +3624,55 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    ALEXEI_POPYRIN,
                     FERNANDO_VERDASCO,
+                    ALEXEI_POPYRIN,
                 ],
+                'score': [(6, 2), (7, 5)],
                 'odds': {
-                    ALEXEI_POPYRIN: 2.10,
                     FERNANDO_VERDASCO: 1.70,
+                    ALEXEI_POPYRIN: 2.10,
                 },
             },
             {
                 'round': 32,
                 'players': [
-                    MARTON_FUCSOVICS,
                     KAMIL_MAJCHRZAK,
+                    MARTON_FUCSOVICS,
                 ],
+                'score': [(4, 6), (6, 4), (6, 2)],
                 'odds': {
-                    MARTON_FUCSOVICS: 2.05,
                     KAMIL_MAJCHRZAK: 1.75,
+                    MARTON_FUCSOVICS: 2.05,
                 },
             },
             {
                 'round': 32,
                 'players': [
-                    ZHE_LI,
                     EGOR_GERASIMOV,
+                    ZHE_LI,
                 ],
+                'score': [(4, 6), (6, 2), (6, 3)],
                 'odds': {
-                    ZHE_LI: 3.30,
                     EGOR_GERASIMOV: 1.32,
+                    ZHE_LI: 3.30,
                 },
                 'prediction': EGOR_GERASIMOV,
                 'bet': 4,
+            },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    RICARDAS_BERANKIS: 2.80,
+                    DENIS_SHAPOVALOV: 1.42,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 1,
             },
             {
                 'round': 32,
@@ -3660,10 +3681,27 @@ DATA = [
                     JOAO_SOUSA,
                 ],
                 'odds': {
-                    HYEON_CHUNG: 1.48,
-                    JOAO_SOUSA: 2.60,
+                    HYEON_CHUNG: 1.45,
+                    JOAO_SOUSA: 2.70,
                 },
+                'prediction': HYEON_CHUNG,
+                'bet': 1,
             },
+            {
+                'round': 16,
+                'players': [
+                    VASEK_POSPISIL,
+                    JORDAN_THOMPSON,
+                ],
+                'odds': {
+                    VASEK_POSPISIL: 2.05,
+                    JORDAN_THOMPSON: 1.75,
+                },
+                'prediction': JORDAN_THOMPSON,
+                'bet': 1,
+            },
+
+            #
         ]
     },
 
@@ -3870,27 +3908,30 @@ DATA = [
                 }
             },
 
-            #
+            # 2019-09-24
             {
                 'round': 32,
                 'players': [
-                    STEVE_JOHNSON,
                     PABLO_ANDUJAR,
+                    STEVE_JOHNSON,
                 ],
+                'score': [(2, 6), (6, 2), (6, 1)],
                 'odds': {
-                    STEVE_JOHNSON: 1.62,
                     PABLO_ANDUJAR: 2.25,
+                    STEVE_JOHNSON: 1.62,
                 },
             },
             {
                 'round': 32,
                 'players': [
-                    CASPER_RUUD,
                     MIOMIR_KECMANOVIC,
+                    CASPER_RUUD,
                 ],
+                'score': [(6, 2), (0, 0)],
+                'retired': True,
                 'odds': {
-                    CASPER_RUUD: 2.15,
                     MIOMIR_KECMANOVIC: 1.68,
+                    CASPER_RUUD: 2.15,
                 },
             },
             {
@@ -3899,6 +3940,7 @@ DATA = [
                     DAMIR_DZUMHUR,
                     MARCO_CECCHINATO,
                 ],
+                'score': [(5, 7), (6, 4), (6, 2)],
                 'odds': {
                     DAMIR_DZUMHUR: 1.38,
                     MARCO_CECCHINATO: 3.00,
@@ -3907,12 +3949,13 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    DOMINIK_KOEPFER,
                     ZHIZHEN_ZHANG,
+                    DOMINIK_KOEPFER,
                 ],
+                'score': [(7, 5), (6, 2)],
                 'odds': {
-                    DOMINIK_KOEPFER: 1.32,
                     ZHIZHEN_ZHANG: 3.30,
+                    DOMINIK_KOEPFER: 1.32,
                 },
                 'prediction': DOMINIK_KOEPFER,
                 'bet': 4,
@@ -3923,6 +3966,7 @@ DATA = [
                     ALEX_DE_MINAUR,
                     JOHN_MILLMAN,
                 ],
+                'score': [(6, 1), (6, 3)],
                 'odds': {
                     ALEX_DE_MINAUR: 1.48,
                     JOHN_MILLMAN: 2.60,
@@ -3933,16 +3977,58 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    TENNYS_SANDGREN,
                     ANDY_MURRAY,
+                    TENNYS_SANDGREN,
                 ],
+                'score': [(6, 3), (6, 7), (6, 1)],
                 'odds': {
-                    TENNYS_SANDGREN: 2.05,
                     ANDY_MURRAY: 1.75,
+                    TENNYS_SANDGREN: 2.05,
                 },
             },
 
+            #
+            {
+                'round': 16,
+                'players': [
+                    SOONWOO_KWON,
+                    LUCAS_POUILLE,
+                ],
+                'odds': {
+                    SOONWOO_KWON: 2.15,
+                    LUCAS_POUILLE: 1.68,
+                },
+                'prediction': LUCAS_POUILLE,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    ALBERT_RAMOS_VINOLAS,
+                ],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 1.68,
+                    ALBERT_RAMOS_VINOLAS: 2.15,
+                },
+                'prediction': MIOMIR_KECMANOVIC,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    CAMERON_NORRIE,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.26,
+                    CAMERON_NORRIE: 3.80,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 2,
+            },
 
+            #
         ]
     }
 ]
