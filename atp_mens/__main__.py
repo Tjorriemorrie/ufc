@@ -35,7 +35,8 @@ def win_probability(team1, team2):
 
 
 def up_multi_bet(bet_multi, bet_multis_cat, x, y, wrd):
-    bet_max_limit = 3
+    big_multis = {'tier', 'wnlr'}
+    bet_max_limit = 3 if wrd in big_multis else 1
     bet_min_limit = 0
     bet_single_multi = np.polyval(x, [y])[0]
     bet_single_multi = min(bet_max_limit, max(bet_min_limit, bet_single_multi))
@@ -53,13 +54,37 @@ def main(hyper_params, train=0):
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA
 
-    bet_drsw_a, bet_drsw_b, bet_ts_a, bet_ts_b, bet_gms_a, bet_gms_b = hyper_params
-    # bet_drsw_a = 0.00876058418964469
-    # bet_drsw_b = -1.641714262144544
-    # bet_ts_a = -0.21350209593468827
-    # bet_ts_b = -56.93529961849599
-    # bet_gms_a = 0.24909642087776812
-    # bet_gms_b = -10.689298578569904
+    bet_tmi_a, bet_tmi_b, bet_spd_a, bet_spd_b, bet_lati_a, bet_lati_b = hyper_params
+    # bet_tmi_a = 0.08388354674346983
+    # bet_tmi_b = -2.1829675527272867
+    # bet_spd_a = -0.051594360524750915
+    # bet_spd_b = -0.896779913310071
+    # bet_lati_a = 28.774388877740268
+    # bet_lati_b = 0.3810156758402065
+
+    # bet_upsw_a, bet_upsw_b, bet_wnlw_a, bet_wnlw_b, bet_tiew_a, bet_tiew_b = hyper_params  
+    bet_upsw_a = -0.18189799956427607
+    bet_upsw_b = -10.670797911628497
+    bet_wnlw_a = -0.03647442844217157
+    bet_wnlw_b = -4.478863567055348
+    bet_tiew_a = -0.008387021245777226
+    bet_tiew_b = -6.331240133386457
+
+    # bet_odds_a, bet_odds_b, bet_upsl_a, bet_upsl_b, bet_setw_a, bet_setw_b = hyper_params
+    bet_odds_a = -1.9736380544396077
+    bet_odds_b = -3.426276530764662
+    bet_upsl_a = 0.30792601677690323
+    bet_upsl_b = -3.058804195244493
+    bet_setw_a = -0.11582174733749598
+    bet_setw_b = -7.474964663467295
+    
+    # bet_drsw_a, bet_drsw_b, bet_ts_a, bet_ts_b, bet_gms_a, bet_gms_b = hyper_params
+    bet_drsw_a = -0.45334050855860014
+    bet_drsw_b = -8.143734501004191
+    bet_ts_a = -1.3077109913971976
+    bet_ts_b = 2.8143007662490476
+    bet_gms_a = 0.24656086801550103
+    bet_gms_b = -2.161612999839386
 
     # bet_tiel_a, bet_tiel_b, bet_tma_a, bet_tma_b, bet_setl_a, bet_setl_b = hyper_params
     bet_tiel_a = 0.0513668982157003
@@ -93,39 +118,15 @@ def main(hyper_params, train=0):
     bet_drsl_a = -0.05745543662231335
     bet_drsl_b = -1.6978725137778674
 
-    # bet_upsr_a, bet_upsr_b, bet_setr_a, bet_setr_b, bet_lati_a, bet_lati_b = hyper_params
+    # bet_upsr_a, bet_upsr_b, bet_setr_a, bet_setr_b, 
     bet_upsr_a = -7.160631059330515
     bet_upsr_b = -26.620284217406596
     bet_setr_a = 7.727269694334744
     bet_setr_b = -4.068870972322326
-    bet_lati_a = 28.774388877740268
-    bet_lati_b = 0.3810156758402065
 
-    # bet_upsw_a, bet_upsw_b, bet_spd_a, bet_spd_b, bet_wnll_a, bet_wnll_b = hyper_params 
-    bet_upsw_a = 0.36505885428711304
-    bet_upsw_b = -2.287090070245978
-    bet_spd_a = -0.051594360524750915
-    bet_spd_b = -0.896779913310071
+    # bet_wnll_a, bet_wnll_b = hyper_params 
     bet_wnll_a = -0.024362289607474816
     bet_wnll_b = 0.712528397268077
-
-    # bet_odds_a, bet_odds_b, bet_tmi_a, bet_tmi_b, bet_wnlw_a, bet_wnlw_b = hyper_params
-    bet_odds_a = -0.919750140540527
-    bet_odds_b = -0.16371656584608987
-    bet_tmi_a = 0.08388354674346983
-    bet_tmi_b = -2.1829675527272867
-    bet_wnlw_a = 0.08033494501194119
-    bet_wnlw_b = -8.466687802913563
-
-    # bet_tiew_a, bet_tiew_b, bet_setw_a, bet_setw_b, 
-    bet_tiew_a = -0.8158914177713138
-    bet_tiew_b = -13.309710163014044
-    bet_setw_a = 0.10491580934262011
-    bet_setw_b = -14.560417541073042
-
-    # bet_upsl_a, bet_upsl_b = hyper_params
-    bet_upsl_a = -0.1046646229255518
-    bet_upsl_b = -0.9216626923778382
 
     # init
     start_date = None
@@ -304,11 +305,11 @@ def main(hyper_params, train=0):
                 speeds[p2] += [-match_speed]
 
                 # update ties
-                ties[p1] += [1 if v[0] == 7 else -1 for v in match['score'] if 7 in v]
-                ties[p2] += [1 if v[1] == 7 else -1 for v in match['score'] if 7 in v]
+                ties[p1] += [1 if v[0] == 7 else -1 for v in match['score'] if 7 in v and 6 in v]
+                ties[p2] += [1 if v[1] == 7 else -1 for v in match['score'] if 7 in v and 6 in v]
 
                 # update last ties
-                if match['score'] and 7 in match['score'][-1]:
+                if match['score'] and 7 in match['score'][-1] and 6 in match['score'][-1]:
                     last_ties[p1].append(1 if match['score'][-1][0] == 7 else -1)
                     last_ties[p2].append(1 if match['score'][-1][1] == 7 else -1)
 
@@ -326,7 +327,7 @@ def main(hyper_params, train=0):
 
             ###############################
             # bet scaling
-            bet_multi = -2
+            bet_multi = -3
 
             # odds
             if p1_odds < p2_odds:
@@ -631,37 +632,18 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
 # DROP OUT SET TO 25%
 # DROP OUT SET TO 20%
 # SCORE SET TO ROI * PART
-# TOLX SET TO 1200 - time was 86min
-# TOLX SET TO 2000
-# TOLX SET TO 2500
+# TOLX SET TO 3000
 
 def run():
     train = 1
 
     names = [
-        # 81    54      26      1500
-        # 'bet_upsl_a', 'bet_upsl_b',  # 732      -     -     2    21
-
-        # 84    49      28      1500
-        # 'bet_tiew_a', 'bet_tiew_b',  # 715     64     -     2    14
-        # 'bet_setw_a', 'bet_setw_b',  # 934      1     -     -     1
-
-        # TOLX SET TO 3000
-
-        # 72    73      21      1400
-        # 'odds_a', 'odds_b',          # 466     -     -     -     -
-        # 'bet_tmi_a', 'bet_tmi_b',    # 494    21    52     -   399
-        # 'bet_wnlw_a', 'bet_wnlw_b',  # 596     -   785    98     -
-
         # 71    79      20      1400
-        # 'bet_upsw_a', 'bet_upsw_b',  # 487   132  1147  3426   136
-        # 'bet_spd_a', 'bet_spd_b',    # 496     5     -     9
         # 'bet_wnll_a', 'bet_wnll_b',  # 501     -     -     -  3777
 
         # 72    81      25      2800
         # 'bet_upsr_a', 'bet_upsr_b',  # 995      -     6     -     -
         # 'bet_setr_a', 'bet_setr_b',  # 1075     -     -     -    53
-        # 'bet_lati_a', 'bet_lati_b',  # 1503  1295
 
         # 70    87      24      2800
         # 'bet_wnlr_a', 'bet_wnlr_b',  # 499    616  2382   265  4033
@@ -683,10 +665,27 @@ def run():
         # 'bet_tma_a', 'bet_tma_b',    # 484      8  1741  3275  4033
         # 'bet_setl_a', 'bet_setl_b',  # 680     52  1035     -     -
 
-        # 82    54      26      1500
-        'bet_drsw_a', 'bet_drsw_b',  # 466      -   582     -     -
-        'bet_ts_a', 'bet_ts_b',      # 1059     1   110     -     -
-        'bet_gms_a', 'bet_gms_b',    # 1086     -   292   443     -
+        # BET MULTI CHANGED TO -3
+        
+        # 77    76      26      1900
+        # 'bet_drsw_a', 'bet_drsw_b',  # 706    582     -     -     5
+        # 'bet_ts_a', 'bet_ts_b',      # 1002   110     -     -  1910
+        # 'bet_gms_a', 'bet_gms_b',    # 1016   292   443     -     1
+
+        # 77    74      26      1800
+        # 'odds_a', 'odds_b',          # 985      -     -     -     -
+        # 'bet_upsl_a', 'bet_upsl_b',  # 1118     -     2    21     7
+        # 'bet_setw_a', 'bet_setw_b',  # 1219     -     -     1     1
+
+        # 77    73      26      1800
+        # 'bet_upsw_a', 'bet_upsw_b',  # 613   1147  3426   136     -
+        # 'bet_wnlw_a', 'bet_wnlw_b',  # 667    785    98     -     -
+        # 'bet_tiew_a', 'bet_tiew_b',  # 727      -     2    14     -
+
+        # 72    73      21      1400
+        'bet_tmi_a', 'bet_tmi_b',    # 494     21    52     -   399
+        'bet_spd_a', 'bet_spd_b',    # 496      5     -     9
+        'bet_lati_a', 'bet_lati_b',  # 1503  1295
 
     ]
     params = [0, 0, 0, 0, 0, 0]
