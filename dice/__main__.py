@@ -115,7 +115,6 @@ def run_reverse_dice():
         if outcome:
             # reset
             losing_streak = 0
-            running_loss = 0
             last_loss = 0
             bet = 1
             multi = 1.5
@@ -164,7 +163,7 @@ def run_martingale():
 def run_reverse_martingale():
     bets = []
     outcomes = []
-    balance = 10000
+    balance = 100000
     target = balance * 2
     checkpoint = balance
     bet = 1
@@ -214,7 +213,8 @@ def labouchere():
             if len(seq):
                 seq.pop()
         else:
-            seq.append(bet)
+            for b in range(bet):
+                seq.append(1)
         logger.info(f'seq: {list(seq)[-10:]}')
         balance = update_balance(outcome, balance, bet)
         min_balance = min(balance, min_balance)
@@ -259,8 +259,8 @@ def lambert():
 if __name__ == '__main__':
     # run()
     # run_dice()
-    # run_reverse_dice()
+    run_reverse_dice()
     # run_martingale()
-    run_reverse_martingale()
+    # run_reverse_martingale()
     # labouchere()
     # lambert()
