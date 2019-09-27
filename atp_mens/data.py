@@ -3716,16 +3716,17 @@ DATA = [
                 }
             },
 
-            #
+            # 2019-09-26
             {
                 'round': 16,
                 'players': [
-                    DANIEL_EVANS,
                     GRIGOR_DIMITROV,
+                    DANIEL_EVANS,
                 ],
+                'score': [(7, 5), (7, 5)],
                 'odds': {
-                    DANIEL_EVANS: 2.60,
                     GRIGOR_DIMITROV: 1.48,
+                    DANIEL_EVANS: 2.60,
                 },
                 'prediction': GRIGOR_DIMITROV,
                 'bet': 1,
@@ -3733,23 +3734,25 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    BENOIT_PAIRE,
                     PABLO_CARRENO_BUSTA,
+                    BENOIT_PAIRE,
                 ],
+                'score': [(6, 3), (3, 6), (6, 3)],
                 'odds': {
-                    BENOIT_PAIRE: 2.70,
                     PABLO_CARRENO_BUSTA: 1.45,
+                    BENOIT_PAIRE: 2.70,
                 },
             },
             {
                 'round': 16,
                 'players': [
-                    FERNANDO_VERDASCO,
                     CHRISTIAN_GARIN,
+                    FERNANDO_VERDASCO,
                 ],
+                'score': [(6, 3), (3, 6), (6, 3)],
                 'odds': {
-                    FERNANDO_VERDASCO: 1.60,
                     CHRISTIAN_GARIN: 2.30,
+                    FERNANDO_VERDASCO: 1.60,
                 },
                 'prediction': FERNANDO_VERDASCO,
                 'bet': 1,
@@ -3760,6 +3763,7 @@ DATA = [
                     ALEXANDER_BUBLIK,
                     JORDAN_THOMPSON,
                 ],
+                'score': [(6, 4), (7, 5)],
                 'odds': {
                     ALEXANDER_BUBLIK: 2.40,
                     JORDAN_THOMPSON: 1.55,
@@ -3770,12 +3774,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    BRADLEY_KLAHN,
                     DENIS_SHAPOVALOV,
+                    BRADLEY_KLAHN,
                 ],
+                'score': [(3, 6), (6, 3), (7, 6)],
                 'odds': {
-                    BRADLEY_KLAHN: 4.00,
                     DENIS_SHAPOVALOV: 1.24,
+                    BRADLEY_KLAHN: 4.00,
                 },
                 'prediction': DENIS_SHAPOVALOV,
                 'bet': 1,
@@ -3786,21 +3791,22 @@ DATA = [
                     JOAO_SOUSA,
                     FELIX_AUGER_ALIASSIME,
                 ],
+                'score': [(6, 4), (6, 7), (6, 4)],
                 'odds': {
                     JOAO_SOUSA: 1.95,
                     FELIX_AUGER_ALIASSIME: 1.85,
                 },
-                'prediction': None,
             },
             {
                 'round': 16,
                 'players': [
-                    JOHN_ISNER,
                     EGOR_GERASIMOV,
+                    JOHN_ISNER,
                 ],
+                'score': [(6, 7), (7, 6), (7, 6)],
                 'odds': {
-                    JOHN_ISNER: 1.52,
                     EGOR_GERASIMOV: 2.50,
+                    JOHN_ISNER: 1.52,
                 },
                 'prediction': JOHN_ISNER,
                 'bet': 2,
@@ -3808,16 +3814,69 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    DUSAN_LAJOVIC,
                     LLOYD_HARRIS,
+                    DUSAN_LAJOVIC,
                 ],
+                'score': [(6, 3), (6, 3)],
                 'odds': {
-                    DUSAN_LAJOVIC: 1.60,
                     LLOYD_HARRIS: 2.30,
+                    DUSAN_LAJOVIC: 1.60,
                 },
                 'prediction': DUSAN_LAJOVIC,
                 'bet': 6,
-            }
+            },
+
+            #
+            {
+                'round': 8,
+                'players': [
+                    ALEXANDER_BUBLIK,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    ALEXANDER_BUBLIK: 3.60,
+                    GRIGOR_DIMITROV: 1.28,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    LLOYD_HARRIS,
+                    JOAO_SOUSA,
+                ],
+                'odds': {
+                    LLOYD_HARRIS: 2.60,
+                    JOAO_SOUSA: 1.48,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    EGOR_GERASIMOV,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 2.60,
+                    DENIS_SHAPOVALOV: 1.48,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    CHRISTIAN_GARIN,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.42,
+                    CHRISTIAN_GARIN: 2.80,
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 1,
+            },
+
+            #
         ]
     },
 
@@ -3825,6 +3884,7 @@ DATA = [
         'location': ZHUHAI,
         'date': '2019-09-29',
         'matches': [
+
             # 2019-09-23
             {
                 'round': 512,
@@ -4159,13 +4219,14 @@ DATA = [
                 'bet': 2,
             },
 
-            #
+            # 2019-09-26
             {
                 'round': 16,
                 'players': [
                     ANDREAS_SEPPI,
                     ZHIZHEN_ZHANG,
                 ],
+                'score': [(7, 6), (4, 6), (7, 6)],
                 'odds': {
                     ANDREAS_SEPPI: 1.38,
                     ZHIZHEN_ZHANG: 3.00,
@@ -4179,6 +4240,7 @@ DATA = [
                     DAMIR_DZUMHUR,
                     SOONWOO_KWON,
                 ],
+                'score': [(7, 6), (6, 2)],
                 'odds': {
                     DAMIR_DZUMHUR: 2.30,
                     SOONWOO_KWON: 1.60,
@@ -4187,25 +4249,28 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    STEFANOS_TSITSIPAS,
                     ADRIAN_MANNARINO,
+                    STEFANOS_TSITSIPAS,
                 ],
+                'score': [(3, 6), (7, 5), (0, 0)],
+                'retired': True,
                 'odds': {
-                    STEFANOS_TSITSIPAS: 1.28,
                     ADRIAN_MANNARINO: 3.60,
+                    STEFANOS_TSITSIPAS: 1.28,
                 },
                 'prediction': STEFANOS_TSITSIPAS,
-                'bet': 7,
+                'bet': 0,  # refunded7,
             },
             {
                 'round': 16,
                 'players': [
-                    PABLO_ANDUJAR,
                     ROBERTO_BAUTISTA_AGUT,
+                    PABLO_ANDUJAR,
                 ],
+                'score': [(7, 5), (7, 5)],
                 'odds': {
-                    PABLO_ANDUJAR: 4.20,
                     ROBERTO_BAUTISTA_AGUT: 1.22,
+                    PABLO_ANDUJAR: 4.20,
                 },
                 'prediction': ROBERTO_BAUTISTA_AGUT,
                 'bet': 1,
@@ -4213,12 +4278,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    DI_WU,
                     BORNA_CORIC,
+                    DI_WU,
                 ],
+                'score': [(6, 3), (6, 3)],
                 'odds': {
-                    DI_WU: 5.00,
                     BORNA_CORIC: 1.16,
+                    DI_WU: 5.00,
                 },
                 'prediction': BORNA_CORIC,
                 'bet': 2,
@@ -4229,6 +4295,7 @@ DATA = [
                     ALEX_DE_MINAUR,
                     ANDY_MURRAY,
                 ],
+                'score': [(4, 6), (6, 2), (6, 4)],
                 'odds': {
                     ALEX_DE_MINAUR: 1.38,
                     ANDY_MURRAY: 3.00,
@@ -4236,6 +4303,45 @@ DATA = [
                 'prediction': ALEX_DE_MINAUR,
                 'bet': 4,
             },
+
+            #
+            {
+                'round': 8,
+                'players': [
+                    GAEL_MONFILS,
+                    ALBERT_RAMOS_VINOLAS,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.34,
+                    ALBERT_RAMOS_VINOLAS: 3.20,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    DAMIR_DZUMHUR,
+                ],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.80,
+                    DAMIR_DZUMHUR: 2.00,
+                },
+                'prediction': ADRIAN_MANNARINO,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    ANDREAS_SEPPI,
+                    ROBERTO_BAUTISTA_AGUT,
+                ],
+                'odds': {
+                    ANDREAS_SEPPI: 4.00,
+                    ROBERTO_BAUTISTA_AGUT: 1.24,
+                },
+            },
+
+            #
         ]
     }
 ]
