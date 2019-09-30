@@ -760,6 +760,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    EMIL_REINBERG: {
+        'born_at': (1997, 4, 20),
+        'height': 188,
+        'forehand': RH,
+        'backhand': THB,
+    },
     EMIL_RUUSUVUORI: {
         'born_at': (1999, 4, 2),
         'height': 185,
@@ -982,6 +988,12 @@ META = {
     GAEL_MONFILS: {
         'born_at': (1986, 9, 1),
         'height': 193,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    GARRETT_JOHNS: {
+        'born_at': (2000, 12, 17),
+        'height': 180,
         'forehand': RH,
         'backhand': THB,
     },
@@ -1573,6 +1585,9 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    KIRANPAL_PANNU: {
+        'born_at': (1997, 1, 7),
+    },
     KYLE_EDMUND: {
         'born_at': (1995, 1, 8),
         'height': 188,
@@ -1817,6 +1832,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    MARVIN_MOELLER: {
+        'born_at': (1999, 1, 18),
+        'height': 178,
+        'forehand': RH,
+        'backhand': THB,
+    },
     MATE_VALKUSZ: {
         'born_at': (1998, 8, 13),
         'height': 183,
@@ -2038,6 +2059,12 @@ META = {
     NIK_RAZBORSEK: {
         'born_at': (1993, 10, 4),
         'height': 173,
+        'forehand': LH,
+        'backhand': THB,
+    },
+    NIKLAS_GUTTAU: {
+        'born_at': (2000, 1, 3),
+        'height': 178,
         'forehand': LH,
         'backhand': THB,
     },
@@ -2266,6 +2293,12 @@ META = {
     RENTA_TOKUDA: {
         'born_at': (1998, 3, 29),
         'height': 178,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    RENZO_OLIVO: {
+        'born_at': (1992, 3, 15),
+        'height': 180,
         'forehand': RH,
         'backhand': THB,
     },
