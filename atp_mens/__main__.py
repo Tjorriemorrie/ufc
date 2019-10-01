@@ -2,6 +2,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from itertools import chain
 from random import random
+from time import time
 
 import numpy as np
 from cma import CMAEvolutionStrategy, CMAOptions
@@ -55,6 +56,30 @@ def main(hyper_params, train=0):
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA
 
+    # bet_spd_a, bet_spd_b, bet_upsl_a, bet_upsl_b, bet_tier_a, bet_tier_b = hyper_params
+    bet_spd_a = 4.859146281289833
+    bet_spd_b = -21.106237653455178
+    bet_upsl_a = -24.095354153941248
+    bet_upsl_b = -16.663939270652264
+    bet_tier_a = 75.91181869837527
+    bet_tier_b = 0.16520593704027123
+
+    # bet_wnlr_a, bet_wnlr_b, bet_setl_a, bet_setl_b, bet_upsr_a, bet_upsr_b = hyper_params
+    bet_wnlr_a = -1.630335080361462
+    bet_wnlr_b = -5.696590687193816
+    bet_setl_a = 1.293588266477004
+    bet_setl_b = 8.820762418431968
+    bet_upsr_a = -0.6251959507489149
+    bet_upsr_b = -1.8449852763356924
+
+    # bet_drsw_a, bet_drsw_b, bet_ts_a, bet_ts_b, bet_odds_a, bet_odds_b = hyper_params
+    bet_drsw_a = -0.037146308648012875
+    bet_drsw_b = -4.630513511116628
+    bet_ts_a = -0.6185609194331347
+    bet_ts_b = -9.597579758567102
+    bet_odds_a = 1.0092439445741725
+    bet_odds_b = -6.9550239619471075
+
     # bet_gms_a, bet_gms_b, bet_sfcw_a, bet_sfcw_b, bet_lati_a, bet_lati_b = hyper_params
     bet_gms_a = 2.4562916298249378
     bet_gms_b = -15.126511197659005
@@ -95,39 +120,15 @@ def main(hyper_params, train=0):
     bet_drs_a = -2.82095011076031
     bet_drs_b = -6.482997331840399
 
-    # bet_tiew_a, bet_tiew_b, bet_wnll_a, bet_wnll_b, bet_tier_a, bet_tier_b = hyper_params
+    # bet_tiew_a, bet_tiew_b, bet_wnll_a, bet_wnll_b, 
     bet_tiew_a = 0.3636725355595606
     bet_tiew_b = -10.2467357782873
     bet_wnll_a = -0.6185798304685648
     bet_wnll_b = 13.062490214550616
-    bet_tier_a = -30.82595452461449
-    bet_tier_b = 0.46228524713724284
 
-    # bet_spd_a, bet_spd_b, bet_wnlw_a, bet_wnlw_b, bet_upsr_a, bet_upsr_b = hyper_params
-    bet_spd_a = 1.5451485254379722
-    bet_spd_b = -2.9328393960060954
+    # bet_wnlw_a, bet_wnlw_b,
     bet_wnlw_a = -0.10284113526270323
     bet_wnlw_b = -4.6254530807270715
-    bet_upsr_a = -1.256256232501988
-    bet_upsr_b = -2.3478463095067195
-
-    # bet_wnlr_a, bet_wnlr_b, bet_upsl_a, bet_upsl_b, bet_odds_a, bet_odds_b = hyper_params
-    bet_wnlr_a = 2.4793215091375953
-    bet_wnlr_b = -2.9482939013399703
-    bet_upsl_a = 0.30814267872581846
-    bet_upsl_b = -7.024346835374528
-    bet_odds_a = -3.04376637214543
-    bet_odds_b = -11.035289436821518
-
-    # bet_ts_a, bet_ts_b, bet_setl_a, bet_setl_b, 
-    bet_ts_a = -0.8363743483701895
-    bet_ts_b = -5.929267160567298
-    bet_setl_a = 1.787837301558674
-    bet_setl_b = 6.783535331962788
-
-    # bet_drsw_a, bet_drsw_b = hyper_params
-    bet_drsw_a = -0.05265639235711016
-    bet_drsw_b = -2.5325126398716074
 
     # init
     start_date = None
@@ -642,27 +643,12 @@ def run():
     train = 0
     
     names = [
-        # 81    67      24      1500
-        # 'bet_drsw_a', 'bet_drsw_b',  # 699      -     5     -     -
-
-        # 78    68      23      1500
-        # 'bet_ts_a', 'bet_ts_b',      # 779      -  1910   790    99
-        # 'bet_setl_a', 'bet_setl_b',  # 800      -     -  1323  2333
-
         # 79    68      23      1500
-        # 'bet_wnlr_a', 'bet_wnlr_b',  # 741    265  4033  4049     -
-        # 'bet_upsl_a', 'bet_upsl_b',  # 854     21     7    11     -
-        # 'odds_a', 'odds_b',          # 976      -     -     -     -
-
-        # 79    68      23      1500
-        # 'bet_spd_a', 'bet_spd_b',    # 826      -     9     -     -
         # 'bet_wnlw_a', 'bet_wnlw_b',  # 964      -     -     1     -
-        # 'bet_upsr_a', 'bet_upsr_b',  # 1074     -     -     4     -
 
         # 78    67      25      1400
         # 'bet_tiew_a', 'bet_tiew_b',  # 891     14     -  4056     1
         # 'bet_wnll_a', 'bet_wnll_b',  # 1043  3777     5     -  4074
-        # 'bet_tier_a', 'bet_tier_b',  # 1183  1460  1395  1396   981
 
         # 78    67      25      1400
         # 'bet_tsq_a', 'bet_tsq_b',    # 892      -     -     -     -
@@ -686,17 +672,31 @@ def run():
         # 'bet_drsl_a', 'bet_drsl_b',  # 711      -     -     -  1416
         # 'bet_tiel_a', 'bet_tiel_b',  # 870     38     -  2740     -
         
-        # SHOCKWAVE
-
         # 77    70      24      1500
-        'bet_gms_a', 'bet_gms_b',    # 852      1     -     -    17
-        'bet_sfcw_a', 'bet_sfcw_b',  # 1013     -  4056  1942  3087
-        'bet_lati_a', 'bet_lati_b',  # 1029  1172   888  1172  1205
+        # 'bet_gms_a', 'bet_gms_b',    # 852      1     -     -    17
+        # 'bet_sfcw_a', 'bet_sfcw_b',  # 1013     -  4056  1942  3087
+        # 'bet_lati_a', 'bet_lati_b',  # 1029  1172   888  1172  1205
 
         # iteration limit set to 1000
 
-    ]
+        # 78    70      25      1500
+        # 'bet_drsw_a', 'bet_drsw_b',  # 764      5     -     -     -
+        # 'bet_ts_a', 'bet_ts_b',      # 804   1910   790    99     1
+        # 'odds_a', 'odds_b',          # 902      -     -     -     -
 
+        # 77    72      24      1500
+        # 'bet_wnlr_a', 'bet_wnlr_b',  # 794   4033  4049     -     -
+        # 'bet_setl_a', 'bet_setl_b',  # 823      -  1323  2333  2696
+        # 'bet_upsr_a', 'bet_upsr_b',  # 960      -     4     -     -
+
+        # 72    83      18      1800
+        'bet_spd_a', 'bet_spd_b',    # 908      9     -     -     -
+        'bet_upsl_a', 'bet_upsl_b',  # 922      7    11     -  2287
+        'bet_tier_a', 'bet_tier_b',  # 1087  1395  1396   981  1427
+
+        # SHOCKWAVE
+    ]
+    tolx = 2400
     params = [0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
@@ -706,6 +706,7 @@ def run():
     # assert len(params) == len(bounds)
 
     if train:
+        time_start = time()
         sigma = 1
         opts = CMAOptions()
         opts['bounds'] = bounds
@@ -721,9 +722,9 @@ def run():
             es.disp()
             # print(list(es.result[0]))
             print(f'tolx={es.opts["tolx"]:.3f}  sol={list(es.result[5])}')
-            es.opts['tolx'] = es.result[3] / 2500
-            if es.result[3] > 1000:
-                print('iteration limit reached')
+            es.opts['tolx'] = es.result[3] / tolx
+            if time() - time_start > 60 * 120:
+                print('two hour limit reached')
                 break
         es.result_pretty()
         print(f'finished after {es.result[3]} evaluations and {es.result[4]} iterations')

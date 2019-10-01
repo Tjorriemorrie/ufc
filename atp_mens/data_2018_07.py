@@ -160,14 +160,6 @@ DATA_2018_07 = [
             {
                 'round': 32,
                 'players': [
-                    THIAGO_MONTEIRO,
-                    GILLES_SIMON
-                ],
-                'score': [(7, 6), (6, 2)]
-            },
-            {
-                'round': 32,
-                'players': [
                     RUDOLF_MOLLEKER,
                     DAVID_FERRER
                 ],
@@ -176,14 +168,6 @@ DATA_2018_07 = [
                     RUDOLF_MOLLEKER: 2.90,
                     DAVID_FERRER: 1.34
                 }
-            },
-            {
-                'round': 32,
-                'players': [
-                    JOHN_MILLMAN,
-                    JAN_LENNARD_STRUFF
-                ],
-                'score': [(7, 5), (6, 3)]
             },
             {
                 'round': 32,
@@ -212,62 +196,6 @@ DATA_2018_07 = [
             {
                 'round': 32,
                 'players': [
-                    NICOLAS_JARRY,
-                    PETER_GOJOWCZYK
-                ],
-                'score': [(6, 1), (6, 2)]
-            },
-            {
-                'round': 32,
-                'players': [
-                    PABLO_CUEVAS,
-                    MARTON_FUCSOVICS
-                ],
-                'score': [(6, 3), (6, 2)]
-            },
-            {
-                'round': 32,
-                'players': [
-                    ALJAZ_BEDENE,
-                    HENRI_LAAKSONEN
-                ],
-                'score': [(6, 3), (1, 6), (6, 4)]
-            },
-            {
-                'round': 32,
-                'players': [
-                    FERNANDO_VERDASCO,
-                    DUSAN_LAJOVIC
-                ],
-                'score': [(6, 3), (4, 6), (7, 6)]
-            },
-            {
-                'round': 32,
-                'players': [
-                    RICHARD_GASQUET,
-                    BENOIT_PAIRE
-                ],
-                'score': [(7, 5), (6, 3)]
-            },
-            {
-                'round': 32,
-                'players': [
-                    GAEL_MONFILS,
-                    MARCO_CECCHINATO
-                ],
-                'score': [(6, 4), (3, 6), (6, 4)]
-            },
-            {
-                'round': 32,
-                'playes': [
-                    NIKOLOZ_BASILASHVILI,
-                    PHILIPP_KOHLSCHREIBER
-                ],
-                'score': [(7, 5), (1, 6), (6, 4)]
-            },
-            {
-                'round': 32,
-                'players': [
                     JOZEF_KOVALIK,
                     DAMIR_DZUMHUR
                 ],
@@ -284,6 +212,10 @@ DATA_2018_07 = [
                     FLORIAN_MAYER
                 ],
                 'score': [(2, 6), (6, 1), (7, 6)],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.15,
+                    FLORIAN_MAYER: 5.40,
+                }
             },
             {
                 'round': 32,
@@ -291,7 +223,121 @@ DATA_2018_07 = [
                     DIEGO_SCHWARTZMAN,
                     CASPER_RUUD
                 ],
-                'score': [(6, 4), (2, 6), (6, 2)]
+                'score': [(6, 4), (2, 6), (6, 2)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.25,
+                    CASPER_RUUD: 3.60
+                }
+            },
+
+            # 2018-07-24
+            {
+                'round': 32,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    GILLES_SIMON
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    THIAGO_MONTEIRO: 2.40,
+                    GILLES_SIMON: 1.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_MILLMAN,
+                    JAN_LENNARD_STRUFF
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    JOHN_MILLMAN: 2.00,
+                    JAN_LENNARD_STRUFF: 1.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_JARRY,
+                    PETER_GOJOWCZYK
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    NICOLAS_JARRY: 2.00,
+                    PETER_GOJOWCZYK: 1.80,
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PABLO_CUEVAS,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    PABLO_CUEVAS: 1.74,
+                    MARTON_FUCSOVICS: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(6, 3), (1, 6), (6, 4)],
+                'odds': {
+                    ALJAZ_BEDENE: 1.32,
+                    HENRI_LAAKSONEN: 3.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 3), (4, 6), (7, 6)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.85,
+                    DUSAN_LAJOVIC: 1.83
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICHARD_GASQUET,
+                    BENOIT_PAIRE
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    RICHARD_GASQUET: 1.69,
+                    BENOIT_PAIRE: 2.10,
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 4), (3, 6), (6, 4)],
+                'odds': {
+                    GAEL_MONFILS: 1.77,
+                    MARCO_CECCHINATO: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    PHILIPP_KOHLSCHREIBER
+                ],
+                'score': [(7, 5), (1, 6), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 3.80,
+                    PHILIPP_KOHLSCHREIBER: 3.75
+                }
             },
             {
                 'round': 32,
@@ -299,17 +345,25 @@ DATA_2018_07 = [
                     DOMINIC_THIEM,
                     CORENTIN_MOUTET
                 ],
-                'score': [(6, 4), (6, 2)]
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    DOMINIC_THIEM: 1.11,
+                    CORENTIN_MOUTET: 5.50
+                }
             },
 
-            #
+            # 2018-07-25
             {
                 'round': 16,
                 'players': [
                     LEONARDO_MAYER,
                     GAEL_MONFILS
                 ],
-                'score': [(6, 1), (7, 5)]
+                'score': [(6, 1), (7, 5)],
+                'odds': {
+                    LEONARDO_MAYER: 2.30,
+                    GAEL_MONFILS: 1.61,
+                }
             },
             {
                 'round': 16,
@@ -317,15 +371,11 @@ DATA_2018_07 = [
                     JOZEF_KOVALIK,
                     RUDOLF_MOLLEKER
                 ],
-                'score': [(6, 4), (6, 0)]
-            },
-            {
-                'round': 16,
-                'players': [
-                    NIKOLOZ_BASILASHVILI,
-                    PABLO_CUEVAS
-                ],
-                'score': [(7, 6), (6, 4)]
+                'score': [(6, 4), (6, 0)],
+                'odds': {
+                    JOZEF_KOVALIK: 1.35,
+                    RUDOLF_MOLLEKER: 3.10
+                }
             },
             {
                 'round': 16,
@@ -333,7 +383,37 @@ DATA_2018_07 = [
                     THIAGO_MONTEIRO,
                     FERNANDO_VERDASCO
                 ],
-                'score': [(3, 6), (6, 2), (7, 5)]
+                'score': [(3, 6), (6, 2), (7, 5)],
+                'odds': {
+                    THIAGO_MONTEIRO: 3.10,
+                    FERNANDO_VERDASCO: 1.31
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    DANIEL_MASUR
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.15,
+                    DANIEL_MASUR: 5.00
+                }
+            },
+
+            # 2018-07-26
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    PABLO_CUEVAS
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 3.10,
+                    PABLO_CUEVAS: 1.36
+                }
             },
             {
                 'round': 16,
@@ -342,7 +422,11 @@ DATA_2018_07 = [
                     RICHARD_GASQUET
                 ],
                 'score': [],
-                'retired': True
+                'retired': True,
+                'odds': {
+                    NICOLAS_JARRY: 2.70,
+                    RICHARD_GASQUET: 1.45
+                }
             },
             {
                 'round': 16,
@@ -351,15 +435,11 @@ DATA_2018_07 = [
                     ALJAZ_BEDENE
                 ],
                 'score': [(6, 2), (4, 0)],
-                'retired': True
-            },
-            {
-                'round': 16,
-                'players': [
-                    DIEGO_SCHWARTZMAN,
-                    DANIEL_MASUR
-                ],
-                'score': [(6, 2), (6, 2)]
+                'retired': True,
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.65,
+                    ALJAZ_BEDENE: 2.20
+                }
             },
             {
                 'round': 16,
@@ -367,17 +447,25 @@ DATA_2018_07 = [
                     DOMINIC_THIEM,
                     JOHN_MILLMAN
                 ],
-                'score': [(6, 2), (6, 2)]
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    DOMINIC_THIEM: 1.16,
+                    JOHN_MILLMAN: 5.25
+                }
             },
 
-            #
+            # 2018-07-27
             {
                 'round': 8,
                 'players': [
                     JOZEF_KOVALIK,
                     THIAGO_MONTEIRO
                 ],
-                'score': [(3, 6), (6, 3), (6, 2)]
+                'score': [(3, 6), (6, 3), (6, 2)],
+                'odds': {
+                    JOZEF_KOVALIK: 1.50,
+                    THIAGO_MONTEIRO: 2.55
+                }
             },
             {
                 'round': 8,
@@ -385,7 +473,11 @@ DATA_2018_07 = [
                     NIKOLOZ_BASILASHVILI,
                     PABLO_CARRENO_BUSTA
                 ],
-                'score': [(7, 6), (6, 4)]
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 3.15,
+                    PABLO_CARRENO_BUSTA: 1.36
+                }
             },
             {
                 'round': 8,
@@ -393,7 +485,11 @@ DATA_2018_07 = [
                     LEONARDO_MAYER,
                     DIEGO_SCHWARTZMAN
                 ],
-                'score': [(6, 3), (4, 6), (6, 3)]
+                'score': [(6, 3), (4, 6), (6, 3)],
+                'odds': {
+                    LEONARDO_MAYER: 2.20,
+                    DIEGO_SCHWARTZMAN: 1.65
+                }
             },
             {
                 'round': 8,
@@ -401,17 +497,25 @@ DATA_2018_07 = [
                     NICOLAS_JARRY,
                     DOMINIC_THIEM
                 ],
-                'score': [(7, 6), (7, 6)]
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    NICOLAS_JARRY: 6.00,
+                    DOMINIC_THIEM: 1.12
+                }
             },
 
-            #
+            # 2018-07-28
             {
                 'round': 4,
                 'players': [
                     LEONARDO_MAYER,
                     JOZEF_KOVALIK
                 ],
-                'score': [(6, 7), (6, 4), (7, 6)]
+                'score': [(6, 7), (6, 4), (7, 6)],
+                'odds': {
+                    LEONARDO_MAYER: 1.54,
+                    JOZEF_KOVALIK: 2.65
+                }
             },
             {
                 'round': 4,
@@ -419,17 +523,25 @@ DATA_2018_07 = [
                     NIKOLOZ_BASILASHVILI,
                     NICOLAS_JARRY
                 ],
-                'score': [(7, 6), (7, 6)]
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.20,
+                    NICOLAS_JARRY: 1.67
+                }
             },
 
-            #
+            # 2018-07-29
             {
                 'round': 2,
                 'players': [
                     NIKOLOZ_BASILASHVILI,
                     LEONARDO_MAYER
                 ],
-                'score': [(6, 4), (0, 6), (7, 5)]
+                'score': [(6, 4), (0, 6), (7, 5)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.55,
+                    LEONARDO_MAYER: 1.50
+                }
             }
         ]
     },
