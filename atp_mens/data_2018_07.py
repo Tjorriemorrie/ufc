@@ -4,6 +4,496 @@ from location import *
 
 DATA_2018_07 = [
     {
+        'location': UMAG,
+        'date': '2018-07-22',
+        'matches': [
+
+            # 2018-07-15
+            {
+                'round': 512,
+                'players': [
+                    KENNY_DE_SCHEPPER,
+                    ZSOMBOR_PIROS
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    KENNY_DE_SCHEPPER: 1.74,
+                    ZSOMBOR_PIROS: 1.90
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ANDREJ_MARTIN,
+                    ROBERTO_QUIROZ
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    ANDREJ_MARTIN: 1.40,
+                    ROBERTO_QUIROZ: 2.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    PEDJA_KRSTIN,
+                    ENRIQUE_LOPEZ_PEREZ
+                ],
+                'score': [(3, 1)],
+                'retired': True,
+                'odds': {
+                    PEDJA_KRSTIN: 1.95,
+                    ENRIQUE_LOPEZ_PEREZ: 1.67
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    FACUNDO_BAGNIS
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    MARCO_TRUNGELLITI: 1.91,
+                    FACUNDO_BAGNIS: 1.70
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEFANO_TRAVAGLIA,
+                    GIAN_MARCO_MORONI
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    STEFANO_TRAVAGLIA: 1.69,
+                    GIAN_MARCO_MORONI: 2.00
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEY_VATUTIN,
+                    NIK_RAZBORSEK
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    ALEXEY_VATUTIN: 1.16,
+                    NIK_RAZBORSEK: 4.35
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ROGERIO_DUTRA_SILVA,
+                    ADMIR_KALENDER
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    ROGERIO_DUTRA_SILVA: 1.01,
+                    ADMIR_KALENDER: 9.60
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARTIN_KLIZAN,
+                    DANILO_PETROVIC
+                ],
+                'score': [(2, 6), (7, 6), (6, 4)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.20,
+                    DANILO_PETROVIC: 4.00
+                }
+            },
+
+            # 2018-07-16
+            {
+                'round': 256,
+                'players': [
+                    STEFANO_TRAVAGLIA,
+                    PEDJA_KRSTIN
+                ],
+                'score': [(1, 6), (6, 3), (6, 2)],
+                'odds': {
+                    STEFANO_TRAVAGLIA: 1.33,
+                    PEDJA_KRSTIN: 3.00
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(3, 2)],
+                'retired': True,
+                'odds': {
+                    MARCO_TRUNGELLITI: 1.63,
+                    ALEXEY_VATUTIN: 2.10
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ROGERIO_DUTRA_SILVA,
+                    ANDREJ_MARTIN
+                ],
+                'score': [(6, 2), (5, 7), (6, 2)],
+                'odds': {
+                    ROGERIO_DUTRA_SILVA: 1.74,
+                    ANDREJ_MARTIN: 2.00
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MARTIN_KLIZAN,
+                    KENNY_DE_SCHEPPER
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.26,
+                    KENNY_DE_SCHEPPER: 2.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_PELLA,
+                    TARO_DANIEL
+                ],
+                'score': [(1, 6), (6, 3), (6, 3)],
+                'odds': {
+                    GUIDO_PELLA: 1.45,
+                    TARO_DANIEL: 2.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LASLO_DJERE,
+                    PABLO_CUEVAS
+                ],
+                'score': [(6, 4), (1, 6), (6, 3)],
+                'odds': {
+                    LASLO_DJERE: 2.40,
+                    PABLO_CUEVAS: 1.53
+                }
+            },
+
+            # 2018-07-17
+            {
+                'round': 32,
+                'players': [
+                    JIRI_VESELY,
+                    STEFANO_TRAVAGLIA
+                ],
+                'score': [(6, 3), (3, 6), (6, 2)],
+                'odds': {
+                    JIRI_VESELY: 1.50,
+                    STEFANO_TRAVAGLIA: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    FRANKO_SKUGOR
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MARCO_TRUNGELLITI: 1.40,
+                    FRANKO_SKUGOR: 2.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.32,
+                    NIKOLOZ_BASILASHVILI: 3.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTIN_KLIZAN,
+                    NICOLAS_JARRY
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    MARTIN_KLIZAN: 1.85,
+                    NICOLAS_JARRY: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    EVGENY_DONSKOY,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    EVGENY_DONSKOY: 2.30,
+                    PAOLO_LORENZI: 1.60
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MAXIMILIAN_MARTERER,
+                    NINO_SERDARUSIC
+                ],
+                'score': [(3, 6), (7, 5), (6, 3)],
+                'odds': {
+                    MAXIMILIAN_MARTERER: 1.25,
+                    NINO_SERDARUSIC: 3.75
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    BENOIT_PAIRE
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.90,
+                    BENOIT_PAIRE: 1.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    JOAO_SOUSA
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    ALJAZ_BEDENE: 1.74,
+                    JOAO_SOUSA: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBIN_HAASE,
+                    ROGERIO_DUTRA_SILVA
+                ],
+                'score': [(4, 6), (7, 5), (6, 3)],
+                'odds': {
+                    ROBIN_HAASE: 1.74,
+                    ROGERIO_DUTRA_SILVA: 2.00
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    ANDREJ_MARTIN
+                ],
+                'score': [(6, 4), (6, 3)]
+                # no odds
+            },
+
+            # 2018-07-18
+            {
+                'round': 16,
+                'players': [
+                    GUIDO_PELLA,
+                    ALJAZ_BEDENE
+                ],
+                'score': [(5, 7), (6, 4), (6, 4)],
+                'odds': {
+                    GUIDO_PELLA: 1.65,
+                    ALJAZ_BEDENE: 2.20
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    LASLO_DJERE,
+                    MAXIMILIAN_MARTERER
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    LASLO_DJERE: 2.05,
+                    MAXIMILIAN_MARTERER: 1.69
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    ALBERT_RAMOS_VINOLAS
+                ],
+                'score': [(6, 3), (1, 6), (6, 0)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.50,
+                    ALBERT_RAMOS_VINOLAS: 2.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCO_CECCHINATO,
+                    JIRI_VESELY
+                ],
+                'score': [(2, 6), (7, 5), (7, 5)],
+                'odds': {
+                    MARCO_CECCHINATO: 1.74,
+                    JIRI_VESELY: 2.05
+                }
+            },
+
+            # 2018-07-19
+            {
+                'round': 16,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    MARTON_FUCSOVICS
+                ],
+                'score': [(5, 7), (6, 4), (6, 2)],
+                'odds': {
+                    MARCO_TRUNGELLITI: 2.95,
+                    MARTON_FUCSOVICS: 1.36
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ROBIN_HAASE,
+                    MARTIN_KLIZAN
+                ],
+                'score': [(3, 6), (6, 4), (6, 3)],
+                'odds': {
+                    ROBIN_HAASE: 2.10,
+                    MARTIN_KLIZAN: 1.67
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ANDREY_RUBLEV,
+                    FELIX_AUGER_ALIASSIME
+                ],
+                'score': [(6, 4), (6, 7), (6, 3)],
+                'odds': {
+                    ANDREY_RUBLEV: 1.77,
+                    FELIX_AUGER_ALIASSIME: 1.83
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    EVGENY_DONSKOY,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(7, 6), (3, 6), (6, 4)],
+                'odds': {
+                    EVGENY_DONSKOY: 3.40,
+                    DAMIR_DZUMHUR: 1.25
+                }
+            },
+
+            # 2018-07-20
+            {
+                'round': 8,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    EVGENY_DONSKOY
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    MARCO_TRUNGELLITI: 1.60,
+                    EVGENY_DONSKOY: 2.30
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    GUIDO_PELLA,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    GUIDO_PELLA: 1.90,
+                    DUSAN_LAJOVIC: 1.71
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROBIN_HAASE,
+                    ANDREY_RUBLEV
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    ROBIN_HAASE: 1.80,
+                    ANDREY_RUBLEV: 1.93
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARCO_CECCHINATO,
+                    LASLO_DJERE
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    MARCO_CECCHINATO: 1.59,
+                    LASLO_DJERE: 2.30
+                }
+            },
+
+            # 2018-07-21
+            {
+                'round': 4,
+                'players': [
+                    GUIDO_PELLA,
+                    ROBIN_HAASE,
+                ],
+                'score': [(6, 3), (1, 6), (6, 2)],
+                'odds': {
+                    GUIDO_PELLA: 1.67,
+                    ROBIN_HAASE: 2.10
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    MARCO_CECCHINATO,
+                    MARCO_TRUNGELLITI
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    MARCO_CECCHINATO: 1.36,
+                    MARCO_TRUNGELLITI: 3.10
+                }
+            },
+
+            # 2018-07-22
+            {
+                'round': 2,
+                'players': [
+                    MARCO_CECCHINATO,
+                    GUIDO_PELLA
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    MARCO_CECCHINATO: 1.74,
+                    GUIDO_PELLA: 2.05
+                }
+            }
+        ]
+    },
+
+    {
         'location': HAMBURG,
         'date': '2018-07-29',
         'matches': [
