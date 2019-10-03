@@ -4,6 +4,986 @@ from location import *
 
 DATA_2018_07 = [
     {
+        'location': NEWPORT,
+        'date': '2018-07-22',
+        'matches': [
+
+            # 2018-07-15
+            {
+                'round': 512,
+                'players': [
+                    ALEX_BOLT,
+                    FRANK_DANCEVIC
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    ALEX_BOLT: 1.49,
+                    FRANK_DANCEVIC: 2.40
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JC_ARAGONE,
+                    EVAN_KING
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    JC_ARAGONE: 1.87,
+                    EVAN_KING: 1.96
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    VICTOR_ESTRELLA_BURGOS,
+                    DOMINIK_KOEPFER
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    VICTOR_ESTRELLA_BURGOS: 3.94,
+                    DOMINIK_KOEPFER: 1.27
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BERNARD_TOMIC,
+                    AUSTIN_KRAJICEK
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    BERNARD_TOMIC: 1.15,
+                    AUSTIN_KRAJICEK: 5.92
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEX_RYBAKOV,
+                    MOHAMED_SAFWAT
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    ALEX_RYBAKOV: 2.36,
+                    MOHAMED_SAFWAT: 1.63
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALESSANDRO_BEGA,
+                    PRAJNESH_GUNNESWARAN
+                ],
+                'score': [(6, 4), (5, 7), (6, 4)],
+                'odds': {
+                    ALESSANDRO_BEGA: 3.98,
+                    PRAJNESH_GUNNESWARAN: 1.27
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    WILLIAM_BLUMBERG,
+                ],
+                'score': [(5, 7), (7, 5), (6, 2)],
+                'odds': {
+                    MATTHIAS_BACHINGER: 1.25,
+                    WILLIAM_BLUMBERG: 4.21
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JOHN_PATRICK_SMITH,
+                    MARCELO_AREVALO
+                ],
+                'score': [(6, 1), (6, 7), (7, 5)],
+                'odds': {
+                    JOHN_PATRICK_SMITH: 1.21,
+                    MARCELO_AREVALO: 4.67
+                }
+            },
+
+            # 2018-07-16
+            {
+                'round': 256,
+                'players': [
+                    ALEX_BOLT,
+                    ALEX_RYBAKOV
+                ],
+                'score': [(6, 3), (3, 6), (6, 3)],
+                'odds': {
+                    ALEX_BOLT: 1.30,
+                    ALEX_RYBAKOV: 3.67
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    VICTOR_ESTRELLA_BURGOS,
+                    JOHN_PATRICK_SMITH
+                ],
+                'score': [(3, 6), (7, 5), (7, 5)],
+                'odds': {
+                    VICTOR_ESTRELLA_BURGOS: 4.60,
+                    JOHN_PATRICK_SMITH: 1.22
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    BERNARD_TOMIC,
+                    ALESSANDRO_BEGA
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    BERNARD_TOMIC: 1.09,
+                    ALESSANDRO_BEGA: 8.27
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JC_ARAGONE,
+                    MATTHIAS_BACHINGER
+                ],
+                'score': [(7, 6), (6, 7), (6, 0)],
+                'odds': {
+                    JC_ARAGONE: 2.73,
+                    MATTHIAS_BACHINGER: 1.49
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JORDAN_THOMPSON,
+                    JAMES_DUCKWORTH
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    JORDAN_THOMPSON: 1.61,
+                    JAMES_DUCKWORTH: 2.44
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    TIM_SMYCZEK,
+                    BJORN_FRATANGELO
+                ],
+                'score': [(6, 3), (2, 6), (6, 4)],
+                'odds': {
+                    TIM_SMYCZEK: 1.75,
+                    BJORN_FRATANGELO: 2.18
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    VASEK_POSPISIL,
+                    DONALD_YOUNG
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    VASEK_POSPISIL: 1.64,
+                    DONALD_YOUNG: 2.38
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_KUDLA,
+                    RUBEN_BEMELMANS
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    DENIS_KUDLA: 1.50,
+                    RUBEN_BEMELMANS: 2.75
+                }
+            },
+
+            # 2018-07-17
+            {
+                'round': 32,
+                'players': [
+                    DUDI_SELA,
+                    BERNARD_TOMIC
+                ],
+                'score': [(6, 3), (1, 6), (6, 2)],
+                'odds': {
+                    DUDI_SELA: 3.84,
+                    BERNARD_TOMIC: 1.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    VICTOR_ESTRELLA_BURGOS
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 1.53,
+                    VICTOR_ESTRELLA_BURGOS: 2.66
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JASON_JUNG,
+                    SERGIY_STAKHOVSKY
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    JASON_JUNG: 3.06,
+                    SERGIY_STAKHOVSKY: 1.42
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CHRISTIAN_HARRISON,
+                    ALEX_BOLT
+                ],
+                'score': [(6, 3), (4, 6), (7, 5)],
+                'odds': {
+                    CHRISTIAN_HARRISON: 2.23,
+                    ALEX_BOLT: 1.72
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    JC_ARAGONE
+                ],
+                'score': [(7, 6), (6, 0)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 1.47,
+                    JC_ARAGONE: 2.89
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    IVO_KARLOVIC,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(6, 7), (7, 6), (7, 5)],
+                'odds': {
+                    IVO_KARLOVIC: 2.11,
+                    ALEX_DE_MINAUR: 1.80
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GILLES_MULLER,
+                    MARCOS_BAGHDATIS
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    GILLES_MULLER: 2.08,
+                    MARCOS_BAGHDATIS: 1.83
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICOLAS_MAHUT,
+                    RYAN_HARRISON
+                ],
+                'score': [(6, 2), (2, 0)],
+                'retired': True,
+                'odds': {
+                    NICOLAS_MAHUT: 2.02,
+                    RYAN_HARRISON: 1.87
+                }
+            },
+
+            # 2018-07-18
+            {
+                'round': 16,
+                'players': [
+                    DUDI_SELA,
+                    IVO_KARLOVIC
+                ],
+                'score': [(7, 6), (6, 7), (6, 2)],
+                'odds': {
+                    DUDI_SELA: 3.23,
+                    IVO_KARLOVIC: 1.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JASON_JUNG,
+                    NICOLAS_MAHUT
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JASON_JUNG: 3.22,
+                    NICOLAS_MAHUT: 1.40,
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    DENIS_KUDLA
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 4.81,
+                    DENIS_KUDLA: 1.22
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    GILLES_MULLER
+                ],
+                'score': [(7, 5), (7, 6)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 2.70,
+                    GILLES_MULLER: 1.53
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    TIM_SMYCZEK,
+                    MATTHEW_EBDEN
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    TIM_SMYCZEK: 3.97,
+                    MATTHEW_EBDEN: 1.29
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEVE_JOHNSON,
+                    CHRISTIAN_HARRISON
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    STEVE_JOHNSON: 1.29,
+                    CHRISTIAN_HARRISON: 4.01
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    VASEK_POSPISIL,
+                    MISCHA_ZVEREV
+                ],
+                'score': [(4, 6), (6, 3), (7, 5)],
+                'odds': {
+                    VASEK_POSPISIL: 2.70,
+                    MISCHA_ZVEREV: 1.53
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    JORDAN_THOMPSON
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.37,
+                    JORDAN_THOMPSON: 3.39
+                }
+            },
+
+            # 2018-07-19
+            {
+                'round': 8,
+                'players': [
+                    TIM_SMYCZEK,
+                    JASON_JUNG
+                ],
+                'score': [(6, 1), (5, 7), (6, 4)],
+                'odds': {
+                    TIM_SMYCZEK: 1.95,
+                    JASON_JUNG: 1.97
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    VASEK_POSPISIL
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 2.83,
+                    VASEK_POSPISIL: 1.50
+                }
+            },
+
+            # 2018-07-20
+            {
+                'round': 8,
+                'players': [
+                    STEVE_JOHNSON,
+                    DUDI_SELA
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    STEVE_JOHNSON: 1.41,
+                    DUDI_SELA: 3.21
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARCEL_GRANOLLERS,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    MARCEL_GRANOLLERS: 2.99,
+                    ADRIAN_MANNARINO: 1.46
+                }
+            },
+
+            # 2018-07-21
+            {
+                'round': 4,
+                'players': [
+                    RAMKUMAR_RAMANATHAN,
+                    TIM_SMYCZEK,
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    RAMKUMAR_RAMANATHAN: 2.07,
+                    TIM_SMYCZEK: 1.87
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    STEVE_JOHNSON,
+                    MARCEL_GRANOLLERS
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    STEVE_JOHNSON: 1.42,
+                    MARCEL_GRANOLLERS: 3.17
+                }
+            },
+
+            # 2018-07-22
+            {
+                'round': 2,
+                'players': [
+                    STEVE_JOHNSON,
+                    RAMKUMAR_RAMANATHAN
+                ],
+                'score': [(7, 5), (3, 6), (6, 2)],
+                'odds': {
+                    STEVE_JOHNSON: 1.26,
+                    RAMKUMAR_RAMANATHAN: 4.43
+                }
+            }
+        ]
+    },
+
+    {
+        'location': BASTAD,
+        'date': '2018-07-22',
+        'matches': [
+
+            # 2018-07-15
+            {
+                'round': 512,
+                'players': [
+                    ZDENEK_KOLAR,
+                    DANIEL_MUNOZ_DE_LA_NAVA,
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    ZDENEK_KOLAR: 1.36,
+                    DANIEL_MUNOZ_DE_LA_NAVA: 2.85
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    VIKTOR_GALOVIC,
+                    NICOLAS_ALMAGRO,
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    VIKTOR_GALOVIC: 1.61,
+                    NICOLAS_ALMAGRO: 2.10
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    MILJAN_ZEKIC
+                ],
+                'score': [(6, 4), (6, 0)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.08,
+                    MILJAN_ZEKIC: 6.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CHRISTIAN_GARIN,
+                    FILIP_HORANSKY
+                ],
+                'score': [(6, 3), (5, 7), (6, 4)]
+                # no odds
+            },
+            {
+                'round': 512,
+                'players': [
+                    SIMONE_BOLELLI,
+                    PEDRO_MARTINEZ
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    SIMONE_BOLELLI: 1.43,
+                    PEDRO_MARTINEZ: 2.40
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CALVIN_HEMERY,
+                    RUDOLF_MOLLEKER
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    CALVIN_HEMERY: 1.74,
+                    RUDOLF_MOLLEKER: 1.90
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    SANTIAGO_GIRALDO
+                ],
+                'score': [(4, 6), (6, 2), (6, 4)],
+                'odds': {
+                    HENRI_LAAKSONEN: 1.75,
+                    SANTIAGO_GIRALDO: 1.80
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CORENTIN_MOUTET,
+                    MARKUS_ERIKSSON
+                ],
+                'score': [(0, 6), (6, 4), (6, 2)],
+                'odds': {
+                    CORENTIN_MOUTET: 1.09,
+                    MARKUS_ERIKSSON: 5.00
+                }
+            },
+
+            # 2018-07-16
+            {
+                'round': 256,
+                'players': [
+                    SIMONE_BOLELLI,
+                    VIKTOR_GALOVIC,
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    SIMONE_BOLELLI: 1.22,
+                    VIKTOR_GALOVIC: 3.64
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ZDENEK_KOLAR,
+                    CALVIN_HEMERY
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    ZDENEK_KOLAR: 1.95,
+                    CALVIN_HEMERY: 1.74
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.33,
+                    HENRI_LAAKSONEN: 2.90
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    CORENTIN_MOUTET,
+                    CHRISTIAN_GARIN
+                ],
+                'score': [(6, 2), (4, 6), (6, 3)],
+                'odds': {
+                    CORENTIN_MOUTET: 2.55,
+                    CHRISTIAN_GARIN: 1.41
+                }
+            },
+
+            # 2018-07-17
+            {
+                'round': 32,
+                'players': [
+                    MIKAEL_YMER,
+                    DENIS_ISTOMIN,
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MIKAEL_YMER: 1.75,
+                    DENIS_ISTOMIN: 1.95
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PEDRO_SOUSA,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    PEDRO_SOUSA: 1.74,
+                    RADU_ALBOT: 2.05
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    ELIAS_YMER
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    THIAGO_MONTEIRO: 2.20,
+                    ELIAS_YMER: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GERALD_MELZER,
+                    CORENTIN_MOUTET
+                ],
+                'score': [(6, 1), (6, 1)],
+                'odds': {
+                    GERALD_MELZER: 1.90,
+                    CORENTIN_MOUTET: 1.77
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    HORACIO_ZEBALLOS,
+                ],
+                'score': [(6, 7), (6, 2), (6, 2)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.48,
+                    HORACIO_ZEBALLOS: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SIMONE_BOLELLI,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(4, 6), (6, 3), (6, 4)],
+                'odds': {
+                    SIMONE_BOLELLI: 1.49,
+                    ROBERTO_CARBALLES_BAENA: 2.55
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_MILLMAN,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(6, 0), (6, 2)],
+                'odds': {
+                    JOHN_MILLMAN: 1.67,
+                    GUIDO_ANDREOZZI: 2.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAVID_FERRER,
+                    ZDENEK_KOLAR
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    DAVID_FERRER: 1.33,
+                    ZDENEK_KOLAR: 3.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    LORENZO_SONEGO
+                ],
+                'score': [(6, 4), (3, 6), (6, 1)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.37,
+                    LORENZO_SONEGO: 2.90
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CASPER_RUUD,
+                    JAUME_MUNAR
+                ],
+                'score': [(6, 7), (6, 4), (6, 0)],
+                'odds': {
+                    CASPER_RUUD: 2.10,
+                    JAUME_MUNAR: 1.69
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    JUAN_IGNACIO_LONDERO
+                ],
+                'score': [(6, 3), (4, 6), (7, 5)],
+                'odds': {
+                    HENRI_LAAKSONEN: 2.90,
+                    JUAN_IGNACIO_LONDERO: 1.33
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    LEONARDO_MAYER
+                ],
+                'score': [(3, 6), (6, 3), (6, 4)],
+                'odds': {
+                    MATTEO_BERRETTINI: 2.10,
+                    LEONARDO_MAYER: 1.69
+                }
+            },
+
+            # 2018-07-18
+            {
+                'round': 16,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    HENRI_LAAKSONEN: 3.10,
+                    MATTEO_BERRETTINI: 1.33
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    PEDRO_SOUSA
+                ],
+                'score': [(6, 3), (6, 2)],
+                'odds': {
+                    FERNANDO_VERDASCO: 1.30,
+                    PEDRO_SOUSA: 3.40
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    THIAGO_MONTEIRO
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.40,
+                    THIAGO_MONTEIRO: 2.90
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    SIMONE_BOLELLI,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    SIMONE_BOLELLI: 3.40,
+                    DIEGO_SCHWARTZMAN: 1.30
+                }
+            },
+
+            # 2018-07-19
+            {
+                'round': 16,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    JOHN_MILLMAN
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.90,
+                    JOHN_MILLMAN: 1.85
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    CASPER_RUUD,
+                    DAVID_FERRER
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    CASPER_RUUD: 2.25,
+                    DAVID_FERRER: 1.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICHARD_GASQUET,
+                    GERALD_MELZER
+                ],
+                'score': [(1, 6), (6, 3), (6, 1)],
+                'odds': {
+                    RICHARD_GASQUET: 1.25,
+                    GERALD_MELZER: 3.75
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FABIO_FOGNINI,
+                    MIKAEL_YMER
+                ],
+                'score': [(1, 6), (6, 4), (6, 2)],
+                'odds': {
+                    FABIO_FOGNINI: 1.20,
+                    MIKAEL_YMER: 4.50
+                }
+            },
+
+            # 2018-07-20
+            {
+                'round': 8,
+                'players': [
+                    HENRI_LAAKSONEN,
+                    SIMONE_BOLELLI
+                ],
+                'score': [(3, 6), (6, 2), (6, 4)],
+                'odds': {
+                    HENRI_LAAKSONEN: 3.10,
+                    SIMONE_BOLELLI: 1.36
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    RICHARD_GASQUET,
+                    CASPER_RUUD
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    RICHARD_GASQUET: 1.45,
+                    CASPER_RUUD: 2.55
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FABIO_FOGNINI,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    FABIO_FOGNINI: 1.77,
+                    FEDERICO_DELBONIS: 2.00
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    PABLO_CARRENO_BUSTA
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    FERNANDO_VERDASCO: 2.00,
+                    PABLO_CARRENO_BUSTA: 1.80
+                }
+            },
+
+            # 2018-07-21
+            {
+                'round': 4,
+                'players': [
+                    RICHARD_GASQUET,
+                    HENRI_LAAKSONEN
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    RICHARD_GASQUET: 1.18,
+                    HENRI_LAAKSONEN: 4.50
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    FABIO_FOGNINI,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 1), (4, 6), (7, 5)],
+                'odds': {
+                    FABIO_FOGNINI: 1.90,
+                    FERNANDO_VERDASCO: 1.80
+                }
+            },
+
+            # 2018-07-22
+            {
+                'round': 2,
+                'players': [
+                    FABIO_FOGNINI,
+                    RICHARD_GASQUET
+                ],
+                'score': [(6, 3), (3, 6), (6, 1)],
+                'odds': {
+                    FABIO_FOGNINI: 1.83,
+                    RICHARD_GASQUET: 1.95
+                }
+            }
+        ]
+    },
+
+    {
         'location': UMAG,
         'date': '2018-07-22',
         'matches': [

@@ -155,6 +155,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ALESSANDRO_BEGA: {
+        'born_at': (1991, 1, 11),
+        'height': 173,
+        'forehand': RH,
+        'backhand': THB,
+    },
     ALESSANDRO_GIANNESSI: {
         'born_at': (1990, 5, 30),
         'height': 185,
@@ -172,6 +178,12 @@ META = {
         'height': 183,
         'forehand': RH,
         'backhand': THB,
+    },
+    ALEX_RYBAKOV: {
+        'born_at': (1997, 1, 27),
+        'height': 185,
+        'forehand': LH,
+        'backhand': OHB,
     },
     ALEXANDAR_LAZAROV: {
         'born_at': (1997, 11, 6),
@@ -608,6 +620,12 @@ META = {
         'born_at': (1994, 11, 6),
         'height': 183,
         'forehand': RH,
+        'backhand': THB,
+    },
+    DANIEL_MUNOZ_DE_LA_NAVA: {
+        'born_at': (1982, 1, 29),
+        'height': 175,
+        'forehand': LH,
         'backhand': THB,
     },
     DANIEL_NGUYEN: {
@@ -2899,6 +2917,12 @@ META = {
     YUSUKE_TAKAHASHI: {
         'born_at': (1997, 10, 17),
         'height': 170,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    WILLIAM_BLUMBERG: {
+        'born_at': (1998, 1, 26),
+        'height': 188,
         'forehand': RH,
         'backhand': THB,
     },

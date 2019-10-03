@@ -56,6 +56,36 @@ def main(hyper_params, train=0):
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA
 
+    # bet_drs_a, bet_drs_b, bet_tsq_a, bet_tsq_b, bet_setr_a, bet_setr_b = hyper_params
+    bet_drs_a = -5.1413662942627925
+    bet_drs_b = -7.840216341033432
+    bet_tsq_a = -2.110830663466146
+    bet_tsq_b = -5.843029667451823
+    bet_setr_a = -1.9716595118972065
+    bet_setr_b = -1.6939977836763023
+
+    # bet_wnlw_a, bet_wnlw_b, bet_spd_a, bet_spd_b, bet_rnd_a, bet_rnd_b = hyper_params
+    bet_wnlw_a = 1.6599012384342207
+    bet_wnlw_b = -2.0818833872454774
+    bet_spd_a = -0.3769789156083402
+    bet_spd_b = -2.472521017277206
+    bet_rnd_a = 0.470606158268699
+    bet_rnd_b = -1.2391371735043586
+
+    # bet_tiew_a, bet_tiew_b, bet_setl_a, bet_setl_b, bet_upsl_a, bet_upsl_b = hyper_params
+    bet_tiew_a = 0.5281971218571574
+    bet_tiew_b = 0.9169708283968668
+    bet_setl_a = 1.6545391323998857
+    bet_setl_b = 0.7399323986958386
+    bet_upsl_a = 0.02454536760354606
+    bet_upsl_b = -1.9283849674243758
+
+    # bet_wnlr_a, bet_wnlr_b, bet_tier_a, bet_tier_b = hyper_params
+    bet_wnlr_a = -21.129754386785514
+    bet_wnlr_b = -89.7941380472866
+    bet_tier_a = -219.80056505937756
+    bet_tier_b = -0.9937113062805832
+
     # bet_ts_a, bet_ts_b, bet_gms_a, bet_gms_b, bet_upsr_a, bet_upsr_b = hyper_params
     bet_ts_a = -0.5051642768066291
     bet_ts_b = -8.155138737987599
@@ -88,48 +118,16 @@ def main(hyper_params, train=0):
     bet_setw_a = -6.483935892048788
     bet_setw_b = 21.054941722479356
 
-    # bet_sfcr_a, bet_sfcr_b, bet_tmi_a, bet_tmi_b, bet_setr_a, bet_setr_b = hyper_params
+    # bet_sfcr_a, bet_sfcr_b, bet_tmi_a, bet_tmi_b, 
     bet_sfcr_a = -7.636029245416821
     bet_sfcr_b = -10.357309664550113
     bet_tmi_a = 0.0185602359166098
     bet_tmi_b = -9.2067245919802
-    bet_setr_a = -11.404227889919909
-    bet_setr_b = -15.170879631150704
 
-    # bet_tsq_a, bet_tsq_b, bet_wnll_a, bet_wnll_b, bet_rnd_a, bet_rnd_b = hyper_params
-    bet_tsq_a = -3.4561181977601154
-    bet_tsq_b = -2.161704357562047
+    # bet_wnll_a, bet_wnll_b, 
     bet_wnll_a = 7.62270256059631
     bet_wnll_b = 9.22114838711729
-    bet_rnd_a = -12.324914655271265
-    bet_rnd_b = -16.26188890000413
 
-    # bet_tiew_a, bet_tiew_b, bet_wnlw_a, bet_wnlw_b, bet_drs_a, bet_drs_b = hyper_params
-    bet_tiew_a = -0.043822809492279194
-    bet_tiew_b = -2.974040446661618
-    bet_wnlw_a = -0.12860829387694073
-    bet_wnlw_b = -3.653148068801788
-    bet_drs_a = -1.3791884927166658
-    bet_drs_b = -0.735044975496238
-
-    # bet_spd_a, bet_spd_b, bet_upsl_a, bet_upsl_b, bet_tier_a, bet_tier_b = hyper_params
-    bet_spd_a = 4.859146281289833
-    bet_spd_b = -21.106237653455178
-    bet_upsl_a = -24.095354153941248
-    bet_upsl_b = -16.663939270652264
-    bet_tier_a = 75.91181869837527
-    bet_tier_b = 0.16520593704027123
-
-    # bet_wnlr_a, bet_wnlr_b, bet_setl_a, bet_setl_b, 
-    bet_wnlr_a = -1.630335080361462
-    bet_wnlr_b = -5.696590687193816
-    bet_setl_a = 1.293588266477004
-    bet_setl_b = 8.820762418431968
-
-    # bet_odds_a, bet_odds_b = hyper_params
-    bet_odds_a = 1.0092439445741725
-    bet_odds_b = -6.9550239619471075
-    
     # init
     start_date = None
     ratings = defaultdict(lambda: Rating())
@@ -330,13 +328,6 @@ def main(hyper_params, train=0):
             ###############################
             # bet scaling
             bet_multi = -4
-
-            # odds
-            if p1_odds < p2_odds:
-                p_odds = 1 / p1_odds - 1 / p2_odds
-            else:
-                p_odds = 1 / p2_odds - 1 / p1_odds
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_odds_a, bet_odds_b], p_odds, 'odds')
 
             # trueskill mu
             if p1_odds < p2_odds:
@@ -643,32 +634,12 @@ def run():
     train = 0
     
     names = [
-        # 78    70      25      1500
-        # 'odds_a', 'odds_b',          # 902      -     -     -     -
-
-        # 77    72      24      1500
-        # 'bet_wnlr_a', 'bet_wnlr_b',  # 794   4033  4049     -     -
-        # 'bet_setl_a', 'bet_setl_b',  # 823      -  1323  2333  2696
-
-        # 72    83      18      1800
-        # 'bet_spd_a', 'bet_spd_b',    # 908      9     -     -     -
-        # 'bet_upsl_a', 'bet_upsl_b',  # 922      7    11     -  2287
-        # 'bet_tier_a', 'bet_tier_b',  # 1087  1395  1396   981  1427
-
-        # 72    83      18      1800
-        # 'bet_tiew_a', 'bet_tiew_b',  # 644      -  4056     1
-        # 'bet_wnlw_a', 'bet_wnlw_b',  # 680      -     1     -     1
-        # 'bet_drs_a', 'bet_drs_b',    # 729     33     -     -  1435
-
         # 75    74      21      1800
-        # 'bet_tsq_a', 'bet_tsq_b',    # 887      -     -     -     -
         # 'bet_wnll_a', 'bet_wnll_b',  # 963      5     -  4074  2524
-        # 'bet_rnd_a', 'bet_rnd_b',    # 1134     -     -     -     -
 
         # 75    74      21      1800
         # 'bet_sfcr_a', 'bet_sfcr_b',  # 883      -     -    32     -
         # 'bet_tmi_a', 'bet_tmi_b',    # 962     31    59     -     -
-        # 'bet_setr_a', 'bet_setr_b',  # 1146    53  3989  3888     -
 
         # 78    68      23      1700
         # 'bet_upsw_a', 'bet_upsw_b',  # 864      -     -   313     -   472
@@ -690,11 +661,37 @@ def run():
         # SHOCKWAVE
 
         # 83    64      27      1700
-        'bet_ts_a', 'bet_ts_b',      # 893    790    99     1     1
-        'bet_gms_a', 'bet_gms_b',    # 917      -     -    17     -
-        'bet_upsr_a', 'bet_upsr_b',  # 971      4     -     -     -
+        # 'bet_ts_a', 'bet_ts_b',      # 893    790    99     1     1
+        # 'bet_gms_a', 'bet_gms_b',    # 917      -     -    17     -
+        # 'bet_upsr_a', 'bet_upsr_b',  # 971      4     -     -     -
+
+        # 79    54      29      1600
+        # 'bet_wnlr_a', 'bet_wnlr_b',  # 906   4049     -     -     -
+        # 'bet_tier_a', 'bet_tier_b',  # 1052  1396   981  1427  1033
+
+        # 80    57      28      1500
+        # 'bet_tiew_a', 'bet_tiew_b',  # 489      -  4056     1  2999
+        # 'bet_setl_a', 'bet_setl_b',  # 578   1323  2333  2696  1937
+        # 'bet_upsl_a', 'bet_upsl_b',  # 628     11     -  2287     -
+
+        # ^ SHOCKWAVE ^
+
+        # 76    73      21      1500
+        # 'bet_wnlw_a', 'bet_wnlw_b',  # 579      1     -     1  2440
+        # 'bet_spd_a', 'bet_spd_b',    # 693      -     -     -     -
+        # 'bet_rnd_a', 'bet_rnd_b',    # 806      -     -     -     -
+
+        # ^ SHOCKWAVE ^
+
+        # 75    73      21      1500
+        'bet_drs_a', 'bet_drs_b',    # 711      -     -  1435     -
+        'bet_tsq_a', 'bet_tsq_b',    # 790      -     -     -     -
+        'bet_setr_a', 'bet_setr_b',  # 920   3989  3888     -     -
+
+        # ^ SHOCKWAVE ^
+
     ]
-    tolx = 1950  # higher is slower
+    tolx = 2000  # higher is slower
     params = [0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
