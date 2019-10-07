@@ -80,6 +80,12 @@ META = {
         'forehand': LH,
         'backhand': THB,
     },
+    AIDAN_MCHUGH: {
+        'born_at': (2000, 7, 9),
+        'height': 178,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     ADRIAN_MENENDEZ_MACEIRAS: {
         'born_at': (1985, 10, 28),
         'height': 183,
@@ -205,6 +211,12 @@ META = {
     },
     ALEXANDER_VASILENKO: {
         'born_at': (1995, 2, 26),
+        'forehand': RH,
+        'backhand': THB,
+    },
+    ALEXANDER_WARD: {
+        'born_at': (1990, 4, 30),
+        'height': 185,
         'forehand': RH,
         'backhand': THB,
     },
@@ -340,6 +352,9 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ANTON_MATUSEVICH: {
+        'born_at': (2001, 5, 30),
+    },
     ARJUN_KADHE: {
         'born_at': (1994, 1, 7),
         'height': 185,
@@ -348,6 +363,12 @@ META = {
     },
     ARTEM_DUBRIVNYY: {
         'born_at': (1999, 1, 31),
+        'height': 183,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    ARTHUR_DE_GREEF: {
+        'born_at': (1992, 3, 27),
         'height': 183,
         'forehand': RH,
         'backhand': THB,
@@ -1021,6 +1042,9 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    GEORGE_LOFFHAGEN: {
+        'born_at': (2001, 4, 19),
+    },
     GERALD_MELZER: {
         'born_at': (1990, 7, 13),
         'height': 188,
@@ -1639,6 +1663,12 @@ META = {
         'born_at': (1994, 1, 4),
         'height': 183,
         'forehand': LH,
+        'backhand': THB,
+    },
+    LLOYD_GLASSPOOL: {
+        'born_at': (1993, 11, 19),
+        'height': 191,
+        'forehand': RH,
         'backhand': THB,
     },
     LLOYD_HARRIS: {
@@ -2783,6 +2813,11 @@ META = {
         'height': 183,
         'forehand': RH,
         'backhand': THB,
+    },
+    TSUNG_HUA_YANG: {
+        'born_at': (1991, 3, 29),
+        'height': 178,
+        'forehand': RH,
     },
     UGO_HUMBERT: {
         'born_at': (1998, 6, 26),

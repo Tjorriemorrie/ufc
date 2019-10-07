@@ -25,6 +25,14 @@ COLOURS = {
     'transparent',
 }
 
+TEMPERATURES = {
+    'cold/cool',
+    'hot/warm',
+    'humid',
+    'arid',
+    'room',
+}
+
 TEXTURES = {
     'glass',
     'feathery',
@@ -39,14 +47,6 @@ TEXTURES = {
     'wet',
     'smooth',
     'rough',
-}
-
-TEMPERATURES = {
-    'cold/cool',
-    'hot/warm',
-    'humid',
-    'arid',
-    'room',
 }
 
 SOUNDS = {

@@ -4,6 +4,40 @@ from location import *
 
 DATA_2018_07 = [
     {
+        'location': WIMBLEDON,
+        'date': '2018-07-15',
+        'matches': [
+
+            #
+            {
+                'round': 128,
+                'players': [
+                    HORACIO_ZEBALLOS,
+                    GUIDO_ANDREOZZI
+                ],
+                'score': [(4, 6), (7, 6), (6, 4), (6, 4)]
+            },
+            {
+                'round': 128,
+                'players': [
+                    JIRI_VESELY,
+                    FLORIAN_MAYER
+                ],
+                'score': [(7, 6), (6, 4), (4, 6), (6, 1)]
+            },
+            {
+                'round': 128,
+                'players': [
+                    BERNARD_TOMIC,
+                    HUBERT_HURKACZ
+                ],
+                'score': [(6, 4), (6, 2), (7, 6)]
+            }
+
+        ]
+    },
+
+    {
         'location': NEWPORT,
         'date': '2018-07-22',
         'matches': [
