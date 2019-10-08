@@ -5941,13 +5941,14 @@ DATA = [
                 }
             },
 
-            #
+            # 2019-07-07
             {
                 'round': 64,
                 'players': [
                     CAMERON_NORRIE,
                     GILLES_SIMON
                 ],
+                'score': [(7, 5), (6, 2)],
                 'odds': {
                     CAMERON_NORRIE: 1.85,
                     GILLES_SIMON: 1.95
@@ -5958,12 +5959,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    MARIN_CILIC,
                     ALBERT_RAMOS_VINOLAS,
+                    MARIN_CILIC,
                 ],
+                'score': [(6, 4), (6, 4)],
                 'odds': {
-                    MARIN_CILIC: 1.38,
                     ALBERT_RAMOS_VINOLAS: 3.10,
+                    MARIN_CILIC: 1.38,
                 },
                 'prediction': MARIN_CILIC,
                 'bet': 1,
@@ -5971,23 +5973,25 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    FRANCES_TIAFOE,
                     DENIS_SHAPOVALOV,
+                    FRANCES_TIAFOE,
                 ],
+                'score': [(6, 4), (6, 2)],
                 'odds': {
-                    FRANCES_TIAFOE: 2.60,
                     DENIS_SHAPOVALOV: 1.48,
+                    FRANCES_TIAFOE: 2.60,
                 },
             },
             {
                 'round': 64,
                 'players': [
-                    MARCO_CECCHINATO,
                     BENOIT_PAIRE,
+                    MARCO_CECCHINATO,
                 ],
+                'score': [(6, 2), (7, 5)],
                 'odds': {
-                    MARCO_CECCHINATO: 2.10,
                     BENOIT_PAIRE: 1.70,
+                    MARCO_CECCHINATO: 2.10,
                 },
             },
             {
@@ -5996,6 +6000,7 @@ DATA = [
                     FABIO_FOGNINI,
                     SAM_QUERREY,
                 ],
+                'score': [(6, 4), (6, 2)],
                 'odds': {
                     FABIO_FOGNINI: 1.95,
                     SAM_QUERREY: 1.85,
@@ -6007,6 +6012,7 @@ DATA = [
                     VASEK_POSPISIL,
                     DIEGO_SCHWARTZMAN,
                 ],
+                'score': [(7, 6), (6, 2)],
                 'odds': {
                     VASEK_POSPISIL: 3.00,
                     DIEGO_SCHWARTZMAN: 1.38,
@@ -6015,12 +6021,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    PABLO_CUEVAS,
                     CHRISTIAN_GARIN,
+                    PABLO_CUEVAS,
                 ],
+                'score': [(6, 1), (6, 4)],
                 'odds': {
-                    PABLO_CUEVAS: 1.75,
                     CHRISTIAN_GARIN: 2.05,
+                    PABLO_CUEVAS: 1.75,
                 },
                 'prediction': PABLO_CUEVAS,
                 'bet': 1,
@@ -6031,6 +6038,7 @@ DATA = [
                     JEREMY_CHARDY,
                     KYLE_EDMUND,
                 ],
+                'score': [(6, 4), (7, 6)],
                 'odds': {
                     JEREMY_CHARDY: 1.95,
                     KYLE_EDMUND: 1.85,
@@ -6042,6 +6050,7 @@ DATA = [
                     GAEL_MONFILS,
                     LORENZO_SONEGO,
                 ],
+                'score': [(7, 5), (6, 7), (6, 3)],
                 'odds': {
                     GAEL_MONFILS: 1.28,
                     LORENZO_SONEGO: 3.60,
@@ -6052,12 +6061,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    MIOMIR_KECMANOVIC,
                     MIKHAIL_KUKUSHKIN,
+                    MIOMIR_KECMANOVIC,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
-                    MIOMIR_KECMANOVIC: 1.85,
                     MIKHAIL_KUKUSHKIN: 1.95,
+                    MIOMIR_KECMANOVIC: 1.85,
                 },
             },
             {
@@ -6066,6 +6076,7 @@ DATA = [
                     ANDY_MURRAY,
                     JUAN_IGNACIO_LONDERO,
                 ],
+                'score': [(2, 6), (6, 2), (6, 3)],
                 'odds': {
                     ANDY_MURRAY: 1.30,
                     JUAN_IGNACIO_LONDERO: 3.40,
@@ -6076,14 +6087,134 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    ZE_ZHANG,
                     PABLO_CARRENO_BUSTA,
+                    ZE_ZHANG,
                 ],
+                'score': [(6, 3), (2, 6), (6, 4)],
                 'odds': {
-                    ZE_ZHANG: 7.50,
                     PABLO_CARRENO_BUSTA: 1.08,
+                    ZE_ZHANG: 7.50,
                 },
             },
+
+            #
+            {
+                'round': 64,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    JOHN_ISNER,
+                ],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.68,
+                    JOHN_ISNER: 2.15,
+                },
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ZHE_LI,
+                    LUCAS_POUILLE,
+                ],
+                'odds': {
+                    ZHE_LI: 6.50,
+                    LUCAS_POUILLE: 1.10,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    REILLY_OPELKA,
+                    DUSAN_LAJOVIC,
+                ],
+                'odds': {
+                    REILLY_OPELKA: 1.42,
+                    DUSAN_LAJOVIC: 2.80,
+                },
+                'prediction': REILLY_OPELKA,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ANDREY_RUBLEV,
+                    BORNA_CORIC,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 1.60,
+                    BORNA_CORIC: 2.30,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    JOHN_MILLMAN,
+                    GUIDO_PELLA,
+                ],
+                'odds': {
+                    JOHN_MILLMAN: 1.80,
+                    GUIDO_PELLA: 1.95,
+                },
+                'prediction': JOHN_MILLMAN,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    ALEXANDER_BUBLIK,
+                ],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.80,
+                    ALEXANDER_BUBLIK: 2.00,
+                },
+                'prediction': FELIX_AUGER_ALIASSIME,
+                'bet': 2,
+            },
+            {
+                'round': 64,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    BENOIT_PAIRE,
+                ],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 1.75,
+                    BENOIT_PAIRE: 2.05,
+                },
+                'prediction': NIKOLOZ_BASILASHVILI,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    JAN_LENNARD_STRUFF,
+                ],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.48,
+                    JAN_LENNARD_STRUFF: 2.60,
+                },
+                'prediction': MATTEO_BERRETTINI,
+                'bet': 1,
+            },
+            {
+                'round': 64,
+                'players': [
+                    GAEL_MONFILS,
+                    HUBERT_HURKACZ,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.45,
+                    HUBERT_HURKACZ: 2.70,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 2,
+            },
+
+            #
         ]
     }
 ]
