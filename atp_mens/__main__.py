@@ -56,6 +56,14 @@ def main(hyper_params, train=0):
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA
 
+    # bet_tma_a, bet_tma_b, bet_wnlw_a, bet_wnlw_b, bet_tier_a, bet_tier_b = hyper_params
+    bet_tma_a = -22.10077399839509
+    bet_tma_b = -0.631989605612112
+    bet_wnlw_a = -15.220339132596965
+    bet_wnlw_b = -28.551056437859394
+    bet_tier_a = 55.549273543837174
+    bet_tier_b = 0.19598670763593606
+
     # bet_tsq_a, bet_tsq_b, bet_sfcr_a, bet_sfcr_b, bet_drs_a, bet_drs_b = hyper_params 
     bet_tsq_a = 1.4560402340724992
     bet_tsq_b = -5.447344580300528
@@ -112,23 +120,15 @@ def main(hyper_params, train=0):
     bet_tmi_a = 6.138627775329566
     bet_tmi_b = -55.46314249817187
 
-    # bet_spd_a, bet_spd_b, bet_upsw_a, bet_upsw_b, bet_tier_a, bet_tier_b = hyper_params
+    # bet_spd_a, bet_spd_b, bet_upsw_a, bet_upsw_b, 
     bet_spd_a = 578.625861078253
     bet_spd_b = -1230.2609997030886
     bet_upsw_a = 104.45244320054584
     bet_upsw_b = -613.4127073903903
-    bet_tier_a = -820.4561547663388
-    bet_tier_b = -12.36217193279012
 
-    # bet_tma_a, bet_tma_b, bet_wnll_a, bet_wnll_b = hyper_params
-    bet_tma_a = -0.11119622074393659
-    bet_tma_b = -1.0866337949875096
+    # bet_wnll_a, bet_wnll_b = hyper_params
     bet_wnll_a = 0.009412239611458127
     bet_wnll_b = -0.9904635329818351
-
-    # bet_wnlw_a, bet_wnlw_b,  
-    bet_wnlw_a = -2.516470127730354
-    bet_wnlw_b = -2.2181884374447662
 
     # init
     start_date = None
@@ -674,19 +674,13 @@ def run():
     train = 0
     
     names = [
-        # 67    100     3       960
-        # 'bet_wnlw_a', 'bet_wnlw_b',  # 658   2440  3185  2471   893
-        # MAJOR CHANGE wnlw 2 -> 3
-
         # 69    95      6       1400
-        # 'bet_tma_a', 'bet_tma_b',    # 606      -     -     -    20
         # 'bet_wnll_a', 'bet_wnll_b',  # 772   2889  2896  3949     -
         # MAJOR CHANGE wnll 3 -> 2
 
         # 68    93      6       1300
         # 'bet_spd_a', 'bet_spd_b',    # 1116     -     7     5     -
         # 'bet_upsw_a', 'bet_upsw_b',  # 1229     4     8     -   386
-        # 'bet_tier_a', 'bet_tier_b',  # 1256  1033  1050  1470  1066
 
         # 69    86      8       1400
         # 'bet_age_a', 'bet_age_b',    # 752   2104  2043  2234  2281
@@ -721,12 +715,17 @@ def run():
         # 'bet_setr_a', 'bet_setr_b',  # 890     16     -     -    84
 
         # 76    60      22      2200
-        'bet_tsq_a', 'bet_tsq_b',    # 622      -     -     -     -
-        'bet_sfcr_a', 'bet_sfcr_b',  # 687      -     -     -    55
-        'bet_drs_a', 'bet_drs_b',    # 856      -     -     7     -
+        # 'bet_tsq_a', 'bet_tsq_b',    # 622      -     -     -     -
+        # 'bet_sfcr_a', 'bet_sfcr_b',  # 687      -     -     -    55
+        # 'bet_drs_a', 'bet_drs_b',    # 856      -     -     7     -
+
+        # 78    71      20      2500
+        'bet_tma_a', 'bet_tma_b',    # 753      -     -    20  1632
+        'bet_wnlw_a', 'bet_wnlw_b',  # 779   3185  2471   893   914
+        'bet_tier_a', 'bet_tier_b',  # 1078  1050  1470  1066  1593
 
     ]
-    tolx = 2300  # higher is slower
+    tolx = 2200  # higher is slower
     params = [0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
