@@ -316,6 +316,12 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    ANDREW_WHITTINGTON: {
+        'born_at': (1993, 8, 11),
+        'height': 188,
+        'forehand': RH,
+        'backhand': THB,
+    },
     ANDREY_RUBLEV: {
         'born_at': (1997, 10, 20),
         'height': 188,
@@ -1291,6 +1297,12 @@ META = {
         'forehand': LH,
         'backhand': OHB,
     },
+    JAN_CHOINSKI: {
+        'born_at': (1996, 6, 10),
+        'height': 196,
+        'forehand': RH,
+        'backhand': THB,
+    },
     JAN_LENNARD_STRUFF: {
         'born_at': (1990, 4, 25),
         'height': 196,
@@ -1454,6 +1466,11 @@ META = {
         'height': 180,
         'forehand': LH,
         'backhand': THB,
+    },
+    JONATHAN_GRAY: {
+        'born_at': (1997, 4, 9),
+        'height': 185,
+        'forehand': RH,
     },
     JORDAN_THOMPSON: {
         'born_at': (1994, 4, 20),
@@ -1830,6 +1847,12 @@ META = {
         'born_at': (1993, 7, 24),
         'height': 180,
         'forehand': RH,
+        'backhand': THB,
+    },
+    MAREK_JALOVIEC: {
+        'born_at': (1994, 2, 21),
+        'height': 180,
+        'forehand': LH,
         'backhand': THB,
     },
     MARIN_CILIC: {

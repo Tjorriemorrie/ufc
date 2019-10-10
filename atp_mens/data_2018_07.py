@@ -4,6 +4,497 @@ from location import *
 
 DATA_2018_07 = [
     {
+        'location': EASTBOURNE,
+        'date': '2018-06-30',
+        'matches': [
+
+            # 2018-06-23
+            {
+                'round': 512,
+                'players': [
+                    MATTEO_VIOLA,
+                    ANDREW_WHITTINGTON
+                ],
+                'score': [(4, 6), (6, 4), (6, 2)],
+                'odds': {
+                    MATTEO_VIOLA: 2.35,
+                    ANDREW_WHITTINGTON: 1.63
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    CARLOS_GOMEZ_HERRERA,
+                    JAN_CHOINSKI
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    CARLOS_GOMEZ_HERRERA: 2.63,
+                    JAN_CHOINSKI: 1.52
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ROBERTO_QUIROZ,
+                    YANNICK_MERTENS
+                ],
+                'score': [(3, 6), (6, 4), (6, 3)],
+                'odds': {
+                    ROBERTO_QUIROZ: 1.59,
+                    YANNICK_MERTENS: 2.44
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALESSANDRO_BEGA,
+                    IVAN_NEDELKO
+                ],
+                'score': [(7, 5), (6, 0)],
+                'odds': {
+                    ALESSANDRO_BEGA: 1.27,
+                    IVAN_NEDELKO: 4.01
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JAY_CLARKE,
+                    MAREK_JALOVIEC
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    JAY_CLARKE: 1.19,
+                    MAREK_JALOVIEC: 5.07
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ANDREA_BASSO
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.06,
+                    ANDREA_BASSO: 10.79
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    JONATHAN_GRAY
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.03,
+                    JONATHAN_GRAY: 15.10
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_BRANDS,
+                    JACK_SOCK
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    DANIEL_BRANDS: 3.15,
+                    JACK_SOCK: 1.39
+                }
+            },
+
+            # 2018-06-24
+            {
+                'round': 256,
+                'players': [
+                    DANIEL_BRANDS,
+                    ALESSANDRO_BEGA
+                ],
+                'score': [(6, 7), (7, 6), (6, 3)],
+                'odds': {
+                    DANIEL_BRANDS: 1.18,
+                    ALESSANDRO_BEGA: 5.20
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ROBERTO_QUIROZ,
+                    JAY_CLARKE
+                ],
+                'score': [(6, 7), (6, 4), (6, 4)],
+                'odds': {
+                    ROBERTO_QUIROZ: 2.45,
+                    JAY_CLARKE: 1.58
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    CARLOS_GOMEZ_HERRERA
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.19,
+                    CARLOS_GOMEZ_HERRERA: 5.00
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    MATTEO_VIOLA
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.05,
+                    MATTEO_VIOLA: 11.93
+                }
+            },
+
+            # 2018-06-25
+            {
+                'round': 32,
+                'players': [
+                    ANDY_MURRAY,
+                    STAN_WAWRINKA
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    ANDY_MURRAY: 1.47,
+                    STAN_WAWRINKA: 2.86
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_MILLMAN,
+                    GILLES_MULLER
+                ],
+                'score': [(6, 7), (6, 3), (6, 2)],
+                'odds': {
+                    JOHN_MILLMAN: 2.80,
+                    GILLES_MULLER: 1.49
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENIS_ISTOMIN,
+                    ANDREAS_SEPPI
+                ],
+                'score': [(6, 3), (6, 7), (7, 6)],
+                'odds': {
+                    DENIS_ISTOMIN: 2.37,
+                    ANDREAS_SEPPI: 1.65
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JARED_DONALDSON,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(6, 7), (6, 3), (7, 6)],
+                'odds': {
+                    JARED_DONALDSON: 2.07,
+                    TAYLOR_FRITZ: 1.83
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAY_CLARKE,
+                    RYAN_HARRISON
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    JAY_CLARKE: 4.46,
+                    RYAN_HARRISON: 1.24
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAVID_FERRER,
+                    MATTEO_BERRETTINI
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    DAVID_FERRER: 2.02,
+                    MATTEO_BERRETTINI: 1.87
+                }
+            },
+
+            # 2018-06-26
+            {
+                'round': 32,
+                'players': [
+                    MISCHA_ZVEREV,
+                    NICOLAS_JARRY
+                ],
+                'score': [(3, 6), (6, 1), (6, 4)],
+                'odds': {
+                    MISCHA_ZVEREV: 1.41,
+                    NICOLAS_JARRY: 3.14
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    DANIEL_BRANDS
+                ],
+                'score': [(7, 5), (6, 7), (6, 2)],
+                'odds': {
+                    CAMERON_NORRIE: 2.14,
+                    DANIEL_BRANDS: 1.78
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LUKAS_LACKO,
+                    ROBERTO_QUIROZ
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    LUKAS_LACKO: 1.34,
+                    ROBERTO_QUIROZ: 3.52
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    ALEX_DE_MINAUR
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 3.94,
+                    ALEX_DE_MINAUR: 1.29
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEVE_JOHNSON,
+                    DANIIL_MEDVEDEV
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    STEVE_JOHNSON: 2.06,
+                    DANIIL_MEDVEDEV: 1.84
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LEONARDO_MAYER,
+                    GILLES_SIMON
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    LEONARDO_MAYER: 2.12,
+                    GILLES_SIMON: 1.79
+                }
+            },
+
+            # 2018-06-27
+            {
+                'round': 16,
+                'players': [
+                    CAMERON_NORRIE,
+                    JAY_CLARKE
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    CAMERON_NORRIE: 1.40,
+                    JAY_CLARKE: 3.25
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MISCHA_ZVEREV,
+                    STEVE_JOHNSON
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MISCHA_ZVEREV: 2.44,
+                    STEVE_JOHNSON: 1.63
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    DAVID_FERRER,
+                ],
+                'score': [(6, 2), (6, 0)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 1.88,
+                    DAVID_FERRER: 2.03
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JOHN_MILLMAN,
+                    LEONARDO_MAYER
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    JOHN_MILLMAN: 1.95,
+                    LEONARDO_MAYER: 1.95
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARCO_CECCHINATO,
+                    DENIS_ISTOMIN
+                ],
+                'score': [(4, 6), (6, 4), (7, 5)],
+                'odds': {
+                    MARCO_CECCHINATO: 3.98,
+                    DENIS_ISTOMIN: 1.29
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    JARED_DONALDSON
+                ],
+                'score': [(6, 4), (4, 6), (6, 2)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.50,
+                    JARED_DONALDSON: 2.82
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    KYLE_EDMUND,
+                    ANDY_MURRAY
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    KYLE_EDMUND: 2.56,
+                    ANDY_MURRAY: 1.58
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    LUKAS_LACKO,
+                    DIEGO_SCHWARTZMAN
+                ],
+                'score': [(4, 6), (6, 4), (7, 5)],
+                'odds': {
+                    LUKAS_LACKO: 1.81,
+                    DIEGO_SCHWARTZMAN: 2.11
+                }
+            },
+
+            # 2018-06-28
+            {
+                'round': 8,
+                'players': [
+                    LUKAS_LACKO,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    LUKAS_LACKO: 1.81,
+                    CAMERON_NORRIE: 2.13
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARCO_CECCHINATO,
+                    JOHN_MILLMAN
+                ],
+                'score': [(5, 7), (6, 3), (6, 2)],
+                'odds': {
+                    MARCO_CECCHINATO: 2.73,
+                    JOHN_MILLMAN: 1.53
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MISCHA_ZVEREV,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MISCHA_ZVEREV: 2.17,
+                    DENIS_SHAPOVALOV: 1.79
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    KYLE_EDMUND
+                ],
+                'score': [(5, 7), (6, 3), (6, 1)],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 4.28,
+                    KYLE_EDMUND: 1.27
+                }
+            },
+
+            # 2018-06-29
+            {
+                'round': 4,
+                'players': [
+                    MISCHA_ZVEREV,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    MISCHA_ZVEREV: 1.57,
+                    MIKHAIL_KUKUSHKIN: 2.63
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    LUKAS_LACKO,
+                    MARCO_CECCHINATO
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    LUKAS_LACKO: 1.87,
+                    MARCO_CECCHINATO: 2.06
+                }
+            },
+
+            # 2018-06-30
+            {
+                'round': 2,
+                'players': [
+                    MISCHA_ZVEREV,
+                    LUKAS_LACKO
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    MISCHA_ZVEREV: 1.52,
+                    LUKAS_LACKO: 2.77
+                }
+            }
+        ]
+    },
+
+    {
         'location': WIMBLEDON,
         'date': '2018-07-15',
         'matches': [
