@@ -697,6 +697,11 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    DAVID_GUEZ: {
+        'born_at': (1982, 12, 8),
+        'height': 185,
+        'forehand': RH,
+    },
     DENIS_ISTOMIN: {
         'born_at': (1986, 9, 7),
         'height': 188,
@@ -784,6 +789,12 @@ META = {
     DUSTIN_BROWN: {
         'born_at': (1984, 12, 8),
         'height': 196,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    EDWARD_CORRIE: {
+        'born_at': (1988, 2, 21),
+        'height': 183,
         'forehand': RH,
         'backhand': THB,
     },
@@ -1647,6 +1658,9 @@ META = {
     KIRANPAL_PANNU: {
         'born_at': (1997, 1, 7),
     },
+    KORAY_KIRCI: {
+        'born_at': (1998, 8, 17),
+    },
     KYLE_EDMUND: {
         'born_at': (1995, 1, 8),
         'height': 188,
@@ -1882,6 +1896,12 @@ META = {
     MARKUS_ERIKSSON: {
         'born_at': (1989, 11, 29),
         'height': 188,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    MARSEL_ILHAN: {
+        'born_at': (1987, 6, 11),
+        'height': 191,
         'forehand': RH,
         'backhand': THB,
     },
@@ -2386,6 +2406,11 @@ META = {
         'backhand': THB,
     },
     RICCARDO_BALZERANI: {
+        'born_at': (1991, 8, 5),
+        'forehand': RH,
+        'backhand': THB,
+    },
+    RICCARDO_BELLOTTI: {
         'born_at': (1998, 10, 25),
         'height': 185,
         'forehand': RH,

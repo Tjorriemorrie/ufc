@@ -4,6 +4,1024 @@ from location import *
 
 DATA_2018_07 = [
     {
+        'location': LONDON,
+        'date': '2018-06-24',
+        'matches': [
+
+            # 2018-06-16
+            {
+                'round': 512,
+                'players': [
+                    MACKENZIE_MCDONALD,
+                    BJORN_FRATANGELO
+                ],
+                'score': [(6, 3), (5, 7), (6, 2)],
+                'odds': {
+                    MACKENZIE_MCDONALD: 1.51,
+                    BJORN_FRATANGELO: 2.67
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MARIUS_COPIL,
+                    EDWARD_CORRIE
+                ],
+                'score': [(6, 4), (3, 6), (6, 3)],
+                'odds': {
+                    MARIUS_COPIL: 1.26,
+                    EDWARD_CORRIE: 4.05
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TIM_SMYCZEK,
+                    MIKHAIL_KUKUSHKIN
+                ],
+                'score': [(6, 4), (3, 6), (7, 6)],
+                'odds': {
+                    TIM_SMYCZEK: 2.55,
+                    MIKHAIL_KUKUSHKIN: 1.55
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    YUKI_BHAMBRI,
+                    JAMES_WARD
+                ],
+                'score': [(4, 6), (6, 1), (6, 2)],
+                'odds': {
+                    YUKI_BHAMBRI: 1.48,
+                    JAMES_WARD: 2.77
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    THANASI_KOKKINAKIS,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    THANASI_KOKKINAKIS: 1.98,
+                    PIERRE_HUGUES_HERBERT: 1.87
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TAYLOR_FRITZ,
+                    LORENZO_SONEGO
+                ],
+                'score': [(6, 2), (3, 6), (6, 1)],
+                'odds': {
+                    TAYLOR_FRITZ: 1.18,
+                    LORENZO_SONEGO: 5.20
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JOHN_MILLMAN,
+                    NICOLAS_MAHUT
+                ],
+                'score': [(3, 6), (6, 3), (7, 6)],
+                'odds': {
+                    JOHN_MILLMAN: 2.15,
+                    NICOLAS_MAHUT: 1.74
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    JULIEN_BENNETEAU,
+                    SIMONE_BOLELLI
+                ],
+                'score': [(7, 6), (4, 6), (7, 5)],
+                'odds': {
+                    JULIEN_BENNETEAU: 1.86,
+                    SIMONE_BOLELLI: 2.00
+                }
+            },
+
+            # 2018-06-17
+            {
+                'round': 256,
+                'players': [
+                    TIM_SMYCZEK,
+                    THANASI_KOKKINAKIS
+                ],
+                'score': [(2, 6), (6, 4), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 256,
+                'players': [
+                    YUKI_BHAMBRI,
+                    TAYLOR_FRITZ
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    YUKI_BHAMBRI: 2.96,
+                    TAYLOR_FRITZ: 1.43
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JOHN_MILLMAN,
+                    MARIUS_COPIL
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    JOHN_MILLMAN: 1.76,
+                    MARIUS_COPIL: 2.13
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    JULIEN_BENNETEAU,
+                    MACKENZIE_MCDONALD
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    JULIEN_BENNETEAU: 1.81,
+                    MACKENZIE_MCDONALD: 2.05
+                }
+            },
+
+            # 2018-06-18
+            {
+                'round': 32,
+                'players': [
+                    STAN_WAWRINKA,
+                    CAMERON_NORRIE
+                ],
+                'score': [(6, 2), (6, 3)],
+                'odds': {
+                    STAN_WAWRINKA: 1.65,
+                    CAMERON_NORRIE: 2.37
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FRANCES_TIAFOE,
+                    JARED_DONALDSON
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    FRANCES_TIAFOE: 1.78,
+                    JARED_DONALDSON: 2.14
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    JACK_SOCK
+                ],
+                'score': [(7, 5), (6, 3)],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.68,
+                    JACK_SOCK: 2.30
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    JAY_CLARKE
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    SAM_QUERREY: 1.10,
+                    JAY_CLARKE: 8.33
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARIN_CILIC,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    MARIN_CILIC: 1.23,
+                    FERNANDO_VERDASCO: 4.60
+                }
+            },
+
+            # 2018-06-19
+            {
+                'round': 32,
+                'players': [
+                    MILOS_RAONIC,
+                    YUKI_BHAMBRI
+                ],
+                'score': [(6, 1), (3, 1)],
+                'retired': True,
+                'odds': {
+                    MILOS_RAONIC: 1.11,
+                    YUKI_BHAMBRI: 7.74
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    DANIEL_EVANS
+                ],
+                'score': [(6, 4), (0, 6), (7, 5)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.93,
+                    DANIEL_EVANS: 1.96
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICK_KYRGIOS,
+                    ANDY_MURRAY
+                ],
+                'score': [(2, 6), (7, 6), (7, 5)],
+                'odds': {
+                    NICK_KYRGIOS: 1.30,
+                    ANDY_MURRAY: 3.82
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    JOHN_MILLMAN
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.17,
+                    JOHN_MILLMAN: 5.70
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JEREMY_CHARDY,
+                    TIM_SMYCZEK
+                ],
+                'score': [(6, 2), (6, 4)],
+                'odds': {
+                    JEREMY_CHARDY: 1.36,
+                    TIM_SMYCZEK: 3.40
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    JULIEN_BENNETEAU,
+                    TOMAS_BERDYCH
+                ],
+                'score': [(7, 5), (3, 6), (6, 3)],
+                'odds': {
+                    JULIEN_BENNETEAU: 3.34,
+                    TOMAS_BERDYCH: 1.37
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    KYLE_EDMUND,
+                    RYAN_HARRISON
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    KYLE_EDMUND: 1.37,
+                    RYAN_HARRISON: 3.32
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    DAVID_GOFFIN
+                ],
+                'score': [(6, 3), (6, 7), (6, 3)],
+                'odds': {
+                    FELICIANO_LOPEZ: 2.14,
+                    DAVID_GOFFIN: 1.78
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    LEONARDO_MAYER,
+                    KEVIN_ANDERSON
+                ],
+                'score': [(7, 6), (4, 6), (7, 6)],
+                'odds': {
+                    LEONARDO_MAYER: 4.41,
+                    KEVIN_ANDERSON: 1.25
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    DAMIR_DZUMHUR
+                ],
+                'score': [(6, 3), (6, 7), (6, 3)],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.16,
+                    DAMIR_DZUMHUR: 6.10
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GILLES_MULLER,
+                    DENIS_SHAPOVALOV
+                ],
+                'score': [(7, 6), (7, 6)]
+            },
+
+            # 2018-06-20
+            {
+                'round': 16,
+                'players': [
+                    FRANCES_TIAFOE,
+                    LEONARDO_MAYER
+                ],
+                'score': [(6, 4), (2, 6), (6, 4)],
+                'odds': {
+                    FRANCES_TIAFOE: 2.01,
+                    LEONARDO_MAYER: 1.90
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JEREMY_CHARDY,
+                    DANIIL_MEDVEDEV
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    JEREMY_CHARDY: 2.09,
+                    DANIIL_MEDVEDEV: 1.83
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    SAM_QUERREY,
+                    STAN_WAWRINKA
+                ],
+                'score': [(7, 5), (6, 7), (6, 1)],
+                'odds': {
+                    SAM_QUERREY: 1.56,
+                    STAN_WAWRINKA: 2.60
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARIN_CILIC,
+                    GILLES_MULLER
+                ],
+                'score': [(4, 6), (6, 3), (6, 3)],
+                'odds': {
+                    MARIN_CILIC: 1.24,
+                    GILLES_MULLER: 4.58
+                }
+            },
+
+            # 2018-06-21
+            {
+                'round': 16,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    JULIEN_BENNETEAU
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    ADRIAN_MANNARINO: 2.11,
+                    JULIEN_BENNETEAU: 1.81
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    FELICIANO_LOPEZ,
+                    MILOS_RAONIC
+                ],
+                'score': [],
+                'retired': True,
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    NICK_KYRGIOS,
+                    KYLE_EDMUND
+                ],
+                'score': [(7, 6), (6, 7), (6, 3)],
+                'odds': {
+                    NICK_KYRGIOS: 1.58,
+                    KYLE_EDMUND: 2.56
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    GRIGOR_DIMITROV
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.37,
+                    GRIGOR_DIMITROV: 3.42
+                }
+            },
+
+            # 2018-06-22
+            {
+                'round': 8,
+                'players': [
+                    NICK_KYRGIOS,
+                    FELICIANO_LOPEZ
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    NICK_KYRGIOS: 1.50,
+                    FELICIANO_LOPEZ: 2.82
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(7, 5), (6, 1)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.10,
+                    ADRIAN_MANNARINO: 9.05
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    JEREMY_CHARDY,
+                    FRANCES_TIAFOE
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    JEREMY_CHARDY: 1.52,
+                    FRANCES_TIAFOE: 2.75
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    MARIN_CILIC,
+                    SAM_QUERREY
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    MARIN_CILIC: 1.36,
+                    SAM_QUERREY: 3.50
+                }
+            },
+
+            # 2018-06-23
+            {
+                'round': 4,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    JEREMY_CHARDY
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.14,
+                    JEREMY_CHARDY: 6.92
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    MARIN_CILIC,
+                    NICK_KYRGIOS
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
+                    MARIN_CILIC: 1.72,
+                    NICK_KYRGIOS: 2.27
+                }
+            },
+
+            # 2018-06-24
+            {
+                'round': 2,
+                'players': [
+                    MARIN_CILIC,
+                    NOVAK_DJOKOVIC
+                ],
+                'score': [(5, 7), (7, 6), (6, 3)],
+                'odds': {
+                    MARIN_CILIC: 2.23,
+                    NOVAK_DJOKOVIC: 1.75
+                }
+            }
+        ]
+    },
+
+    {
+        'location': ANTALYA,
+        'date': '2018-06-30',
+        'matches': [
+
+            # 2018-06-23
+            {
+                'round': 512,
+                'players': [
+                    ALEKSANDR_NEDOVYESOV,
+                    KORAY_KIRCI
+                ],
+                'score': [(6, 4), (6, 2)],
+                'odds': {
+                    ALEKSANDR_NEDOVYESOV: 1.05,
+                    KORAY_KIRCI: 11.26
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LAURYNAS_GRIGELIS,
+                    DAVID_GUEZ
+                ],
+                'score': [(6, 2), (3, 6), (7, 5)],
+                'odds': {
+                    LAURYNAS_GRIGELIS: 1.63,
+                    DAVID_GUEZ: 2.34
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ROBERTO_ORTEGA_OLMEDO,
+                    YOSHIHITO_NISHIOKA
+                ],
+                'score': [(6, 2), (4, 6), (6, 2)],
+                'odds': {
+                    ROBERTO_ORTEGA_OLMEDO: 7.22,
+                    YOSHIHITO_NISHIOKA: 1.11
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    FILIP_HORANSKY,
+                    DUCKHEE_LEE
+                ],
+                'score': [(7, 5), (6, 2)],
+                'odds': {
+                    FILIP_HORANSKY: 2.69,
+                    DUCKHEE_LEE: 1.50
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    BLAZ_KAVCIC,
+                    RICCARDO_BELLOTTI
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    BLAZ_KAVCIC: 2.09,
+                    RICCARDO_BELLOTTI: 1.78
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    MIKHAIL_YOUZHNY,
+                    FRANK_DANCEVIC
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    MIKHAIL_YOUZHNY: 1.23,
+                    FRANK_DANCEVIC: 4.38
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ERGI_KIRKIN,
+                    RADU_ALBOT
+                ],
+                'score': [(6, 2), (3, 6), (7, 6)],
+                'odds': {
+                    ERGI_KIRKIN: 15.76,
+                    RADU_ALBOT: 1.03
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    TARO_DANIEL,
+                    MARSEL_ILHAN
+                ],
+                'score': [(6, 3), (3, 6), (6, 3)],
+                'odds': {
+                    TARO_DANIEL: 1.29,
+                    MARSEL_ILHAN: 3.77
+                }
+            },
+
+            # 2018-06-24
+            {
+                'round': 256,
+                'players': [
+                    FILIP_HORANSKY,
+                    ERGI_KIRKIN
+                ],
+                'score': [(6, 2), (6, 1)],
+                'odds': {
+                    FILIP_HORANSKY: 1.27,
+                    ERGI_KIRKIN: 4.02
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    BLAZ_KAVCIC,
+                    ALEKSANDR_NEDOVYESOV
+                ],
+                'score': [(3, 6), (6, 3), (6, 3)],
+                'odds': {
+                    BLAZ_KAVCIC: 2.35,
+                    ALEKSANDR_NEDOVYESOV: 1.63
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    MIKHAIL_YOUZHNY,
+                    LAURYNAS_GRIGELIS
+                ],
+                'score': [(6, 7), (6, 4), (6, 2)],
+                'odds': {
+                    MIKHAIL_YOUZHNY: 1.16,
+                    LAURYNAS_GRIGELIS: 5.58
+                }
+            },
+            {
+                'round': 256,
+                'players': [
+                    TARO_DANIEL,
+                    ROBERTO_ORTEGA_OLMEDO
+                ],
+                'score': [(6, 3), (6, 1)],
+                'odds': {
+                    TARO_DANIEL: 1.29,
+                    ROBERTO_ORTEGA_OLMEDO: 3.84
+                }
+            },
+
+            # 2018-06-25
+            {
+                'round': 32,
+                'players': [
+                    JIRI_VESELY,
+                    JORDAN_THOMPSON
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    JIRI_VESELY: 2.02,
+                    JORDAN_THOMPSON: 1.87
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    BLAZ_KAVCIC,
+                    MARCOS_BAGHDATIS
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    BLAZ_KAVCIC: 3.70,
+                    MARCOS_BAGHDATIS: 1.32
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    FEDERICO_DELBONIS
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.34,
+                    FEDERICO_DELBONIS: 3.50
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    TARO_DANIEL
+                ],
+                'score': [(6, 4), (6, 7), (6, 4)],
+                'odds': {
+                    GUILLERMO_GARCIA_LOPEZ: 1.63,
+                    TARO_DANIEL: 2.42
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    RICARDAS_BERANKIS,
+                    EVGENY_DONSKOY
+                ],
+                'score': [(6, 2), (6, 7), (6, 3)],
+                'odds': {
+                    RICARDAS_BERANKIS: 2.43,
+                    EVGENY_DONSKOY: 1.62
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    FILIP_HORANSKY
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.24,
+                    FILIP_HORANSKY: 4.46
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    YUICHI_SUGITA,
+                    GUIDO_PELLA
+                ],
+                'score': [(6, 4), (3, 6), (6, 4)],
+                'odds': {
+                    YUICHI_SUGITA: 1.53,
+                    GUIDO_PELLA: 2.67
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBIN_HAASE,
+                    MIKHAIL_YOUZHNY
+                ],
+                'score': [(7, 6), (6, 7), (6, 4)],
+                'odds': {
+                    ROBIN_HAASE: 1.93,
+                    MIKHAIL_YOUZHNY: 1.96
+                }
+            },
+
+            # 2018-06-26
+            {
+                'round': 32,
+                'players': [
+                    MARIUS_COPIL,
+                    CEM_ILKEL
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    MARIUS_COPIL: 1.27,
+                    CEM_ILKEL: 4.09
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIRZA_BASIC,
+                    PAOLO_LORENZI
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    MIRZA_BASIC: 1.35,
+                    PAOLO_LORENZI: 3.44
+                }
+            },
+            {
+                'round': 32,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    ROBERTO_CARBALLES_BAENA
+                ],
+                'score': [(6, 2), (6, 3)],
+                # no odds
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOAO_SOUSA,
+                    FLORIAN_MAYER
+                ],
+                'score': [(6, 2), (6, 2)],
+                # no odds
+            },
+            {
+                'round': 16,
+                'players': [
+                    NIKOLOZ_BASILASHVILI,
+                    DUSAN_LAJOVIC
+                ],
+                'score': [(6, 4), (2, 6), (7, 5)],
+                'odds': {
+                    NIKOLOZ_BASILASHVILI: 2.41,
+                    DUSAN_LAJOVIC: 1.64
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JIRI_VESELY,
+                    FERNANDO_VERDASCO
+                ],
+                'score': [(6, 3), (7, 5)],
+                'odds': {
+                    JIRI_VESELY: 2.59,
+                    FERNANDO_VERDASCO: 1.57
+                }
+            },
+
+            # 2018-06-27
+            {
+                'round': 16,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    YUICHI_SUGITA
+                ],
+                'score': [(2, 6), (6, 4), (7, 6)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 2.12,
+                    YUICHI_SUGITA: 1.81
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    JOAO_SOUSA,
+                    MIRZA_BASIC
+                ],
+                'score': [(6, 7), (6, 4), (6, 4)],
+                'odds': {
+                    JOAO_SOUSA: 1.48,
+                    MIRZA_BASIC: 2.86
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GUILLERMO_GARCIA_LOPEZ,
+                    ROBIN_HAASE
+                ],
+                'score': [(6, 2), (6, 7), (7, 6)],
+                'odds': {
+                    GUILLERMO_GARCIA_LOPEZ: 2.44,
+                    ROBIN_HAASE: 1.63
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    BLAZ_KAVCIC
+                ],
+                'score': [(6, 3), (5, 7), (7, 5)],
+                'odds': {
+                    GAEL_MONFILS: 1.22,
+                    BLAZ_KAVCIC: 4.91
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    MARIUS_COPIL
+                ],
+                'score': [(4, 6), (6, 4), (6, 4)],
+                'odds': {
+                    DAMIR_DZUMHUR: 2.03,
+                    MARIUS_COPIL: 1.88
+                }
+            },
+            {
+                'round': 16,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    RICARDAS_BERANKIS
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.35,
+                    RICARDAS_BERANKIS: 3.54
+                }
+            },
+
+            # 2018-06-28
+            {
+                'round': 8,
+                'players': [
+                    JIRI_VESELY,
+                    NIKOLOZ_BASILASHVILI
+                ],
+                'score': [(7, 6), (6, 2)],
+                'odds': {
+                    JIRI_VESELY: 1.57,
+                    NIKOLOZ_BASILASHVILI: 2.60
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    GAEL_MONFILS,
+                    GUILLERMO_GARCIA_LOPEZ
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    GAEL_MONFILS: 1.61,
+                    GUILLERMO_GARCIA_LOPEZ: 2.50
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    PIERRE_HUGUES_HERBERT
+                ],
+                'score': [(6, 4), (6, 1)],
+                'odds': {
+                    DAMIR_DZUMHUR: 2.27,
+                    PIERRE_HUGUES_HERBERT: 1.72
+                }
+            },
+            {
+                'round': 8,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    JOAO_SOUSA
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    ADRIAN_MANNARINO: 1.54,
+                    JOAO_SOUSA: 2.70
+                }
+            },
+
+            # 2018-06-29
+            {
+                'round': 4,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    JIRI_VESELY
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.96,
+                    JIRI_VESELY: 1.96
+                }
+            },
+            {
+                'round': 4,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    GAEL_MONFILS
+                ],
+                'score': [(4, 6), (7, 6), (6, 4)],
+                'odds': {
+                    ADRIAN_MANNARINO: 2.11,
+                    GAEL_MONFILS: 1.83
+                }
+            },
+
+            # 2018-06-30
+            {
+                'round': 2,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    ADRIAN_MANNARINO
+                ],
+                'score': [(6, 1), (1, 6), (6, 1)],
+                'odds': {
+                    DAMIR_DZUMHUR: 2.39,
+                    ADRIAN_MANNARINO: 1.66
+                }
+            }
+        ]
+    },
+
+    {
         'location': EASTBOURNE,
         'date': '2018-06-30',
         'matches': [

@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 71.3  19.9    2675    2018 newport                        (2, 915), (1, 897), (4, 779), (5, 707)
 # 78.7  23.3    1842    2018 bastad                         (1, 1178), (3, 707), (2, 664), (4, 569)
 # 79.1  24.2    1431    2018 umag                           (1, 1143), (2, 758), (3, 445), (4, 264)
 # 76.2  22.9    1585    2018 hamburg                        (1, 1250), (2, 767), (4, 396), (3, 363)
@@ -6415,16 +6416,17 @@ DATA = [
                 },
             },
 
-            #
+            # 2019-10-10
             {
                 'round': 16,
                 'players': [
-                    KAREN_KHACHANOV,
                     FABIO_FOGNINI,
+                    KAREN_KHACHANOV,
                 ],
+                'score': [(6, 3), (7, 5)],
                 'odds': {
-                    KAREN_KHACHANOV: 1.45,
                     FABIO_FOGNINI: 2.60,
+                    KAREN_KHACHANOV: 1.45,
                 },
                 'prediction': KAREN_KHACHANOV,
                 'bet': 2,
@@ -6435,6 +6437,7 @@ DATA = [
                     DANIIL_MEDVEDEV,
                     VASEK_POSPISIL,
                 ],
+                'score': [(7, 6), (7, 5)],
                 'odds': {
                     DANIIL_MEDVEDEV: 1.07,
                     VASEK_POSPISIL: 7.50,
@@ -6448,6 +6451,7 @@ DATA = [
                     MATTEO_BERRETTINI,
                     ROBERTO_BAUTISTA_AGUT,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
                     MATTEO_BERRETTINI: 1.68,
                     ROBERTO_BAUTISTA_AGUT: 2.10,
@@ -6461,6 +6465,7 @@ DATA = [
                     NOVAK_DJOKOVIC,
                     JOHN_ISNER,
                 ],
+                'score': [(7, 5), (6, 3)],
                 'odds': {
                     NOVAK_DJOKOVIC: 1.12,
                     JOHN_ISNER: 6.00,
@@ -6474,6 +6479,7 @@ DATA = [
                     STEFANOS_TSITSIPAS,
                     HUBERT_HURKACZ,
                 ],
+                'score': [(7, 5), (3, 6), (7, 6)],
                 'odds': {
                     STEFANOS_TSITSIPAS: 1.34,
                     HUBERT_HURKACZ: 3.10,
@@ -6487,6 +6493,7 @@ DATA = [
                     ROGER_FEDERER,
                     DAVID_GOFFIN,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
                     ROGER_FEDERER: 1.24,
                     DAVID_GOFFIN: 4.00,
@@ -6500,6 +6507,7 @@ DATA = [
                     DOMINIC_THIEM,
                     NIKOLOZ_BASILASHVILI,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
                     DOMINIC_THIEM: 1.24,
                     NIKOLOZ_BASILASHVILI: 4.00,
@@ -6513,6 +6521,7 @@ DATA = [
                     ALEXANDER_ZVEREV,
                     ANDREY_RUBLEV,
                 ],
+                'score': [(6, 0), (7, 6)],
                 'odds': {
                     ALEXANDER_ZVEREV: 1.60,
                     ANDREY_RUBLEV: 2.40,
@@ -6520,6 +6529,60 @@ DATA = [
                 'prediction': ALEXANDER_ZVEREV,
                 'bet': 2,
             },
+
+            #
+            {
+                'round': 8,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    FABIO_FOGNINI,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.20,
+                    FABIO_FOGNINI: 4.40,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 4,
+            },
+            {
+                'round': 8,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.12,
+                    STEFANOS_TSITSIPAS: 6.00,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 5,
+            },
+            {
+                'round': 8,
+                'players': [
+                    ROGER_FEDERER,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    ROGER_FEDERER: 1.45,
+                    ALEXANDER_ZVEREV: 2.70,
+                },
+                'prediction': ROGER_FEDERER,
+                'bet': 2,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DOMINIC_THIEM,
+                    MATTEO_BERRETTINI,
+                ],
+                'odds': {
+                    DOMINIC_THIEM: 1.52,
+                    MATTEO_BERRETTINI: 2.50,
+                },
+                'prediction': DOMINIC_THIEM,
+                'bet': 2,
+            }
         ]
     }
 ]
