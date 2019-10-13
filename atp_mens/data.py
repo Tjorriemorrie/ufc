@@ -6530,13 +6530,14 @@ DATA = [
                 'bet': 2,
             },
 
-            #
+            # 2019-10-11
             {
                 'round': 8,
                 'players': [
                     DANIIL_MEDVEDEV,
                     FABIO_FOGNINI,
                 ],
+                'score': [(6, 3), (7, 6)],
                 'odds': {
                     DANIIL_MEDVEDEV: 1.20,
                     FABIO_FOGNINI: 4.40,
@@ -6547,12 +6548,13 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    NOVAK_DJOKOVIC,
                     STEFANOS_TSITSIPAS,
+                    NOVAK_DJOKOVIC,
                 ],
+                'score': [(3, 6), (7, 5), (6, 3)],
                 'odds': {
-                    NOVAK_DJOKOVIC: 1.12,
                     STEFANOS_TSITSIPAS: 6.00,
+                    NOVAK_DJOKOVIC: 1.12,
                 },
                 'prediction': NOVAK_DJOKOVIC,
                 'bet': 5,
@@ -6560,12 +6562,13 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    ROGER_FEDERER,
                     ALEXANDER_ZVEREV,
+                    ROGER_FEDERER,
                 ],
+                'score': [(6, 3), (6, 7), (6, 3)],
                 'odds': {
-                    ROGER_FEDERER: 1.45,
                     ALEXANDER_ZVEREV: 2.70,
+                    ROGER_FEDERER: 1.45,
                 },
                 'prediction': ROGER_FEDERER,
                 'bet': 2,
@@ -6573,16 +6576,460 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    DOMINIC_THIEM,
                     MATTEO_BERRETTINI,
+                    DOMINIC_THIEM,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
-                    DOMINIC_THIEM: 1.52,
                     MATTEO_BERRETTINI: 2.50,
+                    DOMINIC_THIEM: 1.52,
                 },
                 'prediction': DOMINIC_THIEM,
                 'bet': 2,
+            },
+
+            # 2019-10-12
+            {
+                'round': 4,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'score': [(7, 6), (7, 5)],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.40,
+                    STEFANOS_TSITSIPAS: 2.90,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 1,
+            },
+            {
+                'round': 4,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    MATTEO_BERRETTINI,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.60,
+                    MATTEO_BERRETTINI: 2.30,
+                },
+                'prediction': ALEXANDER_ZVEREV,
+                'bet': 4,
+            },
+
+            #
+            {
+                'round': 2,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.52,
+                    ALEXANDER_ZVEREV: 2.50,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 6,
             }
         ]
-    }
+    },
+
+    {
+        'location': MOSCOW,
+        'date': '2019-10-20',
+        'matches': [
+
+            # 2019-10-12
+            {
+                'round': 512,
+                'players': [
+                    FILIP_HORANSKY,
+                    EVGENY_KARLOVSKIY
+                ],
+                'score': [(4, 6), (6, 3), (6, 0)],
+                'odds': {
+                    FILIP_HORANSKY: 1.76,
+                    EVGENY_KARLOVSKIY: 2.09
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    RUDOLF_MOLLEKER,
+                    MAXIME_JANVIER
+                ],
+                'score': [(4, 6), (6, 1), (6, 3)],
+                'odds': {
+                    RUDOLF_MOLLEKER: 3.89,
+                    MAXIME_JANVIER: 1.27
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    SEBASTIAN_OFNER,
+                    MIRZA_BASIC
+                ],
+                'score': [(7, 6), (3, 6), (6, 3)],
+                'odds': {
+                    SEBASTIAN_OFNER: 1.92,
+                    MIRZA_BASIC: 1.90
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    NIKOLA_MILOJEVIC,
+                    ROBERTO_MARCORA,
+                ],
+                'score': [(6, 3), (6, 3)],
+                'odds': {
+                    NIKOLA_MILOJEVIC: 2.00,
+                    ROBERTO_MARCORA: 1.83
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    LUKAS_ROSOL,
+                    ROMAN_SAFIULLIN
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    LUKAS_ROSOL: 1.74,
+                    ROMAN_SAFIULLIN: 2.12
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    ARTEM_DUBRIVNYY,
+                    ILYA_IVASHKA
+                ],
+                'score': [(5, 7), (6, 2), (6, 2)],
+                'odds': {
+                    ARTEM_DUBRIVNYY: 6.23,
+                    ILYA_IVASHKA: 1.13
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    ALEXEY_VATUTIN
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.40,
+                    ALEXEY_VATUTIN: 2.98
+                }
+            },
+            {
+                'round': 512,
+                'players': [
+                    EGOR_GERASIMOV,
+                    ELLIOT_BENCHETRIT
+                ],
+                'score': [(6, 0), (6, 3)],
+                'odds': {
+                    EGOR_GERASIMOV: 1.08,
+                    ELLIOT_BENCHETRIT: 7.99
+                }
+            },
+
+            #
+            {
+                'round': 32,
+                'players': [
+                    EGOR_GERASIMOV,
+                    RUDOLF_MOLLEKER,
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 1.14,
+                    RUDOLF_MOLLEKER: 5.50,
+                },
+                'prediction': EGOR_GERASIMOV,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ARTEM_DUBRIVNYY,
+                    FILIP_HORANSKY,
+                ],
+                'odds': {
+                    ARTEM_DUBRIVNYY: 2.80,
+                    FILIP_HORANSKY: 1.40,
+                },
+                'prediction': FILIP_HORANSKY,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    SEBASTIAN_OFNER,
+                ],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.28,
+                    SEBASTIAN_OFNER: 3.60,
+                },
+                'prediction': DAMIR_DZUMHUR,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    LUKAS_ROSOL,
+                    NIKOLA_MILOJEVIC,
+                ],
+                'odds': {
+                    LUKAS_ROSOL: 1.58,
+                    NIKOLA_MILOJEVIC: 2.35,
+                },
+                'prediction': LUKAS_ROSOL,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXANDER_BUBLIK,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    ALEXANDER_BUBLIK: 3.20,
+                    ANDREY_RUBLEV: 1.34,
+                },
+            },
+
+            #
+        ]
+    },
+
+    {
+        'location': STOCKHOLM,
+        'date': '2019-10-20',
+        'matches': [
+
+            #
+            {
+                'round': 32,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    TOBIAS_KAMKE,
+                ],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.34,
+                    TOBIAS_KAMKE: 3.20,
+                },
+                'prediction': ALEXEI_POPYRIN,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    LUCAS_RENARD,
+                    ERNESTS_GULBIS,
+                ],
+                'odds': {
+                    LUCAS_RENARD: 7.00,
+                    ERNESTS_GULBIS: 1.09,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ENZO_COUACAUD,
+                    YUICHI_SUGITA,
+                ],
+                'odds': {
+                    ENZO_COUACAUD: 1.95,
+                    YUICHI_SUGITA: 1.85,
+                },
+                'prediction': YUICHI_SUGITA,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TOMMY_PAUL,
+                    MARKUS_ERIKSSON,
+                ],
+                'odds': {
+                    TOMMY_PAUL: 1.20,
+                    MARKUS_ERIKSSON: 4.40,
+                },
+                'prediction': TOMMY_PAUL,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TOMMY_ROBREDO,
+                    OSCAR_OTTE,
+                ],
+                'odds': {
+                    TOMMY_ROBREDO: 3.00,
+                    OSCAR_OTTE: 1.38,
+                },
+                'prediction': OSCAR_OTTE,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    HYEON_CHUNG,
+                    CEDRIC_MARCEL_STEBE,
+                ],
+                'odds': {
+                    HYEON_CHUNG: 1.28,
+                    CEDRIC_MARCEL_STEBE: 3.50,
+                },
+                'prediction': HYEON_CHUNG,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    VIKTOR_TROICKI,
+                    DENNIS_NOVAK,
+                ],
+                'odds': {
+                    VIKTOR_TROICKI: 2.25,
+                    DENNIS_NOVAK: 1.60,
+                },
+                'prediction': DENNIS_NOVAK,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    GIANLUCA_MAGER,
+                    SIMON_YITBAREK,
+                ],
+                'odds': {
+                    GIANLUCA_MAGER: 1.05,
+                    SIMON_YITBAREK: 8.50,
+                },
+                'prediction': GIANLUCA_MAGER,
+                'bet': 4,
+            }
+        ]
+    },
+
+    {
+        'location': ANTWERP,
+        'date': '2019-10-20',
+        'matches': [
+
+            #
+            {
+                'round': 32,
+                'players': [
+                    KAMIL_MAJCHRZAK,
+                    SERGIY_STAKHOVSKY,
+                ],
+                'odds': {
+                    KAMIL_MAJCHRZAK: 1.65,
+                    SERGIY_STAKHOVSKY: 2.20
+                },
+                'prediction': KAMIL_MAJCHRZAK,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCO_TRUNGELLITI,
+                    JAUME_MUNAR,
+                ],
+                'odds': {
+                    MARCO_TRUNGELLITI: 2.60,
+                    JAUME_MUNAR: 1.48,
+                },
+                'prediction': JAUME_MUNAR,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    KYLE_EDMUND,
+                    NORBERT_GOMBOS,
+                ],
+                'odds': {
+                    KYLE_EDMUND: 1.28,
+                    NORBERT_GOMBOS: 3.60,
+                },
+                'prediction': KYLE_EDMUND,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    YANNICK_MADEN,
+                    SALVATORE_CARUSO,
+                ],
+                'odds': {
+                    YANNICK_MADEN: 1.60,
+                    SALVATORE_CARUSO: 2.30,
+                },
+                'prediction': YANNICK_MADEN,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARIUS_COPIL,
+                    RUBEN_BEMELMANS,
+                ],
+                'odds': {
+                    MARIUS_COPIL: 1.85,
+                    RUBEN_BEMELMANS: 1.95,
+                },
+                'prediction': MARIUS_COPIL,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    CARLOS_TABERNER,
+                    ANTOINE_HOANG,
+                ],
+                'odds': {
+                    CARLOS_TABERNER: 3.20,
+                    ANTOINE_HOANG: 1.34,
+                },
+                'prediction': ANTOINE_HOANG,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ARNAUD_BOVY,
+                    PAOLO_LORENZI,
+                ],
+                'odds': {
+                    ARNAUD_BOVY: 8.00,
+                    PAOLO_LORENZI: 1.06,
+                },
+                'prediction': PAOLO_LORENZI,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    GREGOIRE_BARRERE,
+                    PEDRO_MARTINEZ,
+                ],
+                'odds': {
+                    GREGOIRE_BARRERE: 1.16,
+                    PEDRO_MARTINEZ: 4.80
+                },
+                'prediction': GREGOIRE_BARRERE,
+                'bet': 1,
+            },
+
+        ]
+    },
+
 ]

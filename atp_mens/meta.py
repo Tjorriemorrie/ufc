@@ -367,6 +367,9 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ARNAUD_BOVY: {
+        'born_at': (2000, 9, 17),
+    },
     ARTEM_DUBRIVNYY: {
         'born_at': (1999, 1, 31),
         'height': 183,
@@ -530,6 +533,12 @@ META = {
     CARLOS_GOMEZ_HERRERA: {
         'born_at': (1990, 4, 30),
         'height': 191,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    CARLOS_TABERNER: {
+        'born_at': (1997, 8, 8),
+        'height': 183,
         'forehand': RH,
         'backhand': THB,
     },
@@ -1768,6 +1777,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    LUCAS_RENARD: {
+        'born_at': (1992, 9, 30),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
     LUIS_PATINO: {
         'born_at': (1993, 10, 6),
         'height': 183,
@@ -2615,6 +2630,12 @@ META = {
         'height': 193,
         'forehand': RH,
         'backhand': OHB,
+    },
+    SIMON_YITBAREK: {
+        'born_at': (2000, 10, 31),
+        'height': 180,
+        'forehand': RH,
+        'backhand': THB,
     },
     SIMON_CARR: {
         'born_at': (1999, 11, 7),
