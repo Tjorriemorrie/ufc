@@ -254,6 +254,9 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ALIBEK_KACHMAZOV: {
+        'born_at': (2002, 8, 17),
+    },
     ALJAZ_BEDENE: {
         'born_at': (1989, 7, 18),
         'height': 183,
