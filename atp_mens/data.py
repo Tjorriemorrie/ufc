@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 76.4  30.6    2743    2019 shangai                        (1, 1311), (3, 315), (4, 310), (2, 277)
 # 78.8  26.9    2253    2018 wimbledon                      (1, 1072), (4, 680), (3, 670), (2, 609)
 # 78.7  26.3    2111    2019 beijing                        (1, 1098), (3, 658), (4, 648), (2, 646)
 # 70.3  23.8    2755    2019 tokyo                          (1, 1891), (4, 1651), (2, 212), (3, 192)
@@ -6823,11 +6824,12 @@ DATA = [
                 },
             },
             {
-                'round': 256,
+                'round': 32,
                 'players': [
                     ADRIAN_MANNARINO,
                     DAMIR_DZUMHUR,
                 ],
+                'score': [(7, 6), (6, 0)],
                 'odds': {
                     ADRIAN_MANNARINO: 1.80,
                     DAMIR_DZUMHUR: 2.00,
@@ -6926,13 +6928,14 @@ DATA = [
                 },
             },
 
-            #
+            # 2019-10-16
             {
-                'round': 16,
+                'round': 32,
                 'players': [
                     EGOR_GERASIMOV,
                     THOMAS_FABBIANO,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
                     EGOR_GERASIMOV: 1.26,
                     THOMAS_FABBIANO: 3.80,
@@ -6946,6 +6949,7 @@ DATA = [
                     ANDREAS_SEPPI,
                     ROBERTO_CARBALLES_BAENA,
                 ],
+                'score': [(5, 7), (6, 1), (6, 3)],
                 'odds': {
                     ANDREAS_SEPPI: 1.36,
                     ROBERTO_CARBALLES_BAENA: 3.10,
@@ -6956,12 +6960,13 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    ALIBEK_KACHMAZOV,
                     ALEN_AVIDZBA,
+                    ALIBEK_KACHMAZOV,
                 ],
+                'score': [(6, 1), (4, 6), (6, 1)],
                 'odds': {
-                    ALIBEK_KACHMAZOV: 3.20,
                     ALEN_AVIDZBA: 1.34,
+                    ALIBEK_KACHMAZOV: 3.20,
                 },
             },
             {
@@ -6970,6 +6975,7 @@ DATA = [
                     ADRIAN_MANNARINO,
                     MIKHAIL_KUKUSHKIN,
                 ],
+                'score': [(7, 6), (6, 2)],
                 'odds': {
                     ADRIAN_MANNARINO: 1.52,
                     MIKHAIL_KUKUSHKIN: 2.50,
@@ -6980,12 +6986,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    LUKAS_ROSOL,
                     DUSAN_LAJOVIC,
+                    LUKAS_ROSOL,
                 ],
+                'score': [(6, 4), (6, 7), (6, 3)],
                 'odds': {
-                    LUKAS_ROSOL: 2.15,
                     DUSAN_LAJOVIC: 1.68,
+                    LUKAS_ROSOL: 2.15,
                 },
                 'prediction': DUSAN_LAJOVIC,
                 'bet': 1,
@@ -6993,14 +7000,69 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    PHILIPP_KOHLSCHREIBER,
                     KAREN_KHACHANOV,
+                    PHILIPP_KOHLSCHREIBER,
                 ],
+                'score': [(3, 6), (6, 3), (7, 6)],
                 'odds': {
-                    PHILIPP_KOHLSCHREIBER: 3.40,
                     KAREN_KHACHANOV: 1.30,
+                    PHILIPP_KOHLSCHREIBER: 3.40,
                 },
             },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    NIKOLA_MILOJEVIC,
+                    ALEN_AVIDZBA,
+                ],
+                'odds': {
+                    NIKOLA_MILOJEVIC: 1.24,
+                    ALEN_AVIDZBA: 4.00,
+                },
+                'prediction': NIKOLA_MILOJEVIC,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    EGOR_GERASIMOV,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 2.70,
+                    ANDREY_RUBLEV: 1.45,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    JEREMY_CHARDY,
+                    MIOMIR_KECMANOVIC,
+                ],
+                'odds': {
+                    JEREMY_CHARDY: 1.62,
+                    MIOMIR_KECMANOVIC: 2.25,
+                },
+                'prediction': JEREMY_CHARDY,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARIN_CILIC,
+                    IVO_KARLOVIC,
+                ],
+                'odds': {
+                    MARIN_CILIC: 1.30,
+                    IVO_KARLOVIC: 3.40,
+                },
+                'prediction': MARIN_CILIC,
+                'bet': 1,
+            },
+
+            #
         ]
     },
 
@@ -7324,24 +7386,26 @@ DATA = [
                 'bet': 5,
             },
 
-            #
+            # 2019-10-16
             {
                 'round': 16,
                 'players': [
                     YOSHIHITO_NISHIOKA,
                     TAYLOR_FRITZ,
                 ],
+                'score': [(7, 5), (6, 4)],
                 'odds': {
                     YOSHIHITO_NISHIOKA: 2.25,
                     TAYLOR_FRITZ: 1.62,
                 },
             },
             {
-                'round': 16,
+                'round': 32,
                 'players': [
                     MIKAEL_YMER,
                     JOAO_SOUSA,
                 ],
+                'score': [(7, 5), (6, 4)],
                 'odds': {
                     MIKAEL_YMER: 1.62,
                     JOAO_SOUSA: 2.25,
@@ -7355,6 +7419,7 @@ DATA = [
                     SAM_QUERREY,
                     GRIGOR_DIMITROV,
                 ],
+                'score': [(6, 7), (6, 3), (7, 6)],
                 'odds': {
                     SAM_QUERREY: 2.30,
                     GRIGOR_DIMITROV: 1.60,
@@ -7363,16 +7428,87 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    DANIEL_EVANS,
                     FILIP_KRAJINOVIC,
+                    DANIEL_EVANS,
                 ],
+                'score': [(7, 5), (2, 6), (6, 3)],
                 'odds': {
-                    DANIEL_EVANS: 2.05,
                     FILIP_KRAJINOVIC: 1.75,
+                    DANIEL_EVANS: 2.05,
                 },
                 'prediction': FILIP_KRAJINOVIC,
                 'bet': 1,
             },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    GIANLUCA_MAGER,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.09,
+                    GIANLUCA_MAGER: 7.00,
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEFANO_TRAVAGLIA,
+                    YUICHI_SUGITA,
+                ],
+                'odds': {
+                    STEFANO_TRAVAGLIA: 1.75,
+                    YUICHI_SUGITA: 2.05,
+                },
+                'prediction': STEFANO_TRAVAGLIA,
+                'bet': 2,
+            },
+            {
+                'round': 16,
+                'players': [
+                    FABIO_FOGNINI,
+                    JANKO_TIPSAREVIC,
+                ],
+                'odds': {
+                    FABIO_FOGNINI: 1.24,
+                    JANKO_TIPSAREVIC: 4.00,
+                },
+                'prediction': FABIO_FOGNINI,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    ALEXEI_POPYRIN,
+                ],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.36,
+                    ALEXEI_POPYRIN: 3.10,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 6,
+            },
+            {
+                'round': 16,
+                'players': [
+                    MIKAEL_YMER,
+                    CEDRIC_MARCEL_STEBE,
+                ],
+                'odds': {
+                    MIKAEL_YMER: 1.26,
+                    CEDRIC_MARCEL_STEBE: 3.80,
+                },
+                'prediction': MIKAEL_YMER,
+                'bet': 3,
+            },
+
+            #
+
         ],
     },
 
@@ -7689,13 +7825,14 @@ DATA = [
                 'bet': 2,
             },
 
-            #
+            # 2019-10-16
             {
                 'round': 16,
                 'players': [
                     FRANCES_TIAFOE,
                     YANNICK_MADEN,
                 ],
+                'score': [(7, 6), (6, 3)],
                 'odds': {
                     FRANCES_TIAFOE: 1.55,
                     YANNICK_MADEN: 2.40,
@@ -7709,6 +7846,7 @@ DATA = [
                     PABLO_CUEVAS,
                     HUGO_DELLIEN,
                 ],
+                'score': [(6, 4), (6, 3)],
                 'odds': {
                     PABLO_CUEVAS: 1.26,
                     HUGO_DELLIEN: 3.80,
@@ -7722,6 +7860,7 @@ DATA = [
                     GUIDO_PELLA,
                     SOONWOO_KWON,
                 ],
+                'score': [(7, 5), (7, 5)],
                 'odds': {
                     GUIDO_PELLA: 1.90,
                     SOONWOO_KWON: 1.90,
@@ -7733,6 +7872,7 @@ DATA = [
                     GILLES_SIMON,
                     JO_WILFRIED_TSONGA,
                 ],
+                'score': [(6, 4), (7, 5)],
                 'odds': {
                     GILLES_SIMON: 3.40,
                     JO_WILFRIED_TSONGA: 1.30,
@@ -7746,6 +7886,7 @@ DATA = [
                     STAN_WAWRINKA,
                     FELICIANO_LOPEZ,
                 ],
+                'score': [(6, 7), (6, 4), (7, 6)],
                 'odds': {
                     STAN_WAWRINKA: 1.42,
                     FELICIANO_LOPEZ: 2.80,
@@ -7753,6 +7894,74 @@ DATA = [
                 'prediction': STAN_WAWRINKA,
                 'bet': 3,
             },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    FRANCES_TIAFOE,
+                ],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.58,
+                    FRANCES_TIAFOE: 2.35,
+                },
+                'prediction': JAN_LENNARD_STRUFF,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    MARIUS_COPIL,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.32,
+                    MARIUS_COPIL: 3.30,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    JANNIK_SINNER,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.30,
+                    JANNIK_SINNER: 3.40,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ANDY_MURRAY,
+                    PABLO_CUEVAS,
+                ],
+                'odds': {
+                    ANDY_MURRAY: 1.26,
+                    PABLO_CUEVAS: 3.80,
+                },
+                'prediction': ANDY_MURRAY,
+                'bet': 2,
+            },
+            {
+                'round': 16,
+                'players': [
+                    UGO_HUMBERT,
+                    DAVID_GOFFIN,
+                ],
+                'odds': {
+                    UGO_HUMBERT: 3.30,
+                    DAVID_GOFFIN: 1.32,
+                },
+            },
+
+            #
+
         ]
     },
 
