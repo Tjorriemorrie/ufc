@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 75.4  29.3    2619    2019 moscow                         (1, 992), (2, 428), (5, 214), (6, 206)
 # 72.9  24.4    2480    2018 eastbourne                     (1, 841), (2, 696), (5, 301), (3, 240)
 # 76.4  30.6    2743    2019 shangai                        (1, 1311), (3, 315), (4, 310), (2, 277)
 # 78.8  26.9    2253    2018 wimbledon                      (1, 1072), (4, 680), (3, 670), (2, 609)
@@ -27,6 +28,8 @@ from location import *
 # 67.7  19.4    288     opt step/subsample/scale
 
 # 71.8  23.2  865    2019-08-16
+
+
 DATA = [
     {
         'location': TOKYO,
@@ -2219,10 +2222,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': MOSCOW,
         'date': '2019-10-20',
@@ -2738,13 +2737,14 @@ DATA = [
                 'bet': 7,
             },
 
-            #
+            # 2019-10-20
             {
                 'round': 2,
                 'players': [
                     ANDREY_RUBLEV,
                     ADRIAN_MANNARINO,
                 ],
+                'score': [(6, 4), (6, 0)],
                 'odds': {
                     ANDREY_RUBLEV: 1.28,
                     ADRIAN_MANNARINO: 3.60,
@@ -3285,13 +3285,14 @@ DATA = [
                 'bet': 1,
             },
 
-            #
+            # 2019-10-20
             {
                 'round': 2,
                 'players': [
                     DENIS_SHAPOVALOV,
                     FILIP_KRAJINOVIC,
                 ],
+                'score': [(6, 4), (6, 4)],
                 'odds': {
                     DENIS_SHAPOVALOV: 1.42,
                     FILIP_KRAJINOVIC: 2.80,
@@ -3839,23 +3840,28 @@ DATA = [
                 'bet': 3,
             },
 
-            #
+            # 2019-10-20
             {
 
                 'round': 2,
-                 'players': [
-                     STAN_WAWRINKA,
+                'players': [
                      ANDY_MURRAY,
+                     STAN_WAWRINKA,
                  ],
+                'score': [(3, 6), (6, 4), (6, 4)],
                 'odds': {
-                    STAN_WAWRINKA: 1.58,
                     ANDY_MURRAY: 2.35,
+                    STAN_WAWRINKA: 1.58,
                 },
                 'prediction': STAN_WAWRINKA,
                 'bet': 3,
             }
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': VIENNA,
@@ -3972,16 +3978,17 @@ DATA = [
                 'bet': 4,
             },
 
-            #
+            # 2019-10-20
             {
                 'round': 256,
                 'players': [
-                    ALEXANDER_BUBLIK,
                     DAMIR_DZUMHUR,
+                    ALEXANDER_BUBLIK,
                 ],
+                'score': [(6, 3), (3, 6), (6, 1)],
                 'odds': {
-                    ALEXANDER_BUBLIK: 1.72,
                     DAMIR_DZUMHUR: 2.05,
+                    ALEXANDER_BUBLIK: 1.72,
                 },
                 'prediction': ALEXANDER_BUBLIK,
                 'bet': 2,
@@ -3992,6 +3999,7 @@ DATA = [
                     PHILIPP_KOHLSCHREIBER,
                     CAMERON_NORRIE,
                 ],
+                'score': [(6, 3), (6, 3)],
                 'odds': {
                     PHILIPP_KOHLSCHREIBER: 1.72,
                     CAMERON_NORRIE: 2.05,
@@ -4005,6 +4013,7 @@ DATA = [
                     ALJAZ_BEDENE,
                     FEDERICO_DELBONIS,
                 ],
+                'score': [(6, 2), (7, 6)],
                 'odds': {
                     ALJAZ_BEDENE: 1.26,
                     FEDERICO_DELBONIS: 2.60,
@@ -4018,6 +4027,7 @@ DATA = [
                     MARTON_FUCSOVICS,
                     STEFANO_TRAVAGLIA,
                 ],
+                'score': [(6, 3), (1, 6), (6, 2)],
                 'odds': {
                     MARTON_FUCSOVICS: 1.34,
                     STEFANO_TRAVAGLIA: 3.10,
@@ -4027,6 +4037,71 @@ DATA = [
             },
 
             #
+            {
+                'round': 32,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    PIERRE_HUGUES_HERBERT,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.38,
+                    PIERRE_HUGUES_HERBERT: 3.00,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    LORENZO_SONEGO,
+                ],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.62,
+                    LORENZO_SONEGO: 2.25,
+                },
+                'prediction': MARTON_FUCSOVICS,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    KYLE_EDMUND,
+                ],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.26,
+                    KYLE_EDMUND: 3.80,
+                },
+                'prediction': MATTEO_BERRETTINI,
+                'bet':3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    DAMIR_DZUMHUR,
+                ],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.32,
+                    DAMIR_DZUMHUR: 3.30,
+                },
+                'prediction': GRIGOR_DIMITROV,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    KAREN_KHACHANOV,
+                    HUBERT_HURKACZ,
+                ],
+                'odds': {
+                    KAREN_KHACHANOV: 1.62,
+                    HUBERT_HURKACZ: 2.25,
+                },
+                'prediction': KAREN_KHACHANOV,
+                'bet': 1,
+            },
             # {
             #     'round': 256,
             #     'players': [
@@ -4155,29 +4230,32 @@ DATA = [
                 'bet': 4,
             },
 
-            #
+            # 2019-10-20
             {
                 'round': 256,
                 'players': [
-                    GREGOIRE_BARRERE,
                     RICARDAS_BERANKIS,
+                    GREGOIRE_BARRERE,
                 ],
+                'score': [],
+                'retired': True,
                 'odds': {
-                    GREGOIRE_BARRERE: 1.75,
                     RICARDAS_BERANKIS: 2.00,
+                    GREGOIRE_BARRERE: 1.75,
                 },
                 'prediction': GREGOIRE_BARRERE,
-                'bet': 3,
+                'bet': 0,  # refunded 3,
             },
             {
                 'round': 256,
                 'players': [
-                    CASPER_RUUD,
                     PETER_GOJOWCZYK,
+                    CASPER_RUUD,
                 ],
+                'score': [(6, 1), (6, 1)],
                 'odds': {
-                    CASPER_RUUD: 1.75,
                     PETER_GOJOWCZYK: 2.00,
+                    CASPER_RUUD: 1.75,
                 },
             },
             {
@@ -4186,6 +4264,7 @@ DATA = [
                     ALEXEI_POPYRIN,
                     SOONWOO_KWON,
                 ],
+                'score': [(4, 6), (6, 3), (6, 4)],
                 'odds': {
                     ALEXEI_POPYRIN: 1.50,
                     SOONWOO_KWON: 2.50,
@@ -4196,16 +4275,71 @@ DATA = [
             {
                 'round': 256,
                 'players': [
-                    YOSHIHITO_NISHIOKA,
                     HUGO_DELLIEN,
+                    YOSHIHITO_NISHIOKA,
                 ],
+                'score': [(7, 5), (6, 2)],
                 'odds': {
-                    YOSHIHITO_NISHIOKA: 1.13,
                     HUGO_DELLIEN: 5.50,
+                    YOSHIHITO_NISHIOKA: 1.13,
                 },
                 'prediction': YOSHIHITO_NISHIOKA,
                 'bet': 8,
-            }
+            },
+
+            #
+            {
+                'round': 32,
+                'players': [
+                    ROGER_FEDERER,
+                    PETER_GOJOWCZYK,
+                ],
+                'odds': {
+                    ROGER_FEDERER: 1.04,
+                    PETER_GOJOWCZYK: 10.00,
+                },
+                'prediction': ROGER_FEDERER,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    MIOMIR_KECMANOVIC,
+                ],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 1.62,
+                    MIOMIR_KECMANOVIC: 2.25,
+                },
+                'prediction': JAN_LENNARD_STRUFF,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    HUGO_DELLIEN,
+                ],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.07,
+                    HUGO_DELLIEN: 8.00,
+                },
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 7,
+            },
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    HENRI_LAAKSONEN,
+                ],
+                'odds': {
+                    BENOIT_PAIRE: 1.48,
+                    HENRI_LAAKSONEN: 2.60,
+                },
+                'prediction': BENOIT_PAIRE,
+                'bet': 1,
+            },
         ]
     },
 
