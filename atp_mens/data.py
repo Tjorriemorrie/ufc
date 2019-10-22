@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 76.7  24.7    3453    2019 stockholm             (1, 707), (3, 409), (2, 407), (6, 322), (9, 293)
 # 77.4  24.1    2742    2018 antalya                        (2, 729), (1, 690), (5, 531), (3, 397)
 # 75.4  29.3    2619    2019 moscow                         (1, 992), (2, 428), (5, 214), (6, 206)
 # 72.9  24.4    2480    2018 eastbourne                     (1, 841), (2, 696), (5, 301), (3, 240)
@@ -4103,6 +4104,88 @@ DATA = [
                 'bet': 1,
             },
 
+            # 2019-10-22
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
+                    FELICIANO_LOPEZ,
+                ],
+                'score': [(6, 4), (6, 3)],
+                'odds': {
+                    GILLES_SIMON: 1.65,
+                    FELICIANO_LOPEZ: 2.20,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    GUIDO_PELLA,
+                ],
+                'score': [(6, 4), (6, 4)],
+                'odds': {
+                    ALJAZ_BEDENE: 1.65,
+                    GUIDO_PELLA: 2.20,
+                },
+                'prediction': ALJAZ_BEDENE,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    HYEON_CHUNG,
+                    MILOS_RAONIC,
+                ],
+                'score': [(6, 4), (7, 5)],
+                'odds': {
+                    HYEON_CHUNG: 2.40,
+                    MILOS_RAONIC: 1.55,
+                },
+                'prediction': MILOS_RAONIC,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    NIKOLOZ_BASILASHVILI,
+                ],
+                'score': [(4, 6), (6, 2), (6, 1)],
+                'odds': {
+                    FERNANDO_VERDASCO: 2.40,
+                    NIKOLOZ_BASILASHVILI: 1.55,
+                },
+                'prediction': NIKOLOZ_BASILASHVILI,
+                'bet': 8,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DOMINIC_THIEM,
+                    JO_WILFRIED_TSONGA,
+                ],
+                'score': [(6, 4), (7, 6)],
+                'odds': {
+                    DOMINIC_THIEM: 1.42,
+                    JO_WILFRIED_TSONGA: 2.80,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    JANNIK_SINNER,
+                    PHILIPP_KOHLSCHREIBER,
+                ],
+                'score': [(6, 3), (6, 4)],
+                'odds': {
+                    JANNIK_SINNER: 2.10,
+                    PHILIPP_KOHLSCHREIBER: 1.70,
+                },
+                'prediction': PHILIPP_KOHLSCHREIBER,
+                'bet': 1,
+            },
+
             #
             {
                 'round': 32,
@@ -4160,80 +4243,6 @@ DATA = [
                     ANDREY_RUBLEV: 1.68,
                     FELIX_AUGER_ALIASSIME: 2.15,
                 },
-            },
-            {
-                'round': 32,
-                'players': [
-                    FELICIANO_LOPEZ,
-                    GILLES_SIMON,
-                ],
-                'odds': {
-                    FELICIANO_LOPEZ: 2.20,
-                    GILLES_SIMON: 1.65,
-                },
-            },
-            {
-                'round': 32,
-                'players': [
-                    ALJAZ_BEDENE,
-                    GUIDO_PELLA,
-                ],
-                'odds': {
-                    ALJAZ_BEDENE: 1.65,
-                    GUIDO_PELLA: 2.20,
-                },
-                'prediction': ALJAZ_BEDENE,
-                'bet': 4,
-            },
-            {
-                'round': 32,
-                'players': [
-                    MILOS_RAONIC,
-                    HYEON_CHUNG,
-                ],
-                'odds': {
-                    MILOS_RAONIC: 1.55,
-                    HYEON_CHUNG: 2.40,
-                },
-                'prediction': MILOS_RAONIC,
-                'bet': 1,
-            },
-            {
-                'round': 32,
-                'players': [
-                    NIKOLOZ_BASILASHVILI,
-                    FERNANDO_VERDASCO,
-                ],
-                'odds': {
-                    NIKOLOZ_BASILASHVILI: 1.55,
-                    FERNANDO_VERDASCO: 2.40,
-                },
-                'prediction': NIKOLOZ_BASILASHVILI,
-                'bet': 8,
-            },
-            {
-                'round': 32,
-                'players': [
-                    DOMINIC_THIEM,
-                    JO_WILFRIED_TSONGA,
-                ],
-                'odds': {
-                    DOMINIC_THIEM: 1.42,
-                    JO_WILFRIED_TSONGA: 2.80,
-                },
-            },
-            {
-                'round': 32,
-                'players': [
-                    PHILIPP_KOHLSCHREIBER,
-                    JANNIK_SINNER,
-                ],
-                'odds': {
-                    PHILIPP_KOHLSCHREIBER: 1.70,
-                    JANNIK_SINNER: 2.10,
-                },
-                'prediction': PHILIPP_KOHLSCHREIBER,
-                'bet': 1,
             },
 
             #
@@ -4468,13 +4477,14 @@ DATA = [
                 'bet': 1,
             },
 
-            #
+            # 2019-10-22
             {
                 'round': 32,
                 'players': [
                     RADU_ALBOT,
                     DUSAN_LAJOVIC,
                 ],
+                'score': [(2, 6), (6, 3), (6, 4)],
                 'odds': {
                     RADU_ALBOT: 1.65,
                     DUSAN_LAJOVIC: 2.20,
@@ -4485,34 +4495,37 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    CHRISTIAN_GARIN,
                     REILLY_OPELKA,
+                    CHRISTIAN_GARIN,
                 ],
+                'score': [(7, 6), (7, 6)],
                 'odds': {
-                    CHRISTIAN_GARIN: 2.80,
                     REILLY_OPELKA: 1.42,
+                    CHRISTIAN_GARIN: 2.80,
                 },
             },
             {
                 'round': 32,
                 'players': [
-                    ALEXEI_POPYRIN,
                     FABIO_FOGNINI,
+                    ALEXEI_POPYRIN,
                 ],
+                'score': [(6, 2), (6, 4)],
                 'odds': {
-                    ALEXEI_POPYRIN: 1.90,
                     FABIO_FOGNINI: 1.90,
+                    ALEXEI_POPYRIN: 1.90,
                 },
             },
             {
                 'round': 32,
                 'players': [
-                    ALEXANDER_ZVEREV,
                     TAYLOR_FRITZ,
+                    ALEXANDER_ZVEREV,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
-                    ALEXANDER_ZVEREV: 1.22,
                     TAYLOR_FRITZ: 4.20,
+                    ALEXANDER_ZVEREV: 1.22,
                 },
                 'prediction': ALEXANDER_ZVEREV,
                 'bet': 1,
@@ -4523,6 +4536,7 @@ DATA = [
                     RICHARD_GASQUET,
                     JUAN_IGNACIO_LONDERO,
                 ],
+                'score': [(6, 1), (7, 6)],
                 'odds': {
                     RICHARD_GASQUET: 1.48,
                     JUAN_IGNACIO_LONDERO: 2.60,
@@ -4536,6 +4550,7 @@ DATA = [
                     STEFANOS_TSITSIPAS,
                     ALBERT_RAMOS_VINOLAS,
                 ],
+                'score': [(6, 3), (7, 6)],
                 'odds': {
                     STEFANOS_TSITSIPAS: 1.16,
                     ALBERT_RAMOS_VINOLAS: 5.00,
@@ -4549,6 +4564,7 @@ DATA = [
                     ROBERTO_BAUTISTA_AGUT,
                     MARIUS_COPIL,
                 ],
+                'score': [(6, 4), (7, 5)],
                 'odds': {
                     ROBERTO_BAUTISTA_AGUT: 1.28,
                     MARIUS_COPIL: 3.60,
