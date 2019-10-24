@@ -4269,9 +4269,86 @@ DATA = [
                     MARTON_FUCSOVICS,
                     KAREN_KHACHANOV,
                 ],
+                'score': [(6, 3), (4, 6), (4, 1)],
                 'odds': {
                     MARTON_FUCSOVICS: 3.10,
                     KAREN_KHACHANOV: 1.36,
+                },
+            },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    SAM_QUERREY,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.80,
+                    SAM_QUERREY: 2.00,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    MIKHAIL_KUKUSHKIN,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.34,
+                    MIKHAIL_KUKUSHKIN: 3.20,
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 7,
+            },
+            {
+                'round': 16,
+                'players': [
+                    HYEON_CHUNG,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    HYEON_CHUNG: 2.15,
+                    ANDREY_RUBLEV: 1.68,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    ALJAZ_BEDENE,
+                    GILLES_SIMON,
+                ],
+                'odds': {
+                    ALJAZ_BEDENE: 1.70,
+                    GILLES_SIMON: 2.10,
+                },
+                'prediction': ALJAZ_BEDENE,
+                'bet': 13,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DOMINIC_THIEM,
+                    FERNANDO_VERDASCO,
+                ],
+                'odds': {
+                    DOMINIC_THIEM: 1.24,
+                    FERNANDO_VERDASCO: 4.00,
+                },
+                'prediction': DOMINIC_THIEM,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    JANNIK_SINNER,
+                    GAEL_MONFILS,
+                ],
+                'odds': {
+                    JANNIK_SINNER: 1.90,
+                    GAEL_MONFILS: 1.90,
                 },
             },
 
@@ -4710,6 +4787,69 @@ DATA = [
                 'odds': {
                     JAN_LENNARD_STRUFF: 1.30,
                     HENRI_LAAKSONEN: 3.40,
+                },
+            },
+
+            #
+            {
+                'round': 16,
+                'players': [
+                    DAVID_GOFFIN,
+                    REILLY_OPELKA,
+                ],
+                'odds': {
+                    DAVID_GOFFIN: 1.36,
+                    REILLY_OPELKA: 3.10,
+                },
+                'prediction': DAVID_GOFFIN,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    RICHARD_GASQUET,
+                    ROBERTO_BAUTISTA_AGUT,
+                ],
+                'odds': {
+                    RICHARD_GASQUET: 3.30,
+                    ROBERTO_BAUTISTA_AGUT: 1.32,
+                },
+                'prediction': RICHARD_GASQUET,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    RICARDAS_BERANKIS,
+                ],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.16,
+                    RICARDAS_BERANKIS: 5.00,
+                },
+                'prediction': STEFANOS_TSITSIPAS,
+                'bet': 7,
+            },
+            {
+                'round': 16,
+                'players': [
+                    FRANCES_TIAFOE,
+                    STAN_WAWRINKA,
+                ],
+                'odds': {
+                    FRANCES_TIAFOE: 3.40,
+                    STAN_WAWRINKA: 1.30,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    FABIO_FOGNINI,
+                ],
+                'odds': {
+                    FILIP_KRAJINOVIC: 1.95,
+                    FABIO_FOGNINI: 1.85,
                 },
             },
 
