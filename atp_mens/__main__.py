@@ -62,17 +62,9 @@ def main(hyper_params, train=0):
     bet_drsw_a = -0.11894393052642555
     bet_drsw_b = -12.115258857498434
 
-    # bet_spd_a, bet_spd_b, bet_upsr_a, bet_upsr_b = hyper_params
-    bet_spd_a = -0.07444223104793507
-    bet_spd_b = -3.5395144456935306
+    # bet_upsr_a, bet_upsr_b = hyper_params
     bet_upsr_a = -1.1472377345433402
     bet_upsr_b = -2.6443550796888946
-
-    # bet_setl_a, bet_setl_b, bet_sfcw_a, bet_sfcw_b = hyper_params 
-    bet_setl_a = -0.011568821230207207
-    bet_setl_b = -3.6684722793964224
-    bet_sfcw_a = 0.04213547907791212
-    bet_sfcw_b = -2.880288076766188
 
     # bet_upsl_a, bet_upsl_b, bet_tma_a, bet_tma_b = hyper_params
     bet_upsl_a = -0.30864955126006566
@@ -151,6 +143,24 @@ def main(hyper_params, train=0):
     bet_tmi_b = 1.1603475232022402
     bet_tmi_min = -0.18767965541430037
     bet_tmi_max = 0.08739521735249633
+
+    # bet_spd_a, bet_spd_b, bet_spd_min, bet_spd_max = hyper_params
+    bet_spd_a = 0.9571243791234303
+    bet_spd_b = 0.6025266976999
+    bet_spd_min = -0.5931258469093392
+    bet_spd_max = 0.2460889062270275
+
+    # bet_setl_a, bet_setl_b, bet_setl_min, bet_setl_max = hyper_params
+    bet_setl_a = -2.4169264374450417
+    bet_setl_b = -4.762662039768491
+    bet_setl_min = -0.1522206015361124
+    bet_setl_max = 0.32331808123494954
+    
+    # bet_sfcw_a, bet_sfcw_b, bet_sfcw_min, bet_sfcw_max = hyper_params
+    bet_sfcw_a = 0.23000622036451934
+    bet_sfcw_b = 0.5619994966761088
+    bet_sfcw_min = 0.12379332324603813
+    bet_sfcw_max = 0.0914482127026605
 
     # init
     start_date = None
@@ -434,7 +444,7 @@ def main(hyper_params, train=0):
                 p_sfcw = p1_surface_wins - p2_surface_wins
             else:
                 p_sfcw = p2_surface_wins - p1_surface_wins
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_sfcw_a, bet_sfcw_b], p_sfcw, 'sfcw')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_sfcw_a, bet_sfcw_b], p_sfcw, 'sfcw', bet_min=bet_sfcw_min, bet_max=bet_sfcw_max)
 
             # surface winrate
             if p1_odds < p2_odds:
@@ -450,7 +460,7 @@ def main(hyper_params, train=0):
                 p_spd = p1_speed - p2_speed
             else:
                 p_spd = p2_speed - p1_speed
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_spd_a, bet_spd_b], p_spd, 'spd')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_spd_a, bet_spd_b], p_spd, 'spd', bet_min=bet_spd_min, bet_max=bet_spd_max)
 
             # sets wins
             if p1_odds < p2_odds:
@@ -464,7 +474,7 @@ def main(hyper_params, train=0):
                 p_setl = p2_sets_losses - p1_sets_losses
             else:
                 p_setl = p1_sets_losses - p2_sets_losses
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_setl_a, bet_setl_b], p_setl, 'setl')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_setl_a, bet_setl_b], p_setl, 'setl', bet_min=bet_setl_min, bet_max=bet_setl_max)
 
             # sets winrate
             if p1_odds < p2_odds:
@@ -694,10 +704,8 @@ big_multis = {
     'drs': 1,
     'tsq': 1,
     'rnd': 1,
-    'sfcw': 1,
     'setl': 1,
     'upsr': 1,
-    'spd': 1,
     'drsw': 1,
     'setr': 1,
 }
@@ -712,14 +720,7 @@ def run():
         # 'bet_drsw_a', 'bet_drsw_b',  # 586       -  1618     -     -
 
         # 77    71      24      2700
-        # 'bet_spd_a', 'bet_spd_b',    # 583       -     -  1390     -
         # 'bet_upsr_a', 'bet_upsr_b',  # 600       -     -     -     -
-
-        # ^ MAJOR CHANGE ^ spd 2 -> 1
-
-        # 78    71      24      2700
-        # 'bet_setl_a', 'bet_setl_b',  # 484       -     -     -     -
-        # 'bet_sfcw_a', 'bet_sfcw_b',  # 581       -  1592  1414     -
 
         # ^ MAJOR CHANGE ^ sfcw 2 -> 1
 
@@ -780,9 +781,18 @@ def run():
         # 'bet_tiel_a', 'bet_tiel_b', 'bet_tiel_min', 'bet_tiel_max',  #   -  1621  1381     -   0.0
 
         # 17.8  62*29   82  3600
-        'bet_tmi_a', 'bet_tmi_b', 'bet_tmi_min', 'bet_tmi_max',     #    -     -     -  1590   0.0
+        # 'bet_tmi_a', 'bet_tmi_b', 'bet_tmi_min', 'bet_tmi_max',      #   -     -     -  1590   0.0
+
+        # 17.9  63*29   82  3590
+        # 'bet_spd_a', 'bet_spd_b', 'bet_spd_min', 'bet_spd_max',      #   -     -  1390     -    -2
+
+        # 17.9  63*29   82  3590
+        # 'bet_setl_a', 'bet_setl_b', 'bet_setl_min', 'bet_setl_max',  #   -     -     -     -     0
+
+        # 17.9  63*29   82  3590
+        'bet_sfcw_a', 'bet_sfcw_b', 'bet_sfcw_min', 'bet_sfcw_max',  #   -  1592  1414     -     0
     ]
-    tolx = 1600  # higher is slower
+    tolx = 1450  # higher is slower
     params = [0, 0, 0, 0]
     bounds = [
         [-np.inf, -np.inf, -1, 0],
