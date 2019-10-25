@@ -2,7 +2,8 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
-# 76.7  24.7    3453    2019 stockholm             (1, 707), (3, 409), (2, 407), (6, 322), (9, 293)
+# 84.5  31.3    3462    2018 london                 (1, 680), (7, 470), (3, 409), (2, 282), (6, 279)
+# 76.7  24.7    3453    2019 stockholm              (1, 707), (3, 409), (2, 407), (6, 322), (9, 293)
 # 77.4  24.1    2742    2018 antalya                        (2, 729), (1, 690), (5, 531), (3, 397)
 # 75.4  29.3    2619    2019 moscow                         (1, 992), (2, 428), (5, 214), (6, 206)
 # 72.9  24.4    2480    2018 eastbourne                     (1, 841), (2, 696), (5, 301), (3, 240)
@@ -4276,13 +4277,14 @@ DATA = [
                 },
             },
 
-            #
+            # 2019-10-24
             {
                 'round': 16,
                 'players': [
                     DIEGO_SCHWARTZMAN,
                     SAM_QUERREY,
                 ],
+                'score': [(6, 7), (6, 4), (7, 6)],
                 'odds': {
                     DIEGO_SCHWARTZMAN: 1.80,
                     SAM_QUERREY: 2.00,
@@ -4296,6 +4298,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA,
                     MIKHAIL_KUKUSHKIN,
                 ],
+                'score': [(6, 7), (6, 4), (6, 1)],
                 'odds': {
                     PABLO_CARRENO_BUSTA: 1.34,
                     MIKHAIL_KUKUSHKIN: 3.20,
@@ -4306,12 +4309,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    HYEON_CHUNG,
                     ANDREY_RUBLEV,
+                    HYEON_CHUNG,
                 ],
+                'score': [(6, 4), (6, 2)],
                 'odds': {
-                    HYEON_CHUNG: 2.15,
                     ANDREY_RUBLEV: 1.68,
+                    HYEON_CHUNG: 2.15,
                 },
             },
             {
@@ -4320,6 +4324,7 @@ DATA = [
                     ALJAZ_BEDENE,
                     GILLES_SIMON,
                 ],
+                'score': [(6, 2), (3, 6), (6, 3)],
                 'odds': {
                     ALJAZ_BEDENE: 1.70,
                     GILLES_SIMON: 2.10,
@@ -4333,6 +4338,7 @@ DATA = [
                     DOMINIC_THIEM,
                     FERNANDO_VERDASCO,
                 ],
+                'score': [(3, 6), (6, 3), (6, 2)],
                 'odds': {
                     DOMINIC_THIEM: 1.24,
                     FERNANDO_VERDASCO: 4.00,
@@ -4343,12 +4349,61 @@ DATA = [
             {
                 'round': 16,
                 'players': [
+                    GAEL_MONFILS,
                     JANNIK_SINNER,
+                ],
+                'score': [(6, 3), (7, 6)],
+                'odds': {
+                    GAEL_MONFILS: 1.90,
+                    JANNIK_SINNER: 1.90,
+                },
+            },
+
+            #
+            {
+                'round': 8,
+                'players': [
+                    MATTEO_BERRETTINI,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    MATTEO_BERRETTINI: 1.60,
+                    ANDREY_RUBLEV: 2.30,
+                },
+                'prediction': MATTEO_BERRETTINI,
+                'bet': 6,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DOMINIC_THIEM,
+                    PABLO_CARRENO_BUSTA,
+                ],
+                'odds': {
+                    DOMINIC_THIEM: 1.26,
+                    PABLO_CARRENO_BUSTA: 3.80,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    KAREN_KHACHANOV,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 2.25,
+                    KAREN_KHACHANOV: 1.62,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALJAZ_BEDENE,
                     GAEL_MONFILS,
                 ],
                 'odds': {
-                    JANNIK_SINNER: 1.90,
-                    GAEL_MONFILS: 1.90,
+                    ALJAZ_BEDENE: 2.50,
+                    GAEL_MONFILS: 1.52,
                 },
             },
 
@@ -4790,16 +4845,17 @@ DATA = [
                 },
             },
 
-            #
+            # 2019-10-24
             {
                 'round': 16,
                 'players': [
-                    DAVID_GOFFIN,
                     REILLY_OPELKA,
+                    DAVID_GOFFIN,
                 ],
+                'score': [(6, 7), (7, 6), (7, 5)],
                 'odds': {
-                    DAVID_GOFFIN: 1.36,
                     REILLY_OPELKA: 3.10,
+                    DAVID_GOFFIN: 1.36,
                 },
                 'prediction': DAVID_GOFFIN,
                 'bet': 5,
@@ -4807,12 +4863,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    RICHARD_GASQUET,
                     ROBERTO_BAUTISTA_AGUT,
+                    RICHARD_GASQUET,
                 ],
+                'score': [(6, 2), (4, 6), (6, 3)],
                 'odds': {
-                    RICHARD_GASQUET: 3.30,
                     ROBERTO_BAUTISTA_AGUT: 1.32,
+                    RICHARD_GASQUET: 3.30,
                 },
                 'prediction': RICHARD_GASQUET,
                 'bet': 1,
@@ -4823,6 +4880,7 @@ DATA = [
                     STEFANOS_TSITSIPAS,
                     RICARDAS_BERANKIS,
                 ],
+                'score': [(6, 7), (6, 2), (6, 4)],
                 'odds': {
                     STEFANOS_TSITSIPAS: 1.16,
                     RICARDAS_BERANKIS: 5.00,
@@ -4833,12 +4891,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    FRANCES_TIAFOE,
                     STAN_WAWRINKA,
+                    FRANCES_TIAFOE,
                 ],
+                'score': [(6, 3), (3, 6), (7, 5)],
                 'odds': {
-                    FRANCES_TIAFOE: 3.40,
                     STAN_WAWRINKA: 1.30,
+                    FRANCES_TIAFOE: 3.40,
                 },
             },
             {
@@ -4847,10 +4906,52 @@ DATA = [
                     FILIP_KRAJINOVIC,
                     FABIO_FOGNINI,
                 ],
+                'score': [(6, 2), (6, 4)],
                 'odds': {
                     FILIP_KRAJINOVIC: 1.95,
                     FABIO_FOGNINI: 1.85,
                 },
+            },
+
+            #
+            {
+                'round': 8,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    REILLY_OPELKA,
+                ],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.45,
+                    REILLY_OPELKA: 2.70,
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    JAN_LENNARD_STRUFF,
+                ],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.48,
+                    JAN_LENNARD_STRUFF: 2.60,
+                },
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 2,
+            },
+            {
+                'round': 8,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    FILIP_KRAJINOVIC,
+                ],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.38,
+                    FILIP_KRAJINOVIC: 3.00,
+                },
+                'prediction': STEFANOS_TSITSIPAS,
+                'bet': 7,
             },
 
             #

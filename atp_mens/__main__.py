@@ -60,33 +60,11 @@ def main(hyper_params, train=0):
     bet_lati_a = 74.90151457265564
     bet_lati_b = -0.16471018239487678
 
-    # bet_upsr_a, bet_upsr_b = hyper_params
-    bet_upsr_a = -1.1472377345433402
-    bet_upsr_b = -2.6443550796888946
-
-    # bet_tma_a, bet_tma_b = hyper_params
-    bet_tma_a = -1.821413997305747
-    bet_tma_b = -2.8618677973783018
-
     # bet_tier_a, bet_tier_b = hyper_params
     bet_tier_a = 47.06772988636639
     bet_tier_b = 0.41504056661799316
 
-    # bet_tsq_a, bet_tsq_b, bet_gms_a, bet_gms_b = hyper_params
-    bet_tsq_a = -0.22744163434936968
-    bet_tsq_b = -0.31188243802084664
-    bet_gms_a = -0.7174849534751365
-    bet_gms_b = -3.1086942881862485
-
-    # bet_setr_a, bet_setr_b, bet_wnll_a, bet_wnll_b = hyper_params 
-    bet_setr_a = -0.3231482916086521
-    bet_setr_b = -1.1232691072073298
-    bet_wnll_a = 0.10150647122297901
-    bet_wnll_b = 0.1396274372679814
-
-    # bet_drs_a, bet_drs_b, bet_tiew_a, bet_tiew_b = hyper_params
-    bet_drs_a = 3.477834035100242
-    bet_drs_b = -4.8749310768067495
+    # bet_tiew_a, bet_tiew_b = hyper_params
     bet_tiew_a = -1.437212248269378
     bet_tiew_b = -4.086178271954256
 
@@ -174,6 +152,48 @@ def main(hyper_params, train=0):
     bet_rnd_min = -0.585231992156388
     bet_rnd_max = 0.1696250130038224
     
+    # bet_upsr_a, bet_upsr_b, bet_upsr_min, bet_upsr_max = hyper_params
+    bet_upsr_a = 0.011873997902583762
+    bet_upsr_b = -0.7051325384863423
+    bet_upsr_min = -0.2091419414012416
+    bet_upsr_max = 0.5808560328904425
+    
+    # bet_tsq_a, bet_tsq_b, bet_tsq_min, bet_tsq_max = hyper_params
+    bet_tsq_a = -1.8513681970681233
+    bet_tsq_b = 0.5692203639472946
+    bet_tsq_min = -0.21081293744245705
+    bet_tsq_max = 0.23912434996453724
+    
+    # bet_gms_a, bet_gms_b, bet_gms_min, bet_gms_max = hyper_params
+    bet_gms_a = 0.05876025704155456
+    bet_gms_b = 0.03453908278032676
+    bet_gms_min = -0.2887905840177829
+    bet_gms_max = 0.3296014963177507
+    
+    # bet_setr_a, bet_setr_b, bet_setr_min, bet_setr_max = hyper_params
+    bet_setr_a = -1.4866633890862047
+    bet_setr_b = 0.9840297556269318
+    bet_setr_min = -1.394837905578729
+    bet_setr_max = 0.07571563747523508
+    
+    # bet_wnll_a, bet_wnll_b, bet_wnll_min, bet_wnll_max = hyper_params 
+    bet_wnll_a = -0.6489481102676611
+    bet_wnll_b = 1.1532822402434701
+    bet_wnll_min = -0.027919013063604944
+    bet_wnll_max = 0.16630724906962194
+    
+    # bet_drs_a, bet_drs_b, bet_drs_min, bet_drs_max = hyper_params
+    bet_drs_a = 0.48452928717723837
+    bet_drs_b = 0.10178480126230635
+    bet_drs_min = -0.000935552699357446
+    bet_drs_max = 0.00046263136881127316
+    
+    # bet_tma_a, bet_tma_b, bet_tma_min, bet_tma_max = hyper_params
+    bet_tma_a = -1.821413997305747
+    bet_tma_b = -2.8618677973783018
+    bet_tma_min = 0
+    bet_tma_max = 2
+
     # init
     start_date = None
     ratings = defaultdict(lambda: Rating())
@@ -401,10 +421,10 @@ def main(hyper_params, train=0):
                 f_ts_max = p1_ts_max - p2_ts_max
             else:
                 f_ts_max = p2_ts_max - p1_ts_max
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tma_a, bet_tma_b], f_ts_max, 'tma')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tma_a, bet_tma_b], f_ts_max, 'tma', bet_min=bet_tma_min, bet_max=bet_tma_max)
 
             # trueskill match quality
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tsq_a, bet_tsq_b], ts_quality, 'tsq')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_tsq_a, bet_tsq_b], ts_quality, 'tsq', bet_min=bet_tsq_min, bet_max=bet_tsq_max)
 
             # wins and losses wins
             if p1_odds < p2_odds:
@@ -418,7 +438,7 @@ def main(hyper_params, train=0):
                 p_wnll = p2_losses - p1_losses
             else:
                 p_wnll = p1_losses - p2_losses
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_wnll_a, bet_wnll_b], p_wnll, 'wnll')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_wnll_a, bet_wnll_b], p_wnll, 'wnll', bet_min=bet_wnll_min, bet_max=bet_wnll_max)
 
             # wins and losses winrate
             if p1_odds < p2_odds:
@@ -449,7 +469,7 @@ def main(hyper_params, train=0):
                 p_drs = p1_doors_winrate - p2_doors_winrate
             else:
                 p_drs = p2_doors_winrate - p1_doors_winrate
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_drs_a, bet_drs_b], p_drs, 'drs')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_drs_a, bet_drs_b], p_drs, 'drs', bet_min=bet_drs_min, bet_max=bet_drs_max)
 
             # surface wins
             if p1_odds < p2_odds:
@@ -493,14 +513,14 @@ def main(hyper_params, train=0):
                 p_setr = p1_sets_winrate - p2_sets_winrate
             else:
                 p_setr = p2_sets_winrate - p1_sets_winrate
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_setr_a, bet_setr_b], p_setr, 'setr')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_setr_a, bet_setr_b], p_setr, 'setr', bet_min=bet_setr_min, bet_max=bet_setr_max)
 
             # games
             if p1_odds < p2_odds:
                 p_gms = p1_gms_avg - p2_gms_avg
             else:
                 p_gms = p2_gms_avg - p1_gms_avg
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_gms_a, bet_gms_b], p_gms, 'gms')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_gms_a, bet_gms_b], p_gms, 'gms', bet_min=bet_gms_min, bet_max=bet_gms_max)
 
             # ties wins
             if p1_odds < p2_odds:
@@ -549,7 +569,7 @@ def main(hyper_params, train=0):
                 p_upsr = p1_upsets_win_avg - p2_upsets_win_avg
             else:
                 p_upsr = p2_upsets_win_avg - p1_upsets_win_avg
-            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_upsr_a, bet_upsr_b], p_upsr, 'upsr')
+            bet_multi = up_multi_bet(bet_multi, bet_multis_cat, [bet_upsr_a, bet_upsr_b], p_upsr, 'upsr', bet_min=bet_upsr_min, bet_max=bet_upsr_max)
 
             # age
             if p1_odds < p2_odds:
@@ -646,6 +666,7 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
         days = (datetime.now() - start_date).days
         logger.info(f'Profit: per day: ${sum(payouts) / days:.2f}  per bet ${payouts.mean():.2f}')
         logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
+        bet_multis_cat = Counter(bet_multis_cat).items()
         # cat_multis = [(n, abs(v - len(accuracy) // 2)) for n, v in Counter(bet_multis_cat).items()]
         # stdev = statistics.stdev(i[1] for i in cat_multis)
         # cat_multis = [(n, v, 4 if v < stdev else 3 if v < stdev * 2 else 2) for n, v in cat_multis]
@@ -657,6 +678,7 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
         #         cat_multis[wrd] = {}
         #     cat_multis[wrd][s] = v
         # logger.info(f'cat multis: {cat_multis}')
+        logger.info(f'cat multis: {bet_multis_cat}')
 
     if actual[1]:
         tab = np.array(tab)
@@ -699,24 +721,17 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
 
 big_multis = {
     'setw': 4,
-    'wnll': 4,
     'lati': 4,
     'tier': 4,
 
     'sfcr': 2,
     'wnlw': 2,
     'tiew': 2,
-    'gms': 2,
-    'tma': 2,
     'drsl': 2,
 
     'upsw': 1,
     'odds': 1,
-    'drs': 1,
-    'tsq': 1,
     'setl': 1,
-    'upsr': 1,
-    'setr': 1,
 }
 
 
@@ -727,29 +742,14 @@ def run():
         # 77    72      24      2700
         # 'bet_lati_a', 'bet_lati_b',  # 662    1028   597   463   301
 
-        # 77    71      24      2700
-        # 'bet_upsr_a', 'bet_upsr_b',  # 600       -     -     -     -
-
         # ^ MAJOR CHANGE ^ sfcw 2 -> 1
-
-        # 'bet_tma_a', 'bet_tma_b',    # 613       -  1325     -   611
 
         # ^ MAJOR CHANGE ^ tma 1 -> 2
 
         # 'bet_tier_a', 'bet_tier_b',  # 643    1606   310   328    46
 
-        # 76    70      23      3500
-        # 'bet_tsq_a', 'bet_tsq_b',    # 500       -     -     -     -
-        # 'bet_gms_a', 'bet_gms_b',    # 528       -  1484  1411  1566
-
-        # 78    65      26      3400
-        # 'bet_setr_a', 'bet_setr_b',  # 487      14     -     -     -
-        # 'bet_wnll_a', 'bet_wnll_b',  # 501    1424   597   981   622
-
         # ^ MAJOR CHANGE ^ wnll 3 -> 4
 
-        # 77    66      26      3400
-        # 'bet_drs_a', 'bet_drs_b',    # 571       -     -  1541     -
         # 'bet_tiew_a', 'bet_tiew_b',  # 659      38  1784     -   891
 
         # ^ MAJOR CHANGE ^ drs 2 -> 1
@@ -800,23 +800,44 @@ def run():
         # 'bet_drsw_a', 'bet_drsw_b', 'bet_drsw_min', 'bet_drsw_max',  #   -  1618     -     -     0
 
         # 18.0  60*30   83  3504
-        # 'bet_upsl_a', 'bet_upsl_b', 'bet_upsl_min', 'bet_upsl_max',  #  33     -  1443  1606   0.1
+        # 'bet_upsl_a', 'bet_upsl_b', 'bet_upsl_min', 'bet_upsl_max',  #  33     -  1443  1606   .1
 
         # 18.0  60*30   83  3504
-        'bet_rnd_a', 'bet_rnd_b', 'bet_rnd_min', 'bet_rnd_max',      #   -     -     -     -     0
+        # 'bet_rnd_a', 'bet_rnd_b', 'bet_rnd_min', 'bet_rnd_max',      #   -     -     -     -   .0
+
+        # 18.1  61*30   83  3500
+        # 'bet_upsr_a', 'bet_upsr_b', 'bet_upsr_min', 'bet_upsr_max',  #   -     -     -     -   .0
+
+        # 18.1  61*30   83  3500
+        # 'bet_tsq_a', 'bet_tsq_b', 'bet_tsq_min', 'bet_tsq_max',      #   -     -     -     -   .0
+
+        # 18.1  61*30   83  3500
+        # 'bet_gms_a', 'bet_gms_b', 'bet_gms_min', 'bet_gms_max',      #   -  1484  1411  1566   .0
+
+        # 18.0  61*30   83  3500
+        # 'bet_setr_a', 'bet_setr_b', 'bet_setr_min', 'bet_setr_max',  #  14     -     -     -  -.1
+
+        # 18.5  59*31   85  3500
+        # 'bet_wnll_a', 'bet_wnll_b', 'bet_wnll_min', 'bet_wnll_max',  #1424   597   981   622   .0
+
+        # 18.5  59*31   85  3500
+        # 'bet_drs_a', 'bet_drs_b', 'bet_drs_min', 'bet_drs_max',      #   -     -  1541     -   .0
+
+        'bet_tma_a', 'bet_tma_b', 'bet_tma_min', 'bet_tma_max',    # 613       -  1325     -   611
+
     ]
-    tolx = 1350  # higher is slower
+    tolx = 1410  # higher is slower
     params = [0, 0, 0, 0]
     bounds = [
-        [-np.inf, -np.inf, -1, 0],
-        [np.inf, np.inf, 0, 1]
+        [-np.inf, -np.inf, -1.4, 0],
+        [np.inf, np.inf, 0, 1.4]
     ]
     assert len(params) == len(names)
     # assert len(params) == len(bounds)
 
     if train:
         time_start = time()
-        sigma = 0.75
+        sigma = 0.5
         opts = CMAOptions()
         opts['bounds'] = bounds
         es = CMAEvolutionStrategy(params, sigma, inopts=opts)
