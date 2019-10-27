@@ -1215,6 +1215,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    HUGO_GASTON: {
+        'born_at': (2000, 9, 26),
+        'height': 173,
+        'forehand': LH,
+        'backhand': THB,
+    },
     HUGO_GRENIER: {
         'born_at': (1996, 3, 23),
         'height': 196,
