@@ -2,19 +2,18 @@ from men import *
 from location import *
 
 # acc   roi     profit  desc
+# 76.3  21.3    2254    2019 vienna                 (1, 836), (4, 588), (2, 575), (5, 482), (3, 405)
 # 93.6  38.8    3474    2019 antwerp                (4, 335), (2, 323), (3, 268), (7, 251), (1, 247)
 # 84.5  31.3    3462    2018 london                 (1, 680), (7, 470), (3, 409), (2, 282), (6, 279)
 # 76.7  24.7    3453    2019 stockholm              (1, 707), (3, 409), (2, 407), (6, 322), (9, 293)
 # 77.4  24.1    2742    2018 antalya                        (2, 729), (1, 690), (5, 531), (3, 397)
-# 75.4  29.3    2619    2019 moscow                         (1, 992), (2, 428), (5, 214), (6, 206)
-# 72.9  24.4    2480    2018 eastbourne                     (1, 841), (2, 696), (5, 301), (3, 240)
 
+# 75.4  29.3    2619    2019 moscow                         (1, 992), (2, 428), (5, 214), (6, 206)
 # 76.4  30.6    2743    2019 shanghai                        (1, 1311), (3, 315), (4, 310), (2, 277)
 # 78.7  26.3    2111    2019 beijing                        (1, 1098), (3, 658), (4, 648), (2, 646)
 # 71.3  19.9    2675    2018 newport                        (2, 915), (1, 897), (4, 779), (5, 707)
-# 79.1  24.2    1431    2018 umag                           (1, 1143), (2, 758), (3, 445), (4, 264)
-# 79.2  29.1    1627    2019 zhuhai                         (1, 951), (2, 408), (4, 331), (3, 312)
 
+# 79.1  24.2    1431    2018 umag                           (1, 1143), (2, 758), (3, 445), (4, 264)
 # 77.4  24.3    1460    2019 chengdu                        (1, 1396), (2, 650), (3, 377), (4, 348)
 # 72.1  10.0    1191    2018 washington                     (3, 1187), (4, 538), (6, 337), (1, 283)
 # 71.4  11.5    351     2018 toronto                        (1, 1541), (2, 592), (3, 65), (4, 15)
@@ -5288,16 +5287,17 @@ DATA = [
                 },
             },
 
-            #
+            # 2019-10-28
             {
                 'round': 64,
                 'players': [
-                    NIKOLOZ_BASILASHVILI,
                     RADU_ALBOT,
+                    NIKOLOZ_BASILASHVILI,
                 ],
+                'score': [(6, 3), (6, 2)],
                 'odds': {
-                    NIKOLOZ_BASILASHVILI: 1.52,
                     RADU_ALBOT: 2.50,
+                    NIKOLOZ_BASILASHVILI: 1.52,
                 },
                 'prediction': NIKOLOZ_BASILASHVILI,
                 'bet': 3,
@@ -5308,6 +5308,7 @@ DATA = [
                     MARIN_CILIC,
                     HUBERT_HURKACZ,
                 ],
+                'score': [(7, 6), (6, 4)],
                 'odds': {
                     MARIN_CILIC: 1.62,
                     HUBERT_HURKACZ: 2.25,
@@ -5316,12 +5317,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    BORNA_CORIC,
                     FERNANDO_VERDASCO,
+                    BORNA_CORIC,
                 ],
+                'score': [(3, 6), (6, 4), (6, 3)],
                 'odds': {
-                    BORNA_CORIC: 1.70,
                     FERNANDO_VERDASCO: 2.10,
+                    BORNA_CORIC: 1.70,
                 },
                 'prediction': BORNA_CORIC,
                 'bet': 4,
@@ -5332,6 +5334,7 @@ DATA = [
                     JAN_LENNARD_STRUFF,
                     YOSHIHITO_NISHIOKA,
                 ],
+                'score': [(4, 6), (7, 5), (6, 2)],
                 'odds': {
                     JAN_LENNARD_STRUFF: 1.68,
                     YOSHIHITO_NISHIOKA: 2.15,
@@ -5342,12 +5345,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    SAM_QUERREY,
                     JEREMY_CHARDY,
+                    SAM_QUERREY,
                 ],
+                'score': [(5, 7), (6, 3), (7, 5)],
                 'odds': {
-                    SAM_QUERREY: 1.80,
                     JEREMY_CHARDY: 2.00,
+                    SAM_QUERREY: 1.80,
                 },
                 'prediction': SAM_QUERREY,
                 'bet': 1,
@@ -5355,23 +5359,25 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    CAMERON_NORRIE,
                     MILOS_RAONIC,
+                    CAMERON_NORRIE,
                 ],
+                'score': [(6, 3), (6, 2)],
                 'odds': {
-                    CAMERON_NORRIE: 2.50,
                     MILOS_RAONIC: 1.52,
+                    CAMERON_NORRIE: 2.50,
                 },
             },
             {
                 'round': 64,
                 'players': [
-                    PABLO_CUEVAS,
                     CHRISTIAN_GARIN,
+                    PABLO_CUEVAS,
                 ],
+                'score': [(6, 4), (6, 3)],
                 'odds': {
-                    PABLO_CUEVAS: 2.60,
                     CHRISTIAN_GARIN: 1.48,
+                    PABLO_CUEVAS: 2.60,
                 },
             },
             {
@@ -5380,6 +5386,7 @@ DATA = [
                     BENOIT_PAIRE,
                     DAMIR_DZUMHUR,
                 ],
+                'score': [(7, 5), (6, 4)],
                 'odds': {
                     BENOIT_PAIRE: 1.60,
                     DAMIR_DZUMHUR: 2.30,
@@ -5390,12 +5397,13 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    ANDREY_RUBLEV,
                     JO_WILFRIED_TSONGA,
+                    ANDREY_RUBLEV,
                 ],
+                'score': [(4, 6), (7, 5), (6, 4)],
                 'odds': {
-                    ANDREY_RUBLEV: 1.80,
                     JO_WILFRIED_TSONGA: 2.00,
+                    ANDREY_RUBLEV: 1.80,
                 },
                 'prediction': ANDREY_RUBLEV,
                 'bet': 4,
@@ -5406,12 +5414,139 @@ DATA = [
                     ADRIAN_MANNARINO,
                     CASPER_RUUD,
                 ],
+                'score': [(6, 4), (6, 2)],
                 'odds': {
                     ADRIAN_MANNARINO: 1.52,
                     CASPER_RUUD: 2.50,
                 },
                 'prediction': ADRIAN_MANNARINO,
                 'bet': 1,
+            },
+
+            #
+            {
+                'round': 64,
+                'players': [
+                    CORENTIN_MOUTET,
+                    DUSAN_LAJOVIC,
+                ],
+                'odds': {
+                    CORENTIN_MOUTET: 1.85,
+                    DUSAN_LAJOVIC: 1.95,
+                },
+                'prediction': CORENTIN_MOUTET,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    FRANCES_TIAFOE,
+                    TAYLOR_FRITZ,
+                ],
+                'odds': {
+                    FRANCES_TIAFOE: 1.80,
+                    TAYLOR_FRITZ: 2.00,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    LASLO_DJERE,
+                ],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.14,
+                    LASLO_DJERE: 5.50,
+                },
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    KAREN_KHACHANOV,
+                    JAN_LENNARD_STRUFF,
+                ],
+                'odds': {
+                    KAREN_KHACHANOV: 1.52,
+                    JAN_LENNARD_STRUFF: 2.50,
+                },
+                'prediction': KAREN_KHACHANOV,
+                'bet': 1,
+            },
+            {
+                'round': 64,
+                'players': [
+                    KYLE_EDMUND,
+                    RICARDAS_BERANKIS,
+                ],
+                'odds': {
+                    KYLE_EDMUND: 1.80,
+                    RICARDAS_BERANKIS: 2.00,
+                },
+                'prediction': KYLE_EDMUND,
+                'bet': 6,
+            },
+            {
+                'round': 64,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    GILLES_SIMON,
+                ],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.36,
+                    GILLES_SIMON: 3.10,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 4,
+            },
+            {
+                'round': 64,
+                'players': [
+                    RADU_ALBOT,
+                    ANDREAS_SEPPI,
+                ],
+                'odds': {
+                    RADU_ALBOT: 1.95,
+                    ANDREAS_SEPPI: 1.85,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    UGO_HUMBERT,
+                ],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.60,
+                    UGO_HUMBERT: 2.30,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    JEREMY_CHARDY,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.10,
+                    JEREMY_CHARDY: 6.50,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 5,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    FERNANDO_VERDASCO,
+                ],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.28,
+                    FERNANDO_VERDASCO: 3.60,
+                },
+                'prediction': ALEXANDER_ZVEREV,
+                'bet': 6,
             },
 
             #
