@@ -5722,16 +5722,17 @@ DATA = [
                 'bet': 5,
             },
 
-            #
+            # 2019-10-31
             {
                 'round': 16,
                 'players': [
-                    JEREMY_CHARDY,
                     CHRISTIAN_GARIN,
+                    JEREMY_CHARDY,
                 ],
+                'score': [(6, 7), (6, 4), (7, 6)],
                 'odds': {
-                    JEREMY_CHARDY: 1.60,
                     CHRISTIAN_GARIN: 2.30,
+                    JEREMY_CHARDY: 1.60,
                 },
             },
             {
@@ -5740,6 +5741,7 @@ DATA = [
                     GRIGOR_DIMITROV,
                     DOMINIC_THIEM,
                 ],
+                'score': [(6, 3), (6, 2)],
                 'odds': {
                     GRIGOR_DIMITROV: 2.10,
                     DOMINIC_THIEM: 1.70,
@@ -5748,12 +5750,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    ALEX_DE_MINAUR,
                     STEFANOS_TSITSIPAS,
+                    ALEX_DE_MINAUR,
                 ],
+                'score': [(6, 3), (6, 4)],
                 'odds': {
-                    ALEX_DE_MINAUR: 2.35,
                     STEFANOS_TSITSIPAS: 1.58,
+                    ALEX_DE_MINAUR: 2.35,
                 },
             },
             {
@@ -5762,6 +5765,7 @@ DATA = [
                     NOVAK_DJOKOVIC,
                     KYLE_EDMUND,
                 ],
+                'score': [(7, 6), (6, 1)],
                 'odds': {
                     NOVAK_DJOKOVIC: 1.08,
                     KYLE_EDMUND: 7.50,
@@ -5775,6 +5779,7 @@ DATA = [
                     JO_WILFRIED_TSONGA,
                     JAN_LENNARD_STRUFF,
                 ],
+                'score': [(2, 6), (6, 4), (7, 6)],
                 'odds': {
                     JO_WILFRIED_TSONGA: 1.60,
                     JAN_LENNARD_STRUFF: 2.30,
@@ -5785,12 +5790,13 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    ALEXANDER_ZVEREV,
                     DENIS_SHAPOVALOV,
+                    ALEXANDER_ZVEREV,
                 ],
+                'score': [(6, 2), (5, 7), (6, 2)],
                 'odds': {
-                    ALEXANDER_ZVEREV: 1.42,
                     DENIS_SHAPOVALOV: 2.80,
+                    ALEXANDER_ZVEREV: 1.42,
                 },
                 'prediction': ALEXANDER_ZVEREV,
                 'bet': 5,
@@ -5801,6 +5807,7 @@ DATA = [
                     RAFAEL_NADAL,
                     STAN_WAWRINKA,
                 ],
+                'score': [(6, 4), (6, 4)],
                 'odds': {
                     RAFAEL_NADAL: 1.24,
                     STAN_WAWRINKA: 4.00,
@@ -5814,6 +5821,7 @@ DATA = [
                     GAEL_MONFILS,
                     RADU_ALBOT,
                 ],
+                'score': [(4, 6), (6, 4), (6, 1)],
                 'odds': {
                     GAEL_MONFILS: 1.22,
                     RADU_ALBOT: 4.20,
