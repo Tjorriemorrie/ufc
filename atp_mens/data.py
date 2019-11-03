@@ -5830,7 +5830,105 @@ DATA = [
                 'bet': 2,
             },
 
+            # 2019-11-01
+            {
+                'round': 8,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    CHRISTIAN_GARIN,
+                ],
+                'score': [(6, 2), (7, 5)],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.24,
+                    CHRISTIAN_GARIN: 4.00,
+                },
+                'prediction': GRIGOR_DIMITROV,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'score': [(6, 1), (6, 2)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.26,
+                    STEFANOS_TSITSIPAS: 3.80,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 4,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    GAEL_MONFILS,
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.80,
+                    GAEL_MONFILS: 2.00,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    RAFAEL_NADAL,
+                    JO_WILFRIED_TSONGA,
+                ],
+                'score': [(7, 6), (6, 1)],
+                'odds': {
+                    RAFAEL_NADAL: 1.22,
+                    JO_WILFRIED_TSONGA: 4.20,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 2,
+            },
+
+            # 2019-11-02
+            {
+                'round': 4,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    GRIGOR_DIMITROV,
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.13,
+                    GRIGOR_DIMITROV: 6.00,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 1,
+            },
+            {
+                'round': 4,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    RAFAEL_NADAL,
+                ],
+                'score': [],
+                'retired': True,
+                'odds': {
+                    DENIS_SHAPOVALOV: 4.60,
+                    RAFAEL_NADAL: 1.20,
+                },
+            },
+
             #
+            {
+                'round': 2,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.10,
+                    DENIS_SHAPOVALOV: 6.50,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 5,
+            },
         ]
     }
 ]
