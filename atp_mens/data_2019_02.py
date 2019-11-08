@@ -605,7 +605,6 @@ DATA_2019_02 = [
                     MATTHIAS_BACHINGER,
                     RUBEN_BEMELMANS
                 ],
-                'odds'
                 'score': [(6, 3), (6, 4)],
                 'odds': {
                     MATTHIAS_BACHINGER: 1.75,
