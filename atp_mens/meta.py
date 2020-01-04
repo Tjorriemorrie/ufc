@@ -155,6 +155,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ALEKSANDRE_METREVELI: {
+        'born_at': (1993, 8, 10),
+        'height': 183,
+        'forehand': RH,
+        'backhand': THB,
+    },
     ALEN_AVIDZBA: {
         'born_at': (2000, 2, 24),
         'height': 188,
@@ -200,6 +206,12 @@ META = {
     ALEXANDER_BUBLIK: {
         'born_at': (1997, 6, 17),
         'height': 198,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    ALEXANDER_COZBINOV: {
+        'born_at': (1995, 4, 28),
+        'height': 188,
         'forehand': RH,
         'backhand': THB,
     },
@@ -1929,6 +1941,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    MARTIN_CUEVAS: {
+        'born_at': (1992, 1, 14),
+        'height': 191,
+        'forehand': RH,
+        'backhand': OHB,
+    },
     MARTIN_KLIZAN: {
         'born_at': (1989, 7, 11),
         'height': 191,
@@ -2039,6 +2057,12 @@ META = {
     MICHAEL_MMOH: {
         'born_at': (1998, 1, 10),
         'height': 188,
+        'forehand': RH,
+        'backhand': THB,
+    },
+    MICHAIL_PERVOLARAKIS: {
+        'born_at': (1996, 6, 6),
+        'height': 193,
         'forehand': RH,
         'backhand': THB,
     },
@@ -2931,6 +2955,12 @@ META = {
         'height': 170,
         'forehand': RH,
         'backhand': OHB,
+    },
+    VIKTOR_DURASOVIC: {
+        'born_at': (1997, 3, 19),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
     },
     VIKTOR_GALOVIC: {
         'born_at': (1990, 9, 19),
