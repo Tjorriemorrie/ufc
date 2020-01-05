@@ -6263,6 +6263,164 @@ DATA = [
     # Active
     ###############################################################################
 
+    {
+        'location': ATP_CUP,
+        'date': '2020-01-12',
+        'matches': [
+            # 2020-01-03
+            {
+                'round': 512,
+                'players': [
+                    STEVE_DARCIS,
+                    ALEXANDER_COZBINOV,
+                ],
+                'odds': {
+                    STEVE_DARCIS: 1.02,
+                    ALEXANDER_COZBINOV: 12.00,
+                },
+                'prediction': STEVE_DARCIS,
+                'bet': 1,
+            },
+            {
+                'round': 512,
+                'players': [
+                    MICHAIL_PERVOLARAKIS,
+                    FELIX_AUGER_ALIASSIME,
+                ],
+                'odds': {
+                    MICHAIL_PERVOLARAKIS: 9.00,
+                    FELIX_AUGER_ALIASSIME: 1.05,
+                },
+            },
+            {
+                'round': 512,
+                'players': [
+                    DAVID_GOFFIN,
+                    RADU_ALBOT,
+                ],
+                'odds': {
+                    DAVID_GOFFIN: 1.52,
+                    RADU_ALBOT: 2.50,
+                },
+                'prediction': DAVID_GOFFIN,
+                'bet': 5,
+            },
+            {
+                'round': 512,
+                'players': [
+                    TAYLOR_FRITZ,
+                    VIKTOR_DURASOVIC,
+                ],
+                'odds': {
+                    TAYLOR_FRITZ: 1.09,
+                    VIKTOR_DURASOVIC: 7.00,
+                },
+                'prediction': TAYLOR_FRITZ,
+                'bet': 5,
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEFANOS_TSITSIPAS,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    STEFANOS_TSITSIPAS: 1.70,
+                    DENIS_SHAPOVALOV: 2.10,
+                },
+                'prediction': STEFANOS_TSITSIPAS,
+                'bet': 7,
+            },
+            {
+                'round': 512,
+                'players': [
+                    JOHN_ISNER,
+                    CASPER_RUUD,
+                ],
+                'odds': {
+                    JOHN_ISNER: 1.52,
+                    CASPER_RUUD: 2.50,
+                },
+                'prediction': JOHN_ISNER,
+                'bet': 5,
+            },
+            {
+                'round': 512,
+                'players': [
+                    CAMERON_NORRIE,
+                    DIMITAR_KUZMANOV,
+                ],
+                'odds': {
+                    CAMERON_NORRIE: 1.14,
+                    DIMITAR_KUZMANOV: 5.50,
+                },
+                'prediction': CAMERON_NORRIE,
+                'bet': 5,
+            },
+            {
+                'round': 512,
+                'players': [
+                    JAN_LENNARD_STRUFF,
+                    NICK_KYRGIOS,
+                ],
+                'odds': {
+                    JAN_LENNARD_STRUFF: 2.60,
+                    NICK_KYRGIOS: 1.48,
+                },
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIEL_EVANS,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    DANIEL_EVANS: 2.15,
+                    GRIGOR_DIMITROV: 1.68,
+                },
+            },
+            {
+                'round': 512,
+                'players': [
+                    KAREN_KHACHANOV,
+                    STEFANO_TRAVAGLIA,
+                ],
+                'odds': {
+                    KAREN_KHACHANOV: 1.16,
+                    STEFANO_TRAVAGLIA: 5.00,
+                },
+                'prediction': KAREN_KHACHANOV,
+                'bet': 6,
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXANDER_ZVEREV,
+                    ALEX_DE_MINAUR
+                ],
+                'odds': {
+                    ALEXANDER_ZVEREV: 1.68,
+                    ALEX_DE_MINAUR: 2.15,
+                },
+                'prediction': ALEXANDER_ZVEREV,
+                'bet': 5,
+            },
+            {
+                'round': 512,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    FABIO_FOGNINI,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.32,
+                    FABIO_FOGNINI: 3.30,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 5,
+            },
+
+        ]
+    }
 ]
 
 

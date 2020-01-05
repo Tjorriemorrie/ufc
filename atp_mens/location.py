@@ -38,6 +38,14 @@ ATLANTA = {
     'surface': SURFACE_HARD,
     'speed': 61,
 }
+ATP_CUP = {
+    'name': 'ATP Cup',
+    'category': 'Cup',
+    'location': 'Australia',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 51,
+}
 AUCKLAND = {
     'name': 'ASB Classic',
     'category': 'ATP250',
