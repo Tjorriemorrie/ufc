@@ -1045,6 +1045,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    FRANCO_RONCADELLI: {
+        'born_at': (2000, 2, 6),
+        'height': 185,
+        'forehand': LH,
+        'backhand': THB,
+    },
     FRANK_DANCEVIC: {
         'born_at': (1984, 9, 26),
         'height': 185,
@@ -1608,6 +1614,12 @@ META = {
         'born_at': (1995, 5, 16),
         'height': 191,
         'forehand': LH,
+        'backhand': THB,
+    },
+    KACPER_ZUK: {
+        'born_at': (1999, 1, 21),
+        'height': 183,
+        'forehand': RH,
         'backhand': THB,
     },
     KAICHI_UCHIDA: {
