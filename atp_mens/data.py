@@ -5930,10 +5930,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': ATP_CUP,
         'date': '2020-01-12',
@@ -6733,117 +6729,32 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    DENNIS_NOVAK,
-                    KACPER_ZUK,
-                ],
-                'odds': {
-                    DENNIS_NOVAK: 1.28,
-                    KACPER_ZUK: 3.60,
-                },
-                'prediction': DENNIS_NOVAK,
-                'bet': 6,
-            },
-            {
-                'round': 32,
-                'players': [
-                    DUSAN_LAJOVIC,
-                    NICOLAS_JARRY,
-                ],
-                'odds': {
-                    DUSAN_LAJOVIC: 1.75,
-                    NICOLAS_JARRY: 2.05,
-                },
-                'prediction': DUSAN_LAJOVIC,
-                'bet': 6,
-            },
-            {
-                'round': 32,
-                'players': [
-                    DOMINIC_THIEM,
-                    HUBERT_HURKACZ,
-                ],
-                'odds': {
-                    DOMINIC_THIEM: 1.62,
-                    HUBERT_HURKACZ: 2.25,
-                },
-                'prediction': DOMINIC_THIEM,
-                'bet': 6,
-            },
-            {
-                'round': 32,
-                'players': [
-                    ROBERTO_BAUTISTA_AGUT,
-                    GO_SOEDA,
-                ],
-                'odds': {
-                    ROBERTO_BAUTISTA_AGUT: 1.06,
-                    GO_SOEDA: 8.50,
-                },
-                'prediction': ROBERTO_BAUTISTA_AGUT,
-                'bet': 11,
-            },
-            {
-                'round': 32,
-                'players': [
-                    NOVAK_DJOKOVIC,
-                    CHRISTIAN_GARIN,
-                ],
-                'odds': {
-                    NOVAK_DJOKOVIC: 1.01,
-                    CHRISTIAN_GARIN: 14.00,
-                },
-                'prediction': NOVAK_DJOKOVIC,
-                'bet': 5,
-            },
-            {
-                'round': 32,
-                'players': [
-                    RAFAEL_NADAL,
-                    YOSHIHITO_NISHIOKA,
-                ],
-                'odds': {
-                    RAFAEL_NADAL: 1.01,
-                    YOSHIHITO_NISHIOKA: 17.00,
-                },
-            },
-            {
-                'round': 32,
-                'players': [
-                    MARIN_CILIC,
-                    GUIDO_PELLA,
-                ],
-                'odds': {
-                    MARIN_CILIC: 1.42,
-                    GUIDO_PELLA: 2.80,
-                },
-                'prediction': MARIN_CILIC,
-                'bet': 2,
-            },
-            {
-                'round': 32,
-                'players': [
+                    KEVIN_ANDERSON,
                     BENOIT_PAIRE,
+                ],
+                'score': [(2, 6), (7, 6), (7, 6)],
+            },
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
                     LLOYD_HARRIS,
                 ],
-                'odds': {
-                    BENOIT_PAIRE: 1.62,
-                    LLOYD_HARRIS: 2.25,
-                },
-                'prediction': BENOIT_PAIRE,
-                'bet': 6,
+                'score': [(2, 6), (6, 2), (6, 2)],
             },
             {
                 'round': 32,
                 'players': [
-                    BORNA_CORIC,
-                    DIEGO_SCHWARTZMAN,
+                    NIKOLOZ_BASILASHVILI,
+                    PABLO_CUEVAS,
                 ],
+                'score': [(6, 4), (1, 6), (6, 4)],
                 'odds': {
-                    BORNA_CORIC: 2.15,
-                    DIEGO_SCHWARTZMAN: 1.68,
+                    NIKOLOZ_BASILASHVILI: 1.30,
+                    PABLO_CUEVAS: 3.40,
                 },
-                'prediction': DIEGO_SCHWARTZMAN,
-                'bet': 2,
+                'prediction': NIKOLOZ_BASILASHVILI,
+                'bet': 6,
             },
             {
                 'round': 32,
@@ -6851,6 +6762,7 @@ DATA = [
                     ALEKSANDRE_METREVELI,
                     FRANCO_RONCADELLI,
                 ],
+                'score': [(6, 2), (6, 1)],
                 'odds': {
                     ALEKSANDRE_METREVELI: 1.06,
                     FRANCO_RONCADELLI: 8.50,
@@ -6861,29 +6773,119 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    GAEL_MONFILS,
-                    KEVIN_ANDERSON,
+                    ROBERTO_BAUTISTA_AGUT,
+                    GO_SOEDA,
                 ],
+                'score': [(6, 2), (6, 4)],
                 'odds': {
-                    GAEL_MONFILS: 2.00,
-                    KEVIN_ANDERSON: 1.80,
+                    ROBERTO_BAUTISTA_AGUT: 1.06,
+                    GO_SOEDA: 8.50,
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 11,
+            },
+            {
+                'round': 32,
+                'players': [
+                    RAFAEL_NADAL,
+                    YOSHIHITO_NISHIOKA,
+                ],
+                'score': [(7, 6), (6, 4)],
+                'odds': {
+                    RAFAEL_NADAL: 1.01,
+                    YOSHIHITO_NISHIOKA: 17.00,
                 },
             },
             {
                 'round': 32,
                 'players': [
-                    NIKOLOZ_BASILASHVILI,
-                    PABLO_CUEVAS,
+                    NOVAK_DJOKOVIC,
+                    CHRISTIAN_GARIN,
                 ],
+                'score': [(6, 3), (6, 3)],
                 'odds': {
-                    NIKOLOZ_BASILASHVILI: 1.30,
-                    PABLO_CUEVAS: 3.40,
+                    NOVAK_DJOKOVIC: 1.01,
+                    CHRISTIAN_GARIN: 14.00,
                 },
-                'prediction': NIKOLOZ_BASILASHVILI,
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 5,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DUSAN_LAJOVIC,
+                    NICOLAS_JARRY,
+                ],
+                'score': [(6, 2), (7, 6)],
+                'odds': {
+                    DUSAN_LAJOVIC: 1.75,
+                    NICOLAS_JARRY: 2.05,
+                },
+                'prediction': DUSAN_LAJOVIC,
                 'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    HUBERT_HURKACZ,
+                    DOMINIC_THIEM,
+                ],
+                'score': [(3, 6), (6, 4), (7, 6)],
+                'odds': {
+                    HUBERT_HURKACZ: 2.25,
+                    DOMINIC_THIEM: 1.62,
+                },
+                'prediction': DOMINIC_THIEM,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    KACPER_ZUK,
+                    DENNIS_NOVAK,
+                ],
+                'score': [(5, 7), (7, 6), (6, 3)],
+                'odds': {
+                    KACPER_ZUK: 3.60,
+                    DENNIS_NOVAK: 1.28,
+                },
+                'prediction': DENNIS_NOVAK,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    GUIDO_PELLA,
+                    MARIN_CILIC,
+                ],
+                'score': [(7, 6), (6, 3)],
+                'odds': {
+                    GUIDO_PELLA: 2.80,
+                    MARIN_CILIC: 1.42,
+                },
+                'prediction': MARIN_CILIC,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    BORNA_CORIC,
+                ],
+                'score': [(6, 2), (6, 2)],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.68,
+                    BORNA_CORIC: 2.15,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 2,
             },
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': DOHA,
@@ -7090,57 +7092,10 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    MIKHAIL_KUKUSHKIN,
-                    ANDREY_RUBLEV,
-                ],
-                'odds': {
-                    MIKHAIL_KUKUSHKIN: 3.80,
-                    ANDREY_RUBLEV: 1.26,
-                },
-            },
-            {
-                'round': 16,
-                'players': [
-                    MARTON_FUCSOVICS,
-                    CEM_ILKEL,
-                ],
-                'odds': {
-                    MARTON_FUCSOVICS: 1.18,
-                    CEM_ILKEL: 4.60,
-                },
-                'prediction': MARTON_FUCSOVICS,
-                'bet': 7,
-            },
-            {
-                'round': 16,
-                'players': [
-                    FERNANDO_VERDASCO,
-                    FILIP_KRAJINOVIC,
-                ],
-                'odds': {
-                    FERNANDO_VERDASCO: 2.40,
-                    FILIP_KRAJINOVIC: 1.55,
-                },
-            },
-            {
-                'round': 16,
-                'players': [
-                    LASLO_DJERE,
-                    PIERRE_HUGUES_HERBERT,
-                ],
-                'odds': {
-                    LASLO_DJERE: 3.20,
-                    PIERRE_HUGUES_HERBERT: 1.34,
-                },
-                'prediction': PIERRE_HUGUES_HERBERT,
-                'bet': 2,
-            },
-            {
-                'round': 16,
-                'players': [
                     MIOMIR_KECMANOVIC,
                     JO_WILFRIED_TSONGA,
                 ],
+                'score': [(7, 6), (6, 1)],
                 'odds': {
                     MIOMIR_KECMANOVIC: 2.70,
                     JO_WILFRIED_TSONGA: 1.45,
@@ -7151,16 +7106,122 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    MILOS_RAONIC,
-                    CORENTIN_MOUTET,
+                    ANDREY_RUBLEV,
+                    MIKHAIL_KUKUSHKIN,
                 ],
+                'score': [(6, 4), (6, 2)],
                 'odds': {
-                    MILOS_RAONIC: 1.26,
+                    ANDREY_RUBLEV: 1.26,
+                    MIKHAIL_KUKUSHKIN: 3.80,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    LASLO_DJERE,
+                ],
+                'score': [(6, 1), (6, 3)],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 1.34,
+                    LASLO_DJERE: 3.20,
+                },
+                'prediction': PIERRE_HUGUES_HERBERT,
+                'bet': 2,
+            },
+            {
+                'round': 16,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    FILIP_KRAJINOVIC,
+                ],
+                'score': [(7, 5), (4, 6), (6, 0)],
+                'odds': {
+                    FERNANDO_VERDASCO: 2.40,
+                    FILIP_KRAJINOVIC: 1.55,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    CEM_ILKEL,
+                ],
+                'score': [(6, 1), (6, 4)],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.18,
+                    CEM_ILKEL: 4.60,
+                },
+                'prediction': MARTON_FUCSOVICS,
+                'bet': 7,
+            },
+            {
+                'round': 16,
+                'players': [
+                    CORENTIN_MOUTET,
+                    MILOS_RAONIC,
+                ],
+                'score': [(7, 6), (7, 6)],
+                'odds': {
                     CORENTIN_MOUTET: 3.80,
+                    MILOS_RAONIC: 1.26,
                 },
                 'prediction': MILOS_RAONIC,
                 'bet': 7,
-            }
+            },
+
+            # 2020-01-09
+            {
+                'round': 8,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    MIOMIR_KECMANOVIC,
+                ],
+                'odds': {
+                    MARTON_FUCSOVICS: 2.20,
+                    MIOMIR_KECMANOVIC: 1.65,
+                },
+                'prediction': MIOMIR_KECMANOVIC,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    PIERRE_HUGUES_HERBERT,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    PIERRE_HUGUES_HERBERT: 4.20,
+                    ANDREY_RUBLEV: 1.22,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    STAN_WAWRINKA,
+                    ALJAZ_BEDENE,
+                ],
+                'odds': {
+                    STAN_WAWRINKA: 1.28,
+                    ALJAZ_BEDENE: 3.60,
+                },
+                'prediction': STAN_WAWRINKA,
+                'bet': 9,
+            },
+            {
+                'round': 8,
+                'players': [
+                    CORENTIN_MOUTET,
+                    FERNANDO_VERDASCO,
+                ],
+                'odds': {
+                    CORENTIN_MOUTET: 2.35,
+                    FERNANDO_VERDASCO: 1.58,
+                },
+                'prediction': FERNANDO_VERDASCO,
+                'bet': 2,
+            },
+
         ]
     }
 ]
