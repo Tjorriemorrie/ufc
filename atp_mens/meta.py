@@ -1215,6 +1215,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    HOLGER_VITUS_NODSKOV_RUNE: {
+        'born_at': (2003, 4, 29),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
     HORACIO_ZEBALLOS: {
         'born_at': (1985, 4, 27),
         'height': 188,

@@ -1854,10 +1854,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': DOHA,
         'date': '2020-01-11',
@@ -2201,17 +2197,21 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    CORENTIN_MOUTET,
                     ANDREY_RUBLEV,
+                    CORENTIN_MOUTET,
                 ],
                 'odds': {
-                    CORENTIN_MOUTET: 4.40,
                     ANDREY_RUBLEV: 1.20,
+                    CORENTIN_MOUTET: 4.40,
                 },
-                'prediction': None,
+                'score': [(6, 2), (7, 6)],
             }
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': ADELAIDE,
@@ -2229,19 +2229,145 @@ DATA = [
                     NICOLAS_JARRY: 1.55,
                     JOHN_PATRICK_SMITH: 2.40,
                 },
+                'score': [(6, 3), (6, 3)],
                 'prediction': NICOLAS_JARRY,
                 'bet': 4,
             },
             {
                 'round': 64,
                 'players': [
+                    TOMMY_PAUL,
                     MATTHEW_CHRISTOPHER_ROMIOS,
+                ],
+                'odds': {
+                    TOMMY_PAUL: 1.02,
+                    MATTHEW_CHRISTOPHER_ROMIOS: 12.00,
+                },
+                'score': [(6, 2), (6, 2)],
+            },
+
+            # 2020-01-12
+            {
+                'round': 64,
+                'players': [
+                    STEPHANE_ROBERT,
+                    ANDREW_HARRIS,
+                ],
+                'odds': {
+                    STEPHANE_ROBERT: 6.50,
+                    ANDREW_HARRIS: 1.10,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    SALVATORE_CARUSO,
+                ],
+                'odds': {
+                    FEDERICO_DELBONIS: 2.05,
+                    SALVATORE_CARUSO: 1.75,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    GREGOIRE_BARRERE,
+                    JAUME_MUNAR,
+                ],
+                'odds': {
+                    GREGOIRE_BARRERE: 1.62,
+                    JAUME_MUNAR: 2.25,
+                },
+                'prediction': GREGOIRE_BARRERE,
+                'bet': 7,
+            },
+            {
+                'round': 64,
+                'players': [
+                    TAYLOR_FRITZ,
+                    ALEXANDER_BUBLIK,
+                ],
+                'odds': {
+                    TAYLOR_FRITZ: 1.52,
+                    ALEXANDER_BUBLIK: 2.50,
+                },
+                'prediction': TAYLOR_FRITZ,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    NICOLAS_JARRY,
                     TOMMY_PAUL,
                 ],
                 'odds': {
-                    MATTHEW_CHRISTOPHER_ROMIOS: 12.00,
-                    TOMMY_PAUL: 1.02,
+                    NICOLAS_JARRY: 2.40,
+                    TOMMY_PAUL: 1.55,
                 },
+            },
+            {
+                'round': 64,
+                'players': [
+                    PABLO_CUEVAS,
+                    REILLY_OPELKA,
+                ],
+                'odds': {
+                    PABLO_CUEVAS: 3.40,
+                    REILLY_OPELKA: 1.30,
+                },
+                'prediction': REILLY_OPELKA,
+                'bet': 1,
+            },
+            {
+                'round': 64,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    LASLO_DJERE,
+                ],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.36,
+                    LASLO_DJERE: 3.10,
+                },
+                'prediction': ALEXEI_POPYRIN,
+                'bet': 7,
+            },
+
+
+        ]
+    },
+
+    {
+        'location': AUCKLAND,
+        'date': '2020-01-18',
+        'matches': [
+
+            # 2020-01-12
+            {
+                'round': 64,
+                'players': [
+                    MIKAEL_YMER,
+                    MACKENZIE_MCDONALD,
+                ],
+                'odds': {
+                    MIKAEL_YMER: 1.36,
+                    MACKENZIE_MCDONALD: 3.00,
+                },
+                'prediction': MIKAEL_YMER,
+                'bet': 6,
+            },
+            {
+                'round': 64,
+                'players': [
+                    HOLGER_VITUS_NODSKOV_RUNE,
+                    VASEK_POSPISIL,
+                ],
+                'odds': {
+                    HOLGER_VITUS_NODSKOV_RUNE: 7.50,
+                    VASEK_POSPISIL: 1.07,
+                },
+                'prediction': VASEK_POSPISIL,
+                'bet': 1,
             },
 
         ]
