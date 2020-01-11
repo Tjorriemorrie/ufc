@@ -26,6 +26,8 @@ from .data_2019_05 import DATA_2019_05
 from .data_2019_06 import DATA_2019_06
 from .data_2019_07 import DATA_2019_07
 from .data_2019_08 import DATA_2019_08
+from .data_2019_09 import DATA_2019_09
+from .data_2019_10 import DATA_2019_10
 
 
 def win_probability(team1, team2):
@@ -59,7 +61,8 @@ def main(hyper_params, train=0):
 
     all_data = DATA_2018_07 + DATA_2018_08 + DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
-               DATA_2019_07 + DATA_2019_08 + DATA
+               DATA_2019_07 + DATA_2019_08 + DATA_2019_09 + DATA_2019_10 + \
+               DATA
 
     # bet_age_a, bet_age_b,
     bet_age_a = 0.8097822796748694

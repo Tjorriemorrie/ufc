@@ -2010,6 +2010,11 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    MATTHEW_CHRISTOPHER_ROMIOS: {
+        'born_at': (1999, 3, 29),
+        'height': 183,
+        'forehand': RH,
+    },
     MATTHEW_EBDEN: {
         'born_at': (1987, 11, 26),
         'height': 188,

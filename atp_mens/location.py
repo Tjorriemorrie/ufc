@@ -14,6 +14,14 @@ ACAPULCO = {
     'surface': SURFACE_HARD,
     'speed': 56,
 }
+ADELAIDE = {
+    'name': 'Adelaide International',
+    'category': 'ATP250',
+    'location': 'Adelaide, Australia',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_HARD,
+    'speed': 57,
+}
 ANTALYA = {
     'name': 'Turkish Airlines Open Antalya',
     'category': 'ATP250',
