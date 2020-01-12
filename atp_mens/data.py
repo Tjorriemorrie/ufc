@@ -2250,13 +2250,14 @@ DATA = [
             {
                 'round': 64,
                 'players': [
-                    STEPHANE_ROBERT,
                     ANDREW_HARRIS,
+                    STEPHANE_ROBERT,
                 ],
                 'odds': {
-                    STEPHANE_ROBERT: 6.50,
                     ANDREW_HARRIS: 1.10,
+                    STEPHANE_ROBERT: 6.50,
                 },
+                'score': [(7, 5), (6, 4)],
             },
             {
                 'round': 64,
@@ -2268,6 +2269,7 @@ DATA = [
                     FEDERICO_DELBONIS: 2.05,
                     SALVATORE_CARUSO: 1.75,
                 },
+                'score': [(7, 6), (7, 6)],
             },
             {
                 'round': 64,
@@ -2279,32 +2281,35 @@ DATA = [
                     GREGOIRE_BARRERE: 1.62,
                     JAUME_MUNAR: 2.25,
                 },
+                'score': [(6, 7), (6, 4), (6, 4)],
                 'prediction': GREGOIRE_BARRERE,
                 'bet': 7,
             },
             {
                 'round': 64,
                 'players': [
-                    TAYLOR_FRITZ,
                     ALEXANDER_BUBLIK,
+                    TAYLOR_FRITZ,
                 ],
                 'odds': {
-                    TAYLOR_FRITZ: 1.52,
                     ALEXANDER_BUBLIK: 2.50,
+                    TAYLOR_FRITZ: 1.52,
                 },
+                'score': [(6, 4), (7, 6)],
                 'prediction': TAYLOR_FRITZ,
                 'bet': 3,
             },
             {
                 'round': 64,
                 'players': [
-                    NICOLAS_JARRY,
                     TOMMY_PAUL,
+                    NICOLAS_JARRY,
                 ],
                 'odds': {
-                    NICOLAS_JARRY: 2.40,
                     TOMMY_PAUL: 1.55,
+                    NICOLAS_JARRY: 2.40,
                 },
+                'score': [(6, 3), (6, 2)],
             },
             {
                 'round': 64,
@@ -2316,24 +2321,89 @@ DATA = [
                     PABLO_CUEVAS: 3.40,
                     REILLY_OPELKA: 1.30,
                 },
+                'score': [(5, 7), (7, 6), (7, 6)],
                 'prediction': REILLY_OPELKA,
                 'bet': 1,
             },
             {
                 'round': 64,
                 'players': [
-                    ALEXEI_POPYRIN,
                     LASLO_DJERE,
+                    ALEXEI_POPYRIN,
                 ],
                 'odds': {
-                    ALEXEI_POPYRIN: 1.36,
                     LASLO_DJERE: 3.10,
+                    ALEXEI_POPYRIN: 1.36,
                 },
+                'score': [(7, 6), (3, 6), (6, 4)],
                 'prediction': ALEXEI_POPYRIN,
                 'bet': 7,
             },
 
-
+            # 2020-01-13
+            {
+                'round': 32,
+                'players': [
+                    GILLES_SIMON,
+                    JEREMY_CHARDY,
+                ],
+                'odds': {
+                    GILLES_SIMON: 2.10,
+                    JEREMY_CHARDY: 1.70,
+                },
+                'prediction': JEREMY_CHARDY,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    DANIEL_EVANS,
+                ],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 3.40,
+                    DANIEL_EVANS: 1.30,
+                },
+                'prediction': DANIEL_EVANS,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    LLOYD_HARRIS,
+                    CHRISTIAN_GARIN,
+                ],
+                'odds': {
+                    LLOYD_HARRIS: 1.85,
+                    CHRISTIAN_GARIN: 1.95,
+                },
+                'prediction': LLOYD_HARRIS,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    SAM_QUERREY,
+                    GREGOIRE_BARRERE,
+                ],
+                'odds': {
+                    SAM_QUERREY: 1.65,
+                    GREGOIRE_BARRERE: 2.20,
+                },
+                'prediction': SAM_QUERREY,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    JAMES_DUCKWORTH,
+                ],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.95,
+                    JAMES_DUCKWORTH: 1.85,
+                },
+            },
         ]
     },
 
@@ -2353,23 +2423,104 @@ DATA = [
                     MIKAEL_YMER: 1.36,
                     MACKENZIE_MCDONALD: 3.00,
                 },
+                'score': [(6, 4), (6, 3)],
                 'prediction': MIKAEL_YMER,
                 'bet': 6,
             },
             {
                 'round': 64,
                 'players': [
-                    HOLGER_VITUS_NODSKOV_RUNE,
                     VASEK_POSPISIL,
+                    HOLGER_VITUS_NODSKOV_RUNE,
                 ],
                 'odds': {
-                    HOLGER_VITUS_NODSKOV_RUNE: 7.50,
                     VASEK_POSPISIL: 1.07,
+                    HOLGER_VITUS_NODSKOV_RUNE: 7.50,
                 },
+                'score': [(7, 5), (6, 1)],
                 'prediction': VASEK_POSPISIL,
                 'bet': 1,
             },
 
+            # 2020-01-13
+            {
+                'round': 32,
+                'players': [
+                    LORENZO_SONEGO,
+                    HUBERT_HURKACZ,
+                ],
+                'odds': {
+                    LORENZO_SONEGO: 3.20,
+                    HUBERT_HURKACZ: 1.34,
+                },
+                'prediction': HUBERT_HURKACZ,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TENNYS_SANDGREN,
+                    MICHAEL_VENUS,
+                ],
+                'odds': {
+                    TENNYS_SANDGREN: 1.22,
+                    MICHAEL_VENUS: 4.20,
+                },
+                'prediction': TENNYS_SANDGREN,
+                'bet': 5,
+            },
+            {
+                'round': 32,
+                'players': [
+                    UGO_HUMBERT,
+                    CASPER_RUUD,
+                ],
+                'odds': {
+                    UGO_HUMBERT: 2.00,
+                    CASPER_RUUD: 1.80,
+                },
+                'prediction': CASPER_RUUD,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    THIAGO_MONTEIRO,
+                ],
+                'odds': {
+                    CAMERON_NORRIE: 1.95,
+                    THIAGO_MONTEIRO: 1.85,
+                },
+                'prediction': THIAGO_MONTEIRO,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    JANNIK_SINNER,
+                    BENOIT_PAIRE,
+                ],
+                'odds': {
+                    JANNIK_SINNER: 1.65,
+                    BENOIT_PAIRE: 2.20,
+                },
+                'prediction': JANNIK_SINNER,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKAEL_YMER,
+                    FRANCES_TIAFOE,
+                ],
+                'odds': {
+                    MIKAEL_YMER: 2.10,
+                    FRANCES_TIAFOE: 1.70,
+                },
+                'prediction': FRANCES_TIAFOE,
+                'bet': 2,
+            },
         ]
     }
 ]

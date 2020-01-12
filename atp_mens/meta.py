@@ -2083,6 +2083,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    MICHAEL_VENUS: {
+        'born_at': (1987, 10, 16),
+        'height': 191,
+        'forehand': RH,
+        'backhand': THB,
+    },
     MICHAIL_PERVOLARAKIS: {
         'born_at': (1996, 6, 6),
         'height': 193,
