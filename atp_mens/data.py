@@ -2608,13 +2608,14 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    TOMMY_PAUL,
                     LLOYD_HARRIS,
+                    TOMMY_PAUL,
                 ],
                 'odds': {
-                    TOMMY_PAUL: 1.68,
                     LLOYD_HARRIS: 2.15,
+                    TOMMY_PAUL: 1.68,
                 },
+                'score': [(6, 4), (6, 7), (6, 3)],
                 'prediction': TOMMY_PAUL,
                 'bet': 2,
             },
@@ -2628,10 +2629,23 @@ DATA = [
                     ANDREY_RUBLEV: 1.52,
                     FELIX_AUGER_ALIASSIME: 2.50,
                 },
+                'score': [(7, 6), (6, 7), (6, 4)],
                 'prediction': ANDREY_RUBLEV,
                 'bet': 6,
             },
 
+            # 2020-01-18
+            {
+                'round': 2,
+                'players': [
+                    LLOYD_HARRIS,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    LLOYD_HARRIS: 3.60,
+                    ANDREY_RUBLEV: 1.28,
+                },
+            }
         ]
     },
 
@@ -2940,28 +2954,44 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    JOHN_ISNER,
                     UGO_HUMBERT,
+                    JOHN_ISNER,
                 ],
                 'odds': {
-                    JOHN_ISNER: 1.90,
                     UGO_HUMBERT: 1.90,
+                    JOHN_ISNER: 1.90,
                 },
+                'score': [(7, 6), (6, 4)],
             },
             {
                 'round': 4,
                 'players': [
-                    HUBERT_HURKACZ,
                     BENOIT_PAIRE,
+                    HUBERT_HURKACZ,
                 ],
                 'odds': {
-                    HUBERT_HURKACZ: 1.58,
                     BENOIT_PAIRE: 2.35,
+                    HUBERT_HURKACZ: 1.58,
                 },
+                'score': [(6, 4), (6, 7), (6, 2)],
                 'prediction': HUBERT_HURKACZ,
                 'bet': 4,
             },
 
+            # 2020-01-18
+            {
+                'round': 2,
+                'players': [
+                    BENOIT_PAIRE,
+                    UGO_HUMBERT,
+                ],
+                'odds': {
+                    BENOIT_PAIRE: 2.00,
+                    UGO_HUMBERT: 1.80,
+                },
+                'prediction': UGO_HUMBERT,
+                'bet': 1,
+            }
         ]
     }
 ]
