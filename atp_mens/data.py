@@ -4280,6 +4280,7 @@ DATA = [
                     DIEGO_SCHWARTZMAN: 1.40,
                     DUSAN_LAJOVIC: 3.00,
                 },
+                'score': [(6, 2), (6, 3), (7, 6)],
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 1,
             },
@@ -4293,19 +4294,21 @@ DATA = [
                     MARTON_FUCSOVICS: 1.70,
                     TOMMY_PAUL: 2.15,
                 },
+                'score': [(6, 1), (6, 1), (6, 4)],
                 'prediction': MARTON_FUCSOVICS,
                 'bet': 5,
             },
             {
                 'round': 32,
                 'players': [
-                    YOSHIHITO_NISHIOKA,
                     NOVAK_DJOKOVIC,
+                    YOSHIHITO_NISHIOKA,
                 ],
                 'odds': {
-                    YOSHIHITO_NISHIOKA: 21.00,
                     NOVAK_DJOKOVIC: 1.01,
+                    YOSHIHITO_NISHIOKA: 21.00,
                 },
+                'score': [(6, 3), (6, 2), (6, 2)],
             },
             {
                 'round': 32,
@@ -4317,7 +4320,111 @@ DATA = [
                     TENNYS_SANDGREN: 2.15,
                     SAM_QUERREY: 1.70,
                 },
+                'score': [(6, 4), (6, 4), (6, 4)],
             },
+
+            # 2020-01-25
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    ERNESTS_GULBIS,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.53,
+                    ERNESTS_GULBIS: 2.50,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TAYLOR_FRITZ,
+                    DOMINIC_THIEM,
+                ],
+                'odds': {
+                    TAYLOR_FRITZ: 3.10,
+                    DOMINIC_THIEM: 1.37,
+                },
+                'prediction': DOMINIC_THIEM,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAVID_GOFFIN,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    DAVID_GOFFIN: 2.50,
+                    ANDREY_RUBLEV: 1.53,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    RAFAEL_NADAL,
+                    PABLO_CARRENO_BUSTA,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.01,
+                    PABLO_CARRENO_BUSTA: 21.00,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_ISNER,
+                    STAN_WAWRINKA,
+                ],
+                'odds': {
+                    JOHN_ISNER: 2.10,
+                    STAN_WAWRINKA: 1.75,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICK_KYRGIOS,
+                    KAREN_KHACHANOV,
+                ],
+                'odds': {
+                    NICK_KYRGIOS: 1.40,
+                    KAREN_KHACHANOV: 3.00,
+                },
+                'prediction': NICK_KYRGIOS,
+                'bet': 7,
+            },
+            {
+                'round': 32,
+                'players': [
+                    FERNANDO_VERDASCO,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    FERNANDO_VERDASCO: 2.90,
+                    ALEXANDER_ZVEREV: 1.42,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    ALEXEI_POPYRIN,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.13,
+                    ALEXEI_POPYRIN: 6.00,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 8,
+            },
+
         ]
     }
 ]
