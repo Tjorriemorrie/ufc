@@ -4334,32 +4334,35 @@ DATA = [
                     GAEL_MONFILS: 1.53,
                     ERNESTS_GULBIS: 2.50,
                 },
+                'score': [(7, 6), (6, 4), (6, 3)],
                 'prediction': GAEL_MONFILS,
                 'bet': 3,
             },
             {
                 'round': 32,
                 'players': [
-                    TAYLOR_FRITZ,
                     DOMINIC_THIEM,
+                    TAYLOR_FRITZ,
                 ],
                 'odds': {
-                    TAYLOR_FRITZ: 3.10,
                     DOMINIC_THIEM: 1.37,
+                    TAYLOR_FRITZ: 3.10,
                 },
+                'score': [(6, 2), (6, 4), (6, 7), (6, 4)],
                 'prediction': DOMINIC_THIEM,
                 'bet': 1,
             },
             {
                 'round': 32,
                 'players': [
-                    DAVID_GOFFIN,
                     ANDREY_RUBLEV,
+                    DAVID_GOFFIN,
                 ],
                 'odds': {
-                    DAVID_GOFFIN: 2.50,
                     ANDREY_RUBLEV: 1.53,
+                    DAVID_GOFFIN: 2.50,
                 },
+                'score': [(2, 6), (7, 6), (6, 4), (7, 6)],
                 'prediction': ANDREY_RUBLEV,
                 'bet': 2,
             },
@@ -4373,19 +4376,22 @@ DATA = [
                     RAFAEL_NADAL: 1.01,
                     PABLO_CARRENO_BUSTA: 21.00,
                 },
+                'score': [(6, 1), (6, 2), (6, 4)],
                 'prediction': RAFAEL_NADAL,
                 'bet': 4,
             },
             {
                 'round': 32,
                 'players': [
-                    JOHN_ISNER,
                     STAN_WAWRINKA,
+                    JOHN_ISNER,
                 ],
                 'odds': {
-                    JOHN_ISNER: 2.10,
                     STAN_WAWRINKA: 1.75,
+                    JOHN_ISNER: 2.10,
                 },
+                'score': [(6, 4), (4, 1)],
+                'retired': True,
             },
             {
                 'round': 32,
@@ -4397,19 +4403,21 @@ DATA = [
                     NICK_KYRGIOS: 1.40,
                     KAREN_KHACHANOV: 3.00,
                 },
+                'score': [(6, 2), (7, 6), (6, 7), (6, 7), (7, 6)],
                 'prediction': NICK_KYRGIOS,
                 'bet': 7,
             },
             {
                 'round': 32,
                 'players': [
-                    FERNANDO_VERDASCO,
                     ALEXANDER_ZVEREV,
+                    FERNANDO_VERDASCO,
                 ],
                 'odds': {
-                    FERNANDO_VERDASCO: 2.90,
                     ALEXANDER_ZVEREV: 1.42,
+                    FERNANDO_VERDASCO: 2.90,
                 },
+                'score': [(6, 2), (6, 2), (6, 4)],
             },
             {
                 'round': 32,
@@ -4421,10 +4429,58 @@ DATA = [
                     DANIIL_MEDVEDEV: 1.13,
                     ALEXEI_POPYRIN: 6.00,
                 },
+                'score': [(6, 4), (6, 3), (6, 2)],
                 'prediction': DANIIL_MEDVEDEV,
                 'bet': 8,
             },
 
+            # 2020-01-26
+            {
+                'round': 16,
+                'players': [
+                    MILOS_RAONIC,
+                    MARIN_CILIC,
+                ],
+                'odds': {
+                    MILOS_RAONIC: 1.53,
+                    MARIN_CILIC: 2.50,
+                },
+                'prediction': MILOS_RAONIC,
+                'bet': 6,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    NOVAK_DJOKOVIC,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 13.00,
+                    NOVAK_DJOKOVIC: 1.03,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    TENNYS_SANDGREN,
+                    FABIO_FOGNINI,
+                ],
+                'odds': {
+                    TENNYS_SANDGREN: 2.35,
+                    FABIO_FOGNINI: 1.60,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    ROGER_FEDERER,
+                ],
+                'odds': {
+                    MARTON_FUCSOVICS: 6.00,
+                    ROGER_FEDERER: 1.13,
+                },
+            },
         ]
     }
 ]
