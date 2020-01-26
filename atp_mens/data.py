@@ -4445,19 +4445,21 @@ DATA = [
                     MILOS_RAONIC: 1.53,
                     MARIN_CILIC: 2.50,
                 },
+                'score': [(6, 4), (6, 3), (7, 5)],
                 'prediction': MILOS_RAONIC,
                 'bet': 6,
             },
             {
                 'round': 16,
                 'players': [
-                    DIEGO_SCHWARTZMAN,
                     NOVAK_DJOKOVIC,
+                    DIEGO_SCHWARTZMAN,
                 ],
                 'odds': {
-                    DIEGO_SCHWARTZMAN: 13.00,
                     NOVAK_DJOKOVIC: 1.03,
+                    DIEGO_SCHWARTZMAN: 13.00,
                 },
+                'score': [(6, 3), (6, 4), (6, 4)],
             },
             {
                 'round': 16,
@@ -4469,18 +4471,74 @@ DATA = [
                     TENNYS_SANDGREN: 2.35,
                     FABIO_FOGNINI: 1.60,
                 },
+                'score': [(7, 6), (7, 5), (6, 7), (6, 4)],
             },
             {
                 'round': 16,
                 'players': [
-                    MARTON_FUCSOVICS,
                     ROGER_FEDERER,
+                    MARTON_FUCSOVICS,
                 ],
                 'odds': {
-                    MARTON_FUCSOVICS: 6.00,
                     ROGER_FEDERER: 1.13,
+                    MARTON_FUCSOVICS: 6.00,
+                },
+                'score': [(4, 6), (6, 1), (6, 2), (6, 2)],
+            },
+
+            # 2020-01-27
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    DOMINIC_THIEM,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 3.40,
+                    DOMINIC_THIEM: 1.32,
+                },
+                'prediction': DOMINIC_THIEM,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    STAN_WAWRINKA,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.23,
+                    STAN_WAWRINKA: 4.20,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    RAFAEL_NADAL,
+                    NICK_KYRGIOS,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.20,
+                    NICK_KYRGIOS: 4.60,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 3,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ANDREY_RUBLEV,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 1.90,
+                    ALEXANDER_ZVEREV: 1.90,
                 },
             },
+
+            #
         ]
     }
 ]
