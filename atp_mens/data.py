@@ -3974,6 +3974,7 @@ DATA = [
                     STEFANOS_TSITSIPAS: 1.13,
                     PHILIPP_KOHLSCHREIBER: 6.00,
                 },
+                'score': [],
                 'retired': True,
             },
             {
@@ -4490,26 +4491,28 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    GAEL_MONFILS,
                     DOMINIC_THIEM,
+                    GAEL_MONFILS,
                 ],
                 'odds': {
-                    GAEL_MONFILS: 3.40,
                     DOMINIC_THIEM: 1.32,
+                    GAEL_MONFILS: 3.40,
                 },
+                'score': [(6, 2), (6, 4), (6, 4)],
                 'prediction': DOMINIC_THIEM,
                 'bet': 1,
             },
             {
                 'round': 16,
                 'players': [
-                    DANIIL_MEDVEDEV,
                     STAN_WAWRINKA,
+                    DANIIL_MEDVEDEV,
                 ],
                 'odds': {
-                    DANIIL_MEDVEDEV: 1.23,
                     STAN_WAWRINKA: 4.20,
+                    DANIIL_MEDVEDEV: 1.23,
                 },
+                'score': [(6, 2), (2, 6), (4, 6), (7, 6), (6, 2)],
                 'prediction': DANIIL_MEDVEDEV,
                 'bet': 5,
             },
@@ -4523,18 +4526,44 @@ DATA = [
                     RAFAEL_NADAL: 1.20,
                     NICK_KYRGIOS: 4.60,
                 },
+                'score': [(6, 3), (3, 6), (7, 6), (7, 6)],
                 'prediction': RAFAEL_NADAL,
                 'bet': 3,
             },
             {
                 'round': 16,
                 'players': [
-                    ANDREY_RUBLEV,
                     ALEXANDER_ZVEREV,
+                    ANDREY_RUBLEV,
                 ],
                 'odds': {
-                    ANDREY_RUBLEV: 1.90,
                     ALEXANDER_ZVEREV: 1.90,
+                    ANDREY_RUBLEV: 1.90,
+                },
+                'score': [(6, 4), (6, 4), (6, 4)],
+            },
+
+            # 2020-01-28
+            {
+                'round': 8,
+                'players': [
+                    TENNYS_SANDGREN,
+                    ROGER_FEDERER,
+                ],
+                'odds': {
+                    TENNYS_SANDGREN: 7.00,
+                    ROGER_FEDERER: 1.10,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    MILOS_RAONIC,
+                    NOVAK_DJOKOVIC,
+                ],
+                'odds': {
+                    MILOS_RAONIC: 6.50,
+                    NOVAK_DJOKOVIC: 1.11,
                 },
             },
 
