@@ -4547,24 +4547,54 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    TENNYS_SANDGREN,
                     ROGER_FEDERER,
+                    TENNYS_SANDGREN,
                 ],
                 'odds': {
-                    TENNYS_SANDGREN: 7.00,
                     ROGER_FEDERER: 1.10,
+                    TENNYS_SANDGREN: 7.00,
                 },
+                'score': [(6, 3), (2, 6), (2, 6), (7, 6), (6, 3)],
             },
             {
                 'round': 8,
                 'players': [
-                    MILOS_RAONIC,
                     NOVAK_DJOKOVIC,
+                    MILOS_RAONIC,
                 ],
                 'odds': {
-                    MILOS_RAONIC: 6.50,
                     NOVAK_DJOKOVIC: 1.11,
+                    MILOS_RAONIC: 6.50,
                 },
+                'score': [(6, 4), (6, 3), (7, 6)],
+            },
+
+            # 2020-01-29
+            {
+                'round': 8,
+                'players': [
+                    STAN_WAWRINKA,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    STAN_WAWRINKA: 2.20,
+                    ALEXANDER_ZVEREV: 1.68,
+                },
+                'prediction': ALEXANDER_ZVEREV,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    RAFAEL_NADAL,
+                    DOMINIC_THIEM,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.34,
+                    DOMINIC_THIEM: 3.30,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 5,
             },
 
             #
