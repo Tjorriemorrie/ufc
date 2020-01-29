@@ -4573,31 +4573,46 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    STAN_WAWRINKA,
                     ALEXANDER_ZVEREV,
+                    STAN_WAWRINKA,
                 ],
                 'odds': {
-                    STAN_WAWRINKA: 2.20,
                     ALEXANDER_ZVEREV: 1.68,
+                    STAN_WAWRINKA: 2.20,
                 },
+                'score': [(1, 6), (6, 3), (6, 4), (6, 2)],
                 'prediction': ALEXANDER_ZVEREV,
                 'bet': 1,
             },
             {
                 'round': 8,
                 'players': [
-                    RAFAEL_NADAL,
                     DOMINIC_THIEM,
+                    RAFAEL_NADAL,
                 ],
                 'odds': {
-                    RAFAEL_NADAL: 1.34,
                     DOMINIC_THIEM: 3.30,
+                    RAFAEL_NADAL: 1.34,
                 },
+                'score': [(7, 6), (7, 6), (4, 6), (7, 6)],
                 'prediction': RAFAEL_NADAL,
                 'bet': 5,
             },
 
-            #
+            # 2020-01-30
+            {
+                'round': 4,
+                'players': [
+                    ROGER_FEDERER,
+                    NOVAK_DJOKOVIC,
+                ],
+                'odds': {
+                    ROGER_FEDERER: 6.00,
+                    NOVAK_DJOKOVIC: 1.13,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 1,
+            }
         ]
     }
 ]
