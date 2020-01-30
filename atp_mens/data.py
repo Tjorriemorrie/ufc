@@ -4603,16 +4603,31 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    ROGER_FEDERER,
                     NOVAK_DJOKOVIC,
+                    ROGER_FEDERER,
                 ],
                 'odds': {
-                    ROGER_FEDERER: 6.00,
                     NOVAK_DJOKOVIC: 1.13,
+                    ROGER_FEDERER: 6.00,
                 },
+                'score': [(7, 6), (6, 4), (6, 3)],
                 'prediction': NOVAK_DJOKOVIC,
                 'bet': 1,
-            }
+            },
+
+            # 2020-01-31
+            {
+                'round': 4,
+                'players': [
+                    DOMINIC_THIEM,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    DOMINIC_THIEM: 1.44,
+                    ALEXANDER_ZVEREV: 2.80,
+                },
+            },
+
         ]
     }
 ]
