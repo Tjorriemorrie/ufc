@@ -4626,8 +4626,21 @@ DATA = [
                     DOMINIC_THIEM: 1.44,
                     ALEXANDER_ZVEREV: 2.80,
                 },
+                'score': [(3, 6), (6, 4), (7, 6), (7, 6)],
             },
 
+            # 2020-02-01
+            {
+                'round': 2,
+                'players': [
+                    DOMINIC_THIEM,
+                    NOVAK_DJOKOVIC,
+                ],
+                'odds': {
+                    DOMINIC_THIEM: 4.00,
+                    NOVAK_DJOKOVIC: 1.25,
+                },
+            },
         ]
     }
 ]
