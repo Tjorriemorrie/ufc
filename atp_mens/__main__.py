@@ -57,30 +57,22 @@ def main(hyper_params, train=0):
 
     hyper_params = list(hyper_params)
     bet_multi_param = int(round(hyper_params.pop(0)))
-    bet_multi_param = -12
+    bet_multi_param = -13
 
     all_data = DATA_2018_07 + DATA_2018_08 + DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA_2019_09 + DATA_2019_10 + \
                DATA
 
-    # bet_age_a, bet_age_b,
-    bet_age_a = 0.8097822796748694
-    bet_age_b = -0.8915221889206446
-
-    # bet_setr_a, bet_setr_b, bet_upsl_a, bet_upsl_b,
+    # bet_setr_a, bet_setr_b,
     bet_setr_a = -1.9365915887985676
     bet_setr_b = -2.4751338536007252
-    bet_upsl_a = -0.12397818038351786
-    bet_upsl_b = -3.4175549665963056
 
-    # bet_wnlr_a, bet_wnlr_b, bet_sfcw_a, bet_sfcw_b, bet_tiel_a, bet_tiel_b = hyper_params
+    # bet_wnlr_a, bet_wnlr_b, bet_sfcw_a, bet_sfcw_b,
     bet_wnlr_a = -18.599145391579846
     bet_wnlr_b = 5.100495731653661
     bet_sfcw_a = -0.5400540194254579
     bet_sfcw_b = -10.915600937553327
-    bet_tiel_a = -1.198978001388643
-    bet_tiel_b = 12.382392365777175
 
     # bet_gms_a, bet_gms_b, bet_lati_a, bet_lati_b, bet_drs_a, bet_drs_b = hyper_params
     bet_gms_a = -5.534451671960642
@@ -129,6 +121,14 @@ def main(hyper_params, train=0):
     bet_setw_b = 6.142271188450281
     bet_tiew_a = 0.26550041853596046
     bet_tiew_b = -7.477552294304683
+
+    # bet_age_a, bet_age_b, bet_upsl_a, bet_upsl_b, bet_tiel_a, bet_tiel_b = hyper_params
+    bet_age_a = -1.7097092035750039
+    bet_age_b = -2.134091076259321
+    bet_upsl_a = 1.128062516010152
+    bet_upsl_b = -7.926290207271677
+    bet_tiel_a = 1.622169009396735
+    bet_tiel_b = 5.203248951633058
 
     # init
     start_date = None
@@ -637,12 +637,12 @@ multi_scores = {
     'wnlw': {'limit': 2, 'scores': [1.6, 0.9, 1.3, 1.1, 1.0]},
     'drsl': {'limit': 2, 'scores': [-0.3, 0.7, 1.1, 0.7, 3.2]},
 
+    'tiel': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.4, 1.4]},
+    'age':  {'limit': 1, 'scores': [-1.5, -0.2, 0.1, -0.1, 1.2]},
     'tma':  {'limit': 1, 'scores': [0.0, 0.0, -0.1, 0.6, 1.1]},
     'ts':   {'limit': 1, 'scores': [0.0, 2.4, 0.0, 0.0, 0.9]},
     'wnlr': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.5]},
-    'tiel': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.4]},
     'upsw': {'limit': 1, 'scores': [0.0, -0.7, 1.4, -0.2, 0.1]},
-    'upsl': {'limit': 1, 'scores': [0.8, -0.2, 0.4, 1.5, 0.0]},
     'tiew': {'limit': 1, 'scores': [0.0, 0.7, 0.0, 1.0, 0.0]},
     'sfcr': {'limit': 1, 'scores': [0.0, 0.0, 1.5, 0.0, 0.0]},
     'upsr': {'limit': 1, 'scores': [1.1, 0.0, 0.0, 0.9, 0.0]},
@@ -653,7 +653,7 @@ multi_scores = {
     'gms':  {'limit': 1, 'scores': [0.0, 1.2, 0.1, 0.0, 0.0]},
     'rnd':  {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
     'tmi':  {'limit': 1, 'scores': [0.0, 0.9, 0.2, -0.1, 0.0]},
-    'age':  {'limit': 1, 'scores': [-0.6, -1.5, -0.2, 0.1, -0.1]},
+    'upsl': {'limit': 1, 'scores': [-0.2, 0.4, 1.5, 0.0, -0.1]},
 }
 
 
@@ -663,10 +663,14 @@ def run():
     names = [
         'bet_multi_param',
 
+        'bet_age_a', 'bet_age_b',
+        'bet_upsl_a', 'bet_upsl_b',
+        'bet_tiel_a', 'bet_tiel_b',
+
         # 22.9  79*29   4500
-        'bet_sfcr_a', 'bet_sfcr_b',  # 7 7 6   5
-        'bet_setw_a', 'bet_setw_b',  # 1 9 7   5
-        'bet_tiew_a', 'bet_tiew_b',  # 4   1 8 5
+        # 'bet_sfcr_a', 'bet_sfcr_b',  # 7 7 6   5
+        # 'bet_setw_a', 'bet_setw_b',  # 1 9 7   5
+        # 'bet_tiew_a', 'bet_tiew_b',  # 4   1 8 5
 
         # !! change
 
@@ -698,14 +702,9 @@ def run():
         # 9.6   63*15   75  990
         # 'bet_wnlr_a', 'bet_wnlr_b',  # 0 0   9
         # 'bet_sfcw_a', 'bet_sfcw_b',  # 3   1 9
-        # 'bet_tiel_a', 'bet_tiel_b',  # 4   2 9
 
         # 9.6   54*18   79  1100
         # 'bet_setr_a', 'bet_setr_b',  # 9 9   8
-        # 'bet_upsl_a', 'bet_upsl_b',  # 1 0   8
-
-        # 9.6   57*17   78  1100
-        # 'bet_age_a', 'bet_age_b',    # 8 8 7
 
     ]
     tolx = 2670  # higher is slower
