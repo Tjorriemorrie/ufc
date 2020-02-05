@@ -5059,9 +5059,62 @@ DATA = [
                     ALEXEI_POPYRIN,
                 ],
                 'odds': {
-
-                }
-            }
+                    ADRIAN_MANNARINO: 1.80,
+                    ALEXEI_POPYRIN: 2.00,
+                },
+                'prediction': ADRIAN_MANNARINO,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    UGO_HUMBERT,
+                    FELICIANO_LOPEZ,
+                ],
+                'odds': {
+                    UGO_HUMBERT: 1.34,
+                    FELICIANO_LOPEZ: 3.20,
+                },
+                'prediction': UGO_HUMBERT,
+                'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    GILLES_SIMON,
+                    RICHARD_GASQUET,
+                ],
+                'odds': {
+                    GILLES_SIMON: 1.40,
+                    RICHARD_GASQUET: 2.90,
+                },
+                'prediction': GILLES_SIMON,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    GRIGOR_DIMITROV,
+                    GREGOIRE_BARRERE,
+                ],
+                'odds': {
+                    GRIGOR_DIMITROV: 1.28,
+                    GREGOIRE_BARRERE: 3.60,
+                },
+                'prediction': GRIGOR_DIMITROV,
+                'bet': 3,
+            },
+            {
+                'round': 16,
+                'players': [
+                    VASEK_POSPISIL,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    VASEK_POSPISIL: 2.80,
+                    DENIS_SHAPOVALOV: 1.42,
+                },
+            },
         ]
     },
 
@@ -5236,7 +5289,57 @@ DATA = [
                 'score': [(6, 4), (6, 3)],
             },
 
-            #
+            # 2020-02-05
+            {
+                'round': 16,
+                'players': [
+                    CARLOS_TABERNER,
+                    ANDREJ_MARTIN,
+                ],
+                'odds': {
+                    CARLOS_TABERNER: 1.85,
+                    ANDREJ_MARTIN: 1.95,
+                },
+                'prediction': CARLOS_TABERNER,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_CUEVAS,
+                    GIANLUCA_MAGER,
+                ],
+                'odds': {
+                    PABLO_CUEVAS: 1.28,
+                    GIANLUCA_MAGER: 3.60,
+                },
+                'prediction': PABLO_CUEVAS,
+                'bet': 4,
+            },
+            {
+                'round': 16,
+                'players': [
+                    CORENTIN_MOUTET,
+                    GUIDO_PELLA,
+                ],
+                'odds': {
+                    CORENTIN_MOUTET: 2.25,
+                    GUIDO_PELLA: 1.62,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    ATTILA_BALAZS,
+                    CHRISTIAN_GARIN,
+                ],
+                'odds': {
+                    ATTILA_BALAZS: 2.80,
+                    CHRISTIAN_GARIN: 1.42,
+                },
+                'prediction': CHRISTIAN_GARIN,
+                'bet': 1,
+            },
         ]
     }
 
