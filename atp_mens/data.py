@@ -5187,7 +5187,6 @@ DATA = [
                     MIKAEL_YMER: 2.20,
                     FILIP_KRAJINOVIC: 1.65,
                 },
-                'prediction': None,
             },
             {
                 'round': 16,
@@ -5199,14 +5198,57 @@ DATA = [
                     ALEXANDER_BUBLIK: 3.80,
                     DAVID_GOFFIN: 1.26,
                 },
-                'prediction': None,
             },
             {
                 'round': 16,
                 'players': [
-                    flope
-                ]
-            }
+                    FELICIANO_LOPEZ,
+                    RICHARD_GASQUET,
+                ],
+                'odds': {
+                    FELICIANO_LOPEZ: 1.85,
+                    RICHARD_GASQUET: 1.95,
+                },
+                'prediction': FELICIANO_LOPEZ,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    EMIL_RUUSUVUORI,
+                    NORBERT_GOMBOS,
+                ],
+                'odds': {
+                    EMIL_RUUSUVUORI: 1.55,
+                    NORBERT_GOMBOS: 2.40,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    PIERRE_HUGUES_HERBERT,
+                ],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.65,
+                    PIERRE_HUGUES_HERBERT: 2.20,
+                },
+                'prediction': FELIX_AUGER_ALIASSIME,
+                'bet': 6,
+            },
+            {
+                'round': 16,
+                'players': [
+                    GAEL_MONFILS,
+                    ADRIAN_MANNARINO,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.48,
+                    ADRIAN_MANNARINO: 2.60,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 1,
+            },
         ]
     },
 
@@ -5282,6 +5324,8 @@ DATA = [
                     ROBERTO_CARBALLES_BAENA: 1.58,
                     PEDRO_MARTINEZ: 2.35,
                 },
+                'score': [],
+                'retired': True,
                 'prediction': ROBERTO_CARBALLES_BAENA,
                 'bet': 0,  # refunded 9
             },
@@ -5312,19 +5356,6 @@ DATA = [
                 'score': [(6, 4), (7, 6)],
                 'prediction': ALBERT_RAMOS_VINOLAS,
                 'bet': 2,
-            },
-            {
-                'round': 32,
-                'players': [
-                    FRANCISCO_CERUNDOLO,
-                    PABLO_ANDUJAR,
-                ],
-                'odds': {
-                    FRANCISCO_CERUNDOLO: 2.35,
-                    PABLO_ANDUJAR: 1.58,
-                },
-                'prediction': PABLO_ANDUJAR,
-                'bet': 0,  # refunded 1,
             },
             {
                 'round': 32,
@@ -5420,19 +5451,71 @@ DATA = [
                     CORENTIN_MOUTET: 2.25,
                     GUIDO_PELLA: 1.62,
                 },
+                'score': [(6, 7), (7, 5), (6, 3)],
             },
             {
                 'round': 16,
                 'players': [
-                    ATTILA_BALAZS,
                     CHRISTIAN_GARIN,
+                    ATTILA_BALAZS,
                 ],
                 'odds': {
-                    ATTILA_BALAZS: 2.80,
                     CHRISTIAN_GARIN: 1.42,
+                    ATTILA_BALAZS: 2.80,
                 },
+                'score': [(6, 3), (6, 0)],
                 'prediction': CHRISTIAN_GARIN,
                 'bet': 1,
+            },
+
+            # 2020-02-06
+            {
+                'round': 16,
+                'players': [
+                    LASLO_DJERE,
+                    PEDRO_MARTINEZ
+                ],
+                'odds': {
+                    LASLO_DJERE: 1.52,
+                    PEDRO_MARTINEZ: 2.50,
+                },
+                'prediction': LASLO_DJERE,
+                'bet': 6,
+            },
+            {
+                'round': 16,
+                'players': [
+                    PABLO_ANDUJAR,
+                    ALBERT_RAMOS_VINOLAS,
+                ],
+                'odds': {
+                    PABLO_ANDUJAR: 2.05,
+                    ALBERT_RAMOS_VINOLAS: 1.75,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    PEDRO_CACHIN,
+                    JUAN_IGNACIO_LONDERO,
+                ],
+                'odds': {
+                    PEDRO_CACHIN: 4.00,
+                    JUAN_IGNACIO_LONDERO: 1.24,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    JAUME_MUNAR,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.24,
+                    JAUME_MUNAR: 4.00,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 4,
             },
         ]
     }
