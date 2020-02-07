@@ -56,31 +56,23 @@ def main(hyper_params, train=0):
     logger.info('Starting main training')
 
     hyper_params = list(hyper_params)
-    bet_multi_param = int(round(hyper_params.pop(0)))
-    bet_multi_param = -13
+    # bet_multi_param = int(round(hyper_params.pop(0)))
+    bet_multi_param = -12
 
     all_data = DATA_2018_07 + DATA_2018_08 + DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA_2019_09 + DATA_2019_10 + \
                DATA
 
-    # bet_setr_a, bet_setr_b,
-    bet_setr_a = -1.9365915887985676
-    bet_setr_b = -2.4751338536007252
-
-    # bet_wnlr_a, bet_wnlr_b, bet_sfcw_a, bet_sfcw_b,
+    # bet_wnlr_a, bet_wnlr_b, 
     bet_wnlr_a = -18.599145391579846
     bet_wnlr_b = 5.100495731653661
-    bet_sfcw_a = -0.5400540194254579
-    bet_sfcw_b = -10.915600937553327
 
-    # bet_gms_a, bet_gms_b, bet_lati_a, bet_lati_b, bet_drs_a, bet_drs_b = hyper_params
+    # bet_gms_a, bet_gms_b, bet_lati_a, bet_lati_b, 
     bet_gms_a = -5.534451671960642
     bet_gms_b = -26.77336585086819
     bet_lati_a = 60.115175757450295
     bet_lati_b = 0.09787605372125846
-    bet_drs_a = -27.626439004294966
-    bet_drs_b = 114.25191250249948
 
     # bet_wnlw_a, bet_wnlw_b, bet_spd_a, bet_spd_b, bet_tmi_a, bet_tmi_b = hyper_params
     bet_wnlw_a = -2.722691548665193
@@ -129,6 +121,14 @@ def main(hyper_params, train=0):
     bet_upsl_b = -7.926290207271677
     bet_tiel_a = 1.622169009396735
     bet_tiel_b = 5.203248951633058
+
+    # bet_setr_a, bet_setr_b, bet_sfcw_a, bet_sfcw_b, bet_drs_a, bet_drs_b = hyper_params
+    bet_setr_a = 5.123171719856241
+    bet_setr_b = 5.460028588967219
+    bet_sfcw_a = -6.283695595974428
+    bet_sfcw_b = 2.066906204817142
+    bet_drs_a = 4.950807080220399
+    bet_drs_b = -8.95207488749674
 
     # init
     start_date = None
@@ -663,9 +663,13 @@ def run():
     names = [
         'bet_multi_param',
 
-        'bet_age_a', 'bet_age_b',
-        'bet_upsl_a', 'bet_upsl_b',
-        'bet_tiel_a', 'bet_tiel_b',
+        'bet_setr_a', 'bet_setr_b',
+        'bet_sfcw_a', 'bet_sfcw_b',
+        'bet_drs_a', 'bet_drs_b',
+
+        # 'bet_age_a', 'bet_age_b',
+        # 'bet_upsl_a', 'bet_upsl_b',
+        # 'bet_tiel_a', 'bet_tiel_b',
 
         # 22.9  79*29   4500
         # 'bet_sfcr_a', 'bet_sfcr_b',  # 7 7 6   5
@@ -697,17 +701,12 @@ def run():
         # 16.8  65*26   77  2900
         # 'bet_gms_a', 'bet_gms_b',    # 2   1 0
         # 'bet_lati_a', 'bet_lati_b',  # 3   2 0
-        # 'bet_drs_a', 'bet_drs_b',    #   6 3 0
 
         # 9.6   63*15   75  990
         # 'bet_wnlr_a', 'bet_wnlr_b',  # 0 0   9
-        # 'bet_sfcw_a', 'bet_sfcw_b',  # 3   1 9
-
-        # 9.6   54*18   79  1100
-        # 'bet_setr_a', 'bet_setr_b',  # 9 9   8
 
     ]
-    tolx = 2670  # higher is slower
+    tolx = 2680  # higher is slower
     params = [-12, 0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
@@ -718,6 +717,7 @@ def run():
 
     if train:
         time_start = time()
+        mins = 90
         sigma = 2
         opts = CMAOptions()
         opts['bounds'] = bounds
@@ -734,7 +734,6 @@ def run():
             # print(list(es.result[0]))
             print(f'tolx={es.opts["tolx"]:.3f}  sol={list(es.result[5])}')
             es.opts['tolx'] = es.result[3] / tolx
-            mins = 90
             if time() - time_start > 60 * mins:
                 print(f'{mins}min limit reached')
                 break
