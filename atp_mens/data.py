@@ -4935,40 +4935,70 @@ DATA = [
                     JIRI_VESELY: 2.10,
                     ILYA_IVASHKA: 1.70,
                 },
+                'score': [(2, 6), (6, 1), (7, 6)],
                 'prediction': ILYA_IVASHKA,
                 'bet': 2,
             },
             {
                 'round': 8,
                 'players': [
+                    RICARDAS_BERANKIS,
                     YUICHI_SUGITA,
+                ],
+                'odds': {
+                    RICARDAS_BERANKIS: 1.85,
+                    YUICHI_SUGITA: 1.95,
+                },
+                'score': [(4, 6), (7, 6), (6, 2)],
+            },
+            {
+                'round': 8,
+                'players': [
+                    JAMES_DUCKWORTH,
+                    ROBERTO_MARCORA,
+                ],
+                'odds': {
+                    JAMES_DUCKWORTH: 1.48,
+                    ROBERTO_MARCORA: 2.60,
+                },
+                'score': [(6, 3), (7, 6)],
+            },
+            {
+                'round': 8,
+                'players': [
+                    EGOR_GERASIMOV,
+                    SOONWOO_KWON,
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 1.80,
+                    SOONWOO_KWON: 2.00,
+                },
+                'score': [(4, 6), (7, 6), (6, 4)],
+            },
+
+            # 2020-02-08
+            {
+                'round': 4,
+                'players': [
+                    JIRI_VESELY,
                     RICARDAS_BERANKIS,
                 ],
                 'odds': {
-                    YUICHI_SUGITA: 1.95,
-                    RICARDAS_BERANKIS: 1.85,
+                    JIRI_VESELY: 2.00,
+                    RICARDAS_BERANKIS: 1.80,
                 },
+                'prediction': RICARDAS_BERANKIS,
+                'bet': 1,
             },
             {
-                'round': 8,
+                'round': 4,
                 'players': [
-                    ROBERTO_MARCORA,
                     JAMES_DUCKWORTH,
-                ],
-                'odds': {
-                    ROBERTO_MARCORA: 2.60,
-                    JAMES_DUCKWORTH: 1.48,
-                },
-            },
-            {
-                'round': 8,
-                'players': [
-                    SOONWOO_KWON,
                     EGOR_GERASIMOV,
                 ],
                 'odds': {
-                    SOONWOO_KWON: 2.00,
-                    EGOR_GERASIMOV: 1.80,
+                    JAMES_DUCKWORTH: 2.10,
+                    EGOR_GERASIMOV: 1.70,
                 },
             },
 
@@ -5313,24 +5343,27 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    GREGOIRE_BARRERE,
                     FILIP_KRAJINOVIC,
+                    GREGOIRE_BARRERE,
                 ],
                 'odds': {
-                    GREGOIRE_BARRERE: 2.60,
                     FILIP_KRAJINOVIC: 1.48,
+                    GREGOIRE_BARRERE: 2.60,
                 },
+                'score': [(6, 2), (7, 5)],
             },
             {
                 'round': 8,
                 'players': [
-                    RICHARD_GASQUET,
                     VASEK_POSPISIL,
+                    RICHARD_GASQUET,
                 ],
                 'odds': {
-                    RICHARD_GASQUET: 2.70,
                     VASEK_POSPISIL: 1.45,
+                    RICHARD_GASQUET: 2.70,
                 },
+                'score': [(6, 1), (1, 0)],
+                'retired': True,
                 'prediction': VASEK_POSPISIL,
                 'bet': 2,
             },
@@ -5344,18 +5377,46 @@ DATA = [
                     GAEL_MONFILS: 1.30,
                     NORBERT_GOMBOS: 3.40,
                 },
+                'score': [(6, 3), (6, 4)],
                 'prediction': GAEL_MONFILS,
                 'bet': 1,
             },
             {
                 'round': 8,
                 'players': [
+                    DAVID_GOFFIN,
                     PIERRE_HUGUES_HERBERT,
+                ],
+                'odds': {
+                    DAVID_GOFFIN: 1.48,
+                    PIERRE_HUGUES_HERBERT: 2.60,
+                },
+                'score': [(6, 4), (7, 6)],
+            },
+
+            # 2020-02-08
+            {
+                'round': 4,
+                'players': [
+                    GAEL_MONFILS,
+                    FILIP_KRAJINOVIC,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.65,
+                    FILIP_KRAJINOVIC: 2.20,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 5,
+            },
+            {
+                'round': 4,
+                'players': [
+                    VASEK_POSPISIL,
                     DAVID_GOFFIN,
                 ],
                 'odds': {
-                    PIERRE_HUGUES_HERBERT: 2.60,
-                    DAVID_GOFFIN: 1.48,
+                    VASEK_POSPISIL: 2.50,
+                    DAVID_GOFFIN: 1.52,
                 },
             },
 
@@ -5628,14 +5689,66 @@ DATA = [
                     DIEGO_SCHWARTZMAN: 1.24,
                     JAUME_MUNAR: 4.00,
                 },
+                'score': [(6, 1), (7, 5)],
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 4,
             },
 
             # 2020-02-07
             {
+                'round': 8,
+                'players': [
+                    ANDREJ_MARTIN,
+                    CORENTIN_MOUTET,
+                ],
+                'odds': {
+                    ANDREJ_MARTIN: 2.60,
+                    CORENTIN_MOUTET: 1.48,
+                },
+                'score': [(6, 3), (6, 2)],
+            },
+            {
+                'round': 8,
+                'players': [
+                    CHRISTIAN_GARIN,
+                    PABLO_CUEVAS,
+                ],
+                'odds': {
+                    CHRISTIAN_GARIN: 1.48,
+                    PABLO_CUEVAS: 2.60,
+                },
+                'score': [(1, 6), (6, 3), (6, 4)],
+            },
 
-            }
+            # 2020-02-08
+            {
+                'round': 4,
+                'players': [
+                    CHRISTIAN_GARIN,
+                    ANDREJ_MARTIN,
+                ],
+                'odds': {
+                    CHRISTIAN_GARIN: 1.42,
+                    ANDREJ_MARTIN: 2.80,
+                },
+                'prediction': CHRISTIAN_GARIN,
+                'bet': 5,
+            },
+            {
+                'round': 4,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    LASLO_DJERE,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.24,
+                    LASLO_DJERE: 4.00,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 3,
+            },
+
+            #
         ]
     }
 
