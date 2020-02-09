@@ -2,6 +2,7 @@ from men import *
 from location import *
 
 # score mat roi acc profit  desc
+# 22.9  68  34  84  4690    2020-01 AUCKLAND        (1, 657), (3, 574), (4, 550), (2, 495), (5, 483)
 # 22.8  67  34  84  4740    2020-01 ADELAIDE        (1, 644), (4, 596), (5, 521), (3, 506), (2, 449)
 # 21.8  59  37  89  4600    2020-01 DOHA            (4, 629), (3, 576), (5, 505), (1, 481), (6, 301)
 # 22.3  79  28  75  4100    2020 atp cup
@@ -4640,11 +4641,7 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
-    {  # very late
+    {
         'location': PUNE,
         'date': '2020-02-09',
         'matches': [
@@ -5008,18 +5005,19 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    EGOR_GERASIMOV,
                     JIRI_VESELY,
+                    EGOR_GERASIMOV,
                 ],
                 'odds': {
-                    EGOR_GERASIMOV: 1.55,
                     JIRI_VESELY: 2.40,
+                    EGOR_GERASIMOV: 1.55,
                 },
+                'score': [(7, 6), (5, 7), (6, 3)],
             }
         ]
     },
 
-    {  # next day?
+    {
         'location': MONTPELLIER,
         'date': '2020-02-09',
         'matches': [
@@ -5446,13 +5444,18 @@ DATA = [
                     GAEL_MONFILS: 1.42,
                     VASEK_POSPISIL: 2.80,
                 },
+                'score': [(7, 5), (6, 3)],
                 'prediction': GAEL_MONFILS,
                 'bet': 5,
             }
         ]
     },
 
-    {  # late afternoon
+    ###############################################################################
+    # Active
+    ###############################################################################
+
+    {
         'location': CORDOBA,
         'date': '2020-02-09',
         'matches': [
@@ -5791,6 +5794,18 @@ DATA = [
                 },
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 1,
+            }
+        ]
+    },
+
+    {
+        'location': ROTTERDAM,
+        'date': '2020-02-16',
+        'matches': [
+
+            # 2020-02-10
+            {
+
             }
         ]
     }
