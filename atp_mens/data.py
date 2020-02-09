@@ -4987,22 +4987,35 @@ DATA = [
                     JIRI_VESELY: 2.00,
                     RICARDAS_BERANKIS: 1.80,
                 },
+                'score': [(6, 7), (7, 6), (7, 6)],
                 'prediction': RICARDAS_BERANKIS,
                 'bet': 1,
             },
             {
                 'round': 4,
                 'players': [
-                    JAMES_DUCKWORTH,
                     EGOR_GERASIMOV,
+                    JAMES_DUCKWORTH,
                 ],
                 'odds': {
-                    JAMES_DUCKWORTH: 2.10,
                     EGOR_GERASIMOV: 1.70,
+                    JAMES_DUCKWORTH: 2.10,
                 },
+                'score': [(7, 6), (6, 4)],
             },
 
-            #
+            # 2020-02-09
+            {
+                'round': 2,
+                'players': [
+                    EGOR_GERASIMOV,
+                    JIRI_VESELY,
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 1.55,
+                    JIRI_VESELY: 2.40,
+                },
+            }
         ]
     },
 
@@ -5405,6 +5418,7 @@ DATA = [
                     GAEL_MONFILS: 1.65,
                     FILIP_KRAJINOVIC: 2.20,
                 },
+                'score': [(7, 6), (6, 2)],
                 'prediction': GAEL_MONFILS,
                 'bet': 5,
             },
@@ -5418,9 +5432,23 @@ DATA = [
                     VASEK_POSPISIL: 2.50,
                     DAVID_GOFFIN: 1.52,
                 },
+                'score': [(6, 3), (1, 6), (7, 5)],
             },
 
-            #
+            # 2020-02-09
+            {
+                'round': 2,
+                'players': [
+                    GAEL_MONFILS,
+                    VASEK_POSPISIL,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.42,
+                    VASEK_POSPISIL: 2.80,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 5,
+            }
         ]
     },
 
@@ -5731,6 +5759,7 @@ DATA = [
                     CHRISTIAN_GARIN: 1.42,
                     ANDREJ_MARTIN: 2.80,
                 },
+                'score': [(2, 6), (6, 2), (6, 2)],
                 'prediction': CHRISTIAN_GARIN,
                 'bet': 5,
             },
@@ -5744,11 +5773,25 @@ DATA = [
                     DIEGO_SCHWARTZMAN: 1.24,
                     LASLO_DJERE: 4.00,
                 },
+                'score': [(6, 1), (1, 6), (6, 2)],
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 3,
             },
 
-            #
+            # 2020-02-09
+            {
+                'round': 2,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    CHRISTIAN_GARIN,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.34,
+                    CHRISTIAN_GARIN: 3.20,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 1,
+            }
         ]
     }
 
