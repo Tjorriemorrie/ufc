@@ -5451,10 +5451,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': CORDOBA,
         'date': '2020-02-09',
@@ -5785,18 +5781,23 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    DIEGO_SCHWARTZMAN,
                     CHRISTIAN_GARIN,
+                    DIEGO_SCHWARTZMAN,
                 ],
                 'odds': {
-                    DIEGO_SCHWARTZMAN: 1.34,
                     CHRISTIAN_GARIN: 3.20,
+                    DIEGO_SCHWARTZMAN: 1.34,
                 },
+                'score': [(2, 6), (6, 4), (6, 0)],
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 1,
             }
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': ROTTERDAM,
@@ -5805,8 +5806,225 @@ DATA = [
 
             # 2020-02-10
             {
+                'round': 64,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    PABLO_CARRENO_BUSTA,
+                ],
+                'odds': {
+                    ADRIAN_MANNARINO: 2.00,
+                    PABLO_CARRENO_BUSTA: 1.80,
+                },
+            },
+            {
+                'round': 64,
+                'players': [
+                    ROBERTO_BAUTISTA_AGUT,
+                    MARTON_FUCSOVICS,
+                ],
+                'odds': {
+                    ROBERTO_BAUTISTA_AGUT: 1.40,
+                    MARTON_FUCSOVICS: 2.90,
+                },
+                'prediction': ROBERTO_BAUTISTA_AGUT,
+                'bet': 3,
+            },
+            {
+                'round': 64,
+                'players': [
+                    DENIS_SHAPOVALOV,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    DENIS_SHAPOVALOV: 1.85,
+                    GRIGOR_DIMITROV: 1.95,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 5,
+            },
+            {
+                'round': 64,
+                'players': [
+                    DANIEL_EVANS,
+                    PHILIPP_KOHLSCHREIBER,
+                ],
+                'odds': {
+                    DANIEL_EVANS: 2.00,
+                    PHILIPP_KOHLSCHREIBER: 1.80,
+                },
+            },
+        ]
+    },
 
-            }
+    {
+        'location': NEW_YORK,
+        'date': '2020-02-16',
+        'matches': [
+
+            # 2020-02-10
+            {
+                'round': 32,
+                'players': [
+                    JASON_JUNG,
+                    MITCHELL_KRUEGER,
+                ],
+                'odds': {
+                    JASON_JUNG: 1.65,
+                    MITCHELL_KRUEGER: 2.20,
+                },
+                'prediction': JASON_JUNG,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    PAOLO_LORENZI,
+                    NOAH_RUBIN,
+                ],
+                'odds': {
+                    PAOLO_LORENZI: 2.50,
+                    NOAH_RUBIN: 1.52,
+                },
+                'prediction': NOAH_RUBIN,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    BRADLEY_KLAHN,
+                    DANILO_PETROVIC,
+                ],
+                'odds': {
+                    BRADLEY_KLAHN: 1.48,
+                    DANILO_PETROVIC: 2.60,
+                },
+                'prediction': BRADLEY_KLAHN,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    GO_SOEDA,
+                    BERNARD_TOMIC,
+                ],
+                'odds': {
+                    GO_SOEDA: 1.70,
+                    BERNARD_TOMIC: 2.10,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    ANDREAS_SEPPI,
+                ],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.65,
+                    ANDREAS_SEPPI: 2.20,
+                },
+                'prediction': DAMIR_DZUMHUR,
+                'bet': 5,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    TOMMY_PAUL,
+                ],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 2.25,
+                    TOMMY_PAUL: 1.62,
+                },
+                'prediction': TOMMY_PAUL,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEVE_JOHNSON,
+                    TENNYS_SANDGREN,
+                ],
+                'odds': {
+                    STEVE_JOHNSON: 2.10,
+                    TENNYS_SANDGREN: 1.70,
+                },
+                'prediction': TENNYS_SANDGREN,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    JACK_SOCK,
+                    MARCOS_GIRON,
+                ],
+                'odds': {
+                    JACK_SOCK: 2.30,
+                    MARCOS_GIRON: 1.60,
+                },
+                'prediction': MARCOS_GIRON,
+                'bet': 1,
+            },
+        ]
+    },
+
+    {
+        'location': BUENOS_AIRES,
+        'date': '2020-02-10',
+        'matches': [
+
+            # 2020-02-10
+            {
+                'round': 32,
+                'players': [
+                    JAUME_MUNAR,
+                    THIAGO_MONTEIRO,
+                ],
+                'odds': {
+                    JAUME_MUNAR: 1.80,
+                    THIAGO_MONTEIRO: 2.00,
+                },
+                'prediction': JAUME_MUNAR,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    CASPER_RUUD,
+                    PABLO_ANDUJAR,
+                ],
+                'odds': {
+                    CASPER_RUUD: 1.65,
+                    PABLO_ANDUJAR: 2.20,
+                },
+                'prediction': CASPER_RUUD,
+                'bet': 5,
+            },
+            {
+                'round': 32,
+                'players': [
+                    LORENZO_SONEGO,
+                    PABLO_CUEVAS,
+                ],
+                'odds': {
+                    LORENZO_SONEGO: 2.40,
+                    PABLO_CUEVAS: 1.55,
+                },
+                'prediction': PABLO_CUEVAS,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    HUGO_DELLIEN,
+                ],
+                'odds': {
+                    FEDERICO_DELBONIS: 1.26,
+                    HUGO_DELLIEN: 3.80,
+                },
+                'prediction': FEDERICO_DELBONIS,
+                'bet': 5,
+            },
         ]
     }
 
