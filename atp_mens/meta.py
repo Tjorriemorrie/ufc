@@ -513,6 +513,9 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
+    BRIAN_SHI: {
+        'born_at': (2000, 2, 24),
+    },
     CALVIN_HEMERY: {
         'born_at': (1995, 1, 28),
         'height': 191,
