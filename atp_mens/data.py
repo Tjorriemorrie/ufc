@@ -6075,17 +6075,19 @@ DATA = [
                     JANNIK_SINNER: 3.20,
                     DAVID_GOFFIN: 1.34,
                 },
+                'score': [(7, 6), (7, 5)],
             },
             {
                 'round': 16,
                 'players': [
-                    ALEXANDER_BUBLIK,
                     ANDREY_RUBLEV,
+                    ALEXANDER_BUBLIK,
                 ],
                 'odds': {
-                    ALEXANDER_BUBLIK: 4.40,
                     ANDREY_RUBLEV: 1.20,
+                    ALEXANDER_BUBLIK: 4.40,
                 },
+                'score': [(7, 5), (6, 3)],
             },
             {
                 'round': 16,
@@ -6097,6 +6099,7 @@ DATA = [
                     ALJAZ_BEDENE: 4.20,
                     STEFANOS_TSITSIPAS: 1.22,
                 },
+                'score': [(7, 5), (6, 4)],
             },
             {
                 'round': 16,
@@ -6108,21 +6111,77 @@ DATA = [
                     GAEL_MONFILS: 1.28,
                     GILLES_SIMON: 3.60,
                 },
+                'score': [(6, 4), (6, 1)],
                 'prediction': GAEL_MONFILS,
                 'bet': 4,
             },
             {
                 'round': 16,
                 'players': [
-                    VASEK_POSPISIL,
                     FILIP_KRAJINOVIC,
+                    VASEK_POSPISIL,
                 ],
                 'odds': {
-                    VASEK_POSPISIL: 1.80,
                     FILIP_KRAJINOVIC: 2.00,
+                    VASEK_POSPISIL: 1.80,
                 },
+                'score': [(6, 4), (7, 6)],
                 'prediction': VASEK_POSPISIL,
                 'bet': 3,
+            },
+
+            # 2020-02-14
+            {
+                'round': 8,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    JANNIK_SINNER,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 1.70,
+                    JANNIK_SINNER: 2.10,
+                },
+                'prediction': PABLO_CARRENO_BUSTA,
+                'bet': 5,
+            },
+            {
+                'round': 8,
+                'players': [
+                    FELIX_AUGER_ALIASSIME,
+                    ALJAZ_BEDENE,
+                ],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.52,
+                    ALJAZ_BEDENE: 2.50,
+                },
+                'prediction': FELIX_AUGER_ALIASSIME,
+                'bet': 6,
+            },
+            {
+                'round': 8,
+                'players': [
+                    GAEL_MONFILS,
+                    DANIEL_EVANS,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.42,
+                    DANIEL_EVANS: 2.80,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 3,
+            },
+            {
+                'round': 8,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    ANDREY_RUBLEV,
+                ],
+                'odds': {
+                    FILIP_KRAJINOVIC: 3.40,
+                    ANDREY_RUBLEV: 1.30,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 2,
             },
 
             #
@@ -6415,6 +6474,7 @@ DATA = [
                     KYLE_EDMUND: 1.45,
                     DOMINIK_KOEPFER: 2.70,
                 },
+                'score': [(6, 2), (6, 4)],
                 'prediction': KYLE_EDMUND,
                 'bet': 4,
             },
@@ -6428,6 +6488,7 @@ DATA = [
                     JASON_JUNG: 1.85,
                     CAMERON_NORRIE: 1.95,
                 },
+                'score': [(6, 4), (6, 4)],
                 'prediction': JASON_JUNG,
                 'bet': 8,
             },
@@ -6441,22 +6502,80 @@ DATA = [
                     REILLY_OPELKA: 1.60,
                     YOSHIHITO_NISHIOKA: 2.30,
                 },
+                'score': [(6, 4), (6, 4)],
                 'prediction': REILLY_OPELKA,
                 'bet': 4,
             },
             {
                 'round': 16,
                 'players': [
-                    JOHN_ISNER,
                     JORDAN_THOMPSON,
+                    JOHN_ISNER,
                 ],
                 'odds': {
-                    JOHN_ISNER: 1.52,
                     JORDAN_THOMPSON: 2.50,
+                    JOHN_ISNER: 1.52,
                 },
+                'score': [(7, 6), (6, 7), (6, 3)],
                 'prediction': JOHN_ISNER,
                 'bet': 3,
             },
+
+            # 2020-02-14
+            {
+                'round': 8,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    UGO_HUMBERT,
+                ],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 2.15,
+                    UGO_HUMBERT: 1.68,
+                },
+                'prediction': UGO_HUMBERT,
+                'bet': 5,
+            },
+            {
+                'round': 8,
+                'players': [
+                    KYLE_EDMUND,
+                    SOONWOO_KWON,
+                ],
+                'odds': {
+                    KYLE_EDMUND: 1.60,
+                    SOONWOO_KWON: 2.30,
+                },
+                'prediction': KYLE_EDMUND,
+                'bet': 5,
+            },
+            {
+                'round': 8,
+                'players': [
+                    REILLY_OPELKA,
+                    JASON_JUNG,
+                ],
+                'odds': {
+                    REILLY_OPELKA: 1.36,
+                    JASON_JUNG: 3.10,
+                },
+                'prediction': REILLY_OPELKA,
+                'bet': 4,
+            },
+            {
+                'round': 8,
+                'players': [
+                    JORDAN_THOMPSON,
+                    ANDREAS_SEPPI,
+                ],
+                'odds': {
+                    JORDAN_THOMPSON: 1.75,
+                    ANDREAS_SEPPI: 2.05,
+                },
+                'prediction': JORDAN_THOMPSON,
+                'bet': 5,
+            },
+
+            #
         ]
     },
 
@@ -6675,13 +6794,14 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    LASLO_DJERE,
                     JUAN_IGNACIO_LONDERO,
+                    LASLO_DJERE,
                 ],
                 'odds': {
-                    LASLO_DJERE: 1.90,
                     JUAN_IGNACIO_LONDERO: 1.90,
+                    LASLO_DJERE: 1.90,
                 },
+                'score': [(6, 7), (6, 2), (6, 1)],
             },
             {
                 'round': 16,
@@ -6693,19 +6813,21 @@ DATA = [
                     PABLO_CUEVAS: 1.58,
                     ALBERT_RAMOS_VINOLAS: 2.35,
                 },
+                'score': [(6, 4), (4, 6), (6, 4)],
                 'prediction': PABLO_CUEVAS,
                 'bet': 2,
             },
             {
                 'round': 16,
                 'players': [
-                    FACUNDO_BAGNIS,
                     GUIDO_PELLA,
+                    FACUNDO_BAGNIS,
                 ],
                 'odds': {
-                    FACUNDO_BAGNIS: 3.20,
                     GUIDO_PELLA: 1.34,
+                    FACUNDO_BAGNIS: 3.20,
                 },
+                'score': [(7, 6), (6, 7), (6, 4)],
             },
             {
                 'round': 16,
@@ -6717,8 +6839,61 @@ DATA = [
                     DIEGO_SCHWARTZMAN: 1.24,
                     FEDERICO_DELBONIS: 4.00,
                 },
+                'score': [(6, 3), (4, 6), (6, 2)],
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 5,
+            },
+
+            # 2020-02-14
+            {
+                'round': 8,
+                'players': [
+                    CASPER_RUUD,
+                    DUSAN_LAJOVIC,
+                ],
+                'odds': {
+                    CASPER_RUUD: 1.42,
+                    DUSAN_LAJOVIC: 2.80,
+                },
+                'prediction': CASPER_RUUD,
+                'bet': 4,
+            },
+            {
+                'round': 8,
+                'players': [
+                    JUAN_IGNACIO_LONDERO,
+                    GUIDO_PELLA,
+                ],
+                'odds': {
+                    JUAN_IGNACIO_LONDERO: 1.95,
+                    GUIDO_PELLA: 1.85,
+                },
+                'prediction': GUIDO_PELLA,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
+                    PABLO_CUEVAS,
+                ],
+                'odds': {
+                    DIEGO_SCHWARTZMAN: 1.28,
+                    PABLO_CUEVAS: 3.60,
+                },
+                'prediction': DIEGO_SCHWARTZMAN,
+                'bet': 5,
+            },
+            {
+                'round': 8,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    PEDRO_SOUSA,
+                ],
+                'odds': {
+                    THIAGO_MONTEIRO: 1.28,
+                    PEDRO_SOUSA: 3.60,
+                },
             },
 
             #
