@@ -6141,6 +6141,7 @@ DATA = [
                     PABLO_CARRENO_BUSTA: 1.70,
                     JANNIK_SINNER: 2.10,
                 },
+                'score': [(7, 5), (3, 6), (7, 6)],
                 'prediction': PABLO_CARRENO_BUSTA,
                 'bet': 5,
             },
@@ -6154,6 +6155,7 @@ DATA = [
                     FELIX_AUGER_ALIASSIME: 1.52,
                     ALJAZ_BEDENE: 2.50,
                 },
+                'score': [(6, 4), (7, 6)],
                 'prediction': FELIX_AUGER_ALIASSIME,
                 'bet': 6,
             },
@@ -6167,6 +6169,7 @@ DATA = [
                     GAEL_MONFILS: 1.42,
                     DANIEL_EVANS: 2.80,
                 },
+                'score': [(7, 6), (6, 2)],
                 'prediction': GAEL_MONFILS,
                 'bet': 3,
             },
@@ -6180,8 +6183,35 @@ DATA = [
                     FILIP_KRAJINOVIC: 3.40,
                     ANDREY_RUBLEV: 1.30,
                 },
+                'score': [(7, 6), (6, 4)],
                 'prediction': ANDREY_RUBLEV,
                 'bet': 2,
+            },
+
+            # 2020-02-15
+            {
+                'round': 4,
+                'players': [
+                    PABLO_CARRENO_BUSTA,
+                    FELIX_AUGER_ALIASSIME,
+                ],
+                'odds': {
+                    PABLO_CARRENO_BUSTA: 2.40,
+                    FELIX_AUGER_ALIASSIME: 1.55,
+                },
+                'prediction': FELIX_AUGER_ALIASSIME,
+                'bet': 1,
+            },
+            {
+                'round': 4,
+                'players': [
+                    FILIP_KRAJINOVIC,
+                    GAEL_MONFILS,
+                ],
+                'odds': {
+                    FILIP_KRAJINOVIC: 2.30,
+                    GAEL_MONFILS: 1.60,
+                },
             },
 
             #
@@ -6532,6 +6562,7 @@ DATA = [
                     MIOMIR_KECMANOVIC: 2.15,
                     UGO_HUMBERT: 1.68,
                 },
+                'score': [(3, 6), (6, 2), (6, 4)],
                 'prediction': UGO_HUMBERT,
                 'bet': 5,
             },
@@ -6545,37 +6576,64 @@ DATA = [
                     KYLE_EDMUND: 1.60,
                     SOONWOO_KWON: 2.30,
                 },
+                'score': [(3, 6), (6, 2), (7, 6)],
                 'prediction': KYLE_EDMUND,
                 'bet': 5,
             },
             {
                 'round': 8,
                 'players': [
-                    REILLY_OPELKA,
                     JASON_JUNG,
+                    REILLY_OPELKA,
                 ],
                 'odds': {
-                    REILLY_OPELKA: 1.36,
                     JASON_JUNG: 3.10,
+                    REILLY_OPELKA: 1.36,
                 },
+                'score': [(5, 7), (6, 4), (6, 4)],
                 'prediction': REILLY_OPELKA,
                 'bet': 4,
             },
             {
                 'round': 8,
                 'players': [
-                    JORDAN_THOMPSON,
                     ANDREAS_SEPPI,
+                    JORDAN_THOMPSON,
                 ],
                 'odds': {
-                    JORDAN_THOMPSON: 1.75,
                     ANDREAS_SEPPI: 2.05,
+                    JORDAN_THOMPSON: 1.75,
                 },
+                'score': [(6, 7), (6, 4), (6, 1)],
                 'prediction': JORDAN_THOMPSON,
                 'bet': 5,
             },
 
-            #
+            # 2020-02-15
+            {
+                'round': 4,
+                'players': [
+                    MIOMIR_KECMANOVIC,
+                    KYLE_EDMUND,
+                ],
+                'odds': {
+                    MIOMIR_KECMANOVIC: 2.05,
+                    KYLE_EDMUND: 1.75,
+                },
+                'prediction': KYLE_EDMUND,
+                'bet': 1,
+            },
+            {
+                'round': 4,
+                'players': [
+                    ANDREAS_SEPPI,
+                    JASON_JUNG,
+                ],
+                'odds': {
+                    ANDREAS_SEPPI: 1.65,
+                    JASON_JUNG: 2.20,
+                },
+            },
         ]
     },
 
@@ -6855,6 +6913,7 @@ DATA = [
                     CASPER_RUUD: 1.42,
                     DUSAN_LAJOVIC: 2.80,
                 },
+                'score': [(7, 5), (6, 1)],
                 'prediction': CASPER_RUUD,
                 'bet': 4,
             },
@@ -6868,6 +6927,7 @@ DATA = [
                     JUAN_IGNACIO_LONDERO: 1.95,
                     GUIDO_PELLA: 1.85,
                 },
+                'score': [(6, 4), (7, 6)],
                 'prediction': GUIDO_PELLA,
                 'bet': 1,
             },
@@ -6881,22 +6941,48 @@ DATA = [
                     DIEGO_SCHWARTZMAN: 1.28,
                     PABLO_CUEVAS: 3.60,
                 },
+                'score': [(6, 4), (7, 6)],
                 'prediction': DIEGO_SCHWARTZMAN,
                 'bet': 5,
             },
             {
                 'round': 8,
                 'players': [
+                    PEDRO_SOUSA,
                     THIAGO_MONTEIRO,
+                ],
+                'odds': {
+                    PEDRO_SOUSA: 3.60,
+                    THIAGO_MONTEIRO: 1.28,
+                },
+                'score': [(7, 6), (6, 4)],
+            },
+
+            # 2020-02-15
+            {
+                'round': 4,
+                'players': [
+                    CASPER_RUUD,
+                    JUAN_IGNACIO_LONDERO,
+                ],
+                'odds': {
+                    CASPER_RUUD: 1.48,
+                    JUAN_IGNACIO_LONDERO: 2.60,
+                },
+                'prediction': CASPER_RUUD,
+                'bet': 6,
+            },
+            {
+                'round': 4,
+                'players': [
+                    DIEGO_SCHWARTZMAN,
                     PEDRO_SOUSA,
                 ],
                 'odds': {
-                    THIAGO_MONTEIRO: 1.28,
-                    PEDRO_SOUSA: 3.60,
+                    DIEGO_SCHWARTZMAN: 1.38,
+                    PEDRO_SOUSA: 3.00,
                 },
             },
-
-            #
         ]
     }
 
