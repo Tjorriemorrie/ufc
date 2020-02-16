@@ -6192,29 +6192,44 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    PABLO_CARRENO_BUSTA,
                     FELIX_AUGER_ALIASSIME,
+                    PABLO_CARRENO_BUSTA,
                 ],
                 'odds': {
-                    PABLO_CARRENO_BUSTA: 2.40,
                     FELIX_AUGER_ALIASSIME: 1.55,
+                    PABLO_CARRENO_BUSTA: 2.40,
                 },
+                'score': [(7, 6), (6, 4)],
                 'prediction': FELIX_AUGER_ALIASSIME,
                 'bet': 1,
             },
             {
                 'round': 4,
                 'players': [
-                    FILIP_KRAJINOVIC,
                     GAEL_MONFILS,
+                    FILIP_KRAJINOVIC,
                 ],
                 'odds': {
-                    FILIP_KRAJINOVIC: 2.30,
                     GAEL_MONFILS: 1.60,
+                    FILIP_KRAJINOVIC: 2.30,
                 },
+                'score': [(6, 4), (7, 6)],
             },
 
-            #
+            # 2020-02-16
+            {
+                'round': 2,
+                'players': [
+                    GAEL_MONFILS,
+                    FELIX_AUGER_ALIASSIME,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.55,
+                    FELIX_AUGER_ALIASSIME: 2.40,
+                },
+                'prediction': GAEL_MONFILS,
+                'bet': 4,
+            }
         ]
     },
 
@@ -6613,13 +6628,14 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    MIOMIR_KECMANOVIC,
                     KYLE_EDMUND,
+                    MIOMIR_KECMANOVIC,
                 ],
                 'odds': {
-                    MIOMIR_KECMANOVIC: 2.05,
                     KYLE_EDMUND: 1.75,
+                    MIOMIR_KECMANOVIC: 2.05,
                 },
+                'score': [(6, 1), (6, 4)],
                 'prediction': KYLE_EDMUND,
                 'bet': 1,
             },
@@ -6633,7 +6649,21 @@ DATA = [
                     ANDREAS_SEPPI: 1.65,
                     JASON_JUNG: 2.20,
                 },
+                'score': [(6, 3), (6, 2)],
             },
+
+            # 2020-02-16
+            {
+                'round': 2,
+                'players': [
+                    ANDREAS_SEPPI,
+                    KYLE_EDMUND,
+                ],
+                'odds': {
+                    ANDREAS_SEPPI: 3.00,
+                    KYLE_EDMUND: 1.38,
+                },
+            }
         ]
     },
 
@@ -6969,19 +6999,236 @@ DATA = [
                     CASPER_RUUD: 1.48,
                     JUAN_IGNACIO_LONDERO: 2.60,
                 },
+                'score': [(4, 6), (7, 5), (6, 1)],
                 'prediction': CASPER_RUUD,
                 'bet': 6,
             },
             {
                 'round': 4,
                 'players': [
-                    DIEGO_SCHWARTZMAN,
                     PEDRO_SOUSA,
+                    DIEGO_SCHWARTZMAN,
                 ],
                 'odds': {
-                    DIEGO_SCHWARTZMAN: 1.38,
                     PEDRO_SOUSA: 3.00,
+                    DIEGO_SCHWARTZMAN: 1.38,
                 },
+                'score': [],
+                'retired': True,
+            },
+
+            # 2020-02-16
+            {
+                'round': 2,
+                'players': [
+                    PEDRO_SOUSA,
+                    CASPER_RUUD,
+                ],
+                'odds': {
+                    PEDRO_SOUSA: 5.50,
+                    CASPER_RUUD: 1.14,
+                },
+            }
+        ]
+    },
+
+    {
+        'location': BUENOS_AIRES,
+        'date': '2020-02-23',
+        'matches': [
+
+            # 2020-02-16
+            {
+                'round': 256,
+                'players': [
+                    ATTILA_BALAZS,
+                    GIANLUCA_MAGER,
+                ],
+                'odds': {
+                    ATTILA_BALAZS: 1.80,
+                    GIANLUCA_MAGER: 1.95,
+                },
+                'prediction': ATTILA_BALAZS,
+                'bet': 4,
+            },
+            {
+                'round': 256,
+                'players': [
+                    FEDERICO_CORIA,
+                    JOZEF_KOVALIK,
+                ],
+                'odds': {
+                    FEDERICO_CORIA: 2.50,
+                    JOZEF_KOVALIK: 1.50,
+                },
+            },
+            {
+                'round': 256,
+                'players': [
+                    FEDERICO_GAIO,
+                    JOAO_DOMINGUES,
+                ],
+                'odds': {
+                    FEDERICO_GAIO: 1.60,
+                    JOAO_DOMINGUES: 2.25,
+                },
+                'prediction': FEDERICO_GAIO,
+                'bet': 9,
+            },
+            {
+                'round': 256,
+                'players': [
+                    FILIP_HORANSKY,
+                    PEDRO_MARTINEZ,
+                ],
+                'odds': {
+                    FILIP_HORANSKY: 2.40,
+                    PEDRO_MARTINEZ: 1.55,
+                },
+                'prediction': PEDRO_MARTINEZ,
+                'bet': 1,
+            }
+        ]
+    },
+
+    {
+        'location': MARSEILLE,
+        'date': '2020-02-23',
+        'matches': [
+
+            # 2020-02-16
+            {
+                'round': 512,
+                'players': [
+                    LLOYD_HARRIS,
+                    ELLIOT_BENCHETRIT,
+                ],
+                'odds': {
+                    LLOYD_HARRIS: 1.26,
+                    ELLIOT_BENCHETRIT: 3.60,
+                },
+                'prediction': LLOYD_HARRIS,
+                'bet': 2,
+            },
+            {
+                'round': 512,
+                'players': [
+                    LUKAS_LACKO,
+                    EMIL_RUUSUVUORI,
+                ],
+                'odds': {
+                    LUKAS_LACKO: 3.60,
+                    EMIL_RUUSUVUORI: 1.26,
+                },
+            },
+            {
+                'round': 512,
+                'players': [
+                    MATTHIAS_BACHINGER,
+                    SERGIY_STAKHOVSKY,
+                ],
+                'odds': {
+                    MATTHIAS_BACHINGER: 2.20,
+                    SERGIY_STAKHOVSKY: 1.62,
+                },
+                'prediction': SERGIY_STAKHOVSKY,
+                'bet': 1,
+            },
+            {
+                'round': 512,
+                'players': [
+                    DENNIS_NOVAK,
+                    ARTHUR_CAZAUX,
+                ],
+                'odds': {
+                    DENNIS_NOVAK: 1.08,
+                    ARTHUR_CAZAUX: 7.00,
+                },
+                'prediction': DENNIS_NOVAK,
+                'bet': 3,
+            },
+            {
+                'round': 512,
+                'players': [
+                    ALEXEI_POPYRIN,
+                    STEVEN_DIEZ,
+                ],
+                'odds': {
+                    ALEXEI_POPYRIN: 1.32,
+                    STEVEN_DIEZ: 3.20,
+                },
+                'prediction': ALEXEI_POPYRIN,
+                'bet': 5,
+            },
+            {
+                'round': 512,
+                'players': [
+                    BERNABE_ZAPATA_MIRALLES,
+                    ILYA_IVASHKA,
+                ],
+                'odds': {
+                    BERNABE_ZAPATA_MIRALLES: 3.60,
+                    ILYA_IVASHKA: 1.26,
+                },
+                'prediction': ILYA_IVASHKA,
+                'bet': 1,
+            },
+        ]
+    },
+
+    {
+        'location': DELRAY_BEACH,
+        'date': '2020-02-23',
+        'matches': [
+
+            # 2020-02-16
+            {
+                'round': 512,
+                'players': [
+                    NOAH_RUBIN,
+                    DENIS_ISTOMIN,
+                ],
+                'odds': {
+                    NOAH_RUBIN: 2.15,
+                    DENIS_ISTOMIN: 1.65,
+                },
+            },
+            {
+                'round': 512,
+                'players': [
+                    BERNARD_TOMIC,
+                    ERNESTS_GULBIS,
+                ],
+                'odds': {
+                    BERNARD_TOMIC: 2.40,
+                    ERNESTS_GULBIS: 1.55,
+                },
+                'prediction': ERNESTS_GULBIS,
+                'bet': 4,
+            },
+            {
+                'round': 512,
+                'players': [
+                    STEFAN_KOZLOV,
+                    EMILIO_GOMEZ,
+                ],
+                'odds': {
+                    STEFAN_KOZLOV: 1.85,
+                    EMILIO_GOMEZ: 1.95,
+                },
+            },
+            {
+                'round': 512,
+                'players': [
+                    CAMERON_NORRIE,
+                    MITCHELL_KRUEGER,
+                ],
+                'odds': {
+                    CAMERON_NORRIE: 1.40,
+                    MITCHELL_KRUEGER: 2.90,
+                },
+                'prediction': CAMERON_NORRIE,
+                'bet': 4,
             },
         ]
     }

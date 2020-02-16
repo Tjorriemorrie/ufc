@@ -391,6 +391,9 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    ARTHUR_CAZAUX: {
+        'born_at': (2002, 8, 23),
+    },
     ARTHUR_DE_GREEF: {
         'born_at': (1992, 3, 27),
         'height': 183,
