@@ -20,8 +20,6 @@ from location import *
 # 72.1  10.0    1191    2018 washington                     (3, 1187), (4, 538), (6, 337), (1, 283)
 
 # 72.9  7.9     349     2019-08-31                          (1, 1534), (2, 974), (0, 819), (3, 160)
-
-
 DATA = [
     {
         'location': PARIS,
@@ -5796,10 +5794,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': ROTTERDAM,
         'date': '2020-02-16',
@@ -6227,6 +6221,7 @@ DATA = [
                     GAEL_MONFILS: 1.55,
                     FELIX_AUGER_ALIASSIME: 2.40,
                 },
+                'score': [(6, 2), (6, 4)],
                 'prediction': GAEL_MONFILS,
                 'bet': 4,
             }
@@ -6656,13 +6651,14 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    ANDREAS_SEPPI,
                     KYLE_EDMUND,
+                    ANDREAS_SEPPI,
                 ],
                 'odds': {
-                    ANDREAS_SEPPI: 3.00,
                     KYLE_EDMUND: 1.38,
+                    ANDREAS_SEPPI: 3.00,
                 },
+                'score': [(7, 5), (6, 1)],
             }
         ]
     },
@@ -7021,16 +7017,21 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    PEDRO_SOUSA,
                     CASPER_RUUD,
+                    PEDRO_SOUSA,
                 ],
                 'odds': {
-                    PEDRO_SOUSA: 5.50,
                     CASPER_RUUD: 1.14,
+                    PEDRO_SOUSA: 5.50,
                 },
+                'score': [(6, 1), (6, 4)],
             }
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': BUENOS_AIRES,
@@ -7039,7 +7040,7 @@ DATA = [
 
             # 2020-02-16
             {
-                'round': 256,
+                'round': 512,
                 'players': [
                     ATTILA_BALAZS,
                     GIANLUCA_MAGER,
@@ -7048,6 +7049,7 @@ DATA = [
                     ATTILA_BALAZS: 1.80,
                     GIANLUCA_MAGER: 1.95,
                 },
+                'score': [(6, 3), (6, 3)],
                 'prediction': ATTILA_BALAZS,
                 'bet': 4,
             },
@@ -7061,33 +7063,123 @@ DATA = [
                     FEDERICO_CORIA: 2.50,
                     JOZEF_KOVALIK: 1.50,
                 },
+                'score': [(6, 2), (6, 4)],
             },
             {
                 'round': 256,
                 'players': [
-                    FEDERICO_GAIO,
                     JOAO_DOMINGUES,
+                    FEDERICO_GAIO,
                 ],
                 'odds': {
-                    FEDERICO_GAIO: 1.60,
                     JOAO_DOMINGUES: 2.25,
+                    FEDERICO_GAIO: 1.60,
                 },
+                'score': [(3, 6), (7, 6), (7, 5)],
                 'prediction': FEDERICO_GAIO,
                 'bet': 9,
             },
             {
                 'round': 256,
                 'players': [
-                    FILIP_HORANSKY,
                     PEDRO_MARTINEZ,
+                    FILIP_HORANSKY,
                 ],
                 'odds': {
-                    FILIP_HORANSKY: 2.40,
                     PEDRO_MARTINEZ: 1.55,
+                    FILIP_HORANSKY: 2.40,
                 },
+                'score': [(6, 4), (6, 2)],
                 'prediction': PEDRO_MARTINEZ,
                 'bet': 1,
-            }
+            },
+
+            # 2020-02-17
+            {
+                'round': 32,
+                'players': [
+                    PABLO_ANDUJAR,
+                    FERNANDO_VERDASCO,
+                ],
+                'odds': {
+                    PABLO_ANDUJAR: 2.20,
+                    FERNANDO_VERDASCO: 1.65,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ROBERTO_CARBALLES_BAENA,
+                    FEDERICO_DELBONIS,
+                ],
+                'odds': {
+                    ROBERTO_CARBALLES_BAENA: 2.30,
+                    FEDERICO_DELBONIS: 1.60,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDREJ_MARTIN,
+                    CHRISTIAN_GARIN,
+                ],
+                'odds': {
+                    ANDREJ_MARTIN: 3.80,
+                    CHRISTIAN_GARIN: 1.26,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    PEDRO_MARTINEZ,
+                    HUGO_DELLIEN,
+                ],
+                'odds': {
+                    PEDRO_MARTINEZ: 1.75,
+                    HUGO_DELLIEN: 2.05,
+                },
+                'prediction': PEDRO_MARTINEZ,
+                'bet': 8,
+            },
+            {
+                'round': 32,
+                'players': [
+                    CORENTIN_MOUTET,
+                    FEDERICO_CORIA,
+                ],
+                'odds': {
+                    CORENTIN_MOUTET: 1.52,
+                    FEDERICO_CORIA: 2.50,
+                },
+                'prediction': CORENTIN_MOUTET,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEJANDRO_DAVIDOVICH_FOKINA,
+                    THIAGO_SEYBOTH_WILD,
+                ],
+                'odds': {
+                    ALEJANDRO_DAVIDOVICH_FOKINA: 1.52,
+                    THIAGO_SEYBOTH_WILD: 2.50,
+                },
+                'prediction': ALEJANDRO_DAVIDOVICH_FOKINA,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    CARLOS_ALCARAZ_GARFIA,
+                ],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 1.22,
+                    CARLOS_ALCARAZ_GARFIA: 4.20,
+                },
+                'prediction': ALBERT_RAMOS_VINOLAS,
+                'bet': 6,
+            },
         ]
     },
 
@@ -7100,26 +7192,28 @@ DATA = [
             {
                 'round': 512,
                 'players': [
-                    LLOYD_HARRIS,
                     ELLIOT_BENCHETRIT,
+                    LLOYD_HARRIS,
                 ],
                 'odds': {
-                    LLOYD_HARRIS: 1.26,
                     ELLIOT_BENCHETRIT: 3.60,
+                    LLOYD_HARRIS: 1.26,
                 },
+                'score': [(6, 3), (6, 4)],
                 'prediction': LLOYD_HARRIS,
                 'bet': 2,
             },
             {
                 'round': 512,
                 'players': [
-                    LUKAS_LACKO,
                     EMIL_RUUSUVUORI,
+                    LUKAS_LACKO,
                 ],
                 'odds': {
-                    LUKAS_LACKO: 3.60,
                     EMIL_RUUSUVUORI: 1.26,
+                    LUKAS_LACKO: 3.60,
                 },
+                'score': [(6, 4), (6, 4)],
             },
             {
                 'round': 512,
@@ -7131,6 +7225,7 @@ DATA = [
                     MATTHIAS_BACHINGER: 2.20,
                     SERGIY_STAKHOVSKY: 1.62,
                 },
+                'score': [(6, 3), (6, 4)],
                 'prediction': SERGIY_STAKHOVSKY,
                 'bet': 1,
             },
@@ -7144,6 +7239,7 @@ DATA = [
                     DENNIS_NOVAK: 1.08,
                     ARTHUR_CAZAUX: 7.00,
                 },
+                'score': [(6, 1), (6, 3)],
                 'prediction': DENNIS_NOVAK,
                 'bet': 3,
             },
@@ -7157,20 +7253,122 @@ DATA = [
                     ALEXEI_POPYRIN: 1.32,
                     STEVEN_DIEZ: 3.20,
                 },
+                'score': [(7, 6), (6, 3)],
                 'prediction': ALEXEI_POPYRIN,
                 'bet': 5,
             },
             {
                 'round': 512,
                 'players': [
+                    ILYA_IVASHKA,
                     BERNABE_ZAPATA_MIRALLES,
+                ],
+                'odds': {
+                    ILYA_IVASHKA: 1.26,
+                    BERNABE_ZAPATA_MIRALLES: 3.60,
+                },
+                'score': [(6, 7), (7, 5), (6, 1)],
+                'prediction': ILYA_IVASHKA,
+                'bet': 1,
+            },
+
+            # 2020-02-17
+            {
+                'round': 32,
+                'players': [
+                    ALJAZ_BEDENE,
+                    KAREN_KHACHANOV,
+                ],
+                'odds': {
+                    ALJAZ_BEDENE: 2.70,
+                    KAREN_KHACHANOV: 1.45,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ELLIOT_BENCHETRIT,
+                    NORBERT_GOMBOS,
+                ],
+                'odds': {
+                    ELLIOT_BENCHETRIT: 2.80,
+                    NORBERT_GOMBOS: 1.42,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    EGOR_GERASIMOV,
+                    EMIL_RUUSUVUORI,
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 2.05,
+                    EMIL_RUUSUVUORI: 1.75,
+                },
+                'prediction': EMIL_RUUSUVUORI,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    DENNIS_NOVAK,
+                    MATTHIAS_BACHINGER,
+                ],
+                'odds': {
+                    DENNIS_NOVAK: 1.40,
+                    MATTHIAS_BACHINGER: 2.90,
+                },
+                'prediction': DENNIS_NOVAK,
+                'bet': 12,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEXEI_POPYRIN,
                     ILYA_IVASHKA,
                 ],
                 'odds': {
-                    BERNABE_ZAPATA_MIRALLES: 3.60,
-                    ILYA_IVASHKA: 1.26,
+                    ALEXEI_POPYRIN: 1.90,
+                    ILYA_IVASHKA: 1.90,
                 },
-                'prediction': ILYA_IVASHKA,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MIKAEL_YMER,
+                    RICHARD_GASQUET,
+                ],
+                'odds': {
+                    MIKAEL_YMER: 1.75,
+                    RICHARD_GASQUET: 2.05,
+                },
+                'prediction': MIKAEL_YMER,
+                'bet': 8,
+            },
+            {
+                'round': 32,
+                'players': [
+                    BENOIT_PAIRE,
+                    GREGOIRE_BARRERE,
+                ],
+                'odds': {
+                    BENOIT_PAIRE: 1.68,
+                    GREGOIRE_BARRERE: 2.15,
+                },
+                'prediction': BENOIT_PAIRE,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARTON_FUCSOVICS,
+                    ALEXANDER_BUBLIK,
+                ],
+                'odds': {
+                    MARTON_FUCSOVICS: 1.45,
+                    ALEXANDER_BUBLIK: 2.70,
+                },
+                'prediction': MARTON_FUCSOVICS,
                 'bet': 1,
             },
         ]
@@ -7183,7 +7381,7 @@ DATA = [
 
             # 2020-02-16
             {
-                'round': 512,
+                'round': 256,
                 'players': [
                     NOAH_RUBIN,
                     DENIS_ISTOMIN,
@@ -7192,30 +7390,33 @@ DATA = [
                     NOAH_RUBIN: 2.15,
                     DENIS_ISTOMIN: 1.65,
                 },
+                'score': [(6, 4), (3, 6), (7, 6)],
             },
             {
-                'round': 512,
+                'round': 256,
                 'players': [
-                    BERNARD_TOMIC,
                     ERNESTS_GULBIS,
+                    BERNARD_TOMIC,
                 ],
                 'odds': {
-                    BERNARD_TOMIC: 2.40,
                     ERNESTS_GULBIS: 1.55,
+                    BERNARD_TOMIC: 2.40,
                 },
+                'score': [(6, 2), (6, 0)],
                 'prediction': ERNESTS_GULBIS,
                 'bet': 4,
             },
             {
                 'round': 512,
                 'players': [
-                    STEFAN_KOZLOV,
                     EMILIO_GOMEZ,
+                    STEFAN_KOZLOV,
                 ],
                 'odds': {
-                    STEFAN_KOZLOV: 1.85,
                     EMILIO_GOMEZ: 1.95,
+                    STEFAN_KOZLOV: 1.85,
                 },
+                'score': [(6, 3), (6, 2)],
             },
             {
                 'round': 512,
@@ -7227,12 +7428,65 @@ DATA = [
                     CAMERON_NORRIE: 1.40,
                     MITCHELL_KRUEGER: 2.90,
                 },
+                'score': [(4, 6), (6, 2), (7, 6)],
                 'prediction': CAMERON_NORRIE,
                 'bet': 4,
+            },
+
+            # 2020-02-17
+            {
+                'round': 32,
+                'players': [
+                    MACKENZIE_MCDONALD,
+                    YASUTAKA_UCHIYAMA,
+                ],
+                'odds': {
+                    MACKENZIE_MCDONALD: 1.65,
+                    YASUTAKA_UCHIYAMA: 2.20,
+                },
+                'prediction': MACKENZIE_MCDONALD,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    RYAN_HARRISON,
+                    DAMIR_DZUMHUR,
+                ],
+                'odds': {
+                    RYAN_HARRISON: 3.10,
+                    DAMIR_DZUMHUR: 1.36,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    SOONWOO_KWON,
+                ],
+                'odds': {
+                    ADRIAN_MANNARINO: 2.10,
+                    SOONWOO_KWON: 1.70,
+                },
+                'prediction': SOONWOO_KWON,
+                'bet': 3,
+            },
+            {
+                'round': 32,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    JOHN_MILLMAN,
+                ],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 1.95,
+                    JOHN_MILLMAN: 1.85,
+                },
             },
         ]
     }
 
 ]
+
+
 
 
