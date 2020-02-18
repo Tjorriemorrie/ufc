@@ -2345,12 +2345,12 @@ DATA_2019_09 = [
                 'round': 512,
                 'players': [
                     ADRIAN_MENENDEZ_MACEIRAS,
-                    HARDOLD_MAYOT
+                    HAROLD_MAYOT
                 ],
                 'score': [(3, 6), (6, 3), (7, 6)],
                 'odds': {
                     ADRIAN_MENENDEZ_MACEIRAS: 1.14,
-                    HARDOLD_MAYOT: 4.70
+                    HAROLD_MAYOT: 4.70
                 }
             },
             {

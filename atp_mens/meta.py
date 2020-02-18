@@ -988,6 +988,12 @@ META = {
         'forehand': LH,
         'backhand': OHB,
     },
+    FELIPE_ALVES: {
+        'born_at': (1998, 2, 19),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
     FELIX_AUGER_ALIASSIME: {
         'born_at': (2000, 8, 8),
         'height': 193,
@@ -1200,7 +1206,7 @@ META = {
         'forehand': RH,
         'backhand': OHB,
     },
-    HARDOLD_MAYOT: {
+    HAROLD_MAYOT: {
         'born_at': (2002, 2, 4),
     },
     HARRY_BOURCHIER: {
