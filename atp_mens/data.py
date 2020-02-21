@@ -4382,13 +4382,14 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    JOAO_DOMINGUES,
                     GIANLUCA_MAGER,
+                    JOAO_DOMINGUES,
                 ],
                 'odds': {
-                    JOAO_DOMINGUES: 2.70,
                     GIANLUCA_MAGER: 1.45,
+                    JOAO_DOMINGUES: 2.70,
                 },
+                'score': [(6, 3), (7, 6)],
                 'prediction': GIANLUCA_MAGER,
                 'bet': 1,
             },
@@ -4402,6 +4403,7 @@ DATA = [
                     LORENZO_SONEGO: 2.60,
                     DUSAN_LAJOVIC: 1.48,
                 },
+                'score': [(7, 6), (7, 6)],
                 'prediction': DUSAN_LAJOVIC,
                 'bet': 3,
             },
@@ -4415,6 +4417,7 @@ DATA = [
                     BORNA_CORIC: 1.38,
                     THIAGO_SEYBOTH_WILD: 3.00,
                 },
+                'score': [(6, 3), (1, 6), (7, 6)],
                 'prediction': BORNA_CORIC,
                 'bet': 4,
             },
@@ -4428,6 +4431,61 @@ DATA = [
                     DOMINIC_THIEM: 1.16,
                     JAUME_MUNAR: 5.00,
                 },
+                'score': [(6, 7), (6, 3), (6, 4)],
+            },
+
+            # 2020-02-21
+            {
+                'round': 8,
+                'players': [
+                    FEDERICO_CORIA,
+                    CHRISTIAN_GARIN,
+                ],
+                'odds': {
+                    FEDERICO_CORIA: 4.40,
+                    CHRISTIAN_GARIN: 1.20,
+                },
+                'prediction': CHRISTIAN_GARIN,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    BORNA_CORIC,
+                    LORENZO_SONEGO,
+                ],
+                'odds': {
+                    BORNA_CORIC: 1.68,
+                    LORENZO_SONEGO: 2.15,
+                },
+                'prediction': BORNA_CORIC,
+                'bet': 7,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DOMINIC_THIEM,
+                    GIANLUCA_MAGER,
+                ],
+                'odds': {
+                    DOMINIC_THIEM: 1.10,
+                    GIANLUCA_MAGER: 6.50,
+                },
+                'prediction': DOMINIC_THIEM,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    ATTILA_BALAZS,
+                    PEDRO_MARTINEZ,
+                ],
+                'odds': {
+                    ATTILA_BALAZS: 2.25,
+                    PEDRO_MARTINEZ: 1.62,
+                },
+                'prediction': PEDRO_MARTINEZ,
+                'bet': 3,
             },
         ]
     },
@@ -4798,19 +4856,21 @@ DATA = [
                     GILLES_SIMON: 2.40,
                     ALJAZ_BEDENE: 1.55,
                 },
+                'score': [(7, 6), (6, 4)],
                 'prediction': ALJAZ_BEDENE,
                 'bet': 4,
             },
             {
                 'round': 16,
                 'players': [
-                    MARIN_CILIC,
                     DENIS_SHAPOVALOV,
+                    MARIN_CILIC,
                 ],
                 'odds': {
-                    MARIN_CILIC: 2.00,
                     DENIS_SHAPOVALOV: 1.80,
+                    MARIN_CILIC: 2.00,
                 },
+                'score': [(6, 4), (4, 6), (6, 2)],
                 'prediction': DENIS_SHAPOVALOV,
                 'bet': 3,
             },
@@ -4824,37 +4884,92 @@ DATA = [
                     DANIIL_MEDVEDEV: 1.26,
                     JANNIK_SINNER: 3.80,
                 },
+                'score': [(1, 6), (6, 1), (6, 2)],
                 'prediction': DANIIL_MEDVEDEV,
                 'bet': 10,
             },
             {
                 'round': 16,
                 'players': [
-                    PIERRE_HUGUES_HERBERT,
                     FELIX_AUGER_ALIASSIME,
+                    PIERRE_HUGUES_HERBERT,
                 ],
                 'odds': {
-                    PIERRE_HUGUES_HERBERT: 1.80,
                     FELIX_AUGER_ALIASSIME: 2.00,
+                    PIERRE_HUGUES_HERBERT: 1.80,
                 },
+                'score': [(6, 0), (6, 7), (7, 6)],
                 'prediction': PIERRE_HUGUES_HERBERT,
                 'bet': 4,
             },
             {
                 'round': 16,
                 'players': [
-                    DAVID_GOFFIN,
                     EGOR_GERASIMOV,
+                    DAVID_GOFFIN,
                 ],
                 'odds': {
-                    DAVID_GOFFIN: 1.45,
                     EGOR_GERASIMOV: 2.70,
+                    DAVID_GOFFIN: 1.45,
                 },
+                'score': [(6, 4), (7, 6)],
                 'prediction': DAVID_GOFFIN,
                 'bet': 5,
             },
 
-            #
+            # 2020-02-21
+            {
+                'round': 8,
+                'players': [
+                    ALEXANDER_BUBLIK,
+                    DENIS_SHAPOVALOV,
+                ],
+                'odds': {
+                    ALEXANDER_BUBLIK: 2.90,
+                    DENIS_SHAPOVALOV: 1.40,
+                },
+                'prediction': DENIS_SHAPOVALOV,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    VASEK_POSPISIL,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'odds': {
+                    VASEK_POSPISIL: 2.70,
+                    STEFANOS_TSITSIPAS: 1.45,
+                },
+                'prediction': STEFANOS_TSITSIPAS,
+                'bet': 2,
+            },
+            {
+                'round': 8,
+                'players': [
+                    DANIIL_MEDVEDEV,
+                    GILLES_SIMON,
+                ],
+                'odds': {
+                    DANIIL_MEDVEDEV: 1.18,
+                    GILLES_SIMON: 4.60,
+                },
+                'prediction': DANIIL_MEDVEDEV,
+                'bet': 11,
+            },
+            {
+                'round': 8,
+                'players': [
+                    EGOR_GERASIMOV,
+                    FELIX_AUGER_ALIASSIME,
+                ],
+                'odds': {
+                    EGOR_GERASIMOV: 2.50,
+                    FELIX_AUGER_ALIASSIME: 1.52,
+                },
+                'prediction': FELIX_AUGER_ALIASSIME,
+                'bet': 1,
+            },
         ]
     },
 
@@ -5147,50 +5262,102 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    MIOMIR_KECMANOVIC,
                     UGO_HUMBERT,
+                    MIOMIR_KECMANOVIC,
                 ],
                 'odds': {
-                    MIOMIR_KECMANOVIC: 1.65,
                     UGO_HUMBERT: 2.20,
+                    MIOMIR_KECMANOVIC: 1.65,
                 },
+                'score': [(6, 4), (7, 6)],
             },
             {
                 'round': 16,
                 'players': [
-                    TOMMY_PAUL,
                     FRANCES_TIAFOE,
+                    TOMMY_PAUL,
                 ],
                 'odds': {
-                    TOMMY_PAUL: 1.80,
                     FRANCES_TIAFOE: 2.00,
+                    TOMMY_PAUL: 1.80,
                 },
+                'score': [(7, 5), (7, 6)],
                 'prediction': TOMMY_PAUL,
                 'bet': 9,
             },
             {
                 'round': 16,
                 'players': [
-                    JACK_SOCK,
                     STEVE_JOHNSON,
+                    JACK_SOCK,
                 ],
                 'odds': {
-                    JACK_SOCK: 2.70,
                     STEVE_JOHNSON: 1.45,
+                    JACK_SOCK: 2.70,
                 },
+                'score': [(6, 4), (5, 7), (6, 1)],
             },
             {
                 'round': 16,
                 'players': [
+                    MILOS_RAONIC,
                     CEDRIC_MARCEL_STEBE,
+                ],
+                'odds': {
+                    MILOS_RAONIC: 1.14,
+                    CEDRIC_MARCEL_STEBE: 5.50,
+                },
+                'score': [(7, 5), (6, 3)],
+                'prediction': MILOS_RAONIC,
+                'bet': 1,
+            },
+
+            # 2020-02-21
+            {
+                'round': 8,
+                'players': [
+                    FRANCES_TIAFOE,
+                    UGO_HUMBERT,
+                ],
+                'odds': {
+                    FRANCES_TIAFOE: 2.05,
+                    UGO_HUMBERT: 1.75,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    BRANDON_NAKASHIMA,
+                    YOSHIHITO_NISHIOKA,
+                ],
+                'odds': {
+                    BRANDON_NAKASHIMA: 2.50,
+                    YOSHIHITO_NISHIOKA: 1.52,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    SOONWOO_KWON,
+                    REILLY_OPELKA,
+                ],
+                'odds': {
+                    SOONWOO_KWON: 2.40,
+                    REILLY_OPELKA: 1.55,
+                },
+                'prediction': REILLY_OPELKA,
+                'bet': 1,
+            },
+            {
+                'round': 8,
+                'players': [
+                    STEVE_JOHNSON,
                     MILOS_RAONIC,
                 ],
                 'odds': {
-                    CEDRIC_MARCEL_STEBE: 5.50,
-                    MILOS_RAONIC: 1.14,
+                    STEVE_JOHNSON: 3.40,
+                    MILOS_RAONIC: 1.30,
                 },
-                'prediction': MILOS_RAONIC,
-                'bet': 1,
             },
         ]
     }
