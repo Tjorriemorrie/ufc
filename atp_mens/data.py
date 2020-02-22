@@ -4438,13 +4438,14 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    FEDERICO_CORIA,
                     CHRISTIAN_GARIN,
+                    FEDERICO_CORIA,
                 ],
                 'odds': {
-                    FEDERICO_CORIA: 4.40,
                     CHRISTIAN_GARIN: 1.20,
+                    FEDERICO_CORIA: 4.40,
                 },
+                'score': [(2, 6), (6, 3), (7, 5)],
                 'prediction': CHRISTIAN_GARIN,
                 'bet': 1,
             },
@@ -4458,9 +4459,12 @@ DATA = [
                     BORNA_CORIC: 1.68,
                     LORENZO_SONEGO: 2.15,
                 },
+                'score': [(7, 6), (6, 3)],
                 'prediction': BORNA_CORIC,
                 'bet': 7,
             },
+
+            # 2020-02-22
             {
                 'round': 8,
                 'players': [
@@ -4485,6 +4489,19 @@ DATA = [
                     PEDRO_MARTINEZ: 1.62,
                 },
                 'prediction': PEDRO_MARTINEZ,
+                'bet': 3,
+            },
+            {
+                'round': 4,
+                'players': [
+                    CHRISTIAN_GARIN,
+                    BORNA_CORIC,
+                ],
+                'odds': {
+                    CHRISTIAN_GARIN: 1.70,
+                    BORNA_CORIC: 2.10,
+                },
+                'prediction': CHRISTIAN_GARIN,
                 'bet': 3,
             },
         ]
@@ -4928,47 +4945,77 @@ DATA = [
                     ALEXANDER_BUBLIK: 2.90,
                     DENIS_SHAPOVALOV: 1.40,
                 },
+                'score': [(7, 5), (4, 6), (6, 3)],
                 'prediction': DENIS_SHAPOVALOV,
                 'bet': 1,
             },
             {
                 'round': 8,
                 'players': [
-                    VASEK_POSPISIL,
                     STEFANOS_TSITSIPAS,
+                    VASEK_POSPISIL,
                 ],
                 'odds': {
-                    VASEK_POSPISIL: 2.70,
                     STEFANOS_TSITSIPAS: 1.45,
+                    VASEK_POSPISIL: 2.70,
                 },
+                'score': [(7, 5), (6, 3)],
                 'prediction': STEFANOS_TSITSIPAS,
                 'bet': 2,
             },
             {
                 'round': 8,
                 'players': [
-                    DANIIL_MEDVEDEV,
                     GILLES_SIMON,
+                    DANIIL_MEDVEDEV,
                 ],
                 'odds': {
-                    DANIIL_MEDVEDEV: 1.18,
                     GILLES_SIMON: 4.60,
+                    DANIIL_MEDVEDEV: 1.18,
                 },
+                'score': [(6, 4), (6, 0)],
                 'prediction': DANIIL_MEDVEDEV,
                 'bet': 11,
             },
             {
                 'round': 8,
                 'players': [
+                    FELIX_AUGER_ALIASSIME,
                     EGOR_GERASIMOV,
+                ],
+                'odds': {
+                    FELIX_AUGER_ALIASSIME: 1.52,
+                    EGOR_GERASIMOV: 2.50,
+                },
+                'score': [(7, 5), (6, 2)],
+                'prediction': FELIX_AUGER_ALIASSIME,
+                'bet': 1,
+            },
+
+            # 2020-02-22
+            {
+                'round': 4,
+                'players': [
+                    ALEXANDER_BUBLIK,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'odds': {
+                    ALEXANDER_BUBLIK: 4.20,
+                    STEFANOS_TSITSIPAS: 1.22,
+                },
+            },
+            {
+                'round': 4,
+                'players': [
+                    GILLES_SIMON,
                     FELIX_AUGER_ALIASSIME,
                 ],
                 'odds': {
-                    EGOR_GERASIMOV: 2.50,
-                    FELIX_AUGER_ALIASSIME: 1.52,
+                    GILLES_SIMON: 2.40,
+                    FELIX_AUGER_ALIASSIME: 1.55,
                 },
                 'prediction': FELIX_AUGER_ALIASSIME,
-                'bet': 1,
+                'bet': 2,
             },
         ]
     },
@@ -5316,48 +5363,80 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    FRANCES_TIAFOE,
                     UGO_HUMBERT,
+                    FRANCES_TIAFOE,
                 ],
                 'odds': {
-                    FRANCES_TIAFOE: 2.05,
                     UGO_HUMBERT: 1.75,
+                    FRANCES_TIAFOE: 2.05,
                 },
+                'score': [(6, 1), (6, 2)],
             },
             {
                 'round': 8,
                 'players': [
-                    BRANDON_NAKASHIMA,
                     YOSHIHITO_NISHIOKA,
+                    BRANDON_NAKASHIMA,
                 ],
                 'odds': {
-                    BRANDON_NAKASHIMA: 2.50,
                     YOSHIHITO_NISHIOKA: 1.52,
+                    BRANDON_NAKASHIMA: 2.50,
                 },
+                'score': [(3, 6), (7, 6), (6, 4)],
             },
             {
                 'round': 8,
                 'players': [
-                    SOONWOO_KWON,
                     REILLY_OPELKA,
+                    SOONWOO_KWON,
                 ],
                 'odds': {
-                    SOONWOO_KWON: 2.40,
                     REILLY_OPELKA: 1.55,
+                    SOONWOO_KWON: 2.40,
                 },
+                'score': [(6, 3), (6, 4)],
                 'prediction': REILLY_OPELKA,
                 'bet': 1,
             },
             {
                 'round': 8,
                 'players': [
+                    MILOS_RAONIC,
                     STEVE_JOHNSON,
+                ],
+                'odds': {
+                    MILOS_RAONIC: 1.30,
+                    STEVE_JOHNSON: 3.40,
+                },
+                'score': [(7, 6), (6, 3)],
+            },
+
+            # 2020-02-22
+            {
+                'round': 4,
+                'players': [
+                    UGO_HUMBERT,
+                    YOSHIHITO_NISHIOKA,
+                ],
+                'odds': {
+                    UGO_HUMBERT: 1.62,
+                    YOSHIHITO_NISHIOKA: 2.25,
+                },
+                'prediction': UGO_HUMBERT,
+                'bet': 1,
+            },
+            {
+                'round': 4,
+                'players': [
+                    REILLY_OPELKA,
                     MILOS_RAONIC,
                 ],
                 'odds': {
-                    STEVE_JOHNSON: 3.40,
-                    MILOS_RAONIC: 1.30,
+                    REILLY_OPELKA: 2.70,
+                    MILOS_RAONIC: 1.45,
                 },
+                'prediction': REILLY_OPELKA,
+                'bet': 2,
             },
         ]
     }
