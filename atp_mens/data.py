@@ -4509,7 +4509,19 @@ DATA = [
             },
 
             # 2020-02-23
-            # ?
+            {
+                'round': 2,
+                'players': [
+                    GIANLUCA_MAGER,
+                    CHRISTIAN_GARIN,
+                ],
+                'odds': {
+                    GIANLUCA_MAGER: 3.80,
+                    CHRISTIAN_GARIN: 1.26,
+                },
+                'prediction': CHRISTIAN_GARIN,
+                'bet': 1,
+            }
         ]
     },
 
@@ -5462,6 +5474,19 @@ DATA = [
                 'prediction': REILLY_OPELKA,
                 'bet': 2,
             },
+            {
+                'round': 2,
+                'players': [
+                    YOSHIHITO_NISHIOKA,
+                    REILLY_OPELKA,
+                ],
+                'odds': {
+                    YOSHIHITO_NISHIOKA: 2.40,
+                    REILLY_OPELKA: 1.55,
+                },
+                'prediction': REILLY_OPELKA,
+                'bet': 1,
+            }
         ]
     },
 
@@ -5478,6 +5503,57 @@ DATA = [
         'date': '2020-02-29',
         'matches': [
 
+            # 2020-02-24
+            {
+                'round': 32,
+                'players': [
+                    DANIEL_ALTMAIER,
+                    JASON_JUNG,
+                ],
+                'odds': {
+                    DANIEL_ALTMAIER: 2.35,
+                    JASON_JUNG: 1.55,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    ALEX_BOLT,
+                ],
+                'odds': {
+                    DAMIR_DZUMHUR: 1.46,
+                    ALEX_BOLT: 2.60,
+                },
+                'prediction': DAMIR_DZUMHUR,
+                'bet': 6,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TOMMY_PAUL,
+                    DANIEL_ELAHI_GALAN,
+                ],
+                'odds': {
+                    TOMMY_PAUL: 1.24,
+                    DANIEL_ELAHI_GALAN: 3.80,
+                },
+                'prediction': TOMMY_PAUL,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    MARCOS_GIRON,
+                ],
+                'odds': {
+                    TARO_DANIEL: 1.40,
+                    MARCOS_GIRON: 2.80,
+                },
+                'prediction': TARO_DANIEL,
+                'bet': 2,
+            },
         ],
     },
 
