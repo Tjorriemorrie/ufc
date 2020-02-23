@@ -422,6 +422,14 @@ S_HERTOGENBOSCH = {
     'surface': SURFACE_GRASS,
     'speed': 62,
 }
+SANTIAGO = {
+    'name': 'Chile Dove Men+Care Open',
+    'category': 'ATP250',
+    'location': 'Santiago, Chile',
+    'outdoor': OUTDOOR,
+    'surface': SURFACE_CLAY,
+    'speed': 55,
+}
 SAO_PAULO = {
     'name': 'Brasil Open',
     'category': 'ATP250',

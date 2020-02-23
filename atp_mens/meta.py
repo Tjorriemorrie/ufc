@@ -1586,6 +1586,12 @@ META = {
         'forehand': RH,
         'backhand': THB,
     },
+    JUAN_PABLO_VARILLAS: {
+        'born_at': (1995, 10, 6),
+        'height': 185,
+        'forehand': RH,
+        'backhand': THB,
+    },
     JIE_CUI: {
         'born_at': (1998, 1, 24),
         'height': 183,
@@ -2289,6 +2295,12 @@ META = {
         'height': 173,
         'forehand': RH,
         'backhand': OHB,
+    },
+    ORLANDO_LUZ: {
+        'born_at': (1998, 2, 8),
+        'height': 180,
+        'forehand': RH,
+        'backhand': THB,
     },
     OSCAR_OTTE: {
         'born_at': (1993, 7, 16),
