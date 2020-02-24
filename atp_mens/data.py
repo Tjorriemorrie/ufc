@@ -4060,10 +4060,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': RIO_DE_JANEIRO,
         'date': '2020-02-23',
@@ -4513,13 +4509,14 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    GIANLUCA_MAGER,
                     CHRISTIAN_GARIN,
+                    GIANLUCA_MAGER,
                 ],
                 'odds': {
-                    GIANLUCA_MAGER: 3.80,
                     CHRISTIAN_GARIN: 1.26,
+                    GIANLUCA_MAGER: 3.80,
                 },
+                'score': [(7, 6), (7, 5)],
                 'prediction': CHRISTIAN_GARIN,
                 'bet': 1,
             }
@@ -5043,13 +5040,14 @@ DATA = [
             {
                 'round': 2,
                 'players': [
-                    FELIX_AUGER_ALIASSIME,
                     STEFANOS_TSITSIPAS,
+                    FELIX_AUGER_ALIASSIME,
                 ],
                 'odds': {
-                    FELIX_AUGER_ALIASSIME: 2.90,
                     STEFANOS_TSITSIPAS: 1.40,
+                    FELIX_AUGER_ALIASSIME: 2.90,
                 },
+                'score': [(6, 3), (6, 4)],
             }
         ]
     },
@@ -5472,6 +5470,7 @@ DATA = [
                     REILLY_OPELKA: 2.70,
                     MILOS_RAONIC: 1.45,
                 },
+                'score': [(4, 6), (7, 6), (6, 3)],
                 'prediction': REILLY_OPELKA,
                 'bet': 2,
             },
@@ -5485,17 +5484,95 @@ DATA = [
                     YOSHIHITO_NISHIOKA: 2.40,
                     REILLY_OPELKA: 1.55,
                 },
+                'score': [(1, 6), (6, 4), (6, 0)],
                 'prediction': REILLY_OPELKA,
                 'bet': 1,
-            }
+            },
         ]
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': DUBAI,
         'date': '2020-02-29',
         'matches': [
 
+            # 2020-02-24
+            {
+                'round': 32,
+                'players': [
+                    MIKHAIL_KUKUSHKIN,
+                    KAREN_KHACHANOV,
+                ],
+                'odds': {
+                    MIKHAIL_KUKUSHKIN: 3.00,
+                    KAREN_KHACHANOV: 1.38,
+                },
+                'prediction': KAREN_KHACHANOV,
+                'bet': 2,
+            },
+            {
+                'round': 32,
+                'players': [
+                    PHILIPP_KOHLSCHREIBER,
+                    MOHAMED_SAFWAT,
+                ],
+                'odds': {
+                    PHILIPP_KOHLSCHREIBER: 1.26,
+                    MOHAMED_SAFWAT: 3.80,
+                },
+                'prediction': PHILIPP_KOHLSCHREIBER,
+                'bet': 10,
+            },
+            {
+                'round': 32,
+                'players': [
+                    ANDREY_RUBLEV,
+                    LORENZO_MUSETTI,
+                ],
+                'odds': {
+                    ANDREY_RUBLEV: 1.10,
+                    LORENZO_MUSETTI: 6.50,
+                },
+                'prediction': ANDREY_RUBLEV,
+                'bet': 9,
+            },
+            {
+                'round': 32,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    MALEK_JAZIRI,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.01,
+                    MALEK_JAZIRI: 21.00,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    LLOYD_HARRIS,
+                    RICHARD_GASQUET,
+                ],
+                'odds': {
+                    LLOYD_HARRIS: 2.30,
+                    RICHARD_GASQUET: 1.60,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    GAEL_MONFILS,
+                    MARTON_FUCSOVICS,
+                ],
+                'odds': {
+                    GAEL_MONFILS: 1.30,
+                    MARTON_FUCSOVICS: 3.40,
+                },
+            },
         ],
     },
 
