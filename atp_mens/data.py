@@ -2,7 +2,7 @@ from men import *
 from location import *
 
 # score mat roi acc profit  desc
-# 20.1  77  26  76  5750    2020-02 NEW YORK        (2, 740), (1, 731), (3, 416), (4, 314), (10, 308)
+# 19.8  70  28  79  5650    2020-02 NEW YORK        (1, 695), (2, 613), (3, 362), (9, 361), (4, 305)
 # 20.0  78  26  75  5680    2020-02 ROTTERDAM       (1, 746), (2, 704), (3, 446), (4, 321), (10, 309)
 # 19.4  71  27  78  5460    2020-02 CORDOBA         (2, 639), (3, 532), (1, 510), (4, 331), (9, 316)
 # 19.4  71  27  78  5400    2020-02 MONTPELLIER     (2, 576), (1, 552), (3, 534), (4, 375), (8, 318)
@@ -5583,7 +5583,7 @@ DATA = [
 
             # 2020-02-24
             {
-                'round': 32,
+                'round': 512,
                 'players': [
                     DANIEL_ALTMAIER,
                     JASON_JUNG,
@@ -5592,9 +5592,10 @@ DATA = [
                     DANIEL_ALTMAIER: 2.35,
                     JASON_JUNG: 1.55,
                 },
+                'score': [(6, 2), (6, 3)],
             },
             {
-                'round': 32,
+                'round': 256,
                 'players': [
                     DAMIR_DZUMHUR,
                     ALEX_BOLT,
@@ -5603,11 +5604,12 @@ DATA = [
                     DAMIR_DZUMHUR: 1.46,
                     ALEX_BOLT: 2.60,
                 },
+                'score': [(6, 1), (6, 4)],
                 'prediction': DAMIR_DZUMHUR,
                 'bet': 6,
             },
             {
-                'round': 32,
+                'round': 512,
                 'players': [
                     TOMMY_PAUL,
                     DANIEL_ELAHI_GALAN,
@@ -5616,11 +5618,13 @@ DATA = [
                     TOMMY_PAUL: 1.24,
                     DANIEL_ELAHI_GALAN: 3.80,
                 },
+                'score': [(7, 6), (1, 0)],
+                'retired': True,
                 'prediction': TOMMY_PAUL,
                 'bet': 1,
             },
             {
-                'round': 32,
+                'round': 512,
                 'players': [
                     TARO_DANIEL,
                     MARCOS_GIRON,
@@ -5629,8 +5633,84 @@ DATA = [
                     TARO_DANIEL: 1.40,
                     MARCOS_GIRON: 2.80,
                 },
+                'score': [(6, 3), (4, 3)],
+                'retired': True,
                 'prediction': TARO_DANIEL,
                 'bet': 2,
+            },
+
+            # 2020-02-25
+            {
+                'round': 32,
+                'players': [
+                    CAMERON_NORRIE,
+                    ADRIAN_MANNARINO,
+                ],
+                'odds': {
+                    CAMERON_NORRIE: 2.05,
+                    ADRIAN_MANNARINO: 1.75,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEX_DE_MINAUR,
+                    MIOMIR_KECMANOVIC,
+                ],
+                'odds': {
+                    ALEX_DE_MINAUR: 1.85,
+                    MIOMIR_KECMANOVIC: 1.95,
+                },
+                'prediction': ALEX_DE_MINAUR,
+                'bet': 13,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TOMMY_PAUL,
+                    MACKENZIE_MCDONALD,
+                ],
+                'odds': {
+                    TOMMY_PAUL: 1.40,
+                    MACKENZIE_MCDONALD: 2.90,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    STAN_WAWRINKA,
+                    FRANCES_TIAFOE,
+                ],
+                'odds': {
+                    STAN_WAWRINKA: 1.42,
+                    FRANCES_TIAFOE: 2.80,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    KYLE_EDMUND,
+                    FELICIANO_LOPEZ,
+                ],
+                'odds': {
+                    KYLE_EDMUND: 1.30,
+                    FELICIANO_LOPEZ: 3.40,
+                },
+                'prediction': KYLE_EDMUND,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    MARCOS_GIRON,
+                    GERARDO_LOPEZ_VILLASENOR,
+                ],
+                'odds': {
+                    MARCOS_GIRON: 1.10,
+                    GERARDO_LOPEZ_VILLASENOR: 6.50,
+                },
+                'prediction': MARCOS_GIRON,
+                'bet': 10,
             },
         ],
     },
