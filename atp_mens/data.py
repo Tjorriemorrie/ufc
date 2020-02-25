@@ -5797,6 +5797,129 @@ DATA = [
                 'bet': 10,
             },
 
+            # 2020-02-26
+            {
+                'round': 32,
+                'players': [
+                    RADU_ALBOT,
+                    PEDRO_MARTINEZ,
+                ],
+                'odds': {
+                    RADU_ALBOT: 1.70,
+                    PEDRO_MARTINEZ: 2.10,
+                },
+                'prediction': RADU_ALBOT,
+                'bet': 5,
+            },
+            {
+                'round': 32,
+                'players': [
+                    TARO_DANIEL,
+                    SOONWOO_KWON,
+                ],
+                'odds': {
+                    TARO_DANIEL: 2.60,
+                    SOONWOO_KWON: 1.48,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    DAMIR_DZUMHUR,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    DAMIR_DZUMHUR: 3.60,
+                    GRIGOR_DIMITROV: 1.28,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    ALEX_BOLT,
+                    FELIX_AUGER_ALIASSIME,
+                ],
+                'odds': {
+                    ALEX_BOLT: 2.70,
+                    FELIX_AUGER_ALIASSIME: 1.45,
+                },
+                'prediction': FELIX_AUGER_ALIASSIME,
+                'bet': 1,
+            },
+            {
+                'round': 32,
+                'players': [
+                    STEVE_JOHNSON,
+                    DUSAN_LAJOVIC,
+                ],
+                'odds': {
+                    STEVE_JOHNSON: 1.65,
+                    DUSAN_LAJOVIC: 2.20,
+                },
+                'prediction': STEVE_JOHNSON,
+                'bet': 5,
+            },
+            {
+                'round': 32,
+                'players': [
+                    JASON_JUNG,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    JASON_JUNG: 4.60,
+                    ALEXANDER_ZVEREV: 1.18,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    TAYLOR_FRITZ,
+                    JOHN_MILLMAN,
+                ],
+                'odds': {
+                    TAYLOR_FRITZ: 1.95,
+                    JOHN_MILLMAN: 1.85,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    RAFAEL_NADAL,
+                    PABLO_ANDUJAR,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.02,
+                    PABLO_ANDUJAR: 12.00,
+                },
+            },
+            {
+                'round': 32,
+                'players': [
+                    JOHN_ISNER,
+                    MISCHA_ZVEREV,
+                ],
+                'odds': {
+                    JOHN_ISNER: 1.30,
+                    MISCHA_ZVEREV: 3.40,
+                },
+                'prediction': JOHN_ISNER,
+                'bet': 4,
+            },
+            {
+                'round': 32,
+                'players': [
+                    NICK_KYRGIOS,
+                    UGO_HUMBERT,
+                ],
+                'odds': {
+                    NICK_KYRGIOS: 1.45,
+                    UGO_HUMBERT: 2.70,
+                },
+                'prediction': NICK_KYRGIOS,
+                'bet': 1,
+            },
+
+            #
         ],
     },
 
