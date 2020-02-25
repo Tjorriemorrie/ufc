@@ -3080,6 +3080,12 @@ META = {
         'height': 180,
         'forehand': RH,
     },
+    YEN_HSUN_LU: {
+        'born_at': (1983, 8, 14),
+        'height': 180,
+        'forehand': RH,
+        'backhand': THB,
+    },
     YIBING_WU: {
         'born_at': (1999, 10, 14),
         'height': 183,
