@@ -2,12 +2,12 @@ from men import *
 from location import *
 
 # score mat roi acc profit  desc
+# 20.6  66  31  85  4400    2020-02 MARSEILLE       (4, 673), (1, 606), (3, 581), (5, 543), (2, 501)
 # 20.8  68  31  83  4440    2020-02 RIO_DE_JANEIRO  (4, 650), (3, 612), (1, 604), (5, 541), (2, 531)
 # 21.2  69  31  82  4830    2020-02 BUENOS AIRES    (1, 652), (5, 640), (4, 620), (6, 481), (2, 473)
 # 19.8  70  28  79  5650    2020-02 NEW YORK        (1, 695), (2, 613), (3, 362), (9, 361), (4, 305)
-# 20.0  78  26  75  5680    2020-02 ROTTERDAM       (1, 746), (2, 704), (3, 446), (4, 321), (10, 309)
-# 19.4  71  27  78  5460    2020-02 CORDOBA         (2, 639), (3, 532), (1, 510), (4, 331), (9, 316)
 
+# 20.0  78  26  75  5680    2020-02 ROTTERDAM       (1, 746), (2, 704), (3, 446), (4, 321), (10, 309)
 # 19.4  71  27  78  5400    2020-02 MONTPELLIER     (2, 576), (1, 552), (3, 534), (4, 375), (8, 318)
 # 22.9  67  34  84  4640    2020-02 AUSTRALIAN OPEN (1, 676), (2, 562), (3, 546), (4, 514), (5, 473)
 # 22.8  67  34  84  4740    2020-01 ADELAIDE        (1, 644), (4, 596), (5, 521), (3, 506), (2, 449)
@@ -5897,74 +5897,80 @@ DATA = [
             {
                 'round': 32,
                 'players': [
-                    RADU_ALBOT,
                     PEDRO_MARTINEZ,
+                    RADU_ALBOT,
                 ],
                 'odds': {
-                    RADU_ALBOT: 1.70,
                     PEDRO_MARTINEZ: 2.10,
+                    RADU_ALBOT: 1.70,
                 },
+                'score': [(6, 3), (6, 2)],
                 'prediction': RADU_ALBOT,
                 'bet': 5,
             },
             {
                 'round': 32,
                 'players': [
-                    TARO_DANIEL,
                     SOONWOO_KWON,
+                    TARO_DANIEL,
                 ],
                 'odds': {
-                    TARO_DANIEL: 2.60,
                     SOONWOO_KWON: 1.48,
+                    TARO_DANIEL: 2.60,
                 },
+                'score': [(6, 2), (2, 6), (6, 3)],
             },
             {
                 'round': 32,
                 'players': [
-                    DAMIR_DZUMHUR,
                     GRIGOR_DIMITROV,
+                    DAMIR_DZUMHUR,
                 ],
                 'odds': {
-                    DAMIR_DZUMHUR: 3.60,
                     GRIGOR_DIMITROV: 1.28,
+                    DAMIR_DZUMHUR: 3.60,
                 },
+                'score': [(6, 3), (6, 3)],
             },
             {
                 'round': 32,
                 'players': [
-                    ALEX_BOLT,
                     FELIX_AUGER_ALIASSIME,
+                    ALEX_BOLT,
                 ],
                 'odds': {
-                    ALEX_BOLT: 2.70,
                     FELIX_AUGER_ALIASSIME: 1.45,
+                    ALEX_BOLT: 2.70,
                 },
+                'score': [(6, 3), (7, 6)],
                 'prediction': FELIX_AUGER_ALIASSIME,
                 'bet': 1,
             },
             {
                 'round': 32,
                 'players': [
-                    STEVE_JOHNSON,
                     DUSAN_LAJOVIC,
+                    STEVE_JOHNSON,
                 ],
                 'odds': {
-                    STEVE_JOHNSON: 1.65,
                     DUSAN_LAJOVIC: 2.20,
+                    STEVE_JOHNSON: 1.65,
                 },
+                'score': [(6, 7), (6, 4), (6, 3)],
                 'prediction': STEVE_JOHNSON,
                 'bet': 5,
             },
             {
                 'round': 32,
                 'players': [
-                    JASON_JUNG,
                     ALEXANDER_ZVEREV,
+                    JASON_JUNG,
                 ],
                 'odds': {
-                    JASON_JUNG: 4.60,
                     ALEXANDER_ZVEREV: 1.18,
+                    JASON_JUNG: 4.60,
                 },
+                'score': [(7, 6), (6, 1)],
             },
             {
                 'round': 32,
@@ -5976,6 +5982,7 @@ DATA = [
                     TAYLOR_FRITZ: 1.95,
                     JOHN_MILLMAN: 1.85,
                 },
+                'score': [(7, 5), (3, 6), (6, 1)],
             },
             {
                 'round': 32,
@@ -5987,6 +5994,7 @@ DATA = [
                     RAFAEL_NADAL: 1.02,
                     PABLO_ANDUJAR: 12.00,
                 },
+                'score': [(6, 3), (6, 2)],
             },
             {
                 'round': 32,
@@ -5998,21 +6006,126 @@ DATA = [
                     JOHN_ISNER: 1.30,
                     MISCHA_ZVEREV: 3.40,
                 },
+                'score': [(6, 3), (7, 6)],
                 'prediction': JOHN_ISNER,
                 'bet': 4,
             },
             {
                 'round': 32,
                 'players': [
-                    NICK_KYRGIOS,
                     UGO_HUMBERT,
+                    NICK_KYRGIOS,
                 ],
                 'odds': {
-                    NICK_KYRGIOS: 1.45,
                     UGO_HUMBERT: 2.70,
+                    NICK_KYRGIOS: 1.45,
                 },
+                'score': [(6, 3), (0, 0)],
+                'retired': True,
                 'prediction': NICK_KYRGIOS,
+                'bet': 0,  #1,
+            },
+
+            # 2020-02-27
+            {
+                'round': 16,
+                'players': [
+                    KYLE_EDMUND,
+                    FELIX_AUGER_ALIASSIME,
+                ],
+                'odds': {
+                    KYLE_EDMUND: 1.65,
+                    FELIX_AUGER_ALIASSIME: 2.20,
+                },
+                'prediction': KYLE_EDMUND,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    SOONWOO_KWON,
+                    DUSAN_LAJOVIC,
+                ],
+                'odds': {
+                    SOONWOO_KWON: 1.90,
+                    DUSAN_LAJOVIC: 1.90,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    JOHN_ISNER,
+                    MARCOS_GIRON,
+                ],
+                'odds': {
+                    JOHN_ISNER: 1.26,
+                    MARCOS_GIRON: 3.80,
+                },
+                'prediction': JOHN_ISNER,
+                'bet': 5,
+            },
+            {
+                'round': 16,
+                'players': [
+                    TOMMY_PAUL,
+                    ALEXANDER_ZVEREV,
+                ],
+                'odds': {
+                    TOMMY_PAUL: 4.00,
+                    ALEXANDER_ZVEREV: 1.24,
+                },
+            },
+            {
+                'round': 16,
+                'players': [
+                    UGO_HUMBERT,
+                    TAYLOR_FRITZ,
+                ],
+                'odds': {
+                    UGO_HUMBERT: 1.65,
+                    TAYLOR_FRITZ: 2.20,
+                },
+                'prediction': UGO_HUMBERT,
+                'bet': 2,
+            },
+            {
+                'round': 16,
+                'players': [
+                    ADRIAN_MANNARINO,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    ADRIAN_MANNARINO: 3.40,
+                    GRIGOR_DIMITROV: 1.30,
+                },
+                'prediction': GRIGOR_DIMITROV,
                 'bet': 1,
+            },
+            {
+                'round': 16,
+                'players': [
+                    RAFAEL_NADAL,
+                    MIOMIR_KECMANOVIC,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.08,
+                    MIOMIR_KECMANOVIC: 7.50,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 3,
+            },
+            {
+                'round': 16,
+                'players': [
+                    STAN_WAWRINKA,
+                    PEDRO_MARTINEZ,
+                ],
+                'odds': {
+                    STAN_WAWRINKA: 1.16,
+                    PEDRO_MARTINEZ: 5.00,
+                },
+                'prediction': STAN_WAWRINKA,
+                'bet': 3,
             },
 
             #
