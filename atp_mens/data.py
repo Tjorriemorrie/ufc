@@ -2,7 +2,8 @@ from men import *
 from location import *
 
 # score mat roi acc profit  desc
-# 20.6  66  31  85  4400    2020-02 MARSEILLE       (4, 673), (1, 606), (3, 581), (5, 543), (2, 501)
+# 21.6  75  29  79  5100    2020-02 DELRAY_BEACH    (1, 732), (5, 667), (4, 553), (6, 543), (2, 538)
+# 20.8  75  28  78  4730    2020-02 MARSEILLE       (1, 760), (5, 664), (2, 586), (4, 569), (6, 520)
 # 20.8  68  31  83  4440    2020-02 RIO_DE_JANEIRO  (4, 650), (3, 612), (1, 604), (5, 541), (2, 531)
 # 21.2  69  31  82  4830    2020-02 BUENOS AIRES    (1, 652), (5, 640), (4, 620), (6, 481), (2, 473)
 # 19.8  70  28  79  5650    2020-02 NEW YORK        (1, 695), (2, 613), (3, 362), (9, 361), (4, 305)
@@ -6037,6 +6038,7 @@ DATA = [
                     KYLE_EDMUND: 1.65,
                     FELIX_AUGER_ALIASSIME: 2.20,
                 },
+                'score': [(6, 4), (6, 4)],
                 'prediction': KYLE_EDMUND,
                 'bet': 5,
             },
@@ -6050,6 +6052,7 @@ DATA = [
                     SOONWOO_KWON: 1.90,
                     DUSAN_LAJOVIC: 1.90,
                 },
+                'score': [(7, 6), (6, 0)],
             },
             {
                 'round': 16,
@@ -6061,6 +6064,7 @@ DATA = [
                     JOHN_ISNER: 1.26,
                     MARCOS_GIRON: 3.80,
                 },
+                'score': [(6, 3), (7, 6)],
                 'prediction': JOHN_ISNER,
                 'bet': 5,
             },
@@ -6074,30 +6078,33 @@ DATA = [
                     TOMMY_PAUL: 4.00,
                     ALEXANDER_ZVEREV: 1.24,
                 },
+                'score': [(6, 3), (6, 4)],
             },
             {
                 'round': 16,
                 'players': [
-                    UGO_HUMBERT,
                     TAYLOR_FRITZ,
+                    UGO_HUMBERT,
                 ],
                 'odds': {
-                    UGO_HUMBERT: 1.65,
                     TAYLOR_FRITZ: 2.20,
+                    UGO_HUMBERT: 1.65,
                 },
+                'score': [(6, 4), (6, 1)],
                 'prediction': UGO_HUMBERT,
                 'bet': 2,
             },
             {
                 'round': 16,
                 'players': [
-                    ADRIAN_MANNARINO,
                     GRIGOR_DIMITROV,
+                    ADRIAN_MANNARINO,
                 ],
                 'odds': {
-                    ADRIAN_MANNARINO: 3.40,
                     GRIGOR_DIMITROV: 1.30,
+                    ADRIAN_MANNARINO: 3.40,
                 },
+                'score': [(6, 7), (6, 2), (7, 6)],
                 'prediction': GRIGOR_DIMITROV,
                 'bet': 1,
             },
@@ -6111,6 +6118,7 @@ DATA = [
                     RAFAEL_NADAL: 1.08,
                     MIOMIR_KECMANOVIC: 7.50,
                 },
+                'score': [(6, 2), (7, 5)],
                 'prediction': RAFAEL_NADAL,
                 'bet': 3,
             },
@@ -6124,8 +6132,59 @@ DATA = [
                     STAN_WAWRINKA: 1.16,
                     PEDRO_MARTINEZ: 5.00,
                 },
+                'score': [(6, 4), (6, 4)],
                 'prediction': STAN_WAWRINKA,
                 'bet': 3,
+            },
+
+            # 2020-02-28
+            {
+                'round': 8,
+                'players': [
+                    JOHN_ISNER,
+                    TOMMY_PAUL,
+                ],
+                'odds': {
+                    JOHN_ISNER: 1.68,
+                    TOMMY_PAUL: 2.15,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    TAYLOR_FRITZ,
+                    KYLE_EDMUND,
+                ],
+                'odds': {
+                    TAYLOR_FRITZ: 2.30,
+                    KYLE_EDMUND: 1.60,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    STAN_WAWRINKA,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    STAN_WAWRINKA: 1.52,
+                    GRIGOR_DIMITROV: 2.50,
+                },
+                'prediction': STAN_WAWRINKA,
+                'bet': 4,
+            },
+            {
+                'round': 8,
+                'players': [
+                    RAFAEL_NADAL,
+                    SOONWOO_KWON,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.04,
+                    SOONWOO_KWON: 10.00,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 4,
             },
 
             #
