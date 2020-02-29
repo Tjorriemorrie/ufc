@@ -5758,13 +5758,14 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    DANIEL_EVANS,
                     STEFANOS_TSITSIPAS,
+                    DANIEL_EVANS,
                 ],
                 'odds': {
-                    DANIEL_EVANS: 3.80,
                     STEFANOS_TSITSIPAS: 1.26,
+                    DANIEL_EVANS: 3.80,
                 },
+                'score': [(6, 2), (6, 3)],
                 'prediction': STEFANOS_TSITSIPAS,
                 'bet': 1,
             },
@@ -5778,9 +5779,25 @@ DATA = [
                     NOVAK_DJOKOVIC: 1.10,
                     GAEL_MONFILS: 6.50,
                 },
+                'score': [(2, 6), (7, 6), (6, 1)],
                 'prediction': NOVAK_DJOKOVIC,
                 'bet': 4,
             },
+
+            # 2020-02-29
+            {
+                'round': 2,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.30,
+                    STEFANOS_TSITSIPAS: 3.40,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 1,
+            }
         ],
     },
 
@@ -6467,24 +6484,26 @@ DATA = [
             {
                 'round': 8,
                 'players': [
-                    FEDERICO_DELBONIS,
                     CASPER_RUUD,
+                    FEDERICO_DELBONIS,
                 ],
                 'odds': {
-                    FEDERICO_DELBONIS: 2.70,
                     CASPER_RUUD: 1.45,
+                    FEDERICO_DELBONIS: 2.70,
                 },
+                'score': [(7, 5), (7, 5)],
             },
             {
                 'round': 8,
                 'players': [
-                    THIAGO_MONTEIRO,
                     ALBERT_RAMOS_VINOLAS,
+                    THIAGO_MONTEIRO,
                 ],
                 'odds': {
-                    THIAGO_MONTEIRO: 1.80,
                     ALBERT_RAMOS_VINOLAS: 2.00,
+                    THIAGO_MONTEIRO: 1.80,
                 },
+                'score': [(6, 4), (6, 4)],
                 'prediction': THIAGO_MONTEIRO,
                 'bet': 2,
             },
@@ -6498,22 +6517,53 @@ DATA = [
                     RENZO_OLIVO: 2.70,
                     HUGO_DELLIEN: 1.45,
                 },
+                'score': [(3, 6), (7, 6), (7, 5)],
                 'prediction': HUGO_DELLIEN,
                 'bet': 2,
             },
             {
                 'round': 8,
                 'players': [
-                    CHRISTIAN_GARIN,
                     THIAGO_SEYBOTH_WILD,
+                    CHRISTIAN_GARIN,
                 ],
                 'odds': {
-                    CHRISTIAN_GARIN: 1.34,
                     THIAGO_SEYBOTH_WILD: 3.20,
+                    CHRISTIAN_GARIN: 1.34,
                 },
+                'score': [(7, 6), (0, 0)],
+                'retired': True,
                 'prediction': CHRISTIAN_GARIN,
                 'bet': 1,
-            }
+            },
+
+            # 2020-02-29
+            {
+                'round': 4,
+                'players': [
+                    ALBERT_RAMOS_VINOLAS,
+                    CASPER_RUUD,
+                ],
+                'odds': {
+                    ALBERT_RAMOS_VINOLAS: 2.50,
+                    CASPER_RUUD: 1.52,
+                },
+            },
+            {
+                'round': 4,
+                'players': [
+                    THIAGO_SEYBOTH_WILD,
+                    RENZO_OLIVO,
+                ],
+                'odds': {
+                    THIAGO_SEYBOTH_WILD: 1.30,
+                    RENZO_OLIVO: 3.40,
+                },
+                'prediction': THIAGO_SEYBOTH_WILD,
+                'bet': 8,
+            },
+
+            #
         ]
     }
 
