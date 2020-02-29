@@ -2,7 +2,7 @@ from men import *
 from location import *
 
 # score mat roi acc profit  desc
-# 21.6  75  29  79  5100    2020-02 DELRAY_BEACH    (1, 732), (5, 667), (4, 553), (6, 543), (2, 538)
+# 21.2  65  33  86  4600    2020-02 DELRAY_BEACH    (1, 754), (5, 624), (4, 566), (2, 511), (6, 486)
 # 20.8  75  28  78  4730    2020-02 MARSEILLE       (1, 760), (5, 664), (2, 586), (4, 569), (6, 520)
 # 20.8  68  31  83  4440    2020-02 RIO_DE_JANEIRO  (4, 650), (3, 612), (1, 604), (5, 541), (2, 531)
 # 21.2  69  31  82  4830    2020-02 BUENOS AIRES    (1, 652), (5, 640), (4, 620), (6, 481), (2, 473)
@@ -5664,13 +5664,14 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    PIERRE_HUGUES_HERBERT,
                     DANIEL_EVANS,
+                    PIERRE_HUGUES_HERBERT,
                 ],
                 'odds': {
-                    PIERRE_HUGUES_HERBERT: 2.40,
                     DANIEL_EVANS: 1.55,
+                    PIERRE_HUGUES_HERBERT: 2.40,
                 },
+                'score': [(7, 5), (3, 6), (7, 6)],
             },
             {
                 'round': 16,
@@ -5682,32 +5683,35 @@ DATA = [
                     ANDREY_RUBLEV: 1.38,
                     FILIP_KRAJINOVIC: 3.00,
                 },
+                'score': [(7, 6), (6, 0)],
                 'prediction': ANDREY_RUBLEV,
                 'bet': 1,
             },
             {
                 'round': 16,
                 'players': [
-                    ALEXANDER_BUBLIK,
                     STEFANOS_TSITSIPAS,
+                    ALEXANDER_BUBLIK,
                 ],
                 'odds': {
-                    ALEXANDER_BUBLIK: 4.00,
                     STEFANOS_TSITSIPAS: 1.24,
+                    ALEXANDER_BUBLIK: 4.00,
                 },
+                'score': [(7, 6), (6, 4)],
                 'prediction': STEFANOS_TSITSIPAS,
                 'bet': 1,
             },
             {
                 'round': 16,
                 'players': [
-                    DENNIS_NOVAK,
                     KAREN_KHACHANOV,
+                    DENNIS_NOVAK,
                 ],
                 'odds': {
-                    DENNIS_NOVAK: 4.00,
                     KAREN_KHACHANOV: 1.24,
+                    DENNIS_NOVAK: 4.00,
                 },
+                'score': [(6, 3), (6, 4)],
             },
             {
                 'round': 16,
@@ -5719,6 +5723,7 @@ DATA = [
                     JAN_LENNARD_STRUFF: 1.40,
                     NIKOLOZ_BASILASHVILI: 2.90,
                 },
+                'score': [(6, 1), (6, 0)],
             },
             {
                 'round': 16,
@@ -5730,6 +5735,7 @@ DATA = [
                     NOVAK_DJOKOVIC: 1.01,
                     PHILIPP_KOHLSCHREIBER: 14.00,
                 },
+                'score': [(6, 3), (6, 1)],
                 'prediction': NOVAK_DJOKOVIC,
                 'bet': 4,
             },
@@ -5743,11 +5749,38 @@ DATA = [
                     GAEL_MONFILS: 1.09,
                     YASUTAKA_UCHIYAMA: 7.00,
                 },
+                'score': [(6, 1), (6, 2)],
                 'prediction': GAEL_MONFILS,
                 'bet': 4,
             },
 
-            #
+            # 2020-02-28
+            {
+                'round': 4,
+                'players': [
+                    DANIEL_EVANS,
+                    STEFANOS_TSITSIPAS,
+                ],
+                'odds': {
+                    DANIEL_EVANS: 3.80,
+                    STEFANOS_TSITSIPAS: 1.26,
+                },
+                'prediction': STEFANOS_TSITSIPAS,
+                'bet': 1,
+            },
+            {
+                'round': 4,
+                'players': [
+                    NOVAK_DJOKOVIC,
+                    GAEL_MONFILS,
+                ],
+                'odds': {
+                    NOVAK_DJOKOVIC: 1.10,
+                    GAEL_MONFILS: 6.50,
+                },
+                'prediction': NOVAK_DJOKOVIC,
+                'bet': 4,
+            },
         ],
     },
 
@@ -6148,6 +6181,7 @@ DATA = [
                     JOHN_ISNER: 1.68,
                     TOMMY_PAUL: 2.15,
                 },
+                'score': [(7, 6), (3, 6), (6, 2)],
             },
             {
                 'round': 8,
@@ -6159,17 +6193,19 @@ DATA = [
                     TAYLOR_FRITZ: 2.30,
                     KYLE_EDMUND: 1.60,
                 },
+                'score': [(6, 4), (6, 3)],
             },
             {
                 'round': 8,
                 'players': [
-                    STAN_WAWRINKA,
                     GRIGOR_DIMITROV,
+                    STAN_WAWRINKA,
                 ],
                 'odds': {
-                    STAN_WAWRINKA: 1.52,
                     GRIGOR_DIMITROV: 2.50,
+                    STAN_WAWRINKA: 1.52,
                 },
+                'score': [(6, 4), (6, 4)],
                 'prediction': STAN_WAWRINKA,
                 'bet': 4,
             },
@@ -6183,11 +6219,36 @@ DATA = [
                     RAFAEL_NADAL: 1.04,
                     SOONWOO_KWON: 10.00,
                 },
+                'score': [(6, 2), (6, 1)],
                 'prediction': RAFAEL_NADAL,
                 'bet': 4,
             },
 
-            #
+            # 2020-02-29
+            {
+                'round': 4,
+                'players': [
+                    TAYLOR_FRITZ,
+                    JOHN_ISNER,
+                ],
+                'odds': {
+                    TAYLOR_FRITZ: 1.90,
+                    JOHN_ISNER: 1.90,
+                },
+            },
+            {
+                'round': 4,
+                'players': [
+                    RAFAEL_NADAL,
+                    GRIGOR_DIMITROV,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.10,
+                    GRIGOR_DIMITROV: 6.50,
+                },
+                'prediction': RAFAEL_NADAL,
+                'bet': 3,
+            },
         ],
     },
 
@@ -6364,13 +6425,14 @@ DATA = [
             {
                 'round': 16,
                 'players': [
-                    PABLO_CUEVAS,
                     RENZO_OLIVO,
+                    PABLO_CUEVAS,
                 ],
                 'odds': {
-                    PABLO_CUEVAS: 1.24,
                     RENZO_OLIVO: 4.00,
+                    PABLO_CUEVAS: 1.24,
                 },
+                'score': [(5, 7), (7, 6), (7, 6)],
                 'prediction': PABLO_CUEVAS,
                 'bet': 4,
             },
@@ -6384,33 +6446,74 @@ DATA = [
                     FEDERICO_DELBONIS: 1.55,
                     SALVATORE_CARUSO: 2.40,
                 },
+                'score': [(7, 6), (6, 3)],
                 'prediction': FEDERICO_DELBONIS,
                 'bet': 6,
             },
             {
                 'round': 16,
                 'players': [
+                    HUGO_DELLIEN,
                     MARCELO_TOMAS_BARRIOS_VERA,
+                ],
+                'odds': {
+                    HUGO_DELLIEN: 1.42,
+                    MARCELO_TOMAS_BARRIOS_VERA: 2.80,
+                },
+                'score': [(6, 3), (7, 6)],
+            },
+
+            # 2020-02-28
+            {
+                'round': 8,
+                'players': [
+                    FEDERICO_DELBONIS,
+                    CASPER_RUUD,
+                ],
+                'odds': {
+                    FEDERICO_DELBONIS: 2.70,
+                    CASPER_RUUD: 1.45,
+                },
+            },
+            {
+                'round': 8,
+                'players': [
+                    THIAGO_MONTEIRO,
+                    ALBERT_RAMOS_VINOLAS,
+                ],
+                'odds': {
+                    THIAGO_MONTEIRO: 1.80,
+                    ALBERT_RAMOS_VINOLAS: 2.00,
+                },
+                'prediction': THIAGO_MONTEIRO,
+                'bet': 2,
+            },
+            {
+                'round': 8,
+                'players': [
+                    RENZO_OLIVO,
                     HUGO_DELLIEN,
                 ],
                 'odds': {
-                    MARCELO_TOMAS_BARRIOS_VERA: 2.80,
-                    HUGO_DELLIEN: 1.42,
+                    RENZO_OLIVO: 2.70,
+                    HUGO_DELLIEN: 1.45,
                 },
+                'prediction': HUGO_DELLIEN,
+                'bet': 2,
             },
-            # {
-            #     'round': 16,
-            #     'players': [
-            #         CHRISTIAN_GARIN,
-            #         ALEJANDRO_DAVIDOVICH_FOKINA,
-            #     ],
-            #     'odds': {
-            #         CHRISTIAN_GARIN: 1.28,
-            #         ALEJANDRO_DAVIDOVICH_FOKINA: 3.60,
-            #     },
-            #     'prediction': None,
-            # },
-
+            {
+                'round': 8,
+                'players': [
+                    CHRISTIAN_GARIN,
+                    THIAGO_SEYBOTH_WILD,
+                ],
+                'odds': {
+                    CHRISTIAN_GARIN: 1.34,
+                    THIAGO_SEYBOTH_WILD: 3.20,
+                },
+                'prediction': CHRISTIAN_GARIN,
+                'bet': 1,
+            }
         ]
     }
 
