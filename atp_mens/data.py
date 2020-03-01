@@ -2,7 +2,7 @@ from men import *
 from location import *
 
 # score mat roi acc profit  desc
-# 21.2  65  33  86  4600    2020-02 DELRAY_BEACH    (1, 754), (5, 624), (4, 566), (2, 511), (6, 486)
+# 22.3  69  32  82  5300    2020-02 DELRAY_BEACH    (1, 754), (5, 624), (4, 566), (2, 511), (6, 486)
 # 20.8  75  28  78  4730    2020-02 MARSEILLE       (1, 760), (5, 664), (2, 586), (4, 569), (6, 520)
 # 20.8  68  31  83  4440    2020-02 RIO_DE_JANEIRO  (4, 650), (3, 612), (1, 604), (5, 541), (2, 531)
 # 21.2  69  31  82  4830    2020-02 BUENOS AIRES    (1, 652), (5, 640), (4, 620), (6, 481), (2, 473)
@@ -6252,6 +6252,7 @@ DATA = [
                     TAYLOR_FRITZ: 1.90,
                     JOHN_ISNER: 1.90,
                 },
+                'score': [(2, 6), (7, 5), (6, 3)],
             },
             {
                 'round': 4,
@@ -6263,8 +6264,22 @@ DATA = [
                     RAFAEL_NADAL: 1.10,
                     GRIGOR_DIMITROV: 6.50,
                 },
+                'score': [(6, 3), (6, 2)],
                 'prediction': RAFAEL_NADAL,
                 'bet': 3,
+            },
+
+            # 2020-03-01
+            {
+                'round': 2,
+                'players': [
+                    RAFAEL_NADAL,
+                    TAYLOR_FRITZ,
+                ],
+                'odds': {
+                    RAFAEL_NADAL: 1.06,
+                    TAYLOR_FRITZ: 8.50,
+                },
             },
         ],
     },
