@@ -2,7 +2,7 @@ from men import *
 from location import *
 
 # score mat roi acc profit  desc
-# 22.3  69  32  82  5300    2020-02 DELRAY_BEACH    (1, 754), (5, 624), (4, 566), (2, 511), (6, 486)
+# 22.1  65  34  85  4900    2020-02 DELRAY_BEACH    (1, 754), (5, 624), (4, 566), (2, 511), (6, 486)
 # 20.8  75  28  78  4730    2020-02 MARSEILLE       (1, 760), (5, 664), (2, 586), (4, 569), (6, 520)
 # 20.8  68  31  83  4440    2020-02 RIO_DE_JANEIRO  (4, 650), (3, 612), (1, 604), (5, 541), (2, 531)
 # 21.2  69  31  82  4830    2020-02 BUENOS AIRES    (1, 652), (5, 640), (4, 620), (6, 481), (2, 473)
@@ -5489,10 +5489,6 @@ DATA = [
         ]
     },
 
-    ###############################################################################
-    # Active
-    ###############################################################################
-
     {
         'location': DUBAI,
         'date': '2020-02-29',
@@ -5795,11 +5791,16 @@ DATA = [
                     NOVAK_DJOKOVIC: 1.30,
                     STEFANOS_TSITSIPAS: 3.40,
                 },
+                'score': [(6, 3), (6, 4)],
                 'prediction': NOVAK_DJOKOVIC,
                 'bet': 1,
             }
         ],
     },
+
+    ###############################################################################
+    # Active
+    ###############################################################################
 
     {
         'location': ACAPULCO,
@@ -6556,13 +6557,14 @@ DATA = [
             {
                 'round': 4,
                 'players': [
-                    ALBERT_RAMOS_VINOLAS,
                     CASPER_RUUD,
+                    ALBERT_RAMOS_VINOLAS,
                 ],
                 'odds': {
-                    ALBERT_RAMOS_VINOLAS: 2.50,
                     CASPER_RUUD: 1.52,
+                    ALBERT_RAMOS_VINOLAS: 2.50,
                 },
+                'score': [(7, 6), (6, 2)],
             },
             {
                 'round': 4,
@@ -6574,11 +6576,23 @@ DATA = [
                     THIAGO_SEYBOTH_WILD: 1.30,
                     RENZO_OLIVO: 3.40,
                 },
+                'score': [(6, 1), (6, 3)],
                 'prediction': THIAGO_SEYBOTH_WILD,
                 'bet': 8,
             },
 
-            #
+            # 2020-03-01
+            {
+                'round': 2,
+                'players': [
+                    THIAGO_SEYBOTH_WILD,
+                    CASPER_RUUD,
+                ],
+                'odds': {
+                    THIAGO_SEYBOTH_WILD: 3.60,
+                    CASPER_RUUD: 1.28,
+                },
+            },
         ]
     }
 
