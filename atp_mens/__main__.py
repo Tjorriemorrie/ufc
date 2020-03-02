@@ -59,30 +59,22 @@ def main(hyper_params, train=0):
 
     hyper_params = list(hyper_params)
     # bet_multi_param = int(round(hyper_params.pop(0)))
-    bet_multi_param = -15
+    bet_multi_param = -16
 
     all_data = DATA_2018_07 + DATA_2018_08 + DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA_2019_09 + DATA_2019_10 + DATA_2019_11 + \
                DATA_2020_01 + DATA
 
-    # bet_tma_a, bet_tma_b,
-    bet_tma_a = 3.968796317536908
-    bet_tma_b = 1.2199045511253135
-
-    # bet_sfcr_a, bet_sfcr_b, bet_sfcw_a, bet_sfcw_b,
+    # bet_sfcr_a, bet_sfcr_b,
     bet_sfcr_a = 4.403951331671117
     bet_sfcr_b = -6.637066211816958
-    bet_sfcw_a = -6.827149502963259
-    bet_sfcw_b = -11.248768877566782
 
-    # bet_age_a, bet_age_b, bet_lati_a, bet_lati_b, bet_ts_a, bet_ts_b = hyper_params
+    # bet_age_a, bet_age_b, bet_lati_a, bet_lati_b,
     bet_age_a = -12.519390654398865
     bet_age_b = -56.32274135383632
     bet_lati_a = -114.70130772136264
     bet_lati_b = -1.2159817802115582
-    bet_ts_a = -91.82930292085128
-    bet_ts_b = 19.392688132095763
 
     # bet_setr_a, bet_setr_b, bet_spd_a, bet_spd_b, bet_wnll_a, bet_wnll_b = hyper_params
     bet_setr_a = -0.8723973210355416
@@ -131,6 +123,14 @@ def main(hyper_params, train=0):
     bet_upsl_b = -15.356411553887249
     bet_setl_a = -12.946297107133
     bet_setl_b = 6.99071560946205
+
+    # bet_tma_a, bet_tma_b, bet_sfcw_a, bet_sfcw_b, bet_ts_a, bet_ts_b = hyper_params
+    bet_tma_a = 3.517741945078982
+    bet_tma_b = 21.946361593295887
+    bet_sfcw_a = 15.924434795710074
+    bet_sfcw_b = 2.5234816601641326
+    bet_ts_a = -16.663252803997707
+    bet_ts_b = 19.61317875044444
 
     # init
     start_date = None
@@ -637,13 +637,13 @@ multi_scores = {
     'drsl': {'limit': 2, 'scores': [0.7, 1.1, 0.7, 3.2, 1.3]},
     'setl': {'limit': 2, 'scores': [0.4, 1.6, 2.1, 0.2, 2.3]},
     'wnlw': {'limit': 2, 'scores': [1.3, 1.1, 1.0, 0.8, 1.0]},
-    'drs':  {'limit': 2, 'scores': [0.0, 0.5, 2.2, 0.0, -0.1]},
+    'tma':  {'limit': 2, 'scores': [-0.1, 0.6, 1.1, 0.7, 1.0]},
 
+    'drs':  {'limit': 1, 'scores': [0.0, 0.5, 2.2, 0.0, -0.1]},
     'upsl': {'limit': 1, 'scores': [0.0, -0.1, 0.5, 0.9, 0.0]},
     'wnlr': {'limit': 1, 'scores': [0.0, 0.5, -0.1, 0.1, 1.1]},
+    'ts':   {'limit': 1, 'scores': [0.9, 0.7, 0.6, 0.3, 0.8]},
     'spd':  {'limit': 1, 'scores': [-0.1, 0.1, 0.0, 1.2, 0.7]},
-    'tma':  {'limit': 1, 'scores': [0.0, -0.1, 0.6, 1.1, 0.7]},
-    'ts':   {'limit': 1, 'scores': [0.0, 0.9, 0.7, 0.6, 0.3]},
     'tiew': {'limit': 1, 'scores': [0.7, 0.0, 1.0, 0.0, 0.3]},
     'drsw': {'limit': 1, 'scores': [-0.2, 0.4, 0.0, -0.1, 0.3]},
     'tiel': {'limit': 1, 'scores': [0.0, 0.4, 1.4, -0.3, 0.3]},
@@ -651,8 +651,8 @@ multi_scores = {
     'gms':  {'limit': 1, 'scores': [1.2, 0.1, 0.0, 0.0, 0.1]},
     'sfcr': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
     'upsr': {'limit': 1, 'scores': [0.0, 0.9, 0.0, 0.0, -0.1]},
+    'sfcw': {'limit': 1, 'scores': [0.2, 0.0, 0.1, -0.1, 0.5]},
     'rnd':  {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
-    'sfcw': {'limit': 1, 'scores': [1.7, 0.2, 0.0, 0.1, -0.1]},
     'setr': {'limit': 1, 'scores': [0.0, 0.0, 0.7, 0.0, -0.1]},
     'upsw': {'limit': 1, 'scores': [1.4, -0.2, 0.1, 0.0, -0.1]},
     'age':  {'limit': 1, 'scores': [0.1, -0.1, 1.2, -0.1, -0.1]},
@@ -665,9 +665,13 @@ def run():
     names = [
         'bet_multi_param',
 
-        'bet_upsr_a', 'bet_upsr_b',
-        'bet_upsl_a', 'bet_upsl_b',
-        'bet_setl_a', 'bet_setl_b',
+        'bet_tma_a', 'bet_tma_b',
+        'bet_sfcw_a', 'bet_sfcw_b',
+        'bet_ts_a', 'bet_ts_b',
+
+        # 'bet_upsr_a', 'bet_upsr_b',
+        # 'bet_upsl_a', 'bet_upsl_b',
+        # 'bet_setl_a', 'bet_setl_b',
 
         # 'bet_tier_a', 'bet_tier_b',
         # 'bet_setw_a', 'bet_setw_b',
@@ -691,15 +695,11 @@ def run():
 
         # 'bet_age_a', 'bet_age_b',
         # 'bet_lati_a', 'bet_lati_b',
-        # 'bet_ts_a', 'bet_ts_b',
 
         # 'bet_sfcr_a', 'bet_sfcr_b',
-        # 'bet_sfcw_a', 'bet_sfcw_b',
-
-        # 'bet_tma_a', 'bet_tma_b',
     ]
-    tolx = 4000  # more higher then longer time
-    params = [-15, 0, 0, 0, 0, 0, 0]
+    tolx = 5000  # more higher then longer time
+    params = [-16, 0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
         [np.inf]
