@@ -59,30 +59,22 @@ def main(hyper_params, train=0):
 
     hyper_params = list(hyper_params)
     # bet_multi_param = int(round(hyper_params.pop(0)))
-    bet_multi_param = -16
+    bet_multi_param = -15
 
     all_data = DATA_2018_07 + DATA_2018_08 + DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA_2019_09 + DATA_2019_10 + DATA_2019_11 + \
                DATA_2020_01 + DATA
 
-    # bet_setr_a, bet_setr_b,
-    bet_setr_a = -0.8723973210355416
-    bet_setr_b = 6.8566170302468485
-
-    # bet_wnlr_a, bet_wnlr_b, bet_drsw_a, bet_drsw_b,
+    # bet_wnlr_a, bet_wnlr_b,
     bet_wnlr_a = -9.726392012647612
     bet_wnlr_b = 3.6738907086707226
-    bet_drsw_a = -4.17673373846962
-    bet_drsw_b = -6.751016056206907
 
-    # bet_gms_a, bet_gms_b, bet_upsw_a, bet_upsw_b, bet_tiel_a, bet_tiel_b = hyper_params
+    # bet_gms_a, bet_gms_b, bet_upsw_a, bet_upsw_b,
     bet_gms_a = -3.932436099855687
     bet_gms_b = 0.6186166025953079
     bet_upsw_a = -5.954200849192515
     bet_upsw_b = -3.6844252493441236
-    bet_tiel_a = -13.2666426697812
-    bet_tiel_b = 2.233442627004662
 
     # bet_wnlw_a, bet_wnlw_b, bet_drsl_a, bet_drsl_b, bet_drs_a, bet_drs_b = hyper_params
     bet_wnlw_a = -15.125372111294066
@@ -131,6 +123,14 @@ def main(hyper_params, train=0):
     bet_spd_b = 50.81331907162685
     bet_tiew_a = -53.92812731689113
     bet_tiew_b = 28.03078913677427
+
+    # bet_setr_a, bet_setr_b, bet_drsw_a, bet_drsw_b, bet_tiel_a, bet_tiel_b = hyper_params
+    bet_setr_a = -18.420335662272393
+    bet_setr_b = -3.0849265357219013
+    bet_drsw_a = -13.931397245705076
+    bet_drsw_b = 8.617939186326849
+    bet_tiel_a = -14.597410948570172
+    bet_tiel_b = 18.506415802460246
 
     # init
     start_date = None
@@ -645,16 +645,16 @@ multi_scores = {
     'spd':  {'limit': 1, 'scores': [0.1, 0.0, 1.2, 0.7, 0.9]},
     'ts':   {'limit': 1, 'scores': [0.9, 0.7, 0.6, 0.3, 0.8]},
     'tiew': {'limit': 1, 'scores': [0.0, 1.0, 0.0, 0.3, 0.4]},
-    'drsw': {'limit': 1, 'scores': [-0.2, 0.4, 0.0, -0.1, 0.3]},
-    'tiel': {'limit': 1, 'scores': [0.0, 0.4, 1.4, -0.3, 0.3]},
+    'tiel': {'limit': 1, 'scores': [0.4, 1.4, -0.3, 0.3, 0.5]},
+    'drsw': {'limit': 1, 'scores': [0.4, 0.0, -0.1, 0.3, 0.3]},
     'tmi':  {'limit': 1, 'scores': [0.0, 1.4, 0.2, 0.0, 0.8]},
     'gms':  {'limit': 1, 'scores': [1.2, 0.1, 0.0, 0.0, 0.1]},
     'sfcr': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
     'upsr': {'limit': 1, 'scores': [0.0, 0.9, 0.0, 0.0, -0.1]},
     'sfcw': {'limit': 1, 'scores': [0.2, 0.0, 0.1, -0.1, 0.5]},
     'rnd':  {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
-    'setr': {'limit': 1, 'scores': [0.0, 0.0, 0.7, 0.0, -0.1]},
     'age':  {'limit': 1, 'scores': [-0.1, 1.2, -0.1, -0.1, 0.4]},
+    'setr': {'limit': 1, 'scores': [0.0, 0.7, 0.0, -0.1, 0.0]},
     'upsw': {'limit': 1, 'scores': [1.4, -0.2, 0.1, 0.0, -0.1]},
 }
 
@@ -665,9 +665,13 @@ def run():
     names = [
         'bet_multi_param',
 
-        'bet_age_a', 'bet_age_b',
-        'bet_spd_a', 'bet_spd_b',
-        'bet_tiew_a', 'bet_tiew_b',
+        'bet_setr_a', 'bet_setr_b',
+        'bet_drsw_a', 'bet_drsw_b',
+        'bet_tiel_a', 'bet_tiel_b',
+
+        # 'bet_age_a', 'bet_age_b',
+        # 'bet_spd_a', 'bet_spd_b',
+        # 'bet_tiew_a', 'bet_tiew_b',
 
         # 'bet_sfcr_a', 'bet_sfcr_b',
         # 'bet_lati_a', 'bet_lati_b',
@@ -691,14 +695,10 @@ def run():
 
         # 'bet_gms_a', 'bet_gms_b',
         # 'bet_upsw_a', 'bet_upsw_b',
-        # 'bet_tiel_a', 'bet_tiel_b',
 
         # 'bet_wnlr_a', 'bet_wnlr_b',
-        # 'bet_drsw_a', 'bet_drsw_b',
-
-        # 'bet_setr_a', 'bet_setr_b',
     ]
-    tolx = 6000  # more higher then longer time
+    tolx = 7000  # more higher then longer time
     params = [-16, 0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
