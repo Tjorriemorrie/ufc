@@ -124,13 +124,13 @@ def main(hyper_params, train=0):
     bet_drs_a = -5.068401842647043
     bet_drs_b = -11.036583332479655
 
-    bet_gms_a, bet_gms_b, bet_drsl_a, bet_drsl_b, bet_tmi_a, bet_tmi_b = hyper_params
-    # bet_gms_a = -3.932436099855687
-    # bet_gms_b = 0.6186166025953079
-    # bet_drsl_a = -7.703319493001832
-    # bet_drsl_b = 9.174852158230985
-    # bet_tmi_a = -11.224130833038483
-    # bet_tmi_b = 30.85836415984719
+    # bet_gms_a, bet_gms_b, bet_drsl_a, bet_drsl_b, bet_tmi_a, bet_tmi_b = hyper_params
+    bet_gms_a = -1.1199718460907597
+    bet_gms_b = -4.975264460039275
+    bet_drsl_a = -3.5193793439419188
+    bet_drsl_b = 8.157513638414523
+    bet_tmi_a = -1.6290341203972258
+    bet_tmi_b = 11.182173806372235
 
     # init
     start_date = None
@@ -634,8 +634,8 @@ multi_scores = {
     'setw': {'limit': 3, 'scores': [4.3, 2.0, 2.8, 3.6, 2.9]},
     'wnll': {'limit': 3, 'scores': [2.2, 3.4, 1.6, 2.7, 1.3]},
 
-    'drsl': {'limit': 2, 'scores': [0.7, 1.1, 0.7, 3.2, 1.3]},
     'setl': {'limit': 2, 'scores': [0.4, 1.6, 2.1, 0.2, 2.3]},
+    'drsl': {'limit': 2, 'scores': [1.1, 0.7, 3.2, 1.3, 1.8]},
     'wnlw': {'limit': 2, 'scores': [1.3, 1.1, 1.0, 0.8, 1.0]},
 
     'tma':  {'limit': 1, 'scores': [-0.1, 0.6, 1.1, 0.7, 1.0]},
@@ -646,9 +646,9 @@ multi_scores = {
     'ts':   {'limit': 1, 'scores': [0.9, 0.7, 0.6, 0.3, 0.8]},
     'tiew': {'limit': 1, 'scores': [0.0, 1.0, 0.0, 0.3, 0.4]},
     'tiel': {'limit': 1, 'scores': [0.4, 1.4, -0.3, 0.3, 0.5]},
+    'tmi':  {'limit': 1, 'scores': [1.4, 0.2, 0.0, 0.8, 1.1]},
     'drsw': {'limit': 1, 'scores': [0.4, 0.0, -0.1, 0.3, 0.3]},
-    'tmi':  {'limit': 1, 'scores': [0.0, 1.4, 0.2, 0.0, 0.8]},
-    'gms':  {'limit': 1, 'scores': [1.2, 0.1, 0.0, 0.0, 0.1]},
+    'gms':  {'limit': 1, 'scores': [0.1, 0.0, 0.0, 0.1, 0.0]},
     'sfcr': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
     'upsr': {'limit': 1, 'scores': [0.0, 0.9, 0.0, 0.0, -0.1]},
     'sfcw': {'limit': 1, 'scores': [0.2, 0.0, 0.1, -0.1, 0.5]},
@@ -660,7 +660,7 @@ multi_scores = {
 
 
 def run():
-    train = 1
+    train = 0
 
     names = [
         'bet_multi_param',
