@@ -66,31 +66,15 @@ def main(hyper_params, train=0):
                DATA_2019_07 + DATA_2019_08 + DATA_2019_09 + DATA_2019_10 + DATA_2019_11 + \
                DATA_2020_01 + DATA
 
-    # bet_wnlw_a, bet_wnlw_b,
-    bet_wnlw_a = -15.125372111294066
-    bet_wnlw_b = -22.583131894175065
-
-    # bet_tier_a, bet_tier_b, bet_setw_a, bet_setw_b,
-    bet_tier_a = 88.24430352243135
-    bet_tier_b = 0.3862700618828726
-    bet_setw_a = 24.489629815162466
-    bet_setw_b = -32.34158251098889
-
-    # bet_upsr_a, bet_upsr_b, bet_upsl_a, bet_upsl_b, bet_setl_a, bet_setl_b = hyper_params
+    # bet_upsr_a, bet_upsr_b,
     bet_upsr_a = -14.010934464843578
     bet_upsr_b = 14.692659877070797
-    bet_upsl_a = 14.710172313253521
-    bet_upsl_b = -15.356411553887249
-    bet_setl_a = -12.946297107133
-    bet_setl_b = 6.99071560946205
 
-    # bet_tma_a, bet_tma_b, bet_sfcw_a, bet_sfcw_b, bet_ts_a, bet_ts_b = hyper_params
+    # bet_tma_a, bet_tma_b, bet_sfcw_a, bet_sfcw_b,
     bet_tma_a = 3.517741945078982
     bet_tma_b = 21.946361593295887
     bet_sfcw_a = 15.924434795710074
     bet_sfcw_b = 2.5234816601641326
-    bet_ts_a = -16.663252803997707
-    bet_ts_b = 19.61317875044444
 
     # bet_sfcr_a, bet_sfcr_b, bet_lati_a, bet_lati_b, bet_wnll_a, bet_wnll_b = hyper_params
     bet_sfcr_a = 10.007218390537238
@@ -131,6 +115,22 @@ def main(hyper_params, train=0):
     bet_drsl_b = 8.157513638414523
     bet_tmi_a = -1.6290341203972258
     bet_tmi_b = 11.182173806372235
+
+    # bet_wnlw_a, bet_wnlw_b, bet_setw_a, bet_setw_b, bet_setl_a, bet_setl_b = hyper_params
+    bet_wnlw_a = -15.125372111294066
+    bet_wnlw_b = -22.583131894175065
+    bet_setw_a = 24.489629815162466
+    bet_setw_b = -32.34158251098889
+    bet_setl_a = -12.946297107133
+    bet_setl_b = 6.99071560946205
+
+    # bet_tier_a, bet_tier_b, bet_upsl_a, bet_upsl_b, bet_ts_a, bet_ts_b = hyper_params
+    bet_tier_a = 76.69376718420321
+    bet_tier_b = 0.22499021217210005
+    bet_upsl_a = 50.652313466232535
+    bet_upsl_b = -54.1700508996346
+    bet_ts_a = -41.55281708232367
+    bet_ts_b = 15.054725376991598
 
     # init
     start_date = None
@@ -596,12 +596,12 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
         logger.info(f'Common multis: {Counter(bet_multis).most_common(5)}')
         for wrd, info in multi_scores.items():
             multi_scores[wrd]['avg'] = statistics.mean(info['scores'])
-        ps = np.percentile([i['avg'] for i in multi_scores.values()], [70, 85, 95])
+        ps = np.percentile([i['avg'] for i in multi_scores.values()], [60, 90])
         logger.info(f'percentiles: {ps}')
         for wrd, info in multi_scores.items():
             exp_limit = 1 if info['avg'] <= ps[0] else \
-                2 if info['avg'] <= ps[1] else \
-                3 if info['avg'] <= ps[2] else 5
+                2 if info['avg'] <= ps[1] else 3
+                # if info['avg'] <= ps[2] else 5
             if info['limit'] != exp_limit:
                 suffix = f' expected to be {exp_limit} but found {info["limit"]}'
                 logger.warning(f'{wrd} [{info["avg"]:.2f}]{suffix}')
@@ -628,25 +628,24 @@ def summary(accuracy, payouts, bet_amts, start_date, actual, tab, tab_amts, bet_
 # 1st serve conversion rate
 
 multi_scores = {
-    'tier': {'limit': 5, 'scores': [8.9, 6.2, 6.1, 8.9, 9.3]},
-    'lati': {'limit': 5, 'scores': [11.5, 8.9, 6.5, 7.6, 6.2]},
-
+    'tier': {'limit': 3, 'scores': [6.2, 6.1, 8.9, 9.3, 9.7]},
+    'lati': {'limit': 3, 'scores': [11.5, 8.9, 6.5, 7.6, 6.2]},
     'setw': {'limit': 3, 'scores': [4.3, 2.0, 2.8, 3.6, 2.9]},
-    'wnll': {'limit': 3, 'scores': [2.2, 3.4, 1.6, 2.7, 1.3]},
 
+    'wnll': {'limit': 2, 'scores': [2.2, 3.4, 1.6, 2.7, 1.3]},
     'setl': {'limit': 2, 'scores': [0.4, 1.6, 2.1, 0.2, 2.3]},
     'drsl': {'limit': 2, 'scores': [1.1, 0.7, 3.2, 1.3, 1.8]},
     'wnlw': {'limit': 2, 'scores': [1.3, 1.1, 1.0, 0.8, 1.0]},
+    'tmi':  {'limit': 2, 'scores': [1.4, 0.2, 0.0, 0.8, 1.1]},
+    'tma':  {'limit': 2, 'scores': [-0.1, 0.6, 1.1, 0.7, 1.0]},
+    'ts':   {'limit': 2, 'scores': [0.7, 0.6, 0.3, 0.8, 0.7]},
 
-    'tma':  {'limit': 1, 'scores': [-0.1, 0.6, 1.1, 0.7, 1.0]},
     'drs':  {'limit': 1, 'scores': [0.0, 0.5, 2.2, 0.0, -0.1]},
-    'upsl': {'limit': 1, 'scores': [0.0, -0.1, 0.5, 0.9, 0.0]},
     'wnlr': {'limit': 1, 'scores': [0.0, 0.5, -0.1, 0.1, 1.1]},
+    'upsl': {'limit': 1, 'scores': [-0.1, 0.5, 0.9, 0.0, 0.0]},
     'spd':  {'limit': 1, 'scores': [0.1, 0.0, 1.2, 0.7, 0.9]},
-    'ts':   {'limit': 1, 'scores': [0.9, 0.7, 0.6, 0.3, 0.8]},
     'tiew': {'limit': 1, 'scores': [0.0, 1.0, 0.0, 0.3, 0.4]},
     'tiel': {'limit': 1, 'scores': [0.4, 1.4, -0.3, 0.3, 0.5]},
-    'tmi':  {'limit': 1, 'scores': [1.4, 0.2, 0.0, 0.8, 1.1]},
     'drsw': {'limit': 1, 'scores': [0.4, 0.0, -0.1, 0.3, 0.3]},
     'gms':  {'limit': 1, 'scores': [0.1, 0.0, 0.0, 0.1, 0.0]},
     'sfcr': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
@@ -665,9 +664,17 @@ def run():
     names = [
         'bet_multi_param',
 
-        'bet_gms_a', 'bet_gms_b',
-        'bet_drsl_a', 'bet_drsl_b',
-        'bet_tmi_a', 'bet_tmi_b',
+        'bet_tier_a', 'bet_tier_b',
+        'bet_upsl_a', 'bet_upsl_b',
+        'bet_ts_a', 'bet_ts_b',
+
+        # 'bet_wnlw_a', 'bet_wnlw_b',
+        # 'bet_setw_a', 'bet_setw_b',
+        # 'bet_setl_a', 'bet_setl_b',
+
+        # 'bet_gms_a', 'bet_gms_b',
+        # 'bet_drsl_a', 'bet_drsl_b',
+        # 'bet_tmi_a', 'bet_tmi_b',
 
         # 'bet_wnlr_a', 'bet_wnlr_b',
         # 'bet_upsw_a', 'bet_upsw_b',
@@ -687,18 +694,10 @@ def run():
 
         # 'bet_tma_a', 'bet_tma_b',
         # 'bet_sfcw_a', 'bet_sfcw_b',
-        # 'bet_ts_a', 'bet_ts_b',
 
         # 'bet_upsr_a', 'bet_upsr_b',
-        # 'bet_upsl_a', 'bet_upsl_b',
-        # 'bet_setl_a', 'bet_setl_b',
-
-        # 'bet_tier_a', 'bet_tier_b',
-        # 'bet_setw_a', 'bet_setw_b',
-
-        # 'bet_wnlw_a', 'bet_wnlw_b',
     ]
-    tolx = 7000  # more higher then longer time
+    tolx = 8000  # more higher then longer time
     params = [-14, 0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
