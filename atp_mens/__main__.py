@@ -59,30 +59,22 @@ def main(hyper_params, train=0):
 
     hyper_params = list(hyper_params)
     # bet_multi_param = int(round(hyper_params.pop(0)))
-    bet_multi_param = -14
+    bet_multi_param = -15
 
     all_data = DATA_2018_07 + DATA_2018_08 + DATA_2018_09 + DATA_2018_10 + \
                DATA_2019_01 + DATA_2019_02 + DATA_2019_03 + DATA_2019_04 + DATA_2019_05 + DATA_2019_06 + \
                DATA_2019_07 + DATA_2019_08 + DATA_2019_09 + DATA_2019_10 + DATA_2019_11 + \
                DATA_2020_01 + DATA
 
-    # bet_upsr_a, bet_upsr_b,
-    bet_upsr_a = -14.010934464843578
-    bet_upsr_b = 14.692659877070797
-
-    # bet_tma_a, bet_tma_b, bet_sfcw_a, bet_sfcw_b,
+    # bet_tma_a, bet_tma_b,
     bet_tma_a = 3.517741945078982
     bet_tma_b = 21.946361593295887
-    bet_sfcw_a = 15.924434795710074
-    bet_sfcw_b = 2.5234816601641326
 
-    # bet_sfcr_a, bet_sfcr_b, bet_lati_a, bet_lati_b, bet_wnll_a, bet_wnll_b = hyper_params
+    # bet_sfcr_a, bet_sfcr_b, bet_lati_a, bet_lati_b,
     bet_sfcr_a = 10.007218390537238
     bet_sfcr_b = -5.501752363680982
     bet_lati_a = -39.56779493409925
     bet_lati_b = 0.27352902157064435
-    bet_wnll_a = 8.771060819714098
-    bet_wnll_b = -7.925361986083388
 
     # bet_age_a, bet_age_b, bet_spd_a, bet_spd_b, bet_tiew_a, bet_tiew_b = hyper_params
     bet_age_a = -1.8635234765777555
@@ -131,6 +123,14 @@ def main(hyper_params, train=0):
     bet_upsl_b = -54.1700508996346
     bet_ts_a = -41.55281708232367
     bet_ts_b = 15.054725376991598
+
+    # bet_upsr_a, bet_upsr_b, bet_sfcw_a, bet_sfcw_b, bet_wnll_a, bet_wnll_b = hyper_params
+    bet_upsr_a = 1.7388898924369287
+    bet_upsr_b = -3.651644175622176
+    bet_sfcw_a = 4.708276194896277
+    bet_sfcw_b = 2.837036795184313
+    bet_wnll_a = 6.390115360073748
+    bet_wnll_b = -5.559582537604789
 
     # init
     start_date = None
@@ -632,8 +632,8 @@ multi_scores = {
     'lati': {'limit': 3, 'scores': [11.5, 8.9, 6.5, 7.6, 6.2]},
     'setw': {'limit': 3, 'scores': [4.3, 2.0, 2.8, 3.6, 2.9]},
 
-    'wnll': {'limit': 2, 'scores': [2.2, 3.4, 1.6, 2.7, 1.3]},
     'setl': {'limit': 2, 'scores': [0.4, 1.6, 2.1, 0.2, 2.3]},
+    'wnll': {'limit': 2, 'scores': [3.4, 1.6, 2.7, 1.3, 2.1]},
     'drsl': {'limit': 2, 'scores': [1.1, 0.7, 3.2, 1.3, 1.8]},
     'wnlw': {'limit': 2, 'scores': [1.3, 1.1, 1.0, 0.8, 1.0]},
     'tmi':  {'limit': 2, 'scores': [1.4, 0.2, 0.0, 0.8, 1.1]},
@@ -648,9 +648,9 @@ multi_scores = {
     'tiel': {'limit': 1, 'scores': [0.4, 1.4, -0.3, 0.3, 0.5]},
     'drsw': {'limit': 1, 'scores': [0.4, 0.0, -0.1, 0.3, 0.3]},
     'gms':  {'limit': 1, 'scores': [0.1, 0.0, 0.0, 0.1, 0.0]},
+    'sfcw': {'limit': 1, 'scores': [0.0, 0.1, -0.1, 0.5, 1.4]},
     'sfcr': {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
-    'upsr': {'limit': 1, 'scores': [0.0, 0.9, 0.0, 0.0, -0.1]},
-    'sfcw': {'limit': 1, 'scores': [0.2, 0.0, 0.1, -0.1, 0.5]},
+    'upsr': {'limit': 1, 'scores': [0.9, 0.0, 0.0, -0.1, 0.0]},
     'rnd':  {'limit': 1, 'scores': [0.0, 0.0, 0.0, 0.0, 0.0]},
     'age':  {'limit': 1, 'scores': [-0.1, 1.2, -0.1, -0.1, 0.4]},
     'setr': {'limit': 1, 'scores': [0.0, 0.7, 0.0, -0.1, 0.0]},
@@ -664,9 +664,13 @@ def run():
     names = [
         'bet_multi_param',
 
-        'bet_tier_a', 'bet_tier_b',
-        'bet_upsl_a', 'bet_upsl_b',
-        'bet_ts_a', 'bet_ts_b',
+        'bet_upsr_a', 'bet_upsr_b',
+        'bet_sfcw_a', 'bet_sfcw_b',
+        'bet_wnll_a', 'bet_wnll_b',
+
+        # 'bet_tier_a', 'bet_tier_b',
+        # 'bet_upsl_a', 'bet_upsl_b',
+        # 'bet_ts_a', 'bet_ts_b',
 
         # 'bet_wnlw_a', 'bet_wnlw_b',
         # 'bet_setw_a', 'bet_setw_b',
@@ -690,15 +694,11 @@ def run():
 
         # 'bet_sfcr_a', 'bet_sfcr_b',
         # 'bet_lati_a', 'bet_lati_b',
-        # 'bet_wnll_a', 'bet_wnll_b',
 
         # 'bet_tma_a', 'bet_tma_b',
-        # 'bet_sfcw_a', 'bet_sfcw_b',
-
-        # 'bet_upsr_a', 'bet_upsr_b',
     ]
     tolx = 8000  # more higher then longer time
-    params = [-14, 0, 0, 0, 0, 0, 0]
+    params = [-15, 0, 0, 0, 0, 0, 0]
     bounds = [
         [-np.inf],
         [np.inf]
@@ -709,7 +709,7 @@ def run():
     if train:
         time_start = time()
         mins = 60 * 4
-        sigma = 3
+        sigma = 1
         opts = CMAOptions()
         opts['bounds'] = bounds
         es = CMAEvolutionStrategy(params, sigma, inopts=opts)
